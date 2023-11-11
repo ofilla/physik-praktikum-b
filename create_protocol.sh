@@ -2,7 +2,7 @@
 #
 
 file="$1"
-out_dir="${2:-.}"
+out_dir="${2:-$(dirname "$file")}"
 
 filename="$(basename "$file")"
 tmp=$(mktemp -d)
@@ -31,12 +31,13 @@ done
 # fix svg images
 for svg in $(grep svg "$file" | awk -F'(' '{print $2}' | sed 's/)$//g')
 do
-  png="$(basename "${svg%svg}eps")"
+  png="$(basename "${svg%svg}pdf")"
   sed -e "s!$svg!$png!g" -i "$tmp/$filename"
-  cp "$(dirname "$file")/${svg%svg}eps" "$tmp/$png"
+  cp "$(dirname "$file")/${svg%svg}pdf" "$tmp/$png"
 done
 
 pandoc --template .templates/template_uni_koeln.tex -o "$tex" "$tmp/$filename"
+cp "$tex" "$out_dir"
 cp .templates/uni.jpg $tmp/
 
 (cd $tmp && pdflatex "$tex" && pdflatex "$tex")
