@@ -20,11 +20,14 @@ fi
 head -n$lines "$file" > "$tmp/$filename"
 
 # fix references
-for tag in $(grep -oP '\\tag{[0-9a-zA-Z]+}' "$file" | sed -e 's/^\\tag{//g' -e 's/}$//g')
+for tag in $(grep -oP '\\tag{[0-9a-zA-Z()]+}' "$file" | sed -e 's/^\\tag{//g' -e 's/}$//g')
 do
-  sed -re "s/\\\\tag\{$tag\}/\\\\label{$tag}/g" \
-      -e "s/\(\\\\text\{$tag\}\)/\\\\eqref{$tag}/g" \
-      -e "s/\($tag\)/\\\\eqref{$tag}/g" \
+  sed -e "s/\\\\tag{$tag}/\\\\label{$tag}/g" \
+      -e "s/(\\\\text{$tag})/\\\\eqref{$tag}/g" \
+      -e "s/($tag)/\\\\eqref{$tag}/g" \
+      -e "s/\\\\tag{\\\\mathrm{$tag}}/\\\\label{$tag}/g" \
+      -e "s/(\\\\text{\\\\mathrm{$tag}})/\\\\eqref{$tag}/g" \
+      -e "s/(\\\\mathrm{$tag})/\\\\eqref{$tag}/g" \
       -i "$tmp/$filename"
 done
 
