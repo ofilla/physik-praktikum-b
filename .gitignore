@@ -3,3 +3,7 @@
 *Altprotokoll*.pdf
 *Anleitung*.pdf
 venv/
+*.aux
+*.log
+*.out
+*.toc
