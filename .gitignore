@@ -7,3 +7,4 @@ venv/
 *.log
 *.out
 *.toc
+*.synctex.gz

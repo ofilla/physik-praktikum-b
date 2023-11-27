@@ -38,6 +38,13 @@
 
 % Silbentrennung
 \hyphenation{Ent-mag-neti-sier-ungs-ver-hal-ten}
+\hyphenation{Ent-mag-neti-sier-ungs-fak-tor}
+\hyphenation{Ent-mag-neti-sier-ungs-feld-stär-ke}
+\hyphenation{Kom-mu-tie-rungs-kur-ve}
+\hyphenation{Grenz-be-reich}
+\hyphenation{Mag-ne-ti-sier-ungs-aus-rich-tung}
+\hyphenation{er-rei-chen}
+\hyphenation{Cu-rie-Tem-pe-ra-tur}
 
 \setcounter{secnumdepth}{6}
 \setcounter{tocdepth}{6}
@@ -71,8 +78,8 @@
 
 \newpage
 \tableofcontents
-\newpage
 
+\clearpage
 \hypertarget{motivation}{%
 \section{Motivation}\label{motivation}}
 In diesem Versuch werden Ordnungsphänomene von ferromagnetischen Materialien behandelt. Hierzu werden die Magnetisierungskurven an zwei verschiedenen Aufbauten aufgenommen. Deren zentraler Bestandteil ein Ringkern aus einem Ferrit-Werkstoff ist.
@@ -81,6 +88,7 @@ Anhand dieser Kurven lassen sich zahlreiche Eigenschaften dieses Ringkerns unter
 
 Mithilfe dieses Versuchs kann ein Einblick in Phänomene des Magnetismus erlangt werden. Dessen Wirkung beschäftigt Menschen schon seit hunderten von Jahren und welcher Grundlage für zahlreiche technische Anwendungen ist.
 
+\clearpage
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
 
@@ -130,12 +138,11 @@ Bei \emph{Ferromagnetismus} existieren Wechselwirkungen zwischen den einzelnen m
 
 \hypertarget{domuxe4nen-und-hysteresekurve}{%
 \subsection{Domänen und Hysteresekurve}\label{domuxe4nen-und-hysteresekurve}}
-
 Die im obigen Abschnitt beschriebenen Ordnungsphänomene finden im Material nicht homogen statt. Es existiert also viele einzelne Bereiche mit gleichartigen Magnetisierungsausrichtung, die ``\emph{Weiß'sche Bezirke}'' oder auch ``\emph{Domänen}'' genannt werden. Der Grenzbereich zwischen zwei Weißschen Bezirke heißt \emph{Bloch-Wand}.
 
 Legt man ein kleines, äußeres Magnetfeld an fangen magnetische Momente im Grenzbereich, die energetisch günstiger sind, zuerst ihre Orientierung zu ändern. Kleine Domänen verschmelzen dann zu größeren, dieses Prozess nennt man \emph{Wandverschiebung}.
 
-Wird die Feldstärke höher finden \emph{Barkhausen-Sprünge} statt, hierbei ändert sich die Orientierung ganzer Weiß'scher Bezirke schlagartig. Dies geschieht, wenn Defekte in Kristallen zunächst nicht von der Verschiebung der Bloch-Wände betroffen sind. Sind sie fast umringt, so schließt sich die Domäne um den Defekt, wodurch die Magnetisierung sprunghaft ansteigt.
+Wird die Feldstärke höher, finden \emph{Barkhausen-Sprünge} statt. Hierbei ändert sich die Orientierung ganzer Weiß'scher Bezirke schlagartig. Dies geschieht, wenn Defekte in Kristallen zunächst nicht von der Verschiebung der Bloch-Wände betroffen sind. Sind sie fast umringt, so schließt sich die Domäne um den Defekt, wodurch die Magnetisierung sprunghaft ansteigt.
 
 Kurz vor der Sättigung finden \emph{Rotationsprozesse} statt, wo dann alle magnetische Momente in Richtung des äußeren Feldes zeigen.
 
@@ -210,7 +217,7 @@ Durch Einsetzen in \(\eqref{EF1}\) kann man die Feldstärken \(H_E\) und \(H_L\)
 \end{eqnarray}
 Man sieht, dass die Feldstärke aus dem Ring in den Spalt verdrängt wird, die gesamte Feldstärke bleibt aber erhalten. Die Feldstärke \(H_E\) im Ring wird verringert, der Ring wird also entmagnetisiert.
 
-Da die Magnetisierung \(M\) des Kerns im Versuch konstant bleibt, kann nur \(H\) geändert werden, um \(H_E\) auf \(\pu{0T}\) zu reduzieren. Daher muss das Entmagnetisierungsfeld \(H_\mathrm{ent}\) angelegt 
+Da die Magnetisierung \(M\) des Kerns im Versuch konstant bleibt, kann nur \(H\) geändert werden, um \(H_E\) auf \(\pu{0\,T}\) zu reduzieren. Daher muss das Entmagnetisierungsfeld \(H_\mathrm{ent}\) angelegt 
 werden, um \(H_E\) zu verringern. Dadurch kann man den Entmagnetisierungsfaktor \(N\) durch seine Definition \(\eqref{defN}\) bestimmen. 
 \begin{eqnarray}
     H_\mathrm{ent} &=& \frac{l_L}{l_E+l_L} M \\
@@ -219,18 +226,14 @@ werden, um \(H_E\) zu verringern. Dadurch kann man den Entmagnetisierungsfaktor 
 
 \hypertarget{gescherte-hysteresekurve}{%
 \subsubsection{gescherte Hysteresekurve}\label{gescherte-hysteresekurve}}
-Das äußere Magnetfeld \(H\) wird über die Stromstärke gemessen, die Magnetisierung \(M\) des Ringkerns wird konstant gehalten. Das Magnetfeld \(H\) muss um ein Entmagnetisierungsfeld \(H_\mathrm{ent}\) erhöht werden, um das innere Magnetfeld \(H_E\) des Kerns zu negieren. Die benötigte Stärke von \(H_\mathrm{ent}\) hängt von der Breite des Luftspalts ab, was aus dem Entmagnetisierungsfaktor hervorgeht, siehe Gleichung \(\eqref{N}\) und Abbildung \ref{Abb: Hysterese Scherung}.
-\begin{figure}
-\centering
-\includegraphics{../media/B2.4/Hysteresekurve_Scherung.pdf}
-\caption{gescherte Hysteresekurve}
-\label{Abb: Hysterese Scherung}
-\end{figure}
+Das äußere Magnetfeld \(H\) wird über die Stromstärke gemessen, die Magnetisierung \(M\) des Ringkerns wird konstant gehalten. Das Magnetfeld \(H\) muss um ein Entmagnetisierungsfeld \(H_\mathrm{ent}\) erhöht werden, um das innere Magnetfeld \(H_E\) des Kerns zu negieren. Die benötigte Stärke von \(H_\mathrm{ent}\) hängt von der Breite des Luftspalts ab, was aus dem Entmagnetisierungsfaktor hervorgeht, siehe Gleichung \(\eqref{N}\).
+
 In einem Ringkern ohne Luftspalt entspricht die Stärke des äußeren Magnetfeldes \(H\) der des inneren Magnetfeldes \(H_E\). Mit einem Luftspalt steigt \(H\) an, somit wird die Hystereseschleife nach außen geschert. Daher lässt sich \(H_\mathrm{ent}\) durch die Scherung der Hystereseschleife bestimmen. 
 \begin{eqnarray}
     H_\mathrm{ent} &=& H - H_E \label{Hscher}
 \end{eqnarray}
 
+\clearpage
 \hypertarget{durchfuxfchrung}{%
 \section{Durchführung}\label{durchfuxfchrung}}
 Dieser Versuch besteht aus zwei Teilen. Zunächst werden Messungen am beheizbaren Ferritkern durchgeführt, danach Messungen am Ferritkern mit Spalt. Diese lassen sich wiederum in die einzelnen Messungen aufteilen, welche im Folgenden besprochen werden.
@@ -309,6 +312,7 @@ In der letzten Messung des Versuchs werden mehrere Magnetisierungskurven für un
 
 Hierbei ist zu beachten, dass der Ringkern an zwei Stellen unterbrochen wird. Dadurch ist die Länge \(l_L\) des Luftspalts doppelt so groß, da beide Spalte addiert werden.
 
+\clearpage
 \hypertarget{auswertung}{%
 \section{Auswertung}\label{auswertung}}
 
@@ -352,11 +356,11 @@ wenngleich diese im Rahmen der Ungenauigkeit nahezu konstant bleibt.
 	\begin{align*}
 		I_\mathrm{max} &\text{ in } A &
 		\text{Remanenz } &\text{ in }
-		{\tiny \left[10^6  \frac{A}{m} \right] } &
+		{\tiny \left[10^3  \frac{A}{m} \right] } &
 		H_\mathrm{K} &\text{ in }
 		{\tiny \left[ \frac{A}{m} \right] } &
 		M_\mathrm{max} &\text{ in }
-		{\tiny \left[10^6 \frac{A}{m} \right] }
+		{\tiny \left[10^3 \frac{A}{m} \right] }
 		\\
 		3.00 &\pm 0.01 &
 		423.51 &\pm 20.42 &
@@ -431,11 +435,11 @@ Dabei fällt auf, dass Remanenz und maximale Magnetisierung bei dem Kern mit Spa
 \begin{align*}
 	I_\mathrm{max} &\text{ in } \mathrm A &
 	\text{Remanenz } &\text{ in }
-	{\tiny \left[10^6 \frac{\mathrm A}{\mathrm m} \right] } &
+	{\tiny \left[10^3 \frac{\mathrm A}{\mathrm m} \right] } &
 	H_\mathrm{K} &\text{ in }
 	{\tiny \left[ \frac{\mathrm A}{\mathrm m} \right] } &
 	M_\mathrm{max} &\text{ in }
-	{\tiny \left[10^6 \frac{\mathrm A}{\mathrm m} \right] }
+	{\tiny \left[10^3 \frac{\mathrm A}{\mathrm m} \right] }
 	\\
 	\text{ohne Spalt}\qquad
 	3.00 &\pm 0.01 &
@@ -471,7 +475,7 @@ Aus der Scherung der Hysteresekurven kann nach Gleichung \(\eqref{Hscher}\) die 
 \label{Abb: Scherung}
 \end{figure}
 
-Die maximale Magnetisierung \(M_\mathrm{max} = (0.495\pm 0.025) \cdot 10^6 \mathrm{\frac{A}{m}}\), sie kann daher als konstant angenommen werden. Nach der Definition des Entmagnetisierungsfaktors \((\mathrm{Ndef})\) kann damit der experimentelle Entmagnetisierungsfaktor \(N_\mathrm{exp}\) abhängig von der Spaltbreite ermittelt werden. Die Ungenauigkeiten \(\Delta N_\mathrm{exp}\) können durch die Gauß'sche Fehlerfortpflanzung bestimmt werden.
+Die maximale Magnetisierung \(M_\mathrm{max} = (0.495\pm 0.025) \cdot 10^6 \mathrm{\frac{A}{m}}\) kann näherungsweise als konstant angenommen werden. Nach der Definition des Entmagnetisierungsfaktors \eqref{defN} kann damit der experimentelle Entmagnetisierungsfaktor \(N_\mathrm{exp}\) abhängig von der Spaltbreite ermittelt werden. Die Ungenauigkeiten \(\Delta N_\mathrm{exp}\) können durch die Gauß'sche Fehlerfortpflanzung bestimmt werden.
 
 \begin{eqnarray}
     \Delta f &=& \pm\sqrt{
@@ -491,10 +495,18 @@ Da die Ungenauigkeit der Entmagnetiserungsfeldstärken \(\Delta H_\mathrm{ent}\)
 
 Aus der Spaltbreite \(l_L\) und dem Radius \(R\) des Kerns der theoretische Entmagnetisierungsfaktor \(N_\mathrm{theo}\) nach \(\eqref{N}\) bestimmt werden. Hierbei ist die Gesamtlänge durch den Umfang \(2\pi R\) des Kerns und die Breite des Luftspalts \(l_L\)
 bestimmt.
+
 \begin{eqnarray}
     N &=& \frac{l_L}{2\pi R + l_L} 
 \end{eqnarray}
 Daraus ergeben sich folgende Ergebnisse in Tabelle \ref{Tab: Entmagnetisierung} und Abbildung \ref{Abb: Entmagnetisierung}. Alle Messwerte mit Spalt sind deutlich kleiner als die theoretischen Werte, die Abweichungen werden mit steigender Spaltbreite massiv größer. Dies deutet auf einen systematischen Fehler hin.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{../media/B2.4/3.3.4_N.pdf}
+	\caption{Entmagnetisierungsfaktor}
+	\label{Abb: Entmagnetisierung}
+\end{figure}
 
 \begin{table}
 \begin{align*}
@@ -548,13 +560,7 @@ Daraus ergeben sich folgende Ergebnisse in Tabelle \ref{Tab: Entmagnetisierung} 
 \label{Tab: Entmagnetisierung}
 \end{table}
 
-\begin{figure}
-\centering
-\includegraphics{../media/B2.4/3.3.4_N.pdf}
-\caption{Entmagnetisierungsfaktor}
-\label{Abb: Entmagnetisierung}
-\end{figure}
-
+\clearpage
 \hypertarget{fazit}{%
 \section{Fazit}\label{fazit}}
 
@@ -566,17 +572,18 @@ Daraus ließe sich deuten, dass der Entmagnetisierungsfaktor gar nicht wie erwar
 
 Der Anstieg der Kenngrößen mit steigenden Stromstärke entsprechen den Erwartungen, auch wenn bei der Durchführung es schwierig war die Phase so einzustellen, dass diese nicht stehen bleibt oder rückwärts läuft und man genügend gute Punkte auf der Hysterese erhält. Auffällig bei der Hyteresekurve mit Spalt ist die sehr große Koerzitivfeldstärke im Vergleich zu der Kurve ohne Spalt. Dies weist daraus hin, dass die Kerne aus verschiedenen Materialien bestehen und der Kern mit Spalt vermutlich hartmagnetisch ist, während der beheizbare Ferritkern aus ersten Versuchsteil weichmagnetisch ist.
 
-Die Kurven der differentiellen Suszeptibilität ähneln sich insofern, dass beide einen Anstieg und ein Maximum besitzen, fallen dann mit höheren \(H\) ab. Allerdings haben wir eine ca \(20\)-fache Abweichung zwischen beide Messungen und der Plot oszilliert leicht, was mit manuellem Drehen (Ungleichmäßigkeiten) von Stromstärke nicht zu vermeiden lässt. Dennoch kann man den Verlauf der Kurven als physikalisch sinnvoll beurteilen. Was aber dazu geführt hat, dass die zweite Messung negative Magnetisierungswerte angenommen hat, ist nicht geklärt, denn eigentlich war die Phase an dem oberen Sättigungspunkt fixiert. Hier gab es offensichtlich einen systematischen Fehler.
+Die Kurven der differentiellen Suszeptibilität ähneln sich insofern, dass beide bis zu einem Maximum ansteigen und dann, bei betragsmäßig höheren \(H\), wieder abfallen. Allerdings haben wir eine ca \(20\)-fache Abweichung zwischen beide Messungen und der Plot oszilliert leicht. Diese Ungleichmäßigkeiten lassen sich bei manuellem Regeln der Stromstärke nicht vermeiden. Dennoch kann man den Verlauf der Kurven als physikalisch sinnvoll beurteilen. Was aber dazu geführt hat, dass die zweite Messung negative Magnetisierungswerte angenommen hat, ist nicht geklärt, denn eigentlich war die Phase an dem oberen Sättigungspunkt fixiert. Hier gab es offensichtlich einen systematischen Fehler.
 
 Die zeitaufwändige Temperaturmessung liefert einer der besten Ergebnissen, nämlich eine um \(T_{c}\) verschobene und gespiegelte Wurzelfunktion so wie die Landau-Theorie es vorhergesagt hat. Die Curie-Temperatur hier beträgt \((76.5 \pm 0.5) \ ^\circ\mathrm C\).
 
+\clearpage
 \hypertarget{literaturverzeichnis}{%
 \section{Literaturverzeichnis}\label{literaturverzeichnis}}
 \begin{thebibliography}{9}
+	\bibitem{Jackson}
+J. D. Jackson, Classical Elektrodynamics, New York: John Wiley \& Sons, 1962
 	\bibitem{Kittel}
 		C. Kittel, Einführung in die Festkörperphysik, München: Oldenbourg Verlag, 2005
-	\bibitem{Jackson}
-		J. D. Jackson, Classical Elektrodynamics, New York: John Wiley \& Sons, 1962
 	\bibitem{Kneller}
 		E. Kneller, Ferromagnetismus, Berlin Heidelberg: Springer Verlag, 1962
 	\bibitem{Reith}
