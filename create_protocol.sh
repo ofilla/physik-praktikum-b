@@ -39,7 +39,7 @@ do
   cp "$(dirname "$file")/${svg%svg}pdf" "$tmp/$png"
 done
 
-pandoc --template .templates/template_uni_koeln.tex -o "$tex" "$tmp/$filename"
+pandoc --template .templates/template_uni_koeln.tex --strip-comments -o "$tex" "$tmp/$filename"
 cp "$tex" "$out_dir"
 cp .templates/uni.jpg $tmp/
 
