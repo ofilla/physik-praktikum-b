@@ -94,16 +94,13 @@ Mithilfe dieses Versuchs kann ein Einblick in Phänomene des Magnetismus erlangt
 
 \hypertarget{grundlagen-des-magnetismus}{%
 \subsection{Grundlagen des Magnetismus}\label{grundlagen-des-magnetismus}}
-
 Das Phänomen des Magnetismus kann nicht klassisch erklärt werden, sondern wird durch die Quantenmechanik beschrieben. Sie befasst sich mit Strömen, was sie qualitativ von der Elektrostatik unterscheidet. Für magnetische Ordnung in ferromagnetischen Materialien ist die
 Austauschwechselwirkung verantwortlich, welche auf dem Pauli-Prinzip und der Coulombwechselwirkung beruht.
 
 Die wichtigsten Größen sind die \emph{Flussdichte} \(\vec B\), die \emph{Magnetisierung} \(\vec M\) und die \emph{Feldstärke} \(\vec H\). Diese werden durch die \emph{Feldkonstante}
 \(\mu_0=4\pi\cdot\pu{10^{-7}\frac{Vs}{Am}}\) bzw. die \emph{Permeabilität} \(\mu\) miteinander in Verbindung gebracht. Die Permeabilität beschreibt die Durchlässigkeit für magnetische Felder. \cite{Jackson}
 \begin{eqnarray}
-    \vec B
-        &=& \mu_0 \cdot \left(\vec H + \vec M\right) \label{M1} \\
-        &=& \mu \cdot \vec H
+    \vec B &=& \mu_0 \cdot \left(\vec H + \vec M\right) \label{M1}
 \end{eqnarray}
 Die \emph{Suszeptibilität} \(\chi\) ist eine dimensionslose Größe, welche die Magnetisierbarkeit von Materie beschreibt. Sie beschreibt die Änderung der Magnetisierung \(\vec M\) durch die Änderung der Feldstärke \(\vec H\).
 \begin{eqnarray}
@@ -134,7 +131,9 @@ negativ ist. Perfekter Diamagnetismus ist bei Supraleitern zu finden. Diese weis
 
 In einem \emph{paramagnetischen} Festkörper liegen innere magnetische Dipolmomente vor, welche z.B. durch Spin und Bahndrehimpuls der Elektronen herrühren. Diese wechselwirken allerdings nicht miteinander, wodurch sie nur in einem äußeren Magnetfeld in Richtung des Feldes ausgerichtet werden. Die magnetische Suszeptibilität \(\chi_\mathrm{para}\) eines paramagnetischen Festkörpers ist daher positiv.
 
-Bei \emph{Ferromagnetismus} existieren Wechselwirkungen zwischen den einzelnen magnetischen Momente, daher sind sie sowohl mit als auch ohne Außenfeld parallel zueinander ausgerichtet. Man unterscheidet noch zwischen Ferrimagnetismus und Antiferromagnetismus. Im \emph{ferrimagnetischen} Material sind die Momente abwechselnd antiparallel zueinander orientiert, dennoch heben sich die Beträge nicht wie im \emph{antiferromagnetischen} Material auf.
+Bei \emph{Ferromagnetismus} sorgt die Austauschwechselwirkung dafür, dass viele benachbarte magnetische Momente parallel zueinander ausgerichtet sind. Ob dies energetisch sinnvoll ist, hängt von der Kombination aus Coulombwechselwirkung und Paulirepulsion ab.
+
+Zudem unterscheidet man noch zwischen Ferrimagnetismus und Antiferromagnetismus. Im \emph{ferrimagnetischen} Material sind die Momente abwechselnd antiparallel zueinander orientiert, dennoch heben sich die Beträge nicht wie im \emph{antiferromagnetischen} Material auf.
 
 \hypertarget{domuxe4nen-und-hysteresekurve}{%
 \subsection{Domänen und Hysteresekurve}\label{domuxe4nen-und-hysteresekurve}}
@@ -146,7 +145,14 @@ Wird die Feldstärke höher, finden \emph{Barkhausen-Sprünge} statt. Hierbei ä
 
 Kurz vor der Sättigung finden \emph{Rotationsprozesse} statt, wo dann alle magnetische Momente in Richtung des äußeren Feldes zeigen.
 
-Die Hysteresekurve beschreibt das Verhalten eines Materials im äußeren Magnetfeld. Die Neukurve startet im Ursprung und steigt aufgrund der Wandverschiebungen leicht an, dreht man das Feld auf wird die Kurve wegen der Barkhausen-Sprünge steiler. Bei größer werdenden Feldstärken verläuft sie durch die Rotation wieder flacher zu. Dann findet die Sättigung statt, wo die maximale Magnetisierung erreicht ist.
+Die Hysteresekurve beschreibt das Verhalten eines Materials im äußeren Magnetfeld und wird in Abbildung \ref{Abb: Hysteresekurve} schematisch dargestellt. Die Neukurve startet im Ursprung und steigt aufgrund der Wandverschiebungen leicht an, dreht man das Feld auf wird die Kurve wegen der Barkhausen-Sprünge steiler. Bei größer werdenden Feldstärken verläuft sie durch die Rotation wieder flacher zu. Dann findet die Sättigung statt, wo die maximale Magnetisierung erreicht ist.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.7]{../media/B2.4/Hysteresekurve.pdf}
+	\caption{Hysteresekurve}
+	\label{Abb: Hysteresekurve}
+\end{figure}
 
 Entfernt man das Magnetfeld, sinkt die Magnetisierung nicht automatisch auf null, sondern eine Restmagnetisierung bleibt übrig, die sogenannte \emph{Remanenz}. Soll auch diese verschwinden, muss man ein negatives Feld anlegen und die \emph{Koerzitivfeldstärke} erreichen, der Stoff ist dann vollständig entmagnetisiert. Wird die Feldstärke weiter erhöht, magnetisiert der Stoff in die entgegengesetzte Richtung, bis die Sättigung wieder auftritt.
 
@@ -271,7 +277,7 @@ Ein phasenempfindlicher Gleichrichter multipliziert zum einlaufenden Messsignal 
 \begin{eqnarray}
     M(t) &=& M(\varphi(t))
 \end{eqnarray}
-Werden die beiden Frequenzen gleichgesetzt, lässt sich durch Änderung der Phasenverschiebung der beiden Signale die Hysteresekurve manuell abtasten oder bestimmte Punkte auf der Hysteresekurve ansteuern, was ``\emph{Phase-locked-Betrieb}'' genannt wird.
+Werden die beiden Frequenzen gleichgesetzt, lässt sich durch Änderung der Phasenverschiebung der beiden Signale die Hysteresekurve manuell abtasten oder bestimmte Punkte auf der Hysteresekurve ansteuern, was ``\emph{Phase-Locked-Betrieb}'' genannt wird.
 \begin{eqnarray}
     M(t) &=& M(\varphi)
 \end{eqnarray}
@@ -288,13 +294,13 @@ Im ersten Teil des Versuchs werden bei Zimmertemperatur die Magnetisierungskurve
 
 \hypertarget{kommutierungskurve}{%
 \subsubsection{Kommutierungskurve}\label{kommutierungskurve}}
-Daraufhin wird die Kommutierungskurve angenähert, indem der obere Umkehrpunkt der Hysteresekurve als Funktion des Primärstroms ermittelt wird. Dazu wird in den Phase-locked-Betrieb gewechselt und \(\varphi\) wird so eingestellt, dass sich der Messpunkt auf dem Umkehrpunkt befindet. Dann wird während aktiver Messung der Primärstrom vom Maximum \(3\,\mathrm A\) langsam auf \(0\,\mathrm A\) reduziert.
+Daraufhin wird die Kommutierungskurve angenähert, indem der obere Umkehrpunkt der Hysteresekurve als Funktion des Primärstroms ermittelt wird. Dazu wird in den Phase-Locked-Betrieb gewechselt und \(\varphi\) wird so eingestellt, dass sich der Messpunkt auf dem Umkehrpunkt befindet. Dann wird während aktiver Messung der Primärstrom vom Maximum \(3\,\mathrm A\) langsam auf \(0\,\mathrm A\) reduziert.
 
 Um den unteren Teil der Kommutierungskurve noch genauer aufzunehmen, wird der Bereich von \(0.1\,\mathrm A\) bis \(0\,\mathrm A\) mittels Feinjustierung der Stromstärke erneut aufgenommen.
 
 \hypertarget{temperaturabhuxe4ngigkeit}{%
 \subsubsection{Temperaturabhängigkeit}\label{temperaturabhuxe4ngigkeit}}
-Die letzte Messung am beheizbaren Ferritkern beschäftigt sich mit der Temperaturabhängigkeit der maximalen Magnetisierung \(M(T)\). Dazu wird erneut \(\varphi\) im Phase-locked-Betrieb so eingestellt, dass der Messpunkt auf dem oberen Umkehrpunkt der Hysteresekurve liegt. Außerdem wird der Primärstrom auf den maximalen Wert von \(3\,\mathrm A\) gestellt und der Heizstrom angeschlossen.
+Die letzte Messung am beheizbaren Ferritkern beschäftigt sich mit der Temperaturabhängigkeit der maximalen Magnetisierung \(M(T)\). Dazu wird erneut \(\varphi\) im Phase-Locked-Betrieb so eingestellt, dass der Messpunkt auf dem oberen Umkehrpunkt der Hysteresekurve liegt. Außerdem wird der Primärstrom auf den maximalen Wert von \(3\,\mathrm A\) gestellt und der Heizstrom angeschlossen.
 
 Bei aktiver Messung von wird der Ferritkern langsam aufgeheizt bis ein Phasenübergang zu erkennen ist, wobei der Heizstrom aufgrund von steigender Wärmeverluste stetig erhöht werden muss.
 
@@ -324,14 +330,13 @@ Ringkern}\label{messungen-am-beheizbaren-ringkern}}
 \subsubsection{Kenngrößen}\label{kenngruxf6uxdfen}}
 Zunächst müssen die gemessenen Werte in die richtigen Einheiten konvertiert werden. Gemessen wurden Spannungen, diese müssen in die Magnetisierung \(M\) bzw. die magnetische Feldstärke \(H\) umgerechnet werden.
 
-Die Umrechnung in die Feldstärke kann mittels der Relation \(\eqref{H(I)}\) erfolgen. Der Strom \(I\) kann über das Ohm'sche Gesetz \(U=RI\) aus der Spannung \(U\) und dem Widerstand \(R\) ermittelt werden. Da der Widerstand konstant ist, kann er durch das Verhältnis der maximalen Stromstärke \(I_\mathrm{max}\) und der maximalen Spannung \(U_\mathrm{max}\) beschrieben werden. Weiterhin wird die Länge \(l\) der Spule benötigt. Diese entspricht dem Umfang des Ringkerns, also \(l=2\pi r\) für einen Kern mit dem Radius \(r\). Damit kann die
-Feldstärke \(H\) wie folgt ermittelt werden.
+Die Umrechnung in die Feldstärke kann mittels der Relation \(\eqref{H(I)}\) erfolgen. Der Strom \(I\) kann über das Ohm'sche Gesetz \(U=RI\) aus der Spannung \(U\) und dem Widerstand \(R\) ermittelt werden. Da der Widerstand konstant ist, kann er durch das Verhältnis der maximalen Stromstärke \(I_\mathrm{max}\) und der maximalen Spannung \(U_\mathrm{max}\) beschrieben werden. Weiterhin wird die Länge \(l\) der Spule benötigt. Diese entspricht dem Umfang des Ringkerns, also \(l=2\pi R\) für einen Kern mit dem Radius \(R=1.5\mathrm{cm}\). Damit kann die Feldstärke \(H\) wie folgt ermittelt werden.
 \begin{eqnarray}
     H &=&
-        \frac{n_p}{2\pi r} \cdot \frac{I_\mathrm{max}}{U_\mathrm{max}} \cdot U
+        \frac{n_p}{2\pi R} \cdot \frac{I_\mathrm{max}}{U_\mathrm{max}} \cdot U
         \label{H}
 \end{eqnarray}
-Aus der Versuchsanleitung \cite{Uni} folgt, dass die Magnetisierung \(M\) aus der gemessenen Spannung \(U\) ermittelt werden kann. Hierbei sind \(\nu=\pu{50 Hz}\) die Frequenz des Wechselstroms, \(n_s\) die Windungszahl der Sekundärspule und \(q = \pu{0.9 cm^2}\) die
+Aus der Versuchsanleitung \cite{Uni} folgt, dass die Magnetisierung \(M\) aus der gemessenen Spannung \(U\) ermittelt werden kann. Hierbei sind \(\nu=\pu{50 Hz}\) die Frequenz des Wechselstroms, \(n_s=17\) die Windungszahl der Sekundärspule und \(q = \pu{0.9 cm^2}\) die
 Querschnittsfläche des Kerns.
 \begin{eqnarray}
     M &=&
@@ -347,7 +352,7 @@ wenngleich diese im Rahmen der Ungenauigkeit nahezu konstant bleibt.
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.5]{../media/B2.4/3.3.1_single_measures.pdf}
+\includegraphics[scale=0.6]{../media/B2.4/3.3.1_single_measures.pdf}
 \caption{Einzelne Messungen der Kenngrößen}
 \label{Abb: heizbar kenngrößen}
 \end{figure}
@@ -355,32 +360,32 @@ wenngleich diese im Rahmen der Ungenauigkeit nahezu konstant bleibt.
 \begin{table}
 	\begin{align*}
 		I_\mathrm{max} &\text{ in } A &
-		\text{Remanenz } &\text{ in }
-		{\tiny \left[10^3  \frac{A}{m} \right] } &
 		H_\mathrm{K} &\text{ in }
 		{\tiny \left[ \frac{A}{m} \right] } &
+		M_\mathrm{R} &\text{ in }
+		{\tiny \left[10^6  \frac{A}{m} \right] } &
 		M_\mathrm{max} &\text{ in }
-		{\tiny \left[10^3 \frac{A}{m} \right] }
+		{\tiny \left[10^6 \frac{A}{m} \right] }
 		\\
 		3.00 &\pm 0.01 &
-		423.51 &\pm 20.42 &
-		6.58 &\pm 2.27 &
-		1243.66 &\pm 18.67
-		\\
+			5.71 &\pm 0.46 &
+			0.42 &\pm 0.04 &
+			1.24 &\pm 0.08
+			\\
 		1.00 &\pm 0.01 &
-		401.68 &\pm 110.22 &
-		6.25 &\pm 2.03 &
-		1163.9 &\pm 18.87
-		\\
+			5.55 &\pm 0.08 &
+			0.43 &\pm 0.05 &
+			1.16 &\pm 0.09
+			\\
 		0.29 &\pm 0.01 &
-		431.55 &\pm 60.85 &
-		5.51 &\pm 1.64 &
-		981.29 &\pm 24.64
-		\\
+			5.37 &\pm 0.67 &
+			0.41 &\pm 0.55 &
+			0.98 &\pm 0.11
+			\\
 		0.10 &\pm 0.01 &
-		303.9 &\pm 42.27 &
-		4.95 &\pm 1.30 &
-		705.29 &\pm 26.18
+			4.29 &\pm 0.03 &
+			0.33 &\pm 0.06 &
+			0.71 &\pm 0.12
 	\end{align*}
 	\caption{Kenngrößen des beheizbaren Ringkerns}
 	\label{Tab: heizbar kenngrößen}
@@ -388,7 +393,7 @@ wenngleich diese im Rahmen der Ungenauigkeit nahezu konstant bleibt.
 
 \hypertarget{kommutierungskurve-und-suszeptibilituxe4t}{%
 \subsubsection{Kommutierungskurve und Suszeptibilität}\label{kommutierungskurve-und-suszeptibilituxe4t}}
-Die Kommutierungskurven verlaufen grundsätzlich wie erwartet, siehe Abbildung \ref{Abb: kommut}. Allerdings ist auffällig, dass die Kurve für \(I_\mathrm{max}=100\mathrm{\,mA}\) in eine negative Magnetisierung läuft, was sie von der Kurve für \(I_\mathrm{max}= 3\,\mathrm A\) unterscheidet. Dies deutet auf einen systematischen Fehler bei der erstgenannten Messung hin.
+Die Kommutierungskurven verlaufen grundsätzlich wie erwartet, siehe Abbildung \ref{Abb: kommut}. Allerdings ist auffällig, dass die Kurve für \(I_\mathrm{max}=100\mathrm{\,mA}\) in eine negative Magnetisierung läuft, was sie von der Kurve für \(I_\mathrm{max}= 3\,\mathrm A\) unterscheidet. Dies deutet auf einen systematischen Fehler bei der erstgenannten Messung hin. Vermutlich ist die Phase während der Messung verrutscht.
 
 Dies wirkt sich auch auf die differentielle Suszeptibilität \(\chi\) aus, siehe Abbildung \ref{Abb: diff kommut}. Bei der Messung mit \(I_\mathrm{max}= 3\,\mathrm A\) ist eine Abhängigkeit von \(\chi \propto H^{-1}\) zu erkennen. Die differentielle Suszeptibilität für die Messung bei \(I_\mathrm{max}=100\mathrm{\,mA}\) hat dagegen sehr viel kleinere Werte, die um einen Faktor von mindestens 20 kleiner sind. Auch dies lässt auf einen systematischen Fehler schließen. Ansonsten ist auch diese Kurve gespiegelt, was mit der negativen Magnetisierung zusammenhängt.
 
@@ -434,24 +439,24 @@ Dabei fällt auf, dass Remanenz und maximale Magnetisierung bei dem Kern mit Spa
 \begin{table}
 \begin{align*}
 	I_\mathrm{max} &\text{ in } \mathrm A &
-	\text{Remanenz } &\text{ in }
-	{\tiny \left[10^3 \frac{\mathrm A}{\mathrm m} \right] } &
-	H_\mathrm{K} &\text{ in }
-	{\tiny \left[ \frac{\mathrm A}{\mathrm m} \right] } &
-	M_\mathrm{max} &\text{ in }
-	{\tiny \left[10^3 \frac{\mathrm A}{\mathrm m} \right] }
-	\\
+		H_\mathrm{K} &\text{ in }
+			{\tiny \left[ \frac{\mathrm A}{\mathrm m} \right] } &
+		M_R &\text{ in }
+		{\tiny \left[10^6 \frac{\mathrm A}{\mathrm m} \right] } &
+		M_\mathrm{max} &\text{ in }
+		{\tiny \left[10^6 \frac{\mathrm A}{\mathrm m} \right] }
+		\\
 	\text{ohne Spalt}\qquad
-	3.00 &\pm 0.01 &
-	423.51 &\pm 20.42 &
-	6.58 &\pm 2.27 &
-	1243.66 &\pm 18.67
-	\\
+		3.00 &\pm 0.01 &
+		5.71 &\pm 0.46 &
+		0.42 &\pm 0.04 &
+		1.24 &\pm 0.08
+		\\
 	\text{mit Spalt}\qquad
-	0.94 &\pm 0.01 &
-	198.95 &\pm 49.8 &
-	227.94 &\pm 24.80 &
-	675.28 &\pm 14.92 &
+		0.94 &\pm 0.01 &
+		74.09 &\pm 6.84 &
+		0.23 &\pm 0.04 &
+		0.68 &\pm 0.07
 \end{align*}
 \caption{Kenngrößen des Ringkerns mit Spalt}
 \label{Tab: kenngr Spalt}
@@ -459,7 +464,7 @@ Dabei fällt auf, dass Remanenz und maximale Magnetisierung bei dem Kern mit Spa
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.6]{../media/B2.4/3.3.3_comparison.pdf}
+\includegraphics[scale=0.7]{../media/B2.4/3.3.3_comparison.pdf}
 \caption{Vergleich der Kerne mit und ohne Spalt}
 \label{Abb: Vergleich}
 \end{figure}
@@ -475,7 +480,7 @@ Aus der Scherung der Hysteresekurven kann nach Gleichung \(\eqref{Hscher}\) die 
 \label{Abb: Scherung}
 \end{figure}
 
-Die maximale Magnetisierung \(M_\mathrm{max} = (0.495\pm 0.025) \cdot 10^6 \mathrm{\frac{A}{m}}\) kann näherungsweise als konstant angenommen werden. Nach der Definition des Entmagnetisierungsfaktors \eqref{defN} kann damit der experimentelle Entmagnetisierungsfaktor \(N_\mathrm{exp}\) abhängig von der Spaltbreite ermittelt werden. Die Ungenauigkeiten \(\Delta N_\mathrm{exp}\) können durch die Gauß'sche Fehlerfortpflanzung bestimmt werden.
+Die maximale Magnetisierung \(M_\mathrm{max} = (0.495\pm 0.08) \cdot 10^6 \mathrm{\frac{A}{m}}\) kann näherungsweise als konstant angenommen werden. Nach der Definition des Entmagnetisierungsfaktors \eqref{defN} kann damit der experimentelle Entmagnetisierungsfaktor \(N_\mathrm{exp}\) abhängig von der Spaltbreite ermittelt werden. Die Ungenauigkeiten \(\Delta N_\mathrm{exp}\) können durch die Gauß'sche Fehlerfortpflanzung bestimmt werden.
 
 \begin{eqnarray}
     \Delta f &=& \pm\sqrt{
@@ -511,50 +516,50 @@ Daraus ergeben sich folgende Ergebnisse in Tabelle \ref{Tab: Entmagnetisierung} 
 \begin{table}
 \begin{align*}
 	&l_L &
-	I_\mathrm{max} &\text{ in } \mathrm A &
-	H_\mathrm{ent} &\text{ in }
-	{\tiny \left[ 10^3 \frac{\mathrm A}{\mathrm m} \right] } &
-	M_\mathrm{max} &\text{ in }
-	{\tiny \left[ 10^6 \frac{\mathrm A}{\mathrm m} \right] } &
-	N_\mathrm{exp} &\text{ in } [10^{-3}] &
-	N_\mathrm{theo} &\text{ in } [10^{-3}]
-	\\
+		I_\mathrm{max} &\text{ in } \mathrm A &
+		H_\mathrm{ent} &\text{ in }
+		{\tiny \left[ 10^3 \frac{\mathrm A}{\mathrm m} \right] } &
+		M_\mathrm{max} &\text{ in }
+		{\tiny \left[ 10^6 \frac{\mathrm A}{\mathrm m} \right] } &
+		N_\mathrm{exp} &\text{ in } [10^{-3}] &
+		N_\mathrm{theo} &\text{ in } [10^{-3}]
+		\\
 	&0.00 \ \mathrm{mm} &
-	0.50 &\pm 0.01 &
-	0.000 &\pm 0.000 &
-	0.49 &\pm 0.02 &
-	0.000 &\pm 0.000 &
-	0.00\\
+		0.50 &\pm 0.01 &
+		0.00 &\pm 0.03 &
+		0.49 &\pm 0.08 &
+		0.000 &\pm 0.000 &
+		0.00\\
 	&0.15 \ \mathrm{mm} &
-	0.79 &\pm 0.01 &
-	0.508 &\pm 0.001 &
-	0.49 &\pm 0.02 &
-	1.026 &\pm 0.052 &
-	1.59\\
+		0.79 &\pm 0.01 &
+		0.17 &\pm 0.03 &
+		0.49 &\pm 0.08 &
+		1.026 &\pm 0.052 &
+		1.59\\
 	&0.25 \ \mathrm{mm} &
-	1.00 &\pm 0.01 &
-	0.885 &\pm 0.001 &
-	0.50 &\pm 0.02 &
-	1.788 &\pm 0.090 &
-	2.65\\
+		1.00 &\pm 0.01 &
+		0.29 &\pm 0.03 &
+		0.50 &\pm 0.07 &
+		1.788 &\pm 0.090 &
+		2.65\\
 	&0.40 \ \mathrm{mm} &
-	1.27 &\pm 0.01 &
-	1.368 &\pm 0.001 &
-	0.50 &\pm 0.02 &
-	2.764 &\pm 0.140 &
-	4.23\\
+		1.27 &\pm 0.01 &
+		0.44 &\pm 0.02 &
+		0.50 &\pm 0.07 &
+		2.764 &\pm 0.140 &
+		4.23\\
 	&1.00 \ \mathrm{mm} &
-	2.12 &\pm 0.01 &
-	2.860 &\pm 0.004 &
-	0.49 &\pm 0.02 &
-	5.778 &\pm 0.292 &
-	10.50\\
+		2.12 &\pm 0.01 &
+		0.93 &\pm 0.02 &
+		0.49 &\pm 0.07 &
+		5.778 &\pm 0.292 &
+		10.50\\
 	&2.00 \ \mathrm{mm} &
-	3.00 &\pm 0.01 &
-	4.410 &\pm 0.009 &
-	0.50 &\pm 0.01 &
-	8.909 &\pm 0.450 &
-	20.78
+		3.00 &\pm 0.01 &
+		1.43 &\pm 0.01 &
+		0.50 &\pm 0.06 &
+		8.909 &\pm 0.450 &
+		20.78
 \end{align*}
 \caption{Entmagnetisierungsfaktor}
 \label{Tab: Entmagnetisierung}
