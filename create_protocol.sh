@@ -32,11 +32,13 @@ do
 done
 
 # fix svg images
-for svg in $(grep svg "$file" | awk -F'(' '{print $2}' | sed 's/)$//g')
+for pic in $(grep -P '(svg|jpg)' "$file" | awk -F'(' '{print $2}' | sed 's/)$//g')
 do
-  png="$(basename "${svg%svg}pdf")"
-  sed -e "s!$svg!$png!g" -i "$tmp/$filename"
-  cp "$(dirname "$file")/${svg%svg}pdf" "$tmp/$png"
+  pdf_="${pic/svg/pdf}"
+  pdf_="${pdf_/jpg/pdf}"
+  pdf_file="$(basename "$pdf_")"
+  sed -e "s!$pic!$pdf_file!g" -i "$tmp/$filename"
+  cp "$(dirname "$file")/$pdf_" "$tmp/$pdf_file"
 done
 
 pandoc --template .templates/template_uni_koeln.tex --strip-comments -o "$tex" "$tmp/$filename"
