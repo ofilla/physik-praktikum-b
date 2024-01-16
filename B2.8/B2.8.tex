@@ -97,7 +97,7 @@ In diesem Versuch werden Versetzungen an der Oberfläche von
 Lithiumfluorid-Kristallen mithilfe der Doppelätz-Methode sichtbar
 gemacht. Versetzungsbewegungen sind besonders in der
 Festkörper-Forschung interessant, da diese Wanderung eine plastische
-Verformung ist, aus der man Eigenschaften wie Plastizit¨at und des
+Verformung ist, aus der man Eigenschaften wie Plastizität und des
 Kristall ableiten kann.
 
 \hypertarget{lithiumfluorid}{%
@@ -118,7 +118,7 @@ gleitet nur ein Teil der Struktur.
 Die Gitterstruktur von \(\mathrm{LiF}\) entspricht der von
 Natriumchlorid mit einer flächenzentriert-kubischen Gitterstruktur und
 einer zweiatomigen Basis. Gitterkonstante von \(\mathrm{LiF}\) beträgt
-\(a=0.402\mathrm{\,nm}\). \([5]\)
+\(a=0.402\mathrm{\,nm}\pm 1 \cdot 10^{-7} \mathrm{\, \mu m}\). \([5]\)
 
 \hypertarget{doppeluxe4tzmethode}{%
 \subsection{Doppelätzmethode}\label{doppeluxe4tzmethode}}
@@ -209,7 +209,7 @@ einer Länge von \(b = \frac{a}{\sqrt{2}}\). \[
 \begin{eqnarray}
     \theta &\approx& \frac{a}{\sqrt{2} \cdot d} \\
         &=& \frac{0.402\,\mathrm{nm}}{\sqrt{2} d}\\
-        &\approx& \frac{0.284\,\mathrm{nm}}{d}
+    \theta &\approx& \frac{0.284\,\mathrm{nm}}{d} \label{theta}
 \end{eqnarray}
 \]
 
@@ -448,6 +448,104 @@ die Menge an Versetzungen in \(\mathrm{LiF}\) entwickelt werden.
 
 \hypertarget{kleinwinkelkorngrenze}{%
 \subsubsection{Kleinwinkelkorngrenze}\label{kleinwinkelkorngrenze}}
+
+Es wurden drei Bilder von Kleinwinkelkorngrenzen aufgenommen. Nun werden
+die Winkel \(\theta\) zwischen den Kristalliten an diesen
+Kleinwinkelkorngrenzen bestimmen. Dieser durch Gleichung
+\(\eqref{theta}\) gegeben, wobei \(d\) den Abstand zweier Ätzgrübchen
+beschreibt.
+
+Die Ungenauigkeit der Gitterkonstante
+\(\Delta a=1 \cdot 10^{-7} \mathrm{\, \mu m}\) \([5]\) und die des
+Mikroskops \(\Delta d_m = 5 \cdot 10^{-3} \mathrm{\, \mu m}\) ergeben
+mittels Gauß'scher Fehlerfortpflanzung die Ungenauigkeit des Winkels
+\(\Delta \theta\). Wird der Abstand \(d_n\) von \(n\) Grübchen gemessen,
+so sinkt die Ungenauigkeit \(\Delta d\) des Abstandes zweier Grübchen.
+
+\[
+\begin{eqnarray}
+    \Delta d &=& \frac{\Delta d_m}{n} \\
+    \Delta \theta &=& \sqrt{
+        \left(\frac{\Delta a}{\sqrt{2} \cdot d} \right)^2
+            + \left( \frac{a}{\sqrt{2} \cdot d^2} \cdot \Delta d \right)^2 }
+            \label{DeltaTheta}
+\end{eqnarray}
+\]
+
+\hypertarget{erste-messung}{%
+\paragraph{erste Messung}\label{erste-messung}}
+
+In Abbildung \(5??\) ist die erste Kleinwinkelkorngrenze zu sehen. In
+rot ist der Abstand \(18.28 \mathrm{\, \mu m}\) für \(5\) Ätzgrübchen
+eingetragen.
+
+\begin{figure}
+\centering
+\includegraphics{KWK1_tempered.pdf}
+\caption{Abb. 5}
+\end{figure}
+
+Aus \(\eqref{theta}\) und \(\eqref{DeltaTheta}\) folgt der erste Abstand
+\(d_1\), woraus der Winkel \(\theta_1\) bestimmt wird.
+
+\[
+\begin{eqnarray}
+    d_1 &=& (3.656 \pm 0.002) \mathrm{\, \mu m} \\
+    \theta_1 &=& (7.775 \pm 0.005) \cdot 10^{-5} \mathrm{\, rad} \\
+        &=& (4.455 \pm 0.003) \cdot 10^{-3\ \ \circ}
+\end{eqnarray}
+\]
+
+\hypertarget{zweite-messung}{%
+\paragraph{zweite Messung}\label{zweite-messung}}
+
+Die zweite von uns aufgenommene Kleinwinkelkorngrenze ist in Abbildung
+\(6\) zu sehen. Hier ist wieder der Abstand von \(5\) Ätzgrübchen mit
+\(14.53 \mathrm{\, \mu m}\) eingetragen.
+
+\begin{figure}
+\centering
+\includegraphics{KWK2_tempered.pdf}
+\caption{Abb. 6}
+\end{figure}
+
+Der Abstand zweier Ätzgrübchen \(d_2\) sowie der Winkel \(\theta_2\)
+werden analog bestimmt. \[
+\begin{eqnarray}
+    d_2 & = & (2.096\pm 0.002) \cdot 10^{-3} \mathrm{\, \mu m} \\
+    \theta_2 &=& (9.782 \pm 0.008) \cdot 10^{-5} \mathrm{\, rad} \\
+        &=& (5.605 \pm 0.005) \cdot 10^{-3\ \circ}
+\end{eqnarray}
+\]
+
+\hypertarget{dritte-messung}{%
+\paragraph{dritte Messung}\label{dritte-messung}}
+
+An der letzten untersuchten Stelle ist der Abstand für \(3\) Ätzgrübchen
+von \(16.76 \mathrm{\, \mu m}\) zu sehen, siehe Abb. \(7\).
+
+\begin{figure}
+\centering
+\includegraphics{KWK3_tempered.pdf}
+\caption{Abb. 7}
+\end{figure}
+
+Erneut werden der Abstand zweier Ätzgrübchen \(d_2\) sowie der Winkel
+\(\theta_2\) analog bestimmt. \[
+\begin{eqnarray}
+    d_3 &=& (5.587 \pm 0.003) \mathrm{\, \mu m} \\
+    \theta_3 &=& (5.088 \pm 0.003) \mathrm{\, rad} \\
+        &=& (2.915 \pm 0.002) \cdot 10^{-3\ \circ} \\
+\end{eqnarray}
+\]
+
+\hypertarget{diskussion-1}{%
+\paragraph{Diskussion}\label{diskussion-1}}
+
+Alle drei ermittelten Kleinwinkelkorngrenzen auf der getemperten Probe
+hatten einen Winkel im Bereich von einigen Milligrad. Damit fallen sie
+alle deutlich in den Bereich einer Kleinwinkelkorngrenze, wodurch die
+hier getätigte Kleinwinkelannahme gerechtfertigt ist.
 
 \hypertarget{nadeldruckrosetten-1}{%
 \subsubsection{Nadeldruckrosetten}\label{nadeldruckrosetten-1}}
