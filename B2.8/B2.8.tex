@@ -178,7 +178,7 @@ dadurch als der kürzeste heraus.
 \begin{figure}
 \centering
 \includegraphics{Dislocations-Fig_19.pdf}
-\caption{Quelle 1, S. 17}
+\caption{Quelle 1, S. 16}
 \end{figure}
 
 \hypertarget{winkel-zwischen-uxe4tzgruxfcbchen}{%
@@ -688,6 +688,82 @@ aus Abbildung \(14\) wie folgt.
 Man sieht, dass die Versetzung von dem Arm in Abbildung \(13\) mit
 Geschwindigkeit \(v_1\) deutlich schneller als die von dem Arm in
 Abbildung \(14\) mit der Geschwindigkeit \(\bar v\) gewandert ist.
+
+\hypertarget{schubspannung}{%
+\subsubsection{Schubspannung}\label{schubspannung}}
+
+Zuletzt soll wir die Schubspannung im Gleitsystem der Versetzungen durch
+den Druck bestimmt werden.
+
+Dazu wird der Druck \(p\) der Presse, welcher auf die Probe wirkte,
+benötigt. Dieser wird durch die Gewichtskraft \(F_G=mg\) beschrieben,
+wobei \(m\) die Masse und \(g\) die Erdbeschleunigung sind. Desweiteren
+ist die Oberfläche \(A=9,073,890.26\mathrm{\,\mu m^2}\), auf die diese
+Kraft wirkte, benötigt. Diese wurde durch das Mikroskop vermessen, siehe
+Abbildung \(15\).
+
+\[
+\begin{eqnarray}
+    p &=& \frac{mg}{A} \label{Druck}
+\end{eqnarray}
+\]
+
+\begin{figure}
+\centering
+\includegraphics{Querschnittsflaeche_tempered.pdf}
+\caption{Abb. 15}
+\end{figure}
+
+Der Deckel der Presse hat ein Gewicht von \(948\mathrm{\,g}\),
+zusätzlich wurde ein \(841\mathrm{\,g}\) schweres Gewicht darauf gelegt.
+Diese Werte wurden als fehlerfrei angenommen. Da die Probe nicht gerade
+in der Presse stand und man möglicherweise die Fläche nicht exakt
+trifft, wird der Fehler der Fläche als \(100\mathrm{\,\mu m^2}\)
+abgeschätzt. Dadurch kann die Unsicherheit \(\Delta p\) durch Gleichung
+\(\eqref{DeltaDruck}\) beschrieben werden.
+
+\[
+\begin{eqnarray}
+    \Delta p &=& \frac{mg \Delta A}{A^2} \label{DeltaDruck}
+\end{eqnarray}
+\]
+
+\begin{figure}
+\centering
+\includegraphics{Gleitsysteme_Druck.pdf}
+\caption{Abb. 16, Quelle: 1, S. 2}
+\end{figure}
+
+Die Schubspannung \(\sigma\) setzt sich aus der tangentialen
+Kraftkomponente und der Schnittfläche der \(\lbrace110\rbrace\)-Ebenen
+zusammen. Diese Zusammenhang lässt sich anhand der Abbildung \(16\)
+veranschaulichen. Der Kristall verschiebt sich in einem Winkel von
+\(\varphi=45\,^\circ=\frac{\pi}{4}\mathrm{\,rad}\) entlang der
+\(\lbrace110\rbrace\)-Ebenen. Daher kann die Schubspannung \(\sigma\)
+aus dem Druck \(p\) berechnet werden.
+
+\[
+\begin{eqnarray}
+    \sigma &=& \frac{F_G \cdot \cos(\varphi)}{\frac{A}{\cos(\varphi)}}\\
+        &=&\frac{F_G}{A} \cdot \cos^2(\varphi) \\
+        &=& \frac{1}{2}\frac{F_g}{A}\\
+    \sigma &=& \frac{p}{2} \\
+    \Delta \sigma &=& \frac{\Delta p}{2}\\
+\end{eqnarray}
+\]
+
+Mithilfe der Gleichungen \(\eqref{Druck}\) und \(\eqref{DeltaDruck}\)
+lässt sich die Schubspannung \(\sigma\) ermitteln.
+
+\[
+\begin{eqnarray}
+    p &=& (1,934.13 \pm 0.02) \mathrm{\,kPa} \\
+    \sigma &=& 967.07 \pm 0.01 \mathrm{\,kPa}
+\end{eqnarray}
+\]
+
+\hypertarget{fazit}{%
+\section{Fazit}\label{fazit}}
 
 \hypertarget{literatur}{%
 \section{Literatur}\label{literatur}}
