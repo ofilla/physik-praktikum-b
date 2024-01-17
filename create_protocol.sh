@@ -41,6 +41,7 @@ do
   cp "$(dirname "$file")/$pdf_" "$tmp/$pdf_file"
 done
 
+sed -e "s/braket/expval/g" -i "$tmp/$filename" # Obsidian braket is physics expval
 pandoc --template .templates/template_uni_koeln.tex --strip-comments -o "$tex" "$tmp/$filename"
 cp "$tex" "$out_dir"
 cp .templates/uni.jpg $tmp/
