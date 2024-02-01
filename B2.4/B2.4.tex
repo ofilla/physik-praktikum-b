@@ -25,7 +25,6 @@
 
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
-\newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
 
 % disable commands
 \renewcommand{\[}{} % math block start
@@ -98,7 +97,7 @@ Das Phänomen des Magnetismus kann nicht klassisch erklärt werden, sondern wird
 Austauschwechselwirkung verantwortlich, welche auf dem Pauli-Prinzip und der Coulombwechselwirkung beruht.
 
 Die wichtigsten Größen sind die \emph{Flussdichte} \(\vec B\), die \emph{Magnetisierung} \(\vec M\) und die \emph{Feldstärke} \(\vec H\). Diese werden durch die \emph{Feldkonstante}
-\(\mu_0=4\pi\cdot\pu{10^{-7}\frac{Vs}{Am}}\) bzw. die \emph{Permeabilität} \(\mu\) miteinander in Verbindung gebracht. Die Permeabilität beschreibt die Durchlässigkeit für magnetische Felder. \cite{Jackson}
+\(\mu_0=4\pi\cdot 10^{-7}\mathrm{\,\frac{Vs}{Am}}\) bzw. die \emph{Permeabilität} \(\mu\) miteinander in Verbindung gebracht. Die Permeabilität beschreibt die Durchlässigkeit für magnetische Felder. \cite{Jackson}
 \begin{eqnarray}
     \vec B &=& \mu_0 \cdot \left(\vec H + \vec M\right) \label{M1}
 \end{eqnarray}
@@ -223,7 +222,7 @@ Durch Einsetzen in \(\eqref{EF1}\) kann man die Feldstärken \(H_E\) und \(H_L\)
 \end{eqnarray}
 Man sieht, dass die Feldstärke aus dem Ring in den Spalt verdrängt wird, die gesamte Feldstärke bleibt aber erhalten. Die Feldstärke \(H_E\) im Ring wird verringert, der Ring wird also entmagnetisiert.
 
-Da die Magnetisierung \(M\) des Kerns im Versuch konstant bleibt, kann nur \(H\) geändert werden, um \(H_E\) auf \(\pu{0\,T}\) zu reduzieren. Daher muss das Entmagnetisierungsfeld \(H_\mathrm{ent}\) angelegt 
+Da die Magnetisierung \(M\) des Kerns im Versuch konstant bleibt, kann nur \(H\) geändert werden, um \(H_E\) auf \(0\mathrm{\,T}\) zu reduzieren. Daher muss das Entmagnetisierungsfeld \(H_\mathrm{ent}\) angelegt 
 werden, um \(H_E\) zu verringern. Dadurch kann man den Entmagnetisierungsfaktor \(N\) durch seine Definition \(\eqref{defN}\) bestimmen. 
 \begin{eqnarray}
     H_\mathrm{ent} &=& \frac{l_L}{l_E+l_L} M \\
@@ -262,7 +261,7 @@ Der Anteil des Magnetfeldes in der Sekundärspule, das vom Feld im Raum zwischen
 \subsubsection{Integration des Messsignals}\label{integration-des-messsignals}}
 Um nun \(M\) zu bestimmen, wird das einlaufende \(U_M\) mittels eines Integrators zeitlich integriert und es folgt \(M(t)\) bis auf eine Konstante \(M(0)\). 
 \begin{eqnarray}
-    U_{aus}(t)
+    U_\mathrm{aus}(t)
         &=& -\frac{1}{R C} \int_{0}^{t} U_M(t^{\prime}) \mathrm dt^{\prime} \\
         &=& -\frac{n_s q}{R C} \mu_0 (M(t) - M(0))
 \end{eqnarray}
@@ -330,13 +329,13 @@ Ringkern}\label{messungen-am-beheizbaren-ringkern}}
 \subsubsection{Kenngrößen}\label{kenngruxf6uxdfen}}
 Zunächst müssen die gemessenen Werte in die richtigen Einheiten konvertiert werden. Gemessen wurden Spannungen, diese müssen in die Magnetisierung \(M\) bzw. die magnetische Feldstärke \(H\) umgerechnet werden.
 
-Die Umrechnung in die Feldstärke kann mittels der Relation \(\eqref{H(I)}\) erfolgen. Der Strom \(I\) kann über das Ohm'sche Gesetz \(U=RI\) aus der Spannung \(U\) und dem Widerstand \(R\) ermittelt werden. Da der Widerstand konstant ist, kann er durch das Verhältnis der maximalen Stromstärke \(I_\mathrm{max}\) und der maximalen Spannung \(U_\mathrm{max}\) beschrieben werden. Weiterhin wird die Länge \(l\) der Spule benötigt. Diese entspricht dem Umfang des Ringkerns, also \(l=2\pi R\) für einen Kern mit dem Radius \(R=1.5\mathrm{cm}\). Damit kann die Feldstärke \(H\) wie folgt ermittelt werden.
+Die Umrechnung in die Feldstärke kann mittels der Relation \(\eqref{H(I)}\) erfolgen. Der Strom \(I\) kann über das Ohm'sche Gesetz \(U=RI\) aus der Spannung \(U\) und dem Widerstand \(R\) ermittelt werden. Da der Widerstand konstant ist, kann er durch das Verhältnis der maximalen Stromstärke \(I_\mathrm{max}\) und der maximalen Spannung \(U_\mathrm{max}\) beschrieben werden. Weiterhin wird die Länge \(l\) der Spule benötigt. Diese entspricht dem Umfang des Ringkerns, also \(l=2\pi R\) für einen Kern mit dem Radius \(R=1.5\mathrm{\,cm}\). Damit kann die Feldstärke \(H\) wie folgt ermittelt werden.
 \begin{eqnarray}
     H &=&
         \frac{n_p}{2\pi R} \cdot \frac{I_\mathrm{max}}{U_\mathrm{max}} \cdot U
         \label{H}
 \end{eqnarray}
-Aus der Versuchsanleitung \cite{Uni} folgt, dass die Magnetisierung \(M\) aus der gemessenen Spannung \(U\) ermittelt werden kann. Hierbei sind \(\nu=\pu{50 Hz}\) die Frequenz des Wechselstroms, \(n_s=17\) die Windungszahl der Sekundärspule und \(q = \pu{0.9 cm^2}\) die
+Aus der Versuchsanleitung \cite{Uni} folgt, dass die Magnetisierung \(M\) aus der gemessenen Spannung \(U\) ermittelt werden kann. Hierbei sind \(\nu=\mathrm{50\,Hz}\) die Frequenz des Wechselstroms, \(n_s=17\) die Windungszahl der Sekundärspule und \(q = \mathrm{0.9\,cm^2}\) die
 Querschnittsfläche des Kerns.
 \begin{eqnarray}
     M &=&
@@ -369,23 +368,23 @@ wenngleich diese im Rahmen der Ungenauigkeit nahezu konstant bleibt.
 		\\
 		3.00 &\pm 0.01 &
 			5.71 &\pm 0.46 &
-			0.42 &\pm 0.04 &
-			1.24 &\pm 0.08
+			0.11 &\pm 0.04 &
+			0.31 &\pm 0.08
 			\\
 		1.00 &\pm 0.01 &
 			5.55 &\pm 0.08 &
-			0.43 &\pm 0.05 &
-			1.16 &\pm 0.09
+			0.12 &\pm 0.05 &
+			0.29 &\pm 0.09
 			\\
 		0.29 &\pm 0.01 &
 			5.37 &\pm 0.67 &
-			0.41 &\pm 0.55 &
-			0.98 &\pm 0.11
+			0.10 &\pm 0.55 &
+			0.25 &\pm 0.11
 			\\
 		0.10 &\pm 0.01 &
 			4.29 &\pm 0.03 &
-			0.33 &\pm 0.06 &
-			0.71 &\pm 0.12
+			0.08 &\pm 0.06 &
+			0.18 &\pm 0.12
 	\end{align*}
 	\caption{Kenngrößen des beheizbaren Ringkerns}
 	\label{Tab: heizbar kenngrößen}
@@ -449,14 +448,14 @@ Dabei fällt auf, dass Remanenz und maximale Magnetisierung bei dem Kern mit Spa
 	\text{ohne Spalt}\qquad
 		3.00 &\pm 0.01 &
 		5.71 &\pm 0.46 &
-		0.42 &\pm 0.04 &
-		1.24 &\pm 0.08
+		0.11 &\pm 0.04 &
+		0.31 &\pm 0.08
 		\\
 	\text{mit Spalt}\qquad
 		0.94 &\pm 0.01 &
 		74.09 &\pm 6.84 &
-		0.23 &\pm 0.04 &
-		0.68 &\pm 0.07
+		0.06 &\pm 0.04 &
+		0.12 &\pm 0.07
 \end{align*}
 \caption{Kenngrößen des Ringkerns mit Spalt}
 \label{Tab: kenngr Spalt}
@@ -480,7 +479,7 @@ Aus der Scherung der Hysteresekurven kann nach Gleichung \(\eqref{Hscher}\) die 
 \label{Abb: Scherung}
 \end{figure}
 
-Die maximale Magnetisierung \(M_\mathrm{max} = (0.495\pm 0.08) \cdot 10^6 \mathrm{\frac{A}{m}}\) kann näherungsweise als konstant angenommen werden. Nach der Definition des Entmagnetisierungsfaktors \eqref{defN} kann damit der experimentelle Entmagnetisierungsfaktor \(N_\mathrm{exp}\) abhängig von der Spaltbreite ermittelt werden. Die Ungenauigkeiten \(\Delta N_\mathrm{exp}\) können durch die Gauß'sche Fehlerfortpflanzung bestimmt werden.
+Die maximale Magnetisierung \(M_\mathrm{max} = (0.12\pm 0.08) \cdot 10^6 \mathrm{\frac{A}{m}}\) ist im Rahmen der Messungenauigkeit konstant geblieben. Nach der Definition des Entmagnetisierungsfaktors \eqref{defN} kann damit der experimentelle Entmagnetisierungsfaktor \(N_\mathrm{exp}\) abhängig von der Spaltbreite ermittelt werden. Die Ungenauigkeiten \(\Delta N_\mathrm{exp}\) können durch die Gauß'sche Fehlerfortpflanzung bestimmt werden.
 
 \begin{eqnarray}
     \Delta f &=& \pm\sqrt{
@@ -504,7 +503,11 @@ bestimmt.
 \begin{eqnarray}
     N &=& \frac{l_L}{2\pi R + l_L} 
 \end{eqnarray}
-Daraus ergeben sich folgende Ergebnisse in Tabelle \ref{Tab: Entmagnetisierung} und Abbildung \ref{Abb: Entmagnetisierung}. Alle Messwerte mit Spalt sind deutlich kleiner als die theoretischen Werte, die Abweichungen werden mit steigender Spaltbreite massiv größer. Dies deutet auf einen systematischen Fehler hin.
+Daraus ergeben sich folgende Ergebnisse in Tabelle \ref{Tab: Entmagnetisierung} und Abbildung \ref{Abb: Entmagnetisierung}. Alle Messwerte mit Spalt sind kleiner als die theoretischen Werte, im Rahmen der Messungenauigkeit stimmen sie aber meistens. Dies deutet auf einen systematischen Fehler hin.
+
+Dieser könnte sein, dass das Magnetfeld im Spalt nicht immer homogen ist. Insbesondere bei dem größten Spalt von \(2\mathrm{\,mm}\) ist dies vermutlich der Grund, warum der Messwert so stark abweicht. Dies ist der einzige Wert, der stärker vom theoretischen Wert abweicht, als seine Ungenauigkeit erlaubt.
+
+Weiterhin werden die Abweichungen vom Theoriewert immer größer. Dies deutet darauf hin, dass das Magnetfeld im Spalt ab einer Spaltbreite von \(1\mathrm{\,mm}\) nicht mehr homogen ist.
 
 \begin{figure}[ht]
 	\centering
@@ -527,38 +530,38 @@ Daraus ergeben sich folgende Ergebnisse in Tabelle \ref{Tab: Entmagnetisierung} 
 	&0.00 \ \mathrm{mm} &
 		0.50 &\pm 0.01 &
 		0.00 &\pm 0.03 &
-		0.49 &\pm 0.08 &
-		0.000 &\pm 0.000 &
+		0.12 &\pm 0.08 &
+		0.00 &\pm 2.50 &
 		0.00\\
 	&0.15 \ \mathrm{mm} &
 		0.79 &\pm 0.01 &
 		0.17 &\pm 0.03 &
-		0.49 &\pm 0.08 &
-		1.026 &\pm 0.052 &
+		0.12 &\pm 0.08 &
+		1.42 &\pm 0.98 &
 		1.59\\
 	&0.25 \ \mathrm{mm} &
 		1.00 &\pm 0.01 &
 		0.29 &\pm 0.03 &
-		0.50 &\pm 0.07 &
-		1.788 &\pm 0.090 &
+		0.12 &\pm 0.07 &
+		2.42 &\pm 1.63 &
 		2.65\\
 	&0.40 \ \mathrm{mm} &
 		1.27 &\pm 0.01 &
 		0.44 &\pm 0.02 &
-		0.50 &\pm 0.07 &
-		2.764 &\pm 0.140 &
+		0.12 &\pm 0.07 &
+		3.67 &\pm 2.45 &
 		4.23\\
 	&1.00 \ \mathrm{mm} &
 		2.12 &\pm 0.01 &
 		0.93 &\pm 0.02 &
-		0.49 &\pm 0.07 &
-		5.778 &\pm 0.292 &
+		0.12 &\pm 0.07 &
+		7.75 &\pm 5.17 &
 		10.50\\
 	&2.00 \ \mathrm{mm} &
 		3.00 &\pm 0.01 &
 		1.43 &\pm 0.01 &
-		0.50 &\pm 0.06 &
-		8.909 &\pm 0.450 &
+		0.12 &\pm 0.06 &
+		11.92 &\pm 7.94 &
 		20.78
 \end{align*}
 \caption{Entmagnetisierungsfaktor}
@@ -571,15 +574,13 @@ Daraus ergeben sich folgende Ergebnisse in Tabelle \ref{Tab: Entmagnetisierung} 
 
 Insgesamt fällt der Großteil der Ergebnissen wie erwartet aus.
 
-Was allerdings auffällt ist die relativ große Abweichung zwischen Theorie und Experiment bei der Entmagnetisierungsfaktoren. Ursache dafür könnte die Annahme eines homogenen Magnetfeldes im Spalt, die wir im Abschnitt \ref{herleitung-des-entmagnetisierungsfaktors} bei der Herleitung der Formel verwendet haben, sein.
-
-Daraus ließe sich deuten, dass der Entmagnetisierungsfaktor gar nicht wie erwartet linear verläuft sowie nur von der Spaltgröße abhängt.
-
 Der Anstieg der Kenngrößen mit steigenden Stromstärke entsprechen den Erwartungen, auch wenn bei der Durchführung es schwierig war die Phase so einzustellen, dass diese nicht stehen bleibt oder rückwärts läuft und man genügend gute Punkte auf der Hysterese erhält. Auffällig bei der Hyteresekurve mit Spalt ist die sehr große Koerzitivfeldstärke im Vergleich zu der Kurve ohne Spalt. Dies weist daraus hin, dass die Kerne aus verschiedenen Materialien bestehen und der Kern mit Spalt vermutlich hartmagnetisch ist, während der beheizbare Ferritkern aus ersten Versuchsteil weichmagnetisch ist.
 
 Die Kurven der differentiellen Suszeptibilität ähneln sich insofern, dass beide bis zu einem Maximum ansteigen und dann, bei betragsmäßig höheren \(H\), wieder abfallen. Allerdings haben wir eine ca \(20\)-fache Abweichung zwischen beide Messungen und der Plot oszilliert leicht. Diese Ungleichmäßigkeiten lassen sich bei manuellem Regeln der Stromstärke nicht vermeiden. Dennoch kann man den Verlauf der Kurven als physikalisch sinnvoll beurteilen. Was aber dazu geführt hat, dass die zweite Messung negative Magnetisierungswerte angenommen hat, ist nicht geklärt, denn eigentlich war die Phase an dem oberen Sättigungspunkt fixiert. Hier gab es offensichtlich einen systematischen Fehler.
 
 Die zeitaufwändige Temperaturmessung liefert einer der besten Ergebnissen, nämlich eine um \(T_{c}\) verschobene und gespiegelte Wurzelfunktion so wie die Landau-Theorie es vorhergesagt hat. Die Curie-Temperatur hier beträgt \((76.5 \pm 0.5) \ ^\circ\mathrm C\).
+
+Schließlich trifft die Messung des Entmagnetisierungsfaktors die erwarteten theoretischen Werte ziemlich gut. Es lässt sich vermuten, dass das Magnetfeld in einem Spalt von \(1\mathrm{\,mm}\) nicht mehr homogen ist.
 
 \clearpage
 \hypertarget{literaturverzeichnis}{%
