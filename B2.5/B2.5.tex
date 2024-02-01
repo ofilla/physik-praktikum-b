@@ -345,44 +345,39 @@ Die drei dichtgepackten Richtungen der ersten atomaren Auflösung sind in Abbild
 
 Analog wird die Korrugation aus der zweiten Messung bestimmt. In Abbildung \ref{abb:hopg_with_profile_2} sind die dichtestgepackten Richtungen zu sehen, die Profile sind in Abbildung \ref{abb:hopg_profile_2} dargestellt.
 
-Die Ergebnisse der einzelnen Korrugationen sind in den Tabellen \ref{table:Korrugation 1} und \ref{table:Korrugation 2} dargestellt. Daraus ergeben sich folgende mittlere Korrugationen $\bar{K}$.
+Die Ergebnisse der einzelnen Korrugationen sind in Tabelle \ref{table:Korrugation} dargestellt. Daraus ergeben sich folgende mittlere Korrugationen $\bar{K}$.
 
 \begin{eqnarray}
 	\bar{K_1} &=& 1.1 \mathrm{\,\mathring{A}} \pm 0.9 \mathrm{\,\mathring{A}} \\
 	\bar{K_2} &=& 1.1 \mathrm{\,\mathring{A}} \pm 0.4 \mathrm{\,\mathring{A}}
 \end{eqnarray}
 
-\begin{table}[h!]
-	\centering
-	\begin{align*}
-		&&&&& \text{Profil 1}&& \text{Profil 2} && \text{Profil 3} \\
-		&\text{Minimale Amplitude}\quad &A_\mathrm{min}\ [\mathrm{nm}] &&
-		& -41.01 && -40.93 && -40.87 \\
-		&\text{Maximale Amplitude}\quad &A_\mathrm{max} [\mathrm{nm}] &&
-		& -40.83 && -40.81 && -40.84 \\
-		&\text{Korrugation} &K\ [\mathrm{nm}] &&
-		& 0.18 && 0.12 && 0.03 \\
-	\end{align*}
-	\caption{erste Korrugationsmessung von HOPG}
-	\label{table:Korrugation 1}
-\end{table}
 
 \begin{table}[h!]
 	\centering
-	\begin{align*}
-	    &&&&& \text{Profil 1}&& \text{Profil 2} && \text{Profil 3} \\
-	    &\text{Minimale Amplitude}\quad &A_\mathrm{min}\ [\mathrm{nm}] &&
-	        & -45.54 && -45.53 && -45.51 \\
-	    &\text{Maximale Amplitude}\quad &A_\mathrm{max} [\mathrm{nm}] &&
-	        & -45.46 && -45.39 && -45.39 \\
-	    &\text{Korrugation} &K\ [\mathrm{nm}] &&
-	        & 0.08 && 0.14 && 0.12 \\
-	\end{align*}
-	\caption{zweite Korrugationsmessung von HOPG}
-	\label{table:Korrugation 2}
+	\begin{tabular}{lr|rrr|rrr}
+		&& \multicolumn{3}{c}{Messung $1$} \vline& \multicolumn{3}{c}{Messung $2$} \\
+		&& Profil $1$ & Profil $2$ & Profil $3$ & Profil $1$ & Profil $2$ & Profil $3$ \\
+		\hline
+		
+		$A_\mathrm{min}$ &in $[\mathrm{nm}]$
+			& $-41.01$ & $-40.93$ & $-40.87$
+			& $-45.54$ & $-45.53$ & $-45.51$
+			\\
+		$A_\mathrm{max}$ &in $[\mathrm{nm}]$
+			& $-40.83$ & $-40.81$ & $-40.84$
+			& $-45.46$ & $-45.39$ & $-45.39$
+			\\
+		$K$  &in $[\mathrm{nm}]$
+			& $0.18$ & $0.12$ & $0.03$
+			& $0.08$ & $0.14$ & $0.12$
+	\end{tabular}
+	\caption{Korrugationsmessungen von HOPG}
+	\label{table:Korrugation}
 \end{table}
 
 \begin{figure}[h!]
+	\centering
 	\begin{minipage}[t]{0.4\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{../media/B2.5/Atoms1_with_profileLines.png}
