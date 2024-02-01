@@ -129,8 +129,23 @@ Versetzungen können entlang des Burgers--Vektors $\vec{b}$ verschoben werden. D
 
 Die Ebenen, auf denen Versetzungen wandern, werden Gleitebenen genannt. Sie sind dadurch ausgezeichnet, dass die benötigte kritische Schubspannung auf diesen Ebenen minimal ist.
 
+\hypertarget{tunnelspektroskopie}{%
+\subsection{Tunnelspektroskopie}\label{tunnelspektroskopie}}
+Mit dem Rastertunnelmikroskop (STM) lässt sich die \textit{atomare Topographie} einer Probe darstellen. Hierbei werden keine Atome aufgelöst, stattdessen wird eine Ladungsdichtedifferenz zwischen Spitze und Probe abgebildet.
+
+Ein Atom erscheint größer, wenn nur eine geringe Austrittsarbeit notwendig ist, um ein Elektron
+über die Fermikante zu bringen. Ist die notwendige Austrittsarbeit höher, wird der Atom kleiner dargestellt.
+
+Neben der Auflösung einer Oberfläche lässt sich durch gezielte Variation von bestimmten Parametern \textit{Tunnelspektroskopie} betreiben. Damit lassen sich weitere Eigenschaften der Probe zu messen.
+
+Dabei werden zwei Messmodi verwendet. Zum einen gibt es den den \textit{Konstant--Höhen--Modus}, bei dem die Tunnelspitze parallel zur Oberfläche der Probe bewegt wird. Existiert Unebenheit, dann variiert das Signal vom Tunnelstrom stark und man kann daraus topographische Rückschlüsse ziehen. In diesem Modus lassen sich mithilfe von $I(V)$--\textit{Spektroskopie} Informationen über die Zustandsdichte herausfinden.
+
+Bei der zweite Methode wird die Tunnelspannung konstant gehalten und der Abstand zwischen Spitze und Probe so eingestellt, bis man einen nahezu konstanten Stromsignal bekommt. Dieses kann durch gute Regelung des Abstandes zu erreicht werden. Auch hier erhält man Informationen über die Oberfläche der Probe. Die Methode wird \textit{Konstant--Strom--Modus} genannt.
+
+Fixiert man einen Punkt und zieht die Spitze dann hoch, lässt sich aus dem Tunnelstrom die Austrittsarbeit bestimmen. Daher nennt man diese Methode $I(z)$--\textit{Spektroskopie}. Da der Tunnelstrom $I$ exponenziell von der Höhe $z$ abhängig ist \eqref{eq:Tunnelstrom}, erhält man eine gute Auflösung.\footnote{vgl. \ref{auflösung}: \nameref{auflösung}}
+
 \hypertarget{tunneleffekt}{%
-\subsection{Tunneleffekt}\label{tunneleffekt}}
+\subsubsection{Tunneleffekt}\label{tunneleffekt}}
 Quantenmechanische Teilchen können Potentialbarrieren auch dann überwinden, wenn ihre Energie eigentlich zu niedrig ist. Man spricht davon, dass sie durch die Barriere hindurchtunneln.
 
 Die tatsächliche Potentialbarriere kann analog zur Gamow-Näherung als einzelne kastenförmiges Potential $V(z)$ angenommen werden. Die Potentialbarriere beginne an der Position $0$ bei der Probe und Ende an der Position $z_0$ an der Messspitze des STMs.
@@ -163,7 +178,7 @@ Der Tunnelstrom ist proportional zur Tunnelwahrscheinlichkeit $P(z_0)$, ebenso z
 Durch die exponentielle Abhängigkeit des Tunnelstroms $I$ von dem Abstand $z_0$ ist ein STM sehr sensibel gegen Höhenunterschieden. Schon ein Höhenunterschied von $1\,\mathrm{\mathring{A}}$ macht einen Faktor von näherungsweise $8$ im Tunnelstrom aus. \cite{Anleitung} Dadurch können Atomstrukturen an der Oberfläche gemessen werden.
 
 \hypertarget{piezoelektrischer-effekt-und-anwendung}{%
-\subsection{piezoelektrischer Effekt und
+\subsubsection{piezoelektrischer Effekt und
 Anwendung}\label{piezoelektrischer-effekt-und-anwendung}}
 
 Der piezoelektrische Effekt bezeichnet die Erzeugung elektrischer Spannungen an bestimmten Kristallen, den Piezokristallen, bei deren Deformation. Dies funktioniert auch umgekehrt: Durch Anlegen einer Spannung verformt sich ein Piezokristall. Dies nennt man \emph{inversen Piezoeffekt}.
@@ -175,7 +190,7 @@ Wird die Spannung auf diese Weise bei allen drei Piezoröhrchen variiert, so wir
 Alternativ kann die Messspitze rotiert werden, ohne die Position auf der Probenoberfläche zu verändern. Dies kann dazu genutzt werden, um die Höhe der Messspitze zu steuern.
 
 \hypertarget{auflösung}{
-\subsection{Auflösung des STM}\label{auflösung}}
+\subsubsection{Auflösung des STM}\label{auflösung}}
 Das Rastertunnelmikroskop besitzt eine sehr hohe vertikale sowie laterale Auflösung, was die atomare Abbildung von Proben erstmals möglich machte.
 
 Die vertikale Auflösung ist sehr hoch. Dies kommt zustande, da der Tunnelstrom $I$ exponentiell vom Abstand $z$ abhängig ist, wie es in Gleichung \eqref{eq:Tunnelstrom} beschrieben wird.
@@ -390,6 +405,7 @@ Die Ergebnisse der einzelnen Korrugationen sind in Tabelle \ref{table:Korrugatio
 		\caption{Profile der drei dichtgepacktesten Richtungen der ersten atomaren Auflösung}
 		\label{abb:hopg_profile_1}
 	\end{minipage}
+	\vspace{12pt}
 	
 	\begin{minipage}[t]{0.4\textwidth}
 		\includegraphics[width=\linewidth]{../media/B2.5/Atoms2_with_profileLines.png}
