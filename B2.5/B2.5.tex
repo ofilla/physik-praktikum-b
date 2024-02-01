@@ -32,11 +32,6 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
 \newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
 
-% disable commands
-\renewcommand{\[}{} % math block start
-\renewcommand{\]}{\noindent} % math block end
-\newcommand{\tightlist}{} % created in enumerations
-
 \hypersetup{
   pdftitle={B 2.5},
   pdfcreator={LaTeX via pandoc}}
@@ -53,7 +48,7 @@
 	\textsc{\LARGE Universität zu Köln }\\ [0.4cm]
 	\textsc{Mathematisch-Naturwissenschaftliche Fakultät} \\[1.5cm]
 
-	\includegraphics[width=0.45\textwidth]{uni}\\[1.5cm]  % Uni-Logo wird geladen
+	\includegraphics[width=0.45\textwidth]{../media/uni.jpg}\\[1.5cm]  % Uni-Logo wird geladen
 
 	\textsc{\Large Praktikum~B}\\[2mm]
 	\textsc{}\\[10mm]
@@ -103,11 +98,10 @@ Quantenmechanische Teilchen können Potentialbarrieren auch dann
 davon, dass sie durch die Barriere hindurchtunneln.
 
 Die tatsächliche Potentialbarriere kann analog zur Gamow-Näherung als
-einzelne kastenförmiges Potential \(V(z)\) angenommen werden. Die
-Potentialbarriere beginne an der Position \(0\) bei der Probe und Ende
-an der Position \(z_0\) an der Messspitze des STMs.
+einzelne kastenförmiges Potential $V(z)$ angenommen werden. Die
+Potentialbarriere beginne an der Position $0$ bei der Probe und Ende
+an der Position $z_0$ an der Messspitze des STMs.
 
-\[
 \begin{eqnarray}
     V(z) &=&
         \begin{cases}
@@ -115,46 +109,44 @@ an der Position \(z_0\) an der Messspitze des STMs.
             0 &: z \notin [0, z_0]
         \end{cases}
 \end{eqnarray}
-\] Die Lösung der eindimensionalen, stationären Schrödingergleichung
-liefert die Tunnelwahrscheinlichkeit \(P(z_0)\), mit der das Teilchen
-die Barriere durchtunnelt. Der relevante Parameter \(\kappa\) ist
-abhängig von der Elektronenmasse \(m_e\), der Höhe der Potentialbarriere
-\(V_0\) und der Energie \(E\) des tunnelnden Elektrons. \(\hbar\) ist
+Die Lösung der eindimensionalen, stationären Schrödingergleichung
+liefert die Tunnelwahrscheinlichkeit $P(z_0)$, mit der das Teilchen
+die Barriere durchtunnelt. Der relevante Parameter $\kappa$ ist
+abhängig von der Elektronenmasse $m_e$, der Höhe der Potentialbarriere
+$V_0$ und der Energie $E$ des tunnelnden Elektrons. $\hbar$ ist
 die reduzierte Planck-Konstante.
 
-\[
 \begin{eqnarray}
     P(z_0) &\propto& |\Psi(0)|^2 \cdot \mathrm e^{-2\kappa z_0} \\
     \kappa &=& \frac{\sqrt{2m_e(V_0 - E)}}{\hbar} \label{kappa} \\
 \end{eqnarray}
-\] Diese Wahrscheinlichkeit ist exponentiell von der Breite des
-Potentials \(z_0\) abhängig. Zudem ist sie von der Wahrscheinlichkeit
+Diese Wahrscheinlichkeit ist exponentiell von der Breite des
+Potentials $z_0$ abhängig. Zudem ist sie von der Wahrscheinlichkeit
 für den Aufenthalt eines Teilchens am Beginn der Probe abhängig, die
-durch die quadrierte Wellenfunktion \(|\Psi(0)|^2\).
+durch die quadrierte Wellenfunktion $|\Psi(0)|^2$.
 
 Diese Wahrscheinlichkeit hängt davon ab, wie wahrscheinlich ein Elektron
-aus der Probe austritt. Dazu ist die Austrittsenergie \(\phi\)
+aus der Probe austritt. Dazu ist die Austrittsenergie $\phi$
 essentiell. Dafür wiederum ist die Besetzung der Energieniveaus
 relevant, die von der Temperatur und der Fermi-Energie abhängt. Die
 Beschreibung erfolgt durch die Zustandsdichte.
 
 Für das STM ist jedoch nicht der Einzelfall interessant, sondern die
 Rate, mit der Elektronen aus der Probe austreten und tunneln. Dies kann
-durch den \emph{Tunnelstrom} \(I\) beschrieben werden.
+durch den \emph{Tunnelstrom} $I$ beschrieben werden.
 
 Der Tunnelstrom ist proportional zur Tunnelwahrscheinlichkeit
-\(P(z_0)\), ebenso zu der Anzahl der Elektronen, die in einer gewissen
+$P(z_0)$, ebenso zu der Anzahl der Elektronen, die in einer gewissen
 Zeit aus dem Material austreten. Dadurch ist der Tunnelstrom
-exponentiell von der Breite \(z_0\) der Potentialbarriere abhängig.
+exponentiell von der Breite $z_0$ der Potentialbarriere abhängig.
 
-\[
 \begin{eqnarray}
     I(z_0) &\propto& \mathrm e^{-2\kappa z_0} \label{I(z)}
 \end{eqnarray}
-\] Durch die exponentielle Abhängigkeit des Tunnelstroms \(I\) von dem
-Abstand \(z_0\) ist ein STM sehr sensibel gegen Höhenunterschieden.
-Schon ein Höhenunterschied von \(1\,\mathrm{\mathring{A}}\) macht einen
-Faktor von näherungsweise \(8\) im Tunnelstrom aus. \([2]\) Dadurch
+Durch die exponentielle Abhängigkeit des Tunnelstroms $I$ von dem
+Abstand $z_0$ ist ein STM sehr sensibel gegen Höhenunterschieden.
+Schon ein Höhenunterschied von $1\,\mathrm{\mathring{A}}$ macht einen
+Faktor von näherungsweise $8$ im Tunnelstrom aus. $[2]$ Dadurch
 können Atomstrukturen an der Oberfläche gemessen werden.
 
 \hypertarget{piezoelektrischer-effekt-und-anwendung}{%
@@ -210,10 +202,10 @@ ausgeschlossen.
 \subsubsection{Austrittsarbeit}\label{austrittsarbeit}}
 
 Zur Messung der Austrittsarbeit wird die Messspitze an der selben
-Position in der Höhe verändert, dabei wird der Tunnelstrom \(I(z)\)
-gemessen. Im ersten Teil wird sie um \(3\,\mathrm{\mathring{A}}\)
+Position in der Höhe verändert, dabei wird der Tunnelstrom $I(z)$
+gemessen. Im ersten Teil wird sie um $3\,\mathrm{\mathring{A}}$
 abgesenkt und wieder angehoben, im zweiten Teil wird die Messspitze
-stattdessen um \(3\,\mathrm{\mathring{A}}\) angehoben und wieder
+stattdessen um $3\,\mathrm{\mathring{A}}$ angehoben und wieder
 abgesenkt.
 
 \hypertarget{graphit}{%
@@ -229,8 +221,8 @@ ist.
 \section{Auswertung}\label{auswertung}}
 
 Die Messergebnisse können mit der Software
-\href{http://gwyddion.net}{Gwyddion} \([1]\) alternativ mit
-\href{http://www.wsxm.eu}{WSxM} \([2]\) ausgewertet werden.
+\href{http://gwyddion.net}{Gwyddion} $[1]$ alternativ mit
+\href{http://www.wsxm.eu}{WSxM} $[2]$ ausgewertet werden.
 
 \hypertarget{gold-1}{%
 \subsection{Gold}\label{gold-1}}
@@ -239,12 +231,12 @@ Die im Versuch aufgenommenen Bilder von Gold sind alle sehr verschieden.
 Auf einigen ist das Rauschen zu groß und es sind amorphe Region zu
 sehen, deshalb werden sie nicht im Protokoll weiter diskutiert. Daher
 wurden uns vonseiten der Versuchsbetreung zusätzliche Daten zur
-Auswertung bereitgestellt. \([6]\)
+Auswertung bereitgestellt. $[6]$
 
 \hypertarget{eigene-messung}{%
 \subsubsection{eigene Messung}\label{eigene-messung}}
 
-\includegraphics{Gold_gross.pdf} In Abbildung 1?? kann man mögliche
+\includegraphics{../media/B2.5/Gold_gross.pdf} In Abbildung 1?? kann man mögliche
 Stufenkanten sehen. Das darunterliegende Gebiet ist nicht eindeutig zu
 identifizieren. Vermutlich erstrecken sich viele Stufenkanten über
 diesem Bild, was aber wegen Rauschen im Messsignal unklar ist.
@@ -252,7 +244,7 @@ diesem Bild, was aber wegen Rauschen im Messsignal unklar ist.
 Die gesamte Struktur sieht nicht nach einem Einkristall aus. Dies legt
 die Vermutung nahe, dass Fremdkörper auf der Probe sind.
 
-\includegraphics{Gold_Stufenkante.pdf} Bei Abbildung 2?? erkennt man
+\includegraphics{../media/B2.5/Gold_Stufenkante.pdf} Bei Abbildung 2?? erkennt man
 eine mögliche Terrassenstruktur, die von links nach rechts verlaufen.
 Auch hier leiden die Bilddetails unter der schlechten Qualität, scharfe
 Kanten sind nicht zu erkennen. Möglicherweise gibt es auch hier
@@ -265,19 +257,19 @@ Biologisches Material wie Fettspuren könnten diese Bilder erklären.
 \subsubsection{bereitgestelltes
 Material}\label{bereitgestelltes-material}}
 
-\includegraphics{Stufenkante.pdf} In Abbildung 3?? kann man eine
-Stufenkante in der Höhe von \(1.03\mathrm{\,nm}\) in der oberen rechten
+\includegraphics{../media/B2.5/Stufenkante.pdf} In Abbildung 3?? kann man eine
+Stufenkante in der Höhe von $1.03\mathrm{\,nm}$ in der oberen rechten
 Bildhälfte erkennen. Die Oberfläche scheint sehr glatt zu sein, wobei
 auch hier ein Rauschen im Bild auftritt.
 
 Die Stufenkante entsteht bei der Abkühlung nach dem Ausglühen der Probe,
 d.h. durch die thermische Spannung. Gold besitzt eine
-\(\mathrm{fcc}\)-Gitterstruktur, so treten die Stufenversetzungen in den
-\(\braket{111}\)-Ebenen auf, die sind auch die dichtgepackten Ebenen
+$\mathrm{fcc}$-Gitterstruktur, so treten die Stufenversetzungen in den
+$\braket{111}$-Ebenen auf, die sind auch die dichtgepackten Ebenen
 sind. Die Stufenkante verläuft in die selbe Richtung wie der
-Burgersvektor, nämlich in die \(\braket{110}\)-Richtungen.
+Burgersvektor, nämlich in die $\braket{110}$-Richtungen.
 
-\includegraphics{Gold.pdf} In Abbildung 4?? sind Terrassen abgebildet,
+\includegraphics{../media/B2.5/Gold.pdf} In Abbildung 4?? sind Terrassen abgebildet,
 die von Stufenkanten getrennt sind. Die Stufen verlaufen von unten
 rechts nach oben links und die Breite der einzelnen Stufen scheinen
 relativ gleichmäßig zu sein.
@@ -292,23 +284,22 @@ Bias-Spannung, die Stromstärken unterscheiden sich jedoch.
 Insbesondere die bereitgestellte Messung der Stufenkante (Abb. 3??) ist
 bei einer deutlich geringeren Stromstärke als alle anderen Messungen an
 Gold vorgenommen worden, die Stromstärken unterscheiden sich um einen
-Faktor \(6\) von unseren Stromstärken. Die Stromstärken von unseren
-Messungen sind jedoch auch um ca. \(30\%\) größer als die
+Faktor $6$ von unseren Stromstärken. Die Stromstärken von unseren
+Messungen sind jedoch auch um ca. $30\%$ größer als die
 bereitgestellte Messung der Terassen (Abb. 4??) bei
-\(3.5 \mathrm{\,nA}\). Dies unterstützt die These, dass unsere Probe
+$3.5 \mathrm{\,nA}$. Dies unterstützt die These, dass unsere Probe
 nicht sauber ist und eine Barriere aus Fremdstoffen die
 Tunnelwahrscheinlichkeit verringert.
 
 \hypertarget{austrittsarbeit-1}{%
 \subsubsection{Austrittsarbeit}\label{austrittsarbeit-1}}
 
-Die Austrittsarbeit \(\phi\) ist die Differenz zwischen
-Potentialbarriere \(V_0\) und der Energie \(E\) der tunnelnden
+Die Austrittsarbeit $\phi$ ist die Differenz zwischen
+Potentialbarriere $V_0$ und der Energie $E$ der tunnelnden
 Elektronen. Mithilfe der Relationen für die Tunnelwahrscheinlichkeit
-\(\eqref{kappa}\) und den Tunnelstrom \(\eqref{I(z)}\) kann man die
+$\eqref{kappa}$ und den Tunnelstrom $\eqref{I(z)}$ kann man die
 Austrittsarbeit ermitteln.
 
-\[
 \begin{eqnarray}
     I(z) &\propto& \exp\left[-2\frac{\sqrt{2m_e\cdot \phi}}{\hbar} z\right] \\
     \ln\eqref{I(z)}
@@ -317,21 +308,18 @@ Austrittsarbeit ermitteln.
             \cdot \sqrt{\phi} \cdot z \\
     \ln\eqref{I(z)} &=& \ln(c) + 0.51 \mathrm{\,\frac{\sqrt{eV}}{\mathrm{\mathring{A}}}}\cdot \sqrt{\phi} \cdot z
 \end{eqnarray}
-\] Im letzten Schritt wurden die Naturkonstanten passend eingesetzt.
-\([3]\) Dadurch kann die Austrittsarbeit aus der Steigung \(m\) einer
-Regression von \(\ln\eqref{I(z)}\) ermittelt werden.
+Im letzten Schritt wurden die Naturkonstanten passend eingesetzt.
+$[3]$ Dadurch kann die Austrittsarbeit aus der Steigung $m$ einer
+Regression von $\ln\eqref{I(z)}$ ermittelt werden.
 
-\[
 \begin{eqnarray}
     \phi &=& \left(\frac{m}{0.51}\right)^2 \mathrm{\,eV}
 \end{eqnarray}
-\]
 
 Dadurch ergeben sich folgende Ergebnisse, von denen die erste Hälfte aus
 der ersten Messung und die zweite Hälfte aus der zweiten Messung
 stammen.
 
-\[
 \begin{align*}
     \text{Steigung } m &\text{ in } 10^{-3}\mathrm{\mathring A}^{-1}
         & \phi &\text{ in } 10^{-6}\mathrm{eV} \\
@@ -346,7 +334,6 @@ stammen.
     13.945 &\pm 0.038 & 194.458 &\pm 0.001 \\
     13.526 &\pm 0.057 & 182.949 &\pm 0.003
 \end{align*}
-\]
 
 \hypertarget{graphit-hopg}{%
 \subsection{Graphit (HOPG)}\label{graphit-hopg}}
@@ -362,14 +349,13 @@ drei Werten liefert die mittlere Korrugation von Graphit an der
 gemessenen Stelle.
 
 Die drei dichtgepackten Richtungen der ersten atomaren Auflösung sind in
-Abbildung ?? zu sehen. Mittels Gwyddion \([1]\) lassen sich die Profile
+Abbildung ?? zu sehen. Mittels Gwyddion $[1]$ lassen sich die Profile
 dieser Richtungen mit ihren minimalen und maximalen Amplituden anzeigen,
 siehe Abb. ??. Die Ungenauigkeit liegt immer bei
-\(\Delta A = \pm 0.001 \mathrm{\,nm}\). Die Korrugation der einzelnen
+$\Delta A = \pm 0.001 \mathrm{\,nm}$. Die Korrugation der einzelnen
 Profile bestimmt sich nun aus dem Betrag der Differenz der minimalen und
 der maximalen Amplituden.
 
-\[
 \begin{align*}
     &&&&& \text{Profil 1}&& \text{Profil 2} && \text{Profil 3} \\
     &\text{Minimale Amplitude}\quad &A_\mathrm{min}\ [\mathrm{nm}] &&
@@ -379,26 +365,21 @@ der maximalen Amplituden.
     &\text{Korrugation} &K\ [\mathrm{nm}] &&
         & 0.18 && 0.12 && 0.03 \\
 \end{align*}
-\]
 
 Die durchschnittliche Korrugation der ersten atomaren Auflösung ergibt
 sich als der Mittelwert der Korrugationen der drei Richtungen, deren
 Fehler wird durch die Mittlere Quadratsumme der Residuen (MQR) gebildet.
 
-\[
 \begin{eqnarray}
     \bar{x} &=& \sum_{i=1}^n \frac{x_i}{n} \\
     \Delta \bar{x} &=& \sqrt{\frac{1}{n (n-1)} \cdot \sum_{i=1}^{n} (x_i -\bar{x})^2}
 \end{eqnarray}
-\]
 
-\[
 \begin{eqnarray}
     \bar{K_1} &=& 1.1 \mathrm{\,\mathring{A}} \pm 0.9 \mathrm{\,\mathring{A}}
 \end{eqnarray}
-\]
 
-Analog wird die Korrugation aus der zweiten Messung bestimmt. \[
+Analog wird die Korrugation aus der zweiten Messung bestimmt.
 \begin{align*}
     &&&&& \text{Profil 1}&& \text{Profil 2} && \text{Profil 3} \\
     &\text{Minimale Amplitude}\quad &A_\mathrm{min}\ [\mathrm{nm}] &&
@@ -408,14 +389,12 @@ Analog wird die Korrugation aus der zweiten Messung bestimmt. \[
     &\text{Korrugation} &K\ [\mathrm{nm}] &&
         & 0.08 && 0.14 && 0.12 \\
 \end{align*}
-\]
 
-Die mittlere Korrugation \(\bar K_2\) wird wieder durch Mittelwert und
-MQR ermittelt. \[
+Die mittlere Korrugation $\bar K_2$ wird wieder durch Mittelwert und
+MQR ermittelt.
 \begin{eqnarray}
     \bar{K_2} &=& 1.1 \mathrm{\,\mathring{A}} \pm 0.4 \mathrm{\,\mathring{A}}
 \end{eqnarray}
-\]
 
 \hypertarget{fazit}{%
 \section{Fazit}\label{fazit}}
@@ -425,7 +404,6 @@ MQR ermittelt. \[
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   Gwyddion, \url{http://gwyddion.net}
 \item
