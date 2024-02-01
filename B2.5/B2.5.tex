@@ -30,11 +30,11 @@
 
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
-\newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
 
 \hypersetup{
   pdftitle={B 2.5},
-  pdfcreator={LaTeX via pandoc}}
+  pdfcreator={LaTeX via pandoc}
+}
 
 \setcounter{secnumdepth}{6}
 \setcounter{tocdepth}{6}
@@ -59,15 +59,10 @@
 	
 	\HRule \\[3cm]
 
-			\textsc{\Large Catherine Tran } \\[3pt]
+		\textsc{\Large Catherine Tran } \\[3pt]
 		\textsc{\Large Carlo Kleefisch } \\[3pt]
 		\textsc{\Large Oliver Filla } \\[3pt]
 		
-% 	\begin{center}
-% 	\textsc{\Large Catherine~Tran } \\[3pt]
-% 	\textsc{\Large Carlo~Kleefisch } \\[3pt]
-% 	\textsc{\Large Oliver~Filla } \\[3pt]
-% 	\end{center}
 	\end{center}
 \end{titlepage}
 
@@ -87,12 +82,60 @@ eine aus Graphit, vermessen. Als die Graphitprobe wird hochorientiertes
 pyrolytisches Graphit (HOPG) verwendet, was eine besonders stabile
 Struktur aufweist.
 
+\clearpage
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
 
+\hypertarget{kristallstruktur}{%
+	\subsection{Kristallstruktur}\label{kristallstruktur}}
+Die atomare Struktur eines Festkörpers wird durch eine Basis und ein Gitter beschrieben. Die Basis besteht aus Atomen oder Molekülen, die an jedem Gitterpunkt eines Kristallgitters angeheftet ist.
+
+Unter dem Begriff \textit{Kristallgitter} versteht man eine räumlich regelmäßige Anordnung von Punkten. Allerdings sind nur die Bravais-Gitter zur Beschreibung von Kristallen sinnvoll.
+
+Ein \textit{Bravais-Gitter} besitzt eine bis ins Unendliche ausgedehnte Anordnung von Gitterpunkten, die von jedem Punkt aus gleich aussieht. Alternativ wird durch die Translationen $\vec{R} = n_1\vec{a}_1 + n_2\vec{a}_2 + n_3\vec{a}_3$ festgelegt. Es gibt $14$ verschiedene Bravais-Gitter.
+
+Erfüllt eine Zelle den Raum ohne Lücke und ohne Überlapp, wenn diese Zelle mit allen $\vec{R}$
+verschoben wird, so heißt sie \textit{primitive Einheitszelle}. Sie ist nicht eindeutig definiert und enthält genau einen Gitterspunkt.
+
+\hypertarget{graphitstruktur}{%
+\subsubsection{Graphit}\label{graphitstruktur}}
+Graphit besteht aus Graphenschichten in der hexagonalen Struktur mit der Stapelfolge $ABAB$. In jeder Schicht sind die Kohlenstoffatome in der Honigwabenstruktur mit einem Abstand von $142\mathrm{\,pm}$ angeordnet. Der Abstand zwischen zwei Lagen beträgt $335\mathrm{\,pm}$, zwischen ihnen herrschen schwache Van--der--Waals--Kräfte.
+
+Im dem Versuch wird hochorientiertes pyrolytisches Graphit (HOPG) verwendet, das einen besonders hohen Grad an Ordnung hat und daher einfach präperiert werden kann.
+
+\hypertarget{goldstruktur}{%
+\subsubsection{Gold}\label{goldstruktur}}
+Gold kristallisiert in einer kubisch-flächenzentrierten Struktur mit einer Kantenlänge von $407\mathrm{\,pm}$. Die primitive Einheitszelle ist rhomboedrisch mit einer einatomigen Basis.
+
+Das in diesem Versuch verwendete Gold ist entweder ein Goldblech oder Gold auf Glimmer. Der verwendete Glimmer besteht aus Aluminiumsilikatschichten, die einzelne Schichten sind schwach durch Kaliumionen gebunden. Dadurch kann man das Material einfach spalten und eine glatte Oberfläche erhalten.
+
+Das Goldblech ist ein Polykristall aus $99.9\,\%$ Gold. Die Textur ist weniger ausgeprägt als Gold auf Glimmer. Beide Probe müssen vor dem Experimentieren thermisch gereinigt und geglättet werden.
+
+\hypertarget{defekte}{
+\subsection{Kristall- und Oberflächendefekte}\label{defekte}}
+Im thermodynamischen Gleichgewicht bei endlichen Temperaturen existieren keine defektfreien Kristalle. So werden auch die Proben in diesem Versuch Defekte aufweisen, die mittels des STM sichtbar gemacht werden können. Dabei lassen sie sich aufgrund ihrer Dimensionalität grob in drei Kategorien einordnen, namentlich Punktdefekte, Liniendefekte und Flächendefekte. Zwei Arten von Liniendefekten werden im Folgenden erläutert.
+
+\hypertarget{korngrenzen}{
+\subsubsection{Korngrenzen}\label{korngrenzen}}
+Korngrenzen treten auf, wenn mehrere einkristalline Bereiche im Kristall mit unterschiedlicher Orientierung aufeinandertreffen. Sie gehören zu der Kategorie der Flächendefekte. \cite{Gross} % [S. 43]
+
+\hypertarget{versetzungen}{
+\subsubsection{Versetzungen}\label{versetzungen}}
+Versetzungen gehören zu den Liniendefekten und können in unterschiedlichen Formen auftreten. Die zwei wichtigsten sind Stufen- und Schraubenversetzungen.
+
+Die Entstehung von Stufenversetzungen lässt sich mit der Vorstellung verbildlichen, dass  ein Kristall entlang einer Ebene $ABCD$ horizontal von der Linie $AB$ bis zur Linie $CD$ aufgeschnitten wird. Der Teil des Kristalls oberhalb der Schnittfläche wird nun um eine Gitterkonstante $a$ nach rechts in Richtung $BC$ verschoben, danach wird der Kristall wieder zusammengefügt. Nachdem ein Spannungsausgleich stattgefunden hat, ist der Teil des Kristalls unterhalb der Schnittfläche gedehnt. Die Versetzungslinie ist entlang $CD$ zu sehen.
+
+Bei der Schraubenversetzung wird der Kristall zunächst erneut wie oben beschrieben aufgeschnitten. Dann wird allerdings ein Teil des Kristalls oberhalb des Schnittes nach hinten in Richtung der Linie $CD$ verschoben.
+
+Versetzungen lassen sich auch charakterisieren, indem gedanklich einmal um den Versetzungskern herumgelaufen wird. Herumlaufen meint dabei, dass gleich viele Schritte in jede Richtung gemacht werden. Besitzt ein Kristall keine Versetzungen, bildet dieser Weg einen Kreis, man kommt wieder am Ausgangspunkt an. Sind allerdings Versetzungen vorhanden, ist der Weg nicht geschlossen. Der fehlende Weg wird Burges--Vektor $\vec{b}$ genannt.
+
+Bei Stufenversetzungen steht $\vec{b}$ senkrecht auf der Versetzungslinie, bei Schraubenversetzungen parallel. \cite{Gross} % [S. 42f]
+Versetzungen können entlang des Burgers--Vektors $\vec{b}$ verschoben werden. Dies führt zu plastischer Verformung des Materials.
+
+Die Ebenen, auf denen Versetzungen wandern, werden Gleitebenen genannt. Sie sind dadurch ausgezeichnet, dass die benötigte kritische Schubspannung auf diesen Ebenen minimal ist.
+
 \hypertarget{tunneleffekt}{%
 \subsection{Tunneleffekt}\label{tunneleffekt}}
-
 Quantenmechanische Teilchen können Potentialbarrieren auch dann
 überwinden, wenn ihre Energie eigentlich zu niedrig ist. Man spricht
 davon, dass sie durch die Barriere hindurchtunneln.
@@ -118,7 +161,7 @@ die reduzierte Planck-Konstante.
 
 \begin{eqnarray}
     P(z_0) &\propto& |\Psi(0)|^2 \cdot \mathrm e^{-2\kappa z_0} \\
-    \kappa &=& \frac{\sqrt{2m_e(V_0 - E)}}{\hbar} \label{kappa} \\
+    \kappa &=& \frac{\sqrt{2m_e(V_0 - E)}}{\hbar} \label{kappa}
 \end{eqnarray}
 Diese Wahrscheinlichkeit ist exponentiell von der Breite des
 Potentials $z_0$ abhängig. Zudem ist sie von der Wahrscheinlichkeit
@@ -146,7 +189,7 @@ exponentiell von der Breite $z_0$ der Potentialbarriere abhängig.
 Durch die exponentielle Abhängigkeit des Tunnelstroms $I$ von dem
 Abstand $z_0$ ist ein STM sehr sensibel gegen Höhenunterschieden.
 Schon ein Höhenunterschied von $1\,\mathrm{\mathring{A}}$ macht einen
-Faktor von näherungsweise $8$ im Tunnelstrom aus. $[2]$ Dadurch
+Faktor von näherungsweise $8$ im Tunnelstrom aus. \cite{Anleitung} Dadurch
 können Atomstrukturen an der Oberfläche gemessen werden.
 
 \hypertarget{piezoelektrischer-effekt-und-anwendung}{%
@@ -173,12 +216,7 @@ Alternativ kann die Messspitze rotiert werden, ohne die Position auf der
 Probenoberfläche zu verändern. Dies kann dazu genutzt werden, um die
 Höhe der Messspitze zu steuern.
 
-\hypertarget{gitterstruktur-und-einheitszelle}{%
-\subsection{Gitterstruktur und
-Einheitszelle}\label{gitterstruktur-und-einheitszelle}}
-
-Was ist eine Einheitszelle? Wie sehen Gitterstrukturen aus?
-
+\clearpage
 \hypertarget{durchfuxfchrung}{%
 \section{Durchführung}\label{durchfuxfchrung}}
 
@@ -221,8 +259,8 @@ ist.
 \section{Auswertung}\label{auswertung}}
 
 Die Messergebnisse können mit der Software
-\href{http://gwyddion.net}{Gwyddion} $[1]$ alternativ mit
-\href{http://www.wsxm.eu}{WSxM} $[2]$ ausgewertet werden.
+\href{http://gwyddion.net}{Gwyddion} \cite{Gwyddion} alternativ mit
+\href{http://www.wsxm.eu}{WSxM} \cite{WSxM} ausgewertet werden.
 
 \hypertarget{gold-1}{%
 \subsection{Gold}\label{gold-1}}
@@ -231,7 +269,7 @@ Die im Versuch aufgenommenen Bilder von Gold sind alle sehr verschieden.
 Auf einigen ist das Rauschen zu groß und es sind amorphe Region zu
 sehen, deshalb werden sie nicht im Protokoll weiter diskutiert. Daher
 wurden uns vonseiten der Versuchsbetreung zusätzliche Daten zur
-Auswertung bereitgestellt. $[6]$
+Auswertung bereitgestellt. \cite{Grover}
 
 \hypertarget{eigene-messung}{%
 \subsubsection{eigene Messung}\label{eigene-messung}}
@@ -309,7 +347,7 @@ Austrittsarbeit ermitteln.
     \ln\eqref{I(z)} &=& \ln(c) + 0.51 \mathrm{\,\frac{\sqrt{eV}}{\mathrm{\mathring{A}}}}\cdot \sqrt{\phi} \cdot z
 \end{eqnarray}
 Im letzten Schritt wurden die Naturkonstanten passend eingesetzt.
-$[3]$ Dadurch kann die Austrittsarbeit aus der Steigung $m$ einer
+\cite{Anleitung} Dadurch kann die Austrittsarbeit aus der Steigung $m$ einer
 Regression von $\ln\eqref{I(z)}$ ermittelt werden.
 
 \begin{eqnarray}
@@ -349,7 +387,7 @@ drei Werten liefert die mittlere Korrugation von Graphit an der
 gemessenen Stelle.
 
 Die drei dichtgepackten Richtungen der ersten atomaren Auflösung sind in
-Abbildung ?? zu sehen. Mittels Gwyddion $[1]$ lassen sich die Profile
+Abbildung ?? zu sehen. Mittels Gwyddion \cite{Gwyddion} lassen sich die Profile
 dieser Richtungen mit ihren minimalen und maximalen Amplituden anzeigen,
 siehe Abb. ??. Die Ungenauigkeit liegt immer bei
 $\Delta A = \pm 0.001 \mathrm{\,nm}$. Die Korrugation der einzelnen
@@ -401,32 +439,24 @@ MQR ermittelt.
 
 \hypertarget{literatur}{%
 \section{Literatur}\label{literatur}}
+\begin{thebibliography}{9}
+\bibitem{Gwyddion}
+	Gwyddion, \url{http://gwyddion.net}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  Gwyddion, \url{http://gwyddion.net}
-\item
-  I. Horcas, R. Fernandez, J.M. Gomez-Rodriguez, J. Colchero, J.
-  Gomez-Herrero and A. M. Baro, Rev.~Sci. Instrum. 78, 013705 (2007),
-  \url{http://www.wsxm.eu}
-\item
-  Universität zu Köln, ``Versuch B.2.5. Rastertunnelmikroskopie'',
-  31.03.2017,
-  \url{https://ph2.uni-koeln.de/fileadmin/Lehre/PraktikumB/B2.5_Anleitung_2017_03.pdf}
-\item
-  H. A. Mizes, W. A. Harrison und S.-i. Park, ``Multiple-tip
-  interpretation of anomalous scanning-tunneling-microscopy images of
-  layered materials'', Physical Review B Volume 36, pp.~4491 - 4494, 15.
-  September 1987
-\item
-  H. J. Mamin, E. Ganz, D. W. Abraham, R. E. Thomson und J. Clarke,
-  ``Contamination- mediated deformation of graphite by the scanning
-  tunneling microscope'', Physical Review B Volume 34, 15. Dezember 1986
-\item
-  Versuchsbetreuung: M.Sc. Catherine Grover, Studentin der
-  Festkörperphysik im PhD an der Universität zu Köln,
-  \url{https://ph2.uni-koeln.de/en/research-groups/group-michely/members}
-\end{enumerate}
+\bibitem{WSxM}
+	I. Horcas, R. Fernandez, J.M. Gomez-Rodriguez, J. Colchero, J. Gomez-Herrero and A. M. Baro, Rev.~Sci. Instrum. 78, 013705 (2007), \url{http://www.wsxm.eu}
+
+\bibitem{Anleitung}
+	Universität zu Köln, ``Versuch B.2.5. Rastertunnelmikroskopie'', März 2017, 	\url{https://ph2.uni-koeln.de/fileadmin/Lehre/PraktikumB/B2.5_Anleitung_2017_03.pdf}
+
+\bibitem{Mizes}
+	H. A. Mizes, W. A. Harrison und S.-i. Park, ``Multiple-tip interpretation of anomalous scanning-tunneling-microscopy images of layered materials'', Physical Review B Volume 36, pp.~4491 - 4494, 15. September 1987
+
+\bibitem{Gross}
+	R. Gross und A. Marx, Festkörperphysik, München: Oldenbourg Verlag, 2012
+
+\bibitem{Grover}
+	Versuchsbetreuung: M.~Sc.~Catherine~Grover, Studentin der Festkörperphysik im PhD an der Universität zu Köln, \url{https://ph2.uni-koeln.de/en/research-groups/group-michely/members}
+\end{thebibliography}
 
 \end{document}
