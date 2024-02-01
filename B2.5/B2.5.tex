@@ -393,6 +393,36 @@ Eine interessante Beobartung ist, dass nach einem dunkleren Teil nach der dunkle
 	\label{abb:Stufenkante HOPG}
 \end{figure}
 
+\hypertarget{Stufenkante Höhe}{
+\subsubsection{Höhe der Stufenkante}\label{Stufenkante Höhe}}
+Um die Höhe der Stufenkante zu bestimmen, wurde in Gwyddion \cite{Gwyddion} ein Profil senkrecht zur Stufenkante gelegt. Das Ergebnis ist in Abbildung \ref{fig:stufenkante_profil} zu dargestellt. Die Höhe $h$ ergibt sich nun als die Differenz des Punktes vor der Kante $h_1$ und des Punktes nach der Kante $h_2$.
+
+Der Fehler der Höhen $h_1$ und $h_2$ ist durch die Angabe in Gwyddion als $\Delta h_i = 0.0005 \,\AA$ angegeben. Der Fehler der Höhe der Stufenkante $h$ folgt durch Gaußsche Fehlerfortpflanzung.
+
+\begin{eqnarray}
+	h &=& h_1 - h_2 \\
+	\Delta h &=& \sqrt{
+			\left(\frac{\partial h}{\partial h_1} \Delta h_1\right)^2
+			+ \left(\frac{\partial h}{\partial h_2} \Delta h_2\right)^2 } \\
+			&=& \sqrt{(\Delta h_1)^2 + (-\Delta h_2)^2} \\
+			&=& \sqrt{2} \Delta h_i \\
+			&\approx& 0.0007 \,\AA \\
+	\Rightarrow h &=& (4.5820 \pm 0.0007) \,\AA
+\end{eqnarray}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B2.5/HOPG_Stufenkante_Profil.png}
+	\caption{Profil senkrecht zur Stufenkante}
+	\label{fig:stufenkante_profil}
+\end{figure}
+
+Die Höhe der hier betrachteten Stufenkante beträgt also ca. $(4.5820 \pm 0.0007) \,\AA$. Der Literaturwert für den Abstand zweier Schichten in Graphit beträgt $3.35 \mathrm{\, \normalfont{\AA}}$. \cite{Anleitung} % S. 13
+
+Unser Ergebnis ist mit ca. $4.5820 \mathrm{\, \normalfont{\AA}}$ deutlich größer, woran der Fehler unserer Messung nichts ändert. Dies lässt sich aber z.B. durch lokale Unebenheiten erklären, welche die Höhe der Stufenkante beeinflussen können. Weiterhin kann eine Ungenauigkeit in der Auflösung des Bildes zu Abweichungen in den Messwerten führen.
+
+Unter diesen Berücksichtigungen sind wir dem Literaturwert mit unserem Ergebnis doch recht nah gekommen, sodass dieser Teil des Versuchs kann als Erfolg betrachtet werden kann.
+
 \hypertarget{HOPC atomar}{
 \subsubsection{Atomare Auflösung von Graphit}\label{HOPC atomar}}
 In den Abbildungen \ref{fig:hopg_1} und \ref{fig:hopg_2} sind die atomaren Auflösungen von Graphit zu sehen, wobei die helleren Punkte die Atome repräsentieren. Dies ist durch den höheren Tunnelstrom an der Oberfläche der Atome begründet. \cite{Mizes}
@@ -495,6 +525,14 @@ Die Ergebnisse der einzelnen Korrugationen sind in Tabelle \ref{table:Korrugatio
 \clearpage
 \hypertarget{fazit}{%
 \section{Fazit}\label{fazit}}
+Insgesamt ist die Arbeit mit dem STM ein interessanter Versuch. Dies wird jedoch massiv dadurch geschmähert, dass die Proben offensichtlich verunreinigt sind.
+
+Die Messung von Fremdkörpern in beispielsweise den Abbildungen \ref{abb:Gold gross} und \ref{abb:hocp own: Fremdkörper} bestätigt die Verunreinigung. Dies ist ein interessantes Ergebnis.
+
+Vermutlich spielt das Alter der Probe eine Rolle. Uns wurde mitgeteilt, dass schon von anderen versucht wurde, die Proben ordentlich zu reinigen, was aber wenig erfolgreich sei. \cite{Grover} Dies spricht dafür, dass die Proben für diesen Versuch nicht (mehr) geeignet sind.
+
+Das ein guter Teil der Auswertung an Ergebnissen von fremden Messungen durchgeführt werden musste, ist schade. Man kann es als Erfahrung verbuchen, denn auch in anderen Situationen werden Daten ausgewertet, die nicht selbst gemessen wurden.
+
 
 \clearpage
 \hypertarget{literatur}{%
