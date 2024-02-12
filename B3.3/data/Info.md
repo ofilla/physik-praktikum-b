@@ -2,10 +2,11 @@
 * Energie $\alpha$-Strahlung: $5486\mathrm{\,keV}$
 
 ## Notizen
-### Kalibrierung
+### 3.1 Kalibrierung
 calibration: $30s$ Messung
 	* `calibration position enter 0 0 10450.4 5486`
 
+### 3.2
 Abstand: $18\mathrm{\,mm}$
 * $1.2\pm 0.1 \mathrm{\,mbar}$, $30\mathrm{\,s}$
 * $100\pm 10 \mathrm{\,mbar}$, $30\mathrm{\,s}$
