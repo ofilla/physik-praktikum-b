@@ -11,4 +11,4 @@ Die Markdown-Dateien sind *keine* finalen Versionen, nur die $\LaTeX$-Dateien un
 * [B2.8: Versetzungen in Lithiumfluorid](./B2.8/B2.8.md) ([PDF](./B2.8/B2.8.pdf), [LaTeX](./B2.8/B2.8.tex))
 
 ## 3. Kernphysik
-* [B3.3: Reichweite von Alphastrahlung](./B3.3/B3.3.md) ~~folgend: ([PDF](./B3.3/B3.3.pdf), [LaTeX](./B3.3/B3.3.tex))~~
+* [B3.3: Reichweite von Alphastrahlung](./B3.3/B3.3.md) ([PDF](./B3.3/B3.3.pdf), [LaTeX](./B3.3/B3.3.tex))
