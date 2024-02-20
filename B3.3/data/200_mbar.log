@@ -1,0 +1,19 @@
+HDTV - Nuclear Spectrum Analysis Tool
+Loaded 200_mbar.spa into 0
+INFO: doing error-weighted fit
+INFO: switching to non-linear fitter (minuit) for x error weighting
+[1mCalibration[0m: 6.731692e-05 5.249560e-01
+[1mChi²[0m: 0.0000
+Calibrated spectrum with id 0
+[0mhdtv> [0mWorkFit on spectrum: 0 (200_mbar.spa)
+
+
+
+0 peaks in WorkFit
+WorkFit on spectrum: 0 (200_mbar.spa)
+[1m id [0m[1m stat [0m[1m chi [0m[1m   channel   [0m[1m    pos    [0m[1m     vol     [0m[1m   width   [0m[1m   tl  [0m
+━━━━──────────────────────────────────────────────────────────────────
+ .0    AV  507  8357.3(1.4)  4387.2(7)  6.41(8)e+03  93.3(1.4)  92(6) 
+
+1 peaks in WorkFit
+

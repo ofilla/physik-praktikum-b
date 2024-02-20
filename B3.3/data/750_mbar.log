@@ -1,0 +1,42 @@
+### with tail left free
+HDTV - Nuclear Spectrum Analysis Tool
+Loaded 750_mbar.spa into 0
+INFO: doing error-weighted fit
+INFO: switching to non-linear fitter (minuit) for x error weighting
+[1mCalibration[0m: 6.731692e-05 5.249560e-01
+[1mChi²[0m: 0.0000
+Calibrated spectrum with id 0
+[0mhdtv> [0mWorkFit on spectrum: 0 (750_mbar.spa)
+
+
+
+0 peaks in WorkFit
+WorkFit on spectrum: 0 (750_mbar.spa)
+[1m id [0m[1m stat [0m[1m chi [0m[1m channel [0m[1m    pos     [0m[1m     vol     [0m[1m width  [0m[1m    tl   [0m
+━━━━──────────────────────────────────────────────────────────────
+ .0    AV  948  1278(4)  670.8(1.9)  5.13(8)e+03  215(4)  233(22) 
+
+1 peaks in WorkFit
+
+
+
+### without tail left free
+HDTV - Nuclear Spectrum Analysis Tool
+Loaded 750_mbar.spa into 0
+INFO: doing error-weighted fit
+INFO: switching to non-linear fitter (minuit) for x error weighting
+[1mCalibration[0m: 6.731692e-05 5.249560e-01
+[1mChi²[0m: 0.0000
+Calibrated spectrum with id 0
+[0mhdtv> [0mWorkFit on spectrum: 0 (750_mbar.spa)
+
+
+
+0 peaks in WorkFit
+WorkFit on spectrum: 0 (750_mbar.spa)
+[1m id [0m[1m stat [0m[1m chi [0m[1m   channel   [0m[1m    pos     [0m[1m     vol     [0m[1m   width    [0m
+━━━━─────────────────────────────────────────────────────────────
+ .0    AV  954  1272.9(3.1)  668.2(1.6)  5.08(8)e+03  222.9(3.4) 
+
+1 peaks in WorkFit
+

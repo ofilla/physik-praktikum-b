@@ -1,0 +1,3 @@
+spectrum get calibration
+calibration position enter 0 0 10450.4 5486
+fit parameter tl free
