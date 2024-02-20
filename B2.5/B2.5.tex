@@ -80,55 +80,6 @@ In diesem Experiment werden zwei verschiedene Proben, eine aus Gold und eine aus
 \clearpage
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
-
-\hypertarget{kristallstruktur}{%
-\subsection{Kristallstruktur}\label{kristallstruktur}}
-Die atomare Struktur eines Festkörpers wird durch eine Basis und ein Gitter beschrieben. Die Basis besteht aus Atomen oder Molekülen, die an jedem Gitterpunkt eines Kristallgitters angeheftet ist.
-
-Unter dem Begriff \textit{Kristallgitter} versteht man eine räumlich regelmäßige Anordnung von Punkten. Allerdings sind nur die Bravais--Gitter zur Beschreibung von Kristallen sinnvoll.
-
-Ein \textit{Bravais--Gitter} besitzt eine bis ins Unendliche ausgedehnte Anordnung von Gitterpunkten, die von jedem Punkt aus gleich aussieht. Alternativ wird es durch die Translationen $\vec{R} = n_1\vec{a}_1 + n_2\vec{a}_2 + n_3\vec{a}_3$ definiert. Es gibt $14$ verschiedene Bravais--Gitter.
-
-Erfüllt eine Zelle den Raum ohne Lücke und ohne Überlapp, wenn diese Zelle mit allen $\vec{R}$
-verschoben wird, so heißt sie \textit{primitive Einheitszelle}. Sie ist nicht eindeutig definiert und enthält genau einen Gitterspunkt.
-
-\hypertarget{graphitstruktur}{%
-\subsubsection{Graphit}\label{graphitstruktur}}
-Graphit besteht aus Graphenschichten in der hexagonalen Struktur mit der Stapelfolge $ABAB$. In jeder Schicht sind die Kohlenstoffatome in der Honigwabenstruktur mit einem Abstand von $142\mathrm{\,pm}$ angeordnet. Der Abstand zwischen zwei Lagen beträgt $335\mathrm{\,pm}$, zwischen ihnen herrschen schwache Van--der--Waals--Kräfte.
-
-Im dem Versuch wird hochorientiertes pyrolytisches Graphit (HOPG) verwendet, das einen besonders hohen Grad an Ordnung hat und daher einfach präperiert werden kann.
-
-\hypertarget{goldstruktur}{%
-\subsubsection{Gold}\label{goldstruktur}}
-Gold kristallisiert in einer kubisch--flächenzentrierten Struktur mit einer Kantenlänge von $407\mathrm{\,pm}$. Die primitive Einheitszelle ist rhomboedrisch mit einer einatomigen Basis.
-
-Das in diesem Versuch verwendete Gold ist entweder ein Goldblech oder Gold auf Glimmer. Der verwendete Glimmer besteht aus Aluminiumsilikatschichten, die einzelne Schichten sind schwach durch Kaliumionen gebunden. Dadurch kann man das Material einfach spalten und eine glatte Oberfläche erhalten.
-
-Das Goldblech ist ein Polykristall aus $99.9\,\%$ Gold. Die Textur ist weniger ausgeprägt als Gold auf Glimmer. Beide Probe müssen vor dem Experimentieren thermisch gereinigt und geglättet werden.
-
-\hypertarget{defekte}{
-\subsection{Kristall- und Oberflächendefekte}\label{defekte}}
-Im thermodynamischen Gleichgewicht bei endlichen Temperaturen existieren keine defektfreien Kristalle. So werden auch die Proben in diesem Versuch Defekte aufweisen, die mittels des STM sichtbar gemacht werden können. Dabei lassen sie sich aufgrund ihrer Dimensionalität grob in drei Kategorien einordnen, namentlich Punktdefekte, Liniendefekte und Flächendefekte. Zwei Arten von Liniendefekten werden im Folgenden erläutert.
-
-\hypertarget{korngrenzen}{
-\subsubsection{Korngrenzen}\label{korngrenzen}}
-Korngrenzen treten auf, wenn mehrere einkristalline Bereiche im Kristall mit unterschiedlicher Orientierung aufeinandertreffen. Sie gehören zu der Kategorie der Flächendefekte. \cite{Gross} % [S. 43]
-
-\hypertarget{versetzungen}{
-\subsubsection{Versetzungen}\label{versetzungen}}
-Versetzungen gehören zu den Liniendefekten und können in unterschiedlichen Formen auftreten. Die zwei wichtigsten sind Stufen- und Schraubenversetzungen.
-
-Die Entstehung von Stufenversetzungen lässt sich mit der Vorstellung verbildlichen, dass  ein Kristall entlang einer Ebene $ABCD$ horizontal von der Linie $AB$ bis zur Linie $CD$ aufgeschnitten wird. Der Teil des Kristalls oberhalb der Schnittfläche wird nun um eine Gitterkonstante $a$ nach rechts in Richtung $BC$ verschoben, danach wird der Kristall wieder zusammengefügt. Nachdem ein Spannungsausgleich stattgefunden hat, ist der Teil des Kristalls unterhalb der Schnittfläche gedehnt. Die Versetzungslinie ist entlang $CD$ zu sehen.
-
-Bei der Schraubenversetzung wird der Kristall zunächst erneut wie oben beschrieben aufgeschnitten. Dann wird allerdings ein Teil des Kristalls oberhalb des Schnittes nach hinten in Richtung der Linie $CD$ verschoben.
-
-Versetzungen lassen sich auch charakterisieren, indem gedanklich einmal um den Versetzungskern herumgelaufen wird. Herumlaufen meint dabei, dass gleich viele Schritte in jede Richtung gemacht werden. Besitzt ein Kristall keine Versetzungen, bildet dieser Weg einen Kreis, man kommt wieder am Ausgangspunkt an. Sind allerdings Versetzungen vorhanden, ist der Weg nicht geschlossen. Der fehlende Weg wird Burges--Vektor $\vec{b}$ genannt.
-
-Bei Stufenversetzungen steht $\vec{b}$ senkrecht auf der Versetzungslinie, bei Schraubenversetzungen parallel. \cite{Gross} % [S. 42f]
-Versetzungen können entlang des Burgers--Vektors $\vec{b}$ verschoben werden. Dies führt zu plastischer Verformung des Materials.
-
-Die Ebenen, auf denen Versetzungen wandern, werden Gleitebenen genannt. Sie sind dadurch ausgezeichnet, dass die benötigte kritische Schubspannung auf diesen Ebenen minimal ist.
-
 \hypertarget{tunnelspektroskopie}{%
 \subsection{Tunnelspektroskopie}\label{tunnelspektroskopie}}
 Mit dem Rastertunnelmikroskop (STM) lässt sich die \textit{atomare Topographie} einer Probe darstellen. Hierbei werden keine Atome aufgelöst, stattdessen wird eine Ladungsdichtedifferenz zwischen Spitze und Probe abgebildet.
@@ -142,28 +93,46 @@ Dabei werden zwei Messmodi verwendet. Zum einen gibt es den den \textit{Konstant
 
 Bei der zweite Methode wird die Tunnelspannung konstant gehalten und der Abstand zwischen Spitze und Probe so eingestellt, bis man einen nahezu konstanten Stromsignal bekommt. Dieses kann durch gute Regelung des Abstandes zu erreicht werden. Auch hier erhält man Informationen über die Oberfläche der Probe. Die Methode wird \textit{Konstant--Strom--Modus} genannt.
 
-Fixiert man einen Punkt und zieht die Spitze dann hoch, lässt sich aus dem Tunnelstrom die Austrittsarbeit bestimmen. Daher nennt man diese Methode $I(z)$--\textit{Spektroskopie}. Da der Tunnelstrom $I$ exponenziell von der Höhe $z$ abhängig ist \eqref{eq:Tunnelstrom}, erhält man eine gute Auflösung.\footnote{vgl. \ref{auflösung}: \nameref{auflösung}}
+Fixiert man einen Punkt und zieht die Spitze dann hoch, lässt sich aus dem Tunnelstrom die Austrittsarbeit bestimmen. Daher nennt man diese Methode \textit{$I(z)$--Spektroskopie}. Da der Tunnelstrom $I$ exponenziell von der Höhe $z$ abhängig ist \eqref{eq:Tunnelstrom}, erhält man eine gute Auflösung.\footnote{vgl. \ref{auflösung}: \nameref{auflösung}}
 
 \hypertarget{tunneleffekt}{%
 \subsubsection{Tunneleffekt}\label{tunneleffekt}}
-Quantenmechanische Teilchen können Potentialbarrieren auch dann überwinden, wenn ihre Energie eigentlich zu niedrig ist. Man spricht davon, dass sie durch die Barriere hindurchtunneln.
+Quantenmechanische Teilchen können Potentialbarrieren auch dann überwinden, wenn ihre Energie eigentlich zu niedrig ist. Man spricht davon, dass sie durch die Barriere hindurchtunneln. Abbildung \ref{abb:tunneleffekt} stellt dies qualitativ für eine Wellenfunktion mit einer Energie $E$ und ein Kastenpotential der Höhe $V>E$ dar.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B2.5/800px-TunnelEffektKling1.png}
+	\caption{Qualitativer Verlauf der Wellenfunktion, \\die Welle trifft von links auf die Potentialbarriere
+		\cite{WikipediaTunneleffekt}\\}
+	\label{abb:tunneleffekt}
+\end{figure}
 
 Die tatsächliche Potentialbarriere kann analog zur Gamow--Näherung als einzelne kastenförmiges Potential $V(z)$ angenommen werden. Die Potentialbarriere beginne an der Position $0$ bei der Probe und Ende an der Position $z_0$ an der Messspitze des STMs.
 
 \begin{eqnarray}
-    V(z) &=&
-        \begin{cases}
-            V_0 &: z \in [0, z_0] \\
-            0 &: z \notin [0, z_0]
-        \end{cases}
+	V(z) &=&
+	\begin{cases}
+		V_0 &: z \in [0, z_0] \\
+		0 &: z \notin [0, z_0]
+	\end{cases}
 \end{eqnarray}
-Die Lösung der eindimensionalen, stationären Schrödingergleichung liefert die Tunnelwahrscheinlichkeit $P(z_0)$, mit der das Teilchen die Barriere durchtunnelt. Der relevante Parameter $\kappa$ ist abhängig von der Elektronenmasse $m_e$, der Höhe der Potentialbarriere $V_0$ und der Energie $E$ des tunnelnden Elektrons. $\hbar$ ist die reduzierte Planck--Konstante.
+Aus der allgemeinen Schrödingergleichung \eqref{eq:SGL allg} lässt sich die eindimensionale stationäre Form \eqref{eq:SGL} herleiten, wofür neben dem Potential $V(z)$ die Elektronenmasse $m_e$ benötigt wird.
 
 \begin{eqnarray}
-    P(z_0) &\propto& |\Psi(0)|^2 \cdot \mathrm e^{-2\kappa z_0} \\
-    \kappa &=& \frac{\sqrt{2m_e(V_0 - E)}}{\hbar} \label{eq:Tunnelwkt Kappa}
+	i\hbar \ket{\dot{\Psi}} &=& \hat H\ket{\Psi} \label{eq:SGL allg} \\
+	E_n\Psi_n(z) &=&
+		\left(
+			-\frac{\hbar^2}{2m_e} \frac{\partial^2}{\partial z^2} + V(z)
+		\right)\Psi_n(z)
+		\label{eq:SGL}
 \end{eqnarray}
-Diese Wahrscheinlichkeit ist exponentiell von der Breite des Potentials $z_0$ abhängig. Zudem ist sie von der Wahrscheinlichkeit für den Aufenthalt eines Teilchens am Beginn der Probe abhängig, die durch die quadrierte Wellenfunktion $|\Psi(0)|^2$.
+Die Lösung von \eqref{eq:SGL} liefert die Tunnelwahrscheinlichkeit $P(z_0)$, mit der das Teilchen die Barriere durchtunnelt. Der relevante Parameter $\kappa$ ist abhängig von der Elektronenmasse $m_e$, der Höhe der Potentialbarriere $V_0$ und der Energie $E$ des tunnelnden Elektrons. $\hbar$ ist die reduzierte Planck--Konstante.
+
+\begin{eqnarray}
+	P(z_0) &\propto& |\Psi(0)|^2 \cdot \mathrm e^{-2\kappa z_0} \\
+	\kappa &=& \frac{\sqrt{2m_e(V_0 - E)}}{\hbar} \label{eq:Tunnelwkt Kappa}
+\end{eqnarray}
+Diese Wahrscheinlichkeit ist exponentiell von der Breite des Potentials $z_0$ abhängig. Zudem ist sie von der Wahrscheinlichkeit für den Aufenthalt eines Teilchens am Beginn der Probe abhängig, die durch die quadrierte Wellenfunktion $|\Psi(0)|^2$. Dies ist in Abbildung \ref{abb:tunneleffekt} im Bereich der Potentialbarriere ersichtlich.
 
 Diese Wahrscheinlichkeit hängt davon ab, wie wahrscheinlich ein Elektron aus der Probe austritt. Dazu ist die Austrittsenergie $\phi$ essentiell. Dafür wiederum ist die Besetzung der Energieniveaus relevant, die von der Temperatur und der Fermi--Energie abhängt. Die Beschreibung erfolgt durch die Zustandsdichte.
 
@@ -172,13 +141,12 @@ Für das STM ist jedoch nicht der Einzelfall interessant, sondern die Rate, mit 
 Der Tunnelstrom ist proportional zur Tunnelwahrscheinlichkeit $P(z_0)$, ebenso zu der Anzahl der Elektronen, die in einer gewissen Zeit aus dem Material austreten. Dadurch ist der Tunnelstrom exponentiell von der Breite $z_0$ der Potentialbarriere abhängig.
 
 \begin{eqnarray}
-    I(z_0) &\propto& \mathrm e^{-2\kappa z_0} \label{eq:Tunnelstrom}
+	I(z_0) &\propto& \mathrm e^{-2\kappa z_0} \label{eq:Tunnelstrom}
 \end{eqnarray}
 Durch die exponentielle Abhängigkeit des Tunnelstroms $I$ von dem Abstand $z_0$ ist ein STM sehr sensibel gegen Höhenunterschieden. Schon ein Höhenunterschied von $1\,\mathrm{\mathring{A}}$ macht einen Faktor von näherungsweise $8$ im Tunnelstrom aus. \cite{Anleitung} Dadurch können Atomstrukturen an der Oberfläche gemessen werden.
 
 \hypertarget{piezoelektrischer-effekt-und-anwendung}{%
-\subsubsection{piezoelektrischer Effekt und
-Anwendung}\label{piezoelektrischer-effekt-und-anwendung}}
+\subsubsection{piezoelektrischer Effekt und Anwendung}\label{piezoelektrischer-effekt-und-anwendung}}
 
 Der piezoelektrische Effekt bezeichnet die Erzeugung elektrischer Spannungen an bestimmten Kristallen, den Piezokristallen, bei deren Deformation. Dies funktioniert auch umgekehrt: Durch Anlegen einer Spannung verformt sich ein Piezokristall. Dies nennt man \emph{inversen Piezoeffekt}.
 
@@ -199,6 +167,99 @@ Daher sorgt eine kleine Änderung in der Tunnelbreite $z$ für große Änderunge
 Auch die horizontale Auflösung basiert auf der Proportionalität des Tunnelstroms zur Tunnelbreite. Auf der Spitze des STM gibt es immer ein Atom, dass der Probe am nächsten liegt, welches den Elektronen die kleinste Tunnelbreite $z_0$ zum tunneln liefert. Alle weiteren Atome auf der Spitze machen es den Elektronen ebenfalls möglich zu tunneln, allerdings mit einer höheren Tunnelbreite $z_i > z_0$.
 
 Aufgrund von \eqref{eq:Tunnelstrom} folgt, dass der Beitrag des nächsten Atoms $I_0$ zum Gesamttunnelstrom deutlich größer ist als der Beitrag aller anderen Atome auf der Spitze $I_i$. Der Tunnelstrom $I$, wird also vom Atom, dass der Probe am nächsten ist, dominiert, wodurch eine atomare Abtastung in guter Näherung gegeben ist.
+
+\hypertarget{kristallstruktur}{%
+\subsection{Kristallstruktur}\label{kristallstruktur}}
+Die atomare Struktur eines Festkörpers wird durch eine Basis und ein Gitter beschrieben. Die Basis besteht aus Atomen oder Molekülen, die an jedem Gitterpunkt eines Kristallgitters angeheftet ist.
+
+Unter dem Begriff \textit{Kristallgitter} versteht man eine räumlich regelmäßige Anordnung von Punkten. Allerdings sind nur die Bravais--Gitter zur Beschreibung von Kristallen sinnvoll.
+
+Ein \textit{Bravais--Gitter} besitzt eine bis ins Unendliche ausgedehnte Anordnung von Gitterpunkten, die von jedem Punkt aus gleich aussieht. Alternativ wird es durch die Translationen $\vec{R} = n_1\vec{a}_1 + n_2\vec{a}_2 + n_3\vec{a}_3$ definiert. Es gibt $14$ verschiedene Bravais--Gitter.
+
+Erfüllt eine Zelle den Raum ohne Lücke und ohne Überlapp, wenn diese Zelle mit allen $\vec{R}$ verschoben wird, so heißt sie \textit{primitive Einheitszelle}. Sie ist nicht eindeutig definiert und enthält genau einen Gitterspunkt. Eine mögliche primitive Einheitzelle ist in Abbildung \ref{abb:bravais} blau dargestellt, wobei die grünen Kugeln Gitterpunkte darstellen.
+
+Eine \textit{konventionelle Einheitszelle} spiegelt die Symmetrie des Gitters dar und kann mehrere Gitterpunkte beinhalten. Sie ist in Abbildung \ref{abb:bravais} grün dargestellt, in diesem Beispiel enthält sie $2$ Gitterpunkte.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../media/B2.5/975px-Rectangular_unit_cells_centered.svg.png}
+	\caption{Bravais--Gitter mit konventioneller bzw. primitiver Einheitszelle \cite{WikipediaBravaisgitter}}
+	\label{abb:bravais}
+\end{figure}
+
+\hypertarget{graphitstruktur}{%
+\subsubsection{Graphit}\label{graphitstruktur}}
+Graphit besteht aus Graphenschichten in der hexagonalen Struktur mit der Stapelfolge $ABAB$. In jeder Schicht sind die Kohlenstoffatome in der Honigwabenstruktur mit einem Abstand von $142\mathrm{\,pm}$ angeordnet. Der Abstand zwischen zwei Lagen beträgt $335\mathrm{\,pm}$, zwischen ihnen herrschen schwache Van--der--Waals--Kräfte.
+
+Im dem Versuch wird hochorientiertes pyrolytisches Graphit (HOPG) verwendet, das einen besonders hohen Grad an Ordnung hat und daher einfach präperiert werden kann.
+
+\hypertarget{goldstruktur}{%
+\subsubsection{Gold}\label{goldstruktur}}
+Gold kristallisiert in einer kubisch--flächenzentrierten Struktur mit einer Kantenlänge von $407\mathrm{\,pm}$, dargestellt in Abbildung \ref{abb:fcc}. Die primitive Einheitszelle ist rhomboedrisch mit einer einatomigen Basis.
+
+Das in diesem Versuch verwendete Gold ist entweder ein Goldblech oder Gold auf Glimmer. Der verwendete Glimmer besteht aus Aluminiumsilikatschichten, die einzelne Schichten sind schwach durch Kaliumionen gebunden. Dadurch kann man das Material einfach spalten und eine glatte Oberfläche erhalten.
+
+Das Goldblech ist ein Polykristall aus $99.9\,\%$ Gold. Die Textur ist weniger ausgeprägt als Gold auf Glimmer. Beide Probe müssen vor dem Experimentieren thermisch gereinigt und geglättet werden.
+
+
+\begin{figure}[ht]
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.75\textwidth]{../media/B2.5/Graphit_gitter4.png}
+		\caption{Gitterstruktur Graphit \cite{WikipediaGraphit}}
+	\end{minipage}
+	\begin{minipage}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.6\textwidth]{../media/B2.5/412px-Cubic-face-centered.svg.png}
+		\caption{fcc--Gitter \cite{WikipediaFcc}}
+		\label{abb:fcc}
+	\end{minipage}
+\end{figure}
+
+\hypertarget{defekte}{
+\subsection{Kristall- und Oberflächendefekte}\label{defekte}}
+Im thermodynamischen Gleichgewicht bei endlichen Temperaturen existieren keine defektfreien Kristalle. So werden auch die Proben in diesem Versuch Defekte aufweisen, die mittels des STM sichtbar gemacht werden können. Dabei lassen sie sich aufgrund ihrer Dimensionalität grob in drei Kategorien einordnen, namentlich Punktdefekte, Liniendefekte und Flächendefekte. Zwei Arten von Liniendefekten werden im Folgenden erläutert.
+
+\hypertarget{korngrenzen}{
+\subsubsection{Korngrenzen}\label{korngrenzen}}
+Korngrenzen treten auf, wenn mehrere einkristalline Bereiche im Kristall mit unterschiedlicher Orientierung aufeinandertreffen. Sie gehören zu der Kategorie der Flächendefekte und sind in Abbildung \ref{abb:Korngrenzen}. \cite{Gross} % [S. 43]
+
+\begin{figure}[ht]
+	\centering
+	\begin{minipage}[t]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../media/B2.5/Korngrenzen.png}
+		\caption{Korngrenzen \cite{USDoE}}
+		\label{abb:Korngrenzen}
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../media/B2.5/320px-Dislocation_edge_d2.svg.png}
+		\caption{Stufenversetzung \cite{WikipediaStufe}}
+		\label{abb:Stufenversetzung}
+	\end{minipage}
+	\begin{minipage}[t]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../media/B2.5/320px-Dislocation_screw_e.svg.png}
+		\caption{Schraubenversetzung \cite{WikipediaSchraube}}
+		\label{abb:Schraubenversetzung}
+	\end{minipage}
+\end{figure}
+
+\hypertarget{versetzungen}{
+\subsubsection{Versetzungen}\label{versetzungen}}
+Versetzungen gehören zu den Liniendefekten und können in unterschiedlichen Formen auftreten. Die zwei wichtigsten sind Stufen- und Schraubenversetzungen.
+
+Die Entstehung von Stufenversetzungen lässt sich mit der Vorstellung verbildlichen, dass  ein Kristall entlang einer Ebene $ABCD$ horizontal von der Linie $AB$ bis zur Linie $CD$ aufgeschnitten wird. Der Teil des Kristalls oberhalb der Schnittfläche wird nun um eine Gitterkonstante $a$ nach rechts in Richtung $BC$ verschoben, danach wird der Kristall wieder zusammengefügt. Nachdem ein Spannungsausgleich stattgefunden hat, ist der Teil des Kristalls unterhalb der Schnittfläche gedehnt. Die Versetzungslinie ist entlang $CD$ zu sehen, in Abbildung \ref{abb:Stufenversetzung} blau dargestellt.
+
+Bei der Schraubenversetzung wird der Kristall zunächst erneut wie oben beschrieben aufgeschnitten. Dann wird allerdings ein Teil des Kristalls oberhalb des Schnittes nach hinten in Richtung der Linie $CD$ verschoben. Dies ist in Abbildung \ref{abb:Schraubenversetzung} zu sehen.
+
+Versetzungen lassen sich auch charakterisieren, indem gedanklich einmal um den Versetzungskern herumgelaufen wird. Herumlaufen meint dabei, dass gleich viele Schritte in jede Richtung gemacht werden. Besitzt ein Kristall keine Versetzungen, bildet dieser Weg einen Kreis, man kommt wieder am Ausgangspunkt an. Sind allerdings Versetzungen vorhanden, ist der Weg nicht geschlossen. Der fehlende Weg wird Burges--Vektor $\vec{b}$ genannt.
+
+Bei Stufenversetzungen steht $\vec{b}$ senkrecht auf der Versetzungslinie, bei Schraubenversetzungen parallel. \cite{Gross} % [S. 42f]
+Versetzungen können entlang des Burgers--Vektors $\vec{b}$ verschoben werden. Dies führt zu plastischer Verformung des Materials.
+
+Die Ebenen, auf denen Versetzungen wandern, werden Gleitebenen genannt. Sie sind dadurch ausgezeichnet, dass die benötigte kritische Schubspannung auf diesen Ebenen minimal ist.
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
@@ -273,7 +334,7 @@ In Abbildung \ref{abb:Gold Stufenkante} kann man eine Stufenkante in der Höhe v
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B2.5/Stufenkante.pdf}
 	\caption{Großaufnahme einer Stufenkante, Quelle: \cite{Grover}, \\
-			Bias-Spannung $499.94 \mathrm{\,mV}$, Strom $0.75 \mathrm{\,nA}$,}
+			Bias-Spannung $499.94 \mathrm{\,mV}$, Strom $0.75 \mathrm{\,nA}$}
 	\label{abb:Gold Stufenkante}
 \end{figure}
 
@@ -304,6 +365,13 @@ Dies unterstützt die These, dass unsere Probe nicht sauber ist und eine Barrier
 
 Die Austrittsarbeit $\phi$ ist die Differenz zwischen Potentialbarriere $V_0$ und der Energie $E$ der tunnelnden Elektronen. Mithilfe der Relationen für die Tunnelwahrscheinlichkeit \eqref{eq:Tunnelwkt Kappa} und den Tunnelstrom \eqref{eq:Tunnelstrom} kann man die Austrittsarbeit ermitteln. Hierzu wird eine Proportionalitätskonstante $c$ eingeführt.
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../media/B2.5/Spektroskopie_2.pdf}
+	\caption{Spektroskopiemessung, aufgetragen ist $\ln{I(z)}$ gegen $z$}
+	\label{abb:Spektroskopie}
+\end{figure}
+
 \begin{eqnarray}
     I(z) &=& c \cdot \exp\left[-2\frac{\sqrt{2m_e\cdot \phi}}{\hbar} z\right] \\
     \ln I(z)
@@ -322,7 +390,7 @@ Regression von $\ln I(z)$ ermittelt werden.
 \end{eqnarray}
 
 \noindent
-Dadurch kann $\phi$ in der Einheit $\mathrm{eV}$ aus der Steigung $m$ in $\mathrm{\AA^{-1}}$ ermittelt werden, wie es in Gleichung \eqref{eq:Austrittsarbeit} beschrieben ist. Es ergeben sich folgende Ergebnisse, von denen die erste Hälfte aus der ersten und die zweite Hälfte aus der zweiten Messung stammen.
+Dadurch kann $\phi$ in der Einheit $\mathrm{eV}$ aus der Steigung $m$ in $\mathrm{\AA^{-1}}$ ermittelt werden, wie es in Gleichung \eqref{eq:Austrittsarbeit} beschrieben ist. Es ergeben sich folgende Ergebnisse, von denen die erste Hälfte aus der ersten und die zweite Hälfte aus der zweiten Messung stammen. Ein Messergebnis ist repräsentativ für alle in Abbildung \ref{abb:Spektroskopie} dargestellt.
 
 \begin{table}[h!]
 	\centering
@@ -346,7 +414,6 @@ Dadurch kann $\phi$ in der Einheit $\mathrm{eV}$ aus der Steigung $m$ in $\mathr
 	\label{table:Austrittsarbeit}
 \end{table}
 
-\noindent
 Die ermittelten Austrittsarbeiten $\phi$ sind sehr viel größer als erwartet, Literaturwerte sind in der Größenordnung von $5.3\mathrm{\,eV} - 5.45\mathrm{\,eV}$ \cite{Sachtler} oder um die $4\mathrm{\,eV}$ \cite{Anleitung} zu finden. Unsere Messwerte weichen um einen Faktor von ca. $17$ bis $50$ davon ab.
 
 Dies bedeutet, dass die gemessene Austrittsarbeit extrem viel höher ist als theoretisch der Fall sein sollte. Dies könnte mit Fremdmaterial auf der Probe erklärt werden. Dieses erhöht die Potentialbarriere immens, wodurch sehr viel höhere Energien notwendig sind, um das Tunneln von Elektronen zu ermöglichen.
@@ -361,13 +428,19 @@ In Abbildung \ref{abb:hocp own: atomar} sollten Atome gemessen werden, dies ist 
 
 Weiterhin sind die Höhenunterschiede innerhalb der Messungen in allen Fällen extrem groß. Um eine sinnvolle Auswertung durchführen zu können wurden uns andere Messergebnisse zur Verfügung gestellt. \cite{Grover}
 
+Im Vergleich der Bias--Spannungen fällt auf, dass unsere Spannungen sehr viel größer sind als bei den zur Verfügung gestellten Daten. Insbesondere bei dem Versuch, Atome zu messen, ist dieser Unterschied mit einem Faktor von ca. $15$ extrem groß. Dies spricht für z.B. Fremdmaterial, das eine exakte Messung stört.
+
 \begin{figure}[h!]
 	\begin{minipage}{\textwidth}
 		\begin{minipage}[T]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{../media/B2.5/Graphit_3.jpg}
+			\caption{Bias-Spannung $961.86 \mathrm{\,mV}$,
+				Strom $6.3 \mathrm{\,nA}$}
 		\end{minipage}
 		\begin{minipage}[T]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{../media/B2.5/Graphit_1.jpg}
+			\caption{Bias-Spannung $961.86 \mathrm{\,mV}$,
+				Strom $6.3 \mathrm{\,nA}$}
 		\end{minipage}
 		\caption{Fremdkörper (links) und Schäden (rechts) in HOCP}
 		\label{abb:hocp own: Fremdkörper}
@@ -375,10 +448,14 @@ Weiterhin sind die Höhenunterschiede innerhalb der Messungen in allen Fällen e
 	\begin{minipage}{\textwidth}
 		\begin{minipage}[t]{0.5\textwidth}
 			\includegraphics[width=\textwidth]{../media/B2.5/Graphit_2.jpg}
+			\caption{Bias-Spannung $867.90 \mathrm{\,mV}$,
+				Strom $5.9 \mathrm{\,nA}$}
 		\end{minipage}
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{../media/B2.5/Graphit_4.jpg}
+			\caption{Bias-Spannung $763.00 \mathrm{\,mV}$,
+				Strom $6.3 \mathrm{\,nA}$}
 		\end{minipage}
 		\caption{HOCP in atomarer Auflösung - fehlerhafte Messungen}
 		\label{abb:hocp own: atomar}
@@ -398,7 +475,10 @@ Eine interessante Beobachtung ist, dass nach einem dunkleren Teil nach der dunkl
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B2.5/HOPG Stufenkante.jpg}
-	\caption{Stufenkante in Graphit, Quelle \cite{Grover}}
+	\caption{Stufenkante in Graphit, \\
+		Bias-Spannung $449.74 \mathrm{\,mV}$,
+		Strom $0.48 \mathrm{\,nA}$, \\
+		Quelle \cite{Grover}}
 	\label{abb:Stufenkante HOPG}
 \end{figure}
 
@@ -445,12 +525,16 @@ Es wurden daher keine verschiedenen Proben mit vermessen. Ledglich die Messspitz
 \begin{figure}[h!]
 	\begin{minipage}[t]{0.5\textwidth}
 		\includegraphics[width=\linewidth]{../media/B2.5/Atoms_1.jpg}
-		\caption{dreieckige Anordnung, \\Quelle \cite{Grover}}
+		\caption{dreieckige Anordnung, \\
+			Bias-Spannung $49.82\mathrm{\,mV}$, Strom $1.7\mathrm{\,nA}$,
+			\\Quelle \cite{Grover}}
 		\label{fig:hopg_1}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
 		\includegraphics[width=\linewidth]{../media/B2.5/Atoms_2.jpg}
-		\caption{Reihenanordnung, \\Quelle \cite{Grover}}
+		\caption{Reihenanordnung,
+			Bias-Spannung $40.90\mathrm{\,mV}$, Strom $8.6\mathrm{\,nA}$,
+			\\Quelle \cite{Grover}}
 		\label{fig:hopg_2}
 	\end{minipage}
 \end{figure}
@@ -507,7 +591,9 @@ Die Ergebnisse der einzelnen Korrugationen sind in Tabelle \ref{table:Korrugatio
 	\begin{minipage}[t]{0.4\textwidth}
 		\centering
 		\includegraphics[width=\textwidth]{../media/B2.5/Atoms1_with_profileLines.png}
-		\caption{Dichtgepackteste Richtungen der ersten atomaren Auflösung von Graphit}
+		\caption{Dichtgepackteste Richtungen der ersten atomaren Auflösung von Graphit\\
+			Bias-Spannung $49.82\mathrm{\,mV}$, \\
+			Strom $1.7\mathrm{\,nA}$}
 		\label{abb:hopg_with_profile_1}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
@@ -520,7 +606,9 @@ Die Ergebnisse der einzelnen Korrugationen sind in Tabelle \ref{table:Korrugatio
 	
 	\begin{minipage}[t]{0.4\textwidth}
 		\includegraphics[width=\linewidth]{../media/B2.5/Atoms2_with_profileLines.png}
-		\caption{Dichtgepackteste Richtungen der zweiten atomaren Auflösung von Graphit}
+		\caption{Dichtgepackteste Richtungen der zweiten atomaren Auflösung von Graphit
+			Bias-Spannung $40.90\mathrm{\,mV}$, \\
+			Strom $8.6\mathrm{\,nA}$}
 		\label{abb:hopg_with_profile_2}
 	\end{minipage}
 	\begin{minipage}[t]{0.5\textwidth}
@@ -536,12 +624,17 @@ Die Ergebnisse der einzelnen Korrugationen sind in Tabelle \ref{table:Korrugatio
 \section{Fazit}\label{fazit}}
 Insgesamt ist die Arbeit mit dem STM ein interessanter Versuch. Dies wird jedoch massiv dadurch geschmähert, dass die Proben offensichtlich verunreinigt sind.
 
-Die Messung von Fremdkörpern in beispielsweise den Abbildungen \ref{abb:Gold gross} und \ref{abb:hocp own: Fremdkörper} bestätigt die Verunreinigung. Dies ist ein interessantes Ergebnis.
+Diese These wird durch die hohe Austrittsarbeit in Gold, sowie durch die hohen Bias--Spannungen bei HOCP bestätigt. Ebenso wird sie durch die Messung von Fremdkörpern unterstützt. Dies ist ein interessantes Ergebnis, das noch einmal in der untenstehenden Abbildung dargestellt ist.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B2.5/Gold_gross.pdf}
+\end{figure}
+
+\noindent
 Vermutlich spielt das Alter der Proben eine Rolle. Uns wurde mitgeteilt, dass schon von anderen versucht wurde, die Proben ordentlich zu reinigen, was aber wenig erfolgreich gewesen sei. Dies spricht dafür, dass die Proben für diesen Versuch nicht (mehr) geeignet sind.
 
 Das ein guter Teil der Auswertung an Ergebnissen von fremden Messungen durchgeführt werden musste, ist schade. Man kann es als Erfahrung verbuchen, denn auch in anderen Situationen werden Daten ausgewertet, die nicht selbst gemessen wurden.
-
 
 \clearpage
 \hypertarget{literatur}{%
@@ -568,6 +661,28 @@ Das ein guter Teil der Auswertung an Ergebnissen von fremden Messungen durchgef�
 
 \bibitem{Grover}
 	Versuchsbetreuung: M.~Sc.~Catherine~Grover, Studentin der Festkörperphysik im PhD an der Universität zu Köln, \url{https://ph2.uni-koeln.de/en/research-groups/group-michely/members}
+
+\bibitem{WikipediaTunneleffekt}
+	Wikipedia, 31. Oktober 2010, \url{https://commons.wikimedia.org/wiki/File:TunnelEffektKling1.png}
+
+\bibitem{WikipediaBravaisgitter}
+	Wikipedia, 4. März 2022, \url{https://commons.wikimedia.org/wiki/File:Rectangular_unit_cells_centered.svg}
+
+\bibitem{WikipediaGraphit}
+	Wikipedia, 21. Oktober 2010, \url{https://commons.wikimedia.org/wiki/File:Graphit_gitter4.svg}
+
+\bibitem{WikipediaFcc}
+	Wikipedia, 06. Februar 2009, \url{https://commons.wikimedia.org/wiki/File:Cubic,_face-centered.png}
+
+\bibitem{USDoE}
+	U.S. Department of Energy, ``Material Science. DOE Fundamentals Handbook, Volume 1 and 2'', January 1993, \url{https://www.standards.doe.gov/standards-documents/1000/1017-BHdbk-1993-v1/@@images/file}
+
+\bibitem{WikipediaStufe}
+	Wikipedia, 22. Januar 2011, \url{https://de.wikipedia.org/wiki/Datei:Dislocation_edge_d2.svg}
+
+\bibitem{WikipediaSchraube}
+	Wikipedia, 27. Januar 2011, \url{https://de.wikipedia.org/wiki/Datei:Dislocation_screw_e.svg}
+
 \end{thebibliography}
 
 \end{document}
