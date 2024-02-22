@@ -3,7 +3,7 @@
 \documentclass[12pt,a4paper]{scrartcl}
 
 \addtokomafont{sectioning}{\rmfamily}
-%\usepackage[ngerman]{babel}% deutsches Sprachpaket wird geladen
+\usepackage[ngerman]{babel}% deutsches Sprachpaket wird geladen
 \usepackage[T1]{fontenc} % westeuropäische Codierung wird verlangt
 \usepackage[utf8]{inputenc}% Umlaute werden erlaubt
 \usepackage[usenames]{color} % Erlaubt die Benutzung der namen im Farbpaket und deren Änderung
@@ -27,6 +27,7 @@
 \usepackage{color} % Farbpaket wird geladen
 %\usepackage{stmaryrd} % St Mary Road Symbole werden geladen
 \usepackage{physics}
+\usepackage{isotope} % Isotopendarstellung
 
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
@@ -53,7 +54,7 @@
 	\textsc{\LARGE Universität zu Köln }\\ [0.4cm]
 	\textsc{Mathematisch-Naturwissenschaftliche Fakultät} \\[1.5cm]
 
-	\includegraphics[width=0.45\textwidth]{uni}\\[1.5cm]  % Uni-Logo wird geladen
+	\includegraphics[width=0.45\textwidth]{../media/uni.jpg}\\[1.5cm]  % Uni-Logo wird geladen
 
 	\textsc{\Large Praktikum~B}\\[2mm]
 	\textsc{}\\[10mm]
@@ -93,8 +94,136 @@ eines Sperrschichtdetektors studiert.
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
 
+\hypertarget{alpha-zerfall}{%
+\subsection{\texorpdfstring{\(\alpha\)-Zerfall}{\textbackslash alpha-Zerfall}}\label{alpha-zerfall}}
+
+Der \(\alpha\)-Zerfall ist eine Form des radioaktiven Zerfalls, bei dem
+ein Heliumkern \(\isotope[4][2]{He}\) emittiert wird. Nach der
+Nuklidkarte findet der Zerfall hauptsächlich bei massereichen Kernen.
+\([3]\)
+
+\[
+\begin{eqnarray}
+    \isotope[A][Z]{X} \to \isotope[A-4][Z-2]{Y} + \isotope[4][2]{He}
+\end{eqnarray}
+\]
+
+\hypertarget{q-wert}{%
+\subsubsection{\texorpdfstring{\(Q\)-Wert}{Q-Wert}}\label{q-wert}}
+
+Der Energiedifferenz zwischen Ausgangs- und Endprodukt ist durch den
+\(Q\)-Wert gegeben, der die Massendifferenz zwischen Mutterkern
+\(\isotope[A][Z]{X}\), Tochterkern \(\isotope[A-4][Z-2]{Y}\) sowie
+Heliumkern \(\isotope[4][2]{He}\) darstellt. Diese wird durch die
+Masse-Energie-Relation \(E=mc^2\) mittels der Lichtgeschwindigkeit \(c\)
+in eine Energie umgerechnet.
+
+\[
+\begin{eqnarray}
+    Q &=& (m_{A}(\isotope[A][Z]{X}) - m_{A}(\isotope[A-4][Z-2]{Y}) - m_{A}(\isotope [4][2]{He})) \cdot c^2
+\end{eqnarray}
+\]
+
+\hypertarget{energie-der-alpha-teilchen}{%
+\subsubsection{\texorpdfstring{Energie der
+\(\alpha\)-Teilchen}{Energie der \textbackslash alpha-Teilchen}}\label{energie-der-alpha-teilchen}}
+
+Mithilfe der die Atommassen \(m_{A}\) der Stoffe kann über die
+Impulserhaltung die kinetische Energie \(E_\alpha\) des
+\(\alpha\)-Teilchens ermittelt werden.
+
+\[
+\begin{eqnarray}
+    E_\alpha
+        &=& \frac{m_{A}(\isotope[A-4][Z-2]{Y}) \cdot Q}{m_{A}(\isotope[A-4][Z-2]{Y})+m_{A}(\isotope [4][2]{He})}
+\end{eqnarray}
+\]
+
+\hypertarget{kernpotential}{%
+\subsubsection{Kernpotential}\label{kernpotential}}
+
+Das Kernpotential beschreibt die potentielle Energie innerhalb eines
+Atomkerns, die die Nukleonen zusammenhält. Es beruht auf der starken
+Wechselwirkung sowie der Coulombwechselwirkung innerhalb des Kernes.
+
+Um den Kern herum bewirkt die elektromagnetische Wechselwirkung eine
+Abstoßung zwischen einem positiv geladenen Teilchen und dem ebenso
+geladenen Kern. Beide Potentiale wirken zusammen und bilden ein
+quasibindenes Potenzial mit einer endlichen Coulombbarriere.
+
+Positronen und Neutronen sind in schweren Kerne mit einer Energie bis zu
+\(7\mathrm{\,MeV}\) gebunden und können daher nicht einzeln den Kern
+verlassen. Deshalb ist eine Emission eines gebundene System
+wahrscheinlicher, da zusätzliche Bindungsenergie zur Verfügung steht.
+Die Bildung eines \(\alpha\) -Teilchens mit einer Bindungsenergie von
+etwa \(7.1\mathrm{\,MeV}\) ermöglicht das Verlassen des Kerns durch die
+Coulombbarriere \(V_C\).
+
+Dennoch ist die Energie des \(\alpha\)-Teilchens nicht groß genug, um
+die Potentialbarriere zu überwinden. Deswegen muss es hindurch
+\emph{tunneln}, was im Folgenden beschrieben wird.
+
+\hypertarget{tunneleffekt}{%
+\subsubsection{Tunneleffekt}\label{tunneleffekt}}
+
+Wie schon erwähnt muss das Teilchen die energetisch höhere
+Coulomb-Barriere überwinden. Dies wird durch die
+Tunnelwahrscheinlichkeit \(T\) bestimmt, die von dem Gamow-Faktor \(G\)
+abhängt. Dieser wiederum hängt von dem Coulomb-Potential \(V_C\), der
+Energie der \(\alpha\)-Teilchen \(E_\alpha\) sowie deren Masse
+\(m_\alpha\) und Position der Barriere von \(r_1\) bis \(r_2\) ab.
+\([7]\)
+
+\[
+\begin{eqnarray}
+    T &=& T_0 \cdot e^{-G} \\
+    G &=&
+        \frac{2\sqrt{2m_\alpha}}{\hbar}
+        \int_{r_{1}}^{r_{2}}\sqrt{V_{C}-E_{\alpha}}
+        \,\mathrm dr
+\end{eqnarray}
+\]
+
+\hypertarget{zerfallswahrscheinlichkeit}{%
+\subsubsection{Zerfallswahrscheinlichkeit}\label{zerfallswahrscheinlichkeit}}
+
+Damit ein Zerfall stattfindet, müssen drei Ereignisse in Folge
+stattfinden, die jeweils mit unterschiedlichen Wahrscheinlichkeiten
+geschehen.
+
+Zuerst muss sich ein \(\alpha\)-Teilchen im Kern bilden. Dann muss
+Teilchen am Rand des Kerns gegen die Coulomb-Barriere stoßen, die den
+Kern zusammenhält. Dann muss das \(\alpha\)-Teilchen durch die Barriere
+tunneln. Die Wahrscheinlichkeiten für diese drei Prozesse multiplizieren
+sich zu der gesamten Zerfallswahrscheinlichkeit für den Kern.
+
+\hypertarget{energiespektrum}{%
+\subsubsection{Energiespektrum}\label{energiespektrum}}
+
+Zerfällt ein Mutterkern, so können außer dem Grundzustand noch andere
+angeregte Zustände des Tochterkerns besetzt werden. Man erhält ein
+diskretes Linienspektrum. Bei einer Messung wird jede Linie mit einer
+gewissen Wahrscheinlichkeit gemessen, dabei wird jede Linie durch eine
+Gaußkurve angenähert.
+
+Das Spektrum des Isotops \(\isotope [241]{Am}\) hat vier Linien bei
+Energien von \(5388\mathrm{\,keV}\) und \(5545\mathrm{\,keV}\). \([1]\) Es ist in Abbildung $1$ dargestellt.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{../media/B3.3/Am241_Spektrum.pdf}
+\caption{gemessenes Spektrum von \(\isotope [241]{Am}\) \([1]\)}
+\end{figure}
+
+\hypertarget{weizsuxe4cker-massenformel}{%
+\subsubsection{Weizsäcker
+Massenformel}\label{weizsuxe4cker-massenformel}}
+
+\hypertarget{bremsvermuxf6gen}{%
+\subsection{Bremsvermögen}\label{bremsvermuxf6gen}}
+
 \hypertarget{bethe-bloch-gleichung}{%
-\subsection{Bethe-Bloch-Gleichung}\label{bethe-bloch-gleichung}}
+\subsubsection{Bethe-Bloch-Gleichung}\label{bethe-bloch-gleichung}}
 
 Bewegte und geladene Teilchen werden durch Interaktion mit Materie
 abgebremst, indem sie durch Stöße mit Atomkernen sowie Elektronen
@@ -143,7 +272,7 @@ bei kleinen Geschossenergien.
 \]
 
 \hypertarget{herleitung}{%
-\subsubsection{Herleitung}\label{herleitung}}
+\paragraph{Herleitung}\label{herleitung}}
 
 Im Folgenden werde die Bethe-Bloch-Gleichung für schwere, schnelle und
 geladene Projektile wie \(\alpha\)-Teilchen hergeleitet.
@@ -454,7 +583,7 @@ Rekombinationen möglich.
 
 \begin{figure}
 \centering
-\includegraphics{Oberflaechensperrschichtzaehler.pdf}
+\includegraphics{../media/B3.3/Oberflaechensperrschichtzaehler.pdf}
 \caption{Abbildung \(1\): Oberflächensperrschichtzähler Quelle: \([5]\)}
 \end{figure}
 
@@ -573,14 +702,15 @@ Falle von Gold \(R_\mathrm{Au}=8\mathrm{\,mm}\).
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  K. Bethge, Kernphysik: Eine Einführung, 3. aktualisierte und
-  erweiterte Auflage, Springer-Verlag, 2008
+  K. Bethge, ``Kernphysik: Eine Einführung'', 3. Auflage,
+  Springer-Verlag, 2008, ISBN: 9783540745679, DOI:
+  \href{https://doi.org/10.1007/978-3-540-74567-9}{10.1007/978-3-540-74567-9}
 \item
   Prior und Rollefson, ``Anomalous energy straggling of alpha
   particles'', American Journal of Physics, Mai 1982,
   \href{https://doi.org/10.1119/1.12834}{DOI 10.1119/1.12834}
 \item
-  „Chart of Nuclides,`` National Nuclear Data Center,
+  ``Chart of Nuclides'', National Nuclear Data Center,
   \url{https://www.nndc.bnl.gov/nudat3}, \(^{241}_{\ \ 95}\mathrm{Am}\),
   Abruf am 28.01.2024
 \item
@@ -597,7 +727,8 @@ Falle von Gold \(R_\mathrm{Au}=8\mathrm{\,mm}\).
   9780470131480
 \item
   W. Demtröder, ``Experimentalphysik 4: Kern-, Teilchen- und
-  Astrophysik'', Springer Spektrum, 2017, ISBN: 9783662528839, DOI:
+  Astrophysik'', Springer-Spektrum-Verlag, 2017, ISBN: 9783662528839,
+  DOI:
   \href{https://doi.org/10.1007/978-3-662-52884-6}{10.1007/978-3-662-52884-6}
 \end{enumerate}
 
