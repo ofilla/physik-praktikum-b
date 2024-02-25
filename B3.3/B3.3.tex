@@ -41,6 +41,8 @@
 \hypersetup{
   pdftitle={B 3.3},
   pdfcreator={LaTeX via pandoc}}
+  
+  \hyphenation{Ener-gie-stragg-ling}
 
 \setcounter{secnumdepth}{6}
 \setcounter{tocdepth}{6}
@@ -138,9 +140,9 @@ Impulserhaltung die kinetische Energie \(E_\alpha\) des
 
 \[
 \begin{eqnarray}
-	E_\alpha
-	&=& \frac{m_{A}\left(\ce{^{A-4}_{Z-2}Y}\right) \cdot Q}
-	{m_{A}\left(\ce{^{A-4}_{Z-2}Y}\right)+m_{A}\left(\ce{^4_2He}\right)}
+    E_\alpha
+        &=& \frac{m_{A}\left(\ce{^{A-4}_{Z-2}Y}\right) \cdot Q}
+            {m_{A}\left(\ce{^{A-4}_{Z-2}Y}\right)+m_{A}\left(\ce{^4_2He}\right)}
 \end{eqnarray}
 \]
 
@@ -754,6 +756,48 @@ Faktor \(\frac{m}{M} < 1\). \([7]\)
             \cdot \frac{m}{M}
 \end{eqnarray}
 \]
+
+\hypertarget{straggling}{%
+\subsection{Straggling}\label{straggling}}
+
+Das sogenannte Straggling bezeichnet
+eine statistische Streuung der betrachteten Größe mit einer bekannten
+Verteilung. In diesem Experiment gibt es Reichweiten-Straggling,
+Energie-Straggling und Winkel-Straggling.
+
+Beim \emph{Reichweiten-Straggling} kommt zu einer normalverteilten
+Streuung der Reichweiten \(R_i\) um die mittlere Reichweite \(\bar{R}\).
+Der Reichweitenstraggling-Parameter \(\alpha^R_0\) und ist
+folgendermaßen durch die experimentell gemessene Reichweite
+\(R_\mathrm{ex}\) und die mittlere Reichweite \(\bar{R}\) zu bestimmen.
+
+\[
+\begin{eqnarray}
+    \alpha^R_0 &=& \sqrt{2}\left(R_\mathrm{ex}-\bar{R}\right)
+\end{eqnarray}
+\]
+
+Die Streuung der Energien der \(\alpha\)-Teilchen zum Zeitpunkt der
+Messung wird \emph{Energiestraggling} genannt. Bei einem
+monoenergetischen Strahl streuen die Energien nach dem Durchdringen von
+Materie statistisch mit einer Gaußverteilung um eine mittlere Energie
+\(E\). Die Breite der beobachteten Linie im Spektrum \(\alpha\) wird
+durch den Stragglingparameter \(\alpha_E\) und die Auflösung des
+Messapperats \(\alpha_\mathrm{res}\) beeinflusst. Berechnet wird dies
+durch eine Faltung der Gaußverteilung.
+
+\[
+\begin{eqnarray}
+    \alpha &=& \sqrt{\alpha_E^2 + \alpha_\mathrm{res}^2}
+\end{eqnarray}
+\]
+
+Falls man einen Strahl von Teilchen misst, kommt es zudem zu
+\emph{Winkelstraggling}. Im Vakuum verläuft ein solcher Strahl
+geradlinig, alle Teilchen bewegen sich parallel zueinander in einem
+Winkel \(\theta\) zu z.B. der Oberfläche. In Materie stoßen die Teilchen
+dagegen mit anderen Atomen, dadurch wird er um den ursprünglichen Winkel
+\(\theta\) gestreut.
 
 \hypertarget{oberfluxe4chensperrschichtzuxe4hler}{%
 \subsection{Oberflächensperrschichtzähler}\label{oberfluxe4chensperrschichtzuxe4hler}}
