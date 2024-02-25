@@ -27,7 +27,7 @@
 \usepackage{color} % Farbpaket wird geladen
 %\usepackage{stmaryrd} % St Mary Road Symbole werden geladen
 \usepackage{physics}
-\usepackage{isotope} % Isotopendarstellung
+\usepackage{mhchem} % Chemie: \ce & \pu
 
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
@@ -98,13 +98,12 @@ eines Sperrschichtdetektors studiert.
 \subsection{\texorpdfstring{\(\alpha\)-Zerfall}{\textbackslash alpha-Zerfall}}\label{alpha-zerfall}}
 
 Der \(\alpha\)-Zerfall ist eine Form des radioaktiven Zerfalls, bei dem
-ein Heliumkern \(\isotope[4][2]{He}\) emittiert wird. Nach der
-Nuklidkarte findet der Zerfall hauptsächlich bei massereichen Kernen.
-\([3]\)
+ein Heliumkern \(\ce{^4_2He}\) emittiert wird. Nach der Nuklidkarte
+findet der Zerfall hauptsächlich bei massereichen Kernen. \([3]\)
 
 \[
 \begin{eqnarray}
-    \isotope[A][Z]{X} \to \isotope[A-4][Z-2]{Y} + \isotope[4][2]{He}
+    \ce{^A_ZX -> ^{A-4}_{Z-2}Y + ^4_2He}
 \end{eqnarray}
 \]
 
@@ -113,14 +112,19 @@ Nuklidkarte findet der Zerfall hauptsächlich bei massereichen Kernen.
 
 Der Energiedifferenz zwischen Ausgangs- und Endprodukt ist durch den
 \(Q\)-Wert gegeben, der die Massendifferenz zwischen Mutterkern
-\(\isotope[A][Z]{X}\), Tochterkern \(\isotope[A-4][Z-2]{Y}\) sowie
-Heliumkern \(\isotope[4][2]{He}\) darstellt. Diese wird durch die
-Masse-Energie-Relation \(E=mc^2\) mittels der Lichtgeschwindigkeit \(c\)
-in eine Energie umgerechnet.
+\(\ce{^A_ZX}\), Tochterkern \(\ce{^{A-4}_{Z-2}Y}\) sowie Heliumkern
+\(\ce{^4_2He}\) darstellt. Diese wird durch die Masse-Energie-Relation
+\(E=mc^2\) mittels der Lichtgeschwindigkeit \(c\) in eine Energie
+umgerechnet.
 
 \[
 \begin{eqnarray}
-    Q &=& (m_{A}(\isotope[A][Z]{X}) - m_{A}(\isotope[A-4][Z-2]{Y}) - m_{A}(\isotope [4][2]{He})) \cdot c^2
+    Q &=&
+        \left(m_{A}
+            \left(\ce{^A_ZX}\right)
+            - m_{A}\left(\ce{^{A-4}_{Z-2}Y}\right)
+            - m_{A}\left(\ce{^4_2He}\right)
+        \right) \cdot c^2
 \end{eqnarray}
 \]
 
@@ -135,7 +139,8 @@ Impulserhaltung die kinetische Energie \(E_\alpha\) des
 \[
 \begin{eqnarray}
     E_\alpha
-        &=& \frac{m_{A}(\isotope[A-4][Z-2]{Y}) \cdot Q}{m_{A}(\isotope[A-4][Z-2]{Y})+m_{A}(\isotope [4][2]{He})}
+        &=& \frac{m_{A}(\ce{^{A-4}_{Z-2}Y}) \cdot Q}
+            {m_{A}(\ce{^{A-4}_{Z-2}Y})+m_{A}(\ce{^4_2He})}
 \end{eqnarray}
 \]
 
@@ -206,14 +211,14 @@ diskretes Linienspektrum. Bei einer Messung wird jede Linie mit einer
 gewissen Wahrscheinlichkeit gemessen, dabei wird jede Linie durch eine
 Gaußkurve angenähert.
 
-Das Spektrum des Isotops \(\isotope [241]{Am}\) hat vier Linien bei
-Energien von \(5388\mathrm{\,keV}\) und \(5545\mathrm{\,keV}\). \([1]\)
-Es ist in Abbildung \ref{abb:Spektrum 241Am} dargestellt.
+Das Spektrum des Isotops \(\ce{^241Am}\) hat vier Linien bei Energien
+von \(5388\mathrm{\,keV}\) und \(5545\mathrm{\,keV}\). \([1]\) Es ist in
+Abbildung \(1\) dargestellt.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{../media/B3.3/Am241_Spektrum.pdf}
-	\caption{gemessenes Spektrum von \(\isotope [241]{Am}\) \([1]\)}
+	\caption{gemessenes Spektrum von \(\ce{^241Am}\) \([1]\)}
 	\label{abb:Spektrum 241Am}
 \end{figure}
 
@@ -765,9 +770,9 @@ wird diese Zone \emph{Verarmungszone} genannt, hier sind keine weiteren
 Rekombinationen möglich.
 
 \begin{figure}
-\centering
-\includegraphics{../media/B3.3/Oberflaechensperrschichtzaehler.pdf}
-\caption{Abbildung \(1\): Oberflächensperrschichtzähler Quelle: \([5]\)}
+	\centering
+	\includegraphics{../media/B3.3/Oberflaechensperrschichtzaehler.pdf}
+	\caption{Abbildung \(1\): Oberflächensperrschichtzähler Quelle: \([5]\)}
 \end{figure}
 
 Wird eine äußere Spannung angelegt, wächst oder schrumpft die
