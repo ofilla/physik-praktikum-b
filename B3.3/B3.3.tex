@@ -445,7 +445,8 @@ Projektils sowie die Elektronen-Ruhemasse \(m_e\) verwendet. Weiterhin
 sind das mittlere Ionisationspotential \(\bar I\), gemittelt über alle
 Atomschalen des Bremsmediums, sowie eine Korrektur \(c_K\) notwendig.
 Letztere beschreibt den fehlenden Beitrag der \(K\)-Schalen-Elektronen
-bei kleinen Geschossenergien.
+bei kleinen Geschossenergien. Teilweise können diese Korrekturterme
+vernachlässigt werden.
 
 \[
 \begin{eqnarray}
@@ -457,7 +458,11 @@ bei kleinen Geschossenergien.
             - \beta^2
             - \frac{c_K}{Z}
         \right]
-        \label{BetheBloch}
+        \label{BetheBloch} \\
+    -\frac{\mathrm dE}{\mathrm dx} &\approx&
+        \frac{4\pi z^2 e^4}{m_e v^2} NZ
+        \ln\left(\frac{2mv^2}{\bar I}\right)
+        \label{BetheBloch2}
 \end{eqnarray}
 \]
 
@@ -613,6 +618,41 @@ Für eine feste Eindringtiefe \(x\) kann die Restenergie
 \end{eqnarray}
 \]
 
+\hypertarget{relatives-massenbremsvermuxf6gen}{%
+\subsubsection{relatives
+Massenbremsvermögen}\label{relatives-massenbremsvermuxf6gen}}
+
+Das relative Massenbremsvermögen \(Q_A\) eines Absorbers \(A\) kann
+durch das Massenbremsvermögen eines Standard-Absorbers \(S\) ermittelt
+werden.
+
+\[
+\begin{eqnarray}
+    Q_A \cdot \rho_A \cdot \mathrm dx_A
+        &=& \rho_S \cdot \mathrm dx_S \\
+    \Leftrightarrow \qquad\qquad\qquad Q_A
+        &=& \frac{\rho_S}{\rho_A}
+            \cdot \frac{\mathrm dx_S}{\mathrm dx_A}
+\end{eqnarray}
+\]
+
+Dieses Verhältnis wird näherungsweise aus dem Verhältnis der
+Massenbelegungen bzw. Flächendichten \(\rho_i\) der Materialien
+ermittelt werden, was durch die Nukleonenzahlen \(A_i\) und die
+Protonenzahlen \(Z_i\) dargestellt werden kann. Aus der
+Bethe-Bloch-Gleichung ohne Korrekturterme \(\eqref{BetheBloch2}\) kann
+dann folgender Zusammenhang ermittelt werden.
+
+\[
+\begin{eqnarray}
+    Q_A \cdot \rho_A \cdot \mathrm dx_A
+        &=& \rho_S \cdot \mathrm dx_S \\
+    Q_A &=& \frac{\rho_S}{\rho_A} \cdot \frac{\mathrm dx_S}{\mathrm dx_A} \\
+    Q_A &=& \frac{A_S\cdot Z_A}{A_A\cdot Z_S}
+        \frac{\ln\left(\frac{2m_ev^2}{\bar I_A}\right)}{\ln\left(\frac{2m_ev^2}{\bar I_S}\right)}
+\end{eqnarray}
+\]
+
 \hypertarget{reichweite-von-alpha-teilchen}{%
 \subsection{\texorpdfstring{Reichweite von
 \(\alpha\)-Teilchen}{Reichweite von \textbackslash alpha-Teilchen}}\label{reichweite-von-alpha-teilchen}}
@@ -715,7 +755,7 @@ Reichweite \(\bar R\) proportional zu dem inversen mittleren Druck
                 \right]
             \right)^{-1}
             \mathrm dE \\
-    \Rightarrow \bar R &\propto& \frac{1}{\bar p}
+    \Rightarrow \bar R &\propto& \frac{1}{\bar p} \label{R(p)}
 \end{eqnarray}
 \]
 
@@ -757,9 +797,9 @@ Faktor \(\frac{m}{M} < 1\). \([7]\)
 \end{eqnarray}
 \]
 
-\hypertarget{abschuxe4tzung-der-anzahl-von-stuxf6uxdfen-in-luft}{%
-\subsection{Abschätzung der Anzahl von Stößen in
-Luft}\label{abschuxe4tzung-der-anzahl-von-stuxf6uxdfen-in-luft}}
+\hypertarget{abschuxe4tzung-der-anzahl-von-stuxf6uxdfen}{%
+\subsubsection{Abschätzung der Anzahl von
+Stößen}\label{abschuxe4tzung-der-anzahl-von-stuxf6uxdfen}}
 
 Teilchen mit deutlich größeren Massen als die Elektronenmasse verlieren
 ihre Energie vor allem durch inelastische Stöße mit den Elektronen der
@@ -775,7 +815,8 @@ Um nun die Anzahl an Stößen abzuschätzen, nach denen ein
 Da der Großteil unserer Luft aus molekularem Stickstoff besteht, sei das
 Bremsmedium ein Gas aus \(\ce{^{14}N}\)-Isotopen. und zweitens soll das
 \(\alpha\)-Teilchen seine Energie nur abgeben, indem es den Stickstoff
-genau einfach ionisiert. Dazu ist eine Ionisationsenergie $E_I\approx 14.534 \mathrm{\,eV}$ nötig. $[8]$
+genau einfach ionisiert. Dazu ist eine Ionisationsenergie
+\(E_I\approx 14.534 \mathrm{\,eV}\) nötig. \([8]\)
 
 Unsere \(\alpha\)-Quelle \(\ce{^{241}Am}\) erzeugt primär
 \(\alpha\)-Teilchen mit einer Anfangsenergie von
@@ -793,13 +834,39 @@ Anzahl an Stößen \(\expval{N}\) ermittelt werden.
 Ein \(\alpha\)-Teilchen stößt abgeschätzt also mehrere hunderttausend
 mal, bevor es zur Ruhe kommt.
 
+\hypertarget{bragg-kleemann-formel}{%
+\subsubsection{Bragg-Kleemann-Formel}\label{bragg-kleemann-formel}}
+
+Mithilfe der empirischen Bragg-Kleemann-Formel kann die mittlere
+Reichweite \(\bar R_A\) in einem Stoff \(A\) ermittelt werden, wenn die
+mittlere Reichweite \(\bar R_S\) in einem Standard-Absorber bekannt ist.
+Sie hat eine Genauigkeit von \(15\,\%\). Dazu werden neben \(\bar R_S\)
+die Dichten \(\rho_i\) und die Nukleonenzahlen \(A_i\) der beiden
+Materialien benötigt.
+
+Oft wird die mittlere Reichweite \(\bar R_\mathrm{Luft}\) in Luft unter
+Normalbedingungen als Standard-Absorber verwendet, d.h. bei
+\(15\mathrm{^\circ C}\) und einem Druck von
+\(1\mathrm{\,atm}=1013.25\mathrm{\,mbar}\).
+
+\[
+\begin{eqnarray}
+    \bar R_A &=& \frac{\rho_S}{\rho_A}
+        \sqrt{\frac{A_A}{A_S}} \bar R_S \\
+    \bar R_A &=& 3.2\cdot 10^{-4} \mathrm{\frac{g}{cm^3}}
+        \cdot\frac{\sqrt{A_A}}{\rho_A}\cdot \bar R_\mathrm{Luft}
+\end{eqnarray}
+\]
+
+\%\%Dazu wird das relative Massenbremsvermögen verwendet.\%\%
+
 \hypertarget{straggling}{%
 \subsection{Straggling}\label{straggling}}
 
-Das sogenannte Straggling bezeichnet
-eine statistische Streuung der betrachteten Größe mit einer bekannten
-Verteilung. In diesem Experiment gibt es Reichweiten-Straggling,
-Energie-Straggling und Winkel-Straggling.
+Das sogenannte Straggling bezeichnet eine statistische Streuung der
+betrachteten Größe mit einer bekannten Verteilung. In diesem Experiment
+gibt es Reichweiten-Straggling, Energie-Straggling und
+Winkel-Straggling.
 
 Beim \emph{Reichweiten-Straggling} kommt zu einer normalverteilten
 Streuung der Reichweiten \(R_i\) um die mittlere Reichweite \(\bar{R}\).
@@ -963,6 +1030,58 @@ Die Messungen erfolgten analog zu den Messungen der Reichweite in Luft
 Aluminium war der relative Abstand \(R_\mathrm{Al}=4\mathrm{\,mm}\), im
 Falle von Gold \(R_\mathrm{Au}=8\mathrm{\,mm}\).
 
+\hypertarget{auswertung}{%
+\section{Auswertung}\label{auswertung}}
+
+\hypertarget{energiestraggling-1}{%
+\subsection{Energiestraggling}\label{energiestraggling-1}}
+
+\(\ref{}\)
+
+\hypertarget{reichweiten}{%
+\subsection{Reichweiten}\label{reichweiten}}
+
+Nun sollen die Reichweite der \(\alpha\)-Teilchen in Luft bestimmen.
+Dies kann durch den linearen Zusammenhang von mittlerer Reichweite
+\(\bar R\) und dem inversen Druck \(\frac{1}{p}\) erfolgen, der in
+Gleichung \(\eqref{R(p)}\) dargestellt ist.
+
+Dazu werden zunächst Wertepaare von mittlerer Reichweite \(\bar{R}\) und
+inversem mittlerem Druck \(\frac{1}{\bar{p}}\) gesucht. Dann kann der
+gesuchte Wert mittels des bekannten Luftdrucks von
+\(1 \mathrm{\,atm} = 1013.25 \mathrm{\,mbar}\) bestimmt werden. Dieses
+Verfahren jeweils einmal für die Messungen von Zählrate und Druck bzw.
+Spannungs und Druck durchgeführt. Die Ergebnisse werden abschließend
+verglichen.
+
+\hypertarget{bestimmung-durch-zuxe4hlraten}{%
+\subsubsection{Bestimmung durch
+Zählraten}\label{bestimmung-durch-zuxe4hlraten}}
+
+Der eingestellte Abstand \(R\) entspricht der mittleren Reichweite
+\(\bar{R}\), wenn die Zählrate \(r\) auf die mittlere Zählrate
+\(\bar{r}\) abgesunken ist. Der Druck \(p\), bei dem dies geschieht, ist
+dann genau der mittlere Druck \(\bar{p}\). Dies liefert die gesuchten
+Messwert-Paare.
+
+Dafür werden für alle vier Abstände \(R_i\) die gemessenen Zählraten
+gegen die Drücke aufgetragen, wobei die Enden der Kurve mittels
+rechnerischer Geradenanpassung gefittet wurden. Dies ist in Abbildung
+\(\ref{fig:zählratenkurvenExtrapoliert}\) dargestellt.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.3/zaehlratenkurven_extrapoliert.pdf}
+	\caption{Extrapolierte Zählratenkurven für vier Reichweiten\\
+		Gepunktete Linien stellen die Geraden-Fits dar, gestrichelte Linien die mittleren Zählraten bzw. Drücke}
+	\label{fig:zählratenkurvenExtrapoliert}
+\end{figure}
+
+\hypertarget{massenbremsvermuxf6gen}{%
+\subsection{Massenbremsvermögen}\label{massenbremsvermuxf6gen}}
+
+\(\ref{}\)
+
 \hypertarget{literatur}{%
 \section{Literatur}\label{literatur}}
 
@@ -971,8 +1090,7 @@ Falle von Gold \(R_\mathrm{Au}=8\mathrm{\,mm}\).
 \tightlist
 \item
   K. Bethge, ``Kernphysik: Eine Einführung'', 3. Auflage,
-  Springer-Verlag, 2008, \linebreak
-  ISBN:~9783540745679, DOI:
+  Springer-Verlag, 2008, ISBN: 9783540745679, DOI:
   \href{https://doi.org/10.1007/978-3-540-74567-9}{10.1007/978-3-540-74567-9}
 \item
   Prior und Rollefson, ``Anomalous energy straggling of alpha
@@ -992,19 +1110,21 @@ Falle von Gold \(R_\mathrm{Au}=8\mathrm{\,mm}\).
   \url{https://www.spektrum.de/lexikon/physik/oberflaechensperrschichtzaehler/10568},
   29.01.2024
 \item
-  G. Knoll, ``Radiation Detection and Measurement'', Wiley, 2010, \linebreak ISBN:~9780470131480
+  G. Knoll, ``Radiation Detection and Measurement'', Wiley, 2010, ISBN:
+  9780470131480
 \item
   W. Demtröder, ``Experimentalphysik 4: Kern-, Teilchen- und
-  Astrophysik'', \linebreak
-  Springer-Spektrum-Verlag, 2017, ISBN: 9783662528839,
-  DOI:   \href{https://doi.org/10.1007/978-3-662-52884-6}{10.1007/978-3-662-52884-6}
+  Astrophysik'', Springer-Spektrum-Verlag, 2017, ISBN: 9783662528839,
+  DOI:
+  \href{https://doi.org/10.1007/978-3-662-52884-6}{10.1007/978-3-662-52884-6}
 \item
-  NIH National Library of Medicine NCBI,
-  ``Ionization Energy in the Periodic Table of Elements'',
-  \url{https://pubchem.ncbi.nlm.nih.gov/periodic-table/ionization-energy}, Abruf am 28.01.2024
+  NIH National Library of Medicine NCBI, ``Ionization Energy in the
+  Periodic Table of Elements'',
+  \url{https://pubchem.ncbi.nlm.nih.gov/periodic-table/ionization-energy},
+  Abruf am 28.01.2024
 \item
   LEIFIphysik, ``Alphazerfall und Alphastrahlung'',
   \url{https://www.leifiphysik.de/kern-teilchenphysik/radioaktivitaet-einfuehrung/grundwissen/alphazerfall-und-alphastrahlung},
-  Abruf am 01.03.2024
+  Abruf 01.03.2024
 \end{enumerate}
 \end{document}
