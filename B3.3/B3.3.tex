@@ -67,7 +67,7 @@
 	
 	\HRule \\[3cm]
 
-			\textsc{\Large Catherine Tran } \\[3pt]
+		\textsc{\Large Catherine Tran } \\[3pt]
 		\textsc{\Large Carlo Kleefisch } \\[3pt]
 		\textsc{\Large Oliver Filla } \\[3pt]
 		
@@ -413,8 +413,44 @@ der Paarungsterm hier verschwindet.
 \hypertarget{bremsvermuxf6gen}{%
 \subsection{Bremsvermögen}\label{bremsvermuxf6gen}}
 
+
+\hypertarget{relatives-massenbremsvermuxf6gen}{%
+	\subsubsection{relatives
+		Massenbremsvermögen}\label{relatives-massenbremsvermuxf6gen}}
+
+Das relative Massenbremsvermögen \(Q_A\) eines Absorbers \(A\) kann
+durch das Massenbremsvermögen eines Standard-Absorbers \(S\) ermittelt
+werden.
+
+\[
+\begin{eqnarray}
+	Q_A \cdot \rho_A \cdot \mathrm dx_A
+	&=& \rho_S \cdot \mathrm dx_S \\
+	\Leftrightarrow \qquad\qquad\qquad Q_A
+	&=& \frac{\rho_S}{\rho_A}
+	\cdot \frac{\mathrm dx_S}{\mathrm dx_A}
+\end{eqnarray}
+\]
+
+Dieses Verhältnis wird näherungsweise aus dem Verhältnis der
+Massenbelegungen bzw. Flächendichten \(\rho_i\) der Materialien
+ermittelt werden, was durch die Nukleonenzahlen \(A_i\) und die
+Protonenzahlen \(Z_i\) dargestellt werden kann. Aus der
+Bethe-Bloch-Gleichung ohne Korrekturterme \(\eqref{BetheBloch2}\) kann
+dann folgender Zusammenhang ermittelt werden.
+
+\[
+\begin{eqnarray}
+	Q_A \cdot \rho_A \cdot \mathrm dx_A
+	&=& \rho_S \cdot \mathrm dx_S \\
+	Q_A &=& \frac{\rho_S}{\rho_A} \cdot \frac{\mathrm dx_S}{\mathrm dx_A} \\
+	Q_A &=& \frac{A_S\cdot Z_A}{A_A\cdot Z_S}
+	\frac{\ln\left(\frac{2m_ev^2}{\bar I_A}\right)}{\ln\left(\frac{2m_ev^2}{\bar I_S}\right)}
+\end{eqnarray}
+\]
+
 \hypertarget{bethe-bloch-gleichung}{%
-\subsubsection{Bethe-Bloch-Gleichung}\label{bethe-bloch-gleichung}}
+\subsection{Bethe-Bloch-Gleichung}\label{bethe-bloch-gleichung}}
 
 Bewegte und geladene Teilchen werden durch Interaktion mit Materie
 abgebremst, indem sie durch Stöße mit Atomkernen sowie Elektronen
@@ -468,7 +504,7 @@ vernachlässigt werden.
 \]
 
 \hypertarget{herleitung}{%
-\paragraph{Herleitung}\label{herleitung}}
+\subsubsection{Herleitung}\label{herleitung}}
 
 Im Folgenden werde die Bethe-Bloch-Gleichung für schwere, schnelle und
 geladene Projektile wie \(\alpha\)-Teilchen hergeleitet.
@@ -616,41 +652,6 @@ Für eine feste Eindringtiefe \(x\) kann die Restenergie
         &=& E_0
         - \int_0^x \left(\frac{\mathrm dE}{\mathrm dx}\right) \mathrm dx^\prime
         \label{Restenergie}
-\end{eqnarray}
-\]
-
-\hypertarget{relatives-massenbremsvermuxf6gen}{%
-\subsubsection{relatives
-Massenbremsvermögen}\label{relatives-massenbremsvermuxf6gen}}
-
-Das relative Massenbremsvermögen \(Q_A\) eines Absorbers \(A\) kann
-durch das Massenbremsvermögen eines Standard-Absorbers \(S\) ermittelt
-werden.
-
-\[
-\begin{eqnarray}
-    Q_A \cdot \rho_A \cdot \mathrm dx_A
-        &=& \rho_S \cdot \mathrm dx_S \\
-    \Leftrightarrow \qquad\qquad\qquad Q_A
-        &=& \frac{\rho_S}{\rho_A}
-            \cdot \frac{\mathrm dx_S}{\mathrm dx_A}
-\end{eqnarray}
-\]
-
-Dieses Verhältnis wird näherungsweise aus dem Verhältnis der
-Massenbelegungen bzw. Flächendichten \(\rho_i\) der Materialien
-ermittelt werden, was durch die Nukleonenzahlen \(A_i\) und die
-Protonenzahlen \(Z_i\) dargestellt werden kann. Aus der
-Bethe-Bloch-Gleichung ohne Korrekturterme \(\eqref{BetheBloch2}\) kann
-dann folgender Zusammenhang ermittelt werden.
-
-\[
-\begin{eqnarray}
-    Q_A \cdot \rho_A \cdot \mathrm dx_A
-        &=& \rho_S \cdot \mathrm dx_S \\
-    Q_A &=& \frac{\rho_S}{\rho_A} \cdot \frac{\mathrm dx_S}{\mathrm dx_A} \\
-    Q_A &=& \frac{A_S\cdot Z_A}{A_A\cdot Z_S}
-        \frac{\ln\left(\frac{2m_ev^2}{\bar I_A}\right)}{\ln\left(\frac{2m_ev^2}{\bar I_S}\right)}
 \end{eqnarray}
 \]
 

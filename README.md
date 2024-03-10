@@ -10,3 +10,4 @@ Hier werden die Messdaten sowie Protokolle von unseren Laborversuchen im [Prakti
 
 ## 3. Kernphysik
 * B3.3: Reichweite von Alphastrahlung ([PDF](./B3.3/B3.3.pdf), [LaTeX](./B3.3/B3.3.tex))
+	* Lernkarten ([PDF](./B3.3/B3.3_Lernkarten.pdf), [LaTeX](./B3.3/B3.3_Lernkarten.tex))
