@@ -15,6 +15,7 @@ Bei einigen Versuchen ist Code in Form von [Jupyter](https://jupyter.org)-Notebo
 ## 3. Kernphysik
 * B3.3: Reichweite von Alphastrahlung ([PDF](./B3.3/B3.3.pdf), [LaTeX](./B3.3/B3.3.tex))
 	* Lernkarten ([PDF](./B3.3/B3.3_Lernkarten.pdf), [LaTeX](./B3.3/B3.3_Lernkarten.tex))
+	* Auswertung (Julia) ([Jupyter](./B3.3/data/Auswertung.ipynb), [PDF](./B3.3/data/Auswertung.pdf))
 
 # Jupyter
 ## Python
@@ -26,6 +27,6 @@ jupyter notebook
 
 ## Julia
 ```shell
-julia -e 'import Pkg; Pkg.add("IJulia")'
+julia -e 'import Pkg; Pkg.add(["IJulia", "Plots", "LaTeXStrings"])'
 julia -e 'using IJulia; notebook(dir=".")'
 ```
