@@ -584,7 +584,7 @@ Silizium-Halbleiterdetektoren eignet sich aufgrund ihrer Bandlücke von $1.11\ma
 
 Eine $^{241}\mathrm{Am}$-$\alpha$-Strahlungsquelle und ein Silizium-Oberflächensperrschichtzähler sind in einer geschlossenen Kammer aufgebaut. Zudem gibt es ein Gerüst, in dem sich drei verschiedene Folien befinden, die zwischen Quelle und Detektor geschoben werden können. Durch eine Vakuumpumpe kann der Luftdruck in der Kammer verringert werden.
 
-Der Abstand zwischen Strahlungsquelle und Detektor kann variiert werden, wobei ein relativer Abstand $R$ in Millimetern einstellbar ist.
+Der Abstand zwischen Strahlungsquelle und Detektor kann variiert werden, wobei ein relativer Abstand $R$ in Millimetern einstellbar ist. Da ein Abstand von $0\mathrm{\,mm}$ eingestellt werden kann, während Folien eingeschoben sind, weist die Messskala einen Offset auf.
 
 Das Signal des Detektors wird elektronisch verstärkt. Das verstärkte Zeitsignal wird an einen digitalen Zähler angeschlossen, das verstärkte Energiesignal kann entweder an ein Oszilloskop oder an einen Vielkanaldetektor (VKA) angeschlossen werden.
 
@@ -627,18 +627,17 @@ Zunächst sollen die Reichweite der $\alpha$-Teilchen in Luft bestimmen. Dies ka
 Dazu werden zunächst Wertepaare von mittlerer Reichweite $\bar{R}$ und inversem mittlerem Druck $\frac{1}{\bar{p}}$ gesucht. Dann kann der gesuchte Wert mittels des bekannten Luftdrucks von $1 \mathrm{\,atm} = 1013.25 \mathrm{\,mbar}$ bestimmt werden. Dieses Verfahren jeweils einmal für die Messungen von Zählrate und Druck bzw. Spannungs und Druck durchgeführt. Die Ergebnisse werden abschließend verglichen.
 
 \hypertarget{bestimmung-durch-zuxe4hlraten}{%
-\subsubsection{Bestimmung durch
-Zählraten}\label{bestimmung-durch-zuxe4hlraten}}
+\subsubsection{Abhängigkeit von der Zählrate}\label{bestimmung-durch-zuxe4hlraten}}
 
 Der eingestellte Abstand $R$ entspricht der mittleren Reichweite $\bar{R}$, wenn die Zählrate $r$ auf die mittlere Zählrate $\bar{r}$ abgesunken ist. Der Druck $p$, bei dem dies geschieht, ist dann genau der mittlere Druck $\bar{p}$. Dies liefert die gesuchten Messwert-Paare.
 
 Dafür werden für alle vier Abstände $R_i$ die gemessenen Zählraten gegen die Drücke aufgetragen, wobei die Enden der Kurve mittels rechnerischer Geradenanpassung gefittet wurden. Dies ist in Abbildung $\ref{fig:zählratenkurvenExtrapoliert}$ dargestellt.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{../media/B3.3/zaehlratenkurven_extrapoliert.pdf}
+	\includegraphics[width=0.9\textwidth]{../media/B3.3/zaehlratenkurven_extrapoliert.pdf}
 	\caption{Extrapolierte Zählratenkurven für vier Reichweiten\\
-		Gepunktete Linien stellen die Geraden-Fits dar, gestrichelte Linien die mittleren Zählraten bzw. Drücke}
+			gestrichelte Linien: $\bar r_{R_j}$ bzw. $\bar p_{R_j}$}
 	\label{fig:zählratenkurvenExtrapoliert}
 \end{figure}
 
@@ -652,7 +651,24 @@ Da dieser Fehler aufgrund der hohen Anzahl an gezählten $\alpha$-Teilchen sehr 
 	\label{eq:statFehler}
 \end{eqnarray}
 
-\begin{table}[h!]
+Die mittlere Zählrate $\bar{r}$ ist nun die Hälfte der durchschnittlichen Zählrate im ersten, nahezu konstanten Teil des Graphen. Der Fehler $\Delta \bar{r}$ wird durch die mittlere Quadradsumme der Residuen ermittelt.
+
+Die Zählvariable $k$ beschreibt hier den letzten Messwert, der den konstanten Teil des Graphen ausmacht. Der Faktor $\frac{1}{2}$ ist notwendig, da dieser Messwert die mittlere Reichweite $\bar R$ beschreiben soll, an dessen Stelle die Strahlungsintensität die Hälfte ihres Maximums erreicht.\footnote{Diese Erklärung fehlt im Abschnitt \ref{reichweite-von-alpha-teilchen}}
+
+\begin{eqnarray}
+	\bar{r}_{R_j} &=& \frac{1}{2} \cdot \frac{1}{k} \sum_{i=1}^{k} r_{i,R_j} \\
+	\Delta \bar{r}_{R_j} &=& \frac{1}{2} \sqrt{\frac{1}{k (k-1)} \sum_{i=1}^{k} (r_{i,R_j} - \bar{r}_{R_j})^2}
+\end{eqnarray}
+
+Aus den mittleren Zählraten $\bar r$ sowie den Geradengleichungen mit Steigungen $a_{R_j}$ und $r$-Achsenabschnitten $b_{R_j}$ lassen sich die mittleren Drücke $\bar{p}_{R_j}$ bestimmen. Deren Fehler $\Delta \bar p_{R_j}$ werden mittels Gauß'scher Fehlerfortpflanzung ermittelt.
+\begin{eqnarray}
+	\bar{p}_{R_j} &=& \frac{\bar{r}_{R_j} - b_{R_j}}{a_{R_j}} \\
+	\Delta \bar{p}_{R_j} &=& \sqrt{\left(\frac{\Delta \bar{r}_{R_j}}{a_{R_j}}\right)^2 + \left(\frac{\Delta b_{R_j}}{a_{R_j}}\right)^2 + \left(\frac{(\bar{r}_{R_j} - b_{R_j}) \cdot \Delta a_{R_j}}{a_{R_j}^2}\right)^2}
+\end{eqnarray}
+
+Die Abstände liefern die zugehörigen mittleren Reichweiten und damit die vier Wertepaare für mittlere Reichweite $\bar{R}$ und inversem mittlerem Druck $\frac{1}{\bar{p}}$. Die Ergebnisse sind in Tabelle \ref{table_messwerte_zählrate} zu dargestellt.
+
+\begin{table}[H]
 	\centering
 	\begin{tabular}{||c|c|c|c|c||}
 		\hline
@@ -686,27 +702,8 @@ Da dieser Fehler aufgrund der hohen Anzahl an gezählten $\alpha$-Teilchen sehr 
 	\caption{Statistische Fehler der gemessenen Zählraten\\
 		n.e. nicht ermittelbar, da $N = 0$}
 	\label{table_statistische_fehler}
-\end{table}
+	\vspace{12pt}
 
-Die mittlere Zählrate $\bar{r}$ ist nun die Hälfte der durchschnittlichen Zählrate im ersten, nahezu konstanten Teil des Graphen. Der Fehler $\Delta \bar{r}$ wird durch die mittlere Quadradsumme der Residuen ermittelt.
-
-Die Zählvariable $k$ beschreibt hier den letzten Messwert, der den konstanten Teil des Graphen ausmacht. Der Faktor $\frac{1}{2}$ ist notwendig, da dieser Messwert die mittlere Reichweite $\bar R$ beschreiben soll, an dessen Stelle die Strahlungsintensität die Hälfte ihres Maximums erreicht.\footnote{Diese Erklärung fehlt im Abschnitt \ref{reichweite-von-alpha-teilchen}}
-
-\begin{eqnarray}
-	\bar{r}_{R_j} &=& \frac{1}{2} \cdot \frac{1}{k} \sum_{i=1}^{k} r_{i,R_j} \\
-	\Delta \bar{r}_{R_j} &=& \frac{1}{2} \sqrt{\frac{1}{k (k-1)} \sum_{i=1}^{k} (r_{i,R_j} - \bar{r}_{R_j})^2}
-\end{eqnarray}
-
-Aus den mittleren Zählraten $\bar r$ sowie den Geradengleichungen mit Steigungen $a_{R_j}$ und $r$-Achsenabschnitten $b_{R_j}$ lassen sich die mittleren Drücke $\bar{p}_{R_j}$ bestimmen. Deren Fehler $\Delta \bar p_{R_j}$ werden mittels Gauß'scher Fehlerfortpflanzung ermittelt.
-\begin{eqnarray}
-	\bar{p}_{R_j} &=& \frac{\bar{r}_{R_j} - b_{R_j}}{a_{R_j}} \\
-	\Delta \bar{p}_{R_j} &=& \sqrt{\left(\frac{\Delta \bar{r}_{R_j}}{a_{R_j}}\right)^2 + \left(\frac{\Delta b_{R_j}}{a_{R_j}}\right)^2 + \left(\frac{(\bar{r}_{R_j} - b_{R_j}) \cdot \Delta a_{R_j}}{a_{R_j}^2}\right)^2}
-\end{eqnarray}
-
-Die Abstände liefern die zugehörigen mittleren Reichweiten und damit die vier Wertepaare für mittlere Reichweite $\bar{R}$ und inversem mittlerem Druck $\frac{1}{\bar{p}}$. Die Ergebnisse sind in Tabelle \ref{table_messwerte_zählrate} zu dargestellt.
-
-\begin{table}[h!]
-	\centering
 	\begin{tabular}{||c|c|c|c|c|c|c||}
 		\hline
 		$R_j$ $[\mathrm{mm}]$
@@ -750,20 +747,150 @@ Die Abstände liefern die zugehörigen mittleren Reichweiten und damit die vier 
 \end{table}
 
 \hypertarget{bestimmung-durch-Spannung}{%
-	\subsubsection{Bestimmung durch
-		Spannung}\label{bestimmung-durch-Spannung}}
+	\subsubsection{Abhängigkeit von der Spannung}\label{bestimmung-durch-Spannung}}
 
+Der eingestellte Abstand $R$ entspricht genau dann der mittleren Reichweite $\bar{R}$, wenn der Impuls $\vec{p}$ der $\alpha$-Teilchen verschwunden ist. Das Oszilloskop zeigt eine Spannung $U$ an, die proportional zum Betrag des  Impulses der $\alpha$-Teilchen ist. Die gesuchten mittleren Drücke $\bar{p}$ sind daher die Nullstellen der Kurven.
+\begin{eqnarray}
+	U &\propto& \lvert \vec{p}\, \rvert
+\end{eqnarray}
+
+Dafür werden die Messwerte der Spannungs-Druck Messung aufgetragen und die Enden linear gefittet, siehe Abbildung \ref{fig:spannungskurveExtrapoliert}. Die Nullstellen dieser Geraden mit Steigungen $a_{R_j}$ und $U$-Achsenabschnitten $b_{R_j}$ liefern dann die mittleren Drücke für die vier Messwertpaare für Reichweite $\bar{R}$ und inversem Druck $\frac{1}{\bar{p}}$.
+
+Die Fehler $\Delta  \bar p_{R_j}$ werden wieder mittels Gauß'scher Fehlerfortpflanzung bestimmt. Die Ergebnisse sind in Tabelle \ref{table_messwerte_spannung} dargestellt.
+
+\begin{eqnarray}
+\bar{p}_{R_j} &=& - \frac{b_{R_j}}{a_{R_j}} \\
+	\Delta \bar{p}_{R_j} &=& \sqrt{\left(\frac{\Delta b_{R_j}}{a_{R_j}}\right)^2 + \left(\frac{b_{R_j} \cdot \Delta a_{R_j}}{a_{R_j}^2}\right)^2}
+\end{eqnarray}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../media/B3.3/spannungskurven extrapoliert.pdf}
+	\caption{Extrapolierte Spannungskurven für vier Reichweiten \\
+		gepunktete Linien: lineare Fits}
+	\label{fig:spannungskurveExtrapoliert}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c|c|c|c||}
+		\hline
+		$R_i\ [\mathrm{mm}]$
+			& $a_{R_j}\ [\mathrm{V}]$
+			& $b_{R_j}\ [\mathrm{V}]$
+			& $\bar{p}\ [\mathrm{mbar}]$ \\
+		\hline \hline
+		$19$
+			& $-0.015 \pm 0.001$
+			& $14.450 \pm 1.080$
+			& $956.04 \pm 105.88$ \\
+		\hline
+		$21$
+			& $-0.013 \pm 0.002$
+			& $11.390 \pm 1.291$
+			& $911.20 \pm 150.39$ \\
+		\hline
+		$22$
+			& $-0.015 \pm 0.001$
+			& $13.611 \pm 0.514$
+			& $883.51 \pm 49.13$ \\
+		\hline
+		$30$
+			& $-0.017 \pm 0.001$
+			& $13.072 \pm 0.781$
+			& $750.69 \pm 67.42$ \\
+		\hline
+	\end{tabular}
+	\caption{Entnommene Messwerte aus Spannungskurven}
+	\label{table_messwerte_spannung}
+\end{table}
 
 \hypertarget{Reichweite-Ergebnisse}{%
-	\subsubsection{Ergebnisse}\label{Reichweite-Ergebnisse}}
+	\subsubsection{Reichweitenbestimmung}\label{Reichweite-Ergebnisse}}
+
+Die Ergebnisse aus beiden Messungsarten werden nun gegeneinander aufgetragen. Dann wird jeweils eine Geradenanpassung nach der Methode der kleinsten Fehlerquadrate durchgeführt.
+
+Daraufhin die Geraden in $\bar R$--Richtung verschoben werden, um den Offset der Messskala herauszurechnen. Das Ergebnis ist in Abbildung \ref{fig:reichweiteInverserDruck} dargestellt.
+
+Nun kann die Reichweite der $\alpha$-Teilchen in Luft bestimmt werden, indem der Wert Normaldruck ermittelt wird. Der Fehler wird erneut durch die Gauß'sche Fehlerfortpflanzung bestimmt, der Fehler des Normaldrucks wird als Rundungsfehler angenommen. Die Ergebnisse sind in Tabelle \ref{table_reichweite_druck} ersichtlich.
+
+\begin{eqnarray}
+	\bar{R}_\mathrm{Luft} &=& a \cdot \frac{1}{\bar{p}_\mathrm{Luft}} \\
+	\Delta \bar{R}_\mathrm{Luft} &=& \sqrt{\left(\frac{\Delta a}{\bar{p}_\mathrm{Luft}}\right)^2 + \left(\frac{a \cdot \Delta \bar{p}_\mathrm{Luft}}{\bar{p}_\mathrm{Luft}^2}\right)^2} \\
+	p_\mathrm{Luft} &=&(1013.25 \pm 0.005) \mathrm{\, mbar}
+\end{eqnarray}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../media/B3.3/reichweiten inverse druecke verschoben skaliert.pdf}
+	\caption{Reichweiten gegen inverse Drücke aufgetragen}
+	\label{fig:reichweiteInverserDruck}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c|c|c||}
+		\hline
+		& $a\ \left[\mathrm{mm\cdot mbar}\right]$ & Reichweite in Luft $\bar{R}$ [mm]\\
+		\hline \hline
+		Zählratenkurven
+			& $35.45 \pm 1.33$
+			& $34.99 \pm 1.32$ \\
+		\hline
+		Spannungskurven
+			& $38.55 \pm 0.87$
+			& $38.04 \pm 0.88$ \\
+		\hline
+	\end{tabular}
+	\caption{Reichweite in Luft}
+	\label{table_reichweite_druck}
+\end{table}
 
 \hypertarget{Reichweite-Vergleich}{%
-	\subsubsection{Vergleich}\label{Reichweite-Vergleich}}
+	\subsubsection{Vergleich der Messmethoden}\label{Reichweite-Vergleich}}
 
+Beide Messmethoden liefern ähnliche Ergebnisse, der relative Fehler zwischen ihnen liegt bei $8.02\%$. Dies lässt sich erklären, indem man die möglichen Fehlerquellen der Methoden vergleicht.
+
+Obwohl das Oszilloskop einen deutlich größeren Fehler aufzeigt, ist damit gut erkennbar, ob noch ein Signal gemessen wurde. Auch wenn das eintreffende Signal schwach ist, lässt es sich durch das Vergrößern der Messkurve klar erkennen.
+
+Die Zählschwelle des $\ce{Si}$-Oberflächen-Sperrschichtzählers hingegen ist nicht so durchschaubar. Es ist durchaus möglich, dass Teilchen nicht gezählt wurden, weil ihre Restenergie zu gering war.
+
+Daher wird in weiteren Betrachtungen die durch die Spannung gemessene mittlere Reichweite in Luft $\bar R$ verwendet werden.
+
+Da der Unterschied zwischen den beiden Reichweitenmessungen klein ist, sind beide Methoden zufriedenstellend.
 
 \hypertarget{Reichweite-Aluminium}{%
 	\subsubsection{Reichweite in Aluminium}\label{Reichweite-Aluminium}}
 
+Mit der nun bekannten Reichweite der $\alpha$-Teilchen in Luft lässt sich die Reichweite in Aluminium $R_\mathrm{Al}$ mit der empirischen Bragg-Kleemann-Gleichung für Luft bei $15\mathrm{\,^\circ C}$ und $1013.25 \mathrm{\, mbar}$ Mit einem Fehler $\Delta \bar{R}_\mathrm{Al}$ mittels Gauß'scher Fehlerfortpflanzung bestimmen.
+\begin{eqnarray}
+	\bar{R}_\mathrm{Al} &=& 3.2 \cdot 10^{-4} \mathrm{\frac{g}{cm^3}}
+		\cdot \frac{A_\mathrm{Al}^{1/2}}{\rho_\mathrm{Al}} \bar{R}_\mathrm{Luft} \\
+	\Delta \bar{R}_\mathrm{Al} &=& 3.2 \cdot 10^{-4} \mathrm{\frac{g}{cm^3}} \cdot
+		\sqrt{
+				\left(\frac{A_\mathrm{Al}^{1/2}}{\rho_\mathrm{Al}^2}\bar{R}_\mathrm{Luft} \cdot \Delta \rho_\mathrm{Al} \right)^2
+				+ \left( \frac{A_\mathrm{Al}^{1/2}}{\rho_\mathrm{Al}} \Delta \bar{R}_\mathrm{Luft}\right)^2
+		}
+\end{eqnarray}
+
+Für stabiles Aluminium bei Raumtemperatur hat folgende Eigenschaften, \cite{NIST_Al} woraus sich die Reichweite ergibt.
+
+\begin{eqnarray}
+	A_\mathrm{Al} &=& 27 \\
+	\rho_\mathrm{Al} &=& (2.69890 \pm 0.00005) \mathrm{\frac{g}{cm^3}} \\
+	\Rightarrow \bar{R}_\mathrm{Al} &=& (23.43 \pm 0.54) \mathrm{\, \mu m}
+\end{eqnarray}
+
+Der Literaturwert für die Reichweite von $\alpha$-Teilchen in Aluminium mit $4 \mathrm{\, MeV}$ beträgt $16 \mathrm{\, \mu m}$ und von $\alpha$-Teilchen mit $6 \mathrm{\, MeV}$ $30 \mathrm{\, \mu m}$. \cite{LEIFIphysik Alphazerfall }
+
+Unsere $\alpha$-Teilchen haben eine Energie von ca. $5.5 \mathrm{\, MeV}$. Nehmen wir hier an, die Literaturwerte zwischen $4 \mathrm{\, MeV}$ und $6 \mathrm{\, MeV}$ steigen linear an. Daraus kann die Steigung $a_\mathrm{lit}$ der Literaturwerte ebenso bestimmt werden. Damit kann ein Literaturwert  $\bar R_\mathrm{lit}$ für $5.5 \mathrm{\, MeV}$ ermittelt werden.
+
+\begin{eqnarray}
+	a_\mathrm{lit} &=& 12 \mathrm{\, \frac{\mu m}{MeV}} \\
+	\bar R_\mathrm{lit} &=& 24 \mathrm{\, \mu m}
+\end{eqnarray}
+
+Unser Ergebnis von $(23.43 \pm 0.54) \mathrm{\, \mu m}$ liegt innerhalb der Fehlergrenzen sehr nah an diesem Literaturwert. Dadurch lässt sich schließen, dass dieser Teil des Experiments äußerst erfolgreich verlief.
 
 \hypertarget{energiestraggling-1}{%
 	\subsection{Energiestraggling}\label{energiestraggling-1}}
@@ -822,6 +949,10 @@ $\ref{}$
 	Periodic Table of Elements'',
 	\url{https://pubchem.ncbi.nlm.nih.gov/periodic-table/ionization-energy},
 	Abruf am 28.01.2024
+	
+\bibitem{NIST_Al}
+	National Institute of Standards and Technology, ``Composition of  Aluminium'',
+	\url{https://physics.nist.gov/cgi-bin/Star/compos.pl?matno=013}
 
 \bibitem{LEIFIphysik Alphazerfall }
 	LEIFIphysik, ``Alphazerfall und Alphastrahlung'',
