@@ -550,7 +550,7 @@ $R_\mathrm{ex}$ und die mittlere Reichweite $\bar{R}$ zu bestimmen.
 Die Streuung der Energien der $\alpha$-Teilchen zum Zeitpunkt der Messung wird \emph{Energiestraggling} genannt. Bei einem monoenergetischen Strahl streuen die Energien nach dem Durchdringen von Materie statistisch mit einer Gaußverteilung um eine mittlere Energie $E$. Die Breite der beobachteten Linie im Spektrum $\alpha$ wird durch den Stragglingparameter $\alpha_E$ und die Auflösung des Messapperats $\alpha_\mathrm{res}$ beeinflusst. Berechnet wird dies durch eine Faltung der Gaußverteilung.
 
 \begin{eqnarray}
-    \alpha &=& \sqrt{\alpha_E^2 + \alpha_\mathrm{res}^2}
+    \alpha &=& \sqrt{\alpha_E^2 + \alpha_\mathrm{res}^2} \label{eq:straggling parameter}
 \end{eqnarray}
 
 Falls man einen Strahl von Teilchen misst, kommt es zudem zu \emph{Winkelstraggling}. Im Vakuum verläuft ein solcher Strahl geradlinig, alle Teilchen bewegen sich parallel zueinander in einem Winkel $\theta$ zu z.B. der Oberfläche. In Materie stoßen die Teilchen dagegen mit anderen Atomen, dadurch wird er um den ursprünglichen Winkel $\theta$ gestreut.
@@ -584,7 +584,7 @@ Silizium-Halbleiterdetektoren eignet sich aufgrund ihrer Bandlücke von $1.11\ma
 
 Eine $^{241}\mathrm{Am}$-$\alpha$-Strahlungsquelle und ein Silizium-Oberflächensperrschichtzähler sind in einer geschlossenen Kammer aufgebaut. Zudem gibt es ein Gerüst, in dem sich drei verschiedene Folien befinden, die zwischen Quelle und Detektor geschoben werden können. Durch eine Vakuumpumpe kann der Luftdruck in der Kammer verringert werden.
 
-Der Abstand zwischen Strahlungsquelle und Detektor kann variiert werden, wobei ein relativer Abstand $R$ in Millimetern einstellbar ist. Da ein Abstand von $0\mathrm{\,mm}$ eingestellt werden kann, während Folien eingeschoben sind, weist die Messskala einen Offset auf.
+Der Abstand zwischen Strahlungsquelle und Detektor kann variiert werden, wobei ein relativer Abstand $R$ in Millimetern einstellbar ist. Da ein Abstand von $0\mathrm{\,mm}$ eingestellt werden kann, während Folien eingeschoben sind, weist die Messskala einen Offset $R_\mathrm{off}$ auf.
 
 Das Signal des Detektors wird elektronisch verstärkt. Das verstärkte Zeitsignal wird an einen digitalen Zähler angeschlossen, das verstärkte Energiesignal kann entweder an ein Oszilloskop oder an einen Vielkanaldetektor (VKA) angeschlossen werden.
 
@@ -593,7 +593,7 @@ Das Signal des Detektors wird elektronisch verstärkt. Das verstärkte Zeitsigna
 
 Zunächst wurde das Signal des VKA geeicht. Dazu wurde die Luft aus der Kammer abgepumpt, bis ein minimaler Druck von ca. $1.2\cdot10^{-2}\mathrm{\,mbar}$ erreicht wurde. Dann wurde eine Messung bei $R=(0\pm0.5)\mathrm{\,mm}$ mit dem VKA aufgenommen und mit \texttt{hdtv} \cite{hdtv} ausgewertet.
 
-Hierbei wurde davon ausgegangen, dass der Kanal $0$ dem Energienullpunkt entspricht. Weiter wurde angenommen, dass der so gemessene Peak bei der Energie der $\alpha$-Strahlung von $5486\mathrm{\,keV}$ liegt, dies war bei Kanal $10450.4$ der Fall. Damit wurde \texttt{hdtv} kalibriert.
+Hierbei wurde davon ausgegangen, dass der Kanal $0$ dem Energienullpunkt entspricht. Weiter wurde angenommen, dass der so gemessene Peak bei der Energie der $\alpha$-Strahlung von $E_\alpha = 5486\mathrm{\,keV}$ liegt, dies war bei Kanal $10450.4$ der Fall. Damit wurde \texttt{hdtv} kalibriert.
 
 \hypertarget{energiestraggling}{%
 \subsection{Energiestraggling}\label{energiestraggling}}
@@ -810,11 +810,12 @@ Die Fehler $\Delta  \bar p_{R_j}$ werden wieder mittels Gauß'scher Fehlerfortpf
 
 Die Ergebnisse aus beiden Messungsarten werden nun gegeneinander aufgetragen. Dann wird jeweils eine Geradenanpassung nach der Methode der kleinsten Fehlerquadrate durchgeführt.
 
-Daraufhin die Geraden in $\bar R$--Richtung verschoben werden, um den Offset der Messskala herauszurechnen. Das Ergebnis ist in Abbildung \ref{fig:reichweiteInverserDruck} dargestellt.
+Daraufhin die Geraden in $\bar R$--Richtung verschoben werden, um den Offset $R_\mathrm{off}$ der Messskala abzuziehen. Das Ergebnis ist in Abbildung \ref{fig:reichweiteInverserDruck} dargestellt.
 
 Nun kann die Reichweite der $\alpha$-Teilchen in Luft bestimmt werden, indem der Wert Normaldruck ermittelt wird. Der Fehler wird erneut durch die Gauß'sche Fehlerfortpflanzung bestimmt, der Fehler des Normaldrucks wird als Rundungsfehler angenommen. Die Ergebnisse sind in Tabelle \ref{table_reichweite_druck} ersichtlich.
 
 \begin{eqnarray}
+	R_\mathrm{off} &=& (21.4025 \pm 1.0054) \mathrm{\,mm} \\
 	\bar{R}_\mathrm{Luft} &=& a \cdot \frac{1}{\bar{p}_\mathrm{Luft}} \\
 	\Delta \bar{R}_\mathrm{Luft} &=& \sqrt{\left(\frac{\Delta a}{\bar{p}_\mathrm{Luft}}\right)^2 + \left(\frac{a \cdot \Delta \bar{p}_\mathrm{Luft}}{\bar{p}_\mathrm{Luft}^2}\right)^2} \\
 	p_\mathrm{Luft} &=&(1013.25 \pm 0.005) \mathrm{\, mbar}
@@ -895,7 +896,115 @@ Unser Ergebnis von $(23.43 \pm 0.54) \mathrm{\, \mu m}$ liegt innerhalb der Fehl
 \hypertarget{energiestraggling-1}{%
 	\subsection{Energiestraggling}\label{energiestraggling-1}}
 
-$\ref{}$
+\hypertarget{energiestraggling-aufloesung}{%
+	\subsubsection{Auflösung}\label{energiestraggling-aufloesung}}
+Die Energie $E$ in $\mathrm{keV}$ kann durch eine lineare Relation aus der Kanalnummer $K_E$ ermittelt werden. Weiterhin kann die Halbwertsbreite $\Delta E$ abgelesen werden. Nach der Annahme, dass das Straggling bei dem vorliegenden Luftdruck vernachlässigbar ist, stimmt $\Delta E$ nach Gleichung \eqref{eq:straggling parameter} mit der Auflösung $\alpha_\mathrm{res}$ des Detektors überein.
+
+\begin{eqnarray}
+	E &=& 0.525 \mathrm{\frac{keV}{Kanal }} \cdot K_E \label{eq:Kanal zu Energie}\\
+	\Delta E &=& (61.9 \pm 1.2) \mathrm{\,keV} \label{eq:Halbwertsbreite} \\
+	\alpha_\mathrm{res} = \frac{\Delta E}{E_\alpha} &=& (1.13 \pm 0.02) \%
+\end{eqnarray}
+
+\hypertarget{energiestraggling-straggling}{%
+	\subsubsection{Straggling}\label{energiestraggling-straggling}}
+Die Energiepeaks $\hat E$ und Halbwertbreiten $\Delta E$ des gemessenen $\alpha$-Spektrums sind in Tabelle \ref{tabelle: Straggling} aufgelistet.
+\begin{table}
+	\centering
+	\begin{tabular}[h]{c|c|c}
+		Druck $p$ $[\mathrm{mbar}]$ & Peak $\hat E$ $[\mathrm{keV}]$ & Halbwertsbreite $\Delta E$ $[\mathrm{keV}]$  \\
+		\hline
+		$\ 1.2 \pm 0.1$ & $5486.0 \pm 0.6$ & $\ 61.9 \pm 1.2$ \\
+		$100 \pm 10$ & $4885.6 \pm 0.6$ & $\ 79.2 \pm 1.3$ \\
+		$200 \pm 10$ & $4387.2 \pm 0.7$ & $\ 93.3 \pm 1.4$ \\
+		$300 \pm 10$ & $3862.1 \pm 1.0$ & $109.4 \pm 2.0$ \\
+		$400 \pm 10$ & $3187.4 \pm 0.9$ & $130.9 \pm 1.7$ \\
+		$500 \pm 10$ & $2603.3 \pm 1.1$ & $145.2 \pm 2.3$ \\
+		$600 \pm 10$ & $1885.6 \pm 1.3$ & $164.4 \pm 2.7$ \\
+		$700 \pm 10$ & $1088.9 \pm 1.6$ & $209.9 \pm 3.1$ \\
+		$750 \pm 10$ & $\ 670.8 \pm 1.9$ & $215.0 \pm 4.0$ \\
+		$800 \pm 10$ & $\ 226.5 \pm 3.4$ & $239.0 \pm 7.0$ \\
+	\end{tabular}
+	\caption{Energie--Straggling}
+	\label{tabelle: Straggling}
+\end{table}
+
+Um die Veränderung des Stragglings zu bewerten, muss zunächst die Dichte $\rho$ ermittelt werden. Diese ist über eine Referenzdichte $\rho_0$ und einen Referenzdruck $p_0$ linear vom Druck $p$ abhängig.  Dies folgt aus dem idealen Gasgesetz.
+
+Als Referenzgröße werden Werte der Standardatmosphäre verwendet, also eine Dichte $\rho_0$ bei Normaldruck $p_0$. \cite{DWD}
+
+\begin{eqnarray}
+	\rho &=& \frac{\rho_0}{p_0} \cdot p \\
+	\rho_0 &=& 1.225 \cdot 10^{-3}\mathrm{\,\frac{g}{cm^3}} \\
+	p_0 &=& 1013.25 \mathrm{\,mbar}
+\end{eqnarray}
+
+Für den Abstand $x$ zwischen Detektor und Quelle muss der Offset $R_\mathrm{off}=(21.4025 \pm 1.0054) \mathrm{\,mm}$ berücksichtigt werden, der in Abschnitt \ref{Reichweite-Ergebnisse} ermittelt wurde. Dieser muss zu dem in der Messung abgelesenen Abstand $d=(18\pm0.5)\mathrm{\,mm}$ addiert werden, um den Abstand $x$ zu erhalten. Der Fehler für $\rho \cdot x$ ergibt sich durch Gauß'sche Fehlerfortpflanzung.
+
+\begin{eqnarray}
+	x &=& d-b\\
+	x &=& (3.94025 \pm 0.10054)\mathrm{\,cm} \\
+	\Delta (\rho \cdot x) &=& \sqrt{
+			\left(\frac{\rho _0 \cdot x \cdot \Delta p}{p_0}\right)^2
+			+ \left(\frac{\rho _0 \cdot p \cdot \Delta x}{p_0}\right)^2
+		}
+\end{eqnarray}
+
+Aus dem Straggling $\alpha$ können wir den Energiestraggling-Parameter oder auch das korrigierte Straggling $\alpha_E$ nach Gleichung \eqref{eq:straggling parameter} bestimmen. Hierbei ist Energieauflösung $\alpha _\mathrm{res}$ mit der Halbwertbreite \eqref{eq:Halbwertsbreite} identisch, die bei der Eichung gemessen wurde. Die so erhaltenen Ergebnisse sind in Tabelle \ref{tabelle:korr. Straggling} dargestellt.
+
+\begin{eqnarray}
+	\alpha _E&=& \sqrt{\alpha ^2 - \alpha_\mathrm{res}^2} \\
+	\Delta \alpha _E&=& \sqrt{
+		\frac{(\alpha\cdot\Delta\alpha)^2}{\alpha ^2 - \alpha_\mathrm{res}^2}
+		+ \frac{(\alpha_\mathrm{res} \cdot \Delta \alpha_\mathrm{res})^2}{\alpha ^2 - \alpha_\mathrm{res}^2}^2
+	}
+\end{eqnarray}
+
+\begin{table}
+	\centering
+	\begin{tabular}[h]{c|c|c|c}
+		Druck $p$ $[\mathrm{mbar}]$
+			& $\rho \cdot x$ $\left[10^{-3} \mathrm{\frac{g}{cm^2}}\right]$
+			& $\alpha$ $[\mathrm{keV}]$ & $\alpha _E$ $[\mathrm{keV}]$\\
+		\hline
+		$\ 1.2 \pm 0.1$ & $0.0057 \pm 0.0005$ & $\ 61.9 \pm 1.2$ & $\ \ 0.0 \pm 0.0$\\
+		$100 \pm 10$ & $0.47 \pm 0.05$ & $\ 79.2 \pm 1.3$ & $\ 49.4 \pm 2.6$  \\
+		$200 \pm 10$ & $0.95 \pm 0.05$ & $\ 93.3 \pm 1.4$ & $\ 69.8 \pm 2.2 $ \\
+		$300 \pm 10$ & $1.43 \pm 0.06$ & $109.4 \pm 2.0$ & $\ 90.2 \pm 2.6$\\
+		$400 \pm 10$ & $1.91 \pm 0.07$ & $130.9 \pm 1.7$ & $115.3 \pm 2.0$ \\
+		$500 \pm 10$ & $2.38 \pm 0.08$ & $145.2 \pm 2.3$ & $131.3 \pm 2.6$\\
+		$600 \pm 10$ & $2.86 \pm 0.09$ & $164.4 \pm 2.7$ & $152.3 \pm 3.0$ \\
+		$700 \pm 10$ & $3.33 \pm 0.10$ & $209.9 \pm 3.1$ & $200.6 \pm 3.3$ \\
+		$750 \pm 10$ & $3.57 \pm 0.10$ & $215.0 \pm 4.0$ & $205.9 \pm 4.2$\\
+		$800 \pm 10$ & $3.81 \pm 0.11$ & $239.0 \pm 7.0$ & $230.8 \pm 7.3$\\
+	\end{tabular}
+	\caption{Straggling $\alpha$ und korrigiertes Straggling $\alpha_E$}
+	\label{tabelle:korr. Straggling}
+\end{table}
+
+Wie man anhand der Abbildungen \ref{abb:Straggling} und \ref{abb:korr. Straggling}  erkennen kann, weisen die Graphen einen linearen Verlauf auf. Dagegen wird eine Abnahme des Energiestraggling-Parameters bei kleineren Energien erwartet. \cite{Prior}
+
+Für eine Energieverteilung mit der Halbwertbreite von ab $10\%$ der mittleren Energie dominieren die nicht-statistischen Effekte über die statistische und das Straggling nimmt ab, d.h. das $\alpha$-Spektrum sollte ab einem bestimmen Energiewert mit abnehmender Energie bzw. zunehmendem Druck schmaler werden.
+
+Dies lässt sich jedoch in der Auswertung nicht beobachten, weil wir zu geringen Energien haben. Um diesen Effekt beobachten zu können ist es notwendig die $10\%$ zu erreichen, dann erhält man den beschriebenen Verlauf.
+
+Der Abstand zwischen Quelle und Detektor beträgt bei Prior bei $5\mathrm{\,cm}$  \cite{Prior}, bei uns dagegen nur knapp $4\mathrm{\,cm}$ zuzüglich Offset, möglicherweise kann unsere Abweichung damit begründet werden. Dies sei bei Laborberichten von Studenten sehr häufig der Fall. \cite{Prior}
+
+Es ist jedoch nicht vorher bekannt wie groß der Offset bei uns war sodass wir diesen Abstand bei der Versuchsdurchführung einstellen können.
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.9\textwidth}
+		\includegraphics[width=\textwidth]{../media/B3.3/Straggling.jpg}
+		\caption{Energiestraggling $\alpha$ als Funktion von $\rho \cdot x$}
+		\label{abb:Straggling}
+		\vspace{12pt}
+	
+		\includegraphics[width=\textwidth]{../media/B3.3/Straggling corrected.jpg}
+		\caption{korrigiertes Energiestraggling $\alpha _E$ als Funktion von $\rho \cdot x$}
+		\label{abb:korr. Straggling}
+	\end{minipage}
+\end{figure}
 
 \hypertarget{massenbremsvermuxf6gen}{%
 \subsection{Massenbremsvermögen}\label{massenbremsvermuxf6gen}}
@@ -957,6 +1066,11 @@ $\ref{}$
 \bibitem{LEIFIphysik Alphazerfall }
 	LEIFIphysik, ``Alphazerfall und Alphastrahlung'',
 	\url{https://www.leifiphysik.de/kern-teilchenphysik/radioaktivitaet-einfuehrung/grundwissen/alphazerfall-und-alphastrahlung},
-	Abruf 01.03.2024
+	Abruf am 01.03.2024
+
+\bibitem{DWD}
+	DWD, ``Standardatmosphäre'',
+	\url{https://www.dwd.de/DE/service/lexikon/begriffe/S/Standardatmosphaere_pdf.pdf;jsessionid=0C577D379F1DB35620EFFCF816B1BE34.live11044?__blob=publicationFile}, Abruf am 10.03.2024
+
 \end{thebibliography}
 \end{document}
