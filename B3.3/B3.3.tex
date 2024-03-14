@@ -697,6 +697,58 @@ Die Zählvariable $k$ beschreibt hier den letzten Messwert, der den konstanten T
 	\Delta \bar{r}_{R_j} &=& \frac{1}{2} \sqrt{\frac{1}{k (k-1)} \sum_{i=1}^{k} (r_{i,R_j} - \bar{r}_{R_j})^2}
 \end{eqnarray}
 
+Aus den mittleren Zählraten $\bar r$ sowie den Geradengleichungen mit Steigungen $a_{R_j}$ und $r$-Achsenabschnitten $b_{R_j}$ lassen sich die mittleren Drücke $\bar{p}_{R_j}$ bestimmen. Deren Fehler $\Delta \bar p_{R_j}$ werden mittels Gauß'scher Fehlerfortpflanzung ermittelt.
+\begin{eqnarray}
+	\bar{p}_{R_j} &=& \frac{\bar{r}_{R_j} - b_{R_j}}{a_{R_j}} \\
+	\Delta \bar{p}_{R_j} &=& \sqrt{\left(\frac{\Delta \bar{r}_{R_j}}{a_{R_j}}\right)^2 + \left(\frac{\Delta b_{R_j}}{a_{R_j}}\right)^2 + \left(\frac{(\bar{r}_{R_j} - b_{R_j}) \cdot \Delta a_{R_j}}{a_{R_j}^2}\right)^2}
+\end{eqnarray}
+
+Die Abstände liefern die zugehörigen mittleren Reichweiten und damit die vier Wertepaare für mittlere Reichweite $\bar{R}$ und inversem mittlerem Druck $\frac{1}{\bar{p}}$. Die Ergebnisse sind in Tabelle \ref{table_messwerte_zählrate} zu dargestellt.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{||c|c|c|c|c|c|c||}
+		\hline
+		$R_j$ $[\mathrm{mm}]$
+			& $a_{R_j}\ [s^{-1}]$
+			& $b_{R_j}\ [10^3 s^{-1}]$
+			& $k$
+			& $\bar{r}\ [s^{-1}]$
+			& $\bar{p}\ [\mathrm{mbar}]$ \\
+		\hline \hline
+		$19$
+			& $-3.81 \pm 0.46$
+			& $3.51 \pm 0.40$
+			& $5$
+			& $118.77 \pm 1.81$
+			& $891.14 \pm 150.55$ \\
+		\hline
+		$21$
+			& $-4.86 \pm 0.07$
+			& $4.29 \pm 0.05$
+			& $7$
+			& $107.90 \pm 5.42$
+			& $860.42 \pm \ 16.83$ \\
+		\hline
+		$22$
+			& $-4.60 \pm 0.63$
+			& $3.96 \pm 0.53$
+			& $7$
+			& $104.53 \pm 3.84$
+			& $837.89 \pm 162.94$ \\
+		\hline
+		$30$
+			& $-3.49 \pm 0.68$
+			& $2.52 \pm 0.47$
+			& $7$
+			& $\ 74.48 \pm 2.00$
+			& $701.71 \pm 192.92$ \\
+		\hline
+	\end{tabular}
+	\caption{Ergebnisse aus Zählratenkurven}
+	\label{table_messwerte_zählrate}
+\end{table}
+
 \hypertarget{bestimmung-durch-Spannung}{%
 	\subsubsection{Bestimmung durch
 		Spannung}\label{bestimmung-durch-Spannung}}
