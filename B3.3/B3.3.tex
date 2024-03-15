@@ -817,7 +817,7 @@ Nun kann die Reichweite der $\alpha$-Teilchen in Luft bestimmt werden, indem der
 \begin{eqnarray}
 	R_\mathrm{off} &=& (21.4025 \pm 1.0054) \mathrm{\,mm} \\
 	\bar{R}_\mathrm{Luft} &=& a \cdot \frac{1}{\bar{p}_\mathrm{Luft}} \\
-	\Delta \bar{R}_\mathrm{Luft} &=& \sqrt{\left(\frac{\Delta a}{\bar{p}_\mathrm{Luft}}\right)^2 + \left(\frac{a \cdot \Delta \bar{p}_\mathrm{Luft}}{\bar{p}_\mathrm{Luft}^2}\right)^2} \\
+	\Delta \bar{R}_\mathrm{Luft} &=& \sqrt{\left(\frac{\Delta a}{\bar{p}_\mathrm{Luft}}\right)^2 + \left(\frac{a \cdot \Delta \bar{p}_\mathrm{Luft}}{\bar{p}_\mathrm{Luft}^2}\right)^2} \label{eq:Reichweite Luft} \\
 	p_\mathrm{Luft} &=&(1013.25 \pm 0.005) \mathrm{\, mbar}
 \end{eqnarray}
 
@@ -911,19 +911,30 @@ Die Energie $E$ in $\mathrm{keV}$ kann durch eine lineare Relation aus der Kanal
 Die Energiepeaks $\hat E$ und Halbwertbreiten $\Delta E$ des gemessenen $\alpha$-Spektrums sind in Tabelle \ref{tabelle: Straggling} aufgelistet.
 \begin{table}
 	\centering
-	\begin{tabular}[h]{c|c|c}
-		Druck $p$ $[\mathrm{mbar}]$ & Peak $\hat E$ $[\mathrm{keV}]$ & Halbwertsbreite $\Delta E$ $[\mathrm{keV}]$  \\
+	\begin{tabular}[h]{||c|c|c||}
 		\hline
+		Druck $p$ $[\mathrm{mbar}]$ & Peak $\hat E$ $[\mathrm{keV}]$ & Halbwertsbreite $\Delta E$ $[\mathrm{keV}]$  \\
+		\hline\hline
 		$\ 1.2 \pm 0.1$ & $5486.0 \pm 0.6$ & $\ 61.9 \pm 1.2$ \\
+		\hline
 		$100 \pm 10$ & $4885.6 \pm 0.6$ & $\ 79.2 \pm 1.3$ \\
+		\hline
 		$200 \pm 10$ & $4387.2 \pm 0.7$ & $\ 93.3 \pm 1.4$ \\
+		\hline
 		$300 \pm 10$ & $3862.1 \pm 1.0$ & $109.4 \pm 2.0$ \\
+		\hline
 		$400 \pm 10$ & $3187.4 \pm 0.9$ & $130.9 \pm 1.7$ \\
+		\hline
 		$500 \pm 10$ & $2603.3 \pm 1.1$ & $145.2 \pm 2.3$ \\
+		\hline
 		$600 \pm 10$ & $1885.6 \pm 1.3$ & $164.4 \pm 2.7$ \\
+		\hline
 		$700 \pm 10$ & $1088.9 \pm 1.6$ & $209.9 \pm 3.1$ \\
+		\hline
 		$750 \pm 10$ & $\ 670.8 \pm 1.9$ & $215.0 \pm 4.0$ \\
+		\hline
 		$800 \pm 10$ & $\ 226.5 \pm 3.4$ & $239.0 \pm 7.0$ \\
+		\hline
 	\end{tabular}
 	\caption{Energie--Straggling}
 	\label{tabelle: Straggling}
@@ -962,21 +973,32 @@ Aus dem Straggling $\alpha$ können wir den Energiestraggling-Parameter oder auc
 
 \begin{table}
 	\centering
-	\begin{tabular}[h]{c|c|c|c}
+	\begin{tabular}[h]{||c|c|c|c||}
+		\hline
 		Druck $p$ $[\mathrm{mbar}]$
 			& $\rho \cdot x$ $\left[10^{-3} \mathrm{\frac{g}{cm^2}}\right]$
 			& $\alpha$ $[\mathrm{keV}]$ & $\alpha _E$ $[\mathrm{keV}]$\\
-		\hline
+		\hline\hline
 		$\ 1.2 \pm 0.1$ & $0.0057 \pm 0.0005$ & $\ 61.9 \pm 1.2$ & $\ \ 0.0 \pm 0.0$\\
+		\hline
 		$100 \pm 10$ & $0.47 \pm 0.05$ & $\ 79.2 \pm 1.3$ & $\ 49.4 \pm 2.6$  \\
+		\hline
 		$200 \pm 10$ & $0.95 \pm 0.05$ & $\ 93.3 \pm 1.4$ & $\ 69.8 \pm 2.2 $ \\
+		\hline
 		$300 \pm 10$ & $1.43 \pm 0.06$ & $109.4 \pm 2.0$ & $\ 90.2 \pm 2.6$\\
+		\hline
 		$400 \pm 10$ & $1.91 \pm 0.07$ & $130.9 \pm 1.7$ & $115.3 \pm 2.0$ \\
+		\hline
 		$500 \pm 10$ & $2.38 \pm 0.08$ & $145.2 \pm 2.3$ & $131.3 \pm 2.6$\\
+		\hline
 		$600 \pm 10$ & $2.86 \pm 0.09$ & $164.4 \pm 2.7$ & $152.3 \pm 3.0$ \\
+		\hline
 		$700 \pm 10$ & $3.33 \pm 0.10$ & $209.9 \pm 3.1$ & $200.6 \pm 3.3$ \\
+		\hline
 		$750 \pm 10$ & $3.57 \pm 0.10$ & $215.0 \pm 4.0$ & $205.9 \pm 4.2$\\
+		\hline
 		$800 \pm 10$ & $3.81 \pm 0.11$ & $239.0 \pm 7.0$ & $230.8 \pm 7.3$\\
+		\hline
 	\end{tabular}
 	\caption{Straggling $\alpha$ und korrigiertes Straggling $\alpha_E$}
 	\label{tabelle:korr. Straggling}
@@ -984,32 +1006,102 @@ Aus dem Straggling $\alpha$ können wir den Energiestraggling-Parameter oder auc
 
 Wie man anhand der Abbildungen \ref{abb:Straggling} und \ref{abb:korr. Straggling}  erkennen kann, weisen die Graphen einen linearen Verlauf auf. Dagegen wird eine Abnahme des Energiestraggling-Parameters bei kleineren Energien erwartet. \cite{Prior}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../media/B3.3/Straggling.jpg}
+	\caption{Energiestraggling $\alpha$ als Funktion von $\rho \cdot x$}
+	\label{abb:Straggling}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../media/B3.3/Straggling corrected.jpg}
+	\caption{korrigiertes Energiestraggling $\alpha _E$ als Funktion von $\rho \cdot x$}
+	\label{abb:korr. Straggling}
+\end{figure}
+
 Für eine Energieverteilung mit der Halbwertbreite von ab $10\%$ der mittleren Energie dominieren die nicht-statistischen Effekte über die statistische und das Straggling nimmt ab, d.h. das $\alpha$-Spektrum sollte ab einem bestimmen Energiewert mit abnehmender Energie bzw. zunehmendem Druck schmaler werden.
 
 Dies lässt sich jedoch in der Auswertung nicht beobachten, weil wir zu geringen Energien haben. Um diesen Effekt beobachten zu können ist es notwendig die $10\%$ zu erreichen, dann erhält man den beschriebenen Verlauf.
 
-Der Abstand zwischen Quelle und Detektor beträgt bei Prior bei $5\mathrm{\,cm}$  \cite{Prior}, bei uns dagegen nur knapp $4\mathrm{\,cm}$ zuzüglich Offset, möglicherweise kann unsere Abweichung damit begründet werden. Dies sei bei Laborberichten von Studenten sehr häufig der Fall. \cite{Prior}
-
-Es ist jedoch nicht vorher bekannt wie groß der Offset bei uns war sodass wir diesen Abstand bei der Versuchsdurchführung einstellen können.
-
-\begin{figure}[H]
-	\centering
-	\begin{minipage}{0.9\textwidth}
-		\includegraphics[width=\textwidth]{../media/B3.3/Straggling.jpg}
-		\caption{Energiestraggling $\alpha$ als Funktion von $\rho \cdot x$}
-		\label{abb:Straggling}
-		\vspace{12pt}
-	
-		\includegraphics[width=\textwidth]{../media/B3.3/Straggling corrected.jpg}
-		\caption{korrigiertes Energiestraggling $\alpha _E$ als Funktion von $\rho \cdot x$}
-		\label{abb:korr. Straggling}
-	\end{minipage}
-\end{figure}
+Der Abstand zwischen Quelle und Detektor beträgt bei Prior bei $5\mathrm{\,cm}$  \cite{Prior}, bei uns dagegen ca. $4\mathrm{\,cm}$, möglicherweise kann unsere Abweichung damit begründet werden. Dies sei bei Laborberichten von Studenten sehr häufig der Fall. \cite{Prior} In unserem Versuchsaufbau war der Offset nicht im Voraus bekannt. Dadurch war es uns nicht möglich, einen mit Prior gut vergleichbaren Abstand einzustellen.
 
 \hypertarget{massenbremsvermuxf6gen}{%
 \subsection{Massenbremsvermögen}\label{massenbremsvermuxf6gen}}
 
-$\ref{}$
+Zuletzt soll das Massenbremsvermögen von Gold relativ zu Luft bzw. Aluminium sowie die Dicke der Aluminiumfolie bestimmen. Das relative Massenbremsvermögen $Q_F$ eines Stoffes $F$ relativ zur Luft $L$ wie folgt zu bestimmen. Dazu ist die Dichte der Luft $\rho_L$ bei den Drücken der Messungen ohne Folie $\bar p_1$ und mit Folie $\bar p_2$ bei der selben Reichweite $\bar R_1$ notwendig, ebenso wie Dichte $\rho_F$ und Dicke $d_F$ der Folie. Der Fehler wird mittels Gauß'scher Fehlerfortpflanzung bestimmt.\footnote{Fehlt ggf. in Vorbereitung, \cite[p. 5]{Uni}}
+
+\begin{eqnarray}
+	Q_F &=& \frac{\rho_L(\bar{p}_1) - \rho_L(\bar{p}_2)}{\rho_F d_F} \bar{R}_1
+	\label{eq:Q_F} \\
+	\Delta Q_F &=& Q \cdot \sqrt{\frac{{\Delta \rho_L(\bar{p}_1)}^2 + {\Delta \rho_L(\bar{p}_2)}^2}{\left(\rho_L(\bar{p}_1) - \rho_L(\bar{p}_2)\right)^2} + \left(\frac{\Delta \bar{R}_1}{\bar{R}_1}\right)^2 + \left(\frac{\Delta \rho_F}{\rho_F}\right)^2 + \left(\frac{\Delta d_F}{d_F}\right)^2}
+\label{eq:fehler_Q_F}
+\end{eqnarray}
+
+Aus der gleichen Relation lässt sich auch die Dicke $d_F$ der Aluminiumfolie bestimmen, ebenso wie ihr Fehler.
+
+\begin{eqnarray}
+	d_F &=& \frac{\rho_L(\bar{p}_1) - \rho_L(\bar{p}_2)}{\rho_F Q_F} \bar{R}_1 \label{eq:d_F} \\
+	\Delta d_F &=& d_F \cdot
+		\sqrt{\frac{{\Delta \rho_L(\bar{p}_1)}^2 + {\Delta \rho_L(\bar{p}_2)}^2}{\left(\rho_L(\bar{p}_1) - \rho_L(\bar{p}_2)\right)^2} + \left(\frac{\Delta \bar{R}_1}{\bar{R}_1}\right)^2 + \left(\frac{\Delta \rho_F}{\rho_F}\right)^2 + \left(\frac{\Delta Q_F}{Q_F}\right)^2}
+	\label{eq:fehler_d_F}
+\end{eqnarray}
+
+Der mittlere Druck $\bar{p}_2$ und die mittlere Reichweite $\bar{R}_1$ werden aus den Zählraten ermittelt. Dazu werden analog zum Abschnitt \ref{bestimmung-durch-zuxe4hlraten} die mit Folie gemessenen Zählraten gegen die Drücke aufgetragen und die Enden als Gerade  gefittet. Dies ist in Abbildung \ref{fig:zählraten mit folien} dargestellt.
+
+Daraus werden erneut Wertepaare von mittlerem Druck und mittlerem Abstand bestimmt, wobei die Abstände um den Offset von $(21.40 \pm 1.01) \mathrm{\, mm}$ verschoben werden. Die Ergebnisse sind in Tabelle \ref{table_mittlereDrücke_mitFolie} ersichtlich. Diese Werte sind in Abbildung \ref{fig:reichweiteDrückeFolie} gegeneinander aufgetragen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.3/zaehlraten.pdf}
+	\caption{Zählratenkurven für Messung mit Aluminium- und Goldfolie \\
+			gestrichelte Linien stellen mittlere Zählraten bzw. Drücke dar}
+	\label{fig:zählraten mit folien}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c||c|c||}
+		\hline
+		& Gold & Aluminium \\
+		\hline \hline
+		$\bar{p}_2$ [mbar] & $785.66 \pm 148.83$ & $760.65 \pm 219.86$ \\
+		\hline
+		$\bar{R}_1$ [mm] & $29.40 \pm 1.01$ & $25.40 \pm 1.01$\\
+		\hline
+	\end{tabular}
+	\caption{Entnommene Messwertpaare aus mittlerem Druck $\bar{p}$ und mittlerer Reichweite $\bar{R}$ für Gold und Aluminium}
+	\label{table_mittlereDrücke_mitFolie}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.3/reichweiten inverse druecke mit Folien.pdf}
+	\caption{Reichweiten gegen inverse Drücke aufgetragen}
+	\label{fig:reichweiteDrückeFolie}
+\end{figure}
+
+$\bar{p}_1$ ist der Druck aus der Messung ohne Folien, bei dem die Reichweite $\bar R(\bar p_1)$ mit der Reichweite mit Folien $\bar{R}_1$ übereinstimmt. Daher kann er aus Gleichung \eqref{eq:Reichweite Luft} hergeleitet werden, wobei die Steigung $a$ aus der Messung über die Spannung in Abschnitt \ref{Reichweite-Ergebnisse} gewählt wird. Der Fehler wird wieder über die Gauß'sche Fehlerfortpflanzung ermittelt.
+
+\begin{eqnarray}
+	\bar{p}_1 &=& \frac{a}{\bar{R}_1} \\
+	\Delta \bar{p}_1 &=&
+		\sqrt{\left(\frac{\Delta a}{\bar{R}_1}\right)^2 + \left(\frac{a \cdot \Delta \bar{R}_1}{\bar{R}_1^2}\right)^2}
+\end{eqnarray}
+
+Die Ergebnisse sind in Tabelle \ref{table_p_1} dargestellt.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{||c||c|c||}
+		\hline
+		& Gold & Aluminium \\
+		\hline \hline
+		$\bar{p}_1$ [mbar] & $1311.08 \pm 53.70$ & $1517.53 \pm 69.12$ \\
+		\hline
+	\end{tabular}
+	\caption{Mittlerer Druck $\bar{p}_1$ für Gold und Aluminium}
+	\label{table_p_1}
+\end{table}
 
 \clearpage
 \hypertarget{literatur}{%
@@ -1071,6 +1163,9 @@ $\ref{}$
 \bibitem{DWD}
 	DWD, ``Standardatmosphäre'',
 	\url{https://www.dwd.de/DE/service/lexikon/begriffe/S/Standardatmosphaere_pdf.pdf;jsessionid=0C577D379F1DB35620EFFCF816B1BE34.live11044?__blob=publicationFile}, Abruf am 10.03.2024
+
+\bibitem{Uni}
+	Universität zu Köln, ``B3.3: Reichweite von $\alpha$-Teilchen'', Januar 2021, Online verfügbar unter \url{https://www.ikp.uni-koeln.de/fileadmin/data/praktikum/B3.3_alpha_de.pdf}
 
 \end{thebibliography}
 \end{document}
