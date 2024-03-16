@@ -942,12 +942,12 @@ Die Energiepeaks $\hat E$ und Halbwertbreiten $\Delta E$ des gemessenen $\alpha$
 
 Um die Veränderung des Stragglings zu bewerten, muss zunächst die Dichte $\rho$ ermittelt werden. Diese ist über eine Referenzdichte $\rho_0$ und einen Referenzdruck $p_0$ linear vom Druck $p$ abhängig.  Dies folgt aus dem idealen Gasgesetz.
 
-Als Referenzgröße werden Werte der Standardatmosphäre verwendet, also eine Dichte $\rho_0$ bei Normaldruck $p_0$. \cite{DWD}
+Als Referenzgröße werden Werte der Standardatmosphäre verwendet, also eine Dichte $\rho_0$ bei Normaldruck $p_0$.\footnote{FEHLER: $\rho_0$ um Faktor $10^3$ höher!} \cite{DWD}
 
 \begin{eqnarray}
 	\rho &=& \frac{\rho_0}{p_0} \cdot p \\
-	\rho_0 &=& 1.225 \cdot 10^{-3}\mathrm{\,\frac{g}{cm^3}} \\
-	p_0 &=& 1013.25 \mathrm{\,mbar}
+	\rho_0 &=& 1.225 \cdot 10^{-3}\mathrm{\,\frac{g}{cm^3}} \label{eq:Normaldichte Luft} \\
+	p_0 &=& 1013.25 \mathrm{\,mbar} \label{eq:Normaldruck Luft}
 \end{eqnarray}
 
 Für den Abstand $x$ zwischen Detektor und Quelle muss der Offset $R_\mathrm{off}=(21.4025 \pm 1.0054) \mathrm{\,mm}$ berücksichtigt werden, der in Abschnitt \ref{Reichweite-Ergebnisse} ermittelt wurde. Dieser muss zu dem in der Messung abgelesenen Abstand $d=(18\pm0.5)\mathrm{\,mm}$ addiert werden, um den Abstand $x$ zu erhalten. Der Fehler für $\rho \cdot x$ ergibt sich durch Gauß'sche Fehlerfortpflanzung.
@@ -1103,6 +1103,66 @@ Die Ergebnisse sind in Tabelle \ref{table_p_1} dargestellt.
 	\label{table_p_1}
 \end{table}
 
+Um die Dichten $\rho_L(\bar{p}_1)$ und $\rho_L(\bar{p}_2)$ aus den ermittelten Drücken $\bar{p}_{1/2}$ zu bestimmen, wird die thermische Zustandsgleichung idealer Gase verwendet. Dabei wird das Volumen $V$ durch den Quotient aus Masse $m$ und Dichte $\rho$ dargestellt.
+\begin{eqnarray}
+	p V = p \frac{m}{\rho} &=& N k_B T \\
+	\Leftrightarrow \qquad \frac{p}{\rho} &=& \frac{N}{m} k_B T
+\end{eqnarray}
+
+Sowohl die Temperatur $T$, als auch das Verhältnis von Teilchenzahl $N$ zu Masse $m$ sind in diesem Versuch konstant. Damit kann die Dichte $\rho_i$ abhängig vom Druck $p_i$ bestimmt werden. Der Fehler wird durch Gauß'sche Fehlerfortpflanzung bestimmt.
+
+Die Dichte $\rho_0$ und der Normaldruck $p_0$ werden wie in Abschnitt \ref{energiestraggling-straggling} gewählt, siehe Gleichungen \eqref{eq:Normaldichte Luft} und \eqref{eq:Normaldruck Luft}. \cite{DWD}
+
+\begin{eqnarray}
+	\frac{p_i}{\rho_i} &=& \frac{p_0}{\rho_0} \\
+	\Leftrightarrow \quad \rho_i &=& p_i \frac{\rho_0}{p_0} \\
+	\Delta \rho_i &=& \sqrt{\left(\frac{\rho_0 \cdot \Delta p_i}{p_0}\right)^2 + \left(\frac{p_i \cdot \Delta \rho_0}{p_0}\right)^2 + \left(\frac{p_i \cdot \rho_0 \cdot \Delta p_0}{p_0^2}\right)^2}
+\end{eqnarray}
+
+Die so bestimmten Dichten sind in Tabelle \ref{table_dichten} zu finden.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{||c||c|c||}
+		\hline
+		& Gold & Aluminium \\
+		\hline \hline
+		$\rho_L(\bar{p}_1)$ [kg/m$^3$] & $1.58 \pm 0.06$ & $1.80 \pm 0.08$ \\
+		\hline
+		$\rho_L(\bar{p}_2)$ [kg/m$^3$] & $0.95 \pm 0.18$ & $0.90 \pm 0.26$ \\
+		\hline
+	\end{tabular}
+	\caption{Dichten $\rho_L(\bar{p}_{1/2})$ für Gold und Aluminium}
+	\label{table_dichten}
+\end{table}
+
+Nun werden noch die Dichten der Goldfolie $\rho_\mathrm{Au}$ \cite{DichteGold} und der Aluminiumfolie $\rho_\mathrm{Al}$ \cite{DichteAlu} benötigt, ebenso wie die Dicke der Goldfolie $d_\mathrm{Au}$ \cite{Uni} und das relative Massenbremsvermögen von Aluminium zu Luft $Q_\mathrm{Al}$ \cite{Uni}.
+
+\begin{eqnarray}
+	\rho_\mathrm{Au} &=& (19.32 \pm 0.005) \mathrm{\, \frac{g}{cm^3}}\\
+	\rho_\mathrm{Al} &=& (2.6989 \pm 0.00005) \mathrm{\, \frac{g}{cm^3}}\\
+	d_\mathrm{Au} &=& (2.50 \pm 0.25) \mathrm{\, \mu m}\\
+	Q_\mathrm{Al} &=& (0.78 \pm 0.04)
+\end{eqnarray}
+
+Das Massenbremsvermögen von Gold zu Aluminium folgt aus den Gleichungen \eqref{eq:Q_F} und \eqref{eq:fehler_Q_F}, die Dicke der Aluminiumfolie aus den Gleichungen \eqref{eq:d_F} und \eqref{eq:fehler_d_F}.
+\begin{eqnarray}
+	Q_\mathrm{Au} &=& 0.38 \pm 0.12 \\
+	d_\mathrm{Al} &=& (10.86 \pm 3.36) \mathrm{\, \mu m}
+\end{eqnarray}
+
+Zudem kann das relative Massenbremsvermögen von Gold zu Aluminium $Q_\mathrm{Au, Al}$ als Quotient der relativen Massenbremsvermögens von Gold zu Luft $Q_\mathrm{Au}$ bzw. von Aluminium zu Luft $Q_\mathrm{Al}$ ermittelt werden. Der Fehler wird wiederum durch Gauß'sche Fehlerfortpflanzung bestimmt.
+
+\begin{eqnarray}
+	Q_\mathrm{Au, Al} &=& \frac{Q_\mathrm{Au}}{Q_\mathrm{Al}} \\
+	\Delta Q_\mathrm{Au, Al} &=&
+		\sqrt{
+				\left(\frac{\Delta Q_\mathrm{Au}}{Q_\mathrm{Al}}\right)^2
+				+ \left(\frac{Q_\mathrm{Au}}{{Q_\mathrm{Al}}^2} \Delta Q_\mathrm{Al} \right)^2
+			} \\
+	\Rightarrow Q_\mathrm{Au, Al} &=& 0.49 \pm 0.16
+\end{eqnarray}
+
 \clearpage
 \hypertarget{literatur}{%
 \section{Literaturverzeichnis}\label{literatur}}
@@ -1162,7 +1222,15 @@ Die Ergebnisse sind in Tabelle \ref{table_p_1} dargestellt.
 
 \bibitem{DWD}
 	DWD, ``Standardatmosphäre'',
-	\url{https://www.dwd.de/DE/service/lexikon/begriffe/S/Standardatmosphaere_pdf.pdf;jsessionid=0C577D379F1DB35620EFFCF816B1BE34.live11044?__blob=publicationFile}, Abruf am 10.03.2024
+	\url{https://www.dwd.de/DE/service/lexikon/begriffe/S/Standardatmosphaere_pdf.pdf?__blob=publicationFile}, Abruf am 10.03.2024
+
+\bibitem{DichteGold}
+	N. N. Greenwood, A. Earnshaw, ``Chemie der Elemente'', 1. Auflage, Verlag Chemie,
+	ISBN 3-527-26169-9, S. 1509
+
+\bibitem{DichteAlu}
+	C. Kammer, ``Aluminium-Taschenbuch -- Band 1'', 16. Auflage, Aluminium-Verlag, Düsseldorf 2002,
+	ISBN 3-410-22028-3, S. 74
 
 \bibitem{Uni}
 	Universität zu Köln, ``B3.3: Reichweite von $\alpha$-Teilchen'', Januar 2021, Online verfügbar unter \url{https://www.ikp.uni-koeln.de/fileadmin/data/praktikum/B3.3_alpha_de.pdf}
