@@ -272,34 +272,6 @@ Der Paarungsterm wird betragsmäßig kleiner, je größer die Nukleonenzahl $A$ 
 \noindent
 Beide Nukleonensorten liefern betragsmäßig den gleichen Beitrag zu $E_P$. Bei $\mathrm{gg}$-- und $\mathrm{uu}$--Kernen addieren sich diese Werte zu einer nicht--verschwindenden Energie. Bei $\mathrm{gu}$-- und $\mathrm{ug}$--Kernen heben sich die Terme dagegen auf, weswegen der Paarungsterm hier verschwindet.
 
-\hypertarget{bremsvermuxf6gen}{%
-\subsection{Bremsvermögen}\label{bremsvermuxf6gen}}
-
-\hypertarget{relatives-massenbremsvermuxf6gen}{%
-	\subsubsection{relatives
-		Massenbremsvermögen}\label{relatives-massenbremsvermuxf6gen}}
-
-Das relative Massenbremsvermögen $Q_A$ eines Absorbers $A$ kann durch das Massenbremsvermögen eines Standard--Absorbers $S$ ermittelt werden.
-
-\begin{eqnarray}
-	Q_A \cdot \rho_A \cdot \mathrm dx_A
-	&=& \rho_S \cdot \mathrm dx_S \\
-	\Leftrightarrow \qquad\qquad\qquad Q_A
-	&=& \frac{\rho_S}{\rho_A}
-	\cdot \frac{\mathrm dx_S}{\mathrm dx_A}
-\end{eqnarray}
-
-\noindent
-Dieses Verhältnis wird näherungsweise aus dem Verhältnis der Massenbelegungen bzw. Flächendichten $\rho_i$ der Materialien ermittelt werden, was durch die Nukleonenzahlen $A_i$ und die Protonenzahlen $Z_i$ dargestellt werden kann. Aus der Bethe--Bloch--Gleichung ohne Korrekturterme $\eqref{BetheBloch2}$ kann dann folgender Zusammenhang ermittelt werden.
-
-\begin{eqnarray}
-	Q_A \cdot \rho_A \cdot \mathrm dx_A
-	&=& \rho_S \cdot \mathrm dx_S \\
-	Q_A &=& \frac{\rho_S}{\rho_A} \cdot \frac{\mathrm dx_S}{\mathrm dx_A} \\
-	Q_A &=& \frac{A_S\cdot Z_A}{A_A\cdot Z_S}
-	\frac{\ln\left(\frac{2m_ev^2}{\bar I_A}\right)}{\ln\left(\frac{2m_ev^2}{\bar I_S}\right)}
-\end{eqnarray}
-
 \hypertarget{bethe-bloch-gleichung}{%
 \subsection{Bethe--Bloch--Gleichung}\label{bethe-bloch-gleichung}}
 
@@ -420,6 +392,20 @@ Für eine feste Eindringtiefe $x$ kann die Restenergie $E_\mathrm{Rest}(x)$ ermi
 
 \hypertarget{reichweite-von-alpha-teilchen}{%
 \subsection{Reichweite von $\alpha$--Teilchen}\label{reichweite-von-alpha-teilchen}}
+
+Die Reichweite oder Eindringtiefe von Alphastrahlung hängt von der Energie des Alphateilchens und dem Medium ab, durch das die Strahlung sich bewegt. Die Anzahl der Teilchen oder auch ihre Intensität hängen von der Entfernung $x$ der Quelle ab. Diese ist in Abbildung \ref{abb:Reichweite} dargestellt.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.3/Reichweite.pdf}
+	\caption{Intensität als Funktion der Eindringtiefe, Quelle: \cite{Uni}}
+	\label{abb:Reichweite}
+\end{figure}
+
+\noindent
+Die mittlere Reichweite $\bar R$ ist der Erwartungswert der Reichweite von $\alpha$-Teilchen einer bestimmten Energie. Die extrapolierte Reichweite $R_\mathrm{ex}>\bar R$ ist die maximale Reichweite unter der Annahme, dass es kein Straggling gibt, welches eine Abflachung der Intensitätskurve verursacht.
+
+Ist die mittlere Reichweite $\bar R_A$ in einem Medium bekannt, so kann die mittlere Reichweite $\bar R_B$ in einem anderen Medium mittels der Bragg-Kleemann-Formel ermittelt werden.
 
 \hypertarget{abhuxe4ngigkeit-vom-druck}{%
 \subsubsection{Abhängigkeit vom Druck}\label{abhuxe4ngigkeit-vom-druck}}
@@ -551,6 +537,56 @@ Oft wird die mittlere Reichweite $\bar R_\mathrm{Luft}$ in Luft unter Normalbedi
         \cdot\frac{\sqrt{A_A}}{\rho_A}\cdot \bar R_\mathrm{Luft}
 \end{eqnarray}
 
+\hypertarget{bremsvermuxf6gen}{%
+	\subsection{Bremsvermögen}\label{bremsvermuxf6gen}}
+
+\hypertarget{relatives-massenbremsvermuxf6gen}{%
+	\subsubsection{relatives
+		Massenbremsvermögen}\label{relatives-massenbremsvermuxf6gen}}
+
+Das relative Massenbremsvermögen $Q_A$ eines Absorbers $A$ kann durch das Massenbremsvermögen eines Standard--Absorbers $S$ ermittelt werden.
+
+\begin{eqnarray}
+	Q_A \cdot \rho_A \cdot \mathrm dx_A
+	&=& \rho_S \cdot \mathrm dx_S \\
+	\Leftrightarrow \qquad\qquad\qquad Q_A \label{eq:Q_A}
+	&=& \frac{\rho_S}{\rho_A}
+	\cdot \frac{\mathrm dx_S}{\mathrm dx_A}
+\end{eqnarray}
+
+\noindent
+Dieses Verhältnis wird näherungsweise aus dem Verhältnis der Massenbelegungen bzw. Flächendichten $\rho_i$ der Materialien ermittelt werden, was durch die Nukleonenzahlen $A_i$ und die Protonenzahlen $Z_i$ dargestellt werden kann. Aus der Bethe--Bloch--Gleichung ohne Korrekturterme $\eqref{BetheBloch2}$ kann dann folgender Zusammenhang ermittelt werden.
+
+\begin{eqnarray}
+	Q_A \cdot \rho_A \cdot \mathrm dx_A
+	&=& \rho_S \cdot \mathrm dx_S \\
+	Q_A &=& \frac{\rho_S}{\rho_A} \cdot \frac{\mathrm dx_S}{\mathrm dx_A} \\
+	Q_A &=& \frac{A_S\cdot Z_A}{A_A\cdot Z_S}
+	\frac{\ln\left(\frac{2m_ev^2}{\bar I_A}\right)}{\ln\left(\frac{2m_ev^2}{\bar I_S}\right)}
+\end{eqnarray}
+
+\hypertarget{messmethode}{\subsubsection{Messmethode}\label{messmethode}}
+Um das relative Bremsvermögen zu messen, kann die Strahlungsintensität je einmal mit ohne Folie gemessen werden. Die mittlere Reichweite $\bar R_1$ bei der Messung ohne Folie ist dann größer als $\bar R_2$ bei der Messung mit Luft und Folie.
+
+Diese Reichweitendifferenz kann durch eine äquivalente Dicke $d_L$ einer wirkenden Luftschicht dargestellt werden. Durch die Abhängigkeit der Reichweite vom inversen Druck \eqref{R(p)} kann dann das Bremsvermögen der Folie $Q_F$ ermittelt werden.
+
+\begin{eqnarray}
+	d_L &=& \bar R_2 - \bar R_1 \\
+	\eqref{R(p)} \Rightarrow \qquad
+	\frac{d_L}{\bar{R_1}} &=& \frac{\bar p_1 - \bar p_2}{\bar p_2} \\
+	\frac{\rho_L(\bar p_1)}{\rho_L(\bar p_2)} &=& \frac{\bar p_2}{\bar p_1}
+\end{eqnarray}
+
+\noindent
+Nun kann das relative Massenbremsvermögen $Q_F$ eines Stoffes $F$ relativ zur Luft $L$ bestimmt werden. Dazu ist die Dichte der Luft $\rho_L$ bei den Drücken der Messungen ohne Folie $\bar p_1$ und mit Folie $\bar p_2$ bei der selben Reichweite $\bar R_1$ notwendig, ebenso wie die Dichte $\rho_F$ und die Dicke $d_F$ der Folie.
+
+\begin{eqnarray}
+	Q_F &=& \frac{\rho_L \,\mathrm dx_L}{\rho_F \,\mathrm dx_F} \\
+	&\approx& \frac{\rho_L(\bar p_2) \, d_L}{\rho_F d_F} \\
+	Q_F &=& \frac{\rho_L(\bar{p}_1) - \rho_L(\bar{p}_2)}{\rho_F d_F} \bar{R}_1
+	\label{eq:Q_F}
+\end{eqnarray}
+
 \hypertarget{straggling}{%
 \subsection{Straggling}\label{straggling}}
 
@@ -673,7 +709,7 @@ Da dieser Fehler aufgrund der hohen Anzahl an gezählten $\alpha$--Teilchen sehr
 \noindent
 Die mittlere Zählrate $\bar{r}$ ist nun die Hälfte der durchschnittlichen Zählrate im ersten, nahezu konstanten Teil des Graphen. Der Fehler $\Delta \bar{r}$ wird durch die mittlere Quadradsumme der Residuen ermittelt.
 
-Die Zählvariable $k$ beschreibt hier den letzten Messwert, der den konstanten Teil des Graphen ausmacht. Der Faktor $\frac{1}{2}$ ist notwendig, da dieser Messwert die mittlere Reichweite $\bar R$ beschreiben soll, an dessen Stelle die Strahlungsintensität die Hälfte ihres Maximums erreicht.\footnote{Diese Erklärung fehlt im Abschnitt \ref{reichweite-von-alpha-teilchen}}
+Die Zählvariable $k$ beschreibt hier den letzten Messwert, der den konstanten Teil des Graphen ausmacht. Der Faktor $\frac{1}{2}$ ist notwendig, da dieser Messwert die mittlere Reichweite $\bar R$ beschreiben soll, an dessen Stelle die Strahlungsintensität die Hälfte ihres Maximums erreicht.
 
 \begin{eqnarray}
 	\bar{r}_{R_j} &=& \frac{1}{2} \cdot \frac{1}{k} \sum_{i=1}^{k} r_{i,R_j} \\
@@ -1057,11 +1093,9 @@ Der Abstand zwischen Quelle und Detektor beträgt bei Prior und Rollefson bei $5
 \hypertarget{massenbremsvermuxf6gen}{%
 \subsection{Massenbremsvermögen}\label{massenbremsvermuxf6gen}}
 
-Zuletzt soll das Massenbremsvermögen von Gold relativ zu Luft bzw. Aluminium sowie die Dicke der Aluminiumfolie bestimmen. Das relative Massenbremsvermögen $Q_F$ eines Stoffes $F$ relativ zur Luft $L$ wie folgt zu bestimmen. Dazu ist die Dichte der Luft $\rho_L$ bei den Drücken der Messungen ohne Folie $\bar p_1$ und mit Folie $\bar p_2$ bei der selben Reichweite $\bar R_1$ notwendig, ebenso wie Dichte $\rho_F$ und Dicke $d_F$ der Folie. Der Fehler wird mittels Gauß'scher Fehlerfortpflanzung bestimmt.\footnote{Relation fehlt ggf. in Vorbereitung, \cite[p. 5]{Uni}}
+Zuletzt soll das Massenbremsvermögen von Gold relativ zu Luft bzw. Aluminium sowie die Dicke der Aluminiumfolie bestimmen. Das relative Massenbremsvermögen $Q_F$ einer Folie im Vergleich zu Luft wird durch Gleichung \eqref{eq:Q_F} bestimmt, der Fehler wird mittels Gauß'scher Fehlerfortpflanzung.
 
 \begin{eqnarray}
-	Q_F &=& \frac{\rho_L(\bar{p}_1) - \rho_L(\bar{p}_2)}{\rho_F d_F} \bar{R}_1
-	\label{eq:Q_F} \\
 	\Delta Q_F &=& Q \cdot \sqrt{\frac{{\Delta \rho_L(\bar{p}_1)}^2 + {\Delta \rho_L(\bar{p}_2)}^2}{\left(\rho_L(\bar{p}_1) - \rho_L(\bar{p}_2)\right)^2} + \left(\frac{\Delta \bar{R}_1}{\bar{R}_1}\right)^2 + \left(\frac{\Delta \rho_F}{\rho_F}\right)^2 + \left(\frac{\Delta d_F}{d_F}\right)^2}
 \label{eq:fehler_Q_F}
 \end{eqnarray}
@@ -1079,7 +1113,6 @@ Aus der gleichen Relation lässt sich auch die Dicke $d_F$ der Aluminiumfolie be
 \noindent
 Der mittlere Druck $\bar{p}_2$ und die mittlere Reichweite $\bar{R}_1$ werden aus den Zählraten ermittelt. Dazu werden analog zum Abschnitt \ref{bestimmung-durch-zuxe4hlraten} die mit Folie gemessenen Zählraten gegen die Drücke aufgetragen und die Enden als Gerade  gefittet. Dies ist in Abbildung \ref{fig:zählraten mit folien} dargestellt.
 
-\noindent
 Daraus werden erneut Wertepaare von mittlerem Druck und mittlerem Abstand bestimmt, wobei die Abstände um den Offset von $(21.40 \pm 1.01) \mathrm{\, mm}$ verschoben werden. Die Ergebnisse sind in Tabelle \ref{table_mittlereDrücke_mitFolie} ersichtlich. Diese Werte sind in Abbildung \ref{fig:reichweiteDrückeFolie} gegeneinander aufgetragen.
 
 \begin{figure}[H]
