@@ -636,6 +636,15 @@ Der $\mathrm{Si}$--Oberflächen--Sperrschichtzähler besteht aus einen relativ d
 
 Silizium--Halbleiterdetektoren eignet sich aufgrund ihrer Bandlücke von $1.11\mathrm{\,eV}$ sehr gut für $\alpha$--Strahlung. Germanium--Halbleiterdetektoren sind prinzipiell ebenfalls geeignet, müssen allerdings auf ca. $70\,\mathrm K$ abgekühlt werden. Bei Raumtemperatur reicht die thermische Energie aus, um die Bandlücke von $0.7\mathrm{\,eV}$ zu überwinden. \cite{Knoll}
 
+\hypertarget{energieaufloesung}{
+	\subsubsection{Energieauflösung}\label{energieaufloesung}}
+Die Energieauflösung $\alpha_\mathrm{res}$ beschreibt die kleinste Energiedifferenz, die ein Detektor noch trennen kann.
+
+\begin{eqnarray}
+	\alpha_\mathrm{res} &=& \frac{\Delta E}{E} \label{eq:energieaufloesung}
+\end{eqnarray}
+
+\clearpage
 \hypertarget{durchfuxfchrung}{%
 \section{Durchführung}\label{durchfuxfchrung}}
 
@@ -676,6 +685,7 @@ Zuletzt wurden Folien aus Metall zwischen Strahlungsquelle und Detektor geschobe
 
 Die Messungen erfolgten analog zu den Messungen der Reichweite in Luft, allerdings nur für einen relativen Abstand je Folie. Im Falle von Aluminium war der relative Abstand $R_\mathrm{Al}=4\mathrm{\,mm}$, im Falle von Gold $R_\mathrm{Au}=8\mathrm{\,mm}$.
 
+\clearpage
 \hypertarget{auswertung}{%
 \section{Auswertung}\label{auswertung}}
 
@@ -695,7 +705,7 @@ Dafür werden für alle vier Abstände $R_i$ die gemessenen Zählraten gegen die
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../media/B3.3/zaehlratenkurven extrapoliert.pdf}
+	\includegraphics[width=0.8\textwidth]{../media/B3.3/zaehlratenkurven extrapoliert.pdf}
 	\caption{Extrapolierte Zählratenkurven für vier Reichweiten\\
 			gestrichelte Linien: $\bar r_{R_j}$ bzw. $\bar p_{R_j}$}
 	\label{fig:zählratenkurvenExtrapoliert}
@@ -731,7 +741,7 @@ Aus den mittleren Zählraten $\bar r$ sowie den Geradengleichungen mit Steigunge
 \noindent
 Die Abstände liefern die zugehörigen mittleren Reichweiten und damit die vier Wertepaare für mittlere Reichweite $\bar{R}$ und inversem mittlerem Druck $\frac{1}{\bar{p}}$. Die Ergebnisse sind in Tabelle \ref{table_messwerte_zählrate} dargestellt.
 
-\begin{table}[H]
+\begin{table}[h!]
 	\centering
 	\begin{tabular}{||c|c|c|c|c||}
 		\hline
@@ -765,8 +775,10 @@ Die Abstände liefern die zugehörigen mittleren Reichweiten und damit die vier 
 	\caption{Statistische Fehler der gemessenen Zählraten\\
 		n.e. nicht ermittelbar, da $N = 0$}
 	\label{table_statistische_fehler}
-	\vspace{12pt}
+\end{table}
 
+\begin{table}[h!]
+	\centering
 	\begin{tabular}{||c|c|c|c|c|c|c||}
 		\hline
 		$R_j$ $[\mathrm{mm}]$
@@ -829,7 +841,7 @@ Die Fehler $\Delta  \bar p_{R_j}$ werden wieder mittels Gauß'scher Fehlerfortpf
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../media/B3.3/spannungskurven extrapoliert.pdf}
+	\includegraphics[width=0.8\textwidth]{../media/B3.3/spannungskurven extrapoliert.pdf}
 	\caption{Extrapolierte Spannungskurven für vier Reichweiten \\
 		gepunktete Linien: lineare Fits}
 	\label{fig:spannungskurveExtrapoliert}
@@ -887,7 +899,7 @@ Nun kann die Reichweite der $\alpha$--Teilchen in Luft bestimmt werden, indem de
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../media/B3.3/reichweiten inverse druecke verschoben skaliert.pdf}
+	\includegraphics[width=0.8\textwidth]{../media/B3.3/reichweiten inverse druecke verschoben skaliert.pdf}
 	\caption{Reichweiten gegen inverse Drücke aufgetragen}
 	\label{fig:reichweiteInverserDruck}
 \end{figure}
@@ -959,17 +971,18 @@ Unsere $\alpha$--Teilchen haben eine Energie von ca. $5.5 \mathrm{\, MeV}$. Nehm
 \noindent
 Unser Ergebnis von $(23.43 \pm 0.54) \mathrm{\, \mu m}$ liegt innerhalb der Fehlergrenzen sehr nah an diesem Literaturwert. Dadurch lässt sich schließen, dass dieser Teil des Experiments äußerst erfolgreich verlief.
 
+\clearpage
 \hypertarget{energiestraggling-1}{%
 	\subsection{Energiestraggling}\label{energiestraggling-1}}
 
 \hypertarget{energiestraggling-aufloesung}{%
 	\subsubsection{Auflösung}\label{energiestraggling-aufloesung}}
-Die Energie $E$ in $\mathrm{keV}$ kann durch eine lineare Relation aus der Kanalnummer $K_E$ ermittelt werden. Weiterhin kann die Halbwertsbreite $\Delta E$ abgelesen werden. Nach der Annahme, dass das Straggling bei dem vorliegenden Luftdruck vernachlässigbar ist, stimmt $\Delta E$ nach Gleichung \eqref{eq:straggling parameter} mit der Auflösung $\alpha_\mathrm{res}$ des Detektors überein.
+Die Energie $E$ in $\mathrm{keV}$ kann durch eine lineare Relation aus der Kanalnummer $K_E$ ermittelt werden. Weiterhin kann die Halbwertsbreite $\Delta E$ abgelesen werden. Nach der Annahme, dass das Straggling bei dem vorliegenden Luftdruck vernachlässigbar ist, stimmt $\Delta E$ nach Gleichung \eqref{eq:straggling parameter} mit der Auflösung $\alpha_\mathrm{res}$ des Detektors überein, die nach Gleichung \eqref{eq:energieaufloesung} bestimmt wird.
 
 \begin{eqnarray}
 	E &=& 0.525 \mathrm{\frac{keV}{Kanal }} \cdot K_E \label{eq:Kanal zu Energie}\\
 	\Delta E &=& (61.9 \pm 1.2) \mathrm{\,keV} \label{eq:Halbwertsbreite} \\
-	\alpha_\mathrm{res} = \frac{\Delta E}{E_\alpha} &=& (1.13 \pm 0.02) \%
+	\alpha_\mathrm{res} &=& (1.13 \pm 0.02) \%
 \end{eqnarray}
 
 \hypertarget{energiestraggling-straggling}{%
@@ -1075,16 +1088,16 @@ Aus dem Straggling $\alpha$ können wir den Energiestraggling--Parameter oder au
 \noindent
 Wie man anhand der Abbildungen \ref{abb:Straggling} und \ref{abb:korr. Straggling}  erkennen kann, weisen die Graphen einen linearen Verlauf auf. Dagegen wird eine Abnahme des Energiestraggling--Parameters bei kleineren Energien erwartet. \cite{Prior}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../media/B3.3/Straggling.jpg}
+	\includegraphics[width=0.8\textwidth]{../media/B3.3/Straggling.jpg}
 	\caption{Energiestraggling $\alpha$ als Funktion von $\rho \cdot x$}
 	\label{abb:Straggling}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\textwidth]{../media/B3.3/Straggling corrected.jpg}
+	\includegraphics[width=0.8\textwidth]{../media/B3.3/Straggling corrected.jpg}
 	\caption{korrigiertes Energiestraggling $\alpha _E$ als Funktion von $\rho \cdot x$}
 	\label{abb:korr. Straggling}
 \end{figure}
@@ -1095,6 +1108,7 @@ Dies lässt sich jedoch in der Auswertung nicht beobachten, weil wir zu geringen
 
 Der Abstand zwischen Quelle und Detektor beträgt bei Prior und Rollefson bei $5\mathrm{\,cm}$  \cite{Prior}, bei uns dagegen ca. $4\mathrm{\,cm}$, möglicherweise kann unsere Abweichung damit begründet werden. Dies sei bei Laborberichten von Studenten sehr häufig der Fall. \cite{Prior} In unserem Versuchsaufbau war der Offset nicht im Voraus bekannt. Dadurch war es uns nicht möglich, einen mit Prior und Rollefson gut vergleichbaren Abstand einzustellen.
 
+\clearpage
 \hypertarget{massenbremsvermuxf6gen}{%
 \subsection{Massenbremsvermögen}\label{massenbremsvermuxf6gen}}
 
