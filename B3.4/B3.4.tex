@@ -61,7 +61,7 @@
 	\HRule \\[0.4cm]
 
 		{	\Huge \bfseries B3.4}\\[0.4cm]
-			{	\huge \bfseries Positronen--Emissions--Tomografie}\\[0.3cm]
+			{	\huge \bfseries Positronen--Emissions--Tomographie}\\[0.3cm]
 	
 	\HRule \\[3cm]
 
@@ -80,11 +80,11 @@
 \hypertarget{einleitung}{%
 \section{Einleitung}\label{einleitung}}
 
-Die Positronen--Emissions--Tomografie (PET) ist ein nuklearmedizinisches
-bildgebendes Verfahren, bei denen radioaktive Materialien als
-\emph{Tracer} verabreicht werden, die dann im Körper des Patienten
-gemessen werden. Dadurch können Bilder von z.B. Krebszellen erzeugt
-werden.
+Die Positronen--Emissions--Tomographie (PET) ist ein
+nuklearmedizinisches bildgebendes Verfahren, bei denen radioaktive
+Materialien als \emph{Tracer} verabreicht werden, die dann im Körper des
+Patienten gemessen werden. Dadurch können Bilder von z.B. Krebszellen
+erzeugt werden.
 
 In diesem Versuch wird eine radioaktive Quelle in einer Probe mittels
 der PET lokalisiert. Weiterhin wird die Ortsauflösung sowie die
@@ -96,6 +96,62 @@ Winkelabhängigkeit untersucht.
 
 \hypertarget{pet}{%
 \subsection{PET}\label{pet}}
+
+Die Positronen--Emissions--Tomographie ist ein Verfahren, das die
+Möglichkeit bietet, Veränderungen von Stoffwechselprozessen sowie
+physiologische Aktivitäten sichtbar zu machen. In der Medizin wird
+dieses Verfahren hauptsächlich verwendet, um Krebszellen im Körper zu
+detektieren.
+
+Hierbei injiziert man dem Patienten radioaktive Markerstoffe
+(\emph{Tracer}). Diese werden unterschiedlich von den Zellen aufgenommen
+und verarbeitet, abhängig vom lokalen Stoffwechsel. Damit der Körper
+nicht zu viel radioaktive Strahlungen ausgesetzt wird, muss der Tracer
+so kurzlebig wie möglich sein und dennoch Positronen abgeben. Deswegen
+eignen sich z.B. \(\ce{^{11}C}\), \(\ce{^{13}N}\), \(\ce{^{15}O}\),
+\(\ce{^{18}F}\) besonders. Unterschiedliche Tracer werden für
+unterschiedliche Körperteile verwendet.
+
+Wenn der Tracer im Gewebe ist, zerfällt er über den \(\beta^+\)--Zerfall
+und emittiert dabei Positronen. Innerhalb weniger Mikrometer
+rekombiniert ein Positron mit einem Elektron und es kommt zur
+\emph{Paarvernichtung}. Hierbei entstehen zwei Photonen mit jeweils
+einer Energie von \(\pu{511 keV}\) ein einem Winkel von \(180^\circ\)
+zueinander. \([6]\)
+
+Um die Aktivität quantitativ zu bestimmen, werden Signale von den
+ausgestrahlten Photonen registriert. Wenn zwei davon koinzident sind,
+hat dieser Prozess mit großer Wahrscheinlichkeit auf der
+Verbindungslinie\footnote{Englisch: \emph{line of response} (\emph{LOR})}
+stattgefunden. Aus vielen solcher koinzidenten Signale lässt sich die
+Aktivität mit einem Computerprogramm zu einem zweidimensionalen und
+später dreidimensionalen Bild rekonstruieren.
+
+Es kann bei der Messung häufig zu falschen Koinzidenzen kommen. Entweder
+sind das nur zufällige Signale, die zeitgleich aufgenommen werden, oder
+das Photon wurde schon auf den Weg zum Detektor gestreut. Diese falsche
+Koinzidenzen möchte man möglichst gering halten, da sie nicht zur
+Bildqualität tragen und Nachbearbeitung fordern.
+
+Neben der PET gibt es noch andere bildgebende Verfahren wie
+Röntgentomographie, Computertomographie (CT), Magnetresonanztomographie
+(MRT) und Ultraschall. Die Strahlenbelastung ist bei jeweiligem
+Verfahren unterschiedlich.
+
+Bei Ultraschall werden nur unschädliche Schallwellen verwendet, MRT ist
+ebenso frei von Strahlenbelastung. Im Vergleich zu Röntgentomographie
+und CT ist PET weniger schädlich, da die Stoffe sehr schnell zerfallen.
+Eine Röntgenaufnahme am Brustkorb hat eine Äquivalentdosis von
+\(\pu{0.2 mSv}\) und eine CT am Brustkorb hat ca \(\pu{8 mSv}\) \([8]\).
+
+Laut Bundesamt für Strahlenschutz beträgt der Grenzwert für eine
+einzelne Person \(\pu{1 mSv}\) pro Jahr, so lange man nicht beruflich
+mit Strahlung zu tun hat.
+
+Für die Medizin ist PET ein hervorragendes Werkzeug, besonders in der
+Onkologie. Das Verfahren kann Veränderung im Stoffwechsel erkennen, eher
+ein anderes Verfahren es nachweisen kann, so können Krebstumoren früher
+erkannt und behandelt werden.
 
 \hypertarget{betazerfall}{%
 \subsection{\texorpdfstring{\(\beta\)--Zerfall}{\textbackslash beta--Zerfall}}\label{betazerfall}}
@@ -183,8 +239,59 @@ Impuls, so wird der Winkel kleiner. Sind die Teilchen jedoch zu schnell,
 dann ist der Wirkungsquerschnitt sehr klein und es ist sehr
 unwahrscheinlich, dass Paarvernichtung stattfindet.
 
-\hypertarget{gamma-strahlung}{%
-\subsection{\texorpdfstring{\(\gamma\)-Strahlung}{\textbackslash gamma-Strahlung}}\label{gamma-strahlung}}
+\hypertarget{gammastrahlung}{%
+\subsection{\texorpdfstring{\(\gamma\)--Strahlung}{\textbackslash gamma--Strahlung}}\label{gammastrahlung}}
+
+Gammastrahlung ist im engeren Sinne eine besonders durchdringende
+elektromagnetische Strahlung, die bei radioaktivem Zerfall auftritt. Sie
+wirkt durch drei Prozesse auf Materie. Bei einer Energie von bis zu
+\(E_\gamma = \pu{100 keV}\) überwiegt der Photoeffekt, weiterhin gibt es
+den Comptoneffekt und Paarbildung.
+
+\hypertarget{photoeffekt}{%
+\subsubsection{Photoeffekt}\label{photoeffekt}}
+
+Beim Photoeffekt überträgt ein Photon seine gesamte Energie auf ein
+Hüllenelektron, welches daraufhin das Atom verlässt. Gammastrahlung mit
+einer Energie von bis zu \(E_\gamma = \pu{100 keV}\) löst diesen Effekt
+aus.
+
+Die kinetische Energie \(E_\mathrm{kin}\) des Elektrons hängt von der
+Energie des Photons \(h\nu\) sowie der Austrittsarbeit \(W_A\), ab.
+Letztere ist notwendig, um das Elektron aus dem Atom zu lösen.
+
+\[
+\begin{eqnarray}
+    E_\mathrm{kin} &=& h\nu - W_A
+\end{eqnarray}
+\]
+
+Der Wirkungsquerschnitt \(\sigma_\mathrm{ph}\) wird durch die
+Ordnungszahl \(Z\), die reduzierte Photonenenergie \(\epsilon\), die
+Sommerfeld'sche Feinstrukturkonstante \(\alpha\) und den
+Thomson--Wirkungsquerschnitt \(\sigma_\mathrm{Th}^e\) bestimmt. \([7]\)
+
+\[
+\begin{eqnarray}
+    \sigma_\mathrm{ph}
+        &=& \sqrt{\frac{32}{\epsilon^7}}\alpha^4 Z^5
+            \sigma_\mathrm{Th}^e \pu{\frac{cm}{Atom}} \\
+        &\propto& \frac{Z^5}{E_\gamma^{\frac{7}{2}}} \\
+    \epsilon &=& \frac{E_\gamma}{m_ec^2} \\
+    \sigma_\mathrm{Th}^e &=& \frac{8}{3} \pi r_e^2
+\end{eqnarray}
+\]
+
+Hierbei sind weiterhin die Elektronenmasse \(m_e\) und der Durchmesser
+\(r_e\) eines Elektrons relevant.
+
+\hypertarget{comptoneffekt}{%
+\subsubsection{Comptoneffekt}\label{comptoneffekt}}
+
+\ldots{}
+
+\hypertarget{paarbildung}{%
+\subsubsection{Paarbildung}\label{paarbildung}}
 
 \ldots{}
 
@@ -233,6 +340,15 @@ unwahrscheinlich, dass Paarvernichtung stattfindet.
 \item
   Wikipedia, ``Annihilation'',
   \url{https://de.wikipedia.org/wiki/Annihilation}, Abruf am 04.04.2024
+\item
+  K. Bethge, Kernphysik: Eine Einführung, 3. aktualisierte und
+  erweiterte Auflage, Springer--Verlag, 2008, DOI:
+  \href{https://doi.org/10.1007/978-3-540-74567-9}{10.1007/978-3-540-74567-9}
+\item
+  Empfehlung der Strahlenschutzkommission, ``Orientierungshilfe für
+  radiologische und nuklearmedizinische Untersuchungen'', In: ``Berichte
+  der Strahlenschutzkommission (SSK) des Bundesministeriums für Umwelt,
+  Naturschutz und Reaktorsicherheit: Heft~51'', 2006, ISBN~3873441306, \url{https://campus--nes.de/fileadmin/user\_upload/Orientierungshilfe\_SSK.pdf}
 \end{enumerate}
 
 \end{document}
