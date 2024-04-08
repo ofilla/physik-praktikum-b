@@ -32,7 +32,7 @@ do
 done
 
 # fix svg images
-for pic in $(grep -P '^!.*(svg|jpg)' "$file" | awk -F'(' '{print $2}' | sed 's/)$//g')
+for pic in $(grep -P '^!.*(svg|jpg|png)' "$file" | awk -F'(' '{print $2}' | sed 's/)$//g')
 do
   pdf_="${pic/svg/pdf}"
   pdf_="${pdf_/jpg/pdf}"

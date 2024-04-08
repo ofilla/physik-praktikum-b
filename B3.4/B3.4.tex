@@ -435,9 +435,9 @@ den Detektor treffen. \([7]\)
 Escape--Peaks}\label{escapelinien-escapepeaks}}
 
 Escapelinien oder Escape--Peaks sind unechte Spektrallinien, die bei der
-Röntgen- und Gammaspektroskopie auftreten und z. B. die Anwesenheit
-nicht vorhandener Radionuklide in der gemessenen Probe vortäuschen
-können. (https://de.wikipedia.org/wiki/Escapelinie)
+Röntgen- und Gammaspektroskopie auftreten und z.B. die Anwesenheit nicht
+vorhandener Radionuklide in der gemessenen Probe vortäuschen können.
+(https://de.wikipedia.org/wiki/Escapelinie)
 
 Gammastrahlung mit einer Energie von \(E_\gamma\ge\pu{1022MeV}\) kann
 zur Paarbildung führen. Dabei entstehende Positronen zerstrahlen
@@ -453,8 +453,189 @@ Wenn nur ein Photon detektiert wird, verursacht dies einen
 es einen \emph{Double--Escape--Peak} bei der Energie
 \(E_\gamma - \pu{1022 keV}\).
 
-\hypertarget{szintillatoren-und-photomultiplier}{%
-\subsection{Szintillatoren und Photomultiplier}\label{szintillatoren-und-photomultiplier}}
+\hypertarget{elektronik}{%
+\subsection{Elektronik}\label{elektronik}}
+
+In diesem Versuch werden verschiedene elektronische Bauteile verwendet,
+die im Folgenden näher erläutert werden. Ein Schaltskizze des Versuchs
+lässt sich in Abbildung \(5\) finden.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.85\textwidth]{../media/B3.4/Schaltplan.pdf}
+	\caption{Schaltskizze des Versuchs, bestehend aus
+		Photomultiplier (PMT), Vorverstärker (VV),
+		Hauptverstärker (TFA) und Diskriminator (CFD) ,\\
+		Quelle \(1\)}
+	\label{abb:Schaltplan}
+\end{figure}
+
+Als Detektor für die koinzidenten Signale werden anorganische
+Szintillationszähler sowie Photomultiplier zur Elektronenvervielfachung
+verwendet.
+
+In diesem Versuch wird \(\ce{NaI}\) als anorganischer Szintillator
+verwendet, hierbei beträgt die Ausbeute je Photon
+\(\pu{4\cdot 10^{4} MeV^{-1}}\).
+
+\hypertarget{verstuxe4rker}{%
+\subsubsection{Verstärker}\label{verstuxe4rker}}
+
+Ein Verstärker wird dazu verwendet ein eintreffendes elektronisches
+Signal zu verstärken. Dabei wird zwischen Vor- und Hauptverstärker
+unterschieden.
+
+Ein Vorverstärker wird direkt an die Detektoren angeschlossen, oder die
+Detektoren haben, wie in diesem Versuch, bereits einen Vorverstärker
+integriert. Dieser dient dazu, das von den Detektoren stammende Signal
+zu verstärken, sodass die Verluste in den Kabeln, die den Detektor mit
+den anderen Bauteilen verbinden, minimiert werden.
+
+Der in diesem Versuch verwendete Hauptverstärker - ein ``Timing Filter
+Amplifier'' (TFA) - dient dazu, dem Signal eine möglichst kurze
+Anstiegsflanke zu verleihen. Er empfängt das Signal aus den
+Vorverstärkern, verstärkt es und leitet es weiter zu den
+Diskriminatoren.
+
+\hypertarget{diskriminator}{%
+\subsubsection{Diskriminator}\label{diskriminator}}
+
+Ein Diskriminator ist ein Bauteil, das ein logisches Signal - ein
+Kastensignal - einer gewissen Breite ausgibt, falls die Amplitude des
+eintreffenden Signals eine einstellbare Schwelle überschreitet.
+
+Da in diesem Versuch die Messung von zwei koinzidenten
+\(\gamma\)--Quanten relevant ist, ist es wichtig, dass die
+Diskriminatoren die logischen Signale zweier zeitgleich eintreffenden
+Signale auch zeitgleich ausgeben. Dabei gibt es jedoch zwei Probleme.
+
+\hypertarget{walk}{%
+\paragraph{Walk}\label{walk}}
+
+Treffen zwei Signale zeitgleich in zwei Detektoren ein, haben aber
+unterschiedliche maximale Amplituden, erreichen diese beiden Signale die
+Amplituden--Schwelle der Diskriminatoren zu unterschiedlichen
+Zeitpunkten. DIes ist in Abbildung \(6\) dargestellt.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/Constant_fraction_1.pdf}
+	\caption{Abb. 6: Links: Walk--Effekt, Rechts: Kein Walk--Effekt}
+	\label{abb:Walk-Effekt}
+\end{figure}
+
+Die von den Diskriminatoren ausgesendeten logischen Signale sind dadurch
+zeitverschoben, obwohl die eintreffenden Signale koinzident waren. Diese
+Verschiebung der logischen Signale wird \emph{Walk} genannt.
+
+\hypertarget{jitter}{%
+\paragraph{Jitter}\label{jitter}}
+
+Aufgrund von statistischen Fluktuationen und Untergrundrauschen kann es
+passieren, dass zwei eigentlich gleiche Signale einen unterschiedlichen
+Zeitverlauf aufweisen. Daraufhin kann sich wie schon beim Walk der
+Zeitpunkt unterscheiden, bei dem die Signale die Amplituden--Schwelle
+der Diskriminatoren erreichen, wodurch die ausgesendeten logischen
+Signale wieder zeitversetzt sind. Dieses Phänomen wird als \emph{Jitter}
+bezeichnet.
+
+\hypertarget{cfd}{%
+\subsubsection{CFD}\label{cfd}}
+
+Um den Problemen durch Walk und Jitter entgegenzuwirken, wird in diesem
+Versuch ein \emph{Constant--Fraction--Discriminator} (CFD) verwendet.
+Ein CFD teilt ein eintreffendes Signal in zwei Teilsignale. Das erste
+Teilsignal wird um eine gewisse Zeit \(T\) verzögert. Das zweite
+Teilsignal wird invertiert und um einen Faktor \(k\in(0, 1)\) gestaucht.
+Daraufhin werden beide Teilsignale wieder addiert. Der CFD sendet das
+logische Signal dann erst aus, wenn das wie oben beschrieben veränderte
+Signal seinen Nulldurchgang erreicht. Es ist in Abbildung \(7\)
+dargestellt.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/CFD.jpg}
+	\caption{Abb. 7: Funktionsprinzips eines Constant--Fraction--Discriminators, Quelle $15$}
+	\label{abb:CFD}
+\end{figure}
+
+\hypertarget{koinzidenzeinheit}{%
+\subsubsection{Koinzidenzeinheit}\label{koinzidenzeinheit}}
+
+Die logischen Signale aus den beiden Diskriminatoren werden dann
+gemeinsam zur Koinzidenzeinheit weitergeleitet. Diese überprüft, ob sich
+die beiden Signale überlappen. Falls dies der Fall ist, sendet sie ein
+logisches Signal an einen \emph{Gate Generator}, der das Signal in ein
+genormtes logisches Signal umformt. Dieses wiederum wird an den Zähler
+weitergegeben.
+
+\hypertarget{szintillatoren}{%
+\subsubsection{Szintillatoren}\label{szintillatoren}}
+
+Wenn Photonen auf das Szintillationsmaterial treffen, wechselwirken sie
+und regen die Elektronen an. Nach einer Zeit fallen diese wieder in den
+Grundzustand ab und senden dabei Licht im sichtbaren Bereich aus. Die
+Zeit dieses Ablaufs beträgt abhängig vom verwendeten Material zwischen
+\(\pu{100 ps}\) und \(\pu{1\mu s}\).
+
+Es wird zwischen anorganischen und organischen Szintillatoren
+unterschieden.
+
+Bei anorganischen ist das Material Kristall oder Glas. Der Vorteil
+hierbei ist die hohe Lichtausbeute, welche sehr wichtig für die
+Energiemessgenauigkeit ist, nachteilig dagegen ist die langsame
+Lichtemission im Bereich von einigen \(\pu{100 ns}\), die
+Energieauflösung und die Feuchtigkeitsempfindlichkeit von manchen
+Kristallen.
+
+Organische Materialien bestehen haupsächlich aus langen
+Kohlenstoffketten. Dabei läuft der Lichtemissionsprozess sehr schnell
+ab, im Idealfall kommt das Lichtsignal schon nach \(\pu{100 ps}\). Trotz
+diesem Vorteil haben sie eine nur geringe Lichtausbeute und erfordern
+eine kompliziertere Herstellung als anorganische Szintillatoren.
+\([13]\)
+
+\hypertarget{photomultiplier}{%
+\subsubsection{Photomultiplier}\label{photomultiplier}}
+
+Um aus dem Szintillationslicht ein Messsignal zu erhalten, schließt man
+dem Szintillator einen Photomultiplier an. Dieser besteht aus einer
+Photokathode und einem Sekundärelektronenvervielfacher. Dabei muss das
+Emissionspektrum des Detektors optimal auf die spektrale Empfindlichkeit
+der Photokathode abgestimmt sein.
+
+Die Kathode besteht entweder aus Alkali--Metallen oder
+Erdalkali--Metallen, die über eine geringe Elektronenaustrittarbeit
+verfügen.
+
+Der zweite Bauteil heißt Sekundärelektronenvervielfacher\footnote{\emph{photomultiplier
+  tube} (\emph{PMT})} (SEV). Dieser besitzt eine Folge von Elektroden,
+genannt Dynoden, die bis zu \(10^7\) Sekundärelektronen pro
+Primärelektron erzeugen können. Zwischen den einzelnen Dynoden wird ein
+elektrisches Potenzial angelegt, sodass die Elektronen bis zur Anode hin
+beschleunigt werden. Üblicherweise haben SEVs ca. 10 Dynoden, mit jedem
+Auftreffen auf eine davon werden Sekundärelektronen heraus geschlagen
+und vervielfacht.
+
+Die ganze Elektronik befindet sich in einem vakuumdichten Glaskolben,
+der zusätzlich mit einem Mu--Metall--Zylinder gegen magnetische
+Streufelder abgeschirmt ist \([13]\). Abbildung 4 zeigt den Aufbau von
+einem typischen Photomultiplier.
+
+Das messbare Signal an der Anode ist dann durch richtige Kalibrierung
+proportional zu der im Szintillationskristall deponierten Energie des
+Photons aus dem \(e^+ e^-\)--Annihilationprozess.
+
+\begin{figure}
+\centering
+\includegraphics{../media/B3.4/Photomultiplier_schema_de.png}
+\caption{Abb. 4: Photomultiplier (schematisch), Quelle \(12\)}
+\end{figure}
+
+\hypertarget{weizsuxe4cker-massenformel}{%
+\subsection{Weizsäcker Massenformel}\label{weizsuxe4cker-massenformel}}
+
+\ldots{}
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
@@ -477,8 +658,9 @@ es einen \emph{Double--Escape--Peak} bei der Energie
 \tightlist
 \item
   Universität zu Köln, ``B3.4: Positronen--Emissions--Tomografie'',
-  Januar 2021, Online verfügbar unter
-  \url{https://www.ikp.uni--koeln.de/fileadmin/data/praktikum/B3.4\_PET\_de.pdf}
+  Januar 2021,
+  \url{https://www.ikp.uni-koeln.de/fileadmin/data/praktikum/B3.4\_PET\_de.pdf},
+  Abruf am 20.03.2024
 \item
   ``Chart of Nuclides'', National Nuclear Data Center,
   \url{https://www.nndc.bnl.gov/nudat3}, Abruf am 28.03.2024
@@ -503,12 +685,36 @@ es einen \emph{Double--Escape--Peak} bei der Energie
   erweiterte Auflage, Springer--Verlag, 2008, DOI:
   \href{https://doi.org/10.1007/978-3-540-74567-9}{10.1007/978-3-540-74567-9}
 \item
-  Empfehlung der Strahlenschutzkommission, ``Orientierungshilfe für
-  radiologische und nuklearmedizinische Untersuchungen'', In: ``Berichte
-  der Strahlenschutzkommission (SSK) des Bundesministeriums für Umwelt,
-  Naturschutz und Reaktorsicherheit: Heft~51'', 2006, ISBN~3873441306, \url{https://campus-nes.de/fileadmin/user\_upload/Orientierungshilfe\_SSK.pdf}
+  Strahlenschutzkommission, ``Orientierungshilfe SSK'', 2006, ISBN 3873441306,
+  \url{https://campus-nes.de/fileadmin/user_upload/Orientierungshilfe_SSK.pdf}, Abruf am 07.04.2024
 \item
-	Wikipedia, ``Compton-spektrum.svg'', \url{https://de.wikipedia.org/wiki/Datei:Compton-spektrum.svg}, Abruf am 08.04.2024
+  Lexikon der Physik, ``Impulshöhenspektrum'',
+  \url{https://www.spektrum.de/lexikon/physik/impulshoehenspektrum/7156},
+  Abruf am 08.04.2024
+\item
+  Wikipedia,
+  \url{https://de.wikipedia.org/wiki/Datei:Compton-spektrum.svg},
+  Abruf am 08.04.2024
+\item
+  Wikipedia,
+  \url{https://de.wikipedia.org/wiki/Datei:Am-Be-SourceSpectrum.jpg},
+  Abruf am 08.04.2024
+\item
+  Wikipedia,
+  \url{https://de.wikipedia.org/wiki/Datei:Photomultiplier_schema_de.png},
+  Abruf am 08.04.2024
+\item
+  LMU München, ``Detektor'',
+  \url{https://homepages.physik.uni-muenchen.de/~Otmar.Biebel/detektor/detector06.pdf},
+  Abruf am 07.04.2024
+\item
+  Wikipedia,
+  \url{https://commons.wikimedia.org/wiki/File:Constant_fraction_1.svg},
+  Abruf am 06.04.2024
+\item
+  Wikipedia,
+  \url{https://commons.wikimedia.org/wiki/File:CFD_Diagram1.jpg},
+  Abruf am 06.04.2024
 \end{enumerate}
 
 \end{document}
