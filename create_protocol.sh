@@ -20,7 +20,7 @@ fi
 head -n$lines "$file" > "$tmp/$filename"
 
 # fix references
-for tag in $(grep -oP '\\tag{[0-9a-zA-ZäöüÄÖÜ()=]+}' "$file" | sed -e 's/^\\tag{//g' -e 's/}$//g')
+for tag in $(grep -oP '\\tag{[0-9a-zA-ZäöüÄÖÜ()=-]+}' "$file" | sed -e 's/^\\tag{//g' -e 's/}$//g')
 do
   sed -e "s/\\\\tag{$tag}/\\\\label{$tag}/g" \
       -e "s/(\\\\text{$tag})/\\\\eqref{$tag}/g" \
@@ -32,7 +32,7 @@ do
 done
 
 # fix svg images
-for pic in $(grep -P '(svg|jpg)' "$file" | awk -F'(' '{print $2}' | sed 's/)$//g')
+for pic in $(grep -P '^!.*(svg|jpg)' "$file" | awk -F'(' '{print $2}' | sed 's/)$//g')
 do
   pdf_="${pic/svg/pdf}"
   pdf_="${pdf_/jpg/pdf}"

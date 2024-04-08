@@ -212,6 +212,20 @@ Tochterkern \(\ce{^A_{Z-1} Y}\) umgewandelt.
 \end{eqnarray}
 \]
 
+In diesem Versuch wird als Quelle \(\ce{^{22}Na}\) verwendet, da eine
+Halbwertzeit von etwa 2.6 Jahren hat \([2]\). Dieses zerfällt über den
+\(\beta^+\)--Zerfall in einen angeregten Zustand des stabilen Nuklides
+\(\ce{^{22}Ne}\), welches unter Aussenden eines \(\gamma\)--Quants mit
+\(E_\gamma = \pu{1275 keV}\) in den Grundzustand zerfällt (siehe
+Abbildung 1). Beide Zerfälle geschehen koinzident.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/Zerfall_22_Na.pdf}
+	\caption{Abb. 1: Skizze des Zerfalls von \(\ce{^{22}Na}\) zu \(\ce{^{22}Ne}\) \([1]\)}
+	\label{abb:Skizze 22Na}
+\end{figure}
+
 \hypertarget{paarvernichtung}{%
 \subsection{Paarvernichtung}\label{paarvernichtung}}
 
@@ -267,9 +281,10 @@ Letztere ist notwendig, um das Elektron aus dem Atom zu lösen.
 \]
 
 Der Wirkungsquerschnitt \(\sigma_\mathrm{ph}\) wird durch die
-Ordnungszahl \(Z\), die reduzierte Photonenenergie \(\epsilon\), die
-Sommerfeld'sche Feinstrukturkonstante \(\alpha\) und den
-Thomson--Wirkungsquerschnitt \(\sigma_\mathrm{Th}^e\) bestimmt. \([7]\)
+Ordnungszahl \(Z\), die reduzierte Photonenenergie \(\epsilon\)
+\(\eqref{redEnergie}\), die Sommerfeld'sche Feinstrukturkonstante
+\(\alpha\) und den Thomson--Wirkungsquerschnitt \(\sigma_\mathrm{Th}^e\)
+bestimmt. \([7]\)
 
 \[
 \begin{eqnarray}
@@ -278,7 +293,7 @@ Thomson--Wirkungsquerschnitt \(\sigma_\mathrm{Th}^e\) bestimmt. \([7]\)
             \sigma_\mathrm{Th}^e \pu{\frac{cm}{Atom}} \\
     \sigma_\mathrm{ph}
         &\propto& \frac{Z^5}{E_\gamma^{\frac{7}{2}}} \\
-    \epsilon &=& \frac{E_\gamma}{m_ec^2} \\
+    \epsilon &=& \frac{E_\gamma}{m_ec^2} \label{redEnergie} \\
     \sigma_\mathrm{Th}^e &=& \frac{8}{3} \pi r_e^2
 \end{eqnarray}
 \]
@@ -320,7 +335,10 @@ Photons mindestens \(\pu{1.022 MeV}\) beträgt. Diese Energie entspricht
 der Gesamtmasse beider Teilchen.
 
 Der Wirkungsquerschnitt \(\sigma_\mathrm{Paar}\) kann wie folgt
-beschrieben werden.
+beschrieben werden. Wie bei dem Photoeffekt sind dabei die
+Feinstrukturkonstante \(\alpha\) und der Elektronenradius \(r_e\)
+relevant, ebenso die reduzierte Energie \(\epsilon\)
+\(\eqref{redEnergie}\).
 
 \[
 \begin{eqnarray}
@@ -331,6 +349,109 @@ beschrieben werden.
         &\propto& Z^2 \ln(E_\gamma)
 \end{eqnarray}
 \]
+
+\hypertarget{impulshuxf6henspektrum}{%
+\subsubsection{Impulshöhenspektrum}\label{impulshuxf6henspektrum}}
+
+Die Zahl der in einem~Detektor~nachgewiesenen Ereignisse als Funktion
+ihrer Impulshöhe wird durch ein Impulshöhenspektrum dargestellt. \([9]\)
+In Abbildung 2 ist ein solches für monoenergetische Gamma--Übergänge in
+\(\ce{^{24}Mg}\) dargestellt.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth]{../media/B3.4/Am_Be_SourceSpectrum.jpg}
+	\caption{Abb. 2: Impulshöhenspektrum, Quelle \(7\)}
+	\label{abb:Impulshoehenspektrum}
+\end{figure}
+
+\hypertarget{photopeak-fullenergypeak}{%
+\paragraph{Photopeak /
+Full--Energy--Peak}\label{photopeak-fullenergypeak}}
+
+Ein Photopeak (\emph{Full--Energy--Peak}) entsteht, wenn die gesamte
+Energie eines Photons in einem Detektor gemessen wird. Dies kann
+beispielsweise durch den bereits genannten Photoeffekt oder durch die
+Anregung von Atomen entstehen.
+
+\hypertarget{comptonkante}{%
+\paragraph{Compton--Kante}\label{comptonkante}}
+
+Werden viele Photonen mit der gleichen Energie durch den Comptoneffekt
+gestreut, so ergibt sich ein charakteristisches Energiespektrum der
+gestreuten Elektronen, siehe Abbildung \(3\). Die hierbei auf die
+Elektronen übertragene Energie ist eine kontinuierliche Funktion des
+Streuwinkels~\(\phi\), hat jedoch eine scharfe obere Schranke.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/Comptonspektrum.jpg}
+	\caption{Compton--Kontinuum und Compton--Kante, Quelle \(10\)}
+	\label{abb:Compton-Kante}
+\end{figure}
+
+Das Compton--Kontinuum \(E_e'(\phi)\) beschreibt den Energie des
+Elektrons nach dem Stoß \(\eqref{Compton--Kontinuum}\), die obere
+Schranke derselben ist die \emph{Compton--Kante} \(E_e(180^\circ)\)
+\(\eqref{Compton--Kante}\). Die Energie des Photons nach der Streuung
+\(E_{\gamma}^\prime(\phi)\) wird dagegen durch die
+Klein--Nishina--Formel \(\eqref{Klein--Nishina}\) beschrieben.
+
+\[
+\begin{eqnarray}
+    E_e^\prime(\phi)
+        &=& E_{\gamma} - E_{\gamma}'(\phi) \\
+        &=& E_{\gamma}
+            \left(
+                1-
+                \frac{1}{1+\frac{E_{\gamma}}{m_\mathrm ec^2}
+                    (1-\cos(\phi))}
+            \right) \label{Compton--Kontinuum} \\
+    E_e^\prime(180^\circ) &=& \frac{E_\gamma}{1+\frac{m_ec^2}{2E_\gamma}}
+        \label{Compton--Kante} \\
+    E_{\gamma}^\prime(\phi)
+        &=& \frac{E_{\gamma}}{1+\frac{E_{\gamma}}{m_\mathrm ec^2}
+            (1-\cos\phi)} \label{Klein--Nishina}
+\end{eqnarray}
+\]
+
+\hypertarget{ruxfcckstreupeak-backscatter-peak}{%
+\paragraph{Rückstreupeak / Backscatter
+Peak}\label{ruxfcckstreupeak-backscatter-peak}}
+
+Ein Compton--Rückstreuungspeak (\emph{Backscatter Peak})~tritt bei der
+Energie \(E_\mathrm{Rück}\) auf, wenn die \(\gamma\)--Strahlen in das
+Material um den Detektor herum gestreut wurden und erst danach in den
+den Detektor treffen. \([7]\)
+
+\[
+\begin{eqnarray}
+    E_\mathrm{Rück} &=& E_\gamma - E_e^\prime(180^\circ)
+\end{eqnarray}
+\]
+
+\hypertarget{escapelinien-escapepeaks}{%
+\paragraph{Escapelinien /
+Escape--Peaks}\label{escapelinien-escapepeaks}}
+
+Escapelinien oder Escape--Peaks sind unechte Spektrallinien, die bei der
+Röntgen- und Gammaspektroskopie auftreten und z. B. die Anwesenheit
+nicht vorhandener Radionuklide in der gemessenen Probe vortäuschen
+können. (https://de.wikipedia.org/wiki/Escapelinie)
+
+Gammastrahlung mit einer Energie von \(E_\gamma\ge\pu{1022MeV}\) kann
+zur Paarbildung führen. Dabei entstehende Positronen zerstrahlen
+wiederum mit anderen Elektronen.
+
+Es ist nicht garantiert, dass die dabei entstehenden \(\gamma\)--Quanten
+detektiert werden. Dies ist insbesondere dann wahrscheinlich, wenn der
+Detektor nicht vollständig um die Probe schließt. \([7]\)
+
+Wenn nur ein Photon detektiert wird, verursacht dies einen
+\emph{Single--Escape--Peak} bei einer Energie von
+\(E_\gamma - \pu{511 keV}\). Wird keines der Photonen detektiert, gibt
+es einen \emph{Double--Escape--Peak} bei der Energie
+\(E_\gamma - \pu{1022 keV}\).
 
 \hypertarget{szintillatoren-und-photomultiplier}{%
 \subsection{Szintillatoren und Photomultiplier}\label{szintillatoren-und-photomultiplier}}
@@ -385,7 +506,9 @@ beschrieben werden.
   Empfehlung der Strahlenschutzkommission, ``Orientierungshilfe für
   radiologische und nuklearmedizinische Untersuchungen'', In: ``Berichte
   der Strahlenschutzkommission (SSK) des Bundesministeriums für Umwelt,
-  Naturschutz und Reaktorsicherheit: Heft~51'', 2006, ISBN~3873441306, \url{https://campus--nes.de/fileadmin/user\_upload/Orientierungshilfe\_SSK.pdf}
+  Naturschutz und Reaktorsicherheit: Heft~51'', 2006, ISBN~3873441306, \url{https://campus-nes.de/fileadmin/user\_upload/Orientierungshilfe\_SSK.pdf}
+\item
+	Wikipedia, ``Compton-spektrum.svg'', \url{https://de.wikipedia.org/wiki/Datei:Compton-spektrum.svg}, Abruf am 08.04.2024
 \end{enumerate}
 
 \end{document}
