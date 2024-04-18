@@ -219,7 +219,7 @@ Da die Atome an der Oberfläche des Atomkerns weniger Nachbarn haben als die Nuk
 
 \begin{eqnarray}
     E_O &=& - a_O\cdot \sqrt[3]{A^2} \label{Oberflächenterm} \\
-    a_V &=& 18.34\mathrm{\,MeV}
+    a_O &=& 18.34\mathrm{\,MeV}
 \end{eqnarray}
 
 \hypertarget{coulombterm}{%
@@ -350,7 +350,7 @@ Nun werden relativistische Korrekturen durchgeführt, die zu der vollständigen 
 \subsubsection{Diskussion des
 Kurvenverlaufs}\label{diskussion-des-kurvenverlaufs}}
 
-Bei niedrigen Energien steigt die Kurve beinahe linear an. Dies ist darauf zurückzuführen, dass ein langsames $\alpha$--Teilchen aufgrund der langen Wirkzeit beim Durchqueren des Mediums zufällig Elektronen aufnimmt und abgibt. Dies wiederum reduziert die die effektive Ladung des $\alpha$--Teilchens und somit den Energieverlust.
+Bei niedrigen Energien steigt die Kurve beinahe linear an. Dies ist darauf zurückzuführen, dass ein langsames $\alpha$--Teilchen aufgrund der langen Wirkzeit beim Durchqueren des Mediums zufällig Elektronen aufnimmt und abgibt. Dies wiederum reduziert die effektive Ladung des $\alpha$--Teilchens und somit den Energieverlust.
 
 Für $\alpha$--Teilchen findet sich bei kinetischen Energien von etwa $0.5-0.6\mathrm{\,MeV}$ ein Peak. Bei der Verbreiterung des Peaks der Verteilung sind nicht--statistische Effekte von höherer Relevanz, als das statistische Energie--Straggling.
 
@@ -371,10 +371,12 @@ Bei sehr großen Energien kann z.B. die Wechselwirkung des Projektils mit dem At
 
 Weiterhin muss das Projektil sehr schwer im Vergleich zu Elektronen sein, da ansonsten die Näherung einer geraden Flugbahn des Projektils nicht mehr angenommen werden kann.
 
+% Kommentar: Hier seid ihr ein bisschen inkonsistent. Ihr diskutiert den experimentellen Verlauf der Bethe Bloch Gleichung, aber beim Geltungsbereicht bezieht ihr euch auf den Geltungsbereicht der Formel.  Eine Abbildung hilft außerdem zu verstehen, wovon ihr redet.
+
 \hypertarget{bragg-kurve}{%
 \subsubsection{Bragg--Kurve}\label{bragg-kurve}}
 
-Die Bragg--Kurve beschreibt den gesamten Energieverlust eines geladenen Teilchens abhängig von der in einem Bremsmedium zurückgelegten Strecke. Damit wird sie durch die integrierte Bethe--Bloch--Gleichung beschrieben.
+Die Bragg--Kurve beschreibt den Energieverlust eines geladenen Teilchens abhängig von der in einem Bremsmedium zurückgelegten Strecke. Damit wird sie durch die integrierte Bethe--Bloch--Gleichung beschrieben.
 
 \begin{eqnarray}
     \frac{\Delta E}{\mathrm dx}(x) &=&
@@ -597,7 +599,7 @@ Nun kann das relative Massenbremsvermögen $Q_F$ eines Stoffes $F$ relativ zur L
 
 Das sogenannte Straggling bezeichnet eine statistische Streuung der betrachteten Größe mit einer bekannten Verteilung. In diesem Experiment gibt es Reichweiten--Straggling, Energie--Straggling und Winkel--Straggling.
 
-Beim \emph{Reichweiten--Straggling} kommt zu einer normalverteilten Streuung der Reichweiten $R_i$ um die mittlere Reichweite $\bar{R}$. Der Reichweitenstraggling--Parameter $\alpha^R_0$ und ist folgendermaßen durch die experimentell gemessene Reichweite
+Beim \emph{Reichweiten--Straggling} kommt es zu einer normalverteilten Streuung der Reichweiten $R_i$ um die mittlere Reichweite $\bar{R}$. Der Reichweitenstraggling--Parameter $\alpha^R_0$ und ist folgendermaßen durch die experimentell gemessene Reichweite
 $R_\mathrm{ex}$ und die mittlere Reichweite $\bar{R}$ zu bestimmen.
 
 \begin{eqnarray}
@@ -628,7 +630,7 @@ Im Grenzbereich zwischen diesen Schichten rekombinieren sich Elektronen und Löc
 \end{figure}
 
 \noindent
-Wird eine äußere Spannung angelegt, wächst oder schrumpft die Verarmungszone, bei ausreichender Spannung verschwindet sie. In letzterem Fall fließt Strom, daher nennt man diese Richtung \emph{Durchlassrichtung}. Wird ein Strom in \emph{Sperrrichtung} angelegt, so wird die Verarmungszone dagegen vergrößert. Daher kann kein Strom fließen.
+Wird eine äußere Spannung angelegt, wächst oder schrumpft die Verarmungszone, bei ausreichender Spannung verschwindet sie. In letzterem Fall fließt Strom, daher nennt man diese Richtung \emph{Durchlassrichtung}. Wird eine Spannung in \emph{Sperrrichtung} angelegt, so wird die Verarmungszone dagegen vergrößert. Daher kann kein Strom fließen.
 
 Dringt ein $\alpha$--Teilchen in die Verarmungszone ein, entstehen Elektronen--Loch--Paare, während das $\alpha$--Teilchen gebremst wird. Die Elektronen und Löcher werden durch eine anliegende Spannung getrennt und sammeln sich an den Enden des jeweiligen Halbleiters. Durch einen empfindlichen Vorverstärker wird ein Spannungsimpuls erzeugt, der von der Energie des Teilchen abhängt. Um die Verarmungszone und damit das Detektionsvolumen zu maximieren, wird eine Spannung in Sperrrichtung angelegt.
 
@@ -717,7 +719,7 @@ Der Fehler der gemessenen Zählraten $r$ ist durch den statistische Fehler besti
 Da dieser Fehler aufgrund der hohen Anzahl an gezählten $\alpha$--Teilchen sehr gering ausfällt, wird er in den folgenden Fehlerfortpflanzungen vernachlässigt werden.
 
 \begin{eqnarray}
-	\Delta r = \frac{1}{\sqrt{N}}
+	\Delta r = \frac{r}{\sqrt{N}}
 	\label{eq:statFehler}
 \end{eqnarray}
 
@@ -930,7 +932,7 @@ Beide Messmethoden liefern ähnliche Ergebnisse, der relative Fehler zwischen ih
 
 Obwohl das Oszilloskop einen deutlich größeren Fehler aufzeigt, ist damit gut erkennbar, ob noch ein Signal gemessen wurde. Auch wenn das eintreffende Signal schwach ist, lässt es sich durch das Vergrößern der Messkurve klar erkennen.
 
-Die Zählschwelle des $\ce{Si}$--Oberflächen--Sperrschichtzählers hingegen ist nicht so durchschaubar. Es ist durchaus möglich, dass Teilchen nicht gezählt wurden, weil ihre Restenergie zu gering war.
+Die Zählschwelle ist nicht so durchschaubar. Es ist durchaus möglich, dass Teilchen nicht gezählt wurden, weil ihre Restenergie zu gering war.
 
 Daher wird in weiteren Betrachtungen die durch die Spannung gemessene mittlere Reichweite in Luft $\bar R$ verwendet werden.
 
