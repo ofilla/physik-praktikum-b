@@ -13,6 +13,7 @@ Bei einigen Versuchen ist Code in Form von [Jupyter](https://jupyter.org)-Notebo
 * B2.8: Versetzungen in Lithiumfluorid ([PDF](./B2.8/B2.8.pdf), [LaTeX](./B2.8/B2.8.tex))
 
 ## 3. Kernphysik
+* B3.1: Statistik der Kernzerfälle ([PDF](./B3.1/B3.1.pdf), [LaTeX](./B3.1/B3.1.tex))
 * B3.3: Reichweite von Alphastrahlung ([PDF](./B3.3/B3.3.pdf), [LaTeX](./B3.3/B3.3.tex))
 	* Lernkarten ([PDF](./B3.3/B3.3_Lernkarten.pdf), [LaTeX](./B3.3/B3.3_Lernkarten.tex))
 	* Auswertung (Julia) ([Jupyter](./B3.3/data/Auswertung.ipynb), [PDF](./B3.3/data/Auswertung.pdf))

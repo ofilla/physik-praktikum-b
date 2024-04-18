@@ -1,0 +1,173 @@
+% based on a template made by the university of cologne
+% http://www.mi.uni-koeln.de/wp-MIEDV/wp-content/uploads/2016/07/LaTeX-Vorlage.zip - 2023-11-02
+\documentclass[12pt,a4paper]{scrartcl}
+
+\addtokomafont{sectioning}{\rmfamily}
+\usepackage[ngerman]{babel}% deutsches Sprachpaket wird geladen
+\usepackage[T1]{fontenc} % westeuropäische Codierung wird verlangt
+\usepackage[utf8]{inputenc}% Umlaute werden erlaubt
+\usepackage[usenames]{color} % Erlaubt die Benutzung der namen im Farbpaket und deren Änderung
+\usepackage{amsmath} % Erweiterung für den Mathe-Satz
+\usepackage{amssymb} % alle Zeichen aus msam und msmb werden dargestellt
+\usepackage{graphicx} % Graphiken und Bilder können eingebunden werden
+%\usepackage{multirow} % erlaubt in einer Spalte einer Tabelle die Felder in mehreren Zeilen zusammenzufassen
+\usepackage{enumerate} % erlaubt Nummerierungen
+\usepackage{xurl} % Dient zur Auszeichnung von URLs; setzt die Adresse in Schreibmaschinenschrift.
+\usepackage[center]{caption}  % Bildunterschrift wird zentriert
+%\usepackage{subfigure} % mehrere Bilder können in einer fugure-Umgebung verwendet werden
+%\usepackage{longtable} % Diese Umgebung ist ähnlich definiert wie die tabular-Umgebung, erlaubt jedoch mehrseitige Tabellen.
+%\usepackage{paralist} % Modifikation der bereits bestehenden Listenumgebungen
+\usepackage{lmodern}% Für die Schrift
+\usepackage[hidelinks]{hyperref} % Links und Verweise werden innerhalb von PDF Dokumenten erzeugt
+%\usepackage{wrapfig} % Das Paket ermöglicht es von Schrift umflossene Bilder und Tabellen einzufügen.
+\usepackage{latexsym} % LaTeX-Symbole werden geladen
+\usepackage{tikz} % Erlaubt es mit tikz zu zeichnen
+\usepackage{tabularx} % Erlaubt Tabellen
+\usepackage{algorithm} % Erlaubt Pseudocode
+\usepackage{color} % Farbpaket wird geladen
+%\usepackage{stmaryrd} % St Mary Road Symbole werden geladen
+\usepackage{physics}
+\usepackage{mhchem} % Chemie: \ce & \pu
+
+\numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
+\newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
+\newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
+
+% disable commands
+\renewcommand{\[}{} % math block start
+\renewcommand{\]}{\noindent} % math block end
+\newcommand{\tightlist}{} % created in enumerations
+
+\hypersetup{
+  pdftitle={B3.1},
+  pdfcreator={LaTeX via pandoc}}
+
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{6}
+
+\begin{document}
+\begin{titlepage}
+	\pagestyle{empty}
+
+	\begin{center}
+
+	\textsc{\LARGE Universität zu Köln }\\ [0.4cm]
+	\textsc{Mathematisch-Naturwissenschaftliche Fakultät} \\[1.5cm]
+
+	\includegraphics[width=0.45\textwidth]{../media/uni.jpg}\\[1.5cm]  % Uni-Logo wird geladen
+
+	\textsc{\Large Praktikum~B}\\[2mm]
+	\textsc{}\\[10mm]
+	\HRule \\[0.4cm]
+
+		{	\Huge \bfseries B3.1}\\[0.4cm]
+			{	\huge \bfseries Statistik der Kernzerfälle}\\[0.3cm]
+	
+	\HRule \\[3cm]
+
+ 	\begin{center}
+		\textsc{\Large Catherine~Tran } \\[3pt]
+		\textsc{\Large Carlo~Kleefisch } \\[3pt]
+		\textsc{\Large Oliver~Filla } \\[3pt]
+	\end{center}
+	\end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+\hypertarget{einleitung}{%
+\section{Einleitung}\label{einleitung}}
+
+\clearpage
+\hypertarget{theoretische-grundlagen}{%
+\section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
+
+\hypertarget{der-chi2anpassungstest}{%
+\subsection{\texorpdfstring{Der
+\(\chi^2\)--Anpassungstest}{Der \textbackslash chi\^{}2--Anpassungstest}}\label{der-chi2anpassungstest}}
+
+Der \(\chi^2\)--Anpassungstest (Chi--Quadrat--Test) dient dazu, eine
+Verteilung von Zufallsvariablen mit einer theoretischen Verteilung zu
+vergleichen. Man kann mithilfe des Tests bewerten, ob die
+Zufallsvariablen der Verteilung entsprechen können.
+
+\hypertarget{hypothesentest}{%
+\subsubsection{Hypothesentest}\label{hypothesentest}}
+
+Ein Hypothesentest oder Statistischer Test dient dazu, durch eine
+Hypothese mittels statistischer Messungen zu prüfen.
+
+Dazu verwendet man eine \emph{Nullhypothese}\footnote{\emph{Hypothesis
+  to be nullified} \([5]\)} \(H_0\) und eine \emph{Gegenhypothese} oder
+\emph{Alternativhypothese} \(H_1\), die sich unterscheiden. Ziel des
+Tests ist es, die Alternativhypothese \(H_1\) zu belegen. Falls dies
+nicht gelingt, muss man die Nullhypothese \(H_0\) als wahr annehmen.
+Diese wird nicht überprüft. \([2]\)
+
+Aufgrund der Zufälligkeit der Ereignisse kann es dabei zwei Arten von
+Fehlern geben. Ein \(\alpha\)--Fehler beschreibt das irrtümliche
+Ablehnen von \(H_0\), während ein \(\beta\)--Fehler das fälschliche
+Annehmen von \(H_0\) bezeichnet.
+
+\hypertarget{fehlerarten}{%
+\subsubsection{Fehlerarten}\label{fehlerarten}}
+
+Ein \emph{Fehler erster Art} oder \(\alpha\)--Fehler beschreibt die
+fälschliche Ablehnung der Nullhypothese \(H_0\) in einem Statistischen
+Test. Man nimmt z.B. an, dass ein Würfel gezinkt ist \((H_1)\), obwohl
+er in Wahrheit fair ist \((H_0)\). Hierbei ist die \(H_0\) die Annahme
+eines fairen Würfels. Man spricht hier auch von einem
+\emph{falsch--positiven} Ergebnis. \([3]\)
+
+Ein \emph{Fehler zweiter Art} oder \emph{\(\beta\)--Fehler} beschreibt
+umgekehrt die fälschliche Akzeptanz der Nullhypothese \(H_0\).
+Beispielsweise geht man davon aus, dass ein Würfel fair ist \((H_0)\),
+obwohl er tatsächlich unfair ist \((H_1)\). Man spricht hier auch von
+einem \emph{falsch--negativen} Ergebnis. \([3]\)
+
+Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit,
+einen \(\alpha\)--Fehler zu begehen. \([4]\)
+
+\clearpage
+\hypertarget{durchfuxfchrung}{%
+\section{Durchführung}\label{durchfuxfchrung}}
+
+\clearpage
+\hypertarget{auswertung}{%
+\section{Auswertung}\label{auswertung}}
+
+\hypertarget{fazit}{%
+\clearpage
+\section{Fazit}\label{fazit}}
+
+\clearpage
+\hypertarget{literatur}{%
+\section{Literatur}\label{literatur}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Universität zu Köln, ``B3.1: Statistik der Kernzerfälle'', Januar
+  2021, Online verfügbar unter
+  \url{https://www.ikp.uni-koeln.de/fileadmin/data/praktikum/B3.1_statistik_de.pdf}
+\item
+  Wikipedia, ``Statistischer Test'',
+  \url{https://de.wikipedia.org/wiki/Statistischer_Test}, Abruf am
+  18.04.2024
+\item
+  Wikipedia, ``Fehler 1. und 2. Art'',
+  \url{https://de.wikipedia.org/wiki/Fehler_1._und_2._Art}, Abruf am
+  18.04.2024
+\item
+  Wikipedia, ``Statistische Signifikanz'',
+  \url{https://de.wikipedia.org/wiki/Statistische_Signifikanz}, Abruf am
+  18.04.2024
+\item
+  G. Gigerenzer, ``Mindless statistics'', 2004, \emph{The  Journal of Socio--Economics},\\
+  DOI~\href{https://doi.org/10.1016/j.socec.2004.09.033}{0.1016/j.socec.2004.09.033}
+\end{enumerate}
+
+\end{document}
