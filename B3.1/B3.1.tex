@@ -172,8 +172,8 @@ Gültigkeitsintervall durch folgende Gleichungen bestimmt wird.
 
 \[
 \begin{eqnarray}
-    F(\chi^2_\mathrm{min}, f) &=& 0.025 \\
-    F(\chi^2_\mathrm{max}, f) &=& 0.975
+    F(\chi^2_\mathrm{min}, f) &=& 0.025 \label{eq:ChiMinFormula} \\
+    F(\chi^2_\mathrm{max}, f) &=& 0.975 \label{eq:ChiMaxFormula}
 \end{eqnarray}
 \]
 
@@ -181,8 +181,10 @@ Gültigkeitsintervall durch folgende Gleichungen bestimmt wird.
 \subsubsection{\texorpdfstring{Die
 \(\chi^2\)--Verteilung}{Die \textbackslash chi\^{}2--Verteilung}}\label{die-chi2verteilung}}
 
-Sei \(A\) standardnormalverteilt, dann ist die \(\chi_1^2\)--Verteilung
-eine quadrierte Normalverteilung mit einem Freiheitsgrad. Daher ist der
+Sei \(A\) standardnormalverteilt\footnote{Diese Annahme ist bei
+  ausreichend vielen Messung durch das Gesetz der großen Zahl
+  gerechtfertigt.}, dann ist die \(\chi_1^2\)--Verteilung eine
+quadrierte Normalverteilung mit einem Freiheitsgrad. Daher ist der
 Erwartungswert \(\expval{\chi_1^2}=1\). Gibt es mehrere Freiheitsgrade
 \(f\), so müssen \(f\) Erwartungswerte \(\expval{\chi_i^2}\) addiert
 werden, um den gesamten Erwartungswert zu ermitteln. Dies wird durch die
@@ -210,18 +212,100 @@ Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution
 \(\expval{\chi_f^2}=f\) und die Varianz \(\sigma_{\chi^2}=2f\).
 
 \[
-\begin{eqnarray}
-    F(x, 2f) &=&
+\begin{align}
+    F(x, 2f) &=
         \int_0^x
             \frac{y^{f-1}}{2^f}
                 \frac{\exp[-\frac{y}{2}]}{\Gamma(f)}
             \,\mathrm dy \\
-    \expval{\chi_f^2} &=&
+    \expval{\chi_f^2} &=
         \int_0^\infty x\cdot f(x, f)
-            \,\mathrm dx \qquad\qquad\quad= f \\
-    \sigma_{\chi^2} &=&
+            \,\mathrm dx
+        &&= f \\
+    \sigma_{\chi^2} &=
         \int_0^\infty \left(x - \expval{\chi_f^2}\right)^2 \cdot f(x, f)
-            \,\mathrm dx \ \ = 2f
+            \,\mathrm dx
+         &&=2f
+\end{align}
+\]
+
+\hypertarget{versuchsidee}{%
+\subsection{Versuchsidee}\label{versuchsidee}}
+
+In diesem Versuch wird \(\ce{^{137}Cs}\) als radioaktive Probe
+verwendet, das eine Halbwertszeit \(t_\frac{1}{2}\approx 30\,\mathrm a\)
+hat.
+
+Damit soll die folgende Hypothese getestet, die Präparatstärke sei
+konstant und habe den Wert \(\bar n\). Hierbei ist \(\bar n\) der
+Mittelwert von vielen Einzelmessungen \(n_i\) über eine kurze Zeit von
+\(\Delta t=20\,\mathrm s\), der durch Gleichung \(\eqref{mittlereRate}\)
+bestimmt wird. All diese \(N\) Messungen werden in einem Zeitraum von
+wenigen Stunden absolviert.
+
+Da der Zeitraum der Messungen sehr kurz gegen die Halbwertszeit ist,
+kann man annehmen, dass die Stärke der Probe sich im Rahmen der
+Messungenauigkeit nicht verändert.
+
+Damit können die Differenzen zum Mittelwert \((n_i-\bar n)\) ermittelt
+werden. Nach dem zentralen Grenzwertsatz sind die relativen Differenzen
+standardnormalverteilt. Dadurch kann die Abweichung \(\chi^2\) wie folgt
+ermittelt werden.
+
+\[
+\begin{eqnarray}
+    \bar n &=& \sum_{i=1}^N \frac{n_i}{N} \label{mittlereRate} \\
+    \chi^2 &=& \sum_{i=1}^N \frac{(n_i-\bar n)^2}{m} \label{ChiSquared}
+\end{eqnarray}
+\]
+
+Die Messung hat einen einzelnen Freiheitsgrad \(f=1\), dadurch können
+die Intervallgrenzen für \(\chi^2\) nach
+\(\eqref{eq:ChiMinFormula}\)\(-\eqref{eq:ChiMaxFormula}\) bestimmt
+werden. \([6]\)
+
+\[
+\begin{eqnarray}
+    \chi^2_\mathrm{min} &=& 0.001 \label{ChiMin} \\
+    \chi^2_\mathrm{max} &=& 5.024 \label{ChiMax}
+\end{eqnarray}
+\]
+
+\hypertarget{einfluss-der-totzeit}{%
+\subsubsection{Einfluss der Totzeit}\label{einfluss-der-totzeit}}
+
+Die Totzeit der Länge \(\tau\) hat einen Einfluss auf die gemessenen
+Zählraten. Anstatt einer Zählrate von \(\frac{n_i}{\Delta t}\) wird eine
+totzeitkorrigierte Anzahl \(k_i\) gemessen. Dadurch kann ein
+korrigierter Mittelwert \(M\) nach \(\eqref{mittlereRate}\) bestimmt
+werden und man erhält eine korrigierte Abweichung
+\(\chi^2_\mathrm{korr}\).
+
+\[
+\begin{eqnarray}
+    k_i &=&
+        \frac{
+            n_i
+        }{
+            1 - \frac{m}{\Delta t}\tau
+        } \label{korrRate} \\
+    M &=& \sum_{i=1}^N \frac{k_i}{N} \label{korrAVG} \\
+    \chi^2_\mathrm{korr} &=& \sum_{i=1}^N
+        \frac{(k_i - M)^2}{M} \label{ChiKorrDef}
+\end{eqnarray}
+\]
+
+Durch Einsetzen der Gleichungen \(\eqref{korrRate}\)-\(\eqref{korrAVG}\)
+sowie \(\eqref{ChiSquared}\) kann man \(\eqref{ChiKorrDef}\)
+vereinfachen und man erhält die folgende vereinfachte Relation. Hier
+sieht man, dass die korrigierte Abweichung \(\chi^2_\mathrm{korr}\)
+kleiner als die nicht--korrigierte Abweichung \(\chi^2\) ist, was
+kontraintuitiv wahrgenommen werden kann.
+
+\[
+\begin{eqnarray}
+    \chi^2_\mathrm{korr} &=&
+        \frac{1}{1 - \frac{m}{\Delta t}\tau} \cdot \chi^2
 \end{eqnarray}
 \]
 
@@ -233,8 +317,8 @@ Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution
 \hypertarget{auswertung}{%
 \section{Auswertung}\label{auswertung}}
 
-\hypertarget{fazit}{%
 \clearpage
+\hypertarget{fazit}{%
 \section{Fazit}\label{fazit}}
 
 \clearpage
@@ -261,8 +345,12 @@ Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution
   \url{https://de.wikipedia.org/wiki/Statistische_Signifikanz}, Abruf am
   18.04.2024
 \item
-  G. Gigerenzer, ``Mindless statistics'', 2004, \emph{The  Journal of Socio--Economics},\\
-  DOI~\href{https://doi.org/10.1016/j.socec.2004.09.033}{0.1016/j.socec.2004.09.033}
+  G. Gigerenzer, ``Mindless statistics'', 2004, \emph{The Journal of
+  Socio--Economics}, p.587--606, DOI
+  \href{https://doi.org/10.1016/j.socec.2004.09.033}{0.1016/j.socec.2004.09.033}
+\item
+  K. C. Kapur \& M. Pecht, ``Reliability Engineering'': Appendix E,
+  Wiley 2014, DOI~\href{https://doi.org/10.1002/9781118841716}{10.1002/9781118841716}
 \end{enumerate}
 
 \end{document}
