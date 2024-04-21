@@ -84,14 +84,8 @@
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
 
-\hypertarget{der-chi2anpassungstest}{%
-\subsection{\texorpdfstring{Der
-\(\chi^2\)--Anpassungstest}{Der \textbackslash chi\^{}2--Anpassungstest}}\label{der-chi2anpassungstest}}
-
-Der \(\chi^2\)--Anpassungstest (Chi--Quadrat--Test) dient dazu, eine
-Verteilung von Zufallsvariablen mit einer theoretischen Verteilung zu
-vergleichen. Man kann mithilfe des Tests bewerten, ob die
-Zufallsvariablen der Verteilung entsprechen können.
+\hypertarget{statistische-tests}{%
+\subsection{Statistische Tests}\label{statistische-tests}}
 
 \hypertarget{hypothesentest}{%
 \subsubsection{Hypothesentest}\label{hypothesentest}}
@@ -128,7 +122,108 @@ obwohl er tatsächlich unfair ist \((H_1)\). Man spricht hier auch von
 einem \emph{falsch--negativen} Ergebnis. \([3]\)
 
 Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit,
-einen \(\alpha\)--Fehler zu begehen. \([4]\)
+einen \(\alpha\)--Fehler zu begehen. \([4]\) In einem
+\emph{Alternativtest} dagegen beschreibt die Signifikanz die
+Wahrscheinlichkeit, einen \(\alpha\)- oder einen \(\beta\)--Fehler zu
+machen. Bei einer Signifikanz \(Y\) sind \(\alpha\)- und
+\(\beta\)--Fehler mit einer Wahrscheinlichkeit von je \(\frac{Y}{2}\)
+erlaubt.
+
+\hypertarget{der-chi2anpassungstest}{%
+\subsubsection{\texorpdfstring{Der
+\(\chi^2\)--Anpassungstest}{Der \textbackslash chi\^{}2--Anpassungstest}}\label{der-chi2anpassungstest}}
+
+Der \(\chi^2\)--Anpassungstest dient dazu, eine Verteilung von
+Zufallsvariablen \(A\) mit einer theoretischen Verteilung zu
+vergleichen. Man kann mithilfe des Tests bewerten, ob die
+Zufallsvariablen der Verteilung entsprechen können. Hierbei werden
+sowohl Fehler 1. Art als auch Fehler 2. Art berücksichtigt.
+
+Die Grundidee dahinter ist, einen Erwartungswert \(\expval{A}\) und
+seine Varianz \(\sigma_A^2\) bewerten zu können. Das Maß für die
+Abweichung von der Hypothese wird für einen Freiheitsgrad durch
+\(\chi^2\) beschrieben, \footnote{Man könnte auch den Betrag \(|x_i|\)
+  anstatt des Quadrates \(x_i^2\) wählen. Dies wird nicht gemacht, weil
+  damit schwieriger zu rechnen ist.} was durch die
+\(\chi^2\)--Verteilung beschrieben wird.
+
+\[
+\begin{eqnarray}
+    \chi^2 &=& \sum_i x_i^2
+\end{eqnarray}
+\]
+
+Mithilfe der \(\chi^2\)--Verteilung kann eine Signifikanz \(Y\)
+festgelegt werden. Damit kann ein Intervall
+\([\chi^2_\mathrm{min}, \chi^2_\mathrm{max}]\) durch die
+Verteilungsfunktion \(F(x, f)\) ermittelt werden. Liegt das ermittelte
+\(\chi^2\) in diesem Interval, so kann \(H_1\) als signifikant gültig
+angenommen werden.
+
+\[
+\begin{eqnarray}
+    F(\chi^2_\mathrm{min}, f) &=& \frac{Y}{2} \\
+    F(\chi^2_\mathrm{max}, f) &=& 1 - \frac{Y}{2}
+\end{eqnarray}
+\]
+
+Oft wird die Signifikanz von \(Y=5\,\%\) gefordert, wodurch das
+Gültigkeitsintervall durch folgende Gleichungen bestimmt wird.
+
+\[
+\begin{eqnarray}
+    F(\chi^2_\mathrm{min}, f) &=& 0.025 \\
+    F(\chi^2_\mathrm{max}, f) &=& 0.975
+\end{eqnarray}
+\]
+
+\hypertarget{die-chi2verteilung}{%
+\subsubsection{\texorpdfstring{Die
+\(\chi^2\)--Verteilung}{Die \textbackslash chi\^{}2--Verteilung}}\label{die-chi2verteilung}}
+
+Sei \(A\) standardnormalverteilt, dann ist die \(\chi_1^2\)--Verteilung
+eine quadrierte Normalverteilung mit einem Freiheitsgrad. Daher ist der
+Erwartungswert \(\expval{\chi_1^2}=1\). Gibt es mehrere Freiheitsgrade
+\(f\), so müssen \(f\) Erwartungswerte \(\expval{\chi_i^2}\) addiert
+werden, um den gesamten Erwartungswert zu ermitteln. Dies wird durch die
+Wahrscheinlichkeitsdichte (PDF\footnote{\emph{probability density
+  function}}) \(f(x, f)\) beschrieben,\footnote{Achtung: Hier wird zur
+  besseren Lesbarkeit \(f(x, 2f)\) angegeben, die Zahl der
+  Freiheitsgrade wird in der Funktion halbiert.} wobei die Gammafunktion
+\(\Gamma(x)\) benötigt wird.
+
+\[
+\begin{eqnarray}
+    f(x, 2f) &=&
+        \begin{cases}
+                \frac{x^{f-1}}{2^f}
+                    \frac{\exp[-\frac{x}{2}]}{\Gamma(f)}
+                    & : x\ge 0 \\
+                0 & : x < 0
+        \end{cases} \\
+    \Gamma(x) &=& \int_0^\infty t^{x-1}\cdot \mathrm e^t \,\mathrm dt
+\end{eqnarray}
+\]
+
+Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution
+  function}}) \(F(x, f)\) ist dabei komplex und hat den Erwartungswert
+\(\expval{\chi_f^2}=f\) und die Varianz \(\sigma_{\chi^2}=2f\).
+
+\[
+\begin{eqnarray}
+    F(x, 2f) &=&
+        \int_0^x
+            \frac{y^{f-1}}{2^f}
+                \frac{\exp[-\frac{y}{2}]}{\Gamma(f)}
+            \,\mathrm dy \\
+    \expval{\chi_f^2} &=&
+        \int_0^\infty x\cdot f(x, f)
+            \,\mathrm dx \qquad\qquad\quad= f \\
+    \sigma_{\chi^2} &=&
+        \int_0^\infty \left(x - \expval{\chi_f^2}\right)^2 \cdot f(x, f)
+            \,\mathrm dx \ \ = 2f
+\end{eqnarray}
+\]
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
