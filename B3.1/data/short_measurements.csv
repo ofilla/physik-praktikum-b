@@ -1,0 +1,14 @@
+# sample_name	seconds	voltage	count
+sample_6_7	300	500	20300
+sample_6_7	300	550	25509
+sample_6_7	300	600	28522
+sample_6	300	500	11044
+sample_6	300	550	12260
+sample_6	300	600	12917
+sample_7	300	500	15833
+sample_7	300	550	17914
+sample_7	300	600	19421
+no_sample	300	500	2396
+no_sample	300	550	2513
+no_sample	300	600	2550
+

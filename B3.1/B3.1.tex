@@ -264,19 +264,7 @@ ermittelt werden.
 \[
 \begin{eqnarray}
     \bar n &=& \sum_{i=1}^N \frac{n_i}{N} \label{mittlereRate} \\
-    \chi^2 &=& \sum_{i=1}^N \frac{(n_i-\bar n)^2}{m} \label{ChiSquared}
-\end{eqnarray}
-\]
-
-Die Messung hat einen einzelnen Freiheitsgrad \(f=1\), dadurch können
-die Intervallgrenzen für \(\chi^2\) nach
-\(\eqref{eq:ChiMinFormula}\)\(-\eqref{eq:ChiMaxFormula}\) bestimmt
-werden. \([6]\)
-
-\[
-\begin{eqnarray}
-    \chi^2_\mathrm{min} &=& 0.001 \label{ChiMin} \\
-    \chi^2_\mathrm{max} &=& 5.024 \label{ChiMax}
+    \chi^2 &=& \sum_{i=1}^N \frac{(n_i-\bar n)^2}{\bar n} \label{ChiSquared}
 \end{eqnarray}
 \]
 
@@ -326,6 +314,70 @@ kontraintuitiv wahrgenommen werden kann.
 \clearpage
 \hypertarget{auswertung}{%
 \section{Auswertung}\label{auswertung}}
+
+\hypertarget{poissonverteilung}{%
+\subsection{Poissonverteilung}\label{poissonverteilung}}
+
+\hypertarget{gauuxdfverteilung}{%
+\subsection{Gaußverteilung}\label{gauuxdfverteilung}}
+
+\hypertarget{intervallverteilung}{%
+\subsection{Intervallverteilung}\label{intervallverteilung}}
+
+\hypertarget{chi2test}{%
+\subsection{\texorpdfstring{\(\chi^2\)--Test}{\textbackslash chi\^{}2--Test}}\label{chi2test}}
+
+Es werden \(51\) zufällige Messergebnisse gewählt, aus denen \(\chi^2\)
+gewählt wird. Da der Mittelwert einen statistischen Freiheitsgrad
+bindet, bleiben \(50\) Freiheitsgrade übrig, um die
+Gültigkeitsintervalle zu bilden.
+
+\[
+\begin{eqnarray}
+    \chi^2_\mathrm{min} &=& 32.357 \\
+    \chi^2_\mathrm{max} &=& 71.420
+\end{eqnarray}
+\]
+
+\hypertarget{hypothese-h_1}{%
+\subsubsection{\texorpdfstring{Hypothese
+\(H_1\)}{Hypothese H\_1}}\label{hypothese-h_1}}
+
+Nach \(\eqref{ChiSquared}\):
+
+\[
+\begin{eqnarray}
+    \bar x &=& \bar n \\
+    \chi^2_1 &=& \sum_i \frac{(x_i-\bar x)^2}{\bar x}
+\end{eqnarray}
+\]
+
+\hypertarget{hypothese-h_2}{%
+\subsubsection{\texorpdfstring{Hypothese
+\(H_2\)}{Hypothese H\_2}}\label{hypothese-h_2}}
+
+\[
+\begin{eqnarray}
+    \bar x^\prime &=& 0.9\cdot\bar n \\
+    \chi^2_2 &=& \sum_i \frac{(x_i-\bar x^\prime)^2}{\bar x^\prime}
+\end{eqnarray}
+\]
+
+\hypertarget{hypothese-h_3}{%
+\subsubsection{\texorpdfstring{Hypothese
+\(H_3\)}{Hypothese H\_3}}\label{hypothese-h_3}}
+
+Mit \(i\in[0, N]\):
+
+\[
+\begin{eqnarray}
+    \expval{x(i)} &=& \bar n - i \\
+    \chi^2_2 &=& \sum_i \frac{(x_i-(n - i))^2}{(n - i)}
+\end{eqnarray}
+\]
+
+\hypertarget{totzeit}{%
+\subsection{Totzeit}\label{totzeit}}
 
 \clearpage
 \hypertarget{fazit}{%
