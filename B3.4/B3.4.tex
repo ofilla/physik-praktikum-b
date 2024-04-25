@@ -650,40 +650,9 @@ Photons aus dem \(e^+ e^-\)--Annihilationprozess.
 
 \hypertarget{ortsaufluxf6sung}{%
 \subsection{Ortsauflösung}\label{ortsaufluxf6sung}}
+Es soll die Ortsauflösung der Koinzidenzmessung bestimmt werden. Dazu wurde die Quelle mittig auf dem Wagen positioniert. Daraufhin wurde der Wagen auf verschiedene Positionen im Bereich von $\pm 50\,\mathrm{mm}$ eingestellt und bei verschiedenen Positionen die Zählraten für jeweils $T_\mathrm{Ort}=60\,\mathrm{s}$ gemessen.
 
-Der Fehler der Position wird auf \(\pu{\pm 2 mm}\) gesetzt.
-
-\begin{tabular}[]{c|c}
-Position in \(\pu{mm}\) & Count \\
-\hline
-\(-50\pm 2\) & \(32\) \\
-\(-30\pm 2\) & \(112\) \\
-\(-20\pm 2\) & \(159\) \\
-\(-15\pm 2\) & \(229\) \\
-\(-8\pm 2\) & \(405\) \\
-\(-7\pm 2\) & \(414\) \\
-\(-6\pm 2\) & \(511\) \\
-\(-5\pm 2\) & \(486\) \\
-\(-4\pm 2\) & \(477\) \\
-\(-3\pm 2\) & \(493\) \\
-\(-2\pm 2\) & \(938\) \\
-\(-1\pm 2\) & \(1650\) \\
-\(0\pm 2\) & \(2971\) \\
-\(1\pm 2\) & \(2202\) \\
-\(2\pm 2\) & \(1616\) \\
-\(3\pm 2\) & \(686\) \\
-\(4\pm 2\) & \(446\) \\
-\(4\pm 2\) & \(512\) \\
-\(5\pm 2\) & \(538\) \\
-\(6\pm 2\) & \(498\) \\
-\(7\pm 2\) & \(467\) \\
-\(8\pm 2\) & \(487\) \\
-\(11\pm 2\) & \(335\) \\
-\(15\pm 2\) & \(249\) \\
-\(20\pm 2\) & \(170\) \\
-\(30\pm 2\) & \(95\) \\
-\(50\pm 2\) & \(78\) \\
-\end{tabular}
+In den Abständen von $\pm 8\,\mathrm{mm}$ wurden minimale Abstände von $\pm 1\,\mathrm{mm}$ zwischen den Positionen verändert, weiter außen wurden größere Abstände gewählt. Die Ungenauigkeit beim Einstellen der Position wird auf \(\pu{\pm 2 mm}\) gesetzt.
 
 \hypertarget{petscan}{%
 \subsection{PET--Scan}\label{petscan}}
@@ -853,6 +822,67 @@ geschätzt.
 \clearpage
 \hypertarget{auswertung}{%
 \section{Auswertung}\label{auswertung}}
+\hypertarget{auswertung-ortsaufluxf6sung}{\subsection{Ortsauflösung}\label{auswertung-ortsaufluxf6sung}}
+Zur Bestimmung der Ortsauflösung wird die Zählrate $r$ aus der Anzahl der Detektionen $n$ und der Messdauer $T_\mathrm{Ort}=60\,\mathrm{s}$ bestimmt. Der Fehler der Detektionszahl $\Delta n$ folgt aus statistischer Streuung, der Fehler der Zählrate $\Delta r$ folgt nach Gauß'scher Fehlerfortpflanzung. Hierbei kann die Messdauer als näherungsweise exakt angenommen werden, der Messfehler in der Zeit ist vernachlässigbar. Die Ergebnisse sind in Tabelle \ref{tab:Ortsauflösung} dargestellt.
+
+\begin{eqnarray}
+	\Delta n &=& \sqrt{n} \label{eq:Delta n} \\
+	r &=& \frac{n}{T_\mathrm{Ort}} \label{eq:Zählrate} \\
+	\Delta r &=& \frac{\Delta n}{T_\mathrm{Ort}}
+\end{eqnarray}
+
+%\noindent
+%Diese Daten sind in Abbildung \ref{abb:zaehlrate} dargestellt und gefittet worden. Dabei wurde eine Gaußverteilung angenommen. Dabei wurden der Mittelwert $\mu\approx 0.35\,\mathrm{mm}$, eine Standardabweichung $\sigma\approx1.89\,\mathrm{mm}$ und ein Streckungsfaktor $\alpha\approx 40\,\mathrm{Hz}$  ermittelt.
+
+%\begin{eqnarray}
+%    \phi(x, \mu, \sigma, \alpha) = \alpha\cdot \exp\left[- \frac{(x - \mu)^2}{2\sigma^2} \right]
+%\end{eqnarray}
+
+\noindent
+Die Ortsauflösung kann durch die ermittelte Standardabweichung bestimmt werden. Allerdings sieht man, dass auch außerhalb des Peaks erhöhte Werte gemessen werden. Daher wird die Messgenauigkeit durch die Auflösung auf $\Delta x_\mathrm{res}=\pm 1.9\,\mathrm{mm}$ festgelegt. Da schon bei der Messung ein Fehler $\Delta x=\pm 2\,\mathrm{mm}$ verwendet wurde, nimmt die Ungenauigkeit durch die Auflösung einen geringeren Einfluss auf die Messgenauigkeit und kann vernachlässigt werden.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{c|c|c||c|c|c}
+		$x\ [\mathrm{mm}]$ & $n\ [1]$ & $r\ [\mathrm{Hz}]$ &
+		$x\ [\mathrm{mm}]$ & $n\ [1]$ & $r\ [\mathrm{Hz}]$ \\
+		\hline
+		$\ \ \ 0 \pm 2$ & $2971 \pm 55$ & $49.52 \pm 0.91$ &---&---&--- \\
+		$\ +1 \pm 2$ & $2202 \pm 47$ & $36.70 \pm 0.78$ &
+		$\ -1 \pm 2$ & $1650 \pm 41$ & $27.50 \pm 0.68$ \\
+		$\ +2 \pm 2$ & $1616 \pm 40$ & $26.93 \pm 0.67$ &
+		$\ -2 \pm 2$ & $\ 938 \pm 31$ & $15.63 \pm 0.51$ \\
+		$\ +3 \pm 2$ & $\ 686 \pm 26$ & $11.43 \pm 0.44$ &
+		$\ -3 \pm 2$ & $\ 493 \pm 22$ & $\ 8.22 \pm 0.37$ \\
+		$\ +4 \pm 2$ & $\ 512 \pm 23$ & $\ 8.53 \pm 0.38$ &
+		$\ -4 \pm 2$ & $\ 477 \pm 22$ & $\ 7.95 \pm 0.36$ \\
+		$\ +5 \pm 2$ & $\ 538 \pm 23$ & $\ 8.97 \pm 0.39$ &
+		$\ -5 \pm 2$ & $\ 486 \pm 22$ & $\ 8.10 \pm 0.37$ \\
+		$\ +6 \pm 2$ & $\ 498 \pm 22$ & $\ 8.30 \pm 0.37$ &
+		$\ -6 \pm 2$ & $\ 511 \pm 23$ & $\ 8.52 \pm 0.38$ \\
+		$\ +7 \pm 2$ & $\ 467 \pm 22$ & $\ 7.78 \pm 0.36$ &
+		$\ -7 \pm 2$ & $\ 414 \pm 20$ & $\ 6.90 \pm 0.34$ \\
+		$\ +8 \pm 2$ & $\ 487 \pm 22$ & $\ 8.12 \pm 0.37$ &
+		$\ -8 \pm 2$ & $\ 405 \pm 20$ & $\ 6.75 \pm 0.34$ \\
+		$+11 \pm 2$ & $\ 335 \pm 18$ & $\ 5.58 \pm 0.31$ &---&---&---\\
+		$+15 \pm 2$ & $\ 249 \pm 16$ & $\ 4.15 \pm 0.26$ &
+		$-15 \pm 2$ & $\ 229 \pm 15$ & $\ 3.82 \pm 0.25$ \\
+		$+20 \pm 2$ & $\ 170 \pm 13$ & $\ 2.83 \pm 0.22$ &
+		$-20 \pm 2$ & $\ 159 \pm 13$ & $\ 2.65 \pm 0.21$ \\
+		$+30 \pm 2$ & $\ \ 95 \pm 10$ & $\ 1.58 \pm 0.16$ &
+		$-30 \pm 2$ & $\ 112 \pm 11$ & $\ 1.87 \pm 0.18$ \\
+		$+50 \pm 2$ & $\ 78 \pm 9$ & $\ 1.30 \pm 0.15$ &---&---&---
+	\end{tabular}
+	\caption{Messergebnisse der Ortsauflösung}
+	\label{tab:Ortsauflösung}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../media/B3.4/Ortsaufloesung_fit.png}
+	\caption{Zählraten}
+	\label{abb:zaehlrate}
+\end{figure}
 
 \clearpage
 \hypertarget{fazit}{%
