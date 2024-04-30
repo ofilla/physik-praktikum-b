@@ -34,9 +34,10 @@
 \newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
 
 % disable commands
-\renewcommand{\[}{} % math block start
-\renewcommand{\]}{\noindent} % math block end
 \newcommand{\tightlist}{} % created in enumerations
+
+\hyphenation{ein-ge-stellt}
+\hyphenation{nach-ge-wie-sen}
 
 \hypersetup{
   pdftitle={B3.4},
@@ -98,7 +99,7 @@ $\ce{^{18}F}$ besonders. Unterschiedliche Tracer werden für unterschiedliche K�
 
 Wenn der Tracer im Gewebe ist, zerfällt er über den $\beta^+$--Zerfall und emittiert dabei Positronen. Innerhalb weniger Mikrometer rekombiniert ein Positron mit einem Elektron und es kommt zur \emph{Paarvernichtung}. Hierbei entstehen zwei Photonen mit jeweils einer Energie von $\pu{511 \,keV}$ ein einem Winkel von $180\,^\circ$ zueinander. $[6]$
 
-Um die Aktivität quantitativ zu bestimmen, werden Signale von den ausgestrahlten Photonen registriert. Wenn zwei davon koinzident sind, hat dieser Prozess mit großer Wahrscheinlichkeit auf der Verbindungslinie\footnote{Englisch: \emph{line of response} (\emph{LOR})} stattgefunden. Aus vielen solcher koinzidenten Signale lässt sich die Aktivität mit einem Computerprogramm zu einem zweidimensionalen und später dreidimensionalen Bild rekonstruieren.
+Um die Aktivität quantitativ zu bestimmen, werden Signale von den ausgestrahlten Photonen registriert. Wenn zwei davon koinzident sind, hat dieser Prozess mit großer Wahrscheinlichkeit auf der Verbindungslinie (LOR\footnote{Englisch: \emph{line of response}}) stattgefunden. Aus vielen solcher koinzidenten Signale lässt sich die Aktivität mit einem Computerprogramm zu einem zweidimensionalen und später dreidimensionalen Bild rekonstruieren.
 
 Es kann bei der Messung häufig zu falschen Koinzidenzen kommen. Entweder sind das nur zufällige Signale, die zeitgleich aufgenommen werden, oder das Photon wurde schon auf den Weg zum Detektor gestreut. Diese falsche Koinzidenzen möchte man möglichst gering halten, da sie nicht zur Bildqualität tragen und Nachbearbeitung fordern.
 
@@ -241,11 +242,11 @@ Die Zahl der in einem~Detektor~nachgewiesenen Ereignisse als Funktion ihrer Impu
 	\label{abb:Impulshoehenspektrum}
 \end{figure}
 
-\paragraph*{Photopeak}
+\paragraph{Photopeak}
 
 Ein Photopeak (\emph{Full--Energy--Peak}) entsteht, wenn die gesamte Energie eines Photons in einem Detektor gemessen wird. Dies kann beispielsweise durch den bereits genannten Photoeffekt oder durch die Anregung von Atomen entstehen.
 
-\paragraph*{Compton--Kante}
+\paragraph{Compton--Kante}
 
 Werden viele Photonen mit der gleichen Energie durch den Comptoneffekt gestreut, so ergibt sich ein charakteristisches Energiespektrum der gestreuten Elektronen, siehe Abbildung \ref{abb:Compton-Kante}. Die hierbei auf die Elektronen übertragene Energie ist eine kontinuierliche Funktion des Streuwinkels~$\phi$, hat jedoch eine scharfe obere Schranke.
 
@@ -274,7 +275,7 @@ Das Compton--Kontinuum $E_e'(\phi)$ beschreibt den Energie des Elektrons nach de
             (1-\cos\phi)} \label{Klein--Nishina}
 \end{eqnarray}
 
-\paragraph*{Rückstreupeak}
+\paragraph{Rückstreupeak}
 
 Ein Compton--Rückstreuungspeak (\emph{Backscatter Peak})~tritt bei der Energie $E_\mathrm{Rück}$ auf, wenn die $\gamma$--Strahlen in das Material um den Detektor herum gestreut wurden und erst danach in den
 den Detektor treffen. $[7]$
@@ -283,7 +284,7 @@ den Detektor treffen. $[7]$
     E_\mathrm{Rück} &=& E_\gamma - E_e^\prime(180^\circ)
 \end{eqnarray}
 
-\paragraph*{Escapelinien}
+\paragraph{Escapelinien}
 
 Escapelinien oder Escape--Peaks sind unechte Spektrallinien, die bei der Röntgen- und Gammaspektroskopie auftreten und z.B. die Anwesenheit nicht vorhandener Radionuklide in der gemessenen Probe vortäuschen können. $[16]$
 
@@ -292,119 +293,8 @@ Gammastrahlung mit einer Energie von $E_\gamma\ge\pu{1022MeV}$ kann zur Paarbild
 Wenn nur ein Photon detektiert wird, verursacht dies einen \emph{Single--Escape--Peak} bei einer Energie von
 $E_\gamma - \pu{511 keV}$. Wird keines der Photonen detektiert, gibt es einen \emph{Double--Escape--Peak} bei der Energie $E_\gamma - \pu{1022 keV}$.
 
-\hypertarget{elektronik}{%
-\subsection{Elektronik}\label{elektronik}}
-
-In diesem Versuch werden verschiedene elektronische Bauteile verwendet, die im Folgenden näher erläutert werden. Ein Schaltskizze des Versuchs lässt sich in Abbildung \ref{abb:Schaltplan} finden.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.85\textwidth]{../media/B3.4/Schaltplan.pdf}
-	\caption{Schaltskizze des Versuchs $[1]$, bestehend aus
-		Photomultiplier (PMT), Vorverstärker (VV),
-		Hauptverstärker (TFA) und Diskriminator (CFD)}
-	\label{abb:Schaltplan}
-\end{figure}
-
-Als Detektor für die koinzidenten Signale werden anorganische Szintillationszähler sowie Photomultiplier zur Elektronenvervielfachung verwendet.
-
-In diesem Versuch wird $\ce{NaI}$ als anorganischer Szintillator verwendet, hierbei beträgt die Ausbeute je Photon $\pu{4\cdot 10^{4} MeV^{-1}}$.
-
-\hypertarget{verstuxe4rker}{%
-\subsubsection{Verstärker}\label{verstuxe4rker}}
-
-Ein Verstärker wird dazu verwendet ein eintreffendes elektronisches Signal zu verstärken. Dabei wird zwischen Vor- und Hauptverstärker unterschieden.
-
-Ein Vorverstärker wird direkt an die Detektoren angeschlossen, oder die Detektoren haben, wie in diesem Versuch, bereits einen Vorverstärker integriert. Dieser dient dazu, das von den Detektoren stammende Signal
-zu verstärken, sodass die Verluste in den Kabeln, die den Detektor mit den anderen Bauteilen verbinden, minimiert werden.
-
-Der in diesem Versuch verwendete Hauptverstärker, ein \emph{Timing Filter Amplifier} (TFA), dient dazu, dem Signal eine möglichst kurze Anstiegsflanke zu verleihen. Er empfängt das Signal aus den Vorverstärkern, verstärkt es und leitet es weiter zu den Diskriminatoren.
-
-Alternativ kann man einen \emph{Spectroscopy Amplifier} (SA) als Hauptverstärker nutzen, der das Signal möglichst verzerrungsfrei verstärkt. Dies ist für Messungen interessant, in denen die Energieauflösung wichtiger als die Zeitauflösung ist.
-
-\hypertarget{diskriminator}{%
-\subsubsection{Diskriminator}\label{diskriminator}}
-
-Ein Diskriminator ist ein Bauteil, das ein logisches Signal\footnote{Ein logisches Signal ist ein Kastensignal, das nur zwei verschiedene Werte annimmt.} einer gewissen Breite ausgibt, falls die Amplitude des eintreffenden Signals eine einstellbare Schwelle überschreitet.
-
-Da in diesem Versuch die Messung von zwei koinzidenten $\gamma$--Quanten relevant ist, ist es wichtig, dass die Diskriminatoren die logischen Signale zweier zeitgleich eintreffenden Signale auch zeitgleich ausgeben. Dabei gibt es jedoch zwei Probleme, den \emph{Walk} und den \emph{Jitter}.
-
-\paragraph*{Walk}
-Treffen zwei Signale zeitgleich in zwei Detektoren ein, haben aber unterschiedliche maximale Amplituden, erreichen diese beiden Signale die Amplituden--Schwelle der Diskriminatoren zu unterschiedlichen Zeitpunkten. Dies ist in Abbildung \ref{abb:Walk-Effekt} dargestellt.
-
-Die von den Diskriminatoren ausgesendeten logischen Signale sind dadurch zeitverschoben, obwohl die eintreffenden Signale koinzident waren. Diese Verschiebung der logischen Signale wird \emph{Walk} genannt.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\textwidth]{../media/B3.4/Constant_fraction_1.pdf}
-	\caption{Links: Walk--Effekt, Rechts: Kein Walk--Effekt}
-	\label{abb:Walk-Effekt}
-\end{figure}
-
-\hypertarget{jitter}{%
-\paragraph*{Jitter}\label{jitter}}
-
-Aufgrund von statistischen Fluktuationen und Untergrundrauschen kann es passieren, dass zwei eigentlich gleiche Signale einen unterschiedlichen Zeitverlauf aufweisen. Daraufhin kann sich wie schon beim Walk der Zeitpunkt unterscheiden, bei dem die Signale die Amplituden--Schwelle der Diskriminatoren erreichen, wodurch die ausgesendeten logischen Signale wieder zeitversetzt sind. Dieses Phänomen wird als \emph{Jitter} bezeichnet.
-
-\hypertarget{cfd}{%
-\subsubsection{Constant--Fraction--Diskriminator}\label{cfd}}
-
-Um den Problemen durch Walk und Jitter entgegenzuwirken, wird in diesem Versuch ein \emph{Constant--Fraction--Diskriminator} (CFD) verwendet. Ein CFD teilt ein eintreffendes Signal in zwei Teilsignale. Das erste Teilsignal wird um eine gewisse Zeit $T$ verzögert. Das zweite Teilsignal wird invertiert und um einen Faktor $k\in(0, 1)$ gestaucht. Daraufhin werden beide Teilsignale wieder addiert. Der CFD sendet das logische Signal dann erst aus, wenn das wie oben beschrieben veränderte Signal seinen Nulldurchgang erreicht. Es ist in Abbildung \ref{abb:CFD} dargestellt.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\textwidth]{../media/B3.4/CFD.jpg}
-	\caption{Funktionsprinzips eines Constant--Fraction--Diskriminators $[15]$}
-	\label{abb:CFD}
-\end{figure}
-
-\hypertarget{koinzidenzeinheit}{%
-\subsubsection{Koinzidenzeinheit}\label{koinzidenzeinheit}}
-
-Die logischen Signale aus den beiden Diskriminatoren werden dann gemeinsam zur Koinzidenzeinheit weitergeleitet. Diese überprüft, ob sich die beiden Signale überlappen. Falls dies der Fall ist, sendet sie ein logisches Signal an einen \emph{Gate Generator}, der das Signal in ein genormtes logisches Signal umformt. Dieses wiederum wird an den Zähler weitergegeben.
-
-\hypertarget{szintillatoren}{%
-\subsubsection{Szintillatoren}\label{szintillatoren}}
-Wenn Photonen auf ein Szintillationsmaterial treffen, wechselwirken sie und regen die Elektronen an. Nach einer Zeit fallen diese wieder in den Grundzustand ab und senden dabei Licht im sichtbaren Bereich aus. Die Zeit dieses Ablaufs beträgt abhängig vom verwendeten Material zwischen $\pu{100 ps}$ und $\pu{1\mu s}$.
-
-Wenn Photonen auf den Szintillationskristall treffen, wird die Energie des Photons auf Elektronen im Valenzband übertragen und die Elektronen werden ins Leitungsband angehoben. Fallen sie wieder zurück ins Valenzband, wird erneut ein Photon mit derselben Energie emittiert. Mit sehr hoher Wahrscheinlichkeit wird dieses Photons wieder direkt von einem anderen Elektron im Valenzband absorbiert, dies kann unendlich oft passieren.
-
-Um diesem endlosen Effekt entgegenzuwirken dotiert man den Kristall so, dass die Bandlücke lokal durch Energiezustände von diesen Atomen verkleinert wird. Die Elektronen können dann in verschiedene Zuständen zwischen Valenz- und Leitungsband fallen und emittieren dabei Photonen im sichtbaren Bereich. Diese Photonen haben aber nicht mehr die Größe der vorherrschenden Bandlücke und werden daher auch nicht wieder absorbiert.
-
-Diese Photonen treffen dann auf die Kathode des Photomultipliers, welcher im nächsten Kapitel erläutert wird.
-
-Häufig sind Szintillatoren anorganische Isolatoren oder Halbleiter mit einer großen Bandlücke. Der Vorteil von anorganischen Szintillatoren aus Kristall oder Glas ist die hohe Lichtausbeute, welche sehr wichtig für die Energiemessgenauigkeit ist. Nachteilig dagegen ist die langsame Lichtemission im Bereich von einigen $\pu{100 ns}$, die Energieauflösung sowie die Feuchtigkeitsempfindlichkeit von manchen Kristallen.
-
-Ein Photon aus einem Paarvernichtungsprozess mit einer Energie von $\pu{511keV}$ kann zehntausende Elektronen anregen, da diese mit Energien im $\pu{eV}$--Bereich gebunden sind. Beim Wasserstoff ist das Elektron mit $\pu{13.6eV}$ gebunden, hier könnten theoretisch bis zu $35.6\cdot 10^3$ Photonen angeregt werden.
-
-Weiterhin gibt es organische Szintillatoren, die haupsächlich aus langen Kohlenstoffketten bestehen. Das Licht wird durch zwei Hauptprozesse erzeugt, die Floureszenz und die Phosphoreszenz.
-
-Floureszenz ist ein Prozess, bei dem ein absorbiertes Photon nach Anregung sofort wieder abgestrahlt wird, dies erfolgt durch einen erlaubten Übergang zwischen zwei Zuständen.
-
-Der Prozess der Phosphoreszenz läuft dagegen langsamer ab, weil ein verbotener Übergang zwischen einem angeregten Zustand und dem Grundzustand durch eine Multipol--Auswahlregel stattfinden muss. Im Allgemeinen kommt das Lichtsignal in einem organischen Szintillator früher als im anorganischen, im Idealfall kommt es schon nach $\pu{100 ps}$. Trotz diesem Vorteil haben sie nur eine geringe Lichtausbeute. $[13]$
-
-\hypertarget{photomultiplier}{%
-\subsubsection{Photomultiplier}\label{photomultiplier}}
-
-Um aus dem Szintillationslicht ein Messsignal zu erhalten, schließt man dem Szintillator einen Photomultiplier an. Dieser besteht aus einer Photokathode und einem Sekundärelektronenvervielfacher. Dabei muss das Emissionspektrum des Detektors optimal auf die spektrale Empfindlichkeit der Photokathode abgestimmt sein.
-
-Die Kathode besteht entweder aus Alkali--Metallen oder Erdalkali--Metallen, die über eine geringe Elektronenaustrittarbeit verfügen.
-
-Der zweite Bauteil heißt Sekundärelektronenvervielfacher\footnote{\emph{photomultiplier tube} (PMT)} (SEV). Dieser besitzt eine Folge von Elektroden, genannt Dynoden, die bis zu $10^7$ Sekundärelektronen pro Primärelektron erzeugen können. Zwischen den einzelnen Dynoden wird ein elektrisches Potenzial angelegt, sodass die Elektronen bis zur Anode hin beschleunigt werden. Üblicherweise haben SEVs ca. $10$ Dynoden, mit jedem Auftreffen auf eine davon werden Sekundärelektronen heraus geschlagen und vervielfacht.
-
-Die ganze Elektronik befindet sich in einem vakuumdichten Glaskolben, der zusätzlich mit einem $\mu$--Metall--Zylinder gegen magnetische Streufelder abgeschirmt ist $[13]$. Abbildung \ref{abb:Photomultiplier} zeigt den Aufbau von einem typischen Photomultiplier.
-
-Das messbare Signal an der Anode ist dann durch richtige Kalibrierung proportional zu der im Szintillationskristall deponierten Energie des Photons aus dem $e^+ e^-$--Annihilationprozess.
-
-\begin{figure}
-	\centering
-	\includegraphics{../media/B3.4/Photomultiplier_schema_de.png}
-	\caption{Photomultiplier (schematisch) $[12]$}
-	\label{abb:Photomultiplier}
-\end{figure}
-
 \hypertarget{weizsuxe4cker-massenformel}{%
-\subsection{Weizsäcker Massenformel}\label{weizsuxe4cker-massenformel}}
+	\subsubsection{Weizsäcker Massenformel}\label{weizsuxe4cker-massenformel}}
 Die \emph{Weizsäcker Formel} gibt die Bindungsenergie eines Atomkerns an. Sie basiert einerseits auf empirischen Daten, andererseits auf dem Tröpfchenmodell. Aus ihr wird die Weizsäcker Massenformel ermittelt.
 
 Das Tröpfchenmodell beschreibt einen Atomkern als einen inkompressiblen, kugelförmigen Fluidtropfen, der zur Energieminimierung den Kernradius $R$ aufweist. Dabei ist die Dichte überall konstant.
@@ -506,177 +396,172 @@ Der Paarungsterm wird betragsmäßig kleiner, je größer die Nukleonenzahl $A$ 
 \noindent
 Beide Nukleonensorten liefern betragsmäßig den gleichen Beitrag zu $E_P$. Bei $\mathrm{gg}$-- und $\mathrm{uu}$--Kernen addieren sich diese Werte zu einer nicht--verschwindenden Energie. Bei $\mathrm{gu}$-- und $\mathrm{ug}$--Kernen heben sich die Terme dagegen auf, weswegen der Paarungsterm hier verschwindet.
 
+\hypertarget{elektronik}{%
+\subsection{Elektronik}\label{elektronik}}
+
+In diesem Versuch werden verschiedene elektronische Bauteile verwendet, die im Folgenden näher erläutert werden. Ein Schaltskizze des Versuchs lässt sich in Abbildung \ref{abb:Schaltplan} finden.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.85\textwidth]{../media/B3.4/Schaltplan.pdf}
+	\caption{Schaltskizze des Versuchs $[1]$, bestehend aus
+		Photomultiplier (PMT), Vorverstärker (VV),
+		Hauptverstärker (TFA) und Diskriminator (CFD)}
+	\label{abb:Schaltplan}
+\end{figure}
+
+Als Detektor für die koinzidenten Signale werden anorganische Szintillationszähler sowie Photomultiplier zur Elektronenvervielfachung verwendet.
+
+In diesem Versuch wird $\ce{NaI}$ als anorganischer Szintillator verwendet, hierbei beträgt die Ausbeute je Photon $\pu{4\cdot 10^{4} MeV^{-1}}$.
+
+\hypertarget{verstuxe4rker}{%
+\subsubsection{Verstärker}\label{verstuxe4rker}}
+
+Ein Verstärker wird dazu verwendet ein eintreffendes elektronisches Signal zu verstärken. Dabei wird zwischen Vor- und Hauptverstärker unterschieden.
+
+Ein Vorverstärker wird direkt an die Detektoren angeschlossen, oder die Detektoren haben, wie in diesem Versuch, bereits einen Vorverstärker integriert. Dieser dient dazu, das von den Detektoren stammende Signal
+zu verstärken, sodass die Verluste in den Kabeln, die den Detektor mit den anderen Bauteilen verbinden, minimiert werden.
+
+Der in diesem Versuch verwendete Hauptverstärker, ein \emph{Timing Filter Amplifier} (TFA), dient dazu, dem Signal eine möglichst kurze Anstiegsflanke zu verleihen. Er empfängt das Signal aus den Vorverstärkern, verstärkt es und leitet es weiter zu den Diskriminatoren.
+
+Alternativ kann man einen \emph{Spectroscopy Amplifier} (SA) als Hauptverstärker nutzen, der das Signal möglichst verzerrungsfrei verstärkt. Dies ist für Messungen interessant, in denen die Energieauflösung wichtiger als die Zeitauflösung ist.
+
+\hypertarget{diskriminator}{%
+\subsubsection{Diskriminator}\label{diskriminator}}
+
+Ein Diskriminator ist ein Bauteil, das ein logisches Signal\footnote{Ein logisches Signal ist ein Kastensignal, das nur zwei verschiedene Werte annimmt.} einer gewissen Breite ausgibt, falls die Amplitude des eintreffenden Signals eine einstellbare Schwelle überschreitet.
+
+Da in diesem Versuch die Messung von zwei koinzidenten $\gamma$--Quanten relevant ist, ist es wichtig, dass die Diskriminatoren die logischen Signale zweier zeitgleich eintreffenden Signale auch zeitgleich ausgeben. Dabei gibt es jedoch zwei Probleme, den \emph{Walk} und den \emph{Jitter}.
+
+\paragraph{Walk}
+Treffen zwei Signale zeitgleich in zwei Detektoren ein, haben aber unterschiedliche maximale Amplituden, erreichen diese beiden Signale die Amplituden--Schwelle der Diskriminatoren zu unterschiedlichen Zeitpunkten. Dies ist in Abbildung \ref{abb:Walk-Effekt} dargestellt.
+
+Die von den Diskriminatoren ausgesendeten logischen Signale sind dadurch zeitverschoben, obwohl die eintreffenden Signale koinzident waren. Diese Verschiebung der logischen Signale wird \emph{Walk} genannt.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/Constant_fraction_1.pdf}
+	\caption{Links: Walk--Effekt, Rechts: Kein Walk--Effekt}
+	\label{abb:Walk-Effekt}
+\end{figure}
+
+\hypertarget{jitter}{%
+\paragraph{Jitter}\label{jitter}}
+
+Aufgrund von statistischen Fluktuationen und Untergrundrauschen kann es passieren, dass zwei eigentlich gleiche Signale einen unterschiedlichen Zeitverlauf aufweisen. Daraufhin kann sich wie schon beim Walk der Zeitpunkt unterscheiden, bei dem die Signale die Amplituden--Schwelle der Diskriminatoren erreichen, wodurch die ausgesendeten logischen Signale wieder zeitversetzt sind. Dieses Phänomen wird als \emph{Jitter} bezeichnet.
+
+\hypertarget{cfd}{%
+\paragraph{Constant--Fraction--Diskriminator}\label{cfd}}
+
+Um den Problemen durch Walk und Jitter entgegenzuwirken, wird in diesem Versuch ein \emph{Constant--Fraction--Diskriminator} (CFD) verwendet. Ein CFD teilt ein eintreffendes Signal in zwei Teilsignale. Das erste Teilsignal wird um eine gewisse Zeit $T$ verzögert. Das zweite Teilsignal wird invertiert und um einen Faktor $k\in(0, 1)$ gestaucht. Daraufhin werden beide Teilsignale wieder addiert. Der CFD sendet das logische Signal dann erst aus, wenn das wie oben beschrieben veränderte Signal seinen Nulldurchgang erreicht. Es ist in Abbildung \ref{abb:CFD} dargestellt.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/CFD.jpg}
+	\caption{Funktionsprinzips eines Constant--Fraction--Diskriminators $[15]$}
+	\label{abb:CFD}
+\end{figure}
+
+\hypertarget{koinzidenzeinheit}{%
+\subsubsection{Koinzidenzeinheit}\label{koinzidenzeinheit}}
+
+Die logischen Signale aus den beiden Diskriminatoren werden dann gemeinsam zur Koinzidenzeinheit weitergeleitet. Diese überprüft, ob sich die beiden Signale überlappen. Falls dies der Fall ist, sendet sie ein logisches Signal an einen \emph{Gate Generator}, der das Signal in ein genormtes logisches Signal umformt. Dieses wiederum wird an den Zähler weitergegeben.
+
+\hypertarget{szintillatoren}{%
+\subsubsection{Szintillatoren}\label{szintillatoren}}
+Wenn Photonen auf ein Szintillationsmaterial treffen, wechselwirken sie und regen die Elektronen an. Nach einer Zeit fallen diese wieder in den Grundzustand ab und senden dabei Licht im sichtbaren Bereich aus. Die Zeit dieses Ablaufs beträgt abhängig vom verwendeten Material zwischen $\pu{100 ps}$ und $\pu{1\mu s}$.
+
+Wenn Photonen auf den Szintillationskristall treffen, wird die Energie des Photons auf Elektronen im Valenzband übertragen und die Elektronen werden ins Leitungsband angehoben. Fallen sie wieder zurück ins Valenzband, wird erneut ein Photon mit derselben Energie emittiert. Mit sehr hoher Wahrscheinlichkeit wird dieses Photons wieder direkt von einem anderen Elektron im Valenzband absorbiert, dies kann unendlich oft passieren.
+
+Um diesem endlosen Effekt entgegenzuwirken dotiert man den Kristall so, dass die Bandlücke lokal durch Energiezustände von diesen Atomen verkleinert wird. Die Elektronen können dann in verschiedene Zuständen zwischen Valenz- und Leitungsband fallen und emittieren dabei Photonen im sichtbaren Bereich. Diese Photonen haben aber nicht mehr die Größe der vorherrschenden Bandlücke und werden daher auch nicht wieder absorbiert.
+
+Diese Photonen treffen dann auf die Kathode des Photomultipliers, welcher im nächsten Kapitel erläutert wird.
+
+Häufig sind Szintillatoren anorganische Isolatoren oder Halbleiter mit einer großen Bandlücke. Der Vorteil von anorganischen Szintillatoren aus Kristall oder Glas ist die hohe Lichtausbeute, welche sehr wichtig für die Energiemessgenauigkeit ist. Nachteilig dagegen ist die langsame Lichtemission im Bereich von einigen $\pu{100 ns}$, die Energieauflösung sowie die Feuchtigkeitsempfindlichkeit von manchen Kristallen.
+
+Ein Photon aus einem Paarvernichtungsprozess mit einer Energie von $\pu{511keV}$ kann zehntausende Elektronen anregen, da diese mit Energien im $\pu{eV}$--Bereich gebunden sind. Beim Wasserstoff ist das Elektron mit $\pu{13.6eV}$ gebunden, hier könnten theoretisch bis zu $35.6\cdot 10^3$ Photonen angeregt werden.
+
+Weiterhin gibt es organische Szintillatoren, die haupsächlich aus langen Kohlenstoffketten bestehen. Das Licht wird durch zwei Hauptprozesse erzeugt, die Floureszenz und die Phosphoreszenz. $[13]$
+
+Floureszenz ist ein Prozess, bei dem ein absorbiertes Photon nach Anregung sofort wieder abgestrahlt wird, dies erfolgt durch einen erlaubten Übergang zwischen zwei Zuständen. $[13]$
+
+Der Prozess der Phosphoreszenz läuft dagegen langsamer ab, weil ein verbotener Übergang zwischen einem angeregten Zustand und dem Grundzustand durch eine Multipol--Auswahlregel stattfinden muss. Im Allgemeinen kommt das Lichtsignal in einem organischen Szintillator früher als im anorganischen, im Idealfall kommt es schon nach $\pu{100 ps}$. Trotz diesem Vorteil haben sie nur eine geringe Lichtausbeute. $[13]$
+
+\hypertarget{photomultiplier}{%
+\subsubsection{Photomultiplier}\label{photomultiplier}}
+
+Um aus dem Szintillationslicht ein Messsignal zu erhalten, schließt man dem Szintillator einen Photomultiplier an. Dieser besteht aus einer Photokathode und einem Sekundärelektronenvervielfacher. Dabei muss das Emissionspektrum des Detektors optimal auf die spektrale Empfindlichkeit der Photokathode abgestimmt sein.
+
+Die Kathode besteht entweder aus Alkali--Metallen oder Erdalkali--Metallen, die über eine geringe Elektronenaustrittarbeit verfügen.
+
+Der zweite Bauteil heißt Sekundärelektronenvervielfacher\footnote{\emph{photomultiplier tube} (PMT)} (SEV). Dieser besitzt eine Folge von Elektroden, genannt Dynoden, die bis zu $10^7$ Sekundärelektronen pro Primärelektron erzeugen können. Zwischen den einzelnen Dynoden wird ein elektrisches Potenzial angelegt, sodass die Elektronen bis zur Anode hin beschleunigt werden. Üblicherweise haben SEVs ca. $10$ Dynoden, mit jedem Auftreffen auf eine davon werden Sekundärelektronen heraus geschlagen und vervielfacht.
+
+Die ganze Elektronik befindet sich in einem vakuumdichten Glaskolben, der zusätzlich mit einem $\mu$--Metall--Zylinder gegen magnetische Streufelder abgeschirmt ist $[13]$. Abbildung \ref{abb:Photomultiplier} zeigt den Aufbau von einem typischen Photomultiplier.
+
+Das messbare Signal an der Anode ist dann durch richtige Kalibrierung proportional zu der im Szintillationskristall deponierten Energie des Photons aus dem $e^+ e^-$--Annihilationprozess.
+
+\begin{figure}
+	\centering
+	\includegraphics{../media/B3.4/Photomultiplier_schema_de.png}
+	\caption{Photomultiplier (schematisch) $[12]$}
+	\label{abb:Photomultiplier}
+\end{figure}
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
 \section{Durchführung}\label{durchfuxfchrung}}
 
-\hypertarget{ortsaufluxf6sung}{%
-\subsection{Ortsauflösung}\label{ortsaufluxf6sung}}
-Es soll die Ortsauflösung der Koinzidenzmessung bestimmt werden. Dazu wurde die Quelle mittig auf dem Wagen positioniert. Daraufhin wurde der Wagen auf verschiedene Positionen im Bereich von $\pm 50\,\mathrm{mm}$ eingestellt und bei verschiedenen Positionen die Zählraten für jeweils $T_\mathrm{Ort}=60\,\mathrm{s}$ gemessen.
+\subsection{Einzelmessungen}
+Als erstes sollen die Signale von den verwendeten Elektronik einzeln am Oszilloskop betrachtet werden. Die Quelle wird für diesen Teil mittig zwischen den Detektoren platziert.
+
+\subsubsection{Vorverstärkersignal}
+In den Szintillatoren sind bereits Vorverstärker eingebaut. Der Ausgangskanal von einem der zwei Detektoren wird an ein Oszilloskops angeschlossen. Dort werden die Größe, die Lage und das Triggerlevel des Signals verändert, bis ein repräsentatives Signal gut zu erkennen ist. Dieses Signal wird gespeichert.
+
+\subsubsection{Hauptverstärkersignal}
+Daraufhin wird der Detektor mit dem Eingang des TFA angeschlossen, dessen Ausgang schließt man dann wieder an das Oszilloskop. Auch hier wird das Signal wie oben angepasst und gespeichert.
+
+\subsubsection{Diskriminatorsignal}
+Hier wird der Ausgang des TFA mit dem jeweiligen Eingang am CFD verbunden. Dessen Signale werden am Oszilloskop angeschlossen. Das Oszilloskop wird so eingestellt, dass immer dann ein Signal angezeigt wird, wenn ein logisches Signal detektiert wird.
+
+\subsubsection{Einstellung der Diskriminatoren}
+Mit dem CFD können jetzt Signale verschiedener Energie entweder zugelassen oder herausgefiltert werden. Dazu werden die Schwellen von oben und unten manuell eingestellt, bis am Oszilloskop bestimmte Signale nicht mehr zu sehen sind.
+
+Für die nächsten zwei Versuchsteile werden die CFD so eingestelllt, sodass nur Photonen mit $\pu{511\, keV}$ dargestellt werden. Anschließend werden die Diskriminatoren an die Koinzidenzeinheit angeschlossen.
+
+\subsection{Ortsauflösung}
+\label{sec:Ortsauflösung}
+In diesem Teil soll der Einfluss der Lage der Quelle bezüglich der Verbindungsline der Szintillatoren auf die Koinzidenzzählrate untersucht werden.
+
+Dafür wird die Quelle mittig auf den Wagen platziert. Dann verschiebt man den Wagen durch den Bereich, der vom Detektor abgedeckt wird und misst die Zählrate für jeweils $60\,\mathrm{s}$. Erwartet wird eine gaußförmige Verteilung der Zählraten, deshalb sollte im Bereich der Halbwertbreiten und Hochpunkt kleinere Abstände gewählt werden. Es werden mindesten $20$ Messungen in einem Raumintervall von $\pm 50\,\mathrm{mm}$ durchgeführt.
 
 In den Abständen von $\pm 8\,\mathrm{mm}$ wurden minimale Abstände von $\pm 1\,\mathrm{mm}$ zwischen den Positionen verändert, weiter außen wurden größere Abstände gewählt. Die Ungenauigkeit beim Einstellen der Position wird auf $\pu{\pm 2 mm}$ gesetzt.
 
-\hypertarget{petscan}{%
-\subsection{PET--Scan}\label{petscan}}
+\subsection{PET--Scan der Truhe}
+Vom Betreuer wurde eine verschlossene Truhe vorbereitet, in der sich mehrere Quellen verschiedener Intensität befinden konnten.  Ziel dieses Versuchsteils ist die Ortung von verschiedenen Proben in unbekannter Anordnung.
 
+Die Truhe besitzt $100$ mögliche Steckplätzen in einem $10\times10$--Raster. Um dieses zu beschreiben, werden die Richtungen $x$, $y$ und $z$ definiert und in Abbildung \ref{abb:TruheRichtungen} dargestellt. Es gibt je $10$ Reihen in $x$-- und $y$--Richtung sowie $19$ Reihen in $z$--Richtung.
 
-\begin{align*}
-    &x_1 = \pu{(-45\pm2) mm} &&
-        N(x_1) = 190 \\
-    &x_2 = \pu{(-35\pm2) mm} &&
-        N(x_2) = 261 \\
-    &x_3 = \pu{(-25\pm2) mm} &&
-        N(x_3) = 440 \\
-    &x_4 = \pu{(-15\pm2) mm} &&
-        N(x_4) = 312 \\
-    &x_5 = \pu{(-5\pm2) mm} &&
-        N(x_5) = 414 \\
-    &x_6 = \pu{(5\pm2) mm} &&
-        N(x_6) = 639 \\
-    &x_7 = \pu{(15\pm2) mm} &&
-        N(x_7) = 2025 \\
-    &x_8 = \pu{(25\pm2) mm} &&
-        N(x_8) = 616 \\
-    &x_9 = \pu{(35\pm2) mm} &&
-        N(x_9) = 660 \\
-    &x_{10} = \pu{(45\pm2) mm} &&
-        N(x_{10}) = 2186
-\end{align*}
+Die Abstände zwischen zwei $x$-- bzw. $y$--Reihen betragen $\pu{1\,cm}$, die Abstände zwischen zwei $z$--Reihen betragen $(\sqrt{2})^{-1}\,\mathrm{cm}$. Alle Messungen erfolgen über eine Dauer von $60\,\mathrm{s}$.
 
-\begin{align*}
-    &y_1 = \pu{(-45\pm2) mm} &&
-        N(y_1) = 313 \\
-    &y_2 = \pu{(-35\pm2) mm} &&
-        N(y_2) = 466 \\
-    &y_3 = \pu{(-25\pm2) mm} &&
-        N(y_3) = 542 \\
-    &y_4 = \pu{(-15\pm2) mm} &&
-        N(y_4) = 2021 \\
-    &y_5 = \pu{(-5\pm2) mm} &&
-        N(y_5) = 498 \\
-    &y_6 = \pu{(5\pm2) mm} &&
-        N(y_6) = 481 \\
-    &y_7 = \pu{(15\pm2) mm} &&
-        N(y_7) = 431 \\
-    &y_8 = \pu{(25\pm2) mm} &&
-        N(y_8) = 503 \\
-    &y_9 = \pu{(35\pm2) mm} &&
-        N(y_9) = 2385 \\
-    &y_{10} = \pu{(45\pm2) mm} &&
-        N(y_{10}) = 520
-\end{align*}
+\begin{figure}[h]
+	\centering
+	\includegraphics{../media/B3.4/Box_Axis.pdf}
+	\caption{Richtungsdefinitionen (schematisch) $[1]$}
+	\label{abb:TruheRichtungen}
+\end{figure}
 
-\begin{align*}
-    &z_{1} = \pu{(64\pm2) mm} &&
-        N(z_{1}) = 203 \\
-    &z_{2} = \pu{(57\pm2) mm} &&
-        N(z_{2}) = 246 \\
-    &z_{3} = \pu{(49\pm2) mm} &&
-        N(z_{3}) = 243 \\
-    &z_{4} = \pu{(42\pm2) mm} &&
-        N(z_{4}) = 271 \\
-    &z_{5} = \pu{(35\pm2) mm} &&
-        N(z_{5}) = 318 \\
-    &z_{6} = \pu{(28\pm2) mm} &&
-        N(z_{6}) = 407 \\
-    &z_{7} = \pu{(21\pm2) mm} &&
-        N(z_{7}) = 644 \\
-    &z_{8} = \pu{(14\pm2) mm} &&
-        N(z_{8}) = 1907 \\
-    &z_{9} = \pu{(7\pm2) mm} &&
-        N(z_{9}) = 556 \\
-    &z_{10} = \pu{(0\pm2) mm} &&
-        N(z_{10}) = 486 \\
-    &z_{11} = \pu{(-7\pm2) mm} &&
-        N(z_{11}) = 524 \\
-    &z_{12} = \pu{(-14\pm2) mm} &&
-        N(z_{12}) = 397 \\
-    &z_{13} = \pu{(-21\pm2) mm} &&
-        N(z_{13}) = 384 \\
-    &z_{14} = \pu{(-28\pm2) mm} &&
-        N(z_{14}) = 401 \\
-    &z_{15} = \pu{(-35\pm2) mm} &&
-        N(z_{15}) = 562 \\
-    &z_{16} = \pu{(-42\pm2) mm} &&
-        N(z_{16}) = 2173 \\
-    &z_{17} = \pu{(-49\pm2) mm} &&
-        N(z_{17}) = 571 \\
-    &z_{18} = \pu{(-57\pm2) mm} &&
-        N(z_{18}) = 390 \\
-    &z_{19} = \pu{(-64\pm2) mm} &&
-        N(z_{19}) = 306 \\
-\end{align*}
+An den Positionen $(7,8)$ und $(10,4)$ sind ziemlich sicher Proben zu erwarten. Weiterhin soll eine Probe bei $(3, 2)$ positioniert sein, dies allerdings für uns nicht aus den Werten ersichtlich.
 
-An den Positionen $(7,8)$ und $(10,4)$ sind ziemlich sicher Proben,
-die Probe bei $(3, 2)$ war ebenfalls eine Probe, dies fanden wir an
-den Werten allerdings schwer zu erkennen.
+\subsection{Winkelabhängigkeit}
+In diesem Teil soll die Kollinearität der Photonen aus der $e^+e^-$-Paarvernichtung nachgewiesen werden.
 
-\hypertarget{winkelabhuxe4ngigkeit}{%
-\subsection{Winkelabhängigkeit}\label{winkelabhuxe4ngigkeit}}
+Wie bei der Messung der \nameref{sec:Ortsauflösung} wird eine Probe offen und mittig positioniert.
 
-Im Folgenden wird die Winkelabhängigkeit sowohl von dem
-$\pu{511keV}$--Peak der Annihilation als auch von dem
-$\pu{1275keV}$--Peak aus dem sekundären Zerfall ermittelt. Bei
-ersterem wird eine starke Winkelabhängigkeit erwartet, bei letzterem
-keine Winkelabhängigkeit.
+Einer der Detektoren wird in einem Winkel zwischen $\pm 5\,^\circ$ zur Verbindungslinie eingestellt. Die Winkelveränderungen werden in Schritten von $0.5\,^\circ$ eingestellt, wiederum dauert jede Messung $60\,\mathrm{s}$. Der Fehler des Winkels wird auf $\Delta \theta = \pu{0.5^\circ}$ geschätzt.
 
-Der Fehler des Winkels wird auf $\Delta \theta = \pu{0.5^\circ}$
-geschätzt.
+Zunächst werden beide Detektoren wie in den letzten Versuchsteilen auf Energien von $\pu{511\,keV}$ eingestellt. Ebenso wie bei der Ortsauflösung wird eine Gaußverteilung der Zählraten erwartet.
 
-\hypertarget{pu511kevpeak}{%
-\subsubsection{\texorpdfstring{$\pu{511keV}$--Peak}{\textbackslash pu\{511keV\}--Peak}}\label{pu511kevpeak}}
-
-\begin{eqnarray*}
-    N(-5.0^\circ) &=& 432 \\
-    N(-4.5^\circ) &=& 476 \\
-    N(-4.0^\circ) &=& 484 \\
-    N(-3.5^\circ) &=& 585 \\
-    N(-3.0^\circ) &=& 885 \\
-    N(-2.5^\circ) &=& 707 \\
-    N(-2.0^\circ) &=& 1007 \\
-    N(-1.5^\circ) &=& 1646 \\
-    N(-1.0^\circ) &=& 2147 \\
-    N(-0.5^\circ) &=& 2559 \\
-    N(\pm0.0^\circ) &=& 2462 \\
-    N(+0.5^\circ) &=& 1946 \\
-    N(+1.0^\circ) &=& 1383 \\
-    N(+1.5^\circ) &=& 1075 \\
-    N(+2.0^\circ) &=& 637 \\
-    N(+2.5^\circ) &=& 533 \\
-    N(+3.0^\circ) &=& 444 \\
-    N(+3.5^\circ) &=& 494 \\
-    N(+4.0^\circ) &=& 503 \\
-    N(+4.5^\circ) &=& 471 \\
-    N(+5.0^\circ) &=& 456
-\end{eqnarray*}
-
-\hypertarget{pu1275kevpeak}{%
-\subsubsection{\texorpdfstring{$\pu{1275keV}$--Peak}{\textbackslash pu\{1275keV\}--Peak}}\label{pu1275kevpeak}}
-
-\begin{eqnarray*}
-    N(-5.0^\circ) &=& 22 \\
-    N(-4.5^\circ) &=& 31 \\
-    N(-4.0^\circ) &=& 28 \\
-    N(-3.5^\circ) &=& 25 \\
-    N(-3.0^\circ) &=& 32 \\
-    N(-2.5^\circ) &=& 24 \\
-    N(-2.0^\circ) &=& 17 \\
-    N(-1.5^\circ) &=& 30 \\
-    N(-1.0^\circ) &=& 27 \\
-    N(-0.5^\circ) &=& 36 \\
-    N(\pm0.0^\circ) &=& 22 \\
-    N(+0.5^\circ) &=& 36 \\
-    N(+1.0^\circ) &=& 27 \\
-    N(+1.5^\circ) &=& 23 \\
-    N(+2.0^\circ) &=& 26 \\
-    N(+2.5^\circ) &=& 38 \\
-    N(+3.0^\circ) &=& 18 \\
-    N(+3.5^\circ) &=& 17 \\
-    N(+4.0^\circ) &=& 23 \\
-    N(+4.5^\circ) &=& 34 \\
-    N(+5.0^\circ) &=& 29
-\end{eqnarray*}
+Daraufhin wird einer der Detektoren auf eine Energie von $\pu{1275\,keV}$ eingestellt. Dies entspricht der Energie des sekundären $\gamma$--Zerfalls in $\ce{^{22}Na}$, der koinzident mit dem $\beta^+$--Zerfall stattfindet. Da dieser zweite Zerfall in alle Raumrichtungen erfolgt, wird eine näherungsweise konstante, kleine Zählrate erwartet.
 
 \clearpage
 \hypertarget{auswertung}{%
@@ -742,6 +627,154 @@ Die Ortsauflösung kann durch die ermittelte Standardabweichung bestimmt werden.
 	\caption{Zählraten}
 	\label{abb:zaehlrate}
 \end{figure}
+
+\hypertarget{petscan}{%
+	\subsection{PET--Scan}\label{petscan}}
+
+\begin{align*}
+	&x_1 = \pu{(-45\pm2) mm} &&
+	N(x_1) = 190 \\
+	&x_2 = \pu{(-35\pm2) mm} &&
+	N(x_2) = 261 \\
+	&x_3 = \pu{(-25\pm2) mm} &&
+	N(x_3) = 440 \\
+	&x_4 = \pu{(-15\pm2) mm} &&
+	N(x_4) = 312 \\
+	&x_5 = \pu{(-5\pm2) mm} &&
+	N(x_5) = 414 \\
+	&x_6 = \pu{(5\pm2) mm} &&
+	N(x_6) = 639 \\
+	&x_7 = \pu{(15\pm2) mm} &&
+	N(x_7) = 2025 \\
+	&x_8 = \pu{(25\pm2) mm} &&
+	N(x_8) = 616 \\
+	&x_9 = \pu{(35\pm2) mm} &&
+	N(x_9) = 660 \\
+	&x_{10} = \pu{(45\pm2) mm} &&
+	N(x_{10}) = 2186
+\end{align*}
+
+\begin{align*}
+	&y_1 = \pu{(-45\pm2) mm} &&
+	N(y_1) = 313 \\
+	&y_2 = \pu{(-35\pm2) mm} &&
+	N(y_2) = 466 \\
+	&y_3 = \pu{(-25\pm2) mm} &&
+	N(y_3) = 542 \\
+	&y_4 = \pu{(-15\pm2) mm} &&
+	N(y_4) = 2021 \\
+	&y_5 = \pu{(-5\pm2) mm} &&
+	N(y_5) = 498 \\
+	&y_6 = \pu{(5\pm2) mm} &&
+	N(y_6) = 481 \\
+	&y_7 = \pu{(15\pm2) mm} &&
+	N(y_7) = 431 \\
+	&y_8 = \pu{(25\pm2) mm} &&
+	N(y_8) = 503 \\
+	&y_9 = \pu{(35\pm2) mm} &&
+	N(y_9) = 2385 \\
+	&y_{10} = \pu{(45\pm2) mm} &&
+	N(y_{10}) = 520
+\end{align*}
+
+\begin{align*}
+	&z_{1} = \pu{(64\pm2) mm} &&
+	N(z_{1}) = 203 \\
+	&z_{2} = \pu{(57\pm2) mm} &&
+	N(z_{2}) = 246 \\
+	&z_{3} = \pu{(49\pm2) mm} &&
+	N(z_{3}) = 243 \\
+	&z_{4} = \pu{(42\pm2) mm} &&
+	N(z_{4}) = 271 \\
+	&z_{5} = \pu{(35\pm2) mm} &&
+	N(z_{5}) = 318 \\
+	&z_{6} = \pu{(28\pm2) mm} &&
+	N(z_{6}) = 407 \\
+	&z_{7} = \pu{(21\pm2) mm} &&
+	N(z_{7}) = 644 \\
+	&z_{8} = \pu{(14\pm2) mm} &&
+	N(z_{8}) = 1907 \\
+	&z_{9} = \pu{(7\pm2) mm} &&
+	N(z_{9}) = 556 \\
+	&z_{10} = \pu{(0\pm2) mm} &&
+	N(z_{10}) = 486 \\
+	&z_{11} = \pu{(-7\pm2) mm} &&
+	N(z_{11}) = 524 \\
+	&z_{12} = \pu{(-14\pm2) mm} &&
+	N(z_{12}) = 397 \\
+	&z_{13} = \pu{(-21\pm2) mm} &&
+	N(z_{13}) = 384 \\
+	&z_{14} = \pu{(-28\pm2) mm} &&
+	N(z_{14}) = 401 \\
+	&z_{15} = \pu{(-35\pm2) mm} &&
+	N(z_{15}) = 562 \\
+	&z_{16} = \pu{(-42\pm2) mm} &&
+	N(z_{16}) = 2173 \\
+	&z_{17} = \pu{(-49\pm2) mm} &&
+	N(z_{17}) = 571 \\
+	&z_{18} = \pu{(-57\pm2) mm} &&
+	N(z_{18}) = 390 \\
+	&z_{19} = \pu{(-64\pm2) mm} &&
+	N(z_{19}) = 306 \\
+\end{align*}
+
+
+\hypertarget{winkelabhuxe4ngigkeit}{%
+	\subsection{Winkelabhängigkeit}\label{winkelabhuxe4ngigkeit}}
+
+\hypertarget{pu511kevpeak}{%
+	\subsubsection{\texorpdfstring{$\pu{511keV}$--Peak}{\textbackslash pu\{511keV\}--Peak}}\label{pu511kevpeak}}
+
+\begin{eqnarray*}
+	N(-5.0^\circ) &=& 432 \\
+	N(-4.5^\circ) &=& 476 \\
+	N(-4.0^\circ) &=& 484 \\
+	N(-3.5^\circ) &=& 585 \\
+	N(-3.0^\circ) &=& 885 \\
+	N(-2.5^\circ) &=& 707 \\
+	N(-2.0^\circ) &=& 1007 \\
+	N(-1.5^\circ) &=& 1646 \\
+	N(-1.0^\circ) &=& 2147 \\
+	N(-0.5^\circ) &=& 2559 \\
+	N(\pm0.0^\circ) &=& 2462 \\
+	N(+0.5^\circ) &=& 1946 \\
+	N(+1.0^\circ) &=& 1383 \\
+	N(+1.5^\circ) &=& 1075 \\
+	N(+2.0^\circ) &=& 637 \\
+	N(+2.5^\circ) &=& 533 \\
+	N(+3.0^\circ) &=& 444 \\
+	N(+3.5^\circ) &=& 494 \\
+	N(+4.0^\circ) &=& 503 \\
+	N(+4.5^\circ) &=& 471 \\
+	N(+5.0^\circ) &=& 456
+\end{eqnarray*}
+
+\hypertarget{pu1275kevpeak}{%
+	\subsubsection{\texorpdfstring{$\pu{1275keV}$--Peak}{\textbackslash pu\{1275keV\}--Peak}}\label{pu1275kevpeak}}
+
+\begin{eqnarray*}
+	N(-5.0^\circ) &=& 22 \\
+	N(-4.5^\circ) &=& 31 \\
+	N(-4.0^\circ) &=& 28 \\
+	N(-3.5^\circ) &=& 25 \\
+	N(-3.0^\circ) &=& 32 \\
+	N(-2.5^\circ) &=& 24 \\
+	N(-2.0^\circ) &=& 17 \\
+	N(-1.5^\circ) &=& 30 \\
+	N(-1.0^\circ) &=& 27 \\
+	N(-0.5^\circ) &=& 36 \\
+	N(\pm0.0^\circ) &=& 22 \\
+	N(+0.5^\circ) &=& 36 \\
+	N(+1.0^\circ) &=& 27 \\
+	N(+1.5^\circ) &=& 23 \\
+	N(+2.0^\circ) &=& 26 \\
+	N(+2.5^\circ) &=& 38 \\
+	N(+3.0^\circ) &=& 18 \\
+	N(+3.5^\circ) &=& 17 \\
+	N(+4.0^\circ) &=& 23 \\
+	N(+4.5^\circ) &=& 34 \\
+	N(+5.0^\circ) &=& 29
+\end{eqnarray*}
 
 \clearpage
 \hypertarget{fazit}{%
