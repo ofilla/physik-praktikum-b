@@ -10,7 +10,7 @@
 \usepackage{amsmath} % Erweiterung für den Mathe-Satz
 \usepackage{amssymb} % alle Zeichen aus msam und msmb werden dargestellt
 \usepackage{graphicx} % Graphiken und Bilder können eingebunden werden
-%\usepackage{multirow} % erlaubt in einer Spalte einer Tabelle die Felder in mehreren Zeilen zusammenzufassen
+\usepackage{multirow} % erlaubt in einer Spalte einer Tabelle die Felder in mehreren Zeilen zusammenzufassen
 \usepackage{enumerate} % erlaubt Nummerierungen
 \usepackage{xurl} % Dient zur Auszeichnung von URLs; setzt die Adresse in Schreibmaschinenschrift.
 \usepackage[center]{caption}  % Bildunterschrift wird zentriert
@@ -141,7 +141,7 @@ Beim Elektroneneinfang (ec) wird ähnlich wie beim $\beta^+$--Zerfall ein Proton
 \noindent
 In diesem Versuch wird als Quelle $\ce{^{22}Na}$ verwendet, da eine Halbwertzeit von etwa 2.6 Jahren hat $[2]$. Dieses zerfällt über den $\beta^+$--Zerfall in einen angeregten Zustand des stabilen Nuklides $\ce{^{22}Ne}$, welches unter Aussenden eines $\gamma$--Quants mit $E_\gamma = \pu{1275 keV}$ in den Grundzustand zerfällt, siehe Abbildung \ref{abb:Skizze 22Na}. Beide Zerfälle geschehen koinzident.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.4/Zerfall_22_Na.pdf}
 	\caption{Skizze des Zerfalls von $\ce{^{22}Na}$ zu $\ce{^{22}Ne}$ $[1]$}
@@ -235,7 +235,7 @@ Der Wirkungsquerschnitt $\sigma_\mathrm{Paar}$ kann wie folgt beschrieben werden
 
 Die Zahl der in einem~Detektor~nachgewiesenen Ereignisse als Funktion ihrer Impulshöhe wird durch ein Impulshöhenspektrum dargestellt. $[9]$ In Abbildung \ref{abb:Impulshoehenspektrum} ist ein solches für monoenergetische Gamma--Übergänge in $\ce{^{24}Mg}$ dargestellt.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../media/B3.4/Am_Be_SourceSpectrum.jpg}
 	\caption{Impulshöhenspektrum $[7]$}
@@ -250,7 +250,7 @@ Ein Photopeak (\emph{Full--Energy--Peak}) entsteht, wenn die gesamte Energie ein
 
 Werden viele Photonen mit der gleichen Energie durch den Comptoneffekt gestreut, so ergibt sich ein charakteristisches Energiespektrum der gestreuten Elektronen, siehe Abbildung \ref{abb:Compton-Kante}. Die hierbei auf die Elektronen übertragene Energie ist eine kontinuierliche Funktion des Streuwinkels~$\phi$, hat jedoch eine scharfe obere Schranke.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.4/Comptonspektrum.jpg}
 	\caption{Compton--Kontinuum und Compton--Kante $[10]$}
@@ -396,12 +396,17 @@ Der Paarungsterm wird betragsmäßig kleiner, je größer die Nukleonenzahl $A$ 
 \noindent
 Beide Nukleonensorten liefern betragsmäßig den gleichen Beitrag zu $E_P$. Bei $\mathrm{gg}$-- und $\mathrm{uu}$--Kernen addieren sich diese Werte zu einer nicht--verschwindenden Energie. Bei $\mathrm{gu}$-- und $\mathrm{ug}$--Kernen heben sich die Terme dagegen auf, weswegen der Paarungsterm hier verschwindet.
 
+\newpage
 \hypertarget{elektronik}{%
 \subsection{Elektronik}\label{elektronik}}
 
 In diesem Versuch werden verschiedene elektronische Bauteile verwendet, die im Folgenden näher erläutert werden. Ein Schaltskizze des Versuchs lässt sich in Abbildung \ref{abb:Schaltplan} finden.
 
-\begin{figure}
+Als Detektor für die koinzidenten Signale werden anorganische Szintillationszähler sowie Photomultiplier zur Elektronenvervielfachung verwendet.
+
+In diesem Versuch wird $\ce{NaI}$ als anorganischer Szintillator verwendet, hierbei beträgt die Ausbeute je Photon $\pu{4\cdot 10^{4} MeV^{-1}}$.
+
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.85\textwidth]{../media/B3.4/Schaltplan.pdf}
 	\caption{Schaltskizze des Versuchs $[1]$, bestehend aus
@@ -410,9 +415,6 @@ In diesem Versuch werden verschiedene elektronische Bauteile verwendet, die im F
 	\label{abb:Schaltplan}
 \end{figure}
 
-Als Detektor für die koinzidenten Signale werden anorganische Szintillationszähler sowie Photomultiplier zur Elektronenvervielfachung verwendet.
-
-In diesem Versuch wird $\ce{NaI}$ als anorganischer Szintillator verwendet, hierbei beträgt die Ausbeute je Photon $\pu{4\cdot 10^{4} MeV^{-1}}$.
 
 \hypertarget{verstuxe4rker}{%
 \subsubsection{Verstärker}\label{verstuxe4rker}}
@@ -438,7 +440,7 @@ Treffen zwei Signale zeitgleich in zwei Detektoren ein, haben aber unterschiedli
 
 Die von den Diskriminatoren ausgesendeten logischen Signale sind dadurch zeitverschoben, obwohl die eintreffenden Signale koinzident waren. Diese Verschiebung der logischen Signale wird \emph{Walk} genannt.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.4/Constant_fraction_1.pdf}
 	\caption{Links: Walk--Effekt, Rechts: Kein Walk--Effekt}
@@ -455,7 +457,7 @@ Aufgrund von statistischen Fluktuationen und Untergrundrauschen kann es passiere
 
 Um den Problemen durch Walk und Jitter entgegenzuwirken, wird in diesem Versuch ein \emph{Constant--Fraction--Diskriminator} (CFD) verwendet. Ein CFD teilt ein eintreffendes Signal in zwei Teilsignale. Das erste Teilsignal wird um eine gewisse Zeit $T$ verzögert. Das zweite Teilsignal wird invertiert und um einen Faktor $k\in(0, 1)$ gestaucht. Daraufhin werden beide Teilsignale wieder addiert. Der CFD sendet das logische Signal dann erst aus, wenn das wie oben beschrieben veränderte Signal seinen Nulldurchgang erreicht. Es ist in Abbildung \ref{abb:CFD} dargestellt.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.4/CFD.jpg}
 	\caption{Funktionsprinzips eines Constant--Fraction--Diskriminators $[15]$}
@@ -500,7 +502,7 @@ Die ganze Elektronik befindet sich in einem vakuumdichten Glaskolben, der zusät
 
 Das messbare Signal an der Anode ist dann durch richtige Kalibrierung proportional zu der im Szintillationskristall deponierten Energie des Photons aus dem $e^+ e^-$--Annihilationprozess.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics{../media/B3.4/Photomultiplier_schema_de.png}
 	\caption{Photomultiplier (schematisch) $[12]$}
@@ -575,15 +577,6 @@ Zur Bestimmung der Ortsauflösung wird die Zählrate $r$ aus der Anzahl der Dete
 	\Delta r &=& \frac{\Delta n}{T_\mathrm{Ort}}
 \end{eqnarray}
 
-\noindent
-Diese Daten sind in Abbildung \ref{abb:zaehlrate} dargestellt und gefittet worden. Dabei wurde eine Gaußverteilung angenommen. Dabei wurden der Mittelwert $\mu\approx 0.35\,\mathrm{mm}$, eine Standardabweichung $\sigma\approx1.89\,\mathrm{mm}$ und ein Streckungsfaktor $\alpha\approx 40\,\mathrm{Hz}$  ermittelt.
-
-\begin{eqnarray}
-    \phi(x, \mu, \sigma, \alpha) = \alpha\cdot \exp\left[- \frac{(x - \mu)^2}{2\sigma^2} \right]
-\end{eqnarray}
-
-\noindent
-Die Ortsauflösung kann durch die ermittelte Standardabweichung bestimmt werden. Allerdings sieht man, dass auch außerhalb des Peaks erhöhte Werte gemessen werden. Daher wird die Messgenauigkeit durch die Auflösung auf $\Delta x_\mathrm{res}=\pm 1.9\,\mathrm{mm}$ festgelegt. Da schon bei der Messung ein Fehler $\Delta x=\pm 2\,\mathrm{mm}$ verwendet wurde, nimmt die Ungenauigkeit durch die Auflösung einen geringeren Einfluss auf die Messgenauigkeit und kann vernachlässigt werden.
 
 \begin{table}[h]
 	\centering
@@ -621,106 +614,135 @@ Die Ortsauflösung kann durch die ermittelte Standardabweichung bestimmt werden.
 	\label{tab:Ortsauflösung}
 \end{table}
 
-\begin{figure}[H]
+\noindent
+Diese Daten sind in Abbildung \ref{abb:zaehlrate} dargestellt und gefittet worden. Dabei wurde eine Gaußverteilung angenommen. Dabei wurden der Mittelwert $\mu\approx 0.35\,\mathrm{mm}$, eine Standardabweichung $\sigma\approx1.89\,\mathrm{mm}$ und ein Streckungsfaktor $\alpha\approx 40\,\mathrm{Hz}$  ermittelt.
+
+\begin{eqnarray}
+    \phi(x, \mu, \sigma, \alpha) = \alpha\cdot \exp\left[- \frac{(x - \mu)^2}{2\sigma^2} \right]
+\end{eqnarray}
+
+\noindent
+Die Ortsauflösung kann durch die ermittelte Standardabweichung bestimmt werden. Allerdings sieht man, dass auch außerhalb des Peaks erhöhte Werte gemessen werden. Daher wird die Messgenauigkeit durch die Auflösung auf $\Delta x_\mathrm{res}=\pm 1.9\,\mathrm{mm}$ festgelegt. Da schon bei der Messung ein Fehler $\Delta x=\pm 2\,\mathrm{mm}$ verwendet wurde, nimmt die Ungenauigkeit durch die Auflösung einen geringeren Einfluss auf die Messgenauigkeit und kann vernachlässigt werden.
+
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../media/B3.4/Ortsaufloesung_fit.png}
 	\caption{Zählraten}
 	\label{abb:zaehlrate}
 \end{figure}
 
+\clearpage
 \hypertarget{petscan}{%
-	\subsection{PET--Scan}\label{petscan}}
+\subsection{PET--Scan}\label{petscan}}
+In $x$-- und $y$--Richtung wurden je $10$ Messungen durchgeführt. Die Fehler der Zählraten $N$ sind dabei durch die statistische Streuung \eqref{eq:Zählrate} bestimmt. Die Ergebnisse sind in Tabelle \ref{tab:PET x y} dargestellt.
 
-\begin{align*}
-	&x_1 = \pu{(-45\pm2) mm} &&
-	N(x_1) = 190 \\
-	&x_2 = \pu{(-35\pm2) mm} &&
-	N(x_2) = 261 \\
-	&x_3 = \pu{(-25\pm2) mm} &&
-	N(x_3) = 440 \\
-	&x_4 = \pu{(-15\pm2) mm} &&
-	N(x_4) = 312 \\
-	&x_5 = \pu{(-5\pm2) mm} &&
-	N(x_5) = 414 \\
-	&x_6 = \pu{(5\pm2) mm} &&
-	N(x_6) = 639 \\
-	&x_7 = \pu{(15\pm2) mm} &&
-	N(x_7) = 2025 \\
-	&x_8 = \pu{(25\pm2) mm} &&
-	N(x_8) = 616 \\
-	&x_9 = \pu{(35\pm2) mm} &&
-	N(x_9) = 660 \\
-	&x_{10} = \pu{(45\pm2) mm} &&
-	N(x_{10}) = 2186
-\end{align*}
-
-\begin{align*}
-	&y_1 = \pu{(-45\pm2) mm} &&
-	N(y_1) = 313 \\
-	&y_2 = \pu{(-35\pm2) mm} &&
-	N(y_2) = 466 \\
-	&y_3 = \pu{(-25\pm2) mm} &&
-	N(y_3) = 542 \\
-	&y_4 = \pu{(-15\pm2) mm} &&
-	N(y_4) = 2021 \\
-	&y_5 = \pu{(-5\pm2) mm} &&
-	N(y_5) = 498 \\
-	&y_6 = \pu{(5\pm2) mm} &&
-	N(y_6) = 481 \\
-	&y_7 = \pu{(15\pm2) mm} &&
-	N(y_7) = 431 \\
-	&y_8 = \pu{(25\pm2) mm} &&
-	N(y_8) = 503 \\
-	&y_9 = \pu{(35\pm2) mm} &&
-	N(y_9) = 2385 \\
-	&y_{10} = \pu{(45\pm2) mm} &&
-	N(y_{10}) = 520
-\end{align*}
-
-\begin{align*}
-	&z_{1} = \pu{(64\pm2) mm} &&
-	N(z_{1}) = 203 \\
-	&z_{2} = \pu{(57\pm2) mm} &&
-	N(z_{2}) = 246 \\
-	&z_{3} = \pu{(49\pm2) mm} &&
-	N(z_{3}) = 243 \\
-	&z_{4} = \pu{(42\pm2) mm} &&
-	N(z_{4}) = 271 \\
-	&z_{5} = \pu{(35\pm2) mm} &&
-	N(z_{5}) = 318 \\
-	&z_{6} = \pu{(28\pm2) mm} &&
-	N(z_{6}) = 407 \\
-	&z_{7} = \pu{(21\pm2) mm} &&
-	N(z_{7}) = 644 \\
-	&z_{8} = \pu{(14\pm2) mm} &&
-	N(z_{8}) = 1907 \\
-	&z_{9} = \pu{(7\pm2) mm} &&
-	N(z_{9}) = 556 \\
-	&z_{10} = \pu{(0\pm2) mm} &&
-	N(z_{10}) = 486 \\
-	&z_{11} = \pu{(-7\pm2) mm} &&
-	N(z_{11}) = 524 \\
-	&z_{12} = \pu{(-14\pm2) mm} &&
-	N(z_{12}) = 397 \\
-	&z_{13} = \pu{(-21\pm2) mm} &&
-	N(z_{13}) = 384 \\
-	&z_{14} = \pu{(-28\pm2) mm} &&
-	N(z_{14}) = 401 \\
-	&z_{15} = \pu{(-35\pm2) mm} &&
-	N(z_{15}) = 562 \\
-	&z_{16} = \pu{(-42\pm2) mm} &&
-	N(z_{16}) = 2173 \\
-	&z_{17} = \pu{(-49\pm2) mm} &&
-	N(z_{17}) = 571 \\
-	&z_{18} = \pu{(-57\pm2) mm} &&
-	N(z_{18}) = 390 \\
-	&z_{19} = \pu{(-64\pm2) mm} &&
-	N(z_{19}) = 306 \\
-\end{align*}
+Anhand der Werte kann man schon erahnen, dass es mindesten vier Positionen gibt, an denen sich Proben befinden könnten. Um die richtigen Positionen herauszufiltern, müssen die Messungen in $z$--Richtung betrachtet werden. Diese sind in Tabelle \ref{tab:PET z} dargestellt.
 
 
+Aus diesen Werten lässt sich schließen, dass mindestens zwei starke Quellen positioniert wurden. Um genauer sagen zu können, werden die Zählraten zu einer Position $(x,y,z)$ miteinander multipliziert und als Heatmap sowie als visualisiert, siehe Abbildungen \ref{abb:PET heatmap} und \ref{abb:PET surface} sowie Tabelle \ref{tab:PET Matrix}. Es ist deutlich zu sehen, dass zwei große Quellen an den Positionen $(10,4)$ und $(7,9)$ positioniert sind.
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}[t]{0.7\textwidth}
+		\includegraphics[width=\textwidth]{../media/B3.4/heatmap.png}
+		\caption{Heatmap}
+		\label{abb:PET heatmap}
+	\end{minipage}
+
+	\vspace{24pt}
+	\begin{minipage}[t]{0.7\textwidth}
+		\includegraphics[width=\textwidth]{../media/B3.4/PET_surface.jpg}
+		\caption{Oberflächenplot in $3\,\mathrm D$}
+		\label{abb:PET surface}
+	\end{minipage}
+\end{figure}
+
+Uns wurde mitgeteilt, es gebe eine dritte, schwächere Probe. Weder anhand der Daten noch anhand der Grafiken können wir diese Quelle lokalisieren, weil es kaum signifikante Abhebungen erkennbar sind. Vermutlich ist diese sehr viel schwächer als die zwei große Quellen.
+
+Betrachtet man die Werte sehr genau, kann man $(3,2)$ als mögliche Position einer dritten Quelle vermuten. Der Messwert $N(z_{11}$ ist größer als die benachbarten Messungen in der $z$--Richtung. Weiterhin ist Produkt der Zählraten an Position $(3,2)$ deutlich höher als die meisten benachbarten Werte, siehe Tabelle \ref{tab:PET Matrix}.
+
+Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist als die von der Quelle $2$ an Position $(7,9)$. D und zwar um einen Faktor 1.04. Eine mögliche Quelle $3$ an Position $(3,2)$ ist dann deutlich schwächer.
+
+\begin{eqnarray}
+	\frac{A_1}{A_2} &\approx& 1.04 \\
+	\frac{A_3}{A_1} &\approx& \frac{1}{89} \\
+	\frac{A_3}{A_2} &\approx& \frac{1}{87}
+\end{eqnarray}
+
+\begin{table}
+	\centering
+	\begin{tabular}[h]{c|c|r|r}
+		Nr. & Position [mm] & N(x) $[\frac{1}{\mathrm{min}}]$ & N(y) $[\frac{1}{\mathrm{min}}]$ \\
+		\hline
+		1 & $-45 \pm 2$ & $190 \pm 14$ & $313 \pm 18$ \\
+		2 & $-35 \pm 2$ & $261 \pm 16$ & $466 \pm 22$ \\
+		3 & $-25 \pm 2$ & $440 \pm 21$ & $542 \pm 23$ \\
+		4 & $-15 \pm 2$ & $312 \pm 18$ & $2021 \pm 45$ \\
+		5 & $-\ \ 5 \pm 2$ & $414 \pm 20$ & $498 \pm 22$ \\
+		6 & $+\ \ 5 \pm 2$ & $639 \pm 25$ & $481 \pm 22$ \\
+		7 & $+15 \pm 2$ & $2025 \pm 45$ & $431 \pm 21$ \\
+		8 & $+25 \pm 2$ & $616 \pm 25$ & $503 \pm 22$ \\
+		9 & $+35 \pm 2$ & $660 \pm 26$ & $2385 \pm 49$ \\
+		10 & $+45 \pm 2$ & $2186 \pm 47$ & $520 \pm 23$
+	\end{tabular}
+	\caption{Messwerte des PET--Scans in $x$-- und $y$--Richtung}
+	\label{tab:PET x y}
+	
+	\vspace{24pt}
+	\begin{tabular}{c|c|r||c|c|r}
+		Index $i$ &
+		Position $[\mathrm{mm}]$ &
+		$N(z_i)$ &
+		Index $i$ &
+		Position $[\mathrm{mm}]$ &
+		$N(z_i)$ \\
+		\hline
+		$1$ & $64$ & $203$ &
+		$11$ & $-7$ & $524$ \\
+		$2$ & $57$ & $246$ &
+		$12$ & $-14$ & $397$ \\
+		$3$ & $49$ & $243$ &
+		$13$ & $-21$ & $384$ \\
+		$4$ & $42$ & $271$ &
+		$14$ & $-28$ & $401$ \\
+		$5$ & $35$ & $318$ &
+		$15$ & $-35$ & $562$ \\
+		$6$ & $28$ & $407$ &
+		$16$ & $-42$ & $2173$ \\
+		$7$ & $21$ & $644$ &
+		$17$ & $-49$ & $571$ \\
+		$8$ & $14$ & $1907$ &
+		$18$ & $-57$ & $390$ \\
+		$9$ & $7$ & $556$ &
+		$19$ & $-64$ & $306$ \\
+		$10$ & $0$ & $486$ &---&---&---
+	\end{tabular}
+	\caption{Messwerte des PET--Scans in $z$--Richtung}
+	\label{tab:PET z}
+
+	\vspace{24pt}
+	\begin{tabular}{cc|rrrrrrrrrr}
+		 && \multicolumn{10}{c}{$x$--Richtung} \\
+		 && $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$ \\
+		 \hline
+		\multirow{10}{*}{\rotatebox{90}{$y$--Richtung}} &$1$  & $29$ & $43$ & $55$ & $4$ & $52$ & $112$ & $1377$ & $110$ & $81$ & $209$ \\
+		&$2$  & $49$ & $59$ & $107$ & $58$ & $74$ & $119$ & $530$ & $624$ & $176$ & $397$ \\
+		&$3$  & $196$ & $79$ & $116$ & $89$ & $89$ & $133$ & $440$ & $188$ & $777$ & $677$ \\
+		&$4$  & $247$ & $1006$ & $494$ & $306$ & $438$ & $513$ & $1572$ & $499$ & $750$ & $9600$ \\
+		&$5$  & $39$ & $84$ & $418$ & $86$ & $100$ & $167$ & $400$ & $118$ & $132$ & $612$ \\
+		&$6$  & $29$ & $51$ & $136$ & $286$ & $111$ & $149$ & $510$ & $118$ & $122$ & $422$ \\
+		&$7$  & $22$ & $36$ & $77$ & $87$ & $340$ & $153$ & $424$ & $139$ & $113$ & $362$ \\
+		&$8$  & $23$ & $36$ & $70$ & $64$ & $134$ & $613$ & $566$ & $151$ & $174$ & $437$ \\
+		&$9$  & $111$ & $151$ & $284$ & $237$ & $402$ & $981$ & $9210$ & $817$ & $765$ & $2732$ \\
+		&$10$  & $20$ & $33$ & $56$ & $44$ & $68$ & $135$ & $678$ & $611$ & $191$ & $552$ \\
+	\end{tabular}
+	\caption{multiplizierte Zählraten je Position, in der Einheit von $10^6\, \mathrm{min^{-1}}$}
+	\label{tab:PET Matrix}
+\end{table}
+
+\clearpage
 \hypertarget{winkelabhuxe4ngigkeit}{%
-	\subsection{Winkelabhängigkeit}\label{winkelabhuxe4ngigkeit}}
+\subsection{Winkelabhängigkeit}\label{winkelabhuxe4ngigkeit}}
 
 \hypertarget{pu511kevpeak}{%
 	\subsubsection{\texorpdfstring{$\pu{511keV}$--Peak}{\textbackslash pu\{511keV\}--Peak}}\label{pu511kevpeak}}
