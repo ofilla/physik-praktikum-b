@@ -563,26 +563,64 @@ Einer der Detektoren wird in einem Winkel zwischen $\pm 5\,^\circ$ zur Verbindun
 
 Zunächst werden beide Detektoren wie in den letzten Versuchsteilen auf Energien von $\pu{511\,keV}$ eingestellt. Ebenso wie bei der Ortsauflösung wird eine Gaußverteilung der Zählraten erwartet.
 
-Daraufhin wird einer der Detektoren auf eine Energie von $\pu{1275\,keV}$ eingestellt. Dies entspricht der Energie des sekundären $\gamma$--Zerfalls in $\ce{^{22}Na}$, der koinzident mit dem $\beta^+$--Zerfall stattfindet. Da dieser zweite Zerfall in alle Raumrichtungen erfolgt, wird eine näherungsweise konstante, kleine Zählrate erwartet.
+Daraufhin wird einer der Detektoren auf eine Energie von $\pu{1275\,keV}$ eingestellt. Dies entspricht der Energie des sekundären $\gamma$--Zerfalls von $\ce{^{22}Ne}$ in den Grundzustand, der koinzident mit dem $\beta^+$--Zerfall stattfindet. Da dieser zweite Zerfall in alle Raumrichtungen erfolgt, wird eine näherungsweise konstante, kleine Zählrate erwartet.
 
 \clearpage
 \hypertarget{auswertung}{%
 \section{Auswertung}\label{auswertung}}
+
+\subsection{Signale am Oszilloskop}
+Das initiale Messsignal, das von den Detektoren erzeugt wird, unterliegt mehreren Veränderungen durch die anderen elektronischen Bauteile, bevor es den Zähler erreicht. Die unterschiedlichen Stufen dieser Veränderung werden im Folgenden genauer untersucht
+
+\subsubsection{Signal aus dem Vorverstärker}
+Das Signal aus dem Vorverstärker ist in Abbildung \ref{fig:signal_vv} zu sehen. Es hat eine Breite von ca. $150 \mathrm{\, \mu s}$ und am Peak eine Höhe von ca. $400 \mathrm{\, mV}$. Damit ist das Signal noch recht breit und besitzt daher noch keine herausragende zeitliche Auflösung.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/Signal_Vorverstärker.jpg}
+	\caption{Signal aus dem Vorverstärker}
+	\label{fig:signal_vv}
+\end{figure}
+
+\subsubsection{Signal aus dem Hauptverstärker}
+Das Signal aus dem TFA ist in Abbildung \ref{fig:signal_vv+hv} zu sehen. Es hat eine Breite von ca. $850 \mathrm{\, ns}$ und beim Peak eine Höhe von ca. $2.5 \mathrm{\, V}$. Damit ist es nur etwa halb so breit und dafür etwa $6$--mal so hoch wie das aus dem Vorverstärker. Der TFA hat das Signal daher sowohl stark verstärkt, als auch die zeitliche Auflösung enorm vergrößert.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/Signal_Hauptverstärker.jpg}
+	\caption{Signal aus dem Hauptverstärker}
+	\label{fig:signal_vv+hv}
+\end{figure}
+
+\subsubsection{Signal aus dem CFD}
+Die finale Veränderung des Signals ist in Abbildung \ref{fig:signal_cfd} zu sehen. In gelb ist das Signal abgebildet, das der CFD konstruiert, wie es in Abschnitt \ref{cfd} beschrieben ist. Dabei ist zu beachten, dass der Teil der Kurve, der unterhalb der x-Achse verläuft, in Abbildung \ref{fig:signal_cfd} nicht zu sehen ist. Dieser wurde nur selten angezeigt und konnte somit nicht gut aufgenommen werden.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/Signal_CFD.jpg}
+	\caption{Vom CFD kombiniertes eintreffendes Signal (gelb) und logisches Signal (blau)}
+	\label{fig:signal_cfd}
+\end{figure}
+
+Es hat eine Breite von ca. $625 \mathrm{\, ns}$ und beim Peak eine Höhe von ca. $300 \mathrm{\, mV}$. Damit ist das Signal ungefähr so breit wie das aus dem TFA, die zeitliche Auflösung wurde durch das CFD  daher kaum verändert. Die Höhe ist wieder deutlich kleiner, aber die Information der Höhe ist für die Ausgabe des CFDs nicht von Relevanz und kann damit hier ohne Probleme wieder verringert werden.
+
+In blau ist das vom CFD ausgegebene logische Signal zu sehen. Es hat die Charakteristik eines klassischen Kastensignals, ist ca. $1.25 \mathrm{\, \mu s}$ breit und ca. $300 \mathrm{\, mV}$ hoch. Die Höhe und Breite sind beide fest eingestellt und unabhängig vom eintreffenden Signal, weshalb hier kein direkter Vergleich angebracht ist. Bemerkenswert ist trotzdem, dass die Breite des logischen Signals sehr ähnlich zur Breite des eintreffenden Signals ist. Daran ist zu sehen, dass die Breite des logischen Signals sinnvoll eingestellt ist, da sie die zeitliche Auflösung weder stark verringert noch erhöht.
+
 \hypertarget{auswertung-ortsaufluxf6sung}{\subsection{Ortsauflösung}\label{auswertung-ortsaufluxf6sung}}
 Zur Bestimmung der Ortsauflösung wird die Zählrate $r$ aus der Anzahl der Detektionen $n$ und der Messdauer $T_\mathrm{Ort}=60\,\mathrm{s}$ bestimmt. Der Fehler der Detektionszahl $\Delta n$ folgt aus statistischer Streuung, der Fehler der Zählrate $\Delta r$ folgt nach Gauß'scher Fehlerfortpflanzung. Hierbei kann die Messdauer als näherungsweise exakt angenommen werden, der Messfehler in der Zeit ist vernachlässigbar. Die Ergebnisse sind in Tabelle \ref{tab:Ortsauflösung} dargestellt.
 
 \begin{eqnarray}
 	\Delta n &=& \sqrt{n} \label{eq:Delta n} \\
 	r &=& \frac{n}{T_\mathrm{Ort}} \label{eq:Zählrate} \\
-	\Delta r &=& \frac{\Delta n}{T_\mathrm{Ort}}
+	\Delta r &=& \frac{\Delta n}{T_\mathrm{Ort}} \label{eq:ZählrateFehler}
 \end{eqnarray}
 
 
 \begin{table}[h]
 	\centering
 	\begin{tabular}{c|c|c||c|c|c}
-		$x\ [\mathrm{mm}]$ & $n\ [1]$ & $r\ [\mathrm{Hz}]$ &
-		$x\ [\mathrm{mm}]$ & $n\ [1]$ & $r\ [\mathrm{Hz}]$ \\
+		$x\ [\mathrm{mm}]$ & $n\ [\frac{1}{\mathrm{min}}]$ & $r\ [\mathrm{Hz}]$ &
+		$x\ [\mathrm{mm}]$ & $n\ [\frac{1}{\mathrm{min}}]$ & $r\ [\mathrm{Hz}]$ \\
 		\hline
 		$\ \ \ 0 \pm 2$ & $2971 \pm 55$ & $49.52 \pm 0.91$ &---&---&--- \\
 		$\ +1 \pm 2$ & $2202 \pm 47$ & $36.70 \pm 0.78$ &
@@ -615,10 +653,10 @@ Zur Bestimmung der Ortsauflösung wird die Zählrate $r$ aus der Anzahl der Dete
 \end{table}
 
 \noindent
-Diese Daten sind in Abbildung \ref{abb:zaehlrate} dargestellt und gefittet worden. Dabei wurde eine Gaußverteilung angenommen. Dabei wurden der Mittelwert $\mu\approx 0.35\,\mathrm{mm}$, eine Standardabweichung $\sigma\approx1.89\,\mathrm{mm}$ und ein Streckungsfaktor $\alpha\approx 40\,\mathrm{Hz}$  ermittelt.
+Diese Daten sind in Abbildung \ref{abb:zaehlrate} dargestellt und gefittet worden. Dabei wurde eine Gaußverteilung angenommen. Dabei wurden der Mittelwert $\mu\approx 0.35\,\mathrm{mm}$, eine Standardabweichung $\sigma\approx1.89\,\mathrm{mm}$, ein Streckungsfaktor $\alpha\approx 40\,\mathrm{Hz}$ und ein Offset $\beta\approx 0$ ermittelt.
 
 \begin{eqnarray}
-    \phi(x, \mu, \sigma, \alpha) = \alpha\cdot \exp\left[- \frac{(x - \mu)^2}{2\sigma^2} \right]
+    \phi(x, \mu, \sigma, \alpha, \beta) &=& \alpha\cdot \exp\left[- \frac{(x - \mu)^2}{2\sigma^2} \right] + \beta \label{eq:gauss-fit}
 \end{eqnarray}
 
 \noindent
@@ -744,59 +782,115 @@ Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist al
 \hypertarget{winkelabhuxe4ngigkeit}{%
 \subsection{Winkelabhängigkeit}\label{winkelabhuxe4ngigkeit}}
 
-\hypertarget{pu511kevpeak}{%
-	\subsubsection{\texorpdfstring{$\pu{511keV}$--Peak}{\textbackslash pu\{511keV\}--Peak}}\label{pu511kevpeak}}
+\subsubsection{Paarvernichtung}
+\label{auswertung-paarvernichtung}
+Nun wird die Winkelabhängigkeit Photonen aus der Paarvernichtung untersucht. Dazu werden die gemessenen Zählraten $r$ gegen die Winkel $\theta$ aufgetragen, wobei ein eingestellter Winkel von $0\,^\circ$ einem Winkel von $180\,^\circ$ zwischen den Detektoren entspricht, siehe Abbildung \ref{fig:plot511}.
 
-\begin{eqnarray*}
-	N(-5.0^\circ) &=& 432 \\
-	N(-4.5^\circ) &=& 476 \\
-	N(-4.0^\circ) &=& 484 \\
-	N(-3.5^\circ) &=& 585 \\
-	N(-3.0^\circ) &=& 885 \\
-	N(-2.5^\circ) &=& 707 \\
-	N(-2.0^\circ) &=& 1007 \\
-	N(-1.5^\circ) &=& 1646 \\
-	N(-1.0^\circ) &=& 2147 \\
-	N(-0.5^\circ) &=& 2559 \\
-	N(\pm0.0^\circ) &=& 2462 \\
-	N(+0.5^\circ) &=& 1946 \\
-	N(+1.0^\circ) &=& 1383 \\
-	N(+1.5^\circ) &=& 1075 \\
-	N(+2.0^\circ) &=& 637 \\
-	N(+2.5^\circ) &=& 533 \\
-	N(+3.0^\circ) &=& 444 \\
-	N(+3.5^\circ) &=& 494 \\
-	N(+4.0^\circ) &=& 503 \\
-	N(+4.5^\circ) &=& 471 \\
-	N(+5.0^\circ) &=& 456
-\end{eqnarray*}
+Dazu wird die Anzahl der Detektionen $n$ in eine Zählrate $r$ umgerechnet, wobei die Messdauer $T=60\,\mathrm{s}$ verwendet wird. Dies ist analog zu der Berechnung in Abschnitt \ref{auswertung-ortsaufluxf6sung}  und verwendet ebenfalls die Gleichungen \eqref{eq:Delta n} -- \eqref{eq:ZählrateFehler}. Die Ungenauigkeit des Winkels ist mit $\Delta \theta = 0.5\,^\circ$ gegeben. Die gemessenen Ereignisse und die daraus ermittelten Raten sind in Tabelle \ref{table:messwerte511} zu finden.
 
-\hypertarget{pu1275kevpeak}{%
-	\subsubsection{\texorpdfstring{$\pu{1275keV}$--Peak}{\textbackslash pu\{1275keV\}--Peak}}\label{pu1275kevpeak}}
+Die Winkelverteilung der Koinzidenz der beiden $\gamma$--Quanten fällt normalverteilt um etwa den Winkel $0^\circ$ aus. Deswegen können die Werte mit einer Gaußkurve $f(\theta)$ gefittet werden, die durch Gleichung \eqref{eq:gauss-fit} beschrieben wird. Dabei wurden ein Mittelwert $\mu\approx-0.34$, eine Standardabweichung $\sigma\approx 1.04$, ein Streckungsfaktor $\alpha=35$ und ein Offset $\beta\approx7.7$ verwendet.
 
-\begin{eqnarray*}
-	N(-5.0^\circ) &=& 22 \\
-	N(-4.5^\circ) &=& 31 \\
-	N(-4.0^\circ) &=& 28 \\
-	N(-3.5^\circ) &=& 25 \\
-	N(-3.0^\circ) &=& 32 \\
-	N(-2.5^\circ) &=& 24 \\
-	N(-2.0^\circ) &=& 17 \\
-	N(-1.5^\circ) &=& 30 \\
-	N(-1.0^\circ) &=& 27 \\
-	N(-0.5^\circ) &=& 36 \\
-	N(\pm0.0^\circ) &=& 22 \\
-	N(+0.5^\circ) &=& 36 \\
-	N(+1.0^\circ) &=& 27 \\
-	N(+1.5^\circ) &=& 23 \\
-	N(+2.0^\circ) &=& 26 \\
-	N(+2.5^\circ) &=& 38 \\
-	N(+3.0^\circ) &=& 18 \\
-	N(+3.5^\circ) &=& 17 \\
-	N(+4.0^\circ) &=& 23 \\
-	N(+4.5^\circ) &=& 34 \\
-	N(+5.0^\circ) &=& 29
-\end{eqnarray*}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../media/B3.4/plot511.pdf}
+	\caption{Gemessene Zählraten der zwei koinzidenten $\gamma$--Quanten aus der Paarvernichtung, bei verschiedenen Winkeln der Detektoren zueinander (blau), mit Gaußkurve gefittet (orange) und zugehöriger Halbwertsbreite (lila)}
+	\label{fig:plot511}
+\end{figure}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{c|r|r||c|r|r}
+		$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ &
+			$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \\
+		\hline 
+		$-5.0 \pm 0.5$ & 432 $\pm$ 21 & 7.2 $\pm$ 0.3 &
+			$5.0 \pm 0.5$ & 456 $\pm$ 21 & 7.6 $\pm$ 0.4 \\
+		$-4.5 \pm 0.5$ & 476 $\pm$ 22 & 7.9 $\pm$ 0.4 &
+			$4.5 \pm 0.5$ & 471 $\pm$ 22 & 7.9 $\pm$ 0.4 \\
+		$-4.0 \pm 0.5$ & 484 $\pm$ 22 & 8.1 $\pm$ 0.4 &
+			$4.0 \pm 0.5$ & 503 $\pm$ 22 & 8.4 $\pm$ 0.4 \\
+		$-3.5 \pm 0.5$ & 585 $\pm$ 24 & 9.8 $\pm$ 0.4 &
+			$3.5 \pm 0.5$ & 494 $\pm$ 22 & 8.2 $\pm$ 0.4 \\
+		$-3.0 \pm 0.5$ & 885 $\pm$ 30 & 14.8 $\pm$ 0.5 &
+			$3.0 \pm 0.5$ & 444 $\pm$ 21 & 7.4 $\pm$ 0.4 \\
+		$-2.5 \pm 0.5$ & 707 $\pm$ 27 & 11.8 $\pm$ 0.4 &
+			$2.5 \pm 0.5$ & 533 $\pm$ 23 & 8.9 $\pm$ 0.4 \\
+		$-2.0 \pm 0.5$ & 1007 $\pm$ 32 & 16.8 $\pm$ 0.5 &
+			$2.0 \pm 0.5$ & 637 $\pm$ 25 & 10.6 $\pm$ 0.4 \\
+		$-1.5 \pm 0.5$ & 1646 $\pm$ 41 & 27.4 $\pm$ 0.7 &
+			$1.5 \pm 0.5$ & 1075 $\pm$ 33 & 17.9 $\pm$ 0.5 \\
+		$-1.0 \pm 0.5$ & 2147 $\pm$ 46 & 35.8 $\pm$ 0.8 &
+			$1.0 \pm 0.5$ & 1383 $\pm$ 37 & 23.1 $\pm$ 0.6 \\
+		$-0.5 \pm 0.5$ & 2559 $\pm$ 51 & 42.7 $\pm$ 0.8 &
+			$0.5 \pm 0.5$ & 1946 $\pm$ 44 & 32.4 $\pm$ 0.7 \\
+		$\pm 0.0 \pm 0.5$ & 2462 $\pm$ 50 & 41.0 $\pm$ 0.8 &---&---&---
+	\end{tabular}
+	\caption{Gemessene Ereignisse und daraus bestimmte Zählraten der Koinzidenzmessung der zwei $\gamma$-Quanten aus der Paarvernichtung}
+	\label{table:messwerte511}
+\end{table}
+
+Dies entspricht unseren Erwartungen. Damit zwei $\gamma$--Quanten mit Detektoren, deren Winkel kleiner als $180\,^\circ$ zueinander ist, koinzident gemessen werden, musste das Positron oder das Elektron bei der Paarvernichtung noch einen Restimpuls gehabt haben. Dies ist jedoch aufgrund der hohen Energieabhängigkeit des Wirkungsquerschnittes bei der Paarvernichtung deutlich unwahrscheinlicher als eine Paarvernichtung bei ruhendem Positron und Elektron.\footnote{Vergleiche Abschnitt \ref{paarvernichtung}} Daher wurden nur wenige Ergebnisse bei einem Messwinkel $\theta\neq 0\,^\circ$ erwartet.
+
+Diese Gaußverteilung mit einem Peak bei ca. $0\,^\circ$ rührt daher, dass für steigende Winkel auch der benötigte Restimpuls zunimmt. Es wird also stetig unwahrscheinlicher, ein koinzidentes Ereignis zu messen, je weiter man von $0^\circ$ abweicht.
+
+Des weiteren ist es möglich, dass die $\gamma$--Quanten auf dem Weg zu den Detektoren abgelenkt werden und so Ereignisse auch bei Winkeln $\theta\neq 0^\circ$ aufgezeichnet werden können, bei denen sich das Positron und das Elektron bei der Paarvernichtung in Ruhe befunden haben. Dieses Phänomen sollte allerdings nur wenige Ereignisse ermöglichen und lässt uns so trotzdem eine normalverteilte Winkelverteilung erwarten.
+
+Mittels der Gaußkurve lässt sich nun die Halbwertsbreite $\alpha_{1/2}$ der Messung bestimmen. Dazu wird zunächst die Hälfte der maximalen Zählrate $r_{1/2}$ als die Hälfte der Zählrate des höchsten Messpunkts $r_\mathrm{max}$ bestimmt. Damit werden die Winkel $\alpha_{1,2}$ bestimmt, bei denen die Gaußfunktion diese halbe maximale Zählrate $r_{1/2}$ erreicht, woraus die Halbwertsbreite von $\alpha_{1/2}\approx 2.9\,^\circ$ folgt.
+
+\begin{eqnarray}
+	r_{1/2} &=& \frac{\mathrm{max}}{2} \\
+	r_{1/2} &=& \frac{a}{\sigma \sqrt{2 \pi}} e^{- \frac{1}{2} \left( \frac{\alpha - \mu}{\sigma} \right)^2} + b \\
+	\alpha_{1,2} &=& \mu \pm \sigma \sqrt{-2 \ln \left( \frac{r_{1/2} - b}{a} \right) } \\
+	\alpha_{1/2} &=& \alpha_1 - \alpha_2
+\end{eqnarray}
+
+\subsubsection{Koinzidenter Zerfall}
+Zuletzt wird die Winkelabhängigkeit aus der Detektion eines $\gamma$--Quants der Paarvernichtung und eines koinzident erzeugten $\gamma$--Quants, das aus dem sekundären Zerfall von $\ce{^{22}Ne}$ in den Grundzustand stammt, untersucht. Da dies zwei koinzidente, aber unabhängige Ereignisse sind, wird keine Winkelabhängigkeit erwartet.
+
+Analog zu Abschnitt \ref{auswertung-paarvernichtung} werden die Zählraten ermittelt und gegen den Messwinkel $\theta$ aufgetragen. Die Ergebnisse sind in Abbildung \ref{fig:plot1275} und Tabelle \ref{table:messwerte1275} dargestellt. Weiterhin wurde der Mittelwert $\bar r\approx 0.45\,\mathrm{Hz}$ der gemessenen Werte als konstante Linie eingetragen. Etwa die Hälfte der Messwerte liegen im Rahmen ihrer Ungenauigkeit um den Mittelwert $\bar r$ verteilt, die meisten der anderen Messwerte treffen bei Verdopplung ihres Fehlers den Mittelwert.
+
+Auch dies entspricht unseren Erwartungen. Da der $\gamma$--Quant aus dem Zerfall von $\ce{^{22}Ne}$ in den Grundzustand isotrop abgestrahlt wird, sollte eine koinzidente Messung mit einem $\gamma$--Quant aus der Paarvernichtung für alle Winkel etwa gleich häufig auftreten.
+
+Weiterhin ist die Zählrate bei dieser Messung für alle Winkel deutlich kleiner als bei der koinzidenten Messung der zwei $\gamma$--Quanten aus der Paarvernichtung. Das lässt sich ebenso damit erklären, dass das $\gamma$--Quant aus dem Zerfall von $\ce{^{22}Ne}$ in den Grundzustand isotrop abgestrahlt wird. Eine koinzidente Messung dieses $\gamma$--Quants mit einem $\gamma$--Quant aus der Paarvernichtung, sollte also je nach Raumwinkel des Detektors größenordnungstechnisch ca. $100$--mal seltener stattfinden, da es nur in den wenigsten Fällen, überhaupt in die Richtung des Detektors ausgesendet wird.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../media/B3.4/plot1275.pdf}
+	\caption{Gemessene Zählraten von Koinzidenzen zwischen einem $\gamma$--Quant aus der Paarvernichtung und einem $\gamma$-Quant aus dem Zerfall von $^{22}$Ne in den Grundzustand, bei verschiedenen Winkeln der Detektoren zueinander, zusammen mit dem Mittelwert (blaue Linie)}
+	\label{fig:plot1275}
+\end{figure}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|r|r||c|r|r}
+		$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ &
+			$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \\
+		\hline 
+		$-5.0 \pm 0.5$ & 22 $\pm$ 5 & 0.37 $\pm$ 0.08 &
+			$5.0 \pm 0.5$ & 29 $\pm$ 5 & 0.48 $\pm$ 0.09 \\
+		$-4.5 \pm 0.5$ & 31 $\pm$ 6 & 0.52 $\pm$ 0.09 &
+			$4.5 \pm 0.5$ & 34 $\pm$ 6 & 0.57 $\pm$ 0.10 \\
+		$-4.0 \pm 0.5$ & 28 $\pm$ 5 & 0.47 $\pm$ 0.09 &
+			$4.0 \pm 0.5$ & 23 $\pm$ 5 & 0.38 $\pm$ 0.08 \\
+		$-3.5 \pm 0.5$ & 25 $\pm$ 5 & 0.42 $\pm$ 0.08 &
+			$3.5 \pm 0.5$ & 17 $\pm$ 4 & 0.28 $\pm$ 0.07 \\
+		$-3.0 \pm 0.5$ & 32 $\pm$ 6 & 0.53 $\pm$ 0.09 &
+			$3.0 \pm 0.5$ & 18 $\pm$ 4 & 0.30 $\pm$ 0.07 \\
+		$-2.5 \pm 0.5$ & 24 $\pm$ 5 & 0.40 $\pm$ 0.08 &
+			$2.5 \pm 0.5$ & 38 $\pm$ 6 & 0.63 $\pm$ 0.10 \\
+		$-2.0 \pm 0.5$ & 17 $\pm$ 4 & 0.28 $\pm$ 0.07 &
+			$2.0 \pm 0.5$ & 26 $\pm$ 5 & 0.43 $\pm$ 0.08 \\
+		$-1.5 \pm 0.5$ & 30 $\pm$ 5 & 0.50 $\pm$ 0.09 &
+			$1.5 \pm 0.5$ & 23 $\pm$ 5 & 0.38 $\pm$ 0.08 \\
+		$-1.0 \pm 0.5$ & 27 $\pm$ 5 & 0.45 $\pm$ 0.09 &
+			$1.0 \pm 0.5$ & 27 $\pm$ 5 & 0.45 $\pm$ 0.09 \\
+		$-0.5 \pm 0.5$ & 36 $\pm$ 6 & 0.60 $\pm$ 0.10 &
+			$0.5 \pm 0.5$ & 36 $\pm$ 6 & 0.60 $\pm$ 0.10 \\
+		$\pm 0.0 \pm 0.5$ & 22 $\pm$ 5 & 0.37 $\pm$ 0.08 &---&---&---
+	\end{tabular}
+	\caption{Gemessene Ereignisse und daraus bestimmte Zählraten der Koinzidenzmessung eines $\gamma$--Quanten aus der Paarvernichtung und eines $\gamma$--Quanten aus dem Zerfall von $\ce{^{22}Ne}$ in den Grundzustand}
+	\label{table:messwerte1275}
+\end{table}
 
 \clearpage
 \hypertarget{fazit}{%
