@@ -4,6 +4,8 @@ Hier werden die Messdaten sowie Protokolle von unseren Laborversuchen im [Prakti
 Bei einigen Versuchen ist Code in Form von [Jupyter](https://jupyter.org)-Notebooks zur Verfügung gestellt. Einige davon nutzen [Python 3](https://www.python.org), andere [Julia](https://julialang.org).
 
 ## 1. Atom- & Molekülphysik
+* B1.1: Infrarotabsorption in $\ce{CO_2}$ ([PDF](./B1.1/B1.1.pdf), [LaTeX](./B1.1/B1.1.tex))
+
 ## 2. Festkörperphysik
 * B2.4: Magnetisierung eines Ferrits ([PDF](./B2.4/B2.4.pdf), [LaTeX](./B2.4/B2.4.tex))
 	* Lernkarten ([PDF](./B2.4/B2.4_Lernkarten.pdf), [LaTeX](./B2.4/B2.4_Lernkarten.tex))

@@ -1,0 +1,110 @@
+% based on a template made by the university of cologne
+% http://www.mi.uni-koeln.de/wp-MIEDV/wp-content/uploads/2016/07/LaTeX-Vorlage.zip - 2023-11-02
+\documentclass[12pt,a4paper]{scrartcl}
+
+\addtokomafont{sectioning}{\rmfamily}
+\usepackage[ngerman]{babel}% deutsches Sprachpaket wird geladen
+\usepackage[T1]{fontenc} % westeuropäische Codierung wird verlangt
+\usepackage[utf8]{inputenc}% Umlaute werden erlaubt
+\usepackage[usenames]{color} % Erlaubt die Benutzung der namen im Farbpaket und deren Änderung
+\usepackage{amsmath} % Erweiterung für den Mathe-Satz
+\usepackage{amssymb} % alle Zeichen aus msam und msmb werden dargestellt
+\usepackage{graphicx} % Graphiken und Bilder können eingebunden werden
+%\usepackage{multirow} % erlaubt in einer Spalte einer Tabelle die Felder in mehreren Zeilen zusammenzufassen
+\usepackage{enumerate} % erlaubt Nummerierungen
+\usepackage{xurl} % Dient zur Auszeichnung von URLs; setzt die Adresse in Schreibmaschinenschrift.
+\usepackage[center]{caption}  % Bildunterschrift wird zentriert
+%\usepackage{subfigure} % mehrere Bilder können in einer fugure-Umgebung verwendet werden
+%\usepackage{longtable} % Diese Umgebung ist ähnlich definiert wie die tabular-Umgebung, erlaubt jedoch mehrseitige Tabellen.
+%\usepackage{paralist} % Modifikation der bereits bestehenden Listenumgebungen
+\usepackage{lmodern}% Für die Schrift
+\usepackage[hidelinks]{hyperref} % Links und Verweise werden innerhalb von PDF Dokumenten erzeugt
+%\usepackage{wrapfig} % Das Paket ermöglicht es von Schrift umflossene Bilder und Tabellen einzufügen.
+\usepackage{latexsym} % LaTeX-Symbole werden geladen
+\usepackage{tikz} % Erlaubt es mit tikz zu zeichnen
+\usepackage{tabularx} % Erlaubt Tabellen
+\usepackage{algorithm} % Erlaubt Pseudocode
+\usepackage{color} % Farbpaket wird geladen
+%\usepackage{stmaryrd} % St Mary Road Symbole werden geladen
+\usepackage{physics}
+\usepackage{mhchem} % Chemie: \ce & \pu
+
+\numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
+\newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
+\newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
+
+% disable commands
+\renewcommand{\[}{} % math block start
+\renewcommand{\]}{\noindent} % math block end
+
+\hypersetup{
+  pdftitle={B1.1},
+  pdfcreator={LaTeX via pandoc}}
+
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{6}
+
+\begin{document}
+\begin{titlepage}
+	\pagestyle{empty}
+
+	\begin{center}
+
+	\textsc{\LARGE Universität zu Köln }\\ [0.4cm]
+	\textsc{Mathematisch-Naturwissenschaftliche Fakultät} \\[1.5cm]
+
+	\includegraphics[width=0.45\textwidth]{../media/uni.jpg}\\[1.5cm]  % Uni-Logo wird geladen
+
+	\textsc{\Large Praktikum~B}\\[2mm]
+	\textsc{}\\[10mm]
+	\HRule \\[0.4cm]
+
+		{	\Huge \bfseries B1.1}\\[0.4cm]
+			{	\huge \bfseries Infrarotabsorption in \(\ce{CO_2}\)}\\[0.3cm]
+	
+	\HRule \\[3cm]
+
+ 	\begin{center}
+		\textsc{\Large Catherine~Tran } \\[3pt]
+		\textsc{\Large Carlo~Kleefisch } \\[3pt]
+		\textsc{\Large Oliver~Filla } \\[3pt]
+	\end{center}
+	\end{center}
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+\hypertarget{einleitung}{%
+\section{Einleitung}\label{einleitung}}
+
+\clearpage
+\hypertarget{theoretische-grundlagen}{%
+\section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
+
+\clearpage
+\hypertarget{durchfuxfchrung}{%
+\section{Durchführung}\label{durchfuxfchrung}}
+
+\clearpage
+\hypertarget{auswertung}{%
+\section{Auswertung}\label{auswertung}}
+
+\clearpage
+\hypertarget{fazit}{%
+\section{Fazit}\label{fazit}}
+
+\clearpage
+\hypertarget{literatur}{%
+\section{Literatur}\label{literatur}}
+\renewcommand{\section}[2]{} % remove extra title
+\begin{thebibliography}{9}
+\bibitem{UzK}
+	Universität zu Köln, ``B1.1: Infrarotabsorption in \(\ce{CO_2}\)'', April 2024
+\bibitem{Bakan}
+  S. Bakan \& E. Raschke, ``Der natürliche Treibhauseffekt'', Promet 28,
+	Deutscher Wetterdienst, 2002, Online verfügbar unter
+	\url{https://www.dwd.de/DE/leistungen/pbfb_verlag_promet/pdf_promethefte/28_3_4_pdf.pdf}
+\end{thebibliography}
+\end{document}
