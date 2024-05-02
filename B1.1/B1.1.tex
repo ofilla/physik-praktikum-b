@@ -154,8 +154,39 @@ Das Wien'sche Verschiebungsgesetz beschreibt abhängig von der Temperatur \(T\),
 \end{eqnarray}
 \]
 
-\hypertarget{dipole}{%
-\subsection{Dipole}\label{dipole}}
+\hypertarget{elektrisches-dipolmoment}{%
+\subsection{elektrisches Dipolmoment}\label{elektrisches-dipolmoment}}
+
+Das elektrische Dipolmoment \(\vec \mu\) ist das erste Moment aus der Multipolentwicklung einer Ladungsverteilung \(\rho(\vec r)\). \cite{Dipolmoment}
+Es ist parallel zum elektrischen Feld \(\vec E\) und beschreibt die Ungleichverteilung von Ladungen.
+
+\[
+\begin{eqnarray}
+    \vec \mu &=& \int \vec r \rho(\vec r) \,\mathrm d^3\vec r
+\end{eqnarray}
+\]
+
+\noindent
+Atome im Grundzustand haben kein permanentes Dipolmoment, Moleküle können dagegen ein permanentes Dipolmoment haben. Ein Beispiel dafür ist Wasser \((\ce{H_2O})\).
+
+\hypertarget{dipoluxfcbergang}{%
+\subsubsection{Dipolübergang}\label{dipoluxfcbergang}}
+
+Um ein Molekül durch die Absorption eines Photons anzuregen, muss ein Dipolübergang stattfinden. Dabei wird der quantenmechanische Zustand des Moleküls gestört, was durch zeitabhängige Störungstheorie beschrieben wird. \cite{Hinderer}
+
+\hypertarget{uxfcbergangsdipolmoment}{%
+\subsubsection{Übergangsdipolmoment}\label{uxfcbergangsdipolmoment}}
+
+Die Störung wird als Übergangsdipolmoment \(\vec\mu_{01}\) bezeichnet. Es wird durch den Operator des Dipolmoments \(\hat {\vec \mu}_e\) sowie den Anfangszustand \(\ket{\Psi_0}\) und den Endzustand \(\ket{\Psi_1}\) berechnet. So lange das Übergangsdipolmoment \(\vec\mu_{01}\neq0\) nicht verschwindet, ist der Übergang erlaubt.
+
+\[
+\begin{eqnarray}
+    \vec \mu_{01} &=& \expval{\Psi_0\left|\hat {\vec \mu}_e\right|\Psi_1}
+\end{eqnarray}
+\]
+
+\noindent
+Je größer das Übergangsdipolmoment ist, desto großer ist auch das Absorptionsvermögen.
 
 \hypertarget{freiheitsgrade}{%
 \subsection{Freiheitsgrade}\label{freiheitsgrade}}
@@ -209,5 +240,12 @@ Gesetz}\label{das-lambertbeersche-gesetz}}
 \bibitem{abb:SpektrumSK}
 	Wikipedia, \url{https://commons.wikimedia.org/wiki/File:BlackbodySpectrum_lin_150dpi_de.png},
 	Abruf am 02.05.2024
+\bibitem{Dipolmoment}
+	Lexikon der Physik, ``Dipolmoment'',
+	\href{https://www.spektrum.de/lexikon/physik/elektrisches--dipolmoment/3960}{https://www.spektrum.de/lexikon/physik/elektrisches--dipolmoment/3960},
+	Abruf am 02.05.2024
+\bibitem{Hinderer}
+	F. Hinderer, ``UV/Vis--Absorptions- und Fluoreszenz--Spektroskopie'',
+	2020, DOI \href{https://doi.org/10.1007/978-3-658-25441-4}{10.1007/978-3-658-25441-4}
 \end{thebibliography}
 \end{document}
