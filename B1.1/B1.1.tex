@@ -79,9 +79,102 @@
 \hypertarget{einleitung}{%
 \section{Einleitung}\label{einleitung}}
 
+Mithilfe von Spektroskopie ist es möglich, Absorptions- und
+Emissionsspektren von elektromagnetischen Wellen an einer Probe zu
+beobachten. Hierzu misst man spezifische Größen in Abhängigkeit von der
+Frequenz. Dadurch ist es möglich, Aussagen über die mikroskopischen
+Eigenschaften der Probe zu treffen.
+
+Alternativ zur Frequenz werden auch äquivalente Größen wie der
+Wellenlänge oder Energie verwendet, um Größen wie die Intensität, die
+Strahlungsleistung und die Zählrate der Strahlung zu messen.
+
+Dieser Versuch dient als Einführung in die Infrarotspektroskopie.
+Mithilfe eines niedrig auflösenden Absorptionsspektrometers wird die
+Infrarot--Absorption von Kohlenstoffdioxid \((\ce{CO_2})\) untersucht.
+Dieses Gas gehört zu den sogenannten ``Treibhausgasen''.
+
 \clearpage
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
+
+\hypertarget{elektromagnetisches-spektrum}{%
+\subsection{elektromagnetisches
+Spektrum}\label{elektromagnetisches-spektrum}}
+
+\hypertarget{planckstrahlung}{%
+\subsection{Planck--Strahlung}\label{planckstrahlung}}
+
+Das Planck'sche Strahlungsgesetz beschreibt die Energiedichte \(\omega_\mathrm{P}\), die ein schwarzer Körper mit einer Frequenz \(\nu\) bei einer Temperatur \(T\) als Wärmestrahlung aussendet. Dabei finden das Planck'sche Wirkungsquantum \(h\), die Lichtgeschwindigkeit \(c\) und die Boltzmann--Konstante \(k_B\) Verwendung. \cite{Demtröder}
+
+\[
+\begin{eqnarray}
+    \omega_\mathrm{P}(\nu,T) &=&
+        \frac{8\pi\nu^2}{c^3}
+        \frac{h\nu}{\exp\left[\frac{h\nu}{k_BT}\right]-1}
+        \,\mathrm d\nu
+        \label{eq:PlackStrahlung}
+\end{eqnarray}
+\]
+
+\noindent
+Der Faktor \(\frac{8\pi\nu^2}{c^3}\) ist dabei die Dichte der Schwingungsmoden in einem Frequenzintervall, also die Anzahl erlaubter
+Schwingungszustände. Der Faktor \(h\nu\cdot\exp[\dots]^{-1}\) beschreibt die mittlere kinetische Energie dieser Zustände. Dies ist in Abbildung \ref{abb:SpektrumSK} dargestellt.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../media/B1.1/BlackbodySpectrum_lin_150dpi_de.png}
+	\caption{Schwarzkörperstrahlung für verschiedene Temperaturen \cite{abb:SpektrumSK}}
+	\label{abb:SpektrumSK}
+\end{figure}
+
+\hypertarget{strahlungsdichte}{%
+\subsubsection{Strahlungsdichte}\label{strahlungsdichte}}
+
+Die Strahldichte oder Strahlungsdichte \(S\) beschreibt die Strahlung, die ein Flächenelement \(\mathrm dA\) eines Strahlers in einen Raumwinkel \(\mathrm d\Omega\) abstrahlt. Sie ist allgemein das Differential der Strahlungsleistung \(\Phi\). \cite{Demtröder,Strahldichte}
+
+\[
+\begin{eqnarray}
+    S &=& \frac{\mathrm d^2\Phi}{\mathrm dA \cdot \mathrm d\Omega}
+\end{eqnarray}
+\]
+
+\hypertarget{wiensches-verschiebungsgesetz}{%
+\subsubsection{Wien'sches
+Verschiebungsgesetz}\label{wiensches-verschiebungsgesetz}}
+
+Das Wien'sche Verschiebungsgesetz beschreibt abhängig von der Temperatur \(T\), bei welcher Wellenlänge \(\hat{\lambda}\) bzw. Frequenz \(\hat{\nu}\) die größte Wärmeleistung abgestrahlt wird. Dadurch beschreibt es die Temperaturabhängigkeit des Maximums des Planck'schen Strahlungsgesetzes \(\eqref{eq:PlackStrahlung}\).
+
+\[
+\begin{eqnarray}
+    \hat{\lambda}\cdot T &=& 2.898\cdot10^{-3}\mathrm{\,m\cdot K}
+        \label{eq:WienLambda}\\
+    \hat{\nu}\cdot T &=& 5.879\cdot10^{10} \mathrm{\,m\cdot Hz}
+        \label{eq:WienNu}
+\end{eqnarray}
+\]
+
+\hypertarget{dipole}{%
+\subsection{Dipole}\label{dipole}}
+
+\hypertarget{freiheitsgrade}{%
+\subsection{Freiheitsgrade}\label{freiheitsgrade}}
+
+\hypertarget{infrarotaktivituxe4t}{%
+\subsection{Infrarotaktivität}\label{infrarotaktivituxe4t}}
+
+\hypertarget{photonen}{%
+\subsection{Photonen}\label{photonen}}
+
+\hypertarget{mathematische-grundlagen}{%
+\subsection{Mathematische Grundlagen}\label{mathematische-grundlagen}}
+
+\hypertarget{das-lambertbeersche-gesetz}{%
+\subsection{Das Lambert--Beer'sche
+Gesetz}\label{das-lambertbeersche-gesetz}}
+
+\hypertarget{treibhauseffekt}{%
+\subsection{Treibhauseffekt}\label{treibhauseffekt}}
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
@@ -106,5 +199,15 @@
   S. Bakan \& E. Raschke, ``Der natürliche Treibhauseffekt'', Promet 28,
 	Deutscher Wetterdienst, 2002, Online verfügbar unter
 	\url{https://www.dwd.de/DE/leistungen/pbfb_verlag_promet/pdf_promethefte/28_3_4_pdf.pdf}
+\bibitem{Demtröder}
+	W. Demtröder, ``Experimentalphysik 3: Atome, Moleküle und Festkörper'',
+	Springer--Spektrum--Verlag, 5. Auflage 2016, DOI:
+	\href{https://doi.org/10.1007/978-3-662-49094-5}{10.1007/978-3-662-49094-5}
+\bibitem{Strahldichte}
+	Wikipedia, ``Strahldichte'',
+	\url{https://de.wikipedia.org/wiki/Strahldichte}, Abruf am 02.05.2024
+\bibitem{abb:SpektrumSK}
+	Wikipedia, \url{https://commons.wikimedia.org/wiki/File:BlackbodySpectrum_lin_150dpi_de.png},
+	Abruf am 02.05.2024
 \end{thebibliography}
 \end{document}
