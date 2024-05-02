@@ -101,7 +101,7 @@ Wenn der Tracer im Gewebe ist, zerfällt er über den $\beta^+$--Zerfall und emi
 
 Um die Aktivität quantitativ zu bestimmen, werden Signale von den ausgestrahlten Photonen registriert. Wenn zwei davon koinzident sind, hat dieser Prozess mit großer Wahrscheinlichkeit auf der Verbindungslinie (LOR\footnote{Englisch: \emph{line of response}}) stattgefunden. Aus vielen solcher koinzidenten Signale lässt sich die Aktivität mit einem Computerprogramm zu einem zweidimensionalen und später dreidimensionalen Bild rekonstruieren.
 
-Es kann bei der Messung häufig zu falschen Koinzidenzen kommen. Entweder sind das nur zufällige Signale, die zeitgleich aufgenommen werden, oder das Photon wurde schon auf den Weg zum Detektor gestreut. Diese falsche Koinzidenzen möchte man möglichst gering halten, da sie nicht zur Bildqualität tragen und Nachbearbeitung fordern.
+Es kann bei der Messung häufig zu falschen Koinzidenzen kommen. Entweder sind das nur zufällige Signale, die zeitgleich aufgenommen werden, oder das Photon wurde schon auf den Weg zum Detektor gestreut. Diese falschen Koinzidenzen möchte man möglichst gering halten, da sie nicht zur Bildqualität beitragen und Nachbearbeitung fordern.
 
 Neben der PET gibt es noch andere bildgebende Verfahren wie Röntgentomographie, Computertomographie (CT), Magnetresonanztomographie (MRT) und Ultraschall. Die Strahlenbelastung ist bei jeweiligem Verfahren unterschiedlich.
 
@@ -109,7 +109,7 @@ Bei Ultraschall werden nur unschädliche Schallwellen verwendet, MRT ist ebenso 
 
 Laut Bundesamt für Strahlenschutz beträgt der Grenzwert für eine einzelne Person $\pu{1 \,mSv}$ pro Jahr, so lange man nicht beruflich mit Strahlung zu tun hat.
 
-Für die Medizin ist PET ein hervorragendes Werkzeug, besonders in der Onkologie. Das Verfahren kann Veränderung im Stoffwechsel erkennen, eher ein anderes Verfahren es nachweisen kann, so können Krebstumoren früher erkannt und behandelt werden.
+Für die Medizin ist PET ein hervorragendes Werkzeug, besonders in der Onkologie. Das Verfahren kann Veränderung im Stoffwechsel erkennen, eher ein anderes Verfahren es nachweisen kann, so können Krebstumore früher erkannt und behandelt werden.
 
 \hypertarget{betazerfall}{%
 \subsection{\texorpdfstring{$\beta$--Zerfall}{\textbackslash beta--Zerfall}}\label{betazerfall}}
@@ -314,7 +314,7 @@ Die Bindungsenergie $E_B$ verringert die Masse des Atomkernes. Daher kann die Ke
 \end{eqnarray}
 
 \noindent
-In der Darstellung der einzelnen Terme ist weiterhin relevant, dass der Kernradius $R$ kann durch den Radius $r$ eines Nukleons und die Nukleonenzahl $A$ beschrieben werden kann.
+In der Darstellung der einzelnen Terme ist weiterhin relevant, dass der Kernradius $R$ durch den Radius $r$ eines Nukleons und die Nukleonenzahl $A$ beschrieben werden kann.
 
 \begin{eqnarray}
 	R &=& r \cdot \sqrt[3]{A}
@@ -673,12 +673,12 @@ Die Ortsauflösung kann durch die ermittelte Standardabweichung bestimmt werden.
 \clearpage
 \hypertarget{petscan}{%
 \subsection{PET--Scan}\label{petscan}}
-In $x$-- und $y$--Richtung wurden je $10$ Messungen durchgeführt. Die Fehler der Zählraten $N$ sind dabei durch die statistische Streuung \eqref{eq:Zählrate} bestimmt. Die Ergebnisse sind in Tabelle \ref{tab:PET x y} dargestellt.
+In $x$-- und $y$--Richtung wurden je $10$ Messungen durchgeführt. Die Fehler der Zählraten $N$ sind dabei durch die statistische Streuung \eqref{eq:Delta n} bestimmt. Die Ergebnisse sind in Tabelle \ref{tab:PET x y} dargestellt.
 
 Anhand der Werte kann man schon erahnen, dass es mindesten vier Positionen gibt, an denen sich Proben befinden könnten. Um die richtigen Positionen herauszufiltern, müssen die Messungen in $z$--Richtung betrachtet werden. Diese sind in Tabelle \ref{tab:PET z} dargestellt.
 
 
-Aus diesen Werten lässt sich schließen, dass mindestens zwei starke Quellen positioniert wurden. Um genauer sagen zu können, werden die Zählraten zu einer Position $(x,y,z)$ miteinander multipliziert und als Heatmap sowie als visualisiert, siehe Abbildungen \ref{abb:PET heatmap} und \ref{abb:PET surface} sowie Tabelle \ref{tab:PET Matrix}. Es ist deutlich zu sehen, dass zwei große Quellen an den Positionen $(10,4)$ und $(7,9)$ positioniert sind.
+Aus diesen Werten lässt sich schließen, dass mindestens zwei starke Quellen positioniert wurden. Um genauer sagen zu können, werden die Zählraten zu einer Position $(x,y,z)$ miteinander multipliziert und als Heatmap sowie als Oberflächenplot visualisiert, siehe Abbildungen \ref{abb:PET heatmap} und \ref{abb:PET surface} sowie Tabelle \ref{tab:PET Matrix}. Es ist deutlich zu sehen, dass zwei große Quellen an den Positionen $(10,4)$ und $(7,9)$ positioniert sind.
 
 \begin{figure}[h!]
 	\centering
@@ -688,8 +688,8 @@ Aus diesen Werten lässt sich schließen, dass mindestens zwei starke Quellen po
 		\label{abb:PET heatmap}
 	\end{minipage}
 
-	\vspace{24pt}
-	\begin{minipage}[t]{0.7\textwidth}
+	\vspace{12pt}
+	\begin{minipage}[t]{0.6\textwidth}
 		\includegraphics[width=\textwidth]{../media/B3.4/PET_surface.jpg}
 		\caption{Oberflächenplot in $3\,\mathrm D$}
 		\label{abb:PET surface}
@@ -698,9 +698,9 @@ Aus diesen Werten lässt sich schließen, dass mindestens zwei starke Quellen po
 
 Uns wurde mitgeteilt, es gebe eine dritte, schwächere Probe. Weder anhand der Daten noch anhand der Grafiken können wir diese Quelle lokalisieren, weil es kaum signifikante Abhebungen erkennbar sind. Vermutlich ist diese sehr viel schwächer als die zwei große Quellen.
 
-Betrachtet man die Werte sehr genau, kann man $(3,2)$ als mögliche Position einer dritten Quelle vermuten. Der Messwert $N(z_{11}$ ist größer als die benachbarten Messungen in der $z$--Richtung. Weiterhin ist Produkt der Zählraten an Position $(3,2)$ deutlich höher als die meisten benachbarten Werte, siehe Tabelle \ref{tab:PET Matrix}.
+Betrachtet man die Werte sehr genau, kann man $(3,2)$ als mögliche Position einer dritten Quelle vermuten. Der Messwert $N(z_{11})$ ist größer als die benachbarten Messungen in der $z$--Richtung. Weiterhin ist Produkt der Zählraten an Position $(3,2)$ deutlich höher als die meisten benachbarten Werte, siehe Tabelle \ref{tab:PET Matrix}.
 
-Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist als die von der Quelle $2$ an Position $(7,9)$. D und zwar um einen Faktor 1.04. Eine mögliche Quelle $3$ an Position $(3,2)$ ist dann deutlich schwächer.
+Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist als die von der Quelle $2$ an Position $(7,9)$, und zwar um einen Faktor 1.04. Eine mögliche Quelle $3$ an Position $(3,2)$ ist dann deutlich schwächer.
 
 \begin{eqnarray}
 	\frac{A_1}{A_2} &\approx& 1.04 \\
@@ -775,7 +775,7 @@ Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist al
 		&$9$  & $111$ & $151$ & $284$ & $237$ & $402$ & $981$ & $9210$ & $817$ & $765$ & $2732$ \\
 		&$10$  & $20$ & $33$ & $56$ & $44$ & $68$ & $135$ & $678$ & $611$ & $191$ & $552$ \\
 	\end{tabular}
-	\caption{multiplizierte Zählraten je Position, in der Einheit von $10^6\, \mathrm{min^{-1}}$}
+	\caption{Multiplizierte Zählraten je Position, in der Einheit von $10^6\, \mathrm{min^{-1}}$}
 	\label{tab:PET Matrix}
 \end{table}
 
@@ -785,7 +785,7 @@ Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist al
 
 \subsubsection{Paarvernichtung}
 \label{auswertung-paarvernichtung}
-Nun wird die Winkelabhängigkeit Photonen aus der Paarvernichtung untersucht. Dazu werden die gemessenen Zählraten $r$ gegen die Winkel $\theta$ aufgetragen, wobei ein eingestellter Winkel von $0\,^\circ$ einem Winkel von $180\,^\circ$ zwischen den Detektoren entspricht, siehe Abbildung \ref{fig:plot511}.
+Nun wird die Winkelabhängigkeit der Photonen aus der Paarvernichtung untersucht. Dazu werden die gemessenen Zählraten $r$ gegen die Winkel $\theta$ aufgetragen, wobei ein eingestellter Winkel von $0\,^\circ$ einem Winkel von $180\,^\circ$ zwischen den Detektoren entspricht, siehe Abbildung \ref{fig:plot511}.
 
 Dazu wird die Anzahl der Detektionen $n$ in eine Zählrate $r$ umgerechnet, wobei die Messdauer $T=60\,\mathrm{s}$ verwendet wird. Dies ist analog zu der Berechnung in Abschnitt \ref{auswertung-ortsaufluxf6sung}  und verwendet ebenfalls die Gleichungen \eqref{eq:Delta n} -- \eqref{eq:ZählrateFehler}. Die Ungenauigkeit des Winkels ist mit $\Delta \theta = 0.5\,^\circ$ gegeben. Die gemessenen Ereignisse und die daraus ermittelten Raten sind in Tabelle \ref{table:messwerte511} zu finden.
 
@@ -903,7 +903,6 @@ Insbesondere bedeutet dies, dass die Auflösung sehr viel besser als die Abstän
 Auch der PET--Scan selbst ist ziemlich gut verlaufen. Es gibt für zwei Proben sehr eindeutige Ergebnisse. Nur die dritte Probe konnte nicht gemessen werden. Dies liegt sehr wahrscheinlich daran, dass sie um einen Faktor von über $80$ schwächer als die anderen beiden Proben ist. Damit wird ihre Strahlung in unseren Messrichtungen von den anderen beiden Proben so sehr überlagert, dass sie praktisch nicht zu erkennen ist.
 
 Abhilfe hierfür hätte eine weitere Messreihe geben können, bei denen eine $z^\prime$--Richtung vermessen wird, die senkrecht zu der von uns verwendeten $z$--Richtung steht. Würde nur in $z^\prime$--Richtung gemessen, würden die beiden stärkeren Proben vermutlich im ``Schatten'' voneinander stehen, weswegen Messungen in $x$--, $y$--, $z$-- und $z^\prime$--Richtung notwendig wären, um alle Proben genau zu lokalisieren. Dies ist an Abbildung \ref{abb:heatmap} zu erkennen.
-
 \begin{figure}[h]
 	\centering
 	\vspace{24pt}
