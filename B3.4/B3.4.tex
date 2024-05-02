@@ -97,7 +97,7 @@ Die Positronen--Emissions--Tomographie ist ein Verfahren, das die Möglichkeit b
 Hierbei injiziert man dem Patienten radioaktive Markerstoffe (\emph{Tracer}). Diese werden unterschiedlich von den Zellen aufgenommen und verarbeitet, abhängig vom lokalen Stoffwechsel. Damit der Körper nicht zu viel radioaktive Strahlungen ausgesetzt wird, muss der Tracer so kurzlebig wie möglich sein und dennoch Positronen abgeben. Deswegen eignen sich z.B. $\ce{^{11}C}$, $\ce{^{13}N}$, $\ce{^{15}O}$,
 $\ce{^{18}F}$ besonders. Unterschiedliche Tracer werden für unterschiedliche Körperteile verwendet.
 
-Wenn der Tracer im Gewebe ist, zerfällt er über den $\beta^+$--Zerfall und emittiert dabei Positronen. Innerhalb weniger Mikrometer rekombiniert ein Positron mit einem Elektron und es kommt zur \emph{Paarvernichtung}. Hierbei entstehen zwei Photonen mit jeweils einer Energie von $\pu{511 \,keV}$ ein einem Winkel von $180\,^\circ$ zueinander. $[6]$
+Wenn der Tracer im Gewebe ist, zerfällt er über den $\beta^+$--Zerfall und emittiert dabei Positronen. Innerhalb weniger Mikrometer rekombiniert ein Positron mit einem Elektron und es kommt zur \emph{Paarvernichtung}. Hierbei entstehen zwei Photonen mit jeweils einer Energie von $\pu{511 \,keV}$ ein einem Winkel von $180\,^\circ$ zueinander. \cite{Bethge,DGNM,Annihilation}
 
 Um die Aktivität quantitativ zu bestimmen, werden Signale von den ausgestrahlten Photonen registriert. Wenn zwei davon koinzident sind, hat dieser Prozess mit großer Wahrscheinlichkeit auf der Verbindungslinie (LOR\footnote{Englisch: \emph{line of response}}) stattgefunden. Aus vielen solcher koinzidenten Signale lässt sich die Aktivität mit einem Computerprogramm zu einem zweidimensionalen und später dreidimensionalen Bild rekonstruieren.
 
@@ -105,7 +105,7 @@ Es kann bei der Messung häufig zu falschen Koinzidenzen kommen. Entweder sind d
 
 Neben der PET gibt es noch andere bildgebende Verfahren wie Röntgentomographie, Computertomographie (CT), Magnetresonanztomographie (MRT) und Ultraschall. Die Strahlenbelastung ist bei jeweiligem Verfahren unterschiedlich.
 
-Bei Ultraschall werden nur unschädliche Schallwellen verwendet, MRT ist ebenso frei von Strahlenbelastung. Im Vergleich zu Röntgentomographie und CT ist PET weniger schädlich, da die Stoffe sehr schnell zerfallen. Eine Röntgenaufnahme am Brustkorb hat eine Äquivalentdosis von $\pu{0.2 \,mSv}$ und eine CT am Brustkorb hat ca $\pu{8 \,mSv}$ $[8]$.
+Bei Ultraschall werden nur unschädliche Schallwellen verwendet, MRT ist ebenso frei von Strahlenbelastung. Im Vergleich zu Röntgentomographie und CT ist PET weniger schädlich, da die Stoffe sehr schnell zerfallen. Eine Röntgenaufnahme am Brustkorb hat eine Äquivalentdosis von $\pu{0.2 \,mSv}$ und eine CT am Brustkorb hat ca $\pu{8 \,mSv}$ \cite{SSK}.
 
 Laut Bundesamt für Strahlenschutz beträgt der Grenzwert für eine einzelne Person $\pu{1 \,mSv}$ pro Jahr, so lange man nicht beruflich mit Strahlung zu tun hat.
 
@@ -118,9 +118,9 @@ Der $\beta$--Zerfall ist eine der drei Arten radioaktiven Zerfalls. Wie beim $\a
 
 Es wird zwischen drei Arten des $\beta$--Zerfalls unterschieden. Es gibt $\beta^+$--Zerfall und $\beta^-$--Zerfall, weiterhin wird der Elektroneneinfang dazugezählt.
 
-Radioaktiver Zerfall geschieht, wenn der Tochterkern eine höhere Bindungsenergie als der Mutterkern erhält. Hierfür ist insbesondere der Symmetrieterm der Weizsäcker Massenformel $(??)$ interessant. Daran kann man erklären, dass $\beta^-$--Zerfall dann geschehen kann, wenn der Kern mehr Neutronen als Protonen hat.
+Radioaktiver Zerfall geschieht, wenn der Tochterkern eine höhere Bindungsenergie als der Mutterkern erhält. Hierfür ist insbesondere der Symmetrieterm der Weizsäcker Massenformel \eqref{eq:Massenformel} interessant. Daran kann man erklären, dass $\beta^-$--Zerfall dann geschehen kann, wenn der Kern mehr Neutronen als Protonen hat.
 
-Umgekehrt kann es zu $\beta^+$--Zerfall kommen, wenn der Kern mehr Protonen als Neutronen hat. Ebenso ist Elektroneneinfang möglich. Welcher dieser Prozesse stattfindet hängt von der Energiedifferenz zwischen Mutterkern und Tochterkern ab: Wenn die Energiedifferenz kleiner als $\Delta E_\mathrm{min}=\pu{1.022 MeV}$ beträgt, dann reicht die Energie nur für Elektroneneinfang. Bei einer Energie von mehr als $\Delta E_\mathrm{min}$ ist auch $\beta^+$--Zerfall möglich. $\Delta E_\mathrm{min}$ entspricht der doppelten Ruheenergie von Elektronen.
+Umgekehrt kann es zu $\beta^+$--Zerfall kommen, wenn der Kern mehr Protonen als Neutronen hat. Ebenso ist Elektroneneinfang möglich. Welcher dieser Prozesse stattfindet hängt von der Energiedifferenz zwischen Mutterkern und Tochterkern ab: Wenn die Energiedifferenz kleiner als $\Delta E_\mathrm{min}=\pu{1.022\, MeV}$ beträgt, dann reicht die Energie nur für Elektroneneinfang. Bei einer Energie von mehr als $\Delta E_\mathrm{min}$ ist auch $\beta^+$--Zerfall möglich. $\Delta E_\mathrm{min}$ entspricht der doppelten Ruheenergie von Elektronen.
 
 Beim $\beta^+$--Zerfall wird ein Proton $p$ in ein Neutron $n$ umgewandelt, dabei entstehen ein Positron $e^+$ sowie ein Elektronenneutrino $\nu_e$. Hierbei wird ein Mutterkern $\ce{^A_Z X}$ in einen Tochterkern $\ce{^A_{Z-1} Y^-}$ umgewandelt. Beim $\beta^-$--Zerfall wird ein Neutron $n$ in ein Proton $p$ umgewandelt, dabei entstehen ein Elektron $e^-$ sowie ein Elektronen--Antineutrino $\bar{\nu}_e$. Hierbei wird ein Mutterkern $\ce{^A_Z X}$ in einen Tochterkern $\ce{^A_{Z+1} Y^+}$ umgewandelt.
 
@@ -139,40 +139,40 @@ Beim Elektroneneinfang (ec) wird ähnlich wie beim $\beta^+$--Zerfall ein Proton
 \end{eqnarray}
 
 \noindent
-In diesem Versuch wird als Quelle $\ce{^{22}Na}$ verwendet, da eine Halbwertzeit von etwa 2.6 Jahren hat $[2]$. Dieses zerfällt über den $\beta^+$--Zerfall in einen angeregten Zustand des stabilen Nuklides $\ce{^{22}Ne}$, welches unter Aussenden eines $\gamma$--Quants mit $E_\gamma = \pu{1275 keV}$ in den Grundzustand zerfällt, siehe Abbildung \ref{abb:Skizze 22Na}. Beide Zerfälle geschehen koinzident.
+In diesem Versuch wird als Quelle $\ce{^{22}Na}$ verwendet, da eine Halbwertzeit von etwa 2.6 Jahren hat \cite{NuclideChart}. Dieses zerfällt über den $\beta^+$--Zerfall in einen angeregten Zustand des stabilen Mudslides $\ce{^{22}Ne}$, welches unter Aussenden eines $\gamma$--Quants mit $E_\gamma = \pu{1275\, keV}$ in den Grundzustand zerfällt, siehe Abbildung \ref{abb:Skizze 22Na}. Beide Zerfälle geschehen koinzident.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.4/Zerfall_22_Na.pdf}
-	\caption{Skizze des Zerfalls von $\ce{^{22}Na}$ zu $\ce{^{22}Ne}$ $[1]$}
+	\caption{Skizze des Zerfalls von $\ce{^{22}Na}$ zu $\ce{^{22}Ne}$ \cite{UzK}}
 	\label{abb:Skizze 22Na}
 \end{figure}
 
 \hypertarget{paarvernichtung}{%
 \subsection{Paarvernichtung}\label{paarvernichtung}}
 
-Der Begriff der Paarvernichtung beschreibt die Zerstrahlung von einem Teilchen und seinem Antiteilchen, bei der die Teilchen in $\gamma$--Strahlung umgewandelt werden. Die Energie der Strahlung ist die Summe der kinetischen Energie dieser Teilchen sowie ihrer Ruhemassen. Die Paarerzeugung ist der dazu inverse Effekt. $[5]$
+Der Begriff der Paarvernichtung beschreibt die Zerstrahlung von einem Teilchen und seinem Antiteilchen, bei der die Teilchen in $\gamma$--Strahlung umgewandelt werden. Die Energie der Strahlung ist die Summe der kinetischen Energie dieser Teilchen sowie ihrer Ruhemassen. Die Paarerzeugung ist der dazu inverse Effekt. \cite{Paarvernichtung}
 
-Bei der Vernichtung eines Positrons $e^+$ mit einem Elektron $e^-$ entstehen normalerweise zwei $\gamma$--Quanten in einem Winkel $\theta$. Dieser hängt von der transversalen Impulskomponente $p_T$ ab. Weiterhin sind die Ruhemasse $m_e$ der Teilchen und die Lichtgeschwindigkeit $c$ relevant. $[6]$
+Bei der Vernichtung eines Positrons $e^+$ mit einem Elektron $e^-$ entstehen normalerweise zwei $\gamma$--Quanten in einem Winkel $\theta$. Dieser hängt von der transversalen Impulskomponente $p_T$ ab. Weiterhin sind die Ruhemasse $m_e$ der Teilchen und die Lichtgeschwindigkeit $c$ relevant. \cite{Bethge,Annihilation}
 
 \begin{eqnarray}
     \tan(\theta) &=& \frac{p_T}{m_ec}
 \end{eqnarray}
 
 \noindent
-Sind die beiden Teilchen in Ruhe zueinander, so ist der Winkel der $\gamma$--Quanten $\pu{180^\circ}$. Dies liegt an der Impulserhaltung. Ist der Gesamtimpuls vor der Vernichtung $0$, so muss der Gesamtimpuls der beiden $\gamma$--Quanten ebenfalls $0$ sein.
+Sind die beiden Teilchen in Ruhe zueinander, so ist der Winkel der $\gamma$--Quanten $\pu{180\,^\circ}$. Dies liegt an der Impulserhaltung. Ist der Gesamtimpuls vor der Vernichtung $0$, so muss der Gesamtimpuls der beiden $\gamma$--Quanten ebenfalls $0$ sein.
 
 Haben sie einen relativen Impuls, so wird der Winkel kleiner. Sind die Teilchen jedoch zu schnell, dann ist der Wirkungsquerschnitt sehr klein und es ist sehr unwahrscheinlich, dass Paarvernichtung stattfindet.
 
 \hypertarget{gammastrahlung}{%
 \subsection{\texorpdfstring{$\gamma$--Strahlung}{\textbackslash gamma--Strahlung}}\label{gammastrahlung}}
 
-Gammastrahlung ist im engeren Sinne eine besonders durchdringende elektromagnetische Strahlung, die bei radioaktivem Zerfall auftritt. Sie wirkt durch drei Prozesse auf Materie. Bei einer Energie von bis zu $E_\gamma = \pu{100 keV}$ überwiegt der Photoeffekt, weiterhin gibt es den Comptoneffekt und Paarbildung.
+Gammastrahlung ist im engeren Sinne eine besonders durchdringende elektromagnetische Strahlung, die bei radioaktivem Zerfall auftritt. Sie wirkt durch drei Prozesse auf Materie. Bei einer Energie von bis zu $E_\gamma = \pu{100\, keV}$ überwiegt der Photoeffekt, weiterhin gibt es den Comptoneffekt und Paarbildung.
 
 \hypertarget{photoeffekt}{%
 \subsubsection{Photoeffekt}\label{photoeffekt}}
 
-Beim Photoeffekt überträgt ein Photon seine gesamte Energie auf ein Hüllenelektron, welches daraufhin das Atom verlässt. Er wirkt vor allem bei elektromagnetischer Strahlung mit einer Energie von bis zu $E_\gamma = \pu{100 keV}$.
+Beim Photoeffekt überträgt ein Photon seine gesamte Energie auf ein Hüllenelektron, welches daraufhin das Atom verlässt. Er wirkt vor allem bei elektromagnetischer Strahlung mit einer Energie von bis zu $E_\gamma = \pu{100\, keV}$.
 
 Die kinetische Energie $E_\mathrm{kin}$ des Elektrons hängt von der Energie des Photons $h\nu$ sowie der Austrittsarbeit $W_A$, ab. Letztere ist notwendig, um das Elektron aus dem Atom zu lösen.
 
@@ -181,12 +181,12 @@ Die kinetische Energie $E_\mathrm{kin}$ des Elektrons hängt von der Energie des
 \end{eqnarray}
 
 \noindent
-Der Wirkungsquerschnitt $\sigma_\mathrm{ph}$ wird durch die Ordnungszahl $Z$, die reduzierte Photonenenergie $\epsilon$ $\eqref{redEnergie}$, die Sommerfeld'sche Feinstrukturkonstante $\alpha$ und den Thomson--\allowbreak Wirkungs-querschnitt $\sigma_\mathrm{Th}^e$ bestimmt. $[7]$
+Der Wirkungsquerschnitt $\sigma_\mathrm{ph}$ wird durch die Ordnungszahl $Z$, die reduzierte Photonenenergie $\epsilon$ $\eqref{redEnergie}$, die Sommerfeld'sche Feinstrukturkonstante $\alpha$ und den Thomson--\allowbreak Wirkungs-querschnitt $\sigma_\mathrm{Th}^e$ bestimmt. \cite{Bethge}
 
 \begin{eqnarray}
     \sigma_\mathrm{ph}
         &=& \sqrt{\frac{32}{\epsilon^7}}\alpha^4 Z^5
-            \sigma_\mathrm{Th}^e \pu{\frac{cm}{Atom}} \\
+            \sigma_\mathrm{Th}^e \pu{\,\frac{cm}{Atom}} \\
     \sigma_\mathrm{ph}
         &\propto& \frac{Z^5}{E_\gamma^{\frac{7}{2}}} \\
     \epsilon &=& \frac{E_\gamma}{m_ec^2} \label{redEnergie} \\
@@ -201,9 +201,9 @@ Da die $\gamma$--Quanten in diesem Versuch im oberen Bereich dieses Energieinter
 \hypertarget{comptoneffekt}{%
 \subsubsection{Comptoneffekt}\label{comptoneffekt}}
 
-Der Comptoneffekt tritt vor allem bei $\gamma$--Strahlung mit mittleren Energien von ca. $\pu{100 keV}$ bis $\pu{1 MeV}$ auf. Dabei stößt ein Photon mit einem (quasi--freien) Elektron, wodurch es einen Impuls auf das Elektron überträgt und gestreut wird.
+Der Comptoneffekt tritt vor allem bei $\gamma$--Strahlung mit mittleren Energien von ca. $\pu{100\, keV}$ bis $\pu{1\, MeV}$ auf. Dabei stößt ein Photon mit einem (quasi--freien) Elektron, wodurch es einen Impuls auf das Elektron überträgt und gestreut wird.
 
-Die Änderung der Wellenlänge $\lambda$ des Photons hängt vom Streuwinkel $\theta$ ab. Der Wirkungsquerschnitt $\sigma_\mathrm{Co}$ ist von der Ordnungszahl $Z$ des Absorbers und der Energie $E_\gamma$ der Strahlung abhängig. $[7]$
+Die Änderung der Wellenlänge $\lambda$ des Photons hängt vom Streuwinkel $\theta$ ab. Der Wirkungsquerschnitt $\sigma_\mathrm{Co}$ ist von der Ordnungszahl $Z$ des Absorbers und der Energie $E_\gamma$ der Strahlung abhängig. \cite{Bethge}
 
 \begin{eqnarray}
     \Delta \lambda &=& \frac{h}{m_e c} (1 - \cos(\theta)) \\
@@ -216,9 +216,9 @@ Comptoneffekt und Photoeffekt unterscheiden sich in zwei Eigenschaften essenziel
 \hypertarget{paarbildung}{%
 \subsubsection{Paarbildung}\label{paarbildung}}
 
-Bei der Paarbildung entsteht aus einem Photon mit einer hohen Energie ein Teilchen--Antiteilchen--Paar, dieser Effekt dominiert bei Energien von etwa $\pu{5 MeV}$. Die Umkehrung dieses Effektes nennt man Paarvernichtung.
+Bei der Paarbildung entsteht aus einem Photon mit einer hohen Energie ein Teilchen--Antiteilchen--Paar, dieser Effekt dominiert bei Energien von etwa $\pu{5\, MeV}$. Die Umkehrung dieses Effektes nennt man Paarvernichtung.
 
-Im Coulombfeld eines Atomkernes kann ein Photon zu einem Positron $e^+$ und einem Elektron $e^-$ zerstrahlen, wenn die Energie des Photons mindestens $\pu{1.022 MeV}$ beträgt. Diese Energie entspricht der Gesamtmasse beider Teilchen.
+Im Coulombfeld eines Atomkernes kann ein Photon zu einem Positron $e^+$ und einem Elektron $e^-$ zerstrahlen, wenn die Energie des Photons mindestens $\pu{1.022\, MeV}$ beträgt. Diese Energie entspricht der Gesamtmasse beider Teilchen.
 
 Der Wirkungsquerschnitt $\sigma_\mathrm{Paar}$ kann wie folgt beschrieben werden. Wie bei dem Photoeffekt sind dabei die Feinstrukturkonstante $\alpha$ und der Elektronenradius $r_e$ relevant, ebenso die reduzierte Energie $\epsilon$ $\eqref{redEnergie}$.
 
@@ -233,12 +233,13 @@ Der Wirkungsquerschnitt $\sigma_\mathrm{Paar}$ kann wie folgt beschrieben werden
 \hypertarget{impulshuxf6henspektrum}{%
 \subsubsection{Impulshöhenspektrum}\label{impulshuxf6henspektrum}}
 
-Die Zahl der in einem~Detektor~nachgewiesenen Ereignisse als Funktion ihrer Impulshöhe wird durch ein Impulshöhenspektrum dargestellt. $[9]$ In Abbildung \ref{abb:Impulshoehenspektrum} ist ein solches für monoenergetische Gamma--Übergänge in $\ce{^{24}Mg}$ dargestellt.
+Die Zahl der in einem~Detektor~nachgewiesenen Ereignisse als Funktion ihrer Impulshöhe wird durch ein Impulshöhenspektrum dargestellt, was in Abbildung \ref{abb:Impulshoehenspektrum} zu sehen ist. \cite{Impulshöhenspektrum}
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../media/B3.4/Am_Be_SourceSpectrum.jpg}
-	\caption{Impulshöhenspektrum $[7]$}
+	\caption{Impulshöhenspektrum für \\
+		monoenergetische Gamma--Übergänge in $\ce{^{24}Mg}$  \cite{abb:Spektrum}}
 	\label{abb:Impulshoehenspektrum}
 \end{figure}
 
@@ -253,7 +254,7 @@ Werden viele Photonen mit der gleichen Energie durch den Comptoneffekt gestreut,
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.4/Comptonspektrum.jpg}
-	\caption{Compton--Kontinuum und Compton--Kante $[10]$}
+	\caption{Compton--Kontinuum und Compton--Kante \cite{abb:Compton}}
 	\label{abb:Compton-Kante}
 \end{figure}
 
@@ -278,7 +279,7 @@ Das Compton--Kontinuum $E_e'(\phi)$ beschreibt den Energie des Elektrons nach de
 \paragraph{Rückstreupeak}
 
 Ein Compton--Rückstreuungspeak (\emph{Backscatter Peak})~tritt bei der Energie $E_\mathrm{Rück}$ auf, wenn die $\gamma$--Strahlen in das Material um den Detektor herum gestreut wurden und erst danach in den
-den Detektor treffen. $[7]$
+den Detektor treffen. \cite{Bethge}
 
 \begin{eqnarray}
     E_\mathrm{Rück} &=& E_\gamma - E_e^\prime(180^\circ)
@@ -286,12 +287,12 @@ den Detektor treffen. $[7]$
 
 \paragraph{Escapelinien}
 
-Escapelinien oder Escape--Peaks sind unechte Spektrallinien, die bei der Röntgen- und Gammaspektroskopie auftreten und z.B. die Anwesenheit nicht vorhandener Radionuklide in der gemessenen Probe vortäuschen können. $[16]$
+Escapelinien oder Escape--Peaks sind unechte Spektrallinien, die bei der Röntgen- und Gammaspektroskopie auftreten und z.B. die Anwesenheit nicht vorhandener Radionuklide in der gemessenen Probe vortäuschen können. \cite{Escapelinie}
 
-Gammastrahlung mit einer Energie von $E_\gamma\ge\pu{1022MeV}$ kann zur Paarbildung führen. Dabei entstehende Positronen zerstrahlen wiederum mit anderen Elektronen. Dies kann auch in einem Detektor geschehen. Es ist dabei nicht garantiert, dass die dabei entstehenden $\gamma$-Quanten detektiert werden. $[7]$
+Gammastrahlung mit einer Energie von $E_\gamma\ge\pu{1022\,MeV}$ kann zur Paarbildung führen. Dabei entstehende Positronen zerstrahlen wiederum mit anderen Elektronen. Dies kann auch in einem Detektor geschehen. Es ist dabei nicht garantiert, dass die dabei entstehenden $\gamma$--Quanten detektiert werden. \cite{Bethge}
 
 Wenn nur ein Photon detektiert wird, verursacht dies einen \emph{Single--Escape--Peak} bei einer Energie von
-$E_\gamma - \pu{511 keV}$. Wird keines der Photonen detektiert, gibt es einen \emph{Double--Escape--Peak} bei der Energie $E_\gamma - \pu{1022 keV}$.
+$E_\gamma - \pu{511\, keV}$. Wird keines der Photonen detektiert, gibt es einen \emph{Double--Escape--Peak} bei der Energie $E_\gamma - \pu{1022\, keV}$.
 
 \hypertarget{weizsuxe4cker-massenformel}{%
 	\subsubsection{Weizsäcker Massenformel}\label{weizsuxe4cker-massenformel}}
@@ -309,7 +310,7 @@ Die Bindungsenergie $E_B$ wird aus fünf verschiedenen Termen ermittelt, auf die
 Die Bindungsenergie $E_B$ verringert die Masse des Atomkernes. Daher kann die Kernmasse $m$ durch die Protonenmasse $m_P$, die Neutronenmasse $n_N$ sowie $E_B$ beschrieben werden, wobei die Lichtgeschwindigkeit $c$ die Energie in Masse konvertiert. Dies ergibt die \emph{Weizsäcker Massenformel}.
 
 \begin{eqnarray}
-	m &=& N\cdot m_N + P\cdot m_P - \frac{E_B}{c^2}
+	m &=& N\cdot m_N + P\cdot m_P - \frac{E_B}{c^2} \label{eq:Massenformel}
 \end{eqnarray}
 
 \noindent
@@ -396,7 +397,6 @@ Der Paarungsterm wird betragsmäßig kleiner, je größer die Nukleonenzahl $A$ 
 \noindent
 Beide Nukleonensorten liefern betragsmäßig den gleichen Beitrag zu $E_P$. Bei $\mathrm{gg}$-- und $\mathrm{uu}$--Kernen addieren sich diese Werte zu einer nicht--verschwindenden Energie. Bei $\mathrm{gu}$-- und $\mathrm{ug}$--Kernen heben sich die Terme dagegen auf, weswegen der Paarungsterm hier verschwindet.
 
-\newpage
 \hypertarget{elektronik}{%
 \subsection{Elektronik}\label{elektronik}}
 
@@ -404,14 +404,14 @@ In diesem Versuch werden verschiedene elektronische Bauteile verwendet, die im F
 
 Als Detektor für die koinzidenten Signale werden anorganische Szintillationszähler sowie Photomultiplier zur Elektronenvervielfachung verwendet.
 
-In diesem Versuch wird $\ce{NaI}$ als anorganischer Szintillator verwendet, hierbei beträgt die Ausbeute je Photon $\pu{4\cdot 10^{4} MeV^{-1}}$.
+In diesem Versuch wird $\ce{NaI}$ als anorganischer Szintillator verwendet, hierbei beträgt die Ausbeute je Photon $\pu{4\cdot 10^{4}\, MeV^{-1}}$.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.85\textwidth]{../media/B3.4/Schaltplan.pdf}
-	\caption{Schaltskizze des Versuchs $[1]$, bestehend aus
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/Schaltplan.pdf}
+	\caption{Schaltskizze des Versuchs, bestehend aus
 		Photomultiplier (PMT), Vorverstärker (VV),
-		Hauptverstärker (TFA) und Diskriminator (CFD)}
+		Hauptverstärker (TFA) und Diskriminator (CFD) \cite{UzK}}
 	\label{abb:Schaltplan}
 \end{figure}
 
@@ -443,7 +443,7 @@ Die von den Diskriminatoren ausgesendeten logischen Signale sind dadurch zeitver
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.4/Constant_fraction_1.pdf}
-	\caption{Links: Walk--Effekt, Rechts: Kein Walk--Effekt}
+	\caption{Links: Walk--Effekt, Rechts: Kein Walk--Effekt \cite{abb:Constant_fraction}}
 	\label{abb:Walk-Effekt}
 \end{figure}
 
@@ -460,7 +460,7 @@ Um den Problemen durch Walk und Jitter entgegenzuwirken, wird in diesem Versuch 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.4/CFD.jpg}
-	\caption{Funktionsprinzips eines Constant--Fraction--Diskriminators $[15]$}
+	\caption{Funktionsprinzips eines Constant--Fraction--Diskriminators \cite{abb:CDF}}
 	\label{abb:CFD}
 \end{figure}
 
@@ -471,7 +471,7 @@ Die logischen Signale aus den beiden Diskriminatoren werden dann gemeinsam zur K
 
 \hypertarget{szintillatoren}{%
 \subsubsection{Szintillatoren}\label{szintillatoren}}
-Wenn Photonen auf ein Szintillationsmaterial treffen, wechselwirken sie und regen die Elektronen an. Nach einer Zeit fallen diese wieder in den Grundzustand ab und senden dabei Licht im sichtbaren Bereich aus. Die Zeit dieses Ablaufs beträgt abhängig vom verwendeten Material zwischen $\pu{100 ps}$ und $\pu{1\mu s}$.
+Wenn Photonen auf ein Szintillationsmaterial treffen, wechselwirken sie und regen die Elektronen an. Nach einer Zeit fallen diese wieder in den Grundzustand ab und senden dabei Licht im sichtbaren Bereich aus. Die Zeit dieses Ablaufs beträgt abhängig vom verwendeten Material zwischen $\pu{100\, ps}$ und $\pu{1\,\mu s}$.
 
 Wenn Photonen auf den Szintillationskristall treffen, wird die Energie des Photons auf Elektronen im Valenzband übertragen und die Elektronen werden ins Leitungsband angehoben. Fallen sie wieder zurück ins Valenzband, wird erneut ein Photon mit derselben Energie emittiert. Mit sehr hoher Wahrscheinlichkeit wird dieses Photons wieder direkt von einem anderen Elektron im Valenzband absorbiert, dies kann unendlich oft passieren.
 
@@ -479,35 +479,36 @@ Um diesem endlosen Effekt entgegenzuwirken dotiert man den Kristall so, dass die
 
 Diese Photonen treffen dann auf die Kathode des Photomultipliers, welcher im nächsten Kapitel erläutert wird.
 
-Häufig sind Szintillatoren anorganische Isolatoren oder Halbleiter mit einer großen Bandlücke. Der Vorteil von anorganischen Szintillatoren aus Kristall oder Glas ist die hohe Lichtausbeute, welche sehr wichtig für die Energiemessgenauigkeit ist. Nachteilig dagegen ist die langsame Lichtemission im Bereich von einigen $\pu{100 ns}$, die Energieauflösung sowie die Feuchtigkeitsempfindlichkeit von manchen Kristallen.
+Häufig sind Szintillatoren anorganische Isolatoren oder Halbleiter mit einer großen Bandlücke. Der Vorteil von anorganischen Szintillatoren aus Kristall oder Glas ist die hohe Lichtausbeute, welche sehr wichtig für die Energiemessgenauigkeit ist. Nachteilig dagegen ist die langsame Lichtemission im Bereich von einigen $\pu{100\, ns}$, die Energieauflösung sowie die Feuchtigkeitsempfindlichkeit von manchen Kristallen.
 
-Ein Photon aus einem Paarvernichtungsprozess mit einer Energie von $\pu{511keV}$ kann zehntausende Elektronen anregen, da diese mit Energien im $\pu{eV}$--Bereich gebunden sind. Beim Wasserstoff ist das Elektron mit $\pu{13.6eV}$ gebunden, hier könnten theoretisch bis zu $35.6\cdot 10^3$ Photonen angeregt werden.
+Ein Photon aus einem Paarvernichtungsprozess mit einer Energie von $\pu{511\,keV}$ kann zehntausende Elektronen anregen, da diese mit Energien im $\pu{eV}$--Bereich gebunden sind. Beim Wasserstoff ist das Elektron mit $\pu{13.6\,eV}$ gebunden, hier könnten theoretisch bis zu $35.6\cdot 10^3$ Photonen angeregt werden.
 
-Weiterhin gibt es organische Szintillatoren, die haupsächlich aus langen Kohlenstoffketten bestehen. Das Licht wird durch zwei Hauptprozesse erzeugt, die Floureszenz und die Phosphoreszenz. $[13]$
+Weiterhin gibt es organische Szintillatoren, die haupsächlich aus langen Kohlenstoffketten bestehen. Das Licht wird durch zwei Hauptprozesse erzeugt, die Floureszenz und die Phosphoreszenz. \cite{LMU}
 
-Floureszenz ist ein Prozess, bei dem ein absorbiertes Photon nach Anregung sofort wieder abgestrahlt wird, dies erfolgt durch einen erlaubten Übergang zwischen zwei Zuständen. $[13]$
+Floureszenz ist ein Prozess, bei dem ein absorbiertes Photon nach Anregung sofort wieder abgestrahlt wird, dies erfolgt durch einen erlaubten Übergang zwischen zwei Zuständen. \cite{LMU}
 
-Der Prozess der Phosphoreszenz läuft dagegen langsamer ab, weil ein verbotener Übergang zwischen einem angeregten Zustand und dem Grundzustand durch eine Multipol--Auswahlregel stattfinden muss. Im Allgemeinen kommt das Lichtsignal in einem organischen Szintillator früher als im anorganischen, im Idealfall kommt es schon nach $\pu{100 ps}$. Trotz diesem Vorteil haben sie nur eine geringe Lichtausbeute. $[13]$
+Der Prozess der Phosphoreszenz läuft dagegen langsamer ab, weil ein verbotener Übergang zwischen einem angeregten Zustand und dem Grundzustand durch eine Multipol--Auswahlregel stattfinden muss. Im Allgemeinen kommt das Lichtsignal in einem organischen Szintillator früher als im anorganischen, im Idealfall kommt es schon nach $\pu{100\, ps}$. Trotz diesem Vorteil haben sie nur eine geringe Lichtausbeute. \cite{LMU}
 
 \hypertarget{photomultiplier}{%
 \subsubsection{Photomultiplier}\label{photomultiplier}}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics{../media/B3.4/Photomultiplier_schema_de.png}
+	\caption{Photomultiplier (schematisch) \cite{abb:Photomultiplier}}
+	\label{abb:Photomultiplier}
+\end{figure}
+
+\noindent
 Um aus dem Szintillationslicht ein Messsignal zu erhalten, schließt man dem Szintillator einen Photomultiplier an. Dieser besteht aus einer Photokathode und einem Sekundärelektronenvervielfacher. Dabei muss das Emissionspektrum des Detektors optimal auf die spektrale Empfindlichkeit der Photokathode abgestimmt sein.
 
 Die Kathode besteht entweder aus Alkali--Metallen oder Erdalkali--Metallen, die über eine geringe Elektronenaustrittarbeit verfügen.
 
 Der zweite Bauteil heißt Sekundärelektronenvervielfacher\footnote{\emph{photomultiplier tube} (PMT)} (SEV). Dieser besitzt eine Folge von Elektroden, genannt Dynoden, die bis zu $10^7$ Sekundärelektronen pro Primärelektron erzeugen können. Zwischen den einzelnen Dynoden wird ein elektrisches Potenzial angelegt, sodass die Elektronen bis zur Anode hin beschleunigt werden. Üblicherweise haben SEVs ca. $10$ Dynoden, mit jedem Auftreffen auf eine davon werden Sekundärelektronen heraus geschlagen und vervielfacht.
 
-Die ganze Elektronik befindet sich in einem vakuumdichten Glaskolben, der zusätzlich mit einem $\mu$--Metall--Zylinder gegen magnetische Streufelder abgeschirmt ist $[13]$. Abbildung \ref{abb:Photomultiplier} zeigt den Aufbau von einem typischen Photomultiplier.
+Die ganze Elektronik befindet sich in einem vakuumdichten Glaskolben, der zusätzlich mit einem $\mu$--Metall--Zylinder gegen magnetische Streufelder abgeschirmt ist \cite{LMU}. Abbildung \ref{abb:Photomultiplier} zeigt den Aufbau von einem typischen Photomultiplier.
 
 Das messbare Signal an der Anode ist dann durch richtige Kalibrierung proportional zu der im Szintillationskristall deponierten Energie des Photons aus dem $e^+ e^-$--Annihilationprozess.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics{../media/B3.4/Photomultiplier_schema_de.png}
-	\caption{Photomultiplier (schematisch) $[12]$}
-	\label{abb:Photomultiplier}
-\end{figure}
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
@@ -536,7 +537,7 @@ In diesem Teil soll der Einfluss der Lage der Quelle bezüglich der Verbindungsl
 
 Dafür wird die Quelle mittig auf den Wagen platziert. Dann verschiebt man den Wagen durch den Bereich, der vom Detektor abgedeckt wird und misst die Zählrate für jeweils $60\,\mathrm{s}$. Erwartet wird eine gaußförmige Verteilung der Zählraten, deshalb sollte im Bereich der Halbwertbreiten und Hochpunkt kleinere Abstände gewählt werden. Es werden mindesten $20$ Messungen in einem Raumintervall von $\pm 50\,\mathrm{mm}$ durchgeführt.
 
-In den Abständen von $\pm 8\,\mathrm{mm}$ wurden minimale Abstände von $\pm 1\,\mathrm{mm}$ zwischen den Positionen verändert, weiter außen wurden größere Abstände gewählt. Die Ungenauigkeit beim Einstellen der Position wird auf $\pu{\pm 2 mm}$ gesetzt.
+In den Abständen von $\pm 8\,\mathrm{mm}$ wurden minimale Abstände von $\pm 1\,\mathrm{mm}$ zwischen den Positionen verändert, weiter außen wurden größere Abstände gewählt. Die Ungenauigkeit beim Einstellen der Position wird auf $\pu{\pm 2\, mm}$ gesetzt.
 
 \subsection{PET--Scan der Truhe}
 Vom Betreuer wurde eine verschlossene Truhe vorbereitet, in der sich mehrere Quellen verschiedener Intensität befinden konnten.  Ziel dieses Versuchsteils ist die Ortung von verschiedenen Proben in unbekannter Anordnung.
@@ -548,7 +549,7 @@ Die Abstände zwischen zwei $x$-- bzw. $y$--Reihen betragen $\pu{1\,cm}$, die Ab
 \begin{figure}[h]
 	\centering
 	\includegraphics{../media/B3.4/Box_Axis.pdf}
-	\caption{Richtungsdefinitionen (schematisch) $[1]$}
+	\caption{Richtungsdefinitionen (schematisch) \cite{UzK}}
 	\label{abb:TruheRichtungen}
 \end{figure}
 
@@ -559,7 +560,7 @@ In diesem Teil soll die Kollinearität der Photonen aus der $e^+e^-$-Paarvernich
 
 Wie bei der Messung der \nameref{sec:Ortsauflösung} wird eine Probe offen und mittig positioniert.
 
-Einer der Detektoren wird in einem Winkel zwischen $\pm 5\,^\circ$ zur Verbindungslinie eingestellt. Die Winkelveränderungen werden in Schritten von $0.5\,^\circ$ eingestellt, wiederum dauert jede Messung $60\,\mathrm{s}$. Der Fehler des Winkels wird auf $\Delta \theta = \pu{0.5^\circ}$ geschätzt.
+Einer der Detektoren wird in einem Winkel zwischen $\pm 5\,^\circ$ zur Verbindungslinie eingestellt. Die Winkelveränderungen werden in Schritten von $0.5\,^\circ$ eingestellt, wiederum dauert jede Messung $60\,\mathrm{s}$. Der Fehler des Winkels wird auf $\Delta \theta = \pu{0.5\,^\circ}$ geschätzt.
 
 Zunächst werden beide Detektoren wie in den letzten Versuchsteilen auf Energien von $\pu{511\,keV}$ eingestellt. Ebenso wie bei der Ortsauflösung wird eine Gaußverteilung der Zählraten erwartet.
 
@@ -913,75 +914,72 @@ Abhilfe hierfür hätte eine weitere Messreihe geben können, bei denen eine $z^
 \end{figure}
 
 \clearpage
-\hypertarget{literatur}{%
-\section{Literatur}\label{literatur}}
+\hypertarget{literatur}{\section{Literaturverzeichnis}\label{literatur}}
+\renewcommand{\section}[2]{}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Universität zu Köln, ``B3.4: Positronen--Emissions--Tomografie'',
-  Januar 2021,
-  \url{https://www.ikp.uni-koeln.de/fileadmin/data/praktikum/B3.4\_PET\_de.pdf},
-  Abruf am 20.03.2024
-\item
-  ``Chart of Nuclides'', National Nuclear Data Center,
-  \url{https://www.nndc.bnl.gov/nudat3}, Abruf am 28.03.2024
-\item
-  ``Positronen Emissions Tomographie'', Deutsche Gesellschaft für
-  Nuklearmedizin e.V., Online verfügbar unter
-  \url{http://www.nuklearmedizin.de/docs/pet_bro_06.pdf}, Abruf am
-  03.04.2024
-\item
-  W. Demtröder, ``Experimentalphysik 4: Kern-, Teilchen- und
-  Astrophysik'', Springer--Spektrum--Verlag, 2017, DOI:
-  \href{https://link.springer.com/book/10.1007/978-3-662-52884-6}{10.1007/978-3-662-52884-6}
-\item
-  Lexikon der Physik, ``Paarvernichtung'',
-  \url{https://www.spektrum.de/lexikon/physik/paarvernichtung/10838},
-  Abruf am 04.04.2024
-\item
-  Wikipedia, ``Annihilation'',
-  \url{https://de.wikipedia.org/wiki/Annihilation}, Abruf am 04.04.2024
-\item
-  K. Bethge, Kernphysik: Eine Einführung, 3. aktualisierte und
-  erweiterte Auflage, Springer--Verlag, 2008, DOI:
-  \href{https://doi.org/10.1007/978-3-540-74567-9}{10.1007/978-3-540-74567-9}
-\item
-  Strahlenschutzkommission, ``Orientierungshilfe SSK'', 2006, ISBN 3873441306,
-  \url{https://campus-nes.de/fileadmin/user_upload/Orientierungshilfe_SSK.pdf}, Abruf am 07.04.2024
-\item
-  Lexikon der Physik, ``Impulshöhenspektrum'',
-  \url{https://www.spektrum.de/lexikon/physik/impulshoehenspektrum/7156},
-  Abruf am 08.04.2024
-\item
-  Wikipedia,
-  \url{https://de.wikipedia.org/wiki/Datei:Compton-spektrum.svg},
-  Abruf am 08.04.2024
-\item
-  Wikipedia,
-  \url{https://de.wikipedia.org/wiki/Datei:Am-Be-SourceSpectrum.jpg},
-  Abruf am 08.04.2024
-\item
-  Wikipedia,
-  \url{https://de.wikipedia.org/wiki/Datei:Photomultiplier_schema_de.png},
-  Abruf am 08.04.2024
-\item
-  LMU München, ``Detektor'',
-  \url{https://homepages.physik.uni-muenchen.de/~Otmar.Biebel/detektor/detector06.pdf},
-  Abruf am 07.04.2024
-\item
-  Wikipedia,
-  \url{https://commons.wikimedia.org/wiki/File:Constant_fraction_1.svg},
-  Abruf am 06.04.2024
-\item
-  Wikipedia,
-  \url{https://commons.wikimedia.org/wiki/File:CFD_Diagram1.jpg},
-  Abruf am 06.04.2024
-\item
-  Wikipedia, ``Escapelinie'',
-  \url{https://de.wikipedia.org/wiki/Escapelinie},
-  Abruf am 08.04.2024
-\end{enumerate}
-
+\begin{thebibliography}{99}
+\bibitem{Bethge}
+	K. Bethge, ``Kernphysik: Eine Einführung'', 3. aktualisierte und
+	erweiterte Auflage, Springer--Verlag, 2008, DOI:
+	\href{https://doi.org/10.1007/978-3-540-74567-9}{10.1007/978-3-540-74567-9}
+\bibitem{Demtröder}
+	W. Demtröder, ``Experimentalphysik 4: Kern-, Teilchen- und
+	Astrophysik'', Springer--Spektrum--Verlag, 2017, DOI:
+	\href{https://link.springer.com/book/10.1007/978-3-662-52884-6}{10.1007/978-3-662-52884-6}
+\bibitem{NuclideChart}
+	National Nuclear Data Center, ``Chart of Nuclides'',
+	\url{https://www.nndc.bnl.gov/nudat3}, Abruf am 28.03.2024
+\bibitem{DGNM}
+	Deutsche Gesellschaft für Nuklearmedizin e.V., ``PET'',
+	Online verfügbar unter
+	\url{http://www.nuklearmedizin.de/docs/pet_bro_06.pdf},
+	Abruf am 03.04.2024
+\bibitem{Paarvernichtung}
+	Lexikon der Physik, ``Paarvernichtung'',
+	\url{https://www.spektrum.de/lexikon/physik/paarvernichtung/10838},
+	Abruf am 04.04.2024
+\bibitem{SSK}
+	Strahlenschutzkommission, ``Orientierungshilfe SSK'', 2006, ISBN 3873441306,
+	\url{https://campus-nes.de/fileadmin/user_upload/Orientierungshilfe_SSK.pdf}, Abruf am 07.04.2024
+\bibitem{Impulshöhenspektrum}
+	Lexikon der Physik, ``Impulshöhenspektrum'',
+	\url{https://www.spektrum.de/lexikon/physik/impulshoehenspektrum/7156},
+	Abruf am 08.04.2024
+\bibitem{Escapelinie}
+	Lexikon der Physik, ``Gammaspektrum'',
+	\url{https://www.spektrum.de/lexikon/physik/gammaspektrum/5517},
+	Abruf am 08.04.2024
+\bibitem{LMU}
+	LMU München, ``Detektor'',
+	\url{https://homepages.physik.uni-muenchen.de/~Otmar.Biebel/detektor/detector06.pdf},
+	Abruf am 07.04.2024
+\bibitem{UzK}
+	Universität zu Köln, ``B3.4: PET'',
+	Januar 2021,
+	\url{https://www.ikp.uni-koeln.de/fileadmin/data/praktikum/B3.4\_PET\_de.pdf},
+	Abruf am 20.03.2024
+\bibitem{Annihilation}
+	Wikipedia, ``Annihilation'',
+	\url{https://de.wikipedia.org/wiki/Annihilation}, Abruf am 04.04.2024
+\bibitem{abb:Compton}
+	Wikipedia,
+	\url{https://de.wikipedia.org/wiki/Datei:Compton-spektrum.svg},
+	Abruf am 08.04.2024
+\bibitem{abb:Spektrum}
+	Wikipedia,
+	\url{https://de.wikipedia.org/wiki/Datei:Am-Be-SourceSpectrum.jpg},
+	Abruf am 08.04.2024
+\bibitem{abb:Photomultiplier}
+	Wikipedia,
+	\url{https://de.wikipedia.org/wiki/Datei:Photomultiplier_schema_de.png},
+	Abruf am 08.04.2024
+\bibitem{abb:Constant_fraction}
+	Wikipedia,
+	\url{https://commons.wikimedia.org/wiki/File:Constant_fraction_1.svg},
+	Abruf am 06.04.2024
+\bibitem{abb:CDF}
+	Wikipedia,
+	\url{https://commons.wikimedia.org/wiki/File:CFD_Diagram1.jpg},
+	Abruf am 06.04.2024
+\end{thebibliography}
 \end{document}
