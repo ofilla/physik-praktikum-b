@@ -246,18 +246,47 @@ Je größer das Übergangsdipolmoment ist, desto großer ist auch das Absorption
 \hypertarget{freiheitsgrade}{%
 \subsection{Freiheitsgrade}\label{freiheitsgrade}}
 
-Die Zahl der Freiheitsgrade \(f\) gibt an, auf wie viele Arten beispielsweise ein Gasmolekül Energie speichern kann, z.B. in Translation entlang einer Koordinatenachse, Rotation oder Schwingungen.
+Die Zahl der Freiheitsgrade \(f\) gibt an, auf wie viele Arten
+beispielsweise ein Gasmolekül Energie speichern kann, z.B. in
+Translation entlang einer Koordinatenachse, Rotation oder Schwingungen.
 
-Einatomige Moleküle haben üblicherweise \(3\) Freiheitsgrade durch Translation. Zweiatomige Moleküle haben zusätzlich noch zwei Freiheitsgrade durch Rotation, also insgesamt \(5\).
+Einatomige Moleküle haben üblicherweise \(3\) Freiheitsgrade durch
+Translation. Zweiatomige Moleküle haben zusätzlich noch zwei
+Freiheitsgrade durch Rotation, also insgesamt \(5\).
 
 \hypertarget{infrarotaktivituxe4t}{%
 \subsection{Infrarotaktivität}\label{infrarotaktivituxe4t}}
 
-\hypertarget{photonen}{%
-\subsection{Photonen}\label{photonen}}
-
 \hypertarget{mathematische-grundlagen}{%
 \subsection{Mathematische Grundlagen}\label{mathematische-grundlagen}}
+
+\hypertarget{gauuxdfverteilung}{%
+\subsubsection{Gaußverteilung}\label{gauuxdfverteilung}}
+
+Die Gaußverteilung entspricht der Wahrscheinlichkeitsdichtefunktion \(\phi_{\mu,\sigma^2}(\chi)\) mit dem Erwartungswert \(\mu\) und der Standardabweichung \(\sigma\). Manchmal wird die Gaußverteilung auch als Normalverteilung bezeichnet, manchmal bezeichnet die Normalverteilung dagegen einen Spezialfall mit \(\mu=\sigma=1\). In Abbildung \ref{abb:gaussians} sind verschiedene Gaußverteilungen dargestellt.
+
+\[
+\begin{eqnarray}
+    \phi_{\mu,\sigma^2}(\chi) &=&
+        \frac{1}{\sqrt{2\pi\sigma^2}}
+        \exp\left[
+            -
+            \frac{(\chi - \mu)^2}{2\sigma^2}
+        \right]
+\end{eqnarray}
+\]
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/Gaussverteilungen.pdf}
+	\caption{Gaußverteilungen mit verschiedenen Parametern \cite{abb:gaussians}}
+	\label{abb:gaussians}
+\end{figure}
+
+\noindent
+Werden Zufallsvariablen gemessen, so haben sie immer eine gewisse Streuung. Nach dem Grenzwertsatz ist diese Streuung gaußverteilt. Bei genügend Messungen kann man annehmen, dass \(68.3\%\) der Zufallsvariablen im Intervall \(\mu\pm\sigma\) liegen.
+
+Im \(2\sigma\)--Intervall werden \(95.4\%\) der Zufallsvariablen erwartet, im \(3\sigma\)--Intervall sogar \(99.7\%\).
 
 \hypertarget{das-lambertbeersche-gesetz}{%
 \subsection{Das Lambert--Beer'sche
@@ -301,7 +330,7 @@ Gesetz}\label{das-lambertbeersche-gesetz}}
 	Abruf am 02.05.2024
 \bibitem{Dipolmoment}
 	Lexikon der Physik, ``Dipolmoment'',
-	\href{https://www.spektrum.de/lexikon/physik/elektrisches--dipolmoment/3960}{https://www.spektrum.de/lexikon/physik/elektrisches--dipolmoment/3960},
+	\url{https://www.spektrum.de/lexikon/physik/elektrisches-dipolmoment/3960},
 	Abruf am 02.05.2024
 \bibitem{Hinderer}
 	F. Hinderer, ``UV/Vis--Absorptions- und Fluoreszenz--Spektroskopie'',
@@ -309,5 +338,9 @@ Gesetz}\label{das-lambertbeersche-gesetz}}
 \bibitem{Fließbach}
 	T. Fließbach, ``Statistische Physik'', 2018, DOI
 	\href{https://doi.org/10.1007/978-3-662-58033-2}{10.1007/978-3-662-58033-2}
+\bibitem{abb:gaussians}
+	Wikimedia,
+	\url{https://commons.wikimedia.org/wiki/File:Normal_Distribution_PDF.svg},
+	2023-02-23
 \end{thebibliography}
 \end{document}
