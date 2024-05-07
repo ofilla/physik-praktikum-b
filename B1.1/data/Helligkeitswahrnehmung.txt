@@ -1,0 +1,8 @@
+A: 3.3 V	7.1 A +- 0.1 A
+B: 3.3 V	7.1 A +- 0.1 A
+C: 3.3 V	7.1 A +- 0.1 A
+max: 8.3 A
+max erlaubt: 8.5 A
+R: 0.38 Ohm
+
+Strom & Helligkeit haben bei höheren Werten eindeutig fluktuiert, obwohl Spannung eingestellt war.
