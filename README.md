@@ -32,5 +32,5 @@ jupyter notebook
 ## Julia
 ```shell
 julia -e 'import Pkg; Pkg.add(["IJulia", "Plots", "LaTeXStrings"])'
-julia -e 'using IJulia; notebook(dir=".")'
+julia -e 'using IJulia; notebook(dir=".", detached=true)'
 ```

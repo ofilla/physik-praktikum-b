@@ -95,7 +95,7 @@ Die Positronen--Emissions--Tomographie ist ein Verfahren, das die Möglichkeit b
 
 Hierbei injiziert man dem Patienten radioaktive Markerstoffe, sogenannte \emph{Tracer}. Diese werden unterschiedlich von den Zellen aufgenommen und verarbeitet, abhängig vom lokalen Stoffwechsel. Damit der Körper nicht zu viel radioaktive Strahlungen ausgesetzt wird, muss der Tracer so kurzlebig sein, sodass dieser im Körper schnell zerfällt aber dennoch lang genug, um detektierbar zu sein. Zusätzlich muss er Positronen abgeben. Deswegen eignen sich z.B. $\ce{^{11}C}$, $\ce{^{13}N}$, $\ce{^{15}O}$, $\ce{^{18}F}$ besonders, die Halbwertzeiten hiervon sind zwischen $122.24 \,\mathrm s$ ($\ce{^{15}O}$) und $109.77\,\mathrm{min}$ ($\ce{^{18}F}$) \cite{NuclideChart}. Unterschiedliche Tracer werden für unterschiedliche Körperteile verwendet.
 
-Wenn der Tracer im Gewebe ist, zerfällt er über den $\beta^+$--Zerfall und emittiert dabei Positronen. Innerhalb weniger Millimeter \cite{DGNM} rekombiniert ein Positron mit einem Elektron und es kommt zur \emph{Paarvernichtung}. Hierbei entstehen zwei Photonen mit jeweils einer Energie von $\pu{511 \,keV}$ in einem Winkel von $180\,^\circ$ zueinander. \cite{Bethge,DGNM,Annihilation}
+Wenn der Tracer im Gewebe ist, zerfällt er über den $\beta^+$--Zerfall und emittiert dabei Positronen. Innerhalb weniger Millimeter rekombiniert ein Positron mit einem Elektron und es kommt zur \emph{Paarvernichtung}. Hierbei entstehen zwei Photonen mit jeweils einer Energie von $\pu{511 \,keV}$ in einem Winkel von $180\,^\circ$ zueinander. \cite{Bethge,DGNM,Annihilation}
 
 Um die Aktivität quantitativ zu bestimmen, werden Signale von den ausgestrahlten Photonen registriert. Wenn zwei davon koinzident sind, hat dieser Prozess mit großer Wahrscheinlichkeit auf der Verbindungslinie (LOR\footnote{Englisch: \emph{line of response}}) stattgefunden. Aus vielen solcher koinzidenten Signale lässt sich die Aktivität mit einem Computerprogramm zu einem zweidimensionalen und später dreidimensionalen Bild rekonstruieren.
 
@@ -118,9 +118,9 @@ Der $\beta$--Zerfall ist eine der drei Arten radioaktiven Zerfalls. Wie beim $\a
 
 Es wird zwischen drei Arten des $\beta$--Zerfalls unterschieden. Es gibt $\beta^+$--Zerfall und $\beta^-$--Zerfall, weiterhin wird der Elektroneneinfang dazugezählt.
 
-Radioaktiver Zerfall geschieht, wenn der Tochterkern eine höhere Bindungsenergie als der Mutterkern erhält. Hierfür ist insbesondere der Symmetrieterm der Weizsäcker Massenformel \eqref{eq:Massenformel} interessant. Daran kann man erklären, dass $\beta^-$--Zerfall dann geschehen kann, wenn der Kern mehr Neutronen als Protonen hat.
+Radioaktiver Zerfall geschieht, wenn der Tochterkern eine höhere Bindungsenergie als der Mutterkern erhält. Es werden Neutronen benötigt, um die Coulombabstoßung \eqref{Coulombterm} der Protonen zu überwinden, jedoch verursachen zu viele Neutronen einen höheren Symmetrieterm in der Weizsäcker Massenformel \eqref{eq:Massenformel}. Daran kann man erklären, dass $\beta^-$--Zerfall dann geschehen kann, wenn der Kern zu viele Neutronen im Vergleich zu der Protonenanzahl hat.
 
-Umgekehrt kann es zu $\beta^+$--Zerfall kommen, wenn der Kern mehr Protonen als Neutronen hat. Ebenso ist Elektroneneinfang möglich. Welcher dieser Prozesse stattfindet hängt von der Energiedifferenz zwischen Mutterkern und Tochterkern ab: Wenn die Energiedifferenz kleiner als $\Delta E_\mathrm{min}=\pu{1.022\, MeV}$ beträgt, dann reicht die Energie nur für Elektroneneinfang. Bei einer Energie von mehr als $\Delta E_\mathrm{min}$ ist auch $\beta^+$--Zerfall möglich. $\Delta E_\mathrm{min}$ entspricht der doppelten Ruheenergie von Elektronen.
+Umgekehrt kann es zu $\beta^+$--Zerfall kommen, wenn der Kern nicht genügend Neutronen hat. Ebenso ist hierbei der Elektroneneinfang möglich. Welcher dieser Prozesse stattfindet hängt von der Energiedifferenz zwischen Mutterkern und Tochterkern ab: Wenn die Energiedifferenz kleiner als $\Delta E_\mathrm{min}=\pu{1.022\, MeV}$ beträgt, dann reicht die Energie nur für Elektroneneinfang. Bei einer Energie von mehr als $\Delta E_\mathrm{min}$ ist auch $\beta^+$--Zerfall möglich. $\Delta E_\mathrm{min}$ entspricht der doppelten Ruheenergie von Elektronen.
 
 Beim $\beta^+$--Zerfall wird ein Proton $p$ in ein Neutron $n$ umgewandelt, dabei entstehen ein Positron $e^+$ sowie ein Elektronenneutrino $\nu_e$. Hierbei wird ein Mutterkern $\ce{^A_Z X}$ in einen Tochterkern $\ce{^A_{Z-1} Y^-}$ umgewandelt. Beim $\beta^-$--Zerfall wird ein Neutron $n$ in ein Proton $p$ umgewandelt, dabei entstehen ein Elektron $e^-$ sowie ein Elektronen--Antineutrino $\bar{\nu}_e$. Hierbei wird ein Mutterkern $\ce{^A_Z X}$ in einen Tochterkern $\ce{^A_{Z+1} Y^+}$ umgewandelt.
 
@@ -134,12 +134,12 @@ Beim Elektroneneinfang (ec) wird ähnlich wie beim $\beta^+$--Zerfall ein Proton
         \ce{n} &\ce{->}& \quad \ce{p} \quad\, + \ce{e^-} + \ce{\bar{\nu}_e} \\
         \ce{^A_Z X} &\ce{->}& \ce{^A_{Z+1} Y^+} + \ce{e^-} + \ce{\bar{\nu}_e} \\
     \text{ec}:\qquad
-        \ce{p + e^+} &\ce{->}& \quad \ce{n} \ \ \, + \ce{\nu_e} \\
+        \ce{p + e^-} &\ce{->}& \quad \ce{n} \ \ \, + \ce{\nu_e} \\
         \ce{^A_Z X} &\ce{->}& \ce{^A_{Z-1} Y} + \ce{\nu_e}
 \end{eqnarray}
 
 \noindent
-In diesem Versuch wird als Quelle $\ce{^{22}Na}$ verwendet, da eine Halbwertzeit von etwa 2.6 Jahren hat \cite{NuclideChart}. Dieses zerfällt über den $\beta^+$--Zerfall in einen angeregten Zustand des stabilen Mudslides $\ce{^{22}Ne}$, welches unter Aussenden eines $\gamma$--Quants mit $E_\gamma = \pu{1275\, keV}$ in den Grundzustand zerfällt, siehe Abbildung \ref{abb:Skizze 22Na}. Beide Zerfälle geschehen koinzident.
+In diesem Versuch wird als Quelle $\ce{^{22}Na}$ verwendet, das eine Halbwertzeit von etwa 2.6 Jahren hat \cite{NuclideChart}. Dieses zerfällt über den $\beta^+$--Zerfall in einen angeregten Zustand des stabilen Isotops $\ce{^{22}Ne}$, welches unter Aussenden eines $\gamma$--Quants mit $E_\gamma = \pu{1275\, keV}$ in den Grundzustand zerfällt, siehe Abbildung \ref{abb:Skizze 22Na}. Beide Zerfälle geschehen koinzident.
 
 \begin{figure}[h]
 	\centering
@@ -168,6 +168,10 @@ Haben sie einen relativen Impuls, so wird der Winkel kleiner. Sind die Teilchen 
 \subsection{\texorpdfstring{$\gamma$--Strahlung}{\textbackslash gamma--Strahlung}}\label{gammastrahlung}}
 
 Gammastrahlung ist im engeren Sinne eine besonders durchdringende elektromagnetische Strahlung, die bei radioaktivem Zerfall auftritt. Sie wirkt durch drei Prozesse auf Materie. Bei einer Energie von bis zu $E_\gamma = \pu{100\, keV}$ überwiegt der Photoeffekt, weiterhin gibt es den Comptoneffekt und Paarbildung.
+
+Für eine PET-Messung sind Compton-Effekt und Photoeffekt relevant. Die Energie der bei der Paarvernichtung erzeugten Gammaquanten ist zu niedrig, um Paarbildung zu verursachen, aber zu hoch für den Photoeffekt. Daher ist zunächst der Compton-Effekt relevant. Wenn die Energie der Strahlung dadurch genügend reduziert wurde, kann es zum Photoeffekt kommen.
+
+Aufgrund des sekundären Zerfalls bei der Abregung von $\ce{^{22}Ne}$ kann es in unserem Experiment auch zur Paarbildung kommen, da die Energie des hierbei erzeugten Gammaquants hoch genug ist.
 
 \hypertarget{photoeffekt}{%
 \subsubsection{Photoeffekt}\label{photoeffekt}}
@@ -400,7 +404,7 @@ Beide Nukleonensorten liefern betragsmäßig den gleichen Beitrag zu $E_P$. Bei 
 \hypertarget{elektronik}{%
 \subsection{Elektronik}\label{elektronik}}
 
-In diesem Versuch werden verschiedene elektronische Bauteile verwendet, die im Folgenden näher erläutert werden. Ein Schaltskizze des Versuchs lässt sich in Abbildung \ref{abb:Schaltplan} finden.
+In diesem Versuch werden verschiedene elektronische Bauteile verwendet, die im Folgenden näher erläutert werden. In \ref{abb:Schaltplan} ist eine Schaltskizze des Versuchs zu finden.
 
 Als Detektor für die koinzidenten Signale werden anorganische Szintillationszähler sowie Photomultiplier zur Elektronenvervielfachung verwendet.
 
@@ -515,7 +519,7 @@ Das messbare Signal an der Anode ist dann durch richtige Kalibrierung proportion
 \section{Durchführung}\label{durchfuxfchrung}}
 
 \subsection{Einzelmessungen}
-Als erstes sollen die Signale von den verwendeten Elektronik einzeln am Oszilloskop betrachtet werden. Die Quelle wird für diesen Teil mittig zwischen den Detektoren platziert.
+Als erstes sollen die Signale von der verwendeten Elektronik einzeln am Oszilloskop betrachtet werden. Die Quelle wird für diesen Teil mittig zwischen den Detektoren platziert.
 
 \subsubsection{Vorverstärkersignal}
 In den Szintillatoren sind bereits Vorverstärker eingebaut. Der Ausgangskanal von einem der zwei Detektoren wird an ein Oszilloskops angeschlossen. Dort werden die Größe, die Lage und das Triggerlevel des Signals verändert, bis ein repräsentatives Signal gut zu erkennen ist. Dieses Signal wird gespeichert.
@@ -756,7 +760,7 @@ Definiert man das Produkt aus den Zählraten der drei Richtungen als Aktivität,
 		$18$ & $-57 \pm 2$ & $390 \pm 20$ \\
 		$9$ & $7 \pm 2$ & $556 \pm 24$ &
 		$19$ & $-64 \pm 2$ & $306 \pm 17$ \\
-		$10$ & $0 \pm 2$ & $486 \pm 22$ &---&---&---
+		$10$ & $0 \pm 2$ & $486 \pm 22$ &---&---&---\hspace{8mm}
 	\end{tabular}
 	\caption{Messwerte des PET--Scans in $z$--Richtung}
 	\label{tab:PET z}
@@ -825,7 +829,7 @@ Die Winkelverteilung der Koinzidenz der beiden $\gamma$--Quanten fällt normalve
 			$1.0 \pm 0.5$ & 1383 $\pm$ 37 & 23.1 $\pm$ 0.6 \\
 		$-0.5 \pm 0.5$ & 2559 $\pm$ 51 & 42.7 $\pm$ 0.8 &
 			$0.5 \pm 0.5$ & 1946 $\pm$ 44 & 32.4 $\pm$ 0.7 \\
-		$\pm 0.0 \pm 0.5$ & 2462 $\pm$ 50 & 41.0 $\pm$ 0.8 &---&---&---
+		$\pm 0.0 \pm 0.5$ & 2462 $\pm$ 50 & 41.0 $\pm$ 0.8 &---&---$\quad\ \ $&---\hspace{7mm}
 	\end{tabular}
 	\caption{Gemessene Ereignisse und daraus bestimmte Zählraten der Koinzidenzmessung der zwei $\gamma$-Quanten aus der Paarvernichtung}
 	\label{table:messwerte511}
@@ -899,7 +903,7 @@ Nur ca. $1 \mathrm{\, \%}$ der ausgesendet $\gamma$--Quanten treffen also auf de
 			$1.0 \pm 0.5$ & 27 $\pm$ 5 & 0.45 $\pm$ 0.09 \\
 		$-0.5 \pm 0.5$ & 36 $\pm$ 6 & 0.60 $\pm$ 0.10 &
 			$0.5 \pm 0.5$ & 36 $\pm$ 6 & 0.60 $\pm$ 0.10 \\
-		$\pm 0.0 \pm 0.5$ & 22 $\pm$ 5 & 0.37 $\pm$ 0.08 &---&---&---
+		$\pm 0.0 \pm 0.5$ & 22 $\pm$ 5 & 0.37 $\pm$ 0.08 &---&---$\quad\ \ $&---\hspace{8mm}
 	\end{tabular}
 	\caption{Gemessene Ereignisse und daraus bestimmte Zählraten der Koinzidenzmessung eines $\gamma$--Quanten aus der Paarvernichtung und eines $\gamma$--Quanten aus dem Zerfall von $\ce{^{22}Ne}$ in den Grundzustand}
 	\label{table:messwerte1275}
