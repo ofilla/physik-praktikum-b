@@ -91,13 +91,11 @@ In diesem Versuch wird eine radioaktive Quelle in einer Probe mittels der PET lo
 
 \hypertarget{pet}{%
 \subsection{PET}\label{pet}}
-
 Die Positronen--Emissions--Tomographie ist ein Verfahren, das die Möglichkeit bietet, Veränderungen von Stoffwechselprozessen sowie physiologische Aktivitäten sichtbar zu machen. In der Medizin wird dieses Verfahren hauptsächlich verwendet, um Krebszellen im Körper zu detektieren.
 
-Hierbei injiziert man dem Patienten radioaktive Markerstoffe (\emph{Tracer}). Diese werden unterschiedlich von den Zellen aufgenommen und verarbeitet, abhängig vom lokalen Stoffwechsel. Damit der Körper nicht zu viel radioaktive Strahlungen ausgesetzt wird, muss der Tracer so kurzlebig wie möglich sein und dennoch Positronen abgeben. Deswegen eignen sich z.B. $\ce{^{11}C}$, $\ce{^{13}N}$, $\ce{^{15}O}$,
-$\ce{^{18}F}$ besonders. Unterschiedliche Tracer werden für unterschiedliche Körperteile verwendet.
+Hierbei injiziert man dem Patienten radioaktive Markerstoffe, sogenannte \emph{Tracer}. Diese werden unterschiedlich von den Zellen aufgenommen und verarbeitet, abhängig vom lokalen Stoffwechsel. Damit der Körper nicht zu viel radioaktive Strahlungen ausgesetzt wird, muss der Tracer so kurzlebig sein, sodass dieser im Körper schnell zerfällt aber dennoch lang genug, um detektierbar zu sein. Zusätzlich muss er Positronen abgeben. Deswegen eignen sich z.B. $\ce{^{11}C}$, $\ce{^{13}N}$, $\ce{^{15}O}$, $\ce{^{18}F}$ besonders, die Halbwertzeiten hiervon sind zwischen $122.24 \,\mathrm s$ ($\ce{^{15}O}$) und $109.77\,\mathrm{min}$ ($\ce{^{18}F}$) \cite{NuclideChart}. Unterschiedliche Tracer werden für unterschiedliche Körperteile verwendet.
 
-Wenn der Tracer im Gewebe ist, zerfällt er über den $\beta^+$--Zerfall und emittiert dabei Positronen. Innerhalb weniger Mikrometer rekombiniert ein Positron mit einem Elektron und es kommt zur \emph{Paarvernichtung}. Hierbei entstehen zwei Photonen mit jeweils einer Energie von $\pu{511 \,keV}$ ein einem Winkel von $180\,^\circ$ zueinander. \cite{Bethge,DGNM,Annihilation}
+Wenn der Tracer im Gewebe ist, zerfällt er über den $\beta^+$--Zerfall und emittiert dabei Positronen. Innerhalb weniger Millimeter \cite{DGNM} rekombiniert ein Positron mit einem Elektron und es kommt zur \emph{Paarvernichtung}. Hierbei entstehen zwei Photonen mit jeweils einer Energie von $\pu{511 \,keV}$ in einem Winkel von $180\,^\circ$ zueinander. \cite{Bethge,DGNM,Annihilation}
 
 Um die Aktivität quantitativ zu bestimmen, werden Signale von den ausgestrahlten Photonen registriert. Wenn zwei davon koinzident sind, hat dieser Prozess mit großer Wahrscheinlichkeit auf der Verbindungslinie (LOR\footnote{Englisch: \emph{line of response}}) stattgefunden. Aus vielen solcher koinzidenten Signale lässt sich die Aktivität mit einem Computerprogramm zu einem zweidimensionalen und später dreidimensionalen Bild rekonstruieren.
 
@@ -105,9 +103,11 @@ Es kann bei der Messung häufig zu falschen Koinzidenzen kommen. Entweder sind d
 
 Neben der PET gibt es noch andere bildgebende Verfahren wie Röntgentomographie, Computertomographie (CT), Magnetresonanztomographie (MRT) und Ultraschall. Die Strahlenbelastung ist bei jeweiligem Verfahren unterschiedlich.
 
-Bei Ultraschall werden nur unschädliche Schallwellen verwendet, MRT ist ebenso frei von Strahlenbelastung. Im Vergleich zu Röntgentomographie und CT ist PET weniger schädlich, da die Stoffe sehr schnell zerfallen. Eine Röntgenaufnahme am Brustkorb hat eine Äquivalentdosis von $\pu{0.2 \,mSv}$ und eine CT am Brustkorb hat ca $\pu{8 \,mSv}$ \cite{SSK}.
+Bei Ultraschall werden nur unschädliche Schallwellen verwendet, sie werden von den Geweben, abhängig von der Struktur, unterschiedlich stark reflektiert, so können Bildkonstraste entstehen. MRT ist ebenso frei von Strahlenbelastung, durch ein starkes Magnetfeld richten sich die Wasserstoffkernspins alle in eine Richtung aus, aus dem Anteil der Spins lassen sich Gewebe voneinander unterscheiden.
 
-Laut Bundesamt für Strahlenschutz beträgt der Grenzwert für eine einzelne Person $\pu{1 \,mSv}$ pro Jahr, so lange man nicht beruflich mit Strahlung zu tun hat.
+Im Vergleich CT ist PET etwas weniger schädlich, da die Stoffe sehr schnell zerfallen. Die Strahlenbeslastung von PET entspricht ungefähr dem Doppelten bis Dreifachen der jährlichen natürlichen Belastung \cite{DGNM}, welche bei $\pu{2.1 \,mSv}$ pro Jahr liegt \cite{SSK}.
+
+CT und Röntgentomographie nutzen energiereiche Röntgenstrahlungen und diese können das Erbgut schädigen. Dichte Gewebe wie Knochen lassen weniger Strahlungen durch als z.B Muskeln. Eine Röntgenaufnahme am Brustkorb hat eine Äquivalentdosis von $\pu{0.2 \,mSv}$ und eine CT am Brustkorb hat ca $\pu{8 \,mSv}$ \cite{SSK}.
 
 Für die Medizin ist PET ein hervorragendes Werkzeug, besonders in der Onkologie. Das Verfahren kann Veränderung im Stoffwechsel erkennen, eher ein anderes Verfahren es nachweisen kann, so können Krebstumore früher erkannt und behandelt werden.
 
@@ -404,7 +404,7 @@ In diesem Versuch werden verschiedene elektronische Bauteile verwendet, die im F
 
 Als Detektor für die koinzidenten Signale werden anorganische Szintillationszähler sowie Photomultiplier zur Elektronenvervielfachung verwendet.
 
-In diesem Versuch wird $\ce{NaI}$ als anorganischer Szintillator verwendet, hierbei beträgt die Ausbeute je Photon $\pu{4\cdot 10^{4}\, MeV^{-1}}$.
+In diesem Versuch wird $\ce{NaI}$ als anorganischer Szintillator verwendet. Dieser wird oft mit Thalium dotiert, hierbei beträgt die Lichtausbeute etwa $10\,\%$ \cite{EigenschaftenSzintillatoren}.
 
 \begin{figure}[h]
 	\centering
@@ -584,7 +584,7 @@ Das Signal aus dem Vorverstärker ist in Abbildung \ref{fig:signal_vv} zu sehen.
 \end{figure}
 
 \subsubsection{Signal aus dem Hauptverstärker}
-Das Signal aus dem TFA ist in Abbildung \ref{fig:signal_vv+hv} zu sehen. Es hat eine Breite von ca. $850 \mathrm{\, ns}$ und beim Peak eine Höhe von ca. $2.5 \mathrm{\, V}$. Damit ist es nur etwa halb so breit und dafür etwa $6$--mal so hoch wie das aus dem Vorverstärker. Der TFA hat das Signal daher sowohl stark verstärkt, als auch die zeitliche Auflösung enorm vergrößert.
+Das Signal aus dem TFA ist in Abbildung \ref{fig:signal_vv+hv} zu sehen. Es hat eine Breite von ca. $850 \mathrm{\, ns}$ und beim Peak eine Höhe von ca. $2.5 \mathrm{\, V}$. Damit ist es etwa $175$--mal schmaler und $6$--mal höher als das Signal aus dem Vorverstärker. Der TFA hat das Signal daher sowohl stark verstärkt, als auch die zeitliche Auflösung enorm vergrößert.
 
 \begin{figure}[h]
 	\centering
@@ -621,7 +621,7 @@ Zur Bestimmung der Ortsauflösung wird die Zählrate $r$ aus der Anzahl der Dete
 	\centering
 	\begin{tabular}{c|c|c||c|c|c}
 		$x\ [\mathrm{mm}]$ & $n\ [\frac{1}{\mathrm{min}}]$ & $r\ [\mathrm{Hz}]$ &
-		$x\ [\mathrm{mm}]$ & $n\ [\frac{1}{\mathrm{min}}]$ & $r\ [\mathrm{Hz}]$ \\
+		$x\ [\mathrm{mm}]$ & $n\ [\frac{1}{\mathrm{min}}]$ & $r\ [\mathrm{Hz}]$ \vspace{1pt}\\
 		\hline
 		$\ \ \ 0 \pm 2$ & $2971 \pm 55$ & $49.52 \pm 0.91$ &---&---&--- \\
 		$\ +1 \pm 2$ & $2202 \pm 47$ & $36.70 \pm 0.78$ &
@@ -684,11 +684,11 @@ Aus diesen Werten lässt sich schließen, dass mindestens zwei starke Quellen po
 	\centering
 	\begin{minipage}[t]{0.7\textwidth}
 		\includegraphics[width=\textwidth]{../media/B3.4/heatmap.png}
-		\caption{Heatmap, $z$--Richtung läuft diagonal von unten links nach oben rechts}
+		\caption{Heatmap, $z$--Richtung läuft diagonal von oben links nach unten rechts}
 		\label{abb:PET heatmap}
 	\end{minipage}
 
-	\vspace{12pt}
+	\vspace{18pt}
 	\begin{minipage}[t]{0.6\textwidth}
 		\includegraphics[width=\textwidth]{../media/B3.4/PET_surface.jpg}
 		\caption{Oberflächenplot in $3\,\mathrm D$}
@@ -702,16 +702,18 @@ Betrachtet man die Werte sehr genau, kann man $(3,2)$ als mögliche Position ein
 
 Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist als die von der Quelle $2$ an Position $(7,9)$, und zwar um einen Faktor 1.04. Eine mögliche Quelle $3$ an Position $(3,2)$ ist dann deutlich schwächer.
 
+Definiert man das Produkt aus den Zählraten der drei Richtungen als Aktivität, so ist diese Aktivität  $A_1$ von Quelle $1$ an der Position $(10,4)$ um etwa $4\,\%$ höher als die von Quelle $2$ an der Position $(7,9)$. Eine mögliche Quelle $3$ an Position $(3,2)$ ist deutlich schwächer, sie hat nur ca $1\,\%$ der Aktivität der beiden anderen Proben.
+
 \begin{eqnarray}
-	\frac{A_1}{A_2} &\approx& 1.04 \\
-	\frac{A_3}{A_1} &\approx& \frac{1}{89} \\
-	\frac{A_3}{A_2} &\approx& \frac{1}{87}
+	\frac{A_1}{A_2} &\approx& 104\,\% \\
+	\frac{A_3}{A_1} &\approx& 1.12\,\% \\
+	\frac{A_3}{A_2} &\approx& 1.15\,\%
 \end{eqnarray}
 
 \begin{table}
 	\centering
 	\begin{tabular}[h]{c|c|r|r}
-		Nr. & Position [mm] & N(x) $[\frac{1}{\mathrm{min}}]$ & N(y) $[\frac{1}{\mathrm{min}}]$ \\
+		Nr. & Position [mm] & N(x) $[\frac{1}{\mathrm{min}}]$ & N(y) $[\frac{1}{\mathrm{min}}]$ \vspace{1pt}\\
 		\hline
 		1 & $-45 \pm 2$ & $190 \pm 14$ & $313 \pm 18$ \\
 		2 & $-35 \pm 2$ & $261 \pm 16$ & $466 \pm 22$ \\
@@ -730,31 +732,31 @@ Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist al
 	\vspace{24pt}
 	\begin{tabular}{c|c|r||c|c|r}
 		Index $i$ &
-		Position $[\mathrm{mm}]$ &
-		$N(z_i)$ &
-		Index $i$ &
-		Position $[\mathrm{mm}]$ &
-		$N(z_i)$ \\
+			Position $[\mathrm{mm}]$ &
+			$N(z_i)$ $[\frac{1}{\mathrm{min}}]$&
+			Index $i$ &
+			Position $[\mathrm{mm}]$ &
+			$N(z_i)$ $[\frac{1}{\mathrm{min}}]$ \vspace{1pt}\\
 		\hline
-		$1$ & $64$ & $203$ &
-		$11$ & $-7$ & $524$ \\
-		$2$ & $57$ & $246$ &
-		$12$ & $-14$ & $397$ \\
-		$3$ & $49$ & $243$ &
-		$13$ & $-21$ & $384$ \\
-		$4$ & $42$ & $271$ &
-		$14$ & $-28$ & $401$ \\
-		$5$ & $35$ & $318$ &
-		$15$ & $-35$ & $562$ \\
-		$6$ & $28$ & $407$ &
-		$16$ & $-42$ & $2173$ \\
-		$7$ & $21$ & $644$ &
-		$17$ & $-49$ & $571$ \\
-		$8$ & $14$ & $1907$ &
-		$18$ & $-57$ & $390$ \\
-		$9$ & $7$ & $556$ &
-		$19$ & $-64$ & $306$ \\
-		$10$ & $0$ & $486$ &---&---&---
+		$1$ & $64 \pm 2$ & $203 \pm 14$&
+		$11$ & $-\ 7 \pm 2$ & $524 \pm 23$ \\
+		$2$ & $57 \pm 2$ & $246\pm 16$&
+		$12$ & $-14 \pm 2$ & $397 \pm 20$ \\
+		$3$ & $49 \pm 2$ & $243\pm 16$ &
+		$13$ & $-21 \pm 2$ & $384 \pm 20$ \\
+		$4$ & $42 \pm 2$ & $271 \pm 16$ &
+		$14$ & $-28 \pm 2$ & $401 \pm 20$ \\
+		$5$ & $35 \pm 2$ & $318 \pm 18$ &
+		$15$ & $-35 \pm 2$ & $562 \pm 24$ \\
+		$6$ & $28 \pm 2$ & $407 \pm 20$ &
+		$16$ & $-42 \pm 2$ & $2173 \pm 47$ \\
+		$7$ & $21 \pm 2$ & $644 \pm 25$ &
+		$17$ & $-49 \pm 2$ & $571 \pm 24$ \\
+		$8$ & $14 \pm 2$ & $1907 \pm 44$ &
+		$18$ & $-57 \pm 2$ & $390 \pm 20$ \\
+		$9$ & $7 \pm 2$ & $556 \pm 24$ &
+		$19$ & $-64 \pm 2$ & $306 \pm 17$ \\
+		$10$ & $0 \pm 2$ & $486 \pm 22$ &---&---&---
 	\end{tabular}
 	\caption{Messwerte des PET--Scans in $z$--Richtung}
 	\label{tab:PET z}
@@ -775,13 +777,12 @@ Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist al
 		&$9$  & $111$ & $151$ & $284$ & $237$ & $402$ & $981$ & $9210$ & $817$ & $765$ & $2732$ \\
 		&$10$  & $20$ & $33$ & $56$ & $44$ & $68$ & $135$ & $678$ & $611$ & $191$ & $552$ \\
 	\end{tabular}
-	\caption{Multiplizierte Zählraten je Position, in der Einheit von $10^6\, \mathrm{min^{-1}}$}
+	\caption{Multiplizierte Zählraten je Position, in der Einheit von $10^6\, \mathrm{min^{-3}}$}
 	\label{tab:PET Matrix}
 \end{table}
 
 \clearpage
-\hypertarget{winkelabhuxe4ngigkeit}{%
-\subsection{Winkelabhängigkeit}\label{winkelabhuxe4ngigkeit}}
+\hypertarget{winkelabhuxe4ngigkeit}{\subsection{Winkelabhängigkeit}\label{winkelabhuxe4ngigkeit}}
 
 \subsubsection{Paarvernichtung}
 \label{auswertung-paarvernichtung}
@@ -789,7 +790,7 @@ Nun wird die Winkelabhängigkeit der Photonen aus der Paarvernichtung untersucht
 
 Dazu wird die Anzahl der Detektionen $n$ in eine Zählrate $r$ umgerechnet, wobei die Messdauer $T=60\,\mathrm{s}$ verwendet wird. Dies ist analog zu der Berechnung in Abschnitt \ref{auswertung-ortsaufluxf6sung}  und verwendet ebenfalls die Gleichungen \eqref{eq:Delta n} -- \eqref{eq:ZählrateFehler}. Die Ungenauigkeit des Winkels ist mit $\Delta \theta = 0.5\,^\circ$ gegeben. Die gemessenen Ereignisse und die daraus ermittelten Raten sind in Tabelle \ref{table:messwerte511} zu finden.
 
-Die Winkelverteilung der Koinzidenz der beiden $\gamma$--Quanten fällt normalverteilt um etwa den Winkel $0^\circ$ aus. Deswegen können die Werte mit einer Gaußkurve $f(\theta)$ gefittet werden, die durch Gleichung \eqref{eq:gauss-fit} beschrieben wird. Dabei wurden ein Mittelwert $\mu\approx-0.34$, eine Standardabweichung $\sigma\approx 1.04$, ein Streckungsfaktor $\alpha=35$ und ein Offset $\beta\approx7.7$ verwendet.
+Die Winkelverteilung der Koinzidenz der beiden $\gamma$--Quanten fällt normalverteilt um etwa den Winkel $0^\circ$ aus. Deswegen können die Werte mit einer Gaußkurve $f(\theta)$ gefittet werden, die durch Gleichung \eqref{eq:gauss-fit} beschrieben wird. Dabei wurden ein Mittelwert $\mu\approx-0.34 \mathrm{\, ^\circ}$, eine Standardabweichung $\sigma\approx 1.04 \mathrm{\, ^\circ}$, ein Streckungsfaktor $\alpha=35 \mathrm{\, Hz}$ und ein Offset $\beta\approx7.7 \mathrm{\, Hz}$ verwendet.
 
 \begin{figure}[h]
 	\centering
@@ -802,7 +803,7 @@ Die Winkelverteilung der Koinzidenz der beiden $\gamma$--Quanten fällt normalve
 	\centering
 	\begin{tabular}{c|r|r||c|r|r}
 		$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ &
-			$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \\
+			$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \vspace{1pt}\\
 		\hline 
 		$-5.0 \pm 0.5$ & 432 $\pm$ 21 & 7.2 $\pm$ 0.3 &
 			$5.0 \pm 0.5$ & 456 $\pm$ 21 & 7.6 $\pm$ 0.4 \\
@@ -836,13 +837,10 @@ Diese Gaußverteilung mit einem Peak bei ca. $0\,^\circ$ rührt daher, dass für
 
 Des weiteren ist es möglich, dass die $\gamma$--Quanten auf dem Weg zu den Detektoren abgelenkt werden und so Ereignisse auch bei Winkeln $\theta\neq 0^\circ$ aufgezeichnet werden können, bei denen sich das Positron und das Elektron bei der Paarvernichtung in Ruhe befunden haben. Dieses Phänomen sollte allerdings nur wenige Ereignisse ermöglichen und lässt uns so trotzdem eine normalverteilte Winkelverteilung erwarten.
 
-Mittels der Gaußkurve lässt sich nun die Halbwertsbreite $\alpha_{1/2}$ der Messung bestimmen. Dazu wird zunächst die Hälfte der maximalen Zählrate $r_{1/2}$ als die Hälfte der Zählrate des höchsten Messpunkts $r_\mathrm{max}$ bestimmt. Damit werden die Winkel $\alpha_{1,2}$ bestimmt, bei denen die Gaußfunktion diese halbe maximale Zählrate $r_{1/2}$ erreicht, woraus die Halbwertsbreite von $\alpha_{1/2}\approx 2.9\,^\circ$ folgt.
+Mittels der Gaußkurve lässt sich nun die Halbwertsbreite $\alpha_{1/2}$ der Messung bestimmen. Diese folgt aus der Standardabweichung $\sigma$ und ergibt sich zu ca. $2.4 \mathrm{\, ^\circ}$.
 
 \begin{eqnarray}
-	r_{1/2} &=& \frac{\mathrm{max}}{2} \\
-	r_{1/2} &=& \frac{a}{\sigma \sqrt{2 \pi}} e^{- \frac{1}{2} \left( \frac{\alpha - \mu}{\sigma} \right)^2} + b \\
-	\alpha_{1,2} &=& \mu \pm \sigma \sqrt{-2 \ln \left( \frac{r_{1/2} - b}{a} \right) } \\
-	\alpha_{1/2} &=& \alpha_1 - \alpha_2
+	\alpha_{1/2} = 2 \sqrt{2 \ln 2} \cdot \sigma
 \end{eqnarray}
 
 \subsubsection{Koinzidenter Zerfall}
@@ -852,7 +850,21 @@ Analog zu Abschnitt \ref{auswertung-paarvernichtung} werden die Zählraten ermit
 
 Auch dies entspricht unseren Erwartungen. Da der $\gamma$--Quant aus dem Zerfall von $\ce{^{22}Ne}$ in den Grundzustand isotrop abgestrahlt wird, sollte eine koinzidente Messung mit einem $\gamma$--Quant aus der Paarvernichtung für alle Winkel etwa gleich häufig auftreten.
 
-Weiterhin ist die Zählrate bei dieser Messung für alle Winkel deutlich kleiner als bei der koinzidenten Messung der zwei $\gamma$--Quanten aus der Paarvernichtung. Das lässt sich ebenso damit erklären, dass das $\gamma$--Quant aus dem Zerfall von $\ce{^{22}Ne}$ in den Grundzustand isotrop abgestrahlt wird. Eine koinzidente Messung dieses $\gamma$--Quants mit einem $\gamma$--Quant aus der Paarvernichtung, sollte also je nach Raumwinkel des Detektors größenordnungstechnisch ca. $100$--mal seltener stattfinden, da es nur in den wenigsten Fällen, überhaupt in die Richtung des Detektors ausgesendet wird.
+Weiterhin ist die Zählrate bei dieser Messung für alle Winkel deutlich kleiner als bei der koinzidenten Messung der zwei $\gamma$--Quanten aus der Paarvernichtung. Das lässt sich ebenso damit erklären, dass das $\gamma$--Quant aus dem Zerfall von $\ce{^{22}Ne}$ in den Grundzustand isotrop abgestrahlt wird. Eine koinzidente Messung dieses $\gamma$--Quants mit einem $\gamma$--Quant aus der Paarvernichtung, sollte also deutlich seltener stattfinden, da es nur in den wenigsten Fällen, überhaupt in die Richtung des Detektors ausgesendet wird.
+
+Größenordnungstechnisch lässt sich dies unter der Annahme abschätzen, dass der Detektor einen deutlich kleineren Radius besitzt, als sein Abstand zur Probe beträgt. Sei der Radius des Detektors beispielsweise $1 \mathrm{\, cm}$ und sein Abstand zur Probe $10 \mathrm{\, cm}$.
+
+Damit ergeben sich die Fläche des Detektors $A_\mathrm{Det}$ sowie die Kugeloberfläche des Raumes $O_\mathrm{Raum}$, in den die Probe abstrahlt. Der Anteil $p_\gamma$ an abgestrahlten $\gamma$-Quanten, die auf den Detektor treffen, ist als das Verhältnis dieser Flächen gegeben.
+
+\begin{eqnarray}
+	A_\mathrm{Det} &=& \pi r^2 \\
+	O_\mathrm{Raum} &=& 4 \pi r^2 \\
+	p_\gamma &=& \frac{A_\mathrm{Det}}{O_\mathrm{Raum}} \\
+	\Rightarrow \qquad p_\gamma &\approx& 0.01
+\end{eqnarray}
+
+\noindent
+Nur ca. $1 \mathrm{\, \%}$ der ausgesendet $\gamma$--Quanten treffen also auf den Detektor, wodurch eine ca. 100--fach kleinere Zählrate als in der vorherigen Messung erwartet wird.
 
 \begin{figure}[h]
 	\centering
@@ -865,7 +877,7 @@ Weiterhin ist die Zählrate bei dieser Messung für alle Winkel deutlich kleiner
 	\centering
 	\begin{tabular}{c|r|r||c|r|r}
 		$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ &
-			$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \\
+			$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \vspace{1pt}\\
 		\hline 
 		$-5.0 \pm 0.5$ & 22 $\pm$ 5 & 0.37 $\pm$ 0.08 &
 			$5.0 \pm 0.5$ & 29 $\pm$ 5 & 0.48 $\pm$ 0.09 \\
@@ -903,12 +915,13 @@ Insbesondere bedeutet dies, dass die Auflösung sehr viel besser als die Abstän
 Auch der PET--Scan selbst ist ziemlich gut verlaufen. Es gibt für zwei Proben sehr eindeutige Ergebnisse. Nur die dritte Probe konnte nicht gemessen werden. Dies liegt sehr wahrscheinlich daran, dass sie um einen Faktor von über $80$ schwächer als die anderen beiden Proben ist. Damit wird ihre Strahlung in unseren Messrichtungen von den anderen beiden Proben so sehr überlagert, dass sie praktisch nicht zu erkennen ist.
 
 Abhilfe hierfür hätte eine weitere Messreihe geben können, bei denen eine $z^\prime$--Richtung vermessen wird, die senkrecht zu der von uns verwendeten $z$--Richtung steht. Würde nur in $z^\prime$--Richtung gemessen, würden die beiden stärkeren Proben vermutlich im ``Schatten'' voneinander stehen, weswegen Messungen in $x$--, $y$--, $z$-- und $z^\prime$--Richtung notwendig wären, um alle Proben genau zu lokalisieren. Dies ist an Abbildung \ref{abb:heatmap} zu erkennen.
+
 \begin{figure}[h]
 	\centering
 	\vspace{24pt}
 	\includegraphics[width=0.6\textwidth]{../media/B3.4/heatmap.png}
-	\caption{$z$--Richtung läuft diagonal von unten links nach oben rechts, \\
-		$z^\prime$--Richtung liefe diagonal von oben links nach unten rechts}
+	\caption{$z$--Richtung läuft diagonal von oben links nach unten rechts, \\
+		$z^\prime$--Richtung liefe diagonal von unten links nach oben rechts}
 	\label{abb:heatmap}
 \end{figure}
 
@@ -952,6 +965,10 @@ Abhilfe hierfür hätte eine weitere Messreihe geben können, bei denen eine $z^
 	LMU München, ``Detektor'',
 	\url{https://homepages.physik.uni-muenchen.de/~Otmar.Biebel/detektor/detector06.pdf},
 	Abruf am 07.04.2024
+\bibitem{EigenschaftenSzintillatoren}
+	ResearchGate, ``Daten einiger Szintillatoren'',
+	\url{https://www.researchgate.net/file.PostFileLoader.html?id=54b69483d4c11860268b480d&assetKey=AS%3A273689545773057%401442264081272},
+	Abruf am 10.05.2024
 \bibitem{UzK}
 	Universität zu Köln, ``B3.4: PET'',
 	Januar 2021,
