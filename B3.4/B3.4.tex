@@ -169,9 +169,18 @@ Haben sie einen relativen Impuls, so wird der Winkel kleiner. Sind die Teilchen 
 
 Gammastrahlung ist im engeren Sinne eine besonders durchdringende elektromagnetische Strahlung, die bei radioaktivem Zerfall auftritt. Sie wirkt durch drei Prozesse auf Materie. Bei einer Energie von bis zu $E_\gamma = \pu{100\, keV}$ überwiegt der Photoeffekt, weiterhin gibt es den Comptoneffekt und Paarbildung.
 
-Für eine PET-Messung sind Compton-Effekt und Photoeffekt relevant. Die Energie der bei der Paarvernichtung erzeugten Gammaquanten ist zu niedrig, um Paarbildung zu verursachen, aber zu hoch für den Photoeffekt. Daher ist zunächst der Compton-Effekt relevant. Wenn die Energie der Strahlung dadurch genügend reduziert wurde, kann es zum Photoeffekt kommen.
+Für eine PET--Messung sind Comptoneffekt und Photoeffekt relevant. Die Energie der bei der Paarvernichtung erzeugten Gammaquanten ist zu niedrig, um Paarbildung zu verursachen, aber zu hoch für den Photoeffekt. Daher ist zunächst der Comptoneffekt relevant. Wenn die Energie der Strahlung dadurch genügend reduziert wurde, kann es zum Photoeffekt kommen.
 
 Aufgrund des sekundären Zerfalls bei der Abregung von $\ce{^{22}Ne}$ kann es in unserem Experiment auch zur Paarbildung kommen, da die Energie des hierbei erzeugten Gammaquants hoch genug ist.
+
+Prinzipiell ist es dabei wahrscheinlich, dass nicht die gesamte Energie der $\gamma$--Strahlung im Detektor landet. Da dieser im  Unterschied zur umgebenden Luft eine sehr hohe Teilchendichte hat, ist es wahrscheinlich, dass ein Großteil der Wechselwirkungen im Detektor stattfinden. Bei hohem Luftdruck könnten die Wechselwirkungen mit der Luft dagegen deutlich größer werden.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\textwidth]{../media/B3.4/1024px-Pb-gamma-xs.svg.png}
+	\caption{Wirkungsquerschnitte von Photoeffekt (grün), Comptoneffekt (rot) und Paarbildung (türkis) \cite{abb:Wirkungsquerschnitte}}
+	\label{fig:Wirkungsquerschnitte }
+\end{figure}
 
 \hypertarget{photoeffekt}{%
 \subsubsection{Photoeffekt}\label{photoeffekt}}
@@ -519,7 +528,7 @@ Das messbare Signal an der Anode ist dann durch richtige Kalibrierung proportion
 \section{Durchführung}\label{durchfuxfchrung}}
 
 \subsection{Einzelmessungen}
-Als erstes sollen die Signale von der verwendeten Elektronik einzeln am Oszilloskop betrachtet werden. Die Quelle wird für diesen Teil mittig zwischen den Detektoren platziert.
+Als erstes sollen die Signale der verwendeten Elektronik einzeln am Oszilloskop betrachtet werden. Die Quelle wird für diesen Teil mittig zwischen den Detektoren platziert.
 
 \subsubsection{Vorverstärkersignal}
 In den Szintillatoren sind bereits Vorverstärker eingebaut. Der Ausgangskanal von einem der zwei Detektoren wird an ein Oszilloskops angeschlossen. Dort werden die Größe, die Lage und das Triggerlevel des Signals verändert, bis ein repräsentatives Signal gut zu erkennen ist. Dieses Signal wird gespeichert.
@@ -1001,5 +1010,8 @@ Abhilfe hierfür hätte eine weitere Messreihe geben können, bei denen eine $z^
 	Wikipedia,
 	\url{https://commons.wikimedia.org/wiki/File:CFD_Diagram1.jpg},
 	Abruf am 06.04.2024
+\bibitem{abb:Wirkungsquerschnitte}
+	Wikipedia, ``File:Pb-gamma-xs.svg'',
+	\url{https://commons.wikimedia.org/wiki/File:Pb-gamma-xs.svg}, Abruf am 12.05.2024
 \end{thebibliography}
 \end{document}
