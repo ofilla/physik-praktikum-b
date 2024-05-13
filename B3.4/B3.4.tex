@@ -690,23 +690,36 @@ In $x$-- und $y$--Richtung wurden je $10$ Messungen durchgeführt. Die Fehler de
 
 Anhand der Werte kann man schon erahnen, dass es mindesten vier Positionen gibt, an denen sich Proben befinden könnten. Um die richtigen Positionen herauszufiltern, müssen die Messungen in $z$--Richtung betrachtet werden. Diese sind in Tabelle \ref{tab:PET z} dargestellt.
 
-
 Aus diesen Werten lässt sich schließen, dass mindestens zwei starke Quellen positioniert wurden. Um genauer sagen zu können, werden die Zählraten zu einer Position $(x,y,z)$ miteinander multipliziert und als Heatmap sowie als Oberflächenplot visualisiert, siehe Abbildungen \ref{abb:PET heatmap} und \ref{abb:PET surface} sowie Tabelle \ref{tab:PET Matrix}. Es ist deutlich zu sehen, dass zwei große Quellen an den Positionen $(10,4)$ und $(7,9)$ positioniert sind.
+
+Ein Foto der verschlossenen Box und eine Überlagerung mit der Heatmap sind in den Abbildungen \ref{abb:PET box} und \ref{abb:heatmap & Box} zu sehen.
+
+\begin{figure}[b!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.4/heatmap.png}
+	\caption{Heatmap, $z$--Richtung läuft diagonal von oben links nach unten rechts}
+	\label{abb:PET heatmap}
+\end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\begin{minipage}[t]{0.7\textwidth}
-		\includegraphics[width=\textwidth]{../media/B3.4/heatmap.png}
-		\caption{Heatmap, $z$--Richtung läuft diagonal von oben links nach unten rechts}
-		\label{abb:PET heatmap}
+	\begin{minipage}{0.43\textwidth}
+		\includegraphics[width=\textwidth]{../media/B3.4/Box_von_oben.jpg}
+		\caption{Verschlossene Box zur PET--Messung}
+		\label{abb:PET box}
 	\end{minipage}
+	\begin{minipage}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{../media/B3.4/heatmap_with_box.jpg}
+		\caption{Überlagerung der Heatmap mit der Box}
+		\label{abb:heatmap & Box}
+	\end{minipage}
+\end{figure}
 
-	\vspace{18pt}
-	\begin{minipage}[t]{0.6\textwidth}
-		\includegraphics[width=\textwidth]{../media/B3.4/PET_surface.jpg}
-		\caption{Oberflächenplot in $3\,\mathrm D$}
-		\label{abb:PET surface}
-	\end{minipage}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{../media/B3.4/PET_surface.jpg}
+	\caption{Oberflächenplot in $3\,\mathrm D$}
+	\label{abb:PET surface}
 \end{figure}
 
 Uns wurde mitgeteilt, es gebe eine dritte, schwächere Probe. Weder anhand der Daten noch anhand der Grafiken können wir diese Quelle lokalisieren, weil es kaum signifikante Abhebungen erkennbar sind. Vermutlich ist diese sehr viel schwächer als die zwei große Quellen.
@@ -715,7 +728,7 @@ Betrachtet man die Werte sehr genau, kann man $(3,2)$ als mögliche Position ein
 
 Die Aktivität $A_1$ von Quelle $1$ an Position $(10,4)$ ist etwas höher ist als die von der Quelle $2$ an Position $(7,9)$, und zwar um einen Faktor 1.04. Eine mögliche Quelle $3$ an Position $(3,2)$ ist dann deutlich schwächer.
 
-Definiert man das Produkt aus den Zählraten der drei Richtungen als Aktivität, so ist diese Aktivität  $A_1$ von Quelle $1$ an der Position $(10,4)$ um etwa $4\,\%$ höher als die von Quelle $2$ an der Position $(7,9)$. Eine mögliche Quelle $3$ an Position $(3,2)$ ist deutlich schwächer, sie hat nur ca $1\,\%$ der Aktivität der beiden anderen Proben.
+Definiert man das Produkt aus den Zählraten der drei Richtungen als Aktivität, so ist diese Aktivität  $A_1$ von Quelle $1$ an der Position $(10,4)$ um etwa $4\,\%$ höher als die von Quelle $2$ an der Position $(7,9)$. Eine mögliche Quelle $3$ an Position $(3,2)$ ist deutlich schwächer, sie hat nur ca $1\,\%$ der Aktivität der beiden anderen Proben. Dies erklärt, warum sie im Unterschied zu den anderen beiden Quellen praktisch nicht identifizierbar ist.
 
 \begin{eqnarray}
 	\frac{A_1}{A_2} &\approx& 104\,\% \\
