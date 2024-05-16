@@ -1,0 +1,5 @@
+* short_measurements.csv: 5-Minuten-Messungen
+* binomial_X_Y.csv: Delta t = X, binning Y
+* data.csv: Rohdaten
+* divide_X.csv: Intervalle über X Sekunden
+* inverval_X_Y: Intervalle über X Sekunden, Intervallverteilung (Y-1)

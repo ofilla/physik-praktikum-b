@@ -1,5 +1,4 @@
-# delta_t = 5, binning 8
-# Zerfaelle_in_5_sec, Anzahl_der_Messungen
+Zerfaelle_in_5_sec Anzahl_der_Messungen
 0 0 # 0 mal 0-7 Zerfälle
 1 0 # 1 mal 8-15 Zerfälle
 2 0
