@@ -165,7 +165,7 @@ Haben sie einen relativen Impuls, so wird der Winkel kleiner. Sind die Teilchen 
 
 Gammastrahlung ist im engeren Sinne eine besonders durchdringende elektromagnetische Strahlung, die bei radioaktivem Zerfall auftritt. Sie wirkt durch drei Prozesse auf Materie. Bei einer Energie von bis zu $E_\gamma = \pu{100\, keV}$ überwiegt der Photoeffekt, weiterhin gibt es den Comptoneffekt und Paarbildung.
 
-Für eine PET--Messung sind Comptoneffekt und Photoeffekt relevant. Die Energie der bei der Paarvernichtung erzeugten Gammaquanten ist zu niedrig, um Paarbildung zu verursachen, aber zu hoch für den Photoeffekt. Daher ist zunächst der Comptoneffekt relevant. Wenn die Energie der Strahlung dadurch genügend reduziert wurde, kann es zum Photoeffekt kommen.
+Für eine PET--Messung sind Comptoneffekt und Photoeffekt relevant. Die Energie der bei der Paarvernichtung erzeugten Gammaquanten ist zu niedrig, um Paarbildung zu verursachen. Daher sind der Comptoneffekt und der Photoeffekt relevant.
 
 Aufgrund des sekundären Zerfalls bei der Abregung von $\ce{^{22}Ne}$ kann es in unserem Experiment auch zur Paarbildung kommen, da die Energie des hierbei erzeugten Gammaquants hoch genug ist.
 
@@ -254,7 +254,7 @@ Die Zahl der in einem~Detektor~nachgewiesenen Ereignisse als Funktion ihrer Impu
 
 \paragraph{Photopeak}
 
-Ein Photopeak (\emph{Full--Energy--Peak}) entsteht, wenn die gesamte Energie eines Photons in einem Detektor gemessen wird. Dies kann beispielsweise durch den bereits genannten Photoeffekt oder durch die Anregung von Atomen entstehen.
+Ein Photopeak (\emph{Full--Energy--Peak}) entsteht, wenn die gesamte Energie eines Photons in einem Detektor gemessen wird. Dies ist dann der Fall, wenn das Photon vor dem Eintreten in den Detektor keine Energie durch Wechselwirkungen verloren hat. Dann kann das Photon seine Energie über den Comptoneffekt und den Photoeffekt im Detektor deponieren.
 
 \paragraph{Compton--Kante}
 
@@ -725,7 +725,7 @@ Betrachtet man die Werte sehr genau, kann man $(3,2)$ als mögliche Position ein
 Definiert man das Produkt aus den Zählraten der drei Richtungen als Aktivität, so ist diese Aktivität  $A_1$ von Quelle $1$ an der Position $(10,4)$ um etwa $4\,\%$ höher als die von Quelle $2$ an der Position $(7,9)$. Eine mögliche Quelle $3$ an Position $(3,2)$ ist deutlich schwächer, sie hat nur ca $1\,\%$ der Aktivität der beiden anderen Proben. Dies erklärt, warum sie im Unterschied zu den anderen beiden Quellen praktisch nicht identifizierbar ist.
 
 \begin{eqnarray}
-	\frac{A_1}{A_2} &\approx& 4\,\% \\
+	\frac{A_1}{A_2} &\approx& 104\,\% \\
 	\frac{A_3}{A_1} &\approx& 1,12\,\% \\
 	\frac{A_3}{A_2} &\approx& 1,15\,\%
 \end{eqnarray}
@@ -822,8 +822,8 @@ Die Winkelverteilung der Koinzidenz der beiden $\gamma$--Quanten fällt normalve
 \begin{table}[h]
 	\centering
 	\begin{tabular}{c|r|r||c|r|r}
-		$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ &
-			$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \vspace{1pt}\\
+		$\theta\ [^\circ]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ &
+			$\theta\ [^\circ]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \vspace{1pt}\\
 		\hline 
 		$-5,0 \pm 0,5$ & 432 $\pm$ 21 & 7,2 $\pm$ 0,3 &
 			$5,0 \pm 0,5$ & 456 $\pm$ 21 & 7,6 $\pm$ 0,4 \\
@@ -874,7 +874,7 @@ Weiterhin ist die Zählrate bei dieser Messung für alle Winkel deutlich kleiner
 
 Größenordnungstechnisch lässt sich dies unter der Annahme abschätzen, dass der Detektor einen deutlich kleineren Radius besitzt, als sein Abstand zur Probe beträgt. Sei der Radius des Detektors beispielsweise $1 \mathrm{\, cm}$ und sein Abstand zur Probe $10 \mathrm{\, cm}$.
 
-Damit ergeben sich die Fläche des Detektors $A_\mathrm{Det}$ sowie die Kugeloberfläche des Raumes $O_\mathrm{Raum}$, in den die Probe abstrahlt. Der Anteil $p_\gamma$ an abgestrahlten $\gamma$-Quanten, die auf den Detektor treffen, ist als das Verhältnis dieser Flächen gegeben.
+Damit ergeben sich die Fläche des Detektors $A_\mathrm{Det}$ sowie die Kugeloberfläche des Raumes $O_\mathrm{Raum}$, in den die Probe abstrahlt. Der Anteil $p_\gamma$ an abgestrahlten $\gamma$--Quanten, die auf den Detektor treffen, ist als das Verhältnis dieser Flächen gegeben.
 
 \begin{eqnarray}
 	A_\mathrm{Det} &=& \pi r^2 \\
@@ -884,20 +884,20 @@ Damit ergeben sich die Fläche des Detektors $A_\mathrm{Det}$ sowie die Kugelobe
 \end{eqnarray}
 
 \noindent
-Nur ca. $1 \mathrm{\, \%}$ der ausgesendet $\gamma$--Quanten treffen also auf den Detektor, wodurch eine ca. 100--fach kleinere Zählrate als in der vorherigen Messung erwartet wird.
+Nur ca. $1 \mathrm{\, \%}$ der ausgesendet $\gamma$--Quanten treffen in diesem Beispiel auf den Detektor, wodurch eine ca. 100--fach kleinere Zählrate als in der vorherigen Messung erwartet wird.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{../media/B3.4/plot1275.pdf}
-	\caption{Gemessene Zählraten von Koinzidenzen zwischen einem $\gamma$--Quant aus der Paarvernichtung und einem $\gamma$-Quant aus dem Zerfall von $^{22}$Ne in den Grundzustand, bei verschiedenen Winkeln der Detektoren zueinander, zusammen mit dem Mittelwert (blaue Linie)}
+	\caption{Gemessene Zählraten von Koinzidenzen zwischen einem $\gamma$--Quant aus der Paarvernichtung und einem $\gamma$--Quant aus dem Zerfall von $^{22}$Ne in den Grundzustand, bei verschiedenen Winkeln der Detektoren zueinander, zusammen mit dem Mittelwert (blaue Linie)}
 	\label{fig:plot1275}
 \end{figure}
 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{c|r|r||c|r|r}
-		$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ &
-			$\theta\ [\mathrm{mm}]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \vspace{1pt}\\
+	\begin{tabular}{c|c|c||c|c|c}
+		$\theta\ [^\circ]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ &
+			$\theta\ [^\circ]$ & $n(\theta)\ [\frac{1}{\mathrm{min}}]$ & $r(\theta)\ [\mathrm{Hz}]$ \vspace{1pt}\\
 		\hline 
 		$-5,0 \pm 0,5$ & 22 $\pm$ 5 & 0,37 $\pm$ 0,08 &
 			$5,0 \pm 0,5$ & 29 $\pm$ 5 & 0,48 $\pm$ 0,09 \\
@@ -919,7 +919,7 @@ Nur ca. $1 \mathrm{\, \%}$ der ausgesendet $\gamma$--Quanten treffen also auf de
 			$1,0 \pm 0,5$ & 27 $\pm$ 5 & 0,45 $\pm$ 0,09 \\
 		$-0,5 \pm 0,5$ & 36 $\pm$ 6 & 0,60 $\pm$ 0,10 &
 			$0,5 \pm 0,5$ & 36 $\pm$ 6 & 0,60 $\pm$ 0,10 \\
-		$\pm 0,0 \pm 0,5$ & 22 $\pm$ 5 & 0,37 $\pm$ 0,08 &---&---$\quad\ \ $&---\hspace{8mm}
+		$\pm 0,0 \pm 0,5$ & 22 $\pm$ 5 & 0,37 $\pm$ 0,08 &---&---&---
 	\end{tabular}
 	\caption{Gemessene Ereignisse und daraus bestimmte Zählraten der Koinzidenzmessung eines $\gamma$--Quanten aus der Paarvernichtung und eines $\gamma$--Quanten aus dem Zerfall von $\ce{^{22}Ne}$ in den Grundzustand}
 	\label{table:messwerte1275}
