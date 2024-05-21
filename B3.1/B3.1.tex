@@ -153,7 +153,7 @@ sowohl Fehler 1. Art als auch Fehler 2. Art berücksichtigt.
 Die Grundidee dahinter ist, einen Erwartungswert \(\expval{A}\) und
 seine Varianz \(\sigma_A^2\) bewerten zu können. Das Maß für die
 Abweichung von der Hypothese wird für einen Freiheitsgrad durch
-\(\chi^2\) beschrieben, \footnote{Man könnte auch den Betrag \(|x_i|\)
+\(\chi^2\) beschrieben,\footnote{Man könnte auch den Betrag \(|x_i|\)
   anstatt des Quadrates \(x_i^2\) wählen. Dies wird nicht gemacht, weil
   damit schwieriger zu rechnen ist.} was durch die
 \(\chi^2\)--Verteilung beschrieben wird.
@@ -173,8 +173,8 @@ angenommen werden.
 
 \[
 \begin{eqnarray}
-    F(\chi^2_\mathrm{min}, f) &=& \frac{Y}{2} \\
-    F(\chi^2_\mathrm{max}, f) &=& 1 - \frac{Y}{2}
+    F(\chi^2_\mathrm{min}, f) &=& 1 - \frac{Y}{2} \\
+    F(\chi^2_\mathrm{max}, f) &=& \frac{Y}{2}
 \end{eqnarray}
 \]
 
@@ -183,8 +183,31 @@ Gültigkeitsintervall durch folgende Gleichungen bestimmt wird.
 
 \[
 \begin{eqnarray}
-    F(\chi^2_\mathrm{min}, f) &=& 0.025 \label{eq:ChiMinFormula} \\
-    F(\chi^2_\mathrm{max}, f) &=& 0.975 \label{eq:ChiMaxFormula}
+    F(\chi^2_\mathrm{min}, f) &=& 0.975 \label{eq:ChiMinFormula} \\
+    F(\chi^2_\mathrm{max}, f) &=& 0.025 \label{eq:ChiMaxFormula}
+\end{eqnarray}
+\]
+
+Falls \(\chi^2<\chi^2_\mathrm{min}\) das Ergebnis des Tests ist, sind
+die Daten zu gut an die These angepasst. Dies kann beispielsweise durch
+Overfitting entstehen.
+
+\hypertarget{pearsons-chi2test}{%
+\paragraph{\texorpdfstring{Pearsons
+\(\chi^2\)--Test}{Pearsons \textbackslash chi\^{}2--Test}}\label{pearsons-chi2test}}
+
+Eine Variante des \(\chi^2\)--Tests betrachtet nur ein Ende der
+Gauß--Verteilung. Hierbei wird die Signifikanz \(Y\) verwendet, um ein
+maximal gültiges \(\chi_\mathrm{max}^2\) zu bestimmen, dabei wird auf
+einen minimalen Wert verzichtet. \cite{McHugh} Damit kann eine Hypothese
+nur dann abgelehnt werden, wenn \(\chi^2\) zu groß ist, ein zu kleines
+\(\chi^2\) ist dabei nicht betrachtet. Auch hier wird oft eine
+Signifikanz von \(5\,\%\) verwendet.
+
+\[
+\begin{eqnarray}
+    F(\chi^2_\mathrm{max}, f) &=& Y \\
+    F(\chi^2_\mathrm{max}, f) &=& 0.05 \label{eq:ChiMaxPearson} \\
 \end{eqnarray}
 \]
 
@@ -374,12 +397,18 @@ Mit \(i\in[0, N]\):
 \[
 \begin{eqnarray}
     \expval{x(i)} &=& \bar n - i \\
-    \chi^2_2 &=& \sum_i \frac{(x_i-(n - i))^2}{(n - i)}
+    \chi^2_3 &=& \sum_i \frac{(x_i-(n - i))^2}{(n - i)}
 \end{eqnarray}
 \]
 
 \hypertarget{totzeit}{%
-\subsection{Totzeit}\label{totzeit}}
+\subsubsection{Halbwertszeit}\label{totzeit}}
+\begin{eqnarray}
+	N(t) &=& \bar{n} \cdot \exp[-\lambda t] \\
+	\bar{n}-1 &=& \bar{n} \cdot \exp[-\lambda \Delta t] \\
+	\Rightarrow \lambda &=& \frac{1}{\Delta t} \ln(\frac{\bar{n}}{\bar{n}-1}) \\
+	\Rightarrow T_{1/2} &=& \frac{\Delta t \ln(2)}{\ln(\frac{\bar{n}}{\bar{n}-1})}
+\end{eqnarray}
 
 \clearpage
 \hypertarget{fazit}{%
@@ -421,6 +450,8 @@ Mit \(i\in[0, N]\):
   und Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-662-60552-3}{10.1007/978-3-662-60552-3}
 \item
   J. Puhani, ``Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-658-28955-3}{10.1007/978-3-658-28955-3}
+\item
+ Mary L. McHugh, ``The Chi-square test of independence'', Biochemia Medica, DOI~\href{https://doi.org/10.11613/BM.2013.018}{10.11613/BM.2013.018}
 \end{enumerate}
 
 \end{document}
