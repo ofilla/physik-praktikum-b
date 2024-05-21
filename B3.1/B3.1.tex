@@ -95,6 +95,109 @@ die Totzeit des Detektors von essenzieller Bedeutung.
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
 
+\hypertarget{statistik}{\subsection{Statistik}\label{statistik}}
+
+\subsubsection{Zufallsvariablen}
+\label{Zufallsvariablen}
+Eine \emph{Zufallsvariable} ist eine Funktion $X$, die jedem Ereignis $\omega$ eines Zufallsexperiments eindeutig eine reelle Zahl zuordnet. Sie kann sowohl diskret als auch kontinuierlich sein.
+
+\begin{eqnarray}
+	X : \omega \rightarrow x(\omega) \in \mathbb{R}
+\end{eqnarray}
+
+\noindent
+Das Ereignis $\omega$ des Zufallsexperiments kann direkt eine Zahl sein, wie beispielsweise die Augenzahl eines Würfelswurfs. Alternativ kann Jedem Ereignis des Zufallsexperiments wird eine Zahl zugeordnet werden, beispielsweise können bei einem Münzwurf dem Ereignis $\mathrm{Kopf}$ der Wert $0$ und dem Ereignis $\mathrm{Zahl}$ eine $1$ zugeordnet werden.
+
+\subsubsection{Wahrscheinlichkeitsdichte}
+\label{Wahrscheinlichkeitsdichte}
+Eine \textit{Wahrscheinlichkeitsdichte} (PDF\footnote{\emph{Probability Density Function}}) ist eine Funktion $f(y)$, welche die Wahrscheinlichkeit $\mathbb P$ angibt, dass eine Zufallsvariable $X$ einen Wert innerhalb eines Intervalls $[a,b]$ annimmt.
+
+\begin{eqnarray}
+	\int_{a}^{b} f(y) dy &=& \mathbb P(X(\omega) \in [a,b])
+	\label{eq:wahrscheinlichkeitsdichte}
+\end{eqnarray}
+
+\noindent
+Die Wahrscheinlichkeitsdichte kann auch Werte über $1$ annehmen. Beispielsweise kann der Ort eines Punktteilchens durch eine $\delta$-Funktion beschrieben werden. Im Fall von diskreten Zufallsvariablen kann auch die Wahrscheinlichkeitsdichte diskret sein.
+
+\subsubsection{Wahrscheinlichkeitsverteilung}
+\label{Wahrscheinlichkeitsverteilung}
+Eine \emph{Wahrscheinlichkeitsverteilungsfunktion} (CDF\footnote{\emph{Cumulative Distribution Function}, kumulative Verteilungsfunktion}) einer Zufallsvariable $X$ ist dagegen eine Funktion $F(y)$, die angibt mit welcher Wahrscheinlichkeit $\mathbb P$ die Zufallsvariable $X$ einen Wert kleiner gleich $y$ annimmt. Sie ist die integrierte Wahrscheinlichkeitsdichte $f(\omega)$.
+
+\begin{eqnarray}
+	F(y) &=& \mathbb P(X(\omega) \leq y) \\
+	F(y) &=& \int_{- \infty}^{y} f(\tilde{y}) d\tilde{y}
+\end{eqnarray}
+
+\subsection{Wahrscheinlichkeitsverteilungen}
+\label{Wahrscheinlichkeitsverteilungen}
+
+\subsubsection{Binomialverteilung}
+\label{Binomialverteilung}
+Die \emph{Binomialverteilung} ist eine wichtige diskrete Wahrscheinlichkeitsverteilung. Sie beschreibt ein Zufallsexperiment, das genau zwei sich gegenseitig ausschließende Ereignisse $A$ und $B$ haben kann. Die entsprechenden Wahrscheinlichkeiten $\mathbb P$ können wie folgt definiert werden.
+
+\begin{eqnarray}
+	\mathbb P(A) &=& p \\
+	\mathbb P(B) &=& 1 - p
+\end{eqnarray}
+
+\noindent
+Dieses Experiment wird $N$-mal durchgeführt, wobei die einzelnen Ergebnisse jeder Wiederholung unabhängig von den Ergebnissen der vorherigen Wiederholungen sind. Die Zufallsvariable $X$ gibt dann die Anzahl $n$ an eingetretenen Ereignissen $A$ an. Dabei spielt die Reihenfolge, in der die Ereignisse $A$ eintreten, keine Rolle.
+
+Die entsprechende  Wahrscheinlichkeit $P(N,n,p)$ gibt demnach die Wahrscheinlichkeit an, dass das Ereignis $A$ genau $n$-mal eintritt. Weiterhin können der Erwartungswert $\mu$ und die Varianz $\sigma^2$ bestimmt werden.
+
+\begin{eqnarray}
+	P(N,n,p) &=& \binom{N}{n} p^n (1-p)^{N-n} \\
+	m &=& Np \\
+	\sigma^2 &=& N p (1-p)
+\end{eqnarray}
+
+\noindent
+Der Binomialkoeffizient $\binom{N}{n}$ dient dabei dazu, alle möglichen Reihenfolgen zu berücksichtigen, in der das Ereignis $A$ eintreten kann, wobei der restliche Term die Wahrscheinlichkeit angibt, dass das Ereignis $A$ in einer bestimmten Reihenfolge $n$-mal eintritt.
+
+\subsubsection{Poissonverteilung}
+\label{Poissonverteilung}
+Die \emph{Poissonverteilung} beschreibt Reihen von Zufallsvariablen, die unabhängig voneinander eintreten. Sie ist eine weitere diskrete Verteilung mit der Wahrscheinlichkeitsdichte $P(n,\lambda)$, Erwartungswert $m$ und Varianz $\sigma^2$.
+
+\begin{eqnarray}
+	P_\lambda(n) &=& \frac{\lambda^n}{n!} e^{-\lambda}
+	\label{eq:poisson} \\
+	m &=& \lambda \\
+	\sigma^2 &=& \lambda
+\end{eqnarray}
+
+\noindent
+Die Poissonverteilung $P_\lambda(n)$ folgt als Grenzfall aus der Binomialverteilung $P(N, n, p)$ mit infinitesimal kleinen Schrittgrößen $(p\rightarrow 0)$ und unendlich vielen Schritten $(N\rightarrow 0)$. Dabei bildet $\lambda\equiv Np$ eine Konstante. Die Poissonverteilung ist als Näherung für die Binomialverteilung zu verwenden, falls folgende Bedingung erfüllt ist.
+
+\begin{eqnarray}
+	P(n, \lambda)  &=& \lim_{N \rightarrow \infty \atop p\rightarrow 0} P(N, n, p) \\
+	N p &\leq& 10
+\end{eqnarray}
+
+\subsubsection{Gaußverteilung}
+\label{Gaußverteilung}
+Die \emph{Gauß-} ist eine kontinuierliche Verteilung. Ihre Wahrscheinlichkeitsdichte $P(x,\mu,\sigma)$ wird folgendermaßen mithilfe des Erwartungswerts $\mu$ und der Varianz $\sigma^2$ beschrieben. Die \emph{Normalverteilung}  ist eine Gaußverteilung mit $\mu=\sigma^2=1$.
+
+\begin{eqnarray}
+	P(x,\mu,\sigma) &=& \frac{1}{\sqrt{2 \pi\sigma^2}} \exp\left[- \frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2\right]
+\end{eqnarray}
+
+\noindent
+Der Grenzwert der Poissonverteilung für $\lambda \rightarrow \infty$ liefert die Gaußverteilung.
+
+\begin{eqnarray}
+	\lim_{\lambda \rightarrow \infty} \frac{\lambda^n e^{-\lambda}}{n!} = \frac{1}{\sqrt{2 \pi \lambda}} e^{- \frac{(x-\lambda)^2}{2\lambda}}
+\end{eqnarray}
+
+\noindent
+Weiterhin konvergiert die Binomialverteilung nach dem \emph{Satz von Moivre--Laplace} für $N \rightarrow \infty$ mit der Bedingung $0 < p < 1$ gegen die Normalverteilung. Eine Faustregel besagt, dass die Normalverteilung schon eine gute Näherung für die Binomialverteilung liefert, sobald gilt die untenstehende Bedingung erfüllt ist.
+
+\begin{eqnarray}
+	\lim_{N \rightarrow \infty} \binom{N}{n} p^n (1-p)^{N-n}
+		&=& \frac{1}{\sqrt{2 \pi N p (1-p)}} e^{- \frac{(x - Np)^2}{2 N p (1-p)}} \\
+	Np (1-p) &\geq& 9
+\end{eqnarray}
+
 \hypertarget{statistische-tests}{%
 \subsection{Statistische Tests}\label{statistische-tests}}
 
