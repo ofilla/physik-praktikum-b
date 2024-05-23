@@ -31,12 +31,6 @@
 
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
-\newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
-
-% disable commands
-\renewcommand{\[}{} % math block start
-\renewcommand{\]}{\noindent} % math block end
-\newcommand{\tightlist}{} % created in enumerations
 
 \hypersetup{
   pdftitle={B1.5},
@@ -54,7 +48,7 @@
 	\textsc{\LARGE Universität zu Köln }\\ [0.4cm]
 	\textsc{Mathematisch-Naturwissenschaftliche Fakultät} \\[1.5cm]
 
-	\includegraphics[width=0.45\textwidth]{../media/uni.jpg}\\[1.5cm]  % Uni-Logo wird geladen
+	\includegraphics[width=0.45\textwidth]{../media/uni.jpg}  % Uni-Logo wird geladen
 
 	\textsc{\Large Praktikum~B}\\[2mm]
 	\textsc{}\\[10mm]
@@ -77,12 +71,149 @@
 \tableofcontents
 \newpage
 
+\clearpage
 \hypertarget{einleitung}{%
 \section{Einleitung}\label{einleitung}}
 
 \clearpage
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
+
+\hypertarget{magnetismus}{%
+\subsection{Magnetismus}\label{magnetismus}}
+
+\hypertarget{dipolmoment}{%
+\subsubsection{Dipolmoment}\label{dipolmoment}}
+
+Das magnetische Dipolmoment $\vec \mu$ tritt auf, wenn sich
+elektrische Ladungen bewegen. Es lässt sich über das auf einen
+magnetischen Dipol wirkende Drehmoment $\vec \tau$ in einem Magnetfeld
+$\vec B$ definieren.
+
+Für eine ebene Leiterschleife ist es folgendermaßen beschrieben.
+\cite{Jackson} Damit ist das Dipolmoment $\vec \mu$ parallel zum
+Drehimpuls $\vec{L}$.
+
+\begin{eqnarray}
+    \vec \tau &=& \vec \mu \times \vec B
+\end{eqnarray}
+
+Das magnetische Moment eines Atoms wird durch Rotation einer
+elektrischen Ladung erzeugt. Beispielsweise entsteht im
+Bohr--Sommerfeldschen Atommodell das Bohrsche Magneton $\mu_B$ durch
+die Rotation eines Elektrons um den Atomkern. Es wird durch die
+reduzierte Planck--Konstante $\hbar$, die Elementarladung $e$ und
+die Elektronenmasse $m_e$ beschrieben.
+
+\begin{eqnarray}
+    \mu_B &=& \frac{e\hbar}{2m_e}
+\end{eqnarray}
+
+\hypertarget{spin}{%
+\subsubsection{Spin}\label{spin}}
+
+Der Spin $\vec s$ ist der Drehimpuls, der durch die Rotation eines
+Körpers um sich selbst entsteht. Er kann nur einen von zwei Werten
+abnehmen.
+
+Beispielsweise beträgt der Eigenwert des Elektronenspins immer
+$\pm\frac{\hbar}{2}$, insbesondere gilt für die $z$--Komponente des
+Spins $\hat s_3\ket{z\pm}=\pm\frac{\hbar}{2}\ket{z\pm}$. Dadurch ist
+die magnetische Quantenzahl $m=\pm\frac{1}{2}$. Da $j$ die Grenzen
+der gültigen $m$ definiert, muss die Drehimpulsquantenzahl
+$j=s=\frac{1}{2}$ sein. Dies wird als Spin bezeichnet.
+
+Da $s=\frac{1}{2}$ nennt man Elektronen
+\emph{Spin-$\frac{1}{2}$--Teilchen} oder Fermionen.
+
+\hypertarget{chemie}{%
+\subsection{Chemie}\label{chemie}}
+
+\hypertarget{radikal}{%
+\subsubsection{Radikal}\label{radikal}}
+
+Als Radikale bezeichnet man Atome oder Moleküle mit mindestens einem
+ungepaarten Elektron, die meist besonders reaktionsfreudig sind.
+Radikale werden mit einem Punkt dargestellt, z.B. Stickstoffmonoxid
+$(\ce{NO^\bullet})$, der das freie Elektron symbolisiert.
+\cite{Radikale}
+
+\hypertarget{elektrotechnik}{%
+\subsection{Elektrotechnik}\label{elektrotechnik}}
+
+\hypertarget{schwingkreise}{%
+\subsubsection{Schwingkreise}\label{schwingkreise}}
+
+Ein \emph{$LC$--Schwingkreis} besteht aus einem Kondensator $C$ und
+einer Spule $L$, die kurzgeschlossen sind. Die Ladung des Kondensators
+wird über die Spule entladen und infolge der Selbstinduktion der Spule
+umgekehrt gepolt wieder aufgeladen. Wegen Leitungswiderständen klingt
+der Schwingkreis nach wenigen Perioden ab.
+
+\hypertarget{impedanz}{%
+\subsubsection{Impedanz}\label{impedanz}}
+
+Die elektrische \emph{Impedanz} ist ein elektrischer Widerstand in der
+Wechselstromtechnik. Sie gibt bei einem zweipoligen Netzwerkelement das
+Verhältnis von elektrischer Spannung $U$ zur Stromstärke $I$ an.
+
+Der Begriff wird insbesondere dann verwendet, wenn zwischen den beiden
+Größen eine Phasenverschiebung besteht, wodurch sich das Verhältnis vom
+Widerstand in Gleichstromanwendungen unterscheidet.
+
+Die Impedanz einer Spule $S_L$ wird durch die Induktivität $L$
+bestimmt, die Impedanz eines Kondensators $S_C$ durch die Kapazität
+$C$.
+
+\begin{eqnarray}
+    Z_L &=& i\omega L \\
+    Z_C &=& \frac{1}{i\omega C}
+\end{eqnarray}
+
+Ein \emph{Ohm'scher Widerstand} ist dagegen ein elektrischer Widerstand,
+der unabhängig von elektrischer Spannung $U$, Stromstärke $I$ und
+deren Frequenz $\nu$ ist. Das \emph{Ohm'sche Gesetz} kann sowohl für
+Ohm'sche Widerstände $R$ als auch für Impedanzen $Z$ angewendet
+werden.
+
+\begin{eqnarray}
+    U &=& R\cdot I \\
+    U &=& Z\cdot I
+\end{eqnarray}
+
+\hypertarget{wheatstonebruxfccke}{%
+\subsubsection{Wheatstonebrücke}\label{wheatstonebruxfccke}}
+
+Eine \emph{Wheatstonebrücke} wird verwendet, um die ohmschen und
+kapazitiven Anteile von Wechselstromwiderständen zu bestimmen.
+
+Dabei werden zwei Wechselstromwiderstände, bestehend aus einem Ohm'schen
+Widerstand $R$ und einem Kondensator $C$, in Reihe geschaltet.
+Parallel dazu wird ein Widerstand geschaltet, der mit einem Schleifdraht
+geregelt werden kann. Dabei ist $R_1$ der Widerstand in der Masche mit
+den zu bestimmenden Widerständen $R_x$ und $C_x$, $R_2$ ist der
+Widerstand in der Masche mit bekannten Widerständen $R_0$ und $C_0$.
+
+\begin{figure}
+	\centering
+	\includegraphics{../media/B1.5/WhBr_Diagonalbild.png}
+	\caption{Schaltplan einer Wheatstonebrücke \cite{File:WhBr_Diagonalbild}}
+\end{figure}
+
+Durch das Oszilloskopsignal wird der Abgriff des Schleifdrahtes in die
+Mitte gebracht. Der Nullabgleich erfolgt dadurch, dass durch eine
+geeignete Wahl des Widerstandes $R_0$ und der Kapazität $C_0$ eines
+Kondensators das Signal am Oszilloskop auf ein Minimum gebracht wird.
+Der Feinabgleich erfolgt mit dem Schleifdraht.
+
+Mithilfe der \emph{Wheatstoneformel} kann ein unbekannter Widerstand
+$R_x$ aus drei bekannten Widerständen $R_i$ bestimmt werden.
+
+\begin{eqnarray}
+    R_x I_A &=& R_1 I_B \\
+    R_0 I_A &=& R_2 I_B \\
+    \Rightarrow R_x &=& \frac{R_0\cdot R_1}{R_2}
+\end{eqnarray}
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
@@ -105,5 +236,19 @@
 \bibitem{Uni}
 	Universität zu Köln, ``B1.5: Elektronenspinresonanz'', April 2024, Online verfügbar unter 
 	\url{https://teaching.astro.uni-koeln.de/sites/default/files/praktikum_b/Anleitung_1.5.pdf}
+
+\bibitem{File:WhBr_Diagonalbild}
+	Wikimedia, ``File:WhBr\_Diagonalbild.svg'',
+	\url{https://upload.wikimedia.org/wikipedia/commons/e/e3/WhBr_Diagonalbild.svg},
+	Abruf am 23.05.2024
+
+\bibitem{Jackson}
+	J. D. Jackson, ``Classical Elektrodynamics'', John Wiley \& Sons,
+	1975, ISBN 978-0-471-43132-9
+
+\bibitem{Radikale}
+	Chemie.de, ``Radikale (Chemie)'',
+	\url{https://www.chemie.de/lexikon/Radikale_\%28Chemie\%29.html}, Abruf am 23.05.2024
+
 \end{thebibliography}
 \end{document}
