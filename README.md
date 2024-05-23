@@ -5,6 +5,7 @@ Bei einigen Versuchen ist Code in Form von [Jupyter](https://jupyter.org)-Notebo
 
 ## 1. Atom- & Molekülphysik
 * B1.1: Infrarotabsorption in $\ce{CO_2}$ ([PDF](./B1.1/B1.1.pdf), [LaTeX](./B1.1/B1.1.tex))
+* B1.5: Elektronenspinresonanz ([PDF](./B1.5/B1.5.pdf), [LaTeX](./B1.5/B1.5.tex))
 
 ## 2. Festkörperphysik
 * B2.4: Magnetisierung eines Ferrits ([PDF](./B2.4/B2.4.pdf), [LaTeX](./B2.4/B2.4.tex))
