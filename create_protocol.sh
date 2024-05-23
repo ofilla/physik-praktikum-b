@@ -1,23 +1,18 @@
 #!/bin/bash -e
-#
 
 file="$1"
 out_dir="${2:-$(dirname "$file")}"
 
-filename="$(basename "$file")"
-tmp=$(mktemp -d)
-tex="$tmp/${filename%.md}.tex"
-pdf="${filename%.md}.pdf"
+tmpfile="$(mktemp --suffix=.md)"
+tex="${file%.md}.tex"
 
-if [[ "$(grep -n '^# Referenzen$' "$file")" ]]; then
+if [[ "$(grep -n '^# Literatur$' "$file")" ]]; then
   # only lines before
-  lines=$(grep -n '^# Referenzen$' "$file" | awk -F: '{print $1 - 1}')
+  lines=$(grep -n '^# Literatur$' "$file" | awk -F: '{print $1 - 1}')
+  head -n$lines "$file" > "$tmpfile"
 else
-  # all lines
-  lines=$(wc -l "$file" | awk '{print $1}')
+  cp -f "$file" "$tmpfile"
 fi
-
-head -n$lines "$file" > "$tmp/$filename"
 
 # fix references
 for tag in $(grep -oP '\\tag{[0-9a-zA-ZäöüÄÖÜ:()=-]+}' "$file" | sed -e 's/^\\tag{//g' -e 's/}$//g')
@@ -28,26 +23,18 @@ do
       -e "s/\\\\tag{\\\\mathrm{$tag}}/\\\\label{$tag}/g" \
       -e "s/(\\\\text{\\\\mathrm{$tag}})/\\\\eqref{$tag}/g" \
       -e "s/(\\\\mathrm{$tag})/\\\\eqref{$tag}/g" \
-      -i "$tmp/$filename"
+      -i "$tmpfile"
 done
 
 # fix svg images
-for pic in $(grep -P '^!.*(svg|jpg|png)' "$file" | awk -F'(' '{print $2}' | sed 's/)$//g')
-do
-  pdf_="${pic/svg/pdf}"
-  pdf_="${pdf_/jpg/pdf}"
-  pdf_file="$(basename "$pdf_")"
-  sed -e "s!$pic!$pdf_file!g" -i "$tmp/$filename"
-  cp "$(dirname "$file")/$pdf_" "$tmp/$pdf_file"
-done
+sed -i 's/.svg/.pdf/g' "$tmpfile"
+sed -i "s/braket/expval/g" "$tmpfile" # Obsidian braket is physics expval
+sed -i 's/\([a-zA-Z$]\)-\([a-zA-Z]\)/\1--\2/g' "$tmpfile"
 
-sed -ie "s/braket/expval/g" "$tmp/$filename" # Obsidian braket is physics expval
-sed -ie 's/\([a-zA-Z$]\)-\([a-zA-Z]\)/\1--\2/g' "$tmp/$filename"
-pandoc --template .templates/template_uni_koeln.tex --strip-comments -o "$tex" "$tmp/$filename"
-cp "$tex" "$out_dir"
-cp .templates/uni.jpg $tmp/
+pandoc --template .templates/template_uni_koeln.tex --strip-comments -o "$tex" "$tmpfile"
+sed -i -e '/^\\\[$/d' -e '/^\\\]$/d' -e 's/\\[()]/$/g' "$tex"
 
-(cd $tmp && pdflatex "$tex" && pdflatex "$tex")
+tex="$(basename "$tex")"
+(cd "$out_dir" && pdflatex "$tex" && pdflatex "$tex")
 
-mv "$tmp/$pdf" "$out_dir/$pdf"
-rm -rf "$tmp"
+rm -rf "$tmpfile"
