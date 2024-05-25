@@ -92,8 +92,8 @@ Landé--Faktor bestimmen.
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
 
-\hypertarget{magnetismus}{%
-\subsection{Magnetismus}\label{magnetismus}}
+\hypertarget{elektromagnetismus}{%
+\subsection{Elektromagnetismus}\label{elektromagnetismus}}
 
 \hypertarget{dipolmoment}{%
 \subsubsection{Dipolmoment}\label{dipolmoment}}
@@ -111,7 +111,7 @@ beschrieben.
 
 \begin{eqnarray}
     \vec \tau &=& \vec \mu \times \vec B \\
-    E &=& \vec \mu \cdot \vec B
+    E &=& \vec \mu \cdot \vec B \label{eq:EDipol}
 \end{eqnarray}
 
 Das magnetische Moment eines Atoms wird durch Rotation einer
@@ -158,6 +158,38 @@ $\vec s$, den Bahndrehimpuls $\vec l$ und den Gesamtdrehimpuls
 $\vec j = \vec l + \vec s$ beschreiben. Falls es keinen Bahndrehimpuls
 $l=0$ gibt, so folgt $g=2$.
 
+\hypertarget{zeemanneffekt}{%
+\subsubsection{Zeemann--Effekt}\label{zeemanneffekt}}
+
+Nach dem Bohr--Sommerfeldschen Atommodell haben Elektronen durch die
+Rotation um den Atomkern einen gequantelten Drehimpuls $\vec{L}$. Er
+ist durch die Quantenzahl $l=1,2,3,\dots$ quantisiert, es gilt
+$|\vec{L}| = l\hbar$. Die Drehimpulskomponente in Richtung der
+$z$--Achse $L_z=m\hbar$ ist nun durch eine magnetische Quantenzahl
+$m=-l,-l+1,\dots,l$ zu beschreiben.
+
+Durch $L_z$ werden die Energieniveaus der Elektronen verschoben. Die
+Energieverschiebung $\Delta E$ entspricht der Energie, ein Dipolmoment
+$\vec \mu$ in einem Magnetfeld $\vec B$ auszurichten
+$\eqref{eq:EDipol}$. Diese Verschiebung führt zu einer Verschiebung
+der Spektrallinien. Außerdem ist dadurch auch das magnetische Moment
+gequantelt.
+
+Aufgrund des Zeemann--Effekts kommt es zur Lamorpräzession der
+Elektronen.
+
+\hypertarget{lamorpruxe4zession}{%
+\subsubsection{Lamorpräzession}\label{lamorpruxe4zession}}
+
+Das magnetische Moment $\mu$ eines Spins im Magnetfeld $\vec{B}$
+weist durch Quantenschwebung eine Präzession mit einer
+\emph{Lamorfrequenz} $\omega_L$ auf. Dies bedeutet, dass der Spin
+rotiert.
+
+\begin{eqnarray}
+    \omega_L &=& \gamma\cdot B
+\end{eqnarray}
+
 \hypertarget{resonanz}{%
 \subsection{Resonanz}\label{resonanz}}
 
@@ -168,49 +200,14 @@ ausschlagen als beim konstanten Einwirken der Anregung mit ihrer
 maximalen Stärke.
 
 Im Falle von ESR werden die magnetischen Dipole von Elektronen resonant
-angeregt.
+angeregt. Dazu sind ungepaarte Elektronen notwendig, die durch Radikale
+bereitgestellt werden.
 
-Das magnetische Moment $\mu$ eines Spins im Magnetfeld $\vec{B}$
-weist durch Quantenschwebung eine Präzession mit einer
-\emph{Lamorfrequenz} $\omega_L$ auf. Dies bedeutet, dass der Spin um
-eine Rotationsachse rotiert. Hierbei ist die magnetische Feldkonstante
-$\mu_0$ relevant.
-
-\begin{eqnarray}
-    \omega_L &=& \frac{2B\mu_0}{\hbar} \\
-    \mu_0 &\approx& 4\pi \cdot 1.0 \cdot 10^{-7} \mathrm{\,\frac{Vs}{Am}}
-\end{eqnarray}
-
-\hypertarget{zeemanneffekt}{%
-\section{Zeemann--Effekt}\label{zeemanneffekt}}
-
-Nach dem Bohr--Sommerfeldschen Atommodell haben Elektronen durch die
-Rotation um den Atomkern einen gequantelten Drehimpuls $\vec{L}$. Er
-ist durch die Quantenzahl $l=1,2,3,\dots$ quantisiert, es gilt
-$|\vec{L}| = l\hbar$. Die Drehimpulskomponente in Richtung der
-$z$--Achse $L_z=m\hbar$ ist nun durch eine magnetische Quantenzahl
-$m=-l,-l+1,\dots,l$ zu beschreiben.
-
-Durch $L_z$ werden die Energieniveaus der Elektronen verschoben. Diese
-Verschiebung führt zu einer Verschiebung der Spektrallinien. Außerdem
-ist dadurch auch das magnetische Moment gequantelt.
-
-Der Zeemann--Effekt wird auch Feinaufspaltung genannt.
-
-\hypertarget{chemie}{%
-\subsection{Chemie}\label{chemie}}
-
-\hypertarget{radikal}{%
-\subsubsection{Radikal}\label{radikal}}
-
-Als Radikale bezeichnet man Atome oder Moleküle mit mindestens einem
-ungepaarten Elektron, die meist besonders reaktionsfreudig sind.
+Als \emph{Radikale} bezeichnet man Atome oder Moleküle mit mindestens
+einem ungepaarten Elektron, die meist besonders reaktionsfreudig sind.
 Radikale werden mit einem Punkt dargestellt, z.B. Stickstoffmonoxid
 $(\ce{NO^\bullet})$, der das freie Elektron symbolisiert.
 \cite{Radikale}
-
-Für die ESR ist es wichtig, dass es ungepaarte Elektronen gibt. Daher
-werden Radikale benötigt.
 
 \hypertarget{elektrotechnik}{%
 \subsection{Elektrotechnik}\label{elektrotechnik}}
@@ -268,9 +265,9 @@ geregelt werden kann. Dabei ist $R_1$ der Widerstand in der Masche mit
 den zu bestimmenden Widerständen $R_x$ und $C_x$, $R_2$ ist der
 Widerstand in der Masche mit bekannten Widerständen $R_0$ und $C_0$.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\includegraphics{../media/B1.5/WhBr_Diagonalbild.png}
+	\includegraphics[width=0.5\textwidth]{../media/B1.5/WhBr_Diagonalbild.png}
 	\caption{Schaltplan einer Wheatstonebrücke \cite{File:WhBr_Diagonalbild}}
 \end{figure}
 
@@ -284,9 +281,9 @@ Mithilfe der \emph{Wheatstoneformel} kann ein unbekannter Widerstand
 $R_x$ aus drei bekannten Widerständen $R_i$ bestimmt werden.
 
 \begin{eqnarray}
-    R_x I_A &=& R_1 I_B \\
-    R_0 I_A &=& R_2 I_B \\
-    \Rightarrow R_x &=& \frac{R_0\cdot R_1}{R_2}
+    R_1 I_A &=& R_2 I_B \\
+    R_3 I_A &=& R_4 I_B \\
+    \Rightarrow \frac{R_1}{R_2} &=& \frac{R_3}{R_4}
 \end{eqnarray}
 
 \clearpage
@@ -313,7 +310,7 @@ $R_x$ aus drei bekannten Widerständen $R_i$ bestimmt werden.
 
 \bibitem{File:WhBr_Diagonalbild}
 	Wikimedia, ``File:WhBr\_Diagonalbild.svg'',
-	\url{https://upload.wikimedia.org/wikipedia/commons/e/e3/WhBr_Diagonalbild.svg},
+	\url{https://commons.wikimedia.org/wiki/File:WhBr_Diagonalbild.svg},
 	Abruf am 23.05.2024
 
 \bibitem{Jackson}
