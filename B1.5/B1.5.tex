@@ -75,6 +75,19 @@
 \hypertarget{einleitung}{%
 \section{Einleitung}\label{einleitung}}
 
+Die Elektronenspinresonanz (ESR) ist eine
+Hochfrequenzspektroskopiemethode, welche das Untersuchen von
+Eigenschaften paramagnetischer Proben ermöglicht. Sie basiert auf dem
+Zeeman--Effekt, der die Aufspaltung von Energieniveaus in einem äußeren
+Magnetfeld begründet.
+
+Bei der ESR kann man Übergänge zwischen Zeeman--Niveaus mit gleicher
+Hauptquantenzahl beobachten, indem die resonante Absorption von
+Mikrowellen beobachtet wird.
+
+Durch das aufgezeichnete Absorptionsspektrum lässt sich weiterhin der
+Landé--Faktor bestimmen.
+
 \clearpage
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
@@ -85,25 +98,28 @@
 \hypertarget{dipolmoment}{%
 \subsubsection{Dipolmoment}\label{dipolmoment}}
 
-Das magnetische Dipolmoment $\vec \mu$ tritt auf, wenn sich
+Das magnetische \emph{Dipolmoment} $\vec \mu$ tritt auf, wenn sich
 elektrische Ladungen bewegen. Es lässt sich über das auf einen
 magnetischen Dipol wirkende Drehmoment $\vec \tau$ in einem Magnetfeld
 $\vec B$ definieren.
 
 Für eine ebene Leiterschleife ist es folgendermaßen beschrieben.
 \cite{Jackson} Damit ist das Dipolmoment $\vec \mu$ parallel zum
-Drehimpuls $\vec{L}$.
+Drehimpuls $\vec{L}$. Die Energie $E$ zur Ausrichtung eines
+Dipolmomentes wird durch das Skalarprodukt $\vec \mu \cdot \vec B$
+beschrieben.
 
 \begin{eqnarray}
-    \vec \tau &=& \vec \mu \times \vec B
+    \vec \tau &=& \vec \mu \times \vec B \\
+    E &=& \vec \mu \cdot \vec B
 \end{eqnarray}
 
 Das magnetische Moment eines Atoms wird durch Rotation einer
 elektrischen Ladung erzeugt. Beispielsweise entsteht im
-Bohr--Sommerfeldschen Atommodell das Bohrsche Magneton $\mu_B$ durch
-die Rotation eines Elektrons um den Atomkern. Es wird durch die
-reduzierte Planck--Konstante $\hbar$, die Elementarladung $e$ und
-die Elektronenmasse $m_e$ beschrieben.
+Bohr--Sommerfeld'schen Atommodell das \emph{Bohr'sche Magneton}
+$\mu_B$ durch die Rotation eines Elektrons um den Atomkern. Es wird
+durch die reduzierte Planck--Konstante $\hbar$, die Elementarladung
+$e$ und die Elektronenmasse $m_e$ beschrieben.
 
 \begin{eqnarray}
     \mu_B &=& \frac{e\hbar}{2m_e}
@@ -126,6 +142,61 @@ $j=s=\frac{1}{2}$ sein. Dies wird als Spin bezeichnet.
 Da $s=\frac{1}{2}$ nennt man Elektronen
 \emph{Spin-$\frac{1}{2}$--Teilchen} oder Fermionen.
 
+Das Dipolmoment $\vec \mu$ und der Spin $\vec s$ sind über das
+\emph{gyromagnetische Verhältnis} $\gamma$ miteinander verknüpft. Dazu
+wird der \emph{Landé--Faktor} $g$ benötigt.
+
+\begin{eqnarray}
+    \vec \mu &=& \gamma \vec{s} \\
+    \gamma &=& \frac{g\mu_B}{\hbar} \\
+    g &=& 1 + \frac{j(j+1) + s(s+1) + l(l+1)}{2j(l+1)}
+\end{eqnarray}
+
+Hierbei werden die Eigenwerte der Drehimpulsoperatoren
+$\hat{\vec j},\hat{\vec s},\hat{\vec l}$ benötigt, die den Spin
+$\vec s$, den Bahndrehimpuls $\vec l$ und den Gesamtdrehimpuls
+$\vec j = \vec l + \vec s$ beschreiben. Falls es keinen Bahndrehimpuls
+$l=0$ gibt, so folgt $g=2$.
+
+\hypertarget{resonanz}{%
+\subsection{Resonanz}\label{resonanz}}
+
+Ganz allgemein ist Resonanz das verstärkte Mitschwingen eines
+schwingungsfähigen Systems, wenn es einer zeitlich veränderlichen
+Einwirkung unterliegt. Dabei kann das System um ein Vielfaches stärker
+ausschlagen als beim konstanten Einwirken der Anregung mit ihrer
+maximalen Stärke.
+
+Im Falle von ESR werden die magnetischen Dipole von Elektronen resonant
+angeregt.
+
+Das magnetische Moment $\mu$ eines Spins im Magnetfeld $\vec{B}$
+weist durch Quantenschwebung eine Präzession mit einer
+\emph{Lamorfrequenz} $\omega_L$ auf. Dies bedeutet, dass der Spin um
+eine Rotationsachse rotiert. Hierbei ist die magnetische Feldkonstante
+$\mu_0$ relevant.
+
+\begin{eqnarray}
+    \omega_L &=& \frac{2B\mu_0}{\hbar} \\
+    \mu_0 &\approx& 4\pi \cdot 1.0 \cdot 10^{-7} \mathrm{\,\frac{Vs}{Am}}
+\end{eqnarray}
+
+\hypertarget{zeemanneffekt}{%
+\section{Zeemann--Effekt}\label{zeemanneffekt}}
+
+Nach dem Bohr--Sommerfeldschen Atommodell haben Elektronen durch die
+Rotation um den Atomkern einen gequantelten Drehimpuls $\vec{L}$. Er
+ist durch die Quantenzahl $l=1,2,3,\dots$ quantisiert, es gilt
+$|\vec{L}| = l\hbar$. Die Drehimpulskomponente in Richtung der
+$z$--Achse $L_z=m\hbar$ ist nun durch eine magnetische Quantenzahl
+$m=-l,-l+1,\dots,l$ zu beschreiben.
+
+Durch $L_z$ werden die Energieniveaus der Elektronen verschoben. Diese
+Verschiebung führt zu einer Verschiebung der Spektrallinien. Außerdem
+ist dadurch auch das magnetische Moment gequantelt.
+
+Der Zeemann--Effekt wird auch Feinaufspaltung genannt.
+
 \hypertarget{chemie}{%
 \subsection{Chemie}\label{chemie}}
 
@@ -137,6 +208,9 @@ ungepaarten Elektron, die meist besonders reaktionsfreudig sind.
 Radikale werden mit einem Punkt dargestellt, z.B. Stickstoffmonoxid
 $(\ce{NO^\bullet})$, der das freie Elektron symbolisiert.
 \cite{Radikale}
+
+Für die ESR ist es wichtig, dass es ungepaarte Elektronen gibt. Daher
+werden Radikale benötigt.
 
 \hypertarget{elektrotechnik}{%
 \subsection{Elektrotechnik}\label{elektrotechnik}}
