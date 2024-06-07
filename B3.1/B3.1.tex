@@ -94,6 +94,64 @@ die Totzeit des Detektors von essenzieller Bedeutung.
 \clearpage
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
+\hypertarget{Radioaktiver Zerfall}{\subsection{Radioaktiver Zerfall}\label{Radioaktiver Zerfall}}
+Bei radioaktivem Zerfall wandelt sich ein Atomkern in einen anderen Atomkern um, indem Teilchen ausgestoßen werden.
+
+Es wird zwischen $(\alpha)$--, $\beta$--und $\gamma$--Zerfall unterschieden. Der Energiegewinn durch den Zerfall wird durch den $Q$--Wert beschrieben und kann durch die Weizsäcker Massenformel ermittelt werden.
+
+\hypertarget{Halbwertszeit}{\subsubsection{Halbwertszeit}\label{Halbwertszeit}}
+Die Halbwertszeit $T_{1/2}$ ist die Zeit, in der die Hälfte einer Anzahl von Kernen oder Elementarteilchen eines Stoffes zerfällt. Sie ist eine charakteristische Größe für radioaktive Zerfälle , die unabhängig von der aktuell vorhandenen Substanzmenge ist. \cite{Halbwertszeit}
+
+\hypertarget{Zerfallswahrscheinlichkeit}{\subsubsection{Zerfallswahrscheinlichkeit}\label{Zerfallswahrscheinlichkeit}}
+Die \emph{Zerfallswahrscheinlichkeit} $\alpha$ ist eine isotopspezifische Konstante, die angibt wie schnell ein Kern des entsprechenden Isotops zerfällt. Sie steht in Relation mit der Halbwertrsbreite $T_{1/2}$. Dies wird im Folgenden  Abschnitt \ref{Herleitung Zerfallswahrscheinlichkeit} hergeleitet.
+
+\begin{eqnarray}
+	\alpha &=& \frac{\ln{(2)}}{T_{1/2}} \label{eq:Zerfallswahrscheinlichkeit}
+\end{eqnarray}
+
+\noindent
+Das in diesem Versuch verwendete $\ce{^{137}Cs}$ hat eine Halbwertszeit von $T_{1/2}\approx30.08\mathrm{\,a}$ \cite{Chart of Nuclides}, was etwa $9.49 \cdot 10^8 \mathrm{\,s}$ entspricht. Daraus kann die Zerfallswahrscheinlichkeit $\alpha$ nach \eqref{eq:Zerfallswahrscheinlichkeit} bestimmt werden.
+
+\begin{eqnarray}
+	\alpha_\mathrm{Cs} &\approx& 7.3 \cdot 10^{-10} \mathrm{\,s^{-1}}
+\end{eqnarray}
+
+\hypertarget{Herleitung Zerfallswahrscheinlichkeit}{\subsubsection{Herleitung der Zerfallswahrscheinlichkeit}\label{Herleitung Zerfallswahrscheinlichkeit}}
+Ein instabiler Kern mit einer Halbwertszeit $T_{1/2}$ zerfällt mit einer Wahrscheinlichkeit $\omega$ innerhalb einer Zeitspanne $\Delta t$. Falls diese Zeitspanne $\Delta t$ klein gegen $T_{1/2}$ ist, lässt $\omega$ linear annähern. Die Gegenwahrscheinlichkeit $(1-\omega)$ beschreibt demnach den Fall, dass der Kern nicht zerfällt.
+
+\begin{eqnarray}
+	\omega &=& \alpha \Delta t \label{eq:Zerfallswkt linear} \\
+	1 - \omega &=& 1 - \alpha \Delta t
+\end{eqnarray}
+
+\noindent
+Nun sollen größere Zeitspannen $t$ betrachtet werden. Dazu wird $t$ so in $k$ gleich große Teilzeitspannen unterteilt, dass jede Teilzeitspanne $t_i$ klein genug ist, um linear angenähert zu werden. Dann kann die Wahrscheinlichkeit $(1 - \omega_i)$ dafür ermittelt werden, dass in der Teilzeitspanne $t_i$ kein Zerfall stattfindet \eqref{eq:t_i kein zerfall}.
+
+Daraus kann die Wahrscheinlichkeit $(1 - \omega)$ für den Erhalt des Kerns nach der Zeit $t$ ermittelt werden \eqref{eq:t kein zerfall}.
+
+\begin{eqnarray}
+	1 - \omega_i &=& \left(1 - \alpha \frac{t}{k}\right) \label{eq:t_i kein zerfall} \\
+	1 - \omega &=& \left(1 - \alpha \frac{t}{k} \right)^k \label{eq:t kein zerfall}
+\end{eqnarray}
+
+\noindent
+Um ein exaktes Ergebnis zu erzielen, müssen die Teilzeitabschnitte infinitesimal klein sein. Damit wird $k$ unendlich groß. Dadurch kann die Wahrscheinlichkeit $(1-\omega)$ für den Erhalt des Kerns durch eine Exponentialfunktion beschrieben werden.
+
+Ensprechend kann die Wahrscheinlichkeit $\omega$ für einen Zerfall innerhalb der Zeitspanne $t$ beschrieben werden.
+
+\begin{eqnarray}
+	1 - \omega &=& \lim_{k \rightarrow \infty} \left(1 - \alpha \frac{t}{k} \right)^k \\
+		&=& e^{- \alpha t} \\
+	\omega &=& 1 - e^{-\alpha t}
+\end{eqnarray}
+
+\noindent
+Die Zerfallswahrscheinlichkeit $\alpha$ lässt sich nun aus der Halbwertszeit.
+
+\begin{eqnarray}
+	\omega(T_{1/2}) &=& \frac{1}{2} \\
+	\Rightarrow\alpha &=& \frac{\ln{(2)}}{T_{1/2}}
+\end{eqnarray}
 
 \hypertarget{statistik}{\subsection{Statistik}\label{statistik}}
 
@@ -176,7 +234,7 @@ Die Poissonverteilung $P_\lambda(n)$ folgt als Grenzfall aus der Binomialverteil
 
 \subsubsection{Gaußverteilung}
 \label{Gaußverteilung}
-Die \emph{Gauß-} ist eine kontinuierliche Verteilung. Ihre Wahrscheinlichkeitsdichte $P(x,\mu,\sigma)$ wird folgendermaßen mithilfe des Erwartungswerts $\mu$ und der Varianz $\sigma^2$ beschrieben. Die \emph{Normalverteilung}  ist eine Gaußverteilung mit $\mu=\sigma^2=1$.
+Die \emph{Gaußverteilung} ist eine kontinuierliche Verteilung. Ihre Wahrscheinlichkeitsdichte $P(x,\mu,\sigma)$ wird folgendermaßen mithilfe des Erwartungswerts $\mu$ und der Varianz $\sigma^2$ beschrieben. Die \emph{Normalverteilung}  ist eine Gaußverteilung mit $\mu=\sigma^2=1$.
 
 \begin{eqnarray}
 	P(x,\mu,\sigma) &=& \frac{1}{\sqrt{2 \pi\sigma^2}} \exp\left[- \frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2\right]
@@ -196,6 +254,44 @@ Weiterhin konvergiert die Binomialverteilung nach dem \emph{Satz von Moivre--Lap
 	\lim_{N \rightarrow \infty} \binom{N}{n} p^n (1-p)^{N-n}
 		&=& \frac{1}{\sqrt{2 \pi N p (1-p)}} e^{- \frac{(x - Np)^2}{2 N p (1-p)}} \\
 	Np (1-p) &\geq& 9
+\end{eqnarray}
+
+\hypertarget{Intervallverteilung}{\subsection{Intervallverteilung}\label{Intervallverteilung}}
+Die \emph{Intervallverteilung} ist dann gefragt, wenn nicht die Anzahl an eingetroffenen Ereignissen $A$, sondern stattdessen die Zeit zwischen zwei oder mehr Ereignissen $A$ interessant ist.
+
+Für Kernzerfälle ist ihre Wahrscheinlichkeitsdichte $P_n$ wie folgt gegeben. Sie ähnelt der Poissonverteilung, hat aber einen zusätzlichen Faktor $a$.
+
+\begin{eqnarray}
+	P_n &=& a \frac{(at)^n}{n!} e^{-at}
+\end{eqnarray}
+
+\noindent
+Damit gibt die kumulative Verteilungsfunktion $\int_{t_0}^{t_1} P_n \,\mathrm dt \label{eq:P_n_int}$ die Wahrscheinlichkeit an, dass in dem Zeitintervall $[t_0,t_1]$ zwei Ereignisse im Abstand $t$ stattgefunden haben, sowie $n$ weitere Ereignisse zwischen diesen beiden. Somit haben in der Zeit $t$ exakt $n+2$ Ereignisse stattgefunden.
+
+Somit gibt die Verteilungsfunktion für $n=0$ die Wahrscheinlichkeit an, dass die Zeit $t$ zwischen zwei aufeinanderfolgenden Zerfällen innerhalb des Intervalls $[t_0, t_1]$ liegt.
+
+\hypertarget{Herleitung Intervallverteilung}{\subsection{Herleitung}\label{Herleitung Intervallverteilung}}
+Nun soll die Wahrscheinlichkeitsdichte $P_n$ der Intervallverteilung hergeleitet werden.
+
+Hierzu wird die Wahrscheinlichkeit $W$ bestimmt, dass die Zeit zwischen zwei Zerfällen, zwischen denen genau $n$ andere Zerfälle stattfinden, den Wert $\Delta t$ annimmt. $W$ setzt sich aus dem Produkt zweier Einzelwahrscheinlichkeiten $W_1$ und $W_2$ zusammen.
+
+$W_1$ gibt die Wahrscheinlichkeit an, dass im Zeitintervall $\Delta t$ genau $n$ weitere Zerfälle stattfinden. Dies wird durch eine Poissonverteilung \eqref{eq:poisson} beschrieben, deren Erwartungswert $\lambda = a\Delta t$ beträgt und durch die Zerfallswahrscheinlichkeit $a$ beschrieben wird.
+
+$W_2$ hingegen gibt die Wahrscheinlichkeit an, dass nach der Zeit $\Delta t$ in einer sehr kurzen Zeit $\mathrm dt$ ein Zerfall stattfindet. Aufgrund der kurzen Zeitspanne kann dies linear genähert werden, wie es bei der Herleitung der Zerfallswahrscheinlichkeit in Abschnitt \ref{Herleitung Zerfallswahrscheinlichkeit}  in Gleichung \eqref{eq:Zerfallswkt linear} gemacht wurde.
+
+\begin{eqnarray}
+	W_1 &=& \frac{(a\Delta t)^n}{n!} \mathrm{e}^{-a\Delta t} \\
+	W_2 &=& a \,\mathrm dt \\
+	W &=& W_1 \cdot W_2 \\
+		&=& \frac{\left(a\Delta t\right)^n}{n!}  \mathrm{e}^{-a\Delta t} \cdot a \,\mathrm dt
+\end{eqnarray}
+
+\noindent
+Da die Wahrscheinlichkeit $W$ das Integral der Wahrscheinlichkeitsdichte $P_n$ darstellt, wird $P_n$ durch differenzieren ermittelt.
+
+\begin{eqnarray}
+	P_n &=& \frac{\mathrm dW}{\mathrm dt} \\
+		&=& a \frac{\left(at\right)^n}{n!} e^{-at}
 \end{eqnarray}
 
 \hypertarget{statistische-tests}{%
@@ -518,43 +614,46 @@ Mit \(i\in[0, N]\):
 \section{Fazit}\label{fazit}}
 
 \clearpage
-\hypertarget{literatur}{%
-\section{Literatur}\label{literatur}}
+\hypertarget{literatur}{\section{Literaturverzeichnis}\label{literatur}}
+\renewcommand{\section}[2]{}
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Universität zu Köln, ``B3.1: Statistik der Kernzerfälle'', Januar
-  2021, Online verfügbar unter
-  \url{https://www.ikp.uni-koeln.de/fileadmin/data/praktikum/B3.1_statistik_de.pdf}
-\item
-  Wikipedia, ``Statistischer Test'',
-  \url{https://de.wikipedia.org/wiki/Statistischer_Test}, Abruf am
-  18.04.2024
-\item
-  Wikipedia, ``Fehler 1. und 2. Art'',
-  \url{https://de.wikipedia.org/wiki/Fehler_1._und_2._Art}, Abruf am
-  18.04.2024
-\item
-  Wikipedia, ``Statistische Signifikanz'',
-  \url{https://de.wikipedia.org/wiki/Statistische_Signifikanz}, Abruf am
-  18.04.2024
-\item
-  G. Gigerenzer, ``Mindless statistics'', 2004, \emph{The Journal of
-  Socio--Economics}, p.587-606, DOI
-  \href{https://doi.org/10.1016/j.socec.2004.09.033}{0.1016/j.socec.2004.09.033}
-\item
-  K. C. Kapur \& M. Pecht, ``Reliability Engineering'': Appendix E,
-  Wiley 2014, DOI
-  \href{https://doi.org/10.1002/9781118841716}{10.1002/9781118841716}
-\item
-  E. Cramer \& U. Kamps, ``Grundlagen der Wahrscheinlichkeitsrechnung
-  und Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-662-60552-3}{10.1007/978-3-662-60552-3}
-\item
-  J. Puhani, ``Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-658-28955-3}{10.1007/978-3-658-28955-3}
-\item
- Mary L. McHugh, ``The Chi-square test of independence'', Biochemia Medica, DOI~\href{https://doi.org/10.11613/BM.2013.018}{10.11613/BM.2013.018}
-\end{enumerate}
-
+\begin{thebibliography}{99}
+\bibitem{uni}
+	Universität zu Köln, ``B3.1: Statistik der Kernzerfälle'', Januar
+	2021, Online verfügbar unter
+	\url{https://www.ikp.uni-koeln.de/fileadmin/data/praktikum/B3.1_statistik_de.pdf}
+\bibitem{Wiki:Statistischer Test}
+	Wikipedia, ``Statistischer Test'',
+	\url{https://de.wikipedia.org/wiki/Statistischer_Test}, Abruf am
+	18.04.2024
+\bibitem{Fehler 1. und 2. Art}
+	Wikipedia, ``Fehler 1. und 2. Art'',
+	\url{https://de.wikipedia.org/wiki/Fehler_1._und_2._Art}, Abruf am
+	18.04.2024
+\bibitem{Statistische Signifikanz}
+	Wikipedia, ``Statistische Signifikanz'',
+	\url{https://de.wikipedia.org/wiki/Statistische_Signifikanz}, Abruf am
+	18.04.2024
+\bibitem{Gigerenzer}
+	G. Gigerenzer, ``Mindless statistics'', 2004, \emph{The Journal of
+	Socio--Economics}, p.587-606, DOI
+	\href{https://doi.org/10.1016/j.socec.2004.09.033}{0.1016/j.socec.2004.09.033}
+\bibitem{Kapur}
+	K. C. Kapur \& M. Pecht, ``Reliability Engineering'': Appendix E,
+	Wiley 2014, DOI
+	\href{https://doi.org/10.1002/9781118841716}{10.1002/9781118841716}
+\bibitem{Cramer}
+	E. Cramer \& U. Kamps, ``Grundlagen der Wahrscheinlichkeitsrechnung
+	und Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-662-60552-3}{10.1007/978-3-662-60552-3}
+\bibitem{Puhani}
+	J. Puhani, ``Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-658-28955-3}{10.1007/978-3-658-28955-3}
+\bibitem{McHugh}
+	Mary L. McHugh, ``The Chi-square test of independence'', Biochemia Medica, DOI~\href{https://doi.org/10.11613/BM.2013.018}{10.11613/BM.2013.018}
+\bibitem{Halbwertszeit}
+	Lexikon der Physik, ``Halbwertszeit'', \url{https://www.spektrum.de/lexikon/physik/halbwertszeit/6327}, Abruf am 07.06.2024
+\bibitem{Chart of Nuclides}
+	``Chart of Nuclides'', National Nuclear Data Center,
+	\url{https://www.nndc.bnl.gov/nudat3}, $\ce{^{137}Cs}$,
+	Abruf am 07.05.2024
+\end{thebibliography}
 \end{document}
