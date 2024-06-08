@@ -259,7 +259,7 @@ Die \emph{Intervallverteilung} ist dann gefragt, wenn nicht die Anzahl an einget
 Für Kernzerfälle ist ihre Wahrscheinlichkeitsdichte $P_n$ wie folgt gegeben. Sie ähnelt der Poissonverteilung, hat aber einen zusätzlichen Faktor $a$.
 
 \begin{eqnarray}
-	P_n &=& a \frac{(at)^n}{n!} e^{-at}
+	P_n &=& a \frac{(at)^n}{n!} e^{-at} \label{eq:Intervallverteilung}
 \end{eqnarray}
 
 \noindent
@@ -309,8 +309,7 @@ Ein \emph{Fehler erster Art} oder \(\alpha\)--Fehler beschreibt die fälschliche
 
 Ein \emph{Fehler zweiter Art} oder \emph{\(\beta\)--Fehler} beschreibt umgekehrt die fälschliche Akzeptanz der Nullhypothese \(H_0\). Beispielsweise geht man davon aus, dass ein Würfel fair ist \((H_0)\), obwohl er tatsächlich unfair ist \((H_1)\). Man spricht hier auch von einem \emph{falsch--negativen} Ergebnis. \([3]\)
 
-Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit, einen \(\alpha\)--Fehler zu begehen. \([4]\) In einem \emph{Alternativtest} dagegen beschreibt die Signifikanz die Wahrscheinlichkeit, einen \(\alpha\)- oder einen \(\beta\)--Fehler zu
-machen. Bei einer Signifikanz \(Y\) sind \(\alpha\)-- und \(\beta\)--Fehler mit einer Wahrscheinlichkeit von je \(\frac{Y}{2}\) erlaubt.
+Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit, einen \(\alpha\)--Fehler zu begehen. \([4]\) In einem \emph{Alternativtest} dagegen beschreibt die Signifikanz die Wahrscheinlichkeit, einen \(\alpha\)- oder einen \(\beta\)--Fehler zu machen. Bei einer Signifikanz \(Y\) sind \(\alpha\)-- und \(\beta\)--Fehler mit einer Wahrscheinlichkeit von je \(\frac{Y}{2}\) erlaubt.
 
 \hypertarget{der-chi2anpassungstest}{%
 \subsubsection{\texorpdfstring{Der
@@ -427,7 +426,7 @@ Ganz allgemein beschreibt Totzeit $\tau$ die Zeit, die nach der Registrierung ei
 
 Wie schon beschrieben ist während der Totzeit $\tau$ keine Strahlungsmessung möglich. Dadurch weicht die gemessene Zählrate $a^\prime$ von der tatsächlichen Rate $a$ ab. Um die tatsächliche Rate zu bestimmen, muss für jedes gemessene Teilchen die Anzahl der Detektionen in der Totzeit $a\tau$ addiert werden. Dies beschreibt die tatsächlich geschehenen Ereignisse, die während der Totzeit nicht gemessen werden können.
 
-Analog kann der gemessene Mittelwert $m^\prime$ von in einem Zeitraum $T$ gemessenen Ereignissen korrigiert werden, um den korrigierten Mittelwert $m=aT$ zu erhalten.
+Analog kann der gemessene Mittelwert $m^\prime$ von in einem Zeitraum $T$ gemessenen Ereignissen korrigiert werden, um den korrigierten Mittelwert $m=aT$ zu erhalten. Dieser ist größer als der gemessene Mittelwert.
 
 \begin{eqnarray}
 	a &=& a^\prime \cdot(1 + a\tau) \\
@@ -436,22 +435,23 @@ Analog kann der gemessene Mittelwert $m^\prime$ von in einem Zeitraum $T$ gemess
 \end{eqnarray}
 
 \noindent
-Das Verhältnis von Varianz $\sigma^2$ und Mittelwert $m$ der gemessenen Verteilung entspricht der tatsächlichen Verteilung. Weisen die Messwerte eine Poissonverteilung auf, so kann man folgende Relationen ermitteln.
+Das Verhältnis von Varianz $\sigma^2$ und Mittelwert $m$ der gemessenen Verteilung entspricht der tatsächlichen Verteilung. Weisen die Messwerte eine Poissonverteilung auf, dann sind Varianz $\sigma^2$ der Messung mit dem Mittelwert $m$ identisch.
 
 \begin{eqnarray}
 	\frac{\sigma}{m}&=&\frac{\sigma^\prime}{m^\prime}\\
 	\Rightarrow\quad \sigma^{\prime\,2} & = &\frac{m^{\prime\,2}}{m} \\
-		&=& m^\prime\cdot\frac{a^\prime}{a} \\
-		&=& m^\prime\cdot(1-a^\prime\tau) %\\
-	%\sigma^2 &=& \sigma^{\prime\,2}\left(\frac{a}{a^\prime}\right)^2\\
-	%	&=& \frac{m^\prime}{1-a\tau}
+		%&=& m^\prime\cdot\frac{a^\prime}{a} \\
+		&=& m^\prime\cdot(1-a^\prime\tau) \\
+	\sigma^2
+		%&=& \sigma^{\prime\,2}\left(\frac{a}{a^\prime}\right)^2\\
+		&=& \frac{m^\prime}{1-a\tau}
 \end{eqnarray}
 
 \noindent
 Hierbei wurden die Verhältnisse $\frac{\sigma}{m}$ und $\frac{a^\prime}{a}$ durch die Gleichungen \eqref{eq:Poisson STD/EW} und \eqref{eq:Totzeitkorrigiert EW} beschrieben.
 
 \hypertarget{einfluss-der-totzeit}{%
-\subsubsection{Einfluss der Totzeit}\label{einfluss-der-totzeit}}
+\subsubsection{Totzeit im $\chi^2$--Test}\label{einfluss-der-totzeit}}
 
 Die Totzeit der Länge \(\tau\) hat einen Einfluss auf die gemessenen Zählraten. Anstatt einer Zählrate von \(\frac{n_i}{\Delta t}\) wird eine totzeitkorrigierte Anzahl \(k_i\) gemessen. Dadurch kann ein korrigierter Mittelwert \(M\) nach \(\eqref{mittlereRate}\) bestimmt werden und man erhält eine korrigierte Abweichung \(\chi^2_\mathrm{korr}\). Die korrigierte Rate wird nach Gleichung \eqref{eq:Totzeitkorrigiert Rate} bestimmt.
 
@@ -531,27 +531,176 @@ Die $12$ kurzen Messung dienten der Bestimmung der Totzeit mit der Zwei--Präpar
 
 \hypertarget{poissonverteilung}{%
 \subsection{Poissonverteilung}\label{poissonverteilung}}
+Als erstes wird der Zerfall der Proben mit der Poisson--Verteilung verglichen. Dazu werden die Messergebnisse jeweils mit einer dazu passenden Poisson--Verteilung aufgetragen, was in Abbildung \ref{fig:poisson single} dargestellt ist.
 
+Der Mittelwert und die Varianz der jeweiligen Poisson--Verteilungen sind als $\lambda$ gegeben und in Tabelle \ref{table:poisson} dargestellt.
+
+\begin{eqnarray}
+	P(n,\lambda) = N \cdot \frac{\lambda^n e^{-\lambda}}{n!}
+\end{eqnarray}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c}
+		Probe & Spannung $[\mathrm{V}]$ & $\lambda$ \\
+		\hline
+		$A$ & $500$ & $7.1$ \\
+		$A$ & $600$ & $8.5$ \\
+		$A+B$ & $500$ & $13.5$ \\
+	\end{tabular}
+	\caption{Mittelwerte bzw. Varianzen $\lambda$  der drei Poisson--Verteilungen}
+	\label{table:poisson}
+\end{table}
+
+\begin{figure}
+	\centering
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../media/B3.1/poisson1.pdf}
+		\caption*{Probe $A$, $500 \mathrm{\, V}$}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../media/B3.1/poisson2.pdf}
+		\caption*{Probe $A$, $600 \mathrm{\, V}$}
+	\end{minipage}
+	\vspace{3pt}
+
+	\includegraphics[width=0.49\textwidth]{../media/B3.1/poisson3.pdf}
+	\caption*{Proben $A$ und $B$ gemeinsam, $500 \mathrm{\, V}$}
+	\vspace{3pt}
+	
+	\caption{Messwerte und Poisson--Verteilungen}
+	\label{fig:poisson single}
+	\vspace{12pt}
+	
+	\includegraphics[width=0.7\textwidth]{../media/B3.1/allePoisson.pdf}
+	\caption{Alle drei Poisson--Verteilungen zusammen\\
+		Die Grenze der Faustregel für den Mittelwert einer sinnvolle Poisson--Annäherung ist in rot markiert}
+	\label{fig:allePoisson}	
+\end{figure}
+
+\noindent
+Dabei wurde die Anzahl an Zerfällen innerhalb von relativ kurzen Zeitintervallen von $0.2 \mathrm{\,s}$ jeweils in einem Balken dargestellt. Die kurzen Zeitintervalle sorgen dafür, dass der Mittelwert der Messdaten klein bleibt und so eine Poisson--Verteilung nach der in Abschnitt \ref{Poissonverteilung} erwähnten Faustregel eine sinnvolle Näherung ergibt, solange für den Mittelwert gilt $\lambda \leq 10$.
+
+Für die Messungen  Probe $A$ folgen die Messwerte recht genau der Poisson--Verteilung, die gemeinsame Messung der Proben $A$ und $B$ zeigt allerdings deutlichere Unterschiede auf. Die Poisson--Verteilung ist dort deutlich breiter als die Messwerte und um den Mittelwert herum nicht so hoch. Hier bestätigt sich die besprochene Faustregel, dass die Poisson--Verteilung für $\lambda > 10$ keine gute Näherung mehr darstellt und stattdessen eher die Gaußverteilung verwendet werden sollte.
+
+Alle drei Poisson--Verteilungen sind nochmal gemeinsam in Abbildung \ref{fig:allePoisson} dargestellt. Es ist ersichtlich, dass der Mittelwert der Verteilung sowohl bei höheren Spannungen, als auch bei mehr Probenmaterial steigen. Außerdem werden die Verteilungen breiter und flacher, je größer der Mittelwert ist.
+
+Allerdings sind alle drei theoretischen Verteilungen etwa breiter als die Messdaten. Dies ist besonders gut bei der ersten und dritten Messung zu sehen. Dies ist durch die Totzeit erklärt, die Mittelwert und Standardabweichung der Messung verringert.\footnote{Vergleiche Abschnitt \ref{Totzeit}}
+
+\newpage
 \hypertarget{gauuxdfverteilung}{%
 \subsection{Gaußverteilung}\label{gauuxdfverteilung}}
+Für größere Mittelwerte ist der Vergleich mit der Gaußverteilung sinnvoll. Dazu werden die Messewerte für Zeitintervalle von $5 \mathrm{\,s}$ zusammengefasst.
+
+Weiterhin wird ein sogenanntes \textit{Binning} von $8$ verwendet. Dies bedeutet, es werden $8$ benachbarte Balken zu einem zusammengefasst. Der erste Balken gibt also demnach an, wie oft innerhalb von $5 \mathrm{\, s}$ zwischen $0$ und $7$ Zerfälle detektiert wurden. Dies ist in Abbildung \ref{fig:gauss single} dargestellt.
+
+Dazu ist jeweils die theoretische Gaußkurve eingezeichnet, die sich völlig aus den gemessenen Werten ergibt. Der Mittelwert $m$ der $n$ Messungen wird aus der gemessenen Zählrate $z^\prime$ gebildet, die in Tabelle \ref{table:zählraten gauss} dargestellt sind. $F$ ist ein Normierungsfaktor, der sich aus der Summe der Höhen aller Balken ergibt.
+
+Die Messwerte sowie die Mittelwerte der Gaußkurven sind in Tabelle \ref{table:zählraten gauss} angegeben.
+
+\begin{eqnarray}
+	P(x) &=& \frac{1}{\sqrt{2 \pi m}} \cdot F \cdot \sqrt{n} \cdot e^{- \frac{(x-m)^2}{2m/n}} \\
+	m &=& z^\prime \cdot \frac{\Delta t}{n}
+\end{eqnarray}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		Probe
+			& Spannung $[\mathrm V]$
+			& Zerfälle $[(300 \mathrm{\, s})^{-1}]$
+			& Zählrate $z^\prime$ $[\mathrm{ms^{-1}}]$ &
+			Mittelwert $m$ $[\mathrm{ms^{-1}}]$\\
+		\hline
+		$A$ & $500$ & $11044$ & $36.80$ & $23.01$ \\
+		$A$ & $600$ & $12917$ & $43.06$ & $26.90$ \\
+		$A+B$ & $500$ & $20300$ & $67.70$ & $42.29$ \\
+	\end{tabular}
+	\caption{Zählraten der Quellen bei unterschiedlichen Spannungen}
+	\label{table:zählraten gauss}
+\end{table}
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../media/B3.1/gauss1.pdf}
+		\caption*{Probe $A$, $500 \mathrm{\, V}$,\\Binning $8$}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../media/B3.1/gauss2.pdf}
+		\caption*{Probe $A$, $600 \mathrm{\, V}$,\\Binning $8$}
+	\end{minipage}
+	\begin{minipage}{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../media/B3.1/gauss3.pdf}
+		\caption*{Proben $A$ und $B$,\\$500 \mathrm{\, V}$, Binning $8$}
+	\end{minipage}
+	\vspace{3pt}
+	
+	\vspace{3pt}
+	
+	\caption{Messwerte und Gauß--Verteilungen}
+	\label{fig:gauss single}
+	\vspace{12pt}
+\end{figure}
+
+\noindent
+Alle Gauß--Verteilungen passen gut zu den Messungen. Bei der $500\mathrm{\,V}$--Messung von Probe $A$ ist die Gauß--Kurve etwas weiter rechts als die Messwerte. Dies ist durch die Verschiebung des Mittelwerts durch die Totzeit begründet.
+
+Bei der anderen Messung von Probe $A$ ist der Peak der Kurve ein wenig zu höher, bei der gemeinsamen Messung der Proben $A$ und $B$ ist dies noch stärker der Fall. Zudem kann man bei letzterem Vergleich sehen, dass die gemessene Verteilung schmaler ist als die Gauß--Verteilung. Beides kann wiederum durch die Totzeit erklärt werden. Diese verringert anscheinend nicht nur die Position des Mittelwerts, sondern auch die Standardabweichung der Messung.
+
+Bei der Poisson--Verteilung ist dies einfach zu begründen.\footnote{Vergleiche Abschnitt \ref{Totzeit}} Es lässt sich vermuten, dass die Wirkung der Totzeit bei der Gauß--Verteilung ebenso wie bei der Gauß--Verteilung zutrifft.
 
 \hypertarget{intervallverteilung}{%
 \subsection{Intervallverteilung}\label{intervallverteilung}}
+In Abbildung \ref{fig:interval} sind die gemessenen Intervall--Verteilungen für die Messung von Probe $A$ bei $500 \mathrm{\, V}$ für $n = 0,1,2$ aufgetragen.
 
-\hypertarget{chi2test}{%
-\subsection{\texorpdfstring{\(\chi^2\)--Test}{\textbackslash chi\^{}2--Test}}\label{chi2test}}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.1/interval.pdf}
+	\caption{Gemessene Intervall--Verteilungen für Probe $A$ bei $500 \mathrm{\, V}$ für $n = 0,1,2$}
+	\label{fig:interval}
+\end{figure}
 
-Es werden \(51\) zufällige Messergebnisse gewählt, aus denen \(\chi^2\)
-gewählt wird. Da der Mittelwert einen statistischen Freiheitsgrad
-bindet, bleiben \(50\) Freiheitsgrade übrig, um die
-Gültigkeitsintervalle zu bilden.
+Die gemessene Intervall--Verteilung mit $n = 0$ wird nun mit der theoretischen Verteilung verglichen. Dafür wird die theoretische Intervall--Verteilung $P_0$ an die Messwerte gefittet, die durch Gleichung \eqref{eq:Intervallverteilung} beschrieben ist. Daber wurde der Fitting--Parameter $a = 4.3 \cdot 10^{-2} \mathrm{\,ms^{-1}}$ ermittelt. Zudem wurde die Normierungskonstante $N(a)=T\cdot a$ verwendet, die von $a$ und der Messdauer $T=45\mathrm{\,min}$ in Sekunden.
 
-\[
+\begin{eqnarray}
+	P(t) &=& N(a) \cdot a \cdot e^{-at} \\
+	N &=& T \cdot a
+\end{eqnarray}
+
+\noindent
+Das Ergebnis ist in Abbildung \ref{fig:intervalFit} zu sehen. Dabei ist zu beachten, dass die ersten acht Messwerte der gemessenen Intervall--Verteilung für den Fit ausgeschlossen wurden, da sie in einem Zeitabschnitt liegen, der kleiner als die erwartete Totzeit ist, wodurch ihre Ergebnisse stark von den erwarteten abweichen dürften.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.1/intervalFit.pdf}
+	\caption{Gemessene Intervall-Verteilung für Quelle Nr. 6 bei $500 \mathrm{\, V}$ für $n = 0$ und dazu gefittete theoretische Intervall-Verteilung}
+	\label{fig:intervalFit}
+\end{figure}
+
+Aus dem so bestimmten Fit-Parameter $a$ lässt sich nun mittels Gleichung \eqref{eq:Totzeitkorrigiert Rate} die Totzeit $\tau$ ermitteln.
+
+\begin{eqnarray}
+	\tau &=& \frac{1}{a'} - \frac{1}{a}
+\end{eqnarray}
+
+\noindent
+Dabei ist $a' \approx 36.80 \cdot 10^{-2} \mathrm{\,ms^{-1}}$ die für diese Quelle gemessene Zählrate aus Tabelle \ref{table:zählraten gauss}. Dadurch ergibt sich für die Totzeit $\tau \approx 3.9 \mathrm{\, ms}$.
+
+Für die anderen beiden gemessenen Intervall--Verteilungen für $n = 1,2$ ist ein Fit--Versuch mit der theoretischen Kurve nicht sinnvoll. Dies liegt daran, dass die Totzeit bei $n = 1,2$ nicht nur im vordersten Teil der Verteilung sichtbar ist, wie bei $n = 0$. Bei ihnen verändert die Totzeit hingegen die ganze Verteilung, wodurch kein sinnvoll zu fittender Bereich mehr übrig bleibt. Dem ist so, weil die Messung des dritten Zerfalls ebenfalls einer Totzeit unterliegt. Wann der zweite Zerfall allerdings gemessen wurde, ist aus den Daten nicht ersichtlich und vor allem immer unterschiedlich, wodurch an immer anderen Stellen eine Veränderung durch die Totzeit hinzukommt.
+
+\hypertarget{chi2test}{\subsection{\texorpdfstring{\(\chi^2\)--Test}{\textbackslash chi\^{}2--Test}}\label{chi2test}}
+
+Es werden \(51\) zufällige Messergebnisse gewählt, aus denen \(\chi^2\) gewählt wird. Da der Mittelwert einen statistischen Freiheitsgrad bindet, bleiben \(50\) Freiheitsgrade übrig, um die Gültigkeitsintervalle zu bilden.
+
 \begin{eqnarray}
     \chi^2_\mathrm{min} &=& 32.357 \\
     \chi^2_\mathrm{max} &=& 71.420
 \end{eqnarray}
-\]
 
 \hypertarget{hypothese-h_1}{%
 \subsubsection{\texorpdfstring{Hypothese
