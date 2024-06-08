@@ -32,6 +32,7 @@
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
 \newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
+\newcommand{\code}[1]{\textsf{#1}}
 
 \include{../media/Silbentrennung.tex}
 
@@ -82,14 +83,9 @@
 \hypertarget{einleitung}{%
 \section{Einleitung}\label{einleitung}}
 
-In diesem Versuch wird die statistische Methode des
-\(\chi^2\)--Anpassungstests mithilfe von radioaktiver Strahlung
-untersucht. Dazu wird \(\ce{^{137}Cs}\) verwendet, dessen Stahlung mit
-einem Geiger--Müller--Zählrohr detektiert wird.
+In diesem Versuch wird die statistische Methode des \(\chi^2\)--Anpassungstests mithilfe von radioaktiver Strahlung untersucht. Dazu wird \(\ce{^{137}Cs}\) verwendet, dessen Stahlung mit einem Geiger--Müller--Zählrohr detektiert wird.
 
-Damit wird die Hypothese getestet, dass die Präparatstärke im Rahmen der
-Messung konstant bleibt. Dazu sind die Varianz der gemessenen Werte und
-die Totzeit des Detektors von essenzieller Bedeutung.
+Basierend auf den Messergebnissen werden drei Hypothesen über die Präperatsstärke bewertet. Zudem soll die Totzeit des Detektores milhilfe der Zwei--Präperate--Methode bestimmt werden.
 
 \clearpage
 \hypertarget{theoretische-grundlagen}{%
@@ -220,8 +216,9 @@ Die \emph{Poissonverteilung} beschreibt Reihen von Zufallsvariablen, die unabhä
 \begin{eqnarray}
 	P_\lambda(n) &=& \frac{\lambda^n}{n!} e^{-\lambda}
 	\label{eq:poisson} \\
-	m &=& \lambda \\
-	\sigma^2 &=& \lambda
+	m &=& \lambda\\
+	\sigma^2 &=& \lambda \\
+	\Rightarrow\quad \frac{\sigma}{m} &=&\frac{1}{\sqrt{m}} \label{eq:Poisson STD/EW}
 \end{eqnarray}
 
 \noindent
@@ -300,134 +297,66 @@ Da die Wahrscheinlichkeit $W$ das Integral der Wahrscheinlichkeitsdichte $P_n$ d
 \hypertarget{hypothesentest}{%
 \subsubsection{Hypothesentest}\label{hypothesentest}}
 
-Ein Hypothesentest oder Statistischer Test dient dazu, durch eine
-Hypothese mittels statistischer Messungen zu prüfen.
+Ein Hypothesentest oder Statistischer Test dient dazu, durch eine Hypothese mittels statistischer Messungen zu bewerten.
 
-Dazu verwendet man eine \emph{Nullhypothese}\footnote{\emph{Hypothesis
-  to be nullified} \([5]\)} \(H_0\) und eine \emph{Gegenhypothese} oder
-\emph{Alternativhypothese} \(H_1\), die sich unterscheiden. Ziel des
-Tests ist es, die Alternativhypothese \(H_1\) zu belegen. Falls dies
-nicht gelingt, muss man die Nullhypothese \(H_0\) als wahr annehmen.
-Diese wird nicht überprüft. \([2]\)
+Dazu verwendet man eine \emph{Nullhypothese}\footnote{\emph{Hypothesis  to be nullified} \([5]\)} \(H_0\) und eine \emph{Gegenhypothese} oder \emph{Alternativhypothese} \(H_1\), die sich unterscheiden. Ziel des Tests ist es, die Alternativhypothese \(H_1\) zu belegen. Falls dies nicht gelingt, muss man die Nullhypothese \(H_0\) als wahr annehmen. Diese wird nicht überprüft. \([2]\)
 
-Aufgrund der Zufälligkeit der Ereignisse kann es dabei zwei Arten von
-Fehlern geben. Ein \(\alpha\)--Fehler beschreibt das irrtümliche
-Ablehnen von \(H_0\), während ein \(\beta\)--Fehler das fälschliche
-Annehmen von \(H_0\) bezeichnet.
+Aufgrund der Zufälligkeit der Ereignisse kann es dabei zwei Arten von Fehlern geben. Ein \(\alpha\)--Fehler beschreibt das irrtümliche Ablehnen von \(H_0\), während ein \(\beta\)--Fehler das fälschliche Annehmen von \(H_0\) bezeichnet.
 
 \hypertarget{fehlerarten}{%
 \subsubsection{Fehlerarten}\label{fehlerarten}}
+Ein \emph{Fehler erster Art} oder \(\alpha\)--Fehler beschreibt die fälschliche Ablehnung der Nullhypothese \(H_0\) in einem Statistischen Test. Man nimmt z.B. an, dass ein Würfel gezinkt ist \((H_1)\), obwohl er in Wahrheit fair ist \((H_0)\). Hierbei ist die \(H_0\) die Annahme eines fairen Würfels. Man spricht hier auch von einem \emph{falsch--positiven} Ergebnis. \([3]\)
 
-Ein \emph{Fehler erster Art} oder \(\alpha\)--Fehler beschreibt die
-fälschliche Ablehnung der Nullhypothese \(H_0\) in einem Statistischen
-Test. Man nimmt z.B. an, dass ein Würfel gezinkt ist \((H_1)\), obwohl
-er in Wahrheit fair ist \((H_0)\). Hierbei ist die \(H_0\) die Annahme
-eines fairen Würfels. Man spricht hier auch von einem
-\emph{falsch--positiven} Ergebnis. \([3]\)
+Ein \emph{Fehler zweiter Art} oder \emph{\(\beta\)--Fehler} beschreibt umgekehrt die fälschliche Akzeptanz der Nullhypothese \(H_0\). Beispielsweise geht man davon aus, dass ein Würfel fair ist \((H_0)\), obwohl er tatsächlich unfair ist \((H_1)\). Man spricht hier auch von einem \emph{falsch--negativen} Ergebnis. \([3]\)
 
-Ein \emph{Fehler zweiter Art} oder \emph{\(\beta\)--Fehler} beschreibt
-umgekehrt die fälschliche Akzeptanz der Nullhypothese \(H_0\).
-Beispielsweise geht man davon aus, dass ein Würfel fair ist \((H_0)\),
-obwohl er tatsächlich unfair ist \((H_1)\). Man spricht hier auch von
-einem \emph{falsch--negativen} Ergebnis. \([3]\)
-
-Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit,
-einen \(\alpha\)--Fehler zu begehen. \([4]\) In einem
-\emph{Alternativtest} dagegen beschreibt die Signifikanz die
-Wahrscheinlichkeit, einen \(\alpha\)- oder einen \(\beta\)--Fehler zu
-machen. Bei einer Signifikanz \(Y\) sind \(\alpha\)- und
-\(\beta\)--Fehler mit einer Wahrscheinlichkeit von je \(\frac{Y}{2}\)
-erlaubt.
+Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit, einen \(\alpha\)--Fehler zu begehen. \([4]\) In einem \emph{Alternativtest} dagegen beschreibt die Signifikanz die Wahrscheinlichkeit, einen \(\alpha\)- oder einen \(\beta\)--Fehler zu
+machen. Bei einer Signifikanz \(Y\) sind \(\alpha\)-- und \(\beta\)--Fehler mit einer Wahrscheinlichkeit von je \(\frac{Y}{2}\) erlaubt.
 
 \hypertarget{der-chi2anpassungstest}{%
 \subsubsection{\texorpdfstring{Der
 \(\chi^2\)--Anpassungstest}{Der \textbackslash chi\^{}2--Anpassungstest}}\label{der-chi2anpassungstest}}
 
-Der \(\chi^2\)--Anpassungstest dient dazu, eine Verteilung von
-Zufallsvariablen \(A\) mit einer theoretischen Verteilung zu
-vergleichen. Man kann mithilfe des Tests bewerten, ob die
-Zufallsvariablen der Verteilung entsprechen können. Hierbei werden
-sowohl Fehler 1. Art als auch Fehler 2. Art berücksichtigt.
+Der \(\chi^2\)--Anpassungstest dient dazu, eine Verteilung von Zufallsvariablen \(A\) mit einer theoretischen Verteilung zu vergleichen. Man kann mithilfe des Tests bewerten, ob die Zufallsvariablen der Verteilung entsprechen können. Hierbei werden sowohl Fehler 1. Art als auch Fehler 2. Art berücksichtigt.
 
-Die Grundidee dahinter ist, einen Erwartungswert \(\expval{A}\) und
-seine Varianz \(\sigma_A^2\) bewerten zu können. Das Maß für die
-Abweichung von der Hypothese wird für einen Freiheitsgrad durch
-\(\chi^2\) beschrieben,\footnote{Man könnte auch den Betrag \(|x_i|\)
-  anstatt des Quadrates \(x_i^2\) wählen. Dies wird nicht gemacht, weil
-  damit schwieriger zu rechnen ist.} was durch die
-\(\chi^2\)--Verteilung beschrieben wird.
+Die Grundidee dahinter ist, einen Erwartungswert \(\expval{A}\) und seine Varianz \(\sigma_A^2\) bewerten zu können. Das Maß für die Abweichung von der Hypothese wird für einen Freiheitsgrad durch \(\chi^2\) beschrieben,\footnote{Man könnte auch den Betrag \(|x_i|\)   anstatt des Quadrates \(x_i^2\) wählen. Dies wird nicht gemacht, weil   damit schwieriger zu rechnen ist.} was durch die \(\chi^2\)--Verteilung beschrieben wird.
 
-\[
 \begin{eqnarray}
     \chi^2 &=& \sum_i x_i^2
 \end{eqnarray}
-\]
 
-Mithilfe der \(\chi^2\)--Verteilung kann eine Signifikanz \(Y\)
-festgelegt werden. Damit kann ein Intervall
-\([\chi^2_\mathrm{min}, \chi^2_\mathrm{max}]\) durch die
-Verteilungsfunktion \(F(x, f)\) ermittelt werden. Liegt das ermittelte
-\(\chi^2\) in diesem Interval, so kann \(H_1\) als signifikant gültig
-angenommen werden.
+Mithilfe der \(\chi^2\)--Verteilung kann eine Signifikanz \(Y\) festgelegt werden. Damit kann ein Intervall \([\chi^2_\mathrm{min}, \chi^2_\mathrm{max}]\) durch die Verteilungsfunktion \(F(x, f)\) ermittelt werden. Liegt das ermittelte \(\chi^2\) in diesem Interval, so kann \(H_1\) als signifikant gültig angenommen werden.
 
-\[
 \begin{eqnarray}
     F(\chi^2_\mathrm{min}, f) &=& 1 - \frac{Y}{2} \\
     F(\chi^2_\mathrm{max}, f) &=& \frac{Y}{2}
 \end{eqnarray}
-\]
 
-Oft wird die Signifikanz von \(Y=5\,\%\) gefordert, wodurch das
-Gültigkeitsintervall durch folgende Gleichungen bestimmt wird.
+Oft wird die Signifikanz von \(Y=5\,\%\) gefordert, wodurch das Gültigkeitsintervall durch folgende Gleichungen bestimmt wird.
 
-\[
 \begin{eqnarray}
     F(\chi^2_\mathrm{min}, f) &=& 0.975 \label{eq:ChiMinFormula} \\
     F(\chi^2_\mathrm{max}, f) &=& 0.025 \label{eq:ChiMaxFormula}
 \end{eqnarray}
-\]
 
-Falls \(\chi^2<\chi^2_\mathrm{min}\) das Ergebnis des Tests ist, sind
-die Daten zu gut an die These angepasst. Dies kann beispielsweise durch
-Overfitting entstehen.
+Falls \(\chi^2<\chi^2_\mathrm{min}\) das Ergebnis des Tests ist, sind die Daten zu gut an die These angepasst. Dies kann beispielsweise durch Overfitting entstehen.
 
 \hypertarget{pearsons-chi2test}{%
 \paragraph{\texorpdfstring{Pearsons
 \(\chi^2\)--Test}{Pearsons \textbackslash chi\^{}2--Test}}\label{pearsons-chi2test}}
 
-Eine Variante des \(\chi^2\)--Tests betrachtet nur ein Ende der
-Gauß--Verteilung. Hierbei wird die Signifikanz \(Y\) verwendet, um ein
-maximal gültiges \(\chi_\mathrm{max}^2\) zu bestimmen, dabei wird auf
-einen minimalen Wert verzichtet. \cite{McHugh} Damit kann eine Hypothese
-nur dann abgelehnt werden, wenn \(\chi^2\) zu groß ist, ein zu kleines
-\(\chi^2\) ist dabei nicht betrachtet. Auch hier wird oft eine
-Signifikanz von \(5\,\%\) verwendet.
+Eine Variante des \(\chi^2\)--Tests betrachtet nur ein Ende der Gauß--Verteilung. Hierbei wird die Signifikanz \(Y\) verwendet, um ein maximal gültiges \(\chi_\mathrm{max}^2\) zu bestimmen, dabei wird auf einen minimalen Wert verzichtet. \cite{McHugh} Damit kann eine Hypothese nur dann abgelehnt werden, wenn \(\chi^2\) zu groß ist, ein zu kleines \(\chi^2\) ist dabei nicht betrachtet. Auch hier wird oft eine Signifikanz von \(5\,\%\) verwendet.
 
-\[
 \begin{eqnarray}
     F(\chi^2_\mathrm{max}, f) &=& Y \\
     F(\chi^2_\mathrm{max}, f) &=& 0.05 \label{eq:ChiMaxPearson} \\
 \end{eqnarray}
-\]
 
 \hypertarget{die-chi2verteilung}{%
 \subsubsection{\texorpdfstring{Die
 \(\chi^2\)--Verteilung}{Die \textbackslash chi\^{}2--Verteilung}}\label{die-chi2verteilung}}
 
-Sei \(A\) standardnormalverteilt\footnote{Diese Annahme ist bei
-  ausreichend vielen Messung durch das Gesetz der großen Zahl
-  gerechtfertigt.}, dann ist die \(\chi_1^2\)--Verteilung eine
-quadrierte Normalverteilung mit einem Freiheitsgrad. Daher ist der
-Erwartungswert \(\expval{\chi_1^2}=1\). Gibt es mehrere Freiheitsgrade
-\(f\), so müssen \(f\) Erwartungswerte \(\expval{\chi_i^2}\) addiert
-werden, um den gesamten Erwartungswert zu ermitteln. Dies wird durch die
-Wahrscheinlichkeitsdichte (PDF\footnote{\emph{probability density
-  function}}) \(f(x, f)\) beschrieben,\footnote{Achtung: Hier wird zur
-  besseren Lesbarkeit \(f(x, 2f)\) angegeben, die Zahl der
-  Freiheitsgrade wird in der Funktion halbiert.} wobei die Gammafunktion
-\(\Gamma(x)\) benötigt wird.
+Sei \(A\) standardnormalverteilt\footnote{Diese Annahme ist bei ausreichend vielen Messung durch das Gesetz der großen Zahl gerechtfertigt.}, dann ist die \(\chi_1^2\)--Verteilung eine quadrierte Normalverteilung mit einem Freiheitsgrad. Daher ist der Erwartungswert \(\expval{\chi_1^2}=1\). Gibt es mehrere Freiheitsgrade \(f\), so müssen \(f\) Erwartungswerte \(\expval{\chi_i^2}\) addiert werden, um den gesamten Erwartungswert zu ermitteln. Dies wird durch die Wahrscheinlichkeitsdichte (PDF\footnote{\emph{probability density function}}) \(f(x, f)\) beschrieben,\footnote{Achtung: Hier wird zur besseren Lesbarkeit \(f(x, 2f)\) angegeben, die Zahl der Freiheitsgrade wird in der Funktion halbiert.} wobei die Gammafunktion \(\Gamma(x)\) benötigt wird.
 
-\[
 \begin{eqnarray}
     f(x, 2f) &=&
         \begin{cases}
@@ -438,13 +367,9 @@ Wahrscheinlichkeitsdichte (PDF\footnote{\emph{probability density
         \end{cases} \\
     \Gamma(x) &=& \int_0^\infty t^{x-1}\cdot \mathrm e^t \,\mathrm dt
 \end{eqnarray}
-\]
 
-Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution
-  function}}) \(F(x, f)\) ist dabei komplex und hat den Erwartungswert
-\(\expval{\chi_f^2}=f\) und die Varianz \(\sigma_{\chi^2}=2f\).
+Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution function}}) \(F(x, f)\) ist dabei komplex und hat den Erwartungswert \(\expval{\chi_f^2}=f\) und die Varianz \(\sigma_{\chi^2}=2f\).
 
-\[
 \begin{align}
     F(x, 2f) &=
         \int_0^x
@@ -460,50 +385,76 @@ Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution
             \,\mathrm dx
          &&=2f
 \end{align}
-\]
 
 \hypertarget{versuchsidee}{%
 \subsection{Versuchsidee}\label{versuchsidee}}
 
-In diesem Versuch wird \(\ce{^{137}Cs}\) als radioaktive Probe
-verwendet, das eine Halbwertszeit \(t_\frac{1}{2}\approx 30\,\mathrm a\)
-hat.
+In diesem Versuch wird \(\ce{^{137}Cs}\) als radioaktive Probe verwendet, das eine Halbwertszeit \(t_\frac{1}{2}\approx 30\,\mathrm a\) hat.
 
-Damit soll die folgende Hypothese getestet, die Präparatstärke sei
-konstant und habe den Wert \(\bar n\). Hierbei ist \(\bar n\) der
-Mittelwert von vielen Einzelmessungen \(n_i\) über eine kurze Zeit von
-\(\Delta t=20\,\mathrm s\), der durch Gleichung \(\eqref{mittlereRate}\)
-bestimmt wird. All diese \(N\) Messungen werden in einem Zeitraum von
-wenigen Stunden absolviert.
+Damit soll die folgende Hypothese getestet, die Präparatstärke sei konstant und habe den Wert \(\bar n\). Hierbei ist \(\bar n\) der Mittelwert von vielen Einzelmessungen \(n_i\) über eine kurze Zeit von \(\Delta t=20\,\mathrm s\), der durch Gleichung \(\eqref{mittlereRate}\) bestimmt wird. All diese \(N\) Messungen werden in einem Zeitraum von wenigen Stunden absolviert.
 
-Da der Zeitraum der Messungen sehr kurz gegen die Halbwertszeit ist,
-kann man annehmen, dass die Stärke der Probe sich im Rahmen der
-Messungenauigkeit nicht verändert.
+Da der Zeitraum der Messungen sehr kurz gegen die Halbwertszeit ist, kann man annehmen, dass die Stärke der Probe sich im Rahmen der Messungenauigkeit nicht verändert.
 
-Damit können die Differenzen zum Mittelwert \((n_i-\bar n)\) ermittelt
-werden. Nach dem zentralen Grenzwertsatz sind die relativen Differenzen
-standardnormalverteilt. Dadurch kann die Abweichung \(\chi^2\) wie folgt
-ermittelt werden.
+Damit können die Differenzen zum Mittelwert \((n_i-\bar n)\) ermittelt werden. Nach dem zentralen Grenzwertsatz sind die relativen Differenzen standardnormalverteilt. Dadurch kann die Abweichung \(\chi^2\) wie folgt ermittelt werden.
 
-\[
 \begin{eqnarray}
     \bar n &=& \sum_{i=1}^N \frac{n_i}{N} \label{mittlereRate} \\
     \chi^2 &=& \sum_{i=1}^N \frac{(n_i-\bar n)^2}{\bar n} \label{ChiSquared}
 \end{eqnarray}
-\]
+
+\subsubsection{Das Geiger--Müller--Zählrohr}
+\label{Geiger--Müller--Zählrohr}
+Ein Geiger--Müller--Zählrohr besteht aus einem edelgasgefüllten Zylinderkondensator mit einem dünnem Anodendraht in der Mitte. Das elektrische Potential ist somit ein zylindersymmetrisch, um die Anode herum ist es am stärksten. Dies ist in Abbildung \ref{fig:Geiger--Müller--Zählrohr} schematisch dargestellt.
+
+Wenn ein Photon in den Zylinder eintritt und auf ein Gasteilchen trifft, wird die Energie des Photons übertragen und ein Elektron aus dem Atom gelöst. Durch das elektrische Potential wird das freie Elektron zur Anode hin beschleunigt und stößt auf dem Weg mit weiteren Gasteilchen. Dadurch sammeln sich immer mehr Elektronen um den Anodendraht.
+
+Währenddessen regen sich die Gasteilchen durch Photonenemission ab und erzeugen die sogenannte Geiger--Entladung. Hierbei ionisieren die entstandene Photonen weitere Gasteilchen, somit entstehen weitere Elektronen. Da die Photonen überall innerhalb des Zählrohr sein können, findet die Entladung in dem gesamten Zählrohr statt.
+
+Die Zeit, während der die relativ langsame Wolke aus ionisierten Gasteilchen nach außen zur Zylinderwand wandert, wird \emph{Totzeit} genannt. In diesem Zeitraum existiert um den Anodendraht kein Potential. Daher es können dann keine Elektronen beschleunigt werden, obwohl weitere Strahlungsquanten ins Zählrohr hinein dringen können. In dieser Zeit kann keine Strahlungen gemessen werden.
+
+Um eine Mehrfachentladung von Gasteilchen während der Totzeit an der Zylinderwand zu vermeiden wird ein starker Widerstand mit ca. $10^8\,\Omega$ zwischen Hochspannungsversorgung und Anode geschaltet. Dadurch ist die Hochspannung nach einer Entladung nicht ausreichend für eine weitere Entladung.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.1/640px-Geiger_Mueller_Counter_with_Circuit-de.svg.png}
+	\caption{Aufbau eines typischen Geiger--Müller--Zählrohrs \cite{File:Geigerzählrohr}}
+	\label{fig:Geiger--Müller--Zählrohr}
+\end{figure}
+
+\subsubsection{Totzeit}
+\label{Totzeit}
+Ganz allgemein beschreibt Totzeit $\tau$ die Zeit, die nach der Registrierung eines Ereignisses durch einen Detektor verstreicht, bis der Detektor wieder messbereit ist. \cite{Totzeit}
+
+Wie schon beschrieben ist während der Totzeit $\tau$ keine Strahlungsmessung möglich. Dadurch weicht die gemessene Zählrate $a^\prime$ von der tatsächlichen Rate $a$ ab. Um die tatsächliche Rate zu bestimmen, muss für jedes gemessene Teilchen die Anzahl der Detektionen in der Totzeit $a\tau$ addiert werden. Dies beschreibt die tatsächlich geschehenen Ereignisse, die während der Totzeit nicht gemessen werden können.
+
+Analog kann der gemessene Mittelwert $m^\prime$ von in einem Zeitraum $T$ gemessenen Ereignissen korrigiert werden, um den korrigierten Mittelwert $m=aT$ zu erhalten.
+
+\begin{eqnarray}
+	a &=& a^\prime \cdot(1 + a\tau) \\
+	\Leftrightarrow\quad a &=& \frac{a^\prime}{1-a^\prime\tau} \label{eq:Totzeitkorrigiert Rate}\\
+	m &=&\frac{m'}{1-a'\tau} \label{eq:Totzeitkorrigiert EW}
+\end{eqnarray}
+
+\noindent
+Das Verhältnis von Varianz $\sigma^2$ und Mittelwert $m$ der gemessenen Verteilung entspricht der tatsächlichen Verteilung. Weisen die Messwerte eine Poissonverteilung auf, so kann man folgende Relationen ermitteln.
+
+\begin{eqnarray}
+	\frac{\sigma}{m}&=&\frac{\sigma^\prime}{m^\prime}\\
+	\Rightarrow\quad \sigma^{\prime\,2} & = &\frac{m^{\prime\,2}}{m} \\
+		&=& m^\prime\cdot\frac{a^\prime}{a} \\
+		&=& m^\prime\cdot(1-a^\prime\tau) %\\
+	%\sigma^2 &=& \sigma^{\prime\,2}\left(\frac{a}{a^\prime}\right)^2\\
+	%	&=& \frac{m^\prime}{1-a\tau}
+\end{eqnarray}
+
+\noindent
+Hierbei wurden die Verhältnisse $\frac{\sigma}{m}$ und $\frac{a^\prime}{a}$ durch die Gleichungen \eqref{eq:Poisson STD/EW} und \eqref{eq:Totzeitkorrigiert EW} beschrieben.
 
 \hypertarget{einfluss-der-totzeit}{%
 \subsubsection{Einfluss der Totzeit}\label{einfluss-der-totzeit}}
 
-Die Totzeit der Länge \(\tau\) hat einen Einfluss auf die gemessenen
-Zählraten. Anstatt einer Zählrate von \(\frac{n_i}{\Delta t}\) wird eine
-totzeitkorrigierte Anzahl \(k_i\) gemessen. Dadurch kann ein
-korrigierter Mittelwert \(M\) nach \(\eqref{mittlereRate}\) bestimmt
-werden und man erhält eine korrigierte Abweichung
-\(\chi^2_\mathrm{korr}\). Die korrigierte Rate wird nach Gleichung
-\((??)\) bestimmt.
+Die Totzeit der Länge \(\tau\) hat einen Einfluss auf die gemessenen Zählraten. Anstatt einer Zählrate von \(\frac{n_i}{\Delta t}\) wird eine totzeitkorrigierte Anzahl \(k_i\) gemessen. Dadurch kann ein korrigierter Mittelwert \(M\) nach \(\eqref{mittlereRate}\) bestimmt werden und man erhält eine korrigierte Abweichung \(\chi^2_\mathrm{korr}\). Die korrigierte Rate wird nach Gleichung \eqref{eq:Totzeitkorrigiert Rate} bestimmt.
 
-\[
 \begin{eqnarray}
     k_i &=&
         \frac{
@@ -515,25 +466,64 @@ werden und man erhält eine korrigierte Abweichung
     \chi^2_\mathrm{korr} &=& \sum_{i=1}^N
         \frac{(k_i - M)^2}{M} \label{ChiKorrDef}
 \end{eqnarray}
-\]
 
-Durch Einsetzen der Gleichungen \(\eqref{korrRate}\)-\(\eqref{korrAVG}\)
-sowie \(\eqref{ChiSquared}\) kann man \(\eqref{ChiKorrDef}\)
-vereinfachen und man erhält die folgende vereinfachte Relation. Hier
-sieht man, dass die korrigierte Abweichung \(\chi^2_\mathrm{korr}\)
-kleiner als die nicht--korrigierte Abweichung \(\chi^2\) ist, was
-kontraintuitiv wahrgenommen werden kann.
+\noindent
+Durch Einsetzen der Gleichungen \(\eqref{korrRate}\)-\(\eqref{korrAVG}\) sowie \(\eqref{ChiSquared}\) kann man \(\eqref{ChiKorrDef}\) vereinfachen und man erhält die folgende vereinfachte Relation. Hier sieht man, dass die korrigierte Abweichung \(\chi^2_\mathrm{korr}\) kleiner als die nicht--korrigierte Abweichung \(\chi^2\) ist, was kontraintuitiv wahrgenommen werden kann.
 
-\[
 \begin{eqnarray}
     \chi^2_\mathrm{korr} &=&
         \frac{1}{1 - \frac{m}{\Delta t}\tau} \cdot \chi^2
 \end{eqnarray}
-\]
+
+\subsubsection{Zwei--Präparate--Methode}
+Die Zwei--Präparate--Methode wird verwendet, um die Totzeit zu messen. Man misst die Zählrate von zwei verschiedenen Präparaten $z^\prime_{1/2}$ jeweils einzeln und dann von beiden zusammen $z^\prime_{12}$. Zusätzlich wird die Untergrundzählrate $z^\prime_0$ ohne Präparate gemessen.
+
+Somit erhält man gemessene Werte $z^\prime_i$ und sowie wahre Werte $z_i$. Die wahren Zählraten $z_i$ sind durch die Präparate und den Untergrund entstanden.
+
+Nun seien $p_{1,\,2,\,12}$ die Zählraten, die sich durch die Verwendung von Präparaten ergeben. Daraus erhält man ein lösbares Gleichungssystem mit von je acht Gleichungen und Unbekannten.  Die letzten Gleichungen ergeben sich durch die Totzeitkorrektur \eqref{eq:Totzeitkorrigiert Rate} der Zählraten.
+
+%\begin{eqnarray}
+%	z_1 &=& p_1+u \\
+%	z_2 &=& p_2+u \\
+%	z_{12} &=& p_{12}+u \\
+%	z_1 &=& \frac{z^\prime_1}{1-z^\prime_1 \tau} \\
+%	z_2 &=& \frac{z^\prime_2}{1-z^\prime_2 \tau} \\
+%	z_{12} &=& \frac{z^\prime_{12}}{1-z^\prime_{12} \tau} \\
+%	u &=&\frac{u^\prime}{1-u^\prime\tau} \\
+%	p_{12} &=& p_1+p_2
+%\end{eqnarray}
+\begin{eqnarray}
+	p_{12} &=& p_1 + p_2 \\
+	\forall i\in\{1,\,2,\,12\}:\qquad
+		z_i &=& p_i + z_0 \\
+	\forall i\in\{0,\,1,\,2,\,12\}:\quad
+		z_i &=& \frac{z^\prime_i}{1-z^\prime_i \tau}
+\end{eqnarray}
+
+\noindent
+Die Lösung dieses Gleichungssystems ergibt die Totzeit.
+
+\begin{eqnarray}
+	\tau _{1,\,2} &=& \frac{-B \pm \sqrt{B^2 - 4AC}}{2A} \\
+	A &=& u'z'_{12}z'_2 - z'_1z'_12z'_2 + u'z'_{12}z'_1 - u'z'_1z'_2 \nonumber\\
+	B &=& -2z'_{12}u' + 2z'_1z'_2 \nonumber\\
+	C &=& z^\prime _{12} - z^\prime _1 + u^\prime  - z^\prime _2 \nonumber
+\end{eqnarray}
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
 \section{Durchführung}\label{durchfuxfchrung}}
+\subsection{Versuchsaufbau}
+Der Aufbau beinhaltet zwei $\ce{^{137}Cs}$--Quellen und Zählrohr mit angeschlossener Elektronik. Die am Zählrohr angeschlossene Spannung lässt sich variieren, die Zählrohrelektronik erzeugt ein Rechtecksignal je detektiertem Ereignis. Dieses Signal wird an einen Zähler und an einen Computer übertragen. Auf dem Computer können die Ereignisse zeitaufgelöst gemessen werden.
+
+Zur Bearbeitung der Daten sind am Computer drei Python-Programme vorinstalliert, mit denen die Messdaten verarbeitet werden können. Mit \code{divide.py} Ereignisse in Zeitintervallen fester Größe, z.B.  jeweils $10\mathrm{\,s}$, gezählt. Mittels \code{binomial.py} kann eine Binomialverteilung aus den Daten extrahiert werden, mit \code{interval.py} eine Intervallverteilung.
+
+\subsection{Messungen}
+Es wurden $3$ lange und $12$ kurze Messungen durchgeführt.
+
+Bei den ersten beiden langen Messungen wurde nur Probe $A$ verwendet, bei der dritten langen Messung die Probe $A$ und $B$. Eine Einzelmessung von Probe $A$ und die gemeinsame Messung wurden bei einer Spannung von $500\mathrm{\,V}$ durchgeführt, die zweite Einzelmessung bei $600\mathrm{\,V}$. Hierbei wurden die Ereignisse zeitaufgelöst gemessen.
+
+Die $12$ kurzen Messung dienten der Bestimmung der Totzeit mit der Zwei--Präparate--Methode. Hierzu wurden jeweils bei Spannungen von $500\mathrm{\,V}$, $550\mathrm{\,V}$ und $600\mathrm{\,V}$ die Ereignisse in jeweils $5\mathrm{\,min}$ gemessen. Dabei wurden die Proben $A$ und $B$ sowohl einzeln als auch gemeinsam verwendet. Die letzten drei kurzen Messungen erfolgten ohne Proben, um den Untergrund zu vermessen.
 
 \clearpage
 \hypertarget{auswertung}{%
@@ -652,8 +642,14 @@ Mit \(i\in[0, N]\):
 \bibitem{Halbwertszeit}
 	Lexikon der Physik, ``Halbwertszeit'', \url{https://www.spektrum.de/lexikon/physik/halbwertszeit/6327}, Abruf am 07.06.2024
 \bibitem{Chart of Nuclides}
-	``Chart of Nuclides'', National Nuclear Data Center,
+	National Nuclear Data Center, ``Chart of Nuclides'',
 	\url{https://www.nndc.bnl.gov/nudat3}, $\ce{^{137}Cs}$,
 	Abruf am 07.05.2024
+\bibitem{File:Geigerzählrohr}
+	Wikimedia, ``File:Geiger Mueller Counter with Circuit-de.svg'', \url{https://commons.wikimedia.org/wiki/File:Geiger_Mueller_Counter_with_Circuit-de.svg}, Abruf am 22.04.2024
+\bibitem{ulfkonrad}
+	Ulf Konrad, ``Geiger--Müller--Zählrohr'', \url{https://www.ulfkonrad.de/physik/geiger-mueller-zaehlrohr}, Abruf am 22.04.2024
+\bibitem{Totzeit}
+	Lexikon der Physik, ``Totzeit'', \url{https://www.spektrum.de/lexikon/physik/totzeit/14643}, Abruf am 22.04.2024
 \end{thebibliography}
 \end{document}
