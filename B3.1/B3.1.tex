@@ -32,6 +32,7 @@
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
 \newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
+\newcommand{\eqspaced}{\ensuremath{\;\;=\;\;}} % equal sign surrounded by spaces, used in align env to match eqnarray behaviour
 \newcommand{\code}[1]{\textsf{#1}}
 
 \include{../media/Silbentrennung.tex}
@@ -351,8 +352,7 @@ Eine Variante des \(\chi^2\)--Tests betrachtet nur ein Ende der Gauß--Verteilun
 \end{eqnarray}
 
 \hypertarget{die-chi2verteilung}{%
-\subsubsection{\texorpdfstring{Die
-\(\chi^2\)--Verteilung}{Die \textbackslash chi\^{}2--Verteilung}}\label{die-chi2verteilung}}
+\subsubsection{Die \(\chi^2\)--Verteilung}\label{die-chi2verteilung}}
 
 Sei \(A\) standardnormalverteilt\footnote{Diese Annahme ist bei ausreichend vielen Messung durch das Gesetz der großen Zahl gerechtfertigt.}, dann ist die \(\chi_1^2\)--Verteilung eine quadrierte Normalverteilung mit einem Freiheitsgrad. Daher ist der Erwartungswert \(\expval{\chi_1^2}=1\). Gibt es mehrere Freiheitsgrade \(f\), so müssen \(f\) Erwartungswerte \(\expval{\chi_i^2}\) addiert werden, um den gesamten Erwartungswert zu ermitteln. Dies wird durch die Wahrscheinlichkeitsdichte (PDF\footnote{\emph{probability density function}}) \(f(x, f)\) beschrieben,\footnote{Achtung: Hier wird zur besseren Lesbarkeit \(f(x, 2f)\) angegeben, die Zahl der Freiheitsgrade wird in der Funktion halbiert.} wobei die Gammafunktion \(\Gamma(x)\) benötigt wird.
 
@@ -501,14 +501,16 @@ Nun seien $p_{1,\,2,\,12}$ die Zählraten, die sich durch die Verwendung von Pr�
 \end{eqnarray}
 
 \noindent
-Die Lösung dieses Gleichungssystems ergibt die Totzeit.
+Die Lösung dieses Gleichungssystems ergibt die Totzeit. Diese Formel wird auch als \emph{Mitternachtsformel} bezeichnet
 
-\begin{eqnarray}
-	\tau _{1,\,2} &=& \frac{-B \pm \sqrt{B^2 - 4AC}}{2A} \\
-	A &=& u'z'_{12}z'_2 - z'_1z'_12z'_2 + u'z'_{12}z'_1 - u'z'_1z'_2 \nonumber\\
-	B &=& -2z'_{12}u' + 2z'_1z'_2 \nonumber\\
-	C &=& z^\prime _{12} - z^\prime _1 + u^\prime  - z^\prime _2 \nonumber
-\end{eqnarray}
+\begin{align}
+	\tau _{1,\,2} \eqspaced& \frac{-B \pm \sqrt{B^2 - 4AC}}{2A} \label{eq:Totzeit Mitternachtsformel} \\
+	\begin{split}
+		A \eqspaced& u'z'_{12}z'_2 - z'_1z'_12z'_2 + u'z'_{12}z'_1 - u'z'_1z'_2 \\
+		B \eqspaced& -2z'_{12}u' + 2z'_1z'_2 \\
+		C \eqspaced& z^\prime _{12} - z^\prime _1 + u^\prime  - z^\prime _2
+	\end{split}
+\end{align}
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
@@ -693,7 +695,152 @@ Dabei ist $a' \approx 36.80 \cdot 10^{-2} \mathrm{\,ms^{-1}}$ die für diese Que
 
 Für die anderen beiden gemessenen Intervall--Verteilungen für $n = 1,2$ ist ein Fit--Versuch mit der theoretischen Kurve nicht sinnvoll. Dies liegt daran, dass die Totzeit bei $n = 1,2$ nicht nur im vordersten Teil der Verteilung sichtbar ist, wie bei $n = 0$. Bei ihnen verändert die Totzeit hingegen die ganze Verteilung, wodurch kein sinnvoll zu fittender Bereich mehr übrig bleibt. Dem ist so, weil die Messung des dritten Zerfalls ebenfalls einer Totzeit unterliegt. Wann der zweite Zerfall allerdings gemessen wurde, ist aus den Daten nicht ersichtlich und vor allem immer unterschiedlich, wodurch an immer anderen Stellen eine Veränderung durch die Totzeit hinzukommt.
 
-\hypertarget{chi2test}{\subsection{\texorpdfstring{\(\chi^2\)--Test}{\textbackslash chi\^{}2--Test}}\label{chi2test}}
+\hypertarget{Totzeit bestimmen}{\subsection{Totzeit}\label{Totzeit bestimmen}}
+Die Totzeit $\tau$ wird hier mit der Zwei--Präparate--Methode bestimmt. Es wurden für die Proben $A$ und $B$ jeweils $N_A$ bzw. $N_B$ Ereignisse gemessen. Weiterhin wurden $N_{AB}$ Ereignisse bei Verweindung beider Proben $A$ und $B$ sowie $N_0$ Ereignisse ohne Proben gemessen. Letztere wurden durch die Untergrundstrahlung verursacht.
+
+Aus den Zählungen $N_i$ und der Dauer der Messungen $T=5\mathrm{\,min}$ lassen sich Zählraten $n_i$ ermitteln. Die Ergebnisse sind in den Tabellen \ref{tab:Totzeit Ereignisse} dargestellt. Der Fehler der Zählungen $\Delta N_i$ wird durch die statistische Ungenauigkeit gegeben.
+
+Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ mit der Mitternachtsformel \eqref{eq:Totzeit Mitternachtsformel} ermittelt werden. Die Ungenauigkeiten  $\Delta \tau_{1/2}$ sowie $\Delta A$, $\Delta B$, $\Delta C$ werden durch Gauß'sche Fehlerfortpflanzung ermittelt. Diese Ergebnisse sind in Tabelle \ref{tab:Totzeiten} dargestellt. Hierbei fällt der sehr hohe relative Fehler für die Totzeiten auf.
+
+\begin{eqnarray}
+	\Delta N &=& \sqrt{N} \\
+	n_i &=& \frac{N_i}{T} \\
+	\Delta n_i &=&???
+\end{eqnarray}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}[h]{c|c|c|c|c}
+		Spannung $[\mathrm V]$
+			& $N_A\equiv N_1$
+			& $N_B\equiv N_2$
+			& $N_{AB}\equiv N_{12}$
+			& $N_0$ \\
+		\hline
+		$500$ & $11044$ & $15833$ & $20300$ & $2396$ \\
+		$550$ & $12260$ & $17914$ & $25509$ & $2513$ \\
+		$600$ & $12917$ & $19421$ & $28522$ & $2550$ \\
+	\end{tabular}
+	\caption{Gemessene Ereignisse}
+	\label{tab:Totzeit Ereignisse}
+	\vspace{12pt}
+
+	\begin{tabular}[h]{c|c|c|c|c|c}
+		Spannung $[\mathrm V]$
+			& $z_1$ $[\mathrm s^{-1}]$
+			& $z_2$ $[\mathrm s^{-1}]$
+			& $z_{12}$ $[\mathrm s^{-1}]$
+			%& $z_0$ $[\mathrm s^{-1}]$
+			& $\tau_1$ $[\mathrm{ms}]$
+			& $\tau_2$ $[\mathrm{ms}]$ \\
+		\hline
+		$500$
+			& $37 \pm 6$
+			& $53 \pm 7$
+			& $68 \pm \ 8$
+			%& $7.9 \pm 2.8$
+			& $6 \pm 9$ $(\pm\, 147\,\%)$
+			& $22 \pm 18$ $(\pm\, 84\,\%)$ \\
+		$550$
+			& $41 \pm 6$
+			& $60 \pm 8$
+			& $85 \pm \ 9$
+			%& $8.0 \pm 3.0$
+			 & $2 \pm 5$ $(\pm\, 223\,\%)$
+			 & $20 \pm 12$ $(\pm\, 59\,\%)$ \\
+		$600$
+			& $43 \pm 7$
+			& $65 \pm 8$
+			& $95 \pm 10$
+			%& $8.5 \pm 3.0$
+			& $1 \pm 4$ $(\pm\, 368\,\%)$
+			& $19 \pm 10$ $(\pm\, 51\,\%)$ \\
+	\end{tabular}
+	\caption{Ermittelte Zählraten $z_i$ und Totzeiten $\tau_i$}
+	\label{tab:Totzeit Raten}
+\end{table}
+
+\noindent
+Die Werte von $\tau_1$ stimmen eher mit den aus der Intervallverteilung Todzeiten überein als die von $\tau_2$. $\tau_2(500\mathrm{\,V})$ trifft innerhalb der Fehlergrenzen ebenfalls diesen Wert, die zwei anderen allerdings nicht mehr.
+
+\begin{align}
+	\begin{split}
+		(\Delta \tau _1)^2\eqspaced
+		&
+			\left(
+				\left(
+					\frac{-B-\sqrt{B^2 - 4AC}}{2A^2}
+					- \frac{C}{A\sqrt{B^2 - 4AC}}
+				\right) \Delta A
+			\right) ^2 \\
+		&
+				+\left(
+					\frac{1}{2A}\left(
+						\frac{B}{\sqrt{B^2 - 4AC}} - 1
+					\right) \Delta B
+				\right)^2
+				+ \left(
+					-\frac{\Delta C}{\sqrt{B^2 - 4AC}}
+				\right)^2
+	\end{split}\\
+	\begin{split}
+		(\Delta \tau _1)^2\eqspaced
+			&
+				\left(
+					\left(
+						\frac{\sqrt{B^2 - 4AC}+B}{2A^2}
+						+ \frac{C}{A\sqrt{B^2 - 4AC}}
+					\right) \Delta A
+				\right)^2\\
+			&
+				+ \left(
+					\frac{1}{2A}\left(
+						\frac{-B}{\sqrt{B^2 - 4AC}} - 1
+					\right) \Delta B
+				\right)^2
+				+ \left(
+					\frac{\Delta C}{\sqrt{B^2 - 4AC}}
+				\right) ^2
+	\end{split}
+\end{align}
+
+\begin{align}
+	\begin{split}
+		(\Delta A)^2 \eqspaced
+		& \big((-z'_{12}z'_2 + u'z'_{12} - u'z'_2)\Delta z'_1\big)^2
+			+\big((u'z'_{12}-z'_1z'_{12}-u'z'_1)\Delta z_2\big)^2 \\
+		&+\big((u'z'_2-z'_1z'_2+u'z'_1)\Delta z'_{12}\big)^2
+			+ \big((z'_{12}z'_2 + z'_{12}z'_1 -z'_1z'_2)\Delta u'\big)^2
+	\end{split} \\
+	(\Delta B)^2 \eqspaced&  (2z'_2 \Delta z'_1)^2 + (2z'_1 \Delta z'_2)^2 + (-2u' \Delta z'_{12})^2 + (-2z'_{12} \Delta u')^2 \\
+	(\Delta C)^2 \eqspaced& (\Delta z'_1)^2 + (\Delta z'_2)^2 + (\Delta z'_{12})^2 + (\Delta u')^2
+\end{align}
+
+\noindent
+Zusätzlich wurde die Totzeit digital ermittelt, dazu wurde das Paket \code{Measurements} in der Programmiersprache \code{Julia} verwendet. \cite{Julia:Measurements} Die Ergebnisse für $\tau _{1,2}$ sind gleich geblieben, allerdings unterscheiden sich die ermittelten Fehler, zum Teil erheblich. Die Eergebnisse sind in Tabelle \ref{tab:Totzeit m. Julia} dargestellt.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}[h]{c|c|c}
+		Spannung $[\mathrm V]$
+			& $\tau_1$ $[\mathrm{ms}]$
+			& $\tau_2$ $[\mathrm{ms}]$ \\
+		\hline
+		$500$ & $6 \pm 6$ $(\pm\, 89\,\%)$ & $22.0 \pm 2.6$ $(\pm\, 12\,\%)$  \\
+		$550$ & $2 \pm 4$ $(\pm\, 190\,\%)$ & $19.8 \pm 2.1$ $(\pm\, 11\,\%)$ \\
+		$600$ & $1 \pm 4$ $(\pm\, 340\,\%)$ & $18.5 \pm 1.9$ $(\pm\, 10\,\%)$ \\
+	\end{tabular}
+	\caption{Mit \code{Measurements} \cite{Julia:Measurements} ermittelte Totzeiten}
+	\label{tab:Totzeit m. Julia}
+\end{table}
+
+\noindent
+%Die erste Berechnung wurde mit Excel durchgeführt. Es ist denkbar, dass sich Fehler in der langen Formel eingeschlichen haben. $\Delta A, \Delta B$ und $\Delta C$ sind in beiden Methoden identisch, also liegt es wahrscheinlich an der Fehlerrechnung von $\tau$ selbst.
+Da $\tau _2$ im Vergleich zu $\tau _1$ und dem Wert aus Intervallversteilung aus Abschnit \ref{Intervallverteilung} sehr groß ist, kann dieser verworfen werden.
+
+Die Totzeit scheint i.A. mit steigender Spannung kleiner zu werden. Vermutlich werden die Elektronen dann schneller beschleunigt und das elektrische Feld um die Anode wird stärker. Daher bewegt sich die Wolke aus ionisierten Gasteilchen schneller und die Zeitspanne zwischen zwei registrierten Signale wird verringert.
+
+\hypertarget{chi2test}{\subsection{$\chi^2$--Test}\label{chi2test}}
 
 Es werden \(51\) zufällige Messergebnisse gewählt, aus denen \(\chi^2\) gewählt wird. Da der Mittelwert einen statistischen Freiheitsgrad bindet, bleiben \(50\) Freiheitsgrade übrig, um die Gültigkeitsintervalle zu bilden.
 
@@ -800,5 +947,7 @@ Mit \(i\in[0, N]\):
 	Ulf Konrad, ``Geiger--Müller--Zählrohr'', \url{https://www.ulfkonrad.de/physik/geiger-mueller-zaehlrohr}, Abruf am 22.04.2024
 \bibitem{Totzeit}
 	Lexikon der Physik, ``Totzeit'', \url{https://www.spektrum.de/lexikon/physik/totzeit/14643}, Abruf am 22.04.2024
+\bibitem{Julia:Measurements}
+	\code{\hyperlink{https://julialang.org}{Julia}}--Paket \code{Measurements}, Dokumentation unter \url{https://juliaphysics.github.io/Measurements.jl/stable}
 \end{thebibliography}
 \end{document}
