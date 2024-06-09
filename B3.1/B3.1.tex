@@ -203,8 +203,8 @@ Die entsprechende  Wahrscheinlichkeit $P(N,n,p)$ gibt demnach die Wahrscheinlich
 
 \begin{eqnarray}
 	P(N,n,p) &=& \binom{N}{n} p^n (1-p)^{N-n} \\
-	m &=& Np \\
-	\sigma^2 &=& N p (1-p)
+	m_B &=& Np \\
+	\sigma^2_B &=& N p (1-p)
 \end{eqnarray}
 
 \noindent
@@ -227,7 +227,7 @@ Die Poissonverteilung $P_\lambda(n)$ folgt als Grenzfall aus der Binomialverteil
 
 \begin{eqnarray}
 	P(n, \lambda)  &=& \lim_{N \rightarrow \infty \atop p\rightarrow 0} P(N, n, p) \\
-	N p &\leq& 10
+	m_B &\leq& 10
 \end{eqnarray}
 
 \subsubsection{Gaußverteilung}
@@ -246,12 +246,12 @@ Der Grenzwert der Poissonverteilung für $\lambda \rightarrow \infty$ liefert di
 \end{eqnarray}
 
 \noindent
-Weiterhin konvergiert die Binomialverteilung nach dem \emph{Satz von Moivre--Laplace} für $N \rightarrow \infty$ mit der Bedingung $0 < p < 1$ gegen die Normalverteilung. Eine Faustregel besagt, dass die Normalverteilung schon eine gute Näherung für die Binomialverteilung liefert, sobald gilt die untenstehende Bedingung erfüllt ist.
+Weiterhin konvergiert die Binomialverteilung nach dem \emph{Satz von Moivre--Laplace} für $N \rightarrow \infty$ mit der Bedingung $0 < p < 1$ gegen die Normalverteilung. Eine Faustregel besagt, dass die Normalverteilung schon eine gute Näherung für die Binomialverteilung liefert, sobald ihre Varianz $\sigma^2_B$ mindestens $9$ beträgt.
 
 \begin{eqnarray}
 	\lim_{N \rightarrow \infty} \binom{N}{n} p^n (1-p)^{N-n}
 		&=& \frac{1}{\sqrt{2 \pi N p (1-p)}} e^{- \frac{(x - Np)^2}{2 N p (1-p)}} \\
-	Np (1-p) &\geq& 9
+	\sigma^2_B &\geq& 9
 \end{eqnarray}
 
 \hypertarget{Intervallverteilung}{\subsection{Intervallverteilung}\label{Intervallverteilung}}
@@ -924,7 +924,7 @@ Damit lässt sich schließen, dass $H_2$ für einen totzeitkorrigierten Mittelwe
 \end{table}
 
 \noindent
-Würde man stattdessen Pearsons $\chi^2$--Test\footnote{Siehe Abschnitt \ref{pearsons-chi2test}} durchführen, so würde man nur einen $\chi_\mathrm{P, max}^2 = 67.505$--Wert zum Vergleich verwenden. \cite{Kapur} In diesem Falle würden die Hypothesen $H_1(m^\prime)$ und $H_2(m)$ bekräftigt werden, während die anderen Hypothesen verworfen werden.
+Würde man stattdessen Pearsons $\chi^2$--Test\footnote{Siehe Abschnitt \ref{pearsons-chi2test}} durchführen, so würde man nur einen einzelnen Wert $\chi_\mathrm{P, max}^2 = 67.505$ zum Vergleich verwenden. \cite{Kapur} In diesem Falle würden die Hypothesen $H_1(m^\prime)$ und $H_2(m)$ bekräftigt werden, während die anderen Hypothesen verworfen werden.
 
 Damit könnte man aus den Ergebnissen schließen, dass die Präparatstärke im gemessenen Zeitrahmen konstant ist. Diese Konstante entspricht dem gemessenen Mittelwert $m^\prime$, der etwa $10\,\%$ kleiner als der totzeitkorrigierte Mittelwert $m$ ist.
 
@@ -957,6 +957,21 @@ Daher könnte man die Halbwertszeit auf diese Weise messen, allerdings nur bei P
 \clearpage
 \hypertarget{fazit}{%
 \section{Fazit}\label{fazit}}
+Zusammenfassend scheint das Experiment erfolgreich gewesen zu sein. Die Darstellungen der Messwerte durch die Verteilungen ist gut gelungen, die $\chi^2$--Tests haben akzeptable Ergebnisse geliefert. Nur die Bestimmung der Totzeit scheint teilweise recht ungenau zu sein.
+
+So lange man nicht zu viele Ereignisse misst, kann man die Verteilung sowohl mit einer Poisson--Verteilung als auch einer Gauß--Verteilung darstellen. Bis zu einer gewissen Menge von Ereignissen ist die Poisson--Verteilung sinnvoller zu verwenden, danach die Gauß--Verteilung.
+
+Dies bestätigt den Satz von Moivre--Laplace, nach dem eine Binomialverteilung ab einer Standardabweichung von $9$ durch eine Gauß--Verteilung beschrieben werden kann. Auch dass die Poisson--Verteilung als Grenzfall der Binomialverteilung folgen kann, wurde auf diese Weise bestätigt.
+
+Die Totzeit mithilfe der Zwei--Präperate--Methode zu bestimmen ist rechnerisch aufwendig, allerdings gut machbar. Allerdings sind die manuell errechneten Fehler sehr hoch, bei mindestens $50\,\%$ und bis zu ca. $370\,\%$. Auch wenn man die Fehler direkt von einer Software berechnen kann, sind die relativen Fehler $\tau_1=1\mathrm{\,ms}-6\mathrm{\,ms}$ sehr hoch. Bei $\tau_2>18\mathrm{\,ms}$ dagegen sind die Ungenauigkeiten deutlich geringer.
+
+Ein weiteres Problem liefert der Umstand, dass es zwei rechnerisch mögliche Totzeiten gibt. Allerdings kann es physikalisch nur eine Totzeit geben, da diese eine Eigenschaft des Detektors beschreibt. Daher sollte die Totzeit auch auf eine andere Methode bestimmt werden, um die richtige Totzeit finden. Dafür bietet sich die Analyse einer Invervallverteilung der Messwerte an.
+
+Die $\chi^2$--Tests begründen eine Ablehnung aller drei getätigten Hypothesen. Allerdings sind sie dennoch aussagekräftig: Nur die Möglichkeit, dass Präperatsstärke von $\ce{^{137}Cs}$ im Zeitraum von Minuten konstant bleibt, kann durch die Tests unterstützt werden. Bei dem $\chi^2$--Test nach Pearson wird diese These eindeutig bekräftigt.
+
+Hierbei kann der gemessene Mittelwert der Messwerte als konstanter Wert angenommen werden. Dieser ist allerdings durch die Totzeit um ca. $10\,\%$ kleiner als der tatsächliche Mittelwert.
+
+Zuletzt wurde die Halbwertszeit einer Probe ermittelt, die zu Beginn die selbe Präperatsstärke wie unsere Probe hat, bei der dagegen ein linearer Abfall zu beobachten wäre. Um den in der dritten Hypothese beschriebene Steigung zu erhalten, ist eine Halbwertszeit von ca. $1.5\mathrm{\,h}-2\mathrm{\,h}$ benötigt.
 
 \clearpage
 \hypertarget{literatur}{\section{Literaturverzeichnis}\label{literatur}}
