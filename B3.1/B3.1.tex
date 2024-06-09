@@ -37,11 +37,6 @@
 
 \include{../media/Silbentrennung.tex}
 
-% disable commands
-\renewcommand{\[}{} % math block start
-\renewcommand{\]}{\noindent} % math block end
-\newcommand{\tightlist}{} % created in enumerations
-
 \hypersetup{
   pdftitle={B3.1},
   pdfcreator={LaTeX via pandoc}}
@@ -300,17 +295,17 @@ Da die Wahrscheinlichkeit $W$ das Integral der Wahrscheinlichkeitsdichte $P_n$ d
 
 Ein Hypothesentest oder Statistischer Test dient dazu, durch eine Hypothese mittels statistischer Messungen zu bewerten.
 
-Dazu verwendet man eine \emph{Nullhypothese}\footnote{\emph{Hypothesis  to be nullified} \([5]\)} \(H_0\) und eine \emph{Gegenhypothese} oder \emph{Alternativhypothese} \(H_1\), die sich unterscheiden. Ziel des Tests ist es, die Alternativhypothese \(H_1\) zu belegen. Falls dies nicht gelingt, muss man die Nullhypothese \(H_0\) als wahr annehmen. Diese wird nicht überprüft. \([2]\)
+Dazu verwendet man eine \emph{Nullhypothese}\footnote{\emph{Hypothesis  to be nullified} \cite{Gigerenzer}} \(H_0\) und eine \emph{Gegenhypothese} oder \emph{Alternativhypothese} \(H_1\), die sich unterscheiden. Ziel des Tests ist es, die Alternativhypothese \(H_1\) zu belegen. Falls dies nicht gelingt, muss man die Nullhypothese \(H_0\) als wahr annehmen. Diese wird nicht überprüft. \cite{Statistical Inference}
 
 Aufgrund der Zufälligkeit der Ereignisse kann es dabei zwei Arten von Fehlern geben. Ein \(\alpha\)--Fehler beschreibt das irrtümliche Ablehnen von \(H_0\), während ein \(\beta\)--Fehler das fälschliche Annehmen von \(H_0\) bezeichnet.
 
 \hypertarget{fehlerarten}{%
 \subsubsection{Fehlerarten}\label{fehlerarten}}
-Ein \emph{Fehler erster Art} oder \(\alpha\)--Fehler beschreibt die fälschliche Ablehnung der Nullhypothese \(H_0\) in einem Statistischen Test. Man nimmt z.B. an, dass ein Würfel gezinkt ist \((H_1)\), obwohl er in Wahrheit fair ist \((H_0)\). Hierbei ist die \(H_0\) die Annahme eines fairen Würfels. Man spricht hier auch von einem \emph{falsch--positiven} Ergebnis. \([3]\)
+Ein \emph{Fehler erster Art} oder \(\alpha\)--Fehler beschreibt die fälschliche Ablehnung der Nullhypothese \(H_0\) in einem Statistischen Test. Man nimmt z.B. an, dass ein Würfel gezinkt ist \((H_1)\), obwohl er in Wahrheit fair ist \((H_0)\). Hierbei ist die \(H_0\) die Annahme eines fairen Würfels. Man spricht hier auch von einem \emph{falsch--positiven} Ergebnis. \cite{Statistical Inference}
 
-Ein \emph{Fehler zweiter Art} oder \emph{\(\beta\)--Fehler} beschreibt umgekehrt die fälschliche Akzeptanz der Nullhypothese \(H_0\). Beispielsweise geht man davon aus, dass ein Würfel fair ist \((H_0)\), obwohl er tatsächlich unfair ist \((H_1)\). Man spricht hier auch von einem \emph{falsch--negativen} Ergebnis. \([3]\)
+Ein \emph{Fehler zweiter Art} oder \emph{\(\beta\)--Fehler} beschreibt umgekehrt die fälschliche Akzeptanz der Nullhypothese \(H_0\). Beispielsweise geht man davon aus, dass ein Würfel fair ist \((H_0)\), obwohl er tatsächlich unfair ist \((H_1)\). Man spricht hier auch von einem \emph{falsch--negativen} Ergebnis. \cite{Statistical Inference}
 
-Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit, einen \(\alpha\)--Fehler zu begehen. \([4]\) In einem \emph{Alternativtest} dagegen beschreibt die Signifikanz die Wahrscheinlichkeit, einen \(\alpha\)- oder einen \(\beta\)--Fehler zu machen. Bei einer Signifikanz \(Y\) sind \(\alpha\)-- und \(\beta\)--Fehler mit einer Wahrscheinlichkeit von je \(\frac{Y}{2}\) erlaubt.
+Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit, einen \(\alpha\)--Fehler zu begehen. \cite{Statistical Inference} In einem \emph{Alternativtest} dagegen beschreibt die Signifikanz die Wahrscheinlichkeit, einen \(\alpha\)- oder einen \(\beta\)--Fehler zu machen. Bei einer Signifikanz \(Y\) sind \(\alpha\)-- und \(\beta\)--Fehler mit einer Wahrscheinlichkeit von je \(\frac{Y}{2}\) erlaubt.
 
 \hypertarget{der-chi2anpassungstest}{%
 \subsubsection{\texorpdfstring{Der
@@ -978,49 +973,40 @@ Zuletzt wurde die Halbwertszeit einer Probe ermittelt, die zu Beginn die selbe P
 \renewcommand{\section}[2]{}
 
 \begin{thebibliography}{99}
+\bibitem{Statistical Inference}
+	G. Casella, R. L. Berger, ``Statistical Inference'', ISBN~9781003456285,
+	DOI~\hyperlink{https://doi.org/10.1201/9781003456285}{10.1201/9781003456285}
+\bibitem{Gigerenzer}
+	G. Gigerenzer, ``Mindless statistics'', 2004, \emph{The Journal of
+		Socio--Economics},
+		DOI~\href{https://doi.org/10.1016/j.socec.2004.09.033}{0.1016/j.socec.2004.09.033}
+\bibitem{Cramer} % unlinked
+	E. Cramer \& U. Kamps, ``Grundlagen der Wahrscheinlichkeitsrechnung
+	und Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-662-60552-3}{10.1007/978-3-662-60552-3}
+\bibitem{Puhani} % unlinked
+	J. Puhani, ``Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-658-28955-3}{10.1007/978-3-658-28955-3}
+\bibitem{McHugh}
+	Mary L. McHugh, ``The Chi-square test of independence'', Biochemia Medica, DOI~\href{https://doi.org/10.11613/BM.2013.018}{10.11613/BM.2013.018}
+\bibitem{Kapur}
+	K. C. Kapur \& M. Pecht, ``Reliability Engineering'': Appendix E,
+	Wiley 2014,
+	DOI~\href{https://doi.org/10.1002/9781118841716}{10.1002/9781118841716}
 \bibitem{uni}
 	Universität zu Köln, ``B3.1: Statistik der Kernzerfälle'', Januar
 	2021, Online verfügbar unter
 	\url{https://www.ikp.uni-koeln.de/fileadmin/data/praktikum/B3.1_statistik_de.pdf}
-\bibitem{Wiki:Statistischer Test}
-	Wikipedia, ``Statistischer Test'',
-	\url{https://de.wikipedia.org/wiki/Statistischer_Test}, Abruf am
-	18.04.2024
-\bibitem{Fehler 1. und 2. Art}
-	Wikipedia, ``Fehler 1. und 2. Art'',
-	\url{https://de.wikipedia.org/wiki/Fehler_1._und_2._Art}, Abruf am
-	18.04.2024
-\bibitem{Statistische Signifikanz}
-	Wikipedia, ``Statistische Signifikanz'',
-	\url{https://de.wikipedia.org/wiki/Statistische_Signifikanz}, Abruf am
-	18.04.2024
-\bibitem{Gigerenzer}
-	G. Gigerenzer, ``Mindless statistics'', 2004, \emph{The Journal of
-	Socio--Economics}, p.587-606, DOI
-	\href{https://doi.org/10.1016/j.socec.2004.09.033}{0.1016/j.socec.2004.09.033}
-\bibitem{Kapur}
-	K. C. Kapur \& M. Pecht, ``Reliability Engineering'': Appendix E,
-	Wiley 2014, DOI
-	\href{https://doi.org/10.1002/9781118841716}{10.1002/9781118841716}
-\bibitem{Cramer}
-	E. Cramer \& U. Kamps, ``Grundlagen der Wahrscheinlichkeitsrechnung
-	und Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-662-60552-3}{10.1007/978-3-662-60552-3}
-\bibitem{Puhani}
-	J. Puhani, ``Statistik'', Springer 2020, DOI~\href{https://doi.org/10.1007/978-3-658-28955-3}{10.1007/978-3-658-28955-3}
-\bibitem{McHugh}
-	Mary L. McHugh, ``The Chi-square test of independence'', Biochemia Medica, DOI~\href{https://doi.org/10.11613/BM.2013.018}{10.11613/BM.2013.018}
 \bibitem{Halbwertszeit}
 	Lexikon der Physik, ``Halbwertszeit'', \url{https://www.spektrum.de/lexikon/physik/halbwertszeit/6327}, Abruf am 07.06.2024
 \bibitem{Chart of Nuclides}
 	National Nuclear Data Center, ``Chart of Nuclides'',
 	\url{https://www.nndc.bnl.gov/nudat3}, $\ce{^{137}Cs}$,
 	Abruf am 07.05.2024
-\bibitem{File:Geigerzählrohr}
-	Wikimedia, ``File:Geiger Mueller Counter with Circuit-de.svg'', \url{https://commons.wikimedia.org/wiki/File:Geiger_Mueller_Counter_with_Circuit-de.svg}, Abruf am 22.04.2024
 \bibitem{ulfkonrad}
 	Ulf Konrad, ``Geiger--Müller--Zählrohr'', \url{https://www.ulfkonrad.de/physik/geiger-mueller-zaehlrohr}, Abruf am 22.04.2024
 \bibitem{Totzeit}
 	Lexikon der Physik, ``Totzeit'', \url{https://www.spektrum.de/lexikon/physik/totzeit/14643}, Abruf am 22.04.2024
+\bibitem{File:Geigerzählrohr}
+	Wikimedia, ``File:Geiger Mueller Counter with Circuit-de.svg'', \url{https://commons.wikimedia.org/wiki/File:Geiger_Mueller_Counter_with_Circuit-de.svg}, Abruf am 22.04.2024
 \bibitem{Julia:Measurements}
 	\code{\hyperlink{https://julialang.org}{Julia}}--Paket \code{Measurements}, Dokumentation unter \url{https://juliaphysics.github.io/Measurements.jl/stable}
 \end{thebibliography}
