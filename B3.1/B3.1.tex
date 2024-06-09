@@ -677,7 +677,7 @@ Die gemessene Intervall--Verteilung mit $n = 0$ wird nun mit der theoretischen V
 \noindent
 Das Ergebnis ist in Abbildung \ref{fig:intervalFit} zu sehen. Dabei ist zu beachten, dass die ersten acht Messwerte der gemessenen Intervall--Verteilung für den Fit ausgeschlossen wurden, da sie in einem Zeitabschnitt liegen, der kleiner als die erwartete Totzeit ist, wodurch ihre Ergebnisse stark von den erwarteten abweichen dürften.
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.1/intervalFit.pdf}
 	\caption{Gemessene Intervall-Verteilung für Quelle Nr. 6 bei $500 \mathrm{\, V}$ für $n = 0$ und dazu gefittete theoretische Intervall-Verteilung}
@@ -705,7 +705,7 @@ Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ mit der Mitternachtsfo
 \begin{eqnarray}
 	\Delta N &=& \sqrt{N} \\
 	n_i &=& \frac{N_i}{T} \\
-	\Delta n_i &=&???
+	\Delta n_i &=& \frac{\Delta N_i}{T}
 \end{eqnarray}
 
 \begin{table}[h!]
@@ -757,7 +757,7 @@ Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ mit der Mitternachtsfo
 			& $19 \pm 10$ $(\pm\, 51\,\%)$ \\
 	\end{tabular}
 	\caption{Ermittelte Zählraten $z_i$ und Totzeiten $\tau_i$}
-	\label{tab:Totzeit Raten}
+	\label{tab:Totzeiten}
 \end{table}
 
 \noindent
@@ -807,13 +807,13 @@ Die Werte von $\tau_1$ stimmen eher mit den aus der Intervallverteilung Todzeite
 \begin{align}
 	\begin{split}
 		(\Delta A)^2 \eqspaced
-		& \big((-z'_{12}z'_2 + u'z'_{12} - u'z'_2)\Delta z'_1\big)^2
-			+\big((u'z'_{12}-z'_1z'_{12}-u'z'_1)\Delta z_2\big)^2 \\
-		&+\big((u'z'_2-z'_1z'_2+u'z'_1)\Delta z'_{12}\big)^2
-			+ \big((z'_{12}z'_2 + z'_{12}z'_1 -z'_1z'_2)\Delta u'\big)^2
+		& \big((-z^\prime _{12}z^\prime _2 + u^\prime z^\prime _{12} - u^\prime z^\prime _2)\Delta z^\prime _1\big)^2
+			+\big((u^\prime z^\prime _{12}-z^\prime _1z^\prime _{12}-u^\prime z^\prime _1)\Delta z_2\big)^2 \\
+		&+\big((u^\prime z^\prime _2-z^\prime _1z^\prime _2+u^\prime z^\prime _1)\Delta z^\prime _{12}\big)^2
+			+ \big((z^\prime _{12}z^\prime _2 + z^\prime _{12}z^\prime _1 -z^\prime _1z^\prime _2)\Delta u^\prime \big)^2
 	\end{split} \\
-	(\Delta B)^2 \eqspaced&  (2z'_2 \Delta z'_1)^2 + (2z'_1 \Delta z'_2)^2 + (-2u' \Delta z'_{12})^2 + (-2z'_{12} \Delta u')^2 \\
-	(\Delta C)^2 \eqspaced& (\Delta z'_1)^2 + (\Delta z'_2)^2 + (\Delta z'_{12})^2 + (\Delta u')^2
+	(\Delta B)^2 \eqspaced&  (2z^\prime _2 \Delta z^\prime _1)^2 + (2z^\prime _1 \Delta z^\prime _2)^2 + (-2u^\prime  \Delta z^\prime _{12})^2 + (-2z^\prime _{12} \Delta u^\prime )^2 \\
+	(\Delta C)^2 \eqspaced& (\Delta z^\prime _1)^2 + (\Delta z^\prime _2)^2 + (\Delta z^\prime _{12})^2 + (\Delta u^\prime )^2
 \end{align}
 
 \noindent
@@ -842,49 +842,91 @@ Die Totzeit scheint i.A. mit steigender Spannung kleiner zu werden. Vermutlich w
 
 \hypertarget{chi2test}{\subsection{$\chi^2$--Test}\label{chi2test}}
 
-Es werden \(51\) zufällige Messergebnisse gewählt, aus denen \(\chi^2\) gewählt wird. Da der Mittelwert einen statistischen Freiheitsgrad bindet, bleiben \(50\) Freiheitsgrade übrig, um die Gültigkeitsintervalle zu bilden.
+Nun sollen drei verschiedene Hypothesen mit dem $\chi^2$--Test bewertet werden. Dazu wurde eine Stichprobe aus der $45\mathrm{\,min}$--Messung mit den beiden Proben $A$ und $B$ bei $500\mathrm{\,V}$ verwendet. Als Messergebnis wurden die Anzahl der Detektionen in jeweils $10\mathrm{\,s}$--Intervallen definiert.
+
+Es wurden die ersten \(51\) Zeitintervalle gewählt, weil die $\chi^2$--Grenzen für $50$ statistische Freiheitsgrade bekannt sind. \cite{Kapur} Ein Freiheitsgrad der $51$ Werte wird durch das Bilden des Mittelwerts gebunden.
+
+\subsubsection{Hypothesen}
+\label{Hypothesen}
+Es sollen drei verschiedene Hypothesen $H_i$. In allen Hypothesen wird ein ``Mittelwert'' verwendet. Dieser gemessene Mittelwert $m^\prime$ wird aus den $51$ Messwerten gebildet. Zudem kann dieser totzeitkorrigierte Mittelwert $m$ nach Gleichung \ref{eq:Totzeitkorrigiert EW} berechnet werden. Dieser ist ca. $9\,\%$ größer als $m^\prime$. Als Totzeit wurde der Mittelwert der in Abschnitt \ref{Totzeit bestimmen} bestimmten $\tau_1$ verwendet.
 
 \begin{eqnarray}
-    \chi^2_\mathrm{min} &=& 32.357 \\
-    \chi^2_\mathrm{max} &=& 71.420
+	m^\prime &\approx& 654 \\
+	m &\approx& 714
 \end{eqnarray}
 
-\hypertarget{hypothese-h_1}{%
-\subsubsection{\texorpdfstring{Hypothese
-\(H_1\)}{Hypothese H\_1}}\label{hypothese-h_1}}
+Hypothese $H_1$ besagt, die Präparatstärke sei im betrachteten Zeitraum konstant und gleiche dem Mittelwert der Messwerte. Aufgrund der im Vergleich zur Halbwertszeit der Proben kurzen Messdauer diese Hypothese $H_1$ als am wahrscheinlichsten betrachtet.\footnote{Vergleiche Abschnitte \ref{Zerfallswahrscheinlichkeit} und \ref{Herleitung Zerfallswahrscheinlichkeit}}
 
-Nach \(\eqref{ChiSquared}\):
+Hypothese $H_2$ dagegen behauptet, die Präparatstärke sei im betrachteten Zeitraum konstant und um $10\,\%$ kleiner als der Mittelwert der Messwerte. Diese Hypothese könnte zutreffen, wenn der totzeitkorrigierte Mittelwert verwendet wird.
 
-\[
+Hypothese $H_3$ dagegen nimmt an, dass die Präparatstärke im betrachteten Zeitraum linear mit der Zeit abnimmt. Dies soll eine erste Näherung eines exponentiellen Abfalls darstellen. Die Anfangszählrate ist der Mittelwert der Messwerte und der Abfall von einer Messung zur anderen sei $1$. Diese Hypothese würde eher bei Proben mit deutlich kürzerer Halbwertszeit oder bei deutlich längeren Messungen erwartet werden.
+
+Diese Hypothesen werden zusammen mit den gewählten Messwerten in Abbildung \ref{abb:Hypothesen} dargestellt. Die Hypothese $H_1(m^\prime)$ scheint die Daten am Besten zu beschreiben, gefolgt von der totzeitkorrigierten Hypothese $H_2(m)$.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.1/Hypothesen_plot.pdf}
+	\caption{Visualisierung der Hypothesen sowie der gewählten Messwerte,\\
+		jeweils für gemessene Mittelwerte $m$ und totzeitkorrigierte Mittelwerte $m^\prime$}
+	\label{abb:Hypothesen}
+\end{figure}
+
+\newpage
+\subsubsection{$\chi^2$--Werte}
+Nun müssen die einzelnen $\chi^2_i$--Werte für die Hypothesen $H_i$ ermittelt werden. Dazu werden die Summen nach Gleichung \eqref{ChiSquared} gebildet. Für die Hypothesen $H_2$ und $H_3$ muss der Mittelwert entsprechend angepasst werden, wodurch folgende Relationen entstehen.
+
 \begin{eqnarray}
-    \bar x &=& \bar n \\
-    \chi^2_1 &=& \sum_i \frac{(x_i-\bar x)^2}{\bar x}
+	\bar x &\in& \{m, m^\prime\} \\
+	\chi^2_1 &=& \sum_i \frac{(x_i-\bar x_1)^2}{\bar x_1} \\
+	\chi^2_2 &=& \sum_i \frac{(x_i-0.9\,\bar x)^2}{0.9\,\bar x} \\
+	\chi^2_3 &=& \sum_i \frac{(x_i-(\bar{x} - i))^2}{(\bar{x} - i)}
 \end{eqnarray}
-\]
 
-\hypertarget{hypothese-h_2}{%
-\subsubsection{\texorpdfstring{Hypothese
-\(H_2\)}{Hypothese H\_2}}\label{hypothese-h_2}}
+\noindent
+Die daraus folgenden Ergebnisse werden in Tabelle \ref{tab:ChiSquared} dargestellt. Alle Hypothesen müssen abgelehnt werden. Allerdings gibt es zwei Hypothesen, namentlich $H_1(m^\prime)$ und $H_2(m)$, bei denen der Minimalwert $\chi^2_\mathrm{min}$ unterschritten wurde. Im Falle von $H_1(m^\prime)$ ist das $\chi^2$ um ca. $36\,\%$ kleiner. Im Fall von $H_2(m)$ ist das $\chi^2$ dagegen nur um ca. $4.36\,\%$ kleiner.
 
-\[
-\begin{eqnarray}
-    \bar x^\prime &=& 0.9\cdot\bar n \\
-    \chi^2_2 &=& \sum_i \frac{(x_i-\bar x^\prime)^2}{\bar x^\prime}
-\end{eqnarray}
-\]
+Damit lässt sich schließen, dass $H_2$ für einen totzeitkorrigierten Mittelwert am ehesten bekräftigen lässt.
 
-\hypertarget{hypothese-h_3}{%
-\subsubsection{\texorpdfstring{Hypothese
-\(H_3\)}{Hypothese H\_3}}\label{hypothese-h_3}}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c}
+		$H_1(m^\prime)$
+			& $H_1(m)$
+			& $H_2(m^\prime)$
+			& $H_2(m)$
+			& $H_3(m^\prime)$
+			& $H_3(m)$
+			\\
+		\hline
+		$20.84$
+			& $475.73$
+			& $393.64$
+			& $25.14$
+			& $106.02$
+			& $270.52$
+			\\
+		$\chi^2 < \chi^2_\mathrm{min}$
+			& $\chi^2 \gg \chi^2_\mathrm{max}$
+			& $\chi^2 \gg \chi^2_\mathrm{max}$
+			& $\chi^2 < \chi^2_\mathrm{min}$
+			& $\chi^2 > \chi^2_\mathrm{min}$
+			& $\chi^2 \gg \chi^2_\mathrm{min}$
+			\\
+		$\chi^2 < \chi_\mathrm{P, max}^2$
+			& $\chi^2 \gg \chi_\mathrm{P, max}^2$
+			& $\chi^2 \gg \chi_\mathrm{P, max}^2$
+			& $\chi^2 < \chi_\mathrm{P, max}^2$
+			& $\chi^2 > \chi_\mathrm{P, max}^2$
+			& $\chi^2 \gg \chi_\mathrm{P, max}^2$
+	\end{tabular}
+	\caption{Ergebnisse des $\chi^2$--Tests mit $\chi^2_\mathrm{min} = 32.357$ und $\chi^2_\mathrm{max} = 71.420$ \cite{Kapur}}
+	\label{tab:ChiSquared}
+\end{table}
 
-Mit \(i\in[0, N]\):
+\noindent
+Würde man stattdessen Pearsons $\chi^2$--Test\footnote{Siehe Abschnitt \ref{pearsons-chi2test}} durchführen, so würde man nur einen $\chi_\mathrm{P, max}^2 = 67.505$--Wert zum Vergleich verwenden. \cite{Kapur} In diesem Falle würden die Hypothesen $H_1(m^\prime)$ und $H_2(m)$ bekräftigt werden, während die anderen Hypothesen verworfen werden.
 
-\[
-\begin{eqnarray}
-    \expval{x(i)} &=& \bar n - i \\
-    \chi^2_3 &=& \sum_i \frac{(x_i-(n - i))^2}{(n - i)}
-\end{eqnarray}
-\]
+Damit könnte man aus den Ergebnissen schließen, dass die Präparatstärke im gemessenen Zeitrahmen konstant ist. Diese Konstante entspricht dem gemessenen Mittelwert $m^\prime$, der etwa $10\,\%$ kleiner als der totzeitkorrigierte Mittelwert $m$ ist.
 
 \hypertarget{totzeit}{%
 \subsubsection{Halbwertszeit}\label{totzeit}}
