@@ -928,14 +928,31 @@ Würde man stattdessen Pearsons $\chi^2$--Test\footnote{Siehe Abschnitt \ref{pea
 
 Damit könnte man aus den Ergebnissen schließen, dass die Präparatstärke im gemessenen Zeitrahmen konstant ist. Diese Konstante entspricht dem gemessenen Mittelwert $m^\prime$, der etwa $10\,\%$ kleiner als der totzeitkorrigierte Mittelwert $m$ ist.
 
-\hypertarget{totzeit}{%
-\subsubsection{Halbwertszeit}\label{totzeit}}
-\begin{eqnarray}
-	N(t) &=& \bar{n} \cdot \exp[-\lambda t] \\
-	\bar{n}-1 &=& \bar{n} \cdot \exp[-\lambda \Delta t] \\
-	\Rightarrow \lambda &=& \frac{1}{\Delta t} \ln(\frac{\bar{n}}{\bar{n}-1}) \\
-	\Rightarrow T_{1/2} &=& \frac{\Delta t \ln(2)}{\ln(\frac{\bar{n}}{\bar{n}-1})}
-\end{eqnarray}
+\hypertarget{totzeit}{\subsubsection{Halbwertszeit}\label{totzeit}}
+Die Hypothese $H_3$ nähert den exponentiellen Abfall der Präparatstärke linear an. Wie schon in Abschnitt \ref{Hypothesen} erläutert wurde, ist dies für den beobachteten Messzeitraum nicht beobachtbar, was auch der $\chi^2$--Test bekräftigt.
+
+Dennoch ist die Näherung im Allgemeinen sinnvoll. Die Halbwertszeit der $\ce{^{137}Cs}$--Probe von ca. $T_\mathrm{Cs}=30$ Jahren \cite{Chart of Nuclides}  zu groß, um in unseren Messungen einen (linearen) Abfall der Präparatstärke zu beobachten, so die These.
+
+Im Folgenden soll angenommen werden, Hypothese $H_3$ treffe zu. Dann kann die Halbwertszeit der Probe $T_{1/2}$ aus der Steigung des beobachteten Abfalls ermittelt werden.
+
+Hierzu wird die Präperatsstärke durch die Anzahl der nicht--zerfallenen Atome $N(t)$ beschrieben. Nach Hypothese $H_3$ sei die Präperatsstärke zum Zeitpunkt $t=0$ identisch mit dem gemessenen Mittelwert. Daraus folgt Gleichung \eqref{eq:HWZ 1}.
+
+Weiterhin soll $N(\Delta t)$ nach $\Delta t=10\mathrm{\,s}$ um $1$ geringer als $N(0)$ sein, was durch Gleichung \eqref{eq:HWZ 2} beschrieben wird. Damit kann die Zerfallswahrscheinlichkeit $\lambda$ bestimmt werden. Folglich erhält man die Halbwertszeit nach Gleichung \eqref{eq:Zerfallswahrscheinlichkeit}.
+
+\begin{align}
+	N(t) =& m \cdot \exp[-\lambda t] \label{eq:HWZ 1}\\
+	N(\Delta t) =& m-1 \\
+	m-1 =& m \cdot \exp[-\lambda \Delta t] \label{eq:HWZ 2}\\
+	\lambda =& \frac{1}{\Delta t} \ln(\frac{m}{m-1}) \\
+	T_{1/2}(m) =& \frac{\Delta t \ln(2)}{\ln(\frac{m}{m-1})}
+\end{align}
+
+\noindent
+Auf diese Weise erhält man eine Halbwertszeit von $T_{1/2}(m^\prime)=1\,\mathrm{h}\,28\,\mathrm{min}\lll T_\mathrm{Cs}$ und eine totzeitkorrigierte Halbwertszeit von $T_{1/2}(m)=1\,\mathrm{h}\,51\,\mathrm{min}\lll T_\mathrm{Cs}$. Beide Halbwertszeiten verschwinden im Vergleich zu der Halbwertszeit von $\ce{^{137}Cs}$.
+
+Zudem gibt es ein weiteres systematisches Problem. Nach $H_3$ soll $N(0)$ dem Mittelwert aller Messwerte entsprechen. Bei linear abfallenden Werten dürfte dieser Mittelwert in etwa dem Wert nach der halben Messdauer entsprechen. Stattdessen müsste man den Mittelwert der ersten Werte verwenden.
+
+Daher könnte man die Halbwertszeit auf diese Weise messen, allerdings nur bei Proben, die eine deutlich kürzere Halbwertszeit als $\ce{^{137}Cs}$ haben. Dabei muss man allerdings einen anderen Startwert $N(0)$ als in der Hypothese $H_3$ wählen.
 
 \clearpage
 \hypertarget{fazit}{%
