@@ -92,10 +92,10 @@ Bei radioaktivem Zerfall wandelt sich ein Atomkern in einen anderen Atomkern um,
 Es wird zwischen $(\alpha)$--, $\beta$--und $\gamma$--Zerfall unterschieden. Der Energiegewinn durch den Zerfall wird durch den $Q$--Wert beschrieben und kann durch die Weizsäcker Massenformel ermittelt werden.
 
 \hypertarget{Halbwertszeit}{\subsubsection{Halbwertszeit}\label{Halbwertszeit}}
-Die Halbwertszeit $T_{1/2}$ ist die Zeit, in der die Hälfte einer Anzahl von Kernen oder Elementarteilchen eines Stoffes zerfällt. Sie ist eine charakteristische Größe für radioaktive Zerfälle , die unabhängig von der aktuell vorhandenen Substanzmenge ist. \cite{Halbwertszeit}
+Die Halbwertszeit $T_{1/2}$ ist die Zeit, in der die Hälfte einer Anzahl von Kernen oder Elementarteilchen eines Stoffes zerfällt. Sie ist eine charakteristische Größe für radioaktive Zerfälle, die unabhängig von der aktuell vorhandenen Substanzmenge ist. \cite{Halbwertszeit}
 
 \hypertarget{Zerfallswahrscheinlichkeit}{\subsubsection{Zerfallswahrscheinlichkeit}\label{Zerfallswahrscheinlichkeit}}
-Die \emph{Zerfallswahrscheinlichkeit} $\alpha$ ist eine isotopspezifische Konstante, die angibt wie schnell ein Kern des entsprechenden Isotops zerfällt. Sie steht in Relation mit der Halbwertrsbreite $T_{1/2}$. Dies wird im Folgenden  Abschnitt \ref{Herleitung Zerfallswahrscheinlichkeit} hergeleitet.
+Die \emph{Zerfallswahrscheinlichkeit} $\alpha$ ist eine isotopspezifische Konstante, die angibt wie schnell ein Kern des entsprechenden Isotops zerfällt. Sie steht in Relation mit der Halbwertszeit $T_{1/2}$. Dies wird im folgenden Abschnitt hergeleitet.
 
 \begin{eqnarray}
 	\alpha &=& \frac{\ln{(2)}}{T_{1/2}} \label{eq:Zerfallswahrscheinlichkeit}
@@ -138,7 +138,7 @@ Ensprechend kann die Wahrscheinlichkeit $\omega$ für einen Zerfall innerhalb de
 \end{eqnarray}
 
 \noindent
-Die Zerfallswahrscheinlichkeit $\alpha$ lässt sich nun aus der Halbwertszeit.
+Die Zerfallswahrscheinlichkeit $\alpha$ lässt sich nun aus der Halbwertszeit ermitteln.
 
 \begin{eqnarray}
 	\omega(T_{1/2}) &=& \frac{1}{2} \\
@@ -398,7 +398,7 @@ Damit können die Differenzen zum Mittelwert \((n_i-\bar n)\) ermittelt werden. 
 
 \subsubsection{Das Geiger--Müller--Zählrohr}
 \label{Geiger--Müller--Zählrohr}
-Ein Geiger--Müller--Zählrohr besteht aus einem edelgasgefüllten Zylinderkondensator mit einem dünnem Anodendraht in der Mitte. Das elektrische Potential ist somit ein zylindersymmetrisch, um die Anode herum ist es am stärksten. Dies ist in Abbildung \ref{fig:Geiger--Müller--Zählrohr} schematisch dargestellt.
+Ein Geiger--Müller--Zählrohr besteht aus einem edelgasgefüllten Zylinderkondensator mit einem dünnem Anodendraht in der Mitte. Das elektrische Potential ist somit zylindersymmetrisch, um die Anode herum ist es am stärksten. Dies ist in Abbildung \ref{fig:Geiger--Müller--Zählrohr} schematisch dargestellt.
 
 Wenn ein Photon in den Zylinder eintritt und auf ein Gasteilchen trifft, wird die Energie des Photons übertragen und ein Elektron aus dem Atom gelöst. Durch das elektrische Potential wird das freie Elektron zur Anode hin beschleunigt und stößt auf dem Weg mit weiteren Gasteilchen. Dadurch sammeln sich immer mehr Elektronen um den Anodendraht.
 
@@ -649,7 +649,7 @@ Alle Gauß--Verteilungen passen gut zu den Messungen. Bei der $500\mathrm{\,V}$-
 
 Bei der anderen Messung von Probe $A$ ist der Peak der Kurve ein wenig zu höher, bei der gemeinsamen Messung der Proben $A$ und $B$ ist dies noch stärker der Fall. Zudem kann man bei letzterem Vergleich sehen, dass die gemessene Verteilung schmaler ist als die Gauß--Verteilung. Beides kann wiederum durch die Totzeit erklärt werden. Diese verringert anscheinend nicht nur die Position des Mittelwerts, sondern auch die Standardabweichung der Messung.
 
-Bei der Poisson--Verteilung ist dies einfach zu begründen.\footnote{Vergleiche Abschnitt \ref{Totzeit}} Es lässt sich vermuten, dass die Wirkung der Totzeit bei der Gauß--Verteilung ebenso wie bei der Gauß--Verteilung zutrifft.
+Bei der Poisson--Verteilung ist dies einfach zu begründen.\footnote{Vergleiche Abschnitt \ref{Totzeit}} Es lässt sich vermuten, dass die Totzeit bei der Gauß--Verteilung ähnlich wie bei der Poisson--Verteilung zutrifft.
 
 \hypertarget{intervallverteilung}{%
 \subsection{Intervallverteilung}\label{intervallverteilung}}
@@ -691,7 +691,7 @@ Dabei ist $a' \approx 36.80 \cdot 10^{-2} \mathrm{\,ms^{-1}}$ die für diese Que
 Für die anderen beiden gemessenen Intervall--Verteilungen für $n = 1,2$ ist ein Fit--Versuch mit der theoretischen Kurve nicht sinnvoll. Dies liegt daran, dass die Totzeit bei $n = 1,2$ nicht nur im vordersten Teil der Verteilung sichtbar ist, wie bei $n = 0$. Bei ihnen verändert die Totzeit hingegen die ganze Verteilung, wodurch kein sinnvoll zu fittender Bereich mehr übrig bleibt. Dem ist so, weil die Messung des dritten Zerfalls ebenfalls einer Totzeit unterliegt. Wann der zweite Zerfall allerdings gemessen wurde, ist aus den Daten nicht ersichtlich und vor allem immer unterschiedlich, wodurch an immer anderen Stellen eine Veränderung durch die Totzeit hinzukommt.
 
 \hypertarget{Totzeit bestimmen}{\subsection{Totzeit}\label{Totzeit bestimmen}}
-Die Totzeit $\tau$ wird hier mit der Zwei--Präparate--Methode bestimmt. Es wurden für die Proben $A$ und $B$ jeweils $N_A$ bzw. $N_B$ Ereignisse gemessen. Weiterhin wurden $N_{AB}$ Ereignisse bei Verweindung beider Proben $A$ und $B$ sowie $N_0$ Ereignisse ohne Proben gemessen. Letztere wurden durch die Untergrundstrahlung verursacht.
+Die Totzeit $\tau$ wird hier mit der Zwei--Präparate--Methode bestimmt. Es wurden für die Proben $A$ und $B$ jeweils $N_A$ bzw. $N_B$ Ereignisse gemessen. Weiterhin wurden $N_{AB}$ Ereignisse bei Verwendung beider Proben $A$ und $B$ sowie $N_0$ Ereignisse ohne Proben gemessen. Letztere wurden durch die Untergrundstrahlung verursacht.
 
 Aus den Zählungen $N_i$ und der Dauer der Messungen $T=5\mathrm{\,min}$ lassen sich Zählraten $n_i$ ermitteln. Die Ergebnisse sind in den Tabellen \ref{tab:Totzeit Ereignisse} dargestellt. Der Fehler der Zählungen $\Delta N_i$ wird durch die statistische Ungenauigkeit gegeben.
 
@@ -756,7 +756,7 @@ Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ mit der Mitternachtsfo
 \end{table}
 
 \noindent
-Die Werte von $\tau_1$ stimmen eher mit den aus der Intervallverteilung Todzeiten überein als die von $\tau_2$. $\tau_2(500\mathrm{\,V})$ trifft innerhalb der Fehlergrenzen ebenfalls diesen Wert, die zwei anderen allerdings nicht mehr.
+Die Werte von $\tau_1$ stimmen eher als die von $\tau_2$ mit den Totzeiten aus der Intervallverteilung überein. $\tau_2(500\mathrm{\,V})$ trifft innerhalb der Fehlergrenzen ebenfalls diesen Wert, die zwei anderen allerdings nicht mehr.
 
 \begin{align}
 	\begin{split}
@@ -812,7 +812,7 @@ Die Werte von $\tau_1$ stimmen eher mit den aus der Intervallverteilung Todzeite
 \end{align}
 
 \noindent
-Zusätzlich wurde die Totzeit digital ermittelt, dazu wurde das Paket \code{Measurements} in der Programmiersprache \code{Julia} verwendet. \cite{Julia:Measurements} Die Ergebnisse für $\tau _{1,2}$ sind gleich geblieben, allerdings unterscheiden sich die ermittelten Fehler, zum Teil erheblich. Die Eergebnisse sind in Tabelle \ref{tab:Totzeit m. Julia} dargestellt.
+Zusätzlich wurde die Totzeit digital ermittelt, dazu wurde das Paket \code{Measurements} in der Programmiersprache \code{Julia} verwendet. \cite{Julia:Measurements} Die Ergebnisse für $\tau _{1,2}$ sind gleich geblieben, allerdings unterscheiden sich die ermittelten Fehler, zum Teil erheblich. Die Ergebnisse sind in Tabelle \ref{tab:Totzeit m. Julia} dargestellt.
 
 \begin{table}[h!]
 	\centering
@@ -856,7 +856,7 @@ Hypothese $H_2$ dagegen behauptet, die Präparatstärke sei im betrachteten Zeit
 
 Hypothese $H_3$ dagegen nimmt an, dass die Präparatstärke im betrachteten Zeitraum linear mit der Zeit abnimmt. Dies soll eine erste Näherung eines exponentiellen Abfalls darstellen. Die Anfangszählrate ist der Mittelwert der Messwerte und der Abfall von einer Messung zur anderen sei $1$. Diese Hypothese würde eher bei Proben mit deutlich kürzerer Halbwertszeit oder bei deutlich längeren Messungen erwartet werden.
 
-Diese Hypothesen werden zusammen mit den gewählten Messwerten in Abbildung \ref{abb:Hypothesen} dargestellt. Die Hypothese $H_1(m^\prime)$ scheint die Daten am Besten zu beschreiben, gefolgt von der totzeitkorrigierten Hypothese $H_2(m)$.
+Diese Hypothesen werden zusammen mit den gewählten Messwerten in Abbildung \ref{abb:Hypothesen} dargestellt. Die Hypothese $H_1(m^\prime)$ scheint die Daten am besten zu beschreiben, gefolgt von der totzeitkorrigierten Hypothese $H_2(m)$.
 
 \begin{figure}[h]
 	\centering
@@ -975,7 +975,7 @@ Zuletzt wurde die Halbwertszeit einer Probe ermittelt, die zu Beginn die selbe P
 \begin{thebibliography}{99}
 \bibitem{Statistical Inference}
 	G. Casella, R. L. Berger, ``Statistical Inference'', ISBN~9781003456285,
-	DOI~\hyperlink{https://doi.org/10.1201/9781003456285}{10.1201/9781003456285}
+	DOI~\href{https://doi.org/10.1201/9781003456285}{10.1201/9781003456285}
 \bibitem{Gigerenzer}
 	G. Gigerenzer, ``Mindless statistics'', 2004, \emph{The Journal of
 		Socio--Economics},
@@ -1008,6 +1008,6 @@ Zuletzt wurde die Halbwertszeit einer Probe ermittelt, die zu Beginn die selbe P
 \bibitem{File:Geigerzählrohr}
 	Wikimedia, ``File:Geiger Mueller Counter with Circuit-de.svg'', \url{https://commons.wikimedia.org/wiki/File:Geiger_Mueller_Counter_with_Circuit-de.svg}, Abruf am 22.04.2024
 \bibitem{Julia:Measurements}
-	\code{\hyperlink{https://julialang.org}{Julia}}--Paket \code{Measurements}, Dokumentation unter \url{https://juliaphysics.github.io/Measurements.jl/stable}
+	\code{\href{https://julialang.org}{Julia}}--Paket \code{Measurements}, Dokumentation unter \url{https://juliaphysics.github.io/Measurements.jl/stable}
 \end{thebibliography}
 \end{document}
