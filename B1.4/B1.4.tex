@@ -89,9 +89,109 @@
 \clearpage
 \hypertarget{durchfuxfchrung}{%
 \section{Durchführung}\label{durchfuxfchrung}}
+Zunächst wird das System genullt, d.h. es wird so eingestellt, dass die Gegenspannung $U$ bei Kurzschluss der Photozelle $0\mathrm{\,V}$ ist.
+
 \subsection{Bestimmung von $h/e$}
-\subsection{Intensität und Photostrom}
+Der Widerstand des Elektrometers wurde auf $10^{13}\,\Omega$ eingestellt.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c}
+		Filter & Farbe & $\lambda$ $[\mathrm{nm}]$ \\
+		\hline
+		$1$ & UV & $366$ \\
+		$2$ & Violett & $405$ \\
+		$3$ & Blau & $436$ \\
+		$4$ & Grün & $546$ \\
+		$5$ & Gelb & $578$ \\
+	\end{tabular}
+	\caption{Eigenschaften der Interferenzfilter mit $\Delta \lambda = \pm 7\mathrm{nm}$}
+	\label{tab:Interferenzfilter}
+\end{table}
+
+\subsubsection{Gegenspannungsmethode}
+Die Zeitkonstante wurde auf $0.3\mathrm{\,s}$ und der Messverstärker auf $10$ eingestellt.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c}
+		Filter & Farbe & $U_0$ $[V]$ \\
+		\hline
+		$1$ & UV & $1.769$ \\
+		$2$ & Violett & $1.434$ \\
+		$3$ & Blau & $1.232$ \\
+		$4$ & Grün & $0.705$ \\
+		$5$ & Gelb & $0.645$ \\
+	\end{tabular}
+	\caption{Messergebnisse nach der Gegenspannungsmethode mit $\Delta U_0=\pm 1\mathrm{\,mV}$}
+	\label{tab:Gegenspannungsmethode}
+\end{table}
+
+\subsubsection{direkte Messmethode}
+Schon während der Messung fiel die große Ähnlichkeit der Messwerte mit denen aus der vorherigen Messung auf. Dass die Werte eher minimal kleiner sind liegt vermutlich an einem reduzierten Rauschen aus der Umgebung, da die nicht--abgeschirmten Kabel des Aufbaus noch weiter von der Photozelle entfernt waren.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c}
+		Filter & Farbe & $U$ $[V]$ \\
+		\hline
+		$1$ & UV & $1.770$ \\
+		$2$ & Violett & $1.434$ \\
+		$3$ & Blau & $1.232$ \\
+		$4$ & Grün & $0.696$ \\
+		$5$ & Gelb & $0.635$ \\
+	\end{tabular}
+	\caption{Messergebnisse nach der direkten Methode mit $\Delta U_0=\pm 1\mathrm{\,mV}$}
+	\label{tab:direkten Methode}
+\end{table}
+
+\subsection{Photostrom}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c}
+		$\lambda$ $[\mathrm{nm}]$ & \multicolumn{6}{c}{Transmissionsgrad $T$ $[\%]$} \\
+		& $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+		\hline
+		$436$ & $68$ & $48$ & $33$ & $28$ & $20$ & $14$ \\
+		$546$ & $67$ & $46$ & $31$ & $23$ & $16$ & $11$
+	\end{tabular}
+	\caption{Eigenschaften der Graufilter mit $\Delta T=1\,\%$}
+	\label{tab:Graufilter}
+\end{table}
+
+\subsubsection{Photoströme}
+Bei der Messung der Photoströme trat ein Nullpunktsfehler von $1\mathrm{\,mV}$ auf. Der Messverstärker wurde auf $10^4$ gestellt, die Zeitkonstante auf $0.3\mathrm{\,s}$. Der Photostrom wurde indirekt über einen Widerstand $R=10\mathrm{\,k\Omega}$ gemessen.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c|c|c}
+		 	&& \multicolumn{7}{c}{Photostrom $U_\mathrm{Ph}$ $[\mathrm{V}]$} \\
+		Filter & Farbe & ohne & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+		\hline
+		$3$ & Blau & $1.777$ & $1.486$ & $1.067$ & $0.807$ & $0.655$ & $0.440$ & $0.338$ \\
+		$4$ & Grün & $0.608$ & $0.536$ & $0.357$ & $0.265$ & $0.190$ & $0.126$ & $0.090$
+	\end{tabular}
+	\caption{Messungen der Photoströme über mit $\Delta U_\mathrm{Ph}=1\mathrm{\,mV}$}
+	\label{tab:Photostrom}
+\end{table}
+
+\subsubsection{Intensität}
+Ohne den Graufilter wurde eine Photospannung von $U_0=0.688\pm0.001\mathrm{\,V}$ gemessen, mit Graufilter $6$ eine von $U_0^\prime=0.693\pm0.001\mathrm{\,V}$. Aufgrund dieser Abweichungen sollte der Fehler auf zumindest $\pm 3\mathrm{\,mV}$ erhöht werden.
+
 \subsection{Untersuchung von LEDs mit der Photozelle}
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l|c}
+		Bezeichnung & $U_0$ $[\mathrm{V}]$ \\
+		\hline
+		blue & $1.047$ \\
+		verde & $0.891$ \\
+		true green & $0.807$ \\
+	\end{tabular}
+	\caption{Messungen der LEDs mit $\Delta U_0=1\mathrm{\,mV}$}
+	\label{tab:LEDs}
+\end{table}
+
 
 \clearpage
 \hypertarget{auswertung}{%
