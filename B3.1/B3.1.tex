@@ -79,7 +79,7 @@
 \hypertarget{einleitung}{%
 \section{Einleitung}\label{einleitung}}
 
-In diesem Versuch wird die statistische Methode des \(\chi^2\)--Anpassungstests mithilfe von radioaktiver Strahlung untersucht. Dazu wird \(\ce{^{137}Cs}\) verwendet, dessen Stahlung mit einem Geiger--Müller--Zählrohr detektiert wird.
+In diesem Versuch wird die statistische Methode des $\chi^2$--Anpassungstests mithilfe von radioaktiver Strahlung untersucht. Dazu wird $\ce{^{137}Cs}$ verwendet, dessen Stahlung mit einem Geiger--Müller--Zählrohr detektiert wird.
 
 Basierend auf den Messergebnissen werden drei Hypothesen über die Präperatsstärke bewertet. Zudem soll die Totzeit des Detektores milhilfe der Zwei--Präperate--Methode bestimmt werden.
 
@@ -295,51 +295,51 @@ Da die Wahrscheinlichkeit $W$ das Integral der Wahrscheinlichkeitsdichte $P_n$ d
 
 Ein Hypothesentest oder Statistischer Test dient dazu, durch eine Hypothese mittels statistischer Messungen zu bewerten.
 
-Dazu verwendet man eine \emph{Nullhypothese}\footnote{\emph{Hypothesis  to be nullified} \cite{Gigerenzer}} \(H_0\) und eine \emph{Gegenhypothese} oder \emph{Alternativhypothese} \(H_1\), die sich unterscheiden. Ziel des Tests ist es, die Alternativhypothese \(H_1\) zu belegen. Falls dies nicht gelingt, muss man die Nullhypothese \(H_0\) als wahr annehmen. Diese wird nicht überprüft. \cite{Statistical Inference}
+Dazu verwendet man eine \emph{Nullhypothese}\footnote{\emph{Hypothesis  to be nullified} \cite{Gigerenzer}} $H_0$ und eine \emph{Gegenhypothese} oder \emph{Alternativhypothese} $H_1$, die sich unterscheiden. Ziel des Tests ist es, die Alternativhypothese $H_1$ zu belegen. Falls dies nicht gelingt, muss man die Nullhypothese $H_0$ als wahr annehmen. Diese wird nicht überprüft. \cite{Statistical Inference}
 
-Aufgrund der Zufälligkeit der Ereignisse kann es dabei zwei Arten von Fehlern geben. Ein \(\alpha\)--Fehler beschreibt das irrtümliche Ablehnen von \(H_0\), während ein \(\beta\)--Fehler das fälschliche Annehmen von \(H_0\) bezeichnet.
+Aufgrund der Zufälligkeit der Ereignisse kann es dabei zwei Arten von Fehlern geben. Ein $\alpha$--Fehler beschreibt das irrtümliche Ablehnen von $H_0$, während ein $\beta$--Fehler das fälschliche Annehmen von $H_0$ bezeichnet.
 
 \hypertarget{fehlerarten}{%
 \subsubsection{Fehlerarten}\label{fehlerarten}}
-Ein \emph{Fehler erster Art} oder \(\alpha\)--Fehler beschreibt die fälschliche Ablehnung der Nullhypothese \(H_0\) in einem Statistischen Test. Man nimmt z.B. an, dass ein Würfel gezinkt ist \((H_1)\), obwohl er in Wahrheit fair ist \((H_0)\). Hierbei ist die \(H_0\) die Annahme eines fairen Würfels. Man spricht hier auch von einem \emph{falsch--positiven} Ergebnis. \cite{Statistical Inference}
+Ein \emph{Fehler erster Art} oder $\alpha$--Fehler beschreibt die fälschliche Ablehnung der Nullhypothese $H_0$ in einem Statistischen Test. Man nimmt z.B. an, dass ein Würfel gezinkt ist $(H_1)$, obwohl er in Wahrheit fair ist $(H_0)$. Hierbei ist die $H_0$ die Annahme eines fairen Würfels. Man spricht hier auch von einem \emph{falsch--positiven} Ergebnis. \cite{Statistical Inference}
 
-Ein \emph{Fehler zweiter Art} oder \emph{\(\beta\)--Fehler} beschreibt umgekehrt die fälschliche Akzeptanz der Nullhypothese \(H_0\). Beispielsweise geht man davon aus, dass ein Würfel fair ist \((H_0)\), obwohl er tatsächlich unfair ist \((H_1)\). Man spricht hier auch von einem \emph{falsch--negativen} Ergebnis. \cite{Statistical Inference}
+Ein \emph{Fehler zweiter Art} oder \emph{$\beta$--Fehler} beschreibt umgekehrt die fälschliche Akzeptanz der Nullhypothese $H_0$. Beispielsweise geht man davon aus, dass ein Würfel fair ist $(H_0)$, obwohl er tatsächlich unfair ist $(H_1)$. Man spricht hier auch von einem \emph{falsch--negativen} Ergebnis. \cite{Statistical Inference}
 
-Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit, einen \(\alpha\)--Fehler zu begehen. \cite{Statistical Inference} In einem \emph{Alternativtest} dagegen beschreibt die Signifikanz die Wahrscheinlichkeit, einen \(\alpha\)- oder einen \(\beta\)--Fehler zu machen. Bei einer Signifikanz \(Y\) sind \(\alpha\)-- und \(\beta\)--Fehler mit einer Wahrscheinlichkeit von je \(\frac{Y}{2}\) erlaubt.
+Die statistische Signifikanz beschreibt die erlaubte Wahrscheinlichkeit, einen $\alpha$--Fehler zu begehen. \cite{Statistical Inference} In einem \emph{Alternativtest} dagegen beschreibt die Signifikanz die Wahrscheinlichkeit, einen $\alpha$- oder einen $\beta$--Fehler zu machen. Bei einer Signifikanz $Y$ sind $\alpha$-- und $\beta$--Fehler mit einer Wahrscheinlichkeit von je $\frac{Y}{2}$ erlaubt.
 
 \hypertarget{der-chi2anpassungstest}{%
 \subsubsection{\texorpdfstring{Der
-\(\chi^2\)--Anpassungstest}{Der \textbackslash chi\^{}2--Anpassungstest}}\label{der-chi2anpassungstest}}
+$\chi^2$--Anpassungstest}{Der \textbackslash chi\^{}2--Anpassungstest}}\label{der-chi2anpassungstest}}
 
-Der \(\chi^2\)--Anpassungstest dient dazu, eine Verteilung von Zufallsvariablen \(A\) mit einer theoretischen Verteilung zu vergleichen. Man kann mithilfe des Tests bewerten, ob die Zufallsvariablen der Verteilung entsprechen können. Hierbei werden sowohl Fehler 1. Art als auch Fehler 2. Art berücksichtigt.
+Der $\chi^2$--Anpassungstest dient dazu, eine Verteilung von Zufallsvariablen $A$ mit einer theoretischen Verteilung zu vergleichen. Man kann mithilfe des Tests bewerten, ob die Zufallsvariablen der Verteilung entsprechen können. Hierbei werden sowohl Fehler 1. Art als auch Fehler 2. Art berücksichtigt.
 
-Die Grundidee dahinter ist, einen Erwartungswert \(\expval{A}\) und seine Varianz \(\sigma_A^2\) bewerten zu können. Das Maß für die Abweichung von der Hypothese wird für einen Freiheitsgrad durch \(\chi^2\) beschrieben,\footnote{Man könnte auch den Betrag \(|x_i|\)   anstatt des Quadrates \(x_i^2\) wählen. Dies wird nicht gemacht, weil   damit schwieriger zu rechnen ist.} was durch die \(\chi^2\)--Verteilung beschrieben wird.
+Die Grundidee dahinter ist, einen Erwartungswert $\expval{A}$ und seine Varianz $\sigma_A^2$ bewerten zu können. Das Maß für die Abweichung von der Hypothese wird für einen Freiheitsgrad durch $\chi^2$ beschrieben,\footnote{Man könnte auch den Betrag $|x_i|$   anstatt des Quadrates $x_i^2$ wählen. Dies wird nicht gemacht, weil   damit schwieriger zu rechnen ist.} was durch die $\chi^2$--Verteilung beschrieben wird.
 
 \begin{eqnarray}
     \chi^2 &=& \sum_i x_i^2
 \end{eqnarray}
 
-Mithilfe der \(\chi^2\)--Verteilung kann eine Signifikanz \(Y\) festgelegt werden. Damit kann ein Intervall \([\chi^2_\mathrm{min}, \chi^2_\mathrm{max}]\) durch die Verteilungsfunktion \(F(x, f)\) ermittelt werden. Liegt das ermittelte \(\chi^2\) in diesem Interval, so kann \(H_1\) als signifikant gültig angenommen werden.
+Mithilfe der $\chi^2$--Verteilung kann eine Signifikanz $Y$ festgelegt werden. Damit kann ein Intervall $[\chi^2_\mathrm{min}, \chi^2_\mathrm{max}]$ durch die Verteilungsfunktion $F(x, f)$ ermittelt werden. Liegt das ermittelte $\chi^2$ in diesem Interval, so kann $H_1$ als signifikant gültig angenommen werden.
 
 \begin{eqnarray}
     F(\chi^2_\mathrm{min}, f) &=& 1 - \frac{Y}{2} \\
     F(\chi^2_\mathrm{max}, f) &=& \frac{Y}{2}
 \end{eqnarray}
 
-Oft wird die Signifikanz von \(Y=5\,\%\) gefordert, wodurch das Gültigkeitsintervall durch folgende Gleichungen bestimmt wird.
+Oft wird die Signifikanz von $Y=5\,\%$ gefordert, wodurch das Gültigkeitsintervall durch folgende Gleichungen bestimmt wird.
 
 \begin{eqnarray}
     F(\chi^2_\mathrm{min}, f) &=& 0.975 \label{eq:ChiMinFormula} \\
     F(\chi^2_\mathrm{max}, f) &=& 0.025 \label{eq:ChiMaxFormula}
 \end{eqnarray}
 
-Falls \(\chi^2<\chi^2_\mathrm{min}\) das Ergebnis des Tests ist, sind die Daten zu gut an die These angepasst. Dies kann beispielsweise durch Overfitting entstehen.
+Falls $\chi^2<\chi^2_\mathrm{min}$ das Ergebnis des Tests ist, sind die Daten zu gut an die These angepasst. Dies kann beispielsweise durch Overfitting entstehen.
 
 \hypertarget{pearsons-chi2test}{%
 \paragraph{\texorpdfstring{Pearsons
-\(\chi^2\)--Test}{Pearsons \textbackslash chi\^{}2--Test}}\label{pearsons-chi2test}}
+$\chi^2$--Test}{Pearsons \textbackslash chi\^{}2--Test}}\label{pearsons-chi2test}}
 
-Eine Variante des \(\chi^2\)--Tests betrachtet nur ein Ende der Gauß--Verteilung. Hierbei wird die Signifikanz \(Y\) verwendet, um ein maximal gültiges \(\chi_\mathrm{max}^2\) zu bestimmen, dabei wird auf einen minimalen Wert verzichtet. \cite{McHugh} Damit kann eine Hypothese nur dann abgelehnt werden, wenn \(\chi^2\) zu groß ist, ein zu kleines \(\chi^2\) ist dabei nicht betrachtet. Auch hier wird oft eine Signifikanz von \(5\,\%\) verwendet.
+Eine Variante des $\chi^2$--Tests betrachtet nur ein Ende der Gauß--Verteilung. Hierbei wird die Signifikanz $Y$ verwendet, um ein maximal gültiges $\chi_\mathrm{max}^2$ zu bestimmen, dabei wird auf einen minimalen Wert verzichtet. \cite{McHugh} Damit kann eine Hypothese nur dann abgelehnt werden, wenn $\chi^2$ zu groß ist, ein zu kleines $\chi^2$ ist dabei nicht betrachtet. Auch hier wird oft eine Signifikanz von $5\,\%$ verwendet.
 
 \begin{eqnarray}
     F(\chi^2_\mathrm{max}, f) &=& Y \\
@@ -347,9 +347,9 @@ Eine Variante des \(\chi^2\)--Tests betrachtet nur ein Ende der Gauß--Verteilun
 \end{eqnarray}
 
 \hypertarget{die-chi2verteilung}{%
-\subsubsection{Die \(\chi^2\)--Verteilung}\label{die-chi2verteilung}}
+\subsubsection{Die $\chi^2$--Verteilung}\label{die-chi2verteilung}}
 
-Sei \(A\) standardnormalverteilt\footnote{Diese Annahme ist bei ausreichend vielen Messung durch das Gesetz der großen Zahl gerechtfertigt.}, dann ist die \(\chi_1^2\)--Verteilung eine quadrierte Normalverteilung mit einem Freiheitsgrad. Daher ist der Erwartungswert \(\expval{\chi_1^2}=1\). Gibt es mehrere Freiheitsgrade \(f\), so müssen \(f\) Erwartungswerte \(\expval{\chi_i^2}\) addiert werden, um den gesamten Erwartungswert zu ermitteln. Dies wird durch die Wahrscheinlichkeitsdichte (PDF\footnote{\emph{probability density function}}) \(f(x, f)\) beschrieben,\footnote{Achtung: Hier wird zur besseren Lesbarkeit \(f(x, 2f)\) angegeben, die Zahl der Freiheitsgrade wird in der Funktion halbiert.} wobei die Gammafunktion \(\Gamma(x)\) benötigt wird.
+Sei $A$ standardnormalverteilt\footnote{Diese Annahme ist bei ausreichend vielen Messung durch das Gesetz der großen Zahl gerechtfertigt.}, dann ist die $\chi_1^2$--Verteilung eine quadrierte Normalverteilung mit einem Freiheitsgrad. Daher ist der Erwartungswert $\expval{\chi_1^2}=1$. Gibt es mehrere Freiheitsgrade $f$, so müssen $f$ Erwartungswerte $\expval{\chi_i^2}$ addiert werden, um den gesamten Erwartungswert zu ermitteln. Dies wird durch die Wahrscheinlichkeitsdichte (PDF\footnote{\emph{probability density function}}) $f(x, f)$ beschrieben,\footnote{Achtung: Hier wird zur besseren Lesbarkeit $f(x, 2f)$ angegeben, die Zahl der Freiheitsgrade wird in der Funktion halbiert.} wobei die Gammafunktion $\Gamma(x)$ benötigt wird.
 
 \begin{eqnarray}
     f(x, 2f) &=&
@@ -362,7 +362,7 @@ Sei \(A\) standardnormalverteilt\footnote{Diese Annahme ist bei ausreichend viel
     \Gamma(x) &=& \int_0^\infty t^{x-1}\cdot \mathrm e^t \,\mathrm dt
 \end{eqnarray}
 
-Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution function}}) \(F(x, f)\) ist dabei komplex und hat den Erwartungswert \(\expval{\chi_f^2}=f\) und die Varianz \(\sigma_{\chi^2}=2f\).
+Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution function}}) $F(x, f)$ ist dabei komplex und hat den Erwartungswert $\expval{\chi_f^2}=f$ und die Varianz $\sigma_{\chi^2}=2f$.
 
 \begin{align}
     F(x, 2f) &=
@@ -383,13 +383,13 @@ Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution function}}) 
 \hypertarget{versuchsidee}{%
 \subsection{Versuchsidee}\label{versuchsidee}}
 
-In diesem Versuch wird \(\ce{^{137}Cs}\) als radioaktive Probe verwendet, das eine Halbwertszeit \(t_\frac{1}{2}\approx 30\,\mathrm a\) hat.
+In diesem Versuch wird $\ce{^{137}Cs}$ als radioaktive Probe verwendet, das eine Halbwertszeit $t_\frac{1}{2}\approx 30\,\mathrm a$ hat.
 
-Damit soll die folgende Hypothese getestet, die Präparatstärke sei konstant und habe den Wert \(\bar n\). Hierbei ist \(\bar n\) der Mittelwert von vielen Einzelmessungen \(n_i\) über eine kurze Zeit von \(\Delta t=20\,\mathrm s\), der durch Gleichung \(\eqref{mittlereRate}\) bestimmt wird. All diese \(N\) Messungen werden in einem Zeitraum von wenigen Stunden absolviert.
+Damit soll die folgende Hypothese getestet, die Präparatstärke sei konstant und habe den Wert $\bar n$. Hierbei ist $\bar n$ der Mittelwert von vielen Einzelmessungen $n_i$ über eine kurze Zeit von $\Delta t=20\,\mathrm s$, der durch Gleichung $\eqref{mittlereRate}$ bestimmt wird. All diese $N$ Messungen werden in einem Zeitraum von wenigen Stunden absolviert.
 
 Da der Zeitraum der Messungen sehr kurz gegen die Halbwertszeit ist, kann man annehmen, dass die Stärke der Probe sich im Rahmen der Messungenauigkeit nicht verändert.
 
-Damit können die Differenzen zum Mittelwert \((n_i-\bar n)\) ermittelt werden. Nach dem zentralen Grenzwertsatz sind die relativen Differenzen standardnormalverteilt. Dadurch kann die Abweichung \(\chi^2\) wie folgt ermittelt werden.
+Damit können die Differenzen zum Mittelwert $(n_i-\bar n)$ ermittelt werden. Nach dem zentralen Grenzwertsatz sind die relativen Differenzen standardnormalverteilt. Dadurch kann die Abweichung $\chi^2$ wie folgt ermittelt werden.
 
 \begin{eqnarray}
     \bar n &=& \sum_{i=1}^N \frac{n_i}{N} \label{mittlereRate} \\
@@ -448,7 +448,7 @@ Hierbei wurden die Verhältnisse $\frac{\sigma}{m}$ und $\frac{a^\prime}{a}$ dur
 \hypertarget{einfluss-der-totzeit}{%
 \subsubsection{Totzeit im $\chi^2$--Test}\label{einfluss-der-totzeit}}
 
-Die Totzeit der Länge \(\tau\) hat einen Einfluss auf die gemessenen Zählraten. Anstatt einer Zählrate von \(\frac{n_i}{\Delta t}\) wird eine totzeitkorrigierte Anzahl \(k_i\) gemessen. Dadurch kann ein korrigierter Mittelwert \(M\) nach \(\eqref{mittlereRate}\) bestimmt werden und man erhält eine korrigierte Abweichung \(\chi^2_\mathrm{korr}\). Die korrigierte Rate wird nach Gleichung \eqref{eq:Totzeitkorrigiert Rate} bestimmt.
+Die Totzeit der Länge $\tau$ hat einen Einfluss auf die gemessenen Zählraten. Anstatt einer Zählrate von $\frac{n_i}{\Delta t}$ wird eine totzeitkorrigierte Anzahl $k_i$ gemessen. Dadurch kann ein korrigierter Mittelwert $M$ nach $\eqref{mittlereRate}$ bestimmt werden und man erhält eine korrigierte Abweichung $\chi^2_\mathrm{korr}$. Die korrigierte Rate wird nach Gleichung \eqref{eq:Totzeitkorrigiert Rate} bestimmt.
 
 \begin{eqnarray}
     k_i &=&
@@ -463,7 +463,7 @@ Die Totzeit der Länge \(\tau\) hat einen Einfluss auf die gemessenen Zählraten
 \end{eqnarray}
 
 \noindent
-Durch Einsetzen der Gleichungen \(\eqref{korrRate}\)-\(\eqref{korrAVG}\) sowie \(\eqref{ChiSquared}\) kann man \(\eqref{ChiKorrDef}\) vereinfachen und man erhält die folgende vereinfachte Relation. Hier sieht man, dass die korrigierte Abweichung \(\chi^2_\mathrm{korr}\) kleiner als die nicht--korrigierte Abweichung \(\chi^2\) ist, was kontraintuitiv wahrgenommen werden kann.
+Durch Einsetzen der Gleichungen $\eqref{korrRate}$-$\eqref{korrAVG}$ sowie $\eqref{ChiSquared}$ kann man $\eqref{ChiKorrDef}$ vereinfachen und man erhält die folgende vereinfachte Relation. Hier sieht man, dass die korrigierte Abweichung $\chi^2_\mathrm{korr}$ kleiner als die nicht--korrigierte Abweichung $\chi^2$ ist, was kontraintuitiv wahrgenommen werden kann.
 
 \begin{eqnarray}
     \chi^2_\mathrm{korr} &=&
@@ -839,7 +839,7 @@ Die Totzeit scheint i.A. mit steigender Spannung kleiner zu werden. Vermutlich w
 
 Nun sollen drei verschiedene Hypothesen mit dem $\chi^2$--Test bewertet werden. Dazu wurde eine Stichprobe aus der $45\mathrm{\,min}$--Messung mit den beiden Proben $A$ und $B$ bei $500\mathrm{\,V}$ verwendet. Als Messergebnis wurden die Anzahl der Detektionen in jeweils $10\mathrm{\,s}$--Intervallen definiert.
 
-Es wurden die ersten \(51\) Zeitintervalle gewählt, weil die $\chi^2$--Grenzen für $50$ statistische Freiheitsgrade bekannt sind. \cite{Kapur} Ein Freiheitsgrad der $51$ Werte wird durch das Bilden des Mittelwerts gebunden.
+Es wurden die ersten $51$ Zeitintervalle gewählt, weil die $\chi^2$--Grenzen für $50$ statistische Freiheitsgrade bekannt sind. \cite{Kapur} Ein Freiheitsgrad der $51$ Werte wird durch das Bilden des Mittelwerts gebunden.
 
 \subsubsection{Hypothesen}
 \label{Hypothesen}
