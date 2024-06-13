@@ -33,10 +33,6 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
 \newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
 
-% disable commands
-\renewcommand{\[}{} % math block start
-\renewcommand{\]}{\noindent} % math block end
-
 \include{../media/Silbentrennung.tex}
 
 \hypersetup{
@@ -62,7 +58,7 @@
 	\HRule \\[0.4cm]
 
 		{	\Huge \bfseries B1.1}\\[0.4cm]
-			{	\huge \bfseries Infrarotabsorption in \(\ce{CO_2}\)}\\[0.3cm]
+			{	\huge \bfseries Infrarotabsorption in $\ce{CO_2}$}\\[0.3cm]
 	
 	\HRule \\[3cm]
 
@@ -81,45 +77,37 @@
 \hypertarget{einleitung}{%
 \section{Einleitung}\label{einleitung}}
 
-Mithilfe von Spektroskopie ist es möglich, Absorptions- und
-Emissionsspektren von elektromagnetischen Wellen an einer Probe zu
-beobachten. Hierzu misst man spezifische Größen in Abhängigkeit von der
-Frequenz. Dadurch ist es möglich, Aussagen über die mikroskopischen
-Eigenschaften der Probe zu treffen.
+Mithilfe von Spektroskopie ist es möglich, Absorptions- und Emissionsspektren von elektromagnetischen Wellen an einer Probe zu beobachten. Hierzu misst man spezifische Größen in Abhängigkeit von der Frequenz. Dadurch ist es möglich, Aussagen über die mikroskopischen Eigenschaften der Probe zu treffen.
 
-Alternativ zur Frequenz werden auch äquivalente Größen wie der
-Wellenlänge oder Energie verwendet, um Größen wie die Intensität, die
-Strahlungsleistung und die Zählrate der Strahlung zu messen.
+Alternativ zur Frequenz werden auch äquivalente Größen wie der Wellenlänge oder Energie verwendet, um Größen wie die Intensität, die Strahlungsleistung und die Zählrate der Strahlung zu messen.
 
-Dieser Versuch dient als Einführung in die Infrarotspektroskopie.
-Mithilfe eines niedrig auflösenden Absorptionsspektrometers wird die
-Infrarot--Absorption von Kohlenstoffdioxid \((\ce{CO_2})\) untersucht.
-Dieses Gas gehört zu den sogenannten ``Treibhausgasen''.
+Dieser Versuch dient als Einführung in die Infrarotspektroskopie. Mithilfe eines niedrig auflösenden Absorptionsspektrometers wird die Infrarot--Absorption von Kohlenstoffdioxid $(\ce{CO_2})$ untersucht. Dieses Gas gehört zu den sogenannten ``Treibhausgasen''.
 
 \clearpage
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
 
-\hypertarget{elektromagnetisches-spektrum}{%
-\subsection{elektromagnetisches
-Spektrum}\label{elektromagnetisches-spektrum}}
+\subsection{Spektroskopie}
+\label{Spektroskopie}
 
-Es gibt verschiedene Frequenzbereiche elektromagnetischer Strahlung.
-Diese werden unter verschiedenen Namen zusammengefasst.
+\hypertarget{elektromagnetisches-spektrum}{%
+\subsection{elektromagnetisches Spektrum}\label{elektromagnetisches-spektrum}}
+
+Es gibt verschiedene Frequenzbereiche elektromagnetischer Strahlung. Diese werden unter verschiedenen Namen zusammengefasst.
 
 \begin{table}[h]
 	\centering
 	\begin{tabular}{l|c}
-		Frequenzbereich & Wellenlänge in \(\mathrm m\) \\
+		Frequenzbereich & Wellenlänge in $\mathrm m$ \\
 		\hline
-		Niederfrequenz & \(10^4\) bis \(10^8\) \\
-		Radiowellen & \(10^1\) bis \(10^3\) \\
-		Mikrowellen & \(10^{-3}\) bis \(10^{0}\) \\
-		Infrarotstrahlung & \(10^{-6}\) bis \(10^{-3}\) \\
-		sichtbares Licht & \(10^{-7}\) \\
-		Ultraviolette Strahlung & \(10^{-9}\) bis \(10^{-7}\) \\
-		Röntgenstrahlung & \(10^{-11}\) bis \(10^{-9}\) \\
-		Gammastrahlung & \(<10^{-11}\)
+		Niederfrequenz & $10^4$ bis $10^8$ \\
+		Radiowellen & $10^1$ bis $10^3$ \\
+		Mikrowellen & $10^{-3}$ bis $10^{0}$ \\
+		Infrarotstrahlung & $10^{-6}$ bis $10^{-3}$ \\
+		sichtbares Licht & $10^{-7}$ \\
+		Ultraviolette Strahlung & $10^{-9}$ bis $10^{-7}$ \\
+		Röntgenstrahlung & $10^{-11}$ bis $10^{-9}$ \\
+		Gammastrahlung & $<10^{-11}$
 	\end{tabular}
 	\caption{Elektromagnetisches Spektrum}
 	\label{tab:emSpektrum}
@@ -128,43 +116,36 @@ Diese werden unter verschiedenen Namen zusammengefasst.
 \hypertarget{photonen}{%
 \subsubsection{Photonen}\label{photonen}}
 
-Photonen sind die Austauschteilchen von elektromagnetischer Wechselwirkung. Sie haben keine Ruheenergie, ihre Energie \(E\) ist über die Frequenz \(\nu\) bzw. die Kreisfrequenz \(\omega\) beschrieben. \cite{Fließbach}
+Photonen sind die Austauschteilchen von elektromagnetischer Wechselwirkung. Sie haben keine Ruheenergie, ihre Energie $E$ ist über die Frequenz $\nu$ bzw. die Kreisfrequenz $\omega$ beschrieben. \cite{Fließbach}
 
-\[
 \begin{eqnarray}
     E &=& h\cdot \nu \\
         &=& \hbar \cdot \omega \\
     h &\approx& 6.62\cdot 10^{-34} \mathrm{\,Js}
-    \end{eqnarray}
-\]
+\end{eqnarray}
 
 \noindent
-Dabei findet die Planck--Konstante \(h\) bzw. ihre reduzierte Form \(\hbar\) Verwendung. Die Wellenlänge \(\lambda\) bzw. die Wellenzahl \(k\) können über die Lichtgeschwindigkeit \(c\) aus der (Kreis-)Frequenz bestimmt werden.
+Dabei findet die Planck--Konstante $h$ bzw. ihre reduzierte Form $\hbar$ Verwendung. Die Wellenlänge $\lambda$ bzw. die Wellenzahl $k$ können über die Lichtgeschwindigkeit $c$ aus der (Kreis-)Frequenz bestimmt werden.
 
-\[
 \begin{eqnarray}
     c &=& \lambda\nu \\
     c &=& k\omega
 \end{eqnarray}
-\]
 
 \noindent
-Die Kreisfrequenz \(\omega\) und die Wellenzahl \(k\) sind proportional zu der Frequenz \(\nu\) respektive der Wellenlänge \(\lambda\).
+Die Kreisfrequenz $\omega$ und die Wellenzahl $k$ sind proportional zu der Frequenz $\nu$ respektive der Wellenlänge $\lambda$.
 
-\[
 \begin{eqnarray}
     \omega &=& 2\pi \nu \\
     k &=& \frac{2\pi}{\lambda} \\
     \hbar &=& \frac{h}{2\pi}
 \end{eqnarray}
-\]
 
 \hypertarget{planckstrahlung}{%
 \subsection{Planck--Strahlung}\label{planckstrahlung}}
 
-Das Planck'sche Strahlungsgesetz beschreibt die Energiedichte \(\omega_\mathrm{P}\), die ein schwarzer Körper mit einer Frequenz \(\nu\) bei einer Temperatur \(T\) als Wärmestrahlung aussendet. Dabei finden das Planck'sche Wirkungsquantum \(h\), die Lichtgeschwindigkeit \(c\) und die Boltzmann--Konstante \(k_B\) Verwendung. \cite{Demtröder}
+Das Planck'sche Strahlungsgesetz beschreibt die Energiedichte $\omega_\mathrm{P}$, die ein schwarzer Körper mit einer Frequenz $\nu$ bei einer Temperatur $T$ als Wärmestrahlung aussendet. Dabei finden das Planck'sche Wirkungsquantum $h$, die Lichtgeschwindigkeit $c$ und die Boltzmann--Konstante $k_B$ Verwendung. \cite{Demtröder}
 
-\[
 \begin{eqnarray}
     \omega_\mathrm{P}(\nu,T) &=&
         \frac{8\pi\nu^2}{c^3}
@@ -172,11 +153,9 @@ Das Planck'sche Strahlungsgesetz beschreibt die Energiedichte \(\omega_\mathrm{P
         \,\mathrm d\nu
         \label{eq:PlackStrahlung}
 \end{eqnarray}
-\]
 
 \noindent
-Der Faktor \(\frac{8\pi\nu^2}{c^3}\) ist dabei die Dichte der Schwingungsmoden in einem Frequenzintervall, also die Anzahl erlaubter
-Schwingungszustände. Der Faktor \(h\nu\cdot\exp[\dots]^{-1}\) beschreibt die mittlere kinetische Energie dieser Zustände. Dies ist in Abbildung \ref{abb:SpektrumSK} dargestellt.
+Der Faktor $\frac{8\pi\nu^2}{c^3}$ ist dabei die Dichte der Schwingungsmoden in einem Frequenzintervall, also die Anzahl erlaubter Schwingungszustände. Der Faktor $h\nu\cdot\exp[\dots]^{-1}$ beschreibt die mittlere kinetische Energie dieser Zustände. Dies ist in Abbildung \ref{abb:SpektrumSK} dargestellt.
 
 \begin{figure}[h!]
 	\centering
@@ -188,43 +167,35 @@ Schwingungszustände. Der Faktor \(h\nu\cdot\exp[\dots]^{-1}\) beschreibt die mi
 \hypertarget{strahlungsdichte}{%
 \subsubsection{Strahlungsdichte}\label{strahlungsdichte}}
 
-Die Strahldichte oder Strahlungsdichte \(S\) beschreibt die Strahlung, die ein Flächenelement \(\mathrm dA\) eines Strahlers in einen Raumwinkel \(\mathrm d\Omega\) abstrahlt. Sie ist allgemein das Differential der Strahlungsleistung \(\Phi\). \cite{Demtröder,Strahldichte}
+Die Strahldichte oder Strahlungsdichte $S$ beschreibt die Strahlung, die ein Flächenelement $\mathrm dA$ eines Strahlers in einen Raumwinkel $\mathrm d\Omega$ abstrahlt. Sie ist allgemein das Differential der Strahlungsleistung $\Phi$. \cite{Demtröder,Strahldichte}
 
-\[
 \begin{eqnarray}
     S &=& \frac{\mathrm d^2\Phi}{\mathrm dA \cdot \mathrm d\Omega}
 \end{eqnarray}
-\]
 
 \hypertarget{wiensches-verschiebungsgesetz}{%
-\subsubsection{Wien'sches
-Verschiebungsgesetz}\label{wiensches-verschiebungsgesetz}}
+\subsubsection{Wien'sches Verschiebungsgesetz}\label{wiensches-verschiebungsgesetz}}
 
-Das Wien'sche Verschiebungsgesetz beschreibt abhängig von der Temperatur \(T\), bei welcher Wellenlänge \(\hat{\lambda}\) bzw. Frequenz \(\hat{\nu}\) die größte Wärmeleistung abgestrahlt wird. Dadurch beschreibt es die Temperaturabhängigkeit des Maximums des Planck'schen Strahlungsgesetzes \(\eqref{eq:PlackStrahlung}\).
+Das Wien'sche Verschiebungsgesetz beschreibt abhängig von der Temperatur $T$, bei welcher Wellenlänge $\hat{\lambda}$ bzw. Frequenz $\hat{\nu}$ die größte Wärmeleistung abgestrahlt wird. Dadurch beschreibt es die Temperaturabhängigkeit des Maximums des Planck'schen Strahlungsgesetzes $\eqref{eq:PlackStrahlung}$.
 
-\[
 \begin{eqnarray}
     \hat{\lambda}\cdot T &=& 2.898\cdot10^{-3}\mathrm{\,m\cdot K}
         \label{eq:WienLambda}\\
     \hat{\nu}\cdot T &=& 5.879\cdot10^{10} \mathrm{\,m\cdot Hz}
         \label{eq:WienNu}
 \end{eqnarray}
-\]
 
 \hypertarget{elektrisches-dipolmoment}{%
 \subsection{elektrisches Dipolmoment}\label{elektrisches-dipolmoment}}
 
-Das elektrische Dipolmoment \(\vec \mu\) ist das erste Moment aus der Multipolentwicklung einer Ladungsverteilung \(\rho(\vec r)\). \cite{Dipolmoment}
-Es ist parallel zum elektrischen Feld \(\vec E\) und beschreibt die Ungleichverteilung von Ladungen.
+Das elektrische Dipolmoment $\vec \mu$ ist das erste Moment aus der Multipolentwicklung einer Ladungsverteilung $\rho(\vec r)$. \cite{Dipolmoment} Es ist parallel zum elektrischen Feld $\vec E$ und beschreibt die Ungleichverteilung von Ladungen.
 
-\[
 \begin{eqnarray}
     \vec \mu &=& \int \vec r \rho(\vec r) \,\mathrm d^3\vec r
 \end{eqnarray}
-\]
 
 \noindent
-Atome im Grundzustand haben kein permanentes Dipolmoment, Moleküle können dagegen ein permanentes Dipolmoment haben. Ein Beispiel dafür ist Wasser \((\ce{H_2O})\).
+Atome im Grundzustand haben kein permanentes Dipolmoment, Moleküle können dagegen ein permanentes Dipolmoment haben. Ein Beispiel dafür ist Wasser $(\ce{H_2O})$.
 
 \hypertarget{dipoluxfcbergang}{%
 \subsubsection{Dipolübergang}\label{dipoluxfcbergang}}
@@ -234,13 +205,11 @@ Um ein Molekül durch die Absorption eines Photons anzuregen, muss ein Dipolübe
 \hypertarget{uxfcbergangsdipolmoment}{%
 \subsubsection{Übergangsdipolmoment}\label{uxfcbergangsdipolmoment}}
 
-Die Störung wird als Übergangsdipolmoment \(\vec\mu_{01}\) bezeichnet. Es wird durch den Operator des Dipolmoments \(\hat {\vec \mu}_e\) sowie den Anfangszustand \(\ket{\Psi_0}\) und den Endzustand \(\ket{\Psi_1}\) berechnet. So lange das Übergangsdipolmoment \(\vec\mu_{01}\neq0\) nicht verschwindet, ist der Übergang erlaubt.
+Die Störung wird als Übergangsdipolmoment $\vec\mu_{01}$ bezeichnet. Es wird durch den Operator des Dipolmoments $\hat {\vec \mu}_e$ sowie den Anfangszustand $\ket{\Psi_0}$ und den Endzustand $\ket{\Psi_1}$ berechnet. So lange das Übergangsdipolmoment $\vec\mu_{01}\neq0$ nicht verschwindet, ist der Übergang erlaubt.
 
-\[
 \begin{eqnarray}
     \vec \mu_{01} &=& \expval{\Psi_0\left|\hat {\vec \mu}_e\right|\Psi_1}
 \end{eqnarray}
-\]
 
 \noindent
 Je größer das Übergangsdipolmoment ist, desto großer ist auch das Absorptionsvermögen.
@@ -248,13 +217,37 @@ Je größer das Übergangsdipolmoment ist, desto großer ist auch das Absorption
 \hypertarget{freiheitsgrade}{%
 \subsection{Freiheitsgrade}\label{freiheitsgrade}}
 
-Die Zahl der Freiheitsgrade \(f\) gibt an, auf wie viele Arten
-beispielsweise ein Gasmolekül Energie speichern kann, z.B. in
-Translation entlang einer Koordinatenachse, Rotation oder Schwingungen.
+Freiheitsgrade beschreiben in der Mechanik die unabhängigen, verallgemeinerten Koordinaten eines Systems, beispielsweise eines einzelnen Atoms oder eines Moleküls.
 
-Einatomige Moleküle haben üblicherweise \(3\) Freiheitsgrade durch
-Translation. Zweiatomige Moleküle haben zusätzlich noch zwei
-Freiheitsgrade durch Rotation, also insgesamt \(5\).
+Ein freies einatomiges Molekül besitzt drei Translationsfreiheitsgrade $f_\mathrm{trans}$, denn es kann sich frei in drei Raumrichtungen bewegen. \cite{Gerthsen}
+
+Ein mehratomiges Molekül hat zusätzlich noch drei weitere Rotationsfreiheitsgrade $f_\mathrm{rot}$, denn es gibt zwei Rotationsachsen senkrecht zu Bindungsrichtung und einen um die Bindungsachse. Die Bewegung um die Bindungsachse ist bei bei linearen Molekülen jedoch stark eingeschränkt, dieser Freiheitsgrad ist somit verschwindend gering. \cite{Freiheitsgrad} Ein gewinkeltes Molekül wie das Wassermolekül besitzt dagegen alle drei Rotationsfreiheitsgrade. \cite{Gerthsen}
+
+Ist ein Molekül schwingungsfähig, so muss man zudem noch Vibrationsfreiheitsgrade $f_\mathrm{vib}$ berücksichtigen. Besonders wenn sich das Molekül in einer Gitterstruktur befindet, kann es nicht wirklich rotieren, aber trotzdem in drei Raumrichtungen schwingen. Dadurch hat es sechs Freiheitsgrade, jeweils drei aus der kinetischen und der potentiellen Energie.
+
+Ein System aus $N$ ungekoppelten Massenpunkten hat allgemein $3N$ Freiheitsgrade, wobei $f_\mathrm{vib}$ folgendermaßen bestimmt wird. \cite{Gerthsen}
+
+\begin{eqnarray}
+	 f_\mathrm{vib} &=& 3N - (f_\mathrm{trans} + f_\mathrm{rot})
+\end{eqnarray}
+
+\subsubsection{Normalschwingungen}
+\label{Normalschwingungen}
+
+Normalschwingungen sind Schwingungen, bei denen das Molekül sich mit konstanter Frequenz aus einer Ruhelage bewegt, wobei Gesamtimpuls und Gesamtdrehimpuls erhalten bleiben.
+
+Da es immer eine longitudinale und zwei transversale Schwingungsrichtungen gibt, ist die Anzahl der Normalschwingungen immer ein Vielfaches von $3$. \cite{Gerthsen}
+
+Beispielsweise hat Kohlenstoffdioxid $\ce{CO_2}$ drei Normalschwingungen, die in Abbildung \ref{abb:Normalschwingungen CO2} dargestellt sind. Die symmetrische und antisymmetrische Streckschwingung unterscheiden sich qualitativ. Die Biegeschwingungen dagegen sind entartet und bilden daher denselben Vibrationsfreiheitsgrad.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/Normalschwingung_CO2.png}
+	\caption{Normalschwingungen von $\ce{CO_2}$ \cite{abb:Schwingungen CO2}\\
+		oben: Streckschwingungen, (links symmetrisch, rechts antisymmetrisch)\\
+		unten: Biegeschwingungen in zwei Entartungen}
+	\label{abb:Normalschwingungen CO2}
+\end{figure}
 
 \hypertarget{infrarotaktivituxe4t}{%
 \subsection{Infrarotaktivität}\label{infrarotaktivituxe4t}}
@@ -265,9 +258,8 @@ Freiheitsgrade durch Rotation, also insgesamt \(5\).
 \hypertarget{gauuxdfverteilung}{%
 \subsubsection{Gaußverteilung}\label{gauuxdfverteilung}}
 
-Die Gaußverteilung entspricht der Wahrscheinlichkeitsdichtefunktion \(\phi_{\mu,\sigma^2}(\chi)\) mit dem Erwartungswert \(\mu\) und der Standardabweichung \(\sigma\). Manchmal wird die Gaußverteilung auch als Normalverteilung bezeichnet, manchmal bezeichnet die Normalverteilung dagegen einen Spezialfall mit \(\mu=\sigma=1\). In Abbildung \ref{abb:gaussians} sind verschiedene Gaußverteilungen dargestellt.
+Die Gaußverteilung entspricht der Wahrscheinlichkeitsdichtefunktion $\phi_{\mu,\sigma^2}(\chi)$ mit dem Erwartungswert $\mu$ und der Standardabweichung $\sigma$. Manchmal wird die Gaußverteilung auch als Normalverteilung bezeichnet, manchmal bezeichnet die Normalverteilung dagegen einen Spezialfall mit $\mu=\sigma=1$. In Abbildung \ref{abb:gaussians} sind verschiedene Gaußverteilungen dargestellt.
 
-\[
 \begin{eqnarray}
     \phi_{\mu,\sigma^2}(\chi) &=&
         \frac{1}{\sqrt{2\pi\sigma^2}}
@@ -276,7 +268,6 @@ Die Gaußverteilung entspricht der Wahrscheinlichkeitsdichtefunktion \(\phi_{\mu
             \frac{(\chi - \mu)^2}{2\sigma^2}
         \right]
 \end{eqnarray}
-\]
 
 \begin{figure}[h]
 	\centering
@@ -286,18 +277,17 @@ Die Gaußverteilung entspricht der Wahrscheinlichkeitsdichtefunktion \(\phi_{\mu
 \end{figure}
 
 \noindent
-Werden Zufallsvariablen gemessen, so haben sie immer eine gewisse Streuung. Nach dem Grenzwertsatz ist diese Streuung gaußverteilt. Bei genügend Messungen kann man annehmen, dass \(68.3\%\) der Zufallsvariablen im Intervall \(\mu\pm\sigma\) liegen.
+Werden Zufallsvariablen gemessen, so haben sie immer eine gewisse Streuung. Nach dem Grenzwertsatz ist diese Streuung gaußverteilt. Bei genügend Messungen kann man annehmen, dass $68.3\%$ der Zufallsvariablen im Intervall $\mu\pm\sigma$ liegen.
 
-Im \(2\sigma\)--Intervall werden \(95.4\%\) der Zufallsvariablen erwartet, im \(3\sigma\)--Intervall sogar \(99.7\%\).
+Im $2\sigma$--Intervall werden $95.4\%$ der Zufallsvariablen erwartet, im $3\sigma$--Intervall sogar $99.7\%$.
 
 \hypertarget{treppenfunktion}{%
 \subsubsection{Treppenfunktion}\label{treppenfunktion}}
 
 Eine Treppenfunktion ist eine Funktion, die abschnittsweise aus konstanten Funktionen zusammengesetzt ist.
 
-Sei \(\tau:[a,b]\rightarrow \mathbb R\) eine Treppenfunktion, dann gibt es \(N\) Intervalle \((x_i, x_{i+1})\) und Konstanten \(c_i\), sodass folgende Bedingungen erfüllt sind. \cite{Einsiedler}
+Sei $\tau:[a,b]\rightarrow \mathbb R$ eine Treppenfunktion, dann gibt es $N$ Intervalle $(x_i, x_{i+1})$ und Konstanten $c_i$, sodass folgende Bedingungen erfüllt sind. \cite{Einsiedler}
 
-\[
 \begin{eqnarray}
     x_0 &=& a \\
     x_n &=& b \\
@@ -306,26 +296,22 @@ Sei \(\tau:[a,b]\rightarrow \mathbb R\) eine Treppenfunktion, dann gibt es \(N\)
     \forall x\in[x_i, x_{i+1}]:\quad
         \tau(x) &=& c_i
 \end{eqnarray}
-\]
 
 \noindent
-Das Integral über eine Treppenfunktion wird als Summe über die Zerlegung \(\{x_i\}\) gebildet.
+Das Integral über eine Treppenfunktion wird als Summe über die Zerlegung $\{x_i\}$ gebildet.
 
-\[
 \begin{eqnarray}
     \int_a^b\tau(x)\,\mathrm dx
         &=& \sum_{i=0}^N c_i\cdot (x_{i+i}-x_i)
 \end{eqnarray}
-\]
 
 \hypertarget{numerische-integration}{%
 \subsubsection{numerische Integration}\label{numerische-integration}}
 
-Ein Integral \(\int_a^b f\) kann numerisch angenähert werden, indem die Funktion \(f\) durch eine Treppenfunktion dargestellt wird. Diese Methode addiert rechteckige Flächenelemente, es gibt auch ähnliche Methoden mit beispielsweise trapezförmigen Flächenelementen.
+Ein Integral $\int_a^b f$ kann numerisch angenähert werden, indem die Funktion $f$ durch eine Treppenfunktion dargestellt wird. Diese Methode addiert rechteckige Flächenelemente, es gibt auch ähnliche Methoden mit beispielsweise trapezförmigen Flächenelementen.
 
-Der Integrationsbereich \([a,b]\) wird in \(N\) gleich große Intervalle zerlegt. Dadurch kann die Schrittweite \(\Delta x\) definiert werden. Die Stufenfunktion wird so gewählt, dass die Funktion \(f\) in jedem Teilintervall \((x_i, x_{i+1})\) angenähert wird. Damit kann das Integral ermittelt werden.
+Der Integrationsbereich $[a,b]$ wird in $N$ gleich große Intervalle zerlegt. Dadurch kann die Schrittweite $\Delta x$ definiert werden. Die Stufenfunktion wird so gewählt, dass die Funktion $f$ in jedem Teilintervall $(x_i, x_{i+1})$ angenähert wird. Damit kann das Integral ermittelt werden.
 
-\[
 \begin{eqnarray}
     \Delta x &=& \frac{b--a}{N} \\
     \forall i:\quad
@@ -334,40 +320,35 @@ Der Integrationsbereich \([a,b]\) wird in \(N\) gleich große Intervalle zerlegt
         &\approx& \Delta x\cdot
             \sum_{i=1}^N f(x + i\cdot \Delta x)
 \end{eqnarray}
-\]
 
 \noindent
-Dies ist nur eine Annäherung eines echten Integrals, die kein exaktes Ergebnis liefert. Wenn \(\Delta x\) beliebig klein werden könnte, so nähert man sich einem Riemann--Integral an.
+Dies ist nur eine Annäherung eines echten Integrals, die kein exaktes Ergebnis liefert. Wenn $\Delta x$ beliebig klein werden könnte, so nähert man sich einem Riemann--Integral an.
 
 \hypertarget{gewichteter-mittelwert}{%
 \subsubsection{gewichteter Mittelwert}\label{gewichteter-mittelwert}}
 
-Ein Mittelwert von \(n\) Werten \(x_i\) kann beliebig mit Gewichten \(w_i\) manipuliert werden.
+Ein Mittelwert von $n$ Werten $x_i$ kann beliebig mit Gewichten $w_i$ manipuliert werden.
 
-Sind die Gewichte \(w_i\) nicht normiert, d.h. \(\sum_{i=1}^n w_i\neq 1\), so muss die gewichtete Summe durch die Summe der Gewichte geteilt werden, um den gewichteten Mittelwert zu erhalten.
+Sind die Gewichte $w_i$ nicht normiert, d.h. $\sum_{i=1}^n w_i\neq 1$, so muss die gewichtete Summe durch die Summe der Gewichte geteilt werden, um den gewichteten Mittelwert zu erhalten.
 
-Haben die Einzelwerte \(x_i\) eigene Ungenauigkeiten \(\Delta x_i\), wie beispielsweise Messungenauigkeiten, kann man den inversen Fehler als Gewicht verwenden. Der so gewichtete Mittelwert hat dem normalen Mittelwert gegenüber den Vorteil, dass die Werte mit einem größeren Fehler weniger stark einfließen als die mit geringerem Fehler. Die Ungenauigkeit des Mittelwertes \(\Delta \bar x\) wird durch die Mittlere Quadratsumme der Residuen bestimmt.
+Haben die Einzelwerte $x_i$ eigene Ungenauigkeiten $\Delta x_i$, wie beispielsweise Messungenauigkeiten, kann man den inversen Fehler als Gewicht verwenden. Der so gewichtete Mittelwert hat dem normalen Mittelwert gegenüber den Vorteil, dass die Werte mit einem größeren Fehler weniger stark einfließen als die mit geringerem Fehler. Die Ungenauigkeit des Mittelwertes $\Delta \bar x$ wird durch die Mittlere Quadratsumme der Residuen bestimmt.
 
-\[
 \begin{eqnarray}
     \bar{x} &=&
         \frac{\sum_{i=1}^n w_i x_i}{\sum_{i=1}^n w_i}\\
     w_i &=& \frac{1}{(\Delta x_i)^2}
 \end{eqnarray}
-\]
 
 \hypertarget{mittlere-quadratsumme-der-residuen}{%
 \subsubsection{Mittlere Quadratsumme der Residuen}\label{mittlere-quadratsumme-der-residuen}}
 
-Die Mittlere Quadratsumme der Residuen (MQR) ähnelt der Standardabweichung. Diese ist für Messergebnisse, deren Mittelwert ermittelt wird, allerdings verzerrt, da ein statistischer Freiheitsgrad \(f_S\) durch die Bildung des Mittelwertes verloren geht. Bei der linearen Regression gehen sogar zwei Freiheitsgrade verloren.
+Die Mittlere Quadratsumme der Residuen (MQR) ähnelt der Standardabweichung. Diese ist für Messergebnisse, deren Mittelwert ermittelt wird, allerdings verzerrt, da ein statistischer Freiheitsgrad $f_S$ durch die Bildung des Mittelwertes verloren geht. Bei der linearen Regression gehen sogar zwei Freiheitsgrade verloren.
 
-Deswegen wird bei der MQR nicht durch die Stichprobenmenge \(n\) geteilt, sondern durch die Zahl der Freiheitsgrade. Seien \(y\) Freiheitsgrade gebunden gilt folgendes. Für den Mittelwert gilt beispielsweise \(y=1\).
+Deswegen wird bei der MQR nicht durch die Stichprobenmenge $n$ geteilt, sondern durch die Zahl der Freiheitsgrade. Seien $y$ Freiheitsgrade gebunden gilt folgendes. Für den Mittelwert gilt beispielsweise $y=1$.
 
-\[
 \begin{eqnarray}
     \Delta x &=& \pm\sqrt{\frac{1}{n(n - y)}\sum_{i=1}^n(\bar{x}-x_i)^2}
 \end{eqnarray}
-\]
 
 \hypertarget{das-lambertbeersche-gesetz}{%
 \subsection{Das Lambert--Beer'sche
@@ -394,7 +375,7 @@ Gesetz}\label{das-lambertbeersche-gesetz}}
 \renewcommand{\section}[2]{} % remove extra title
 \begin{thebibliography}{9}
 \bibitem{UzK}
-	Universität zu Köln, ``B1.1: Infrarotabsorption in \(\ce{CO_2}\)'', April 2024
+	Universität zu Köln, ``B1.1: Infrarotabsorption in $\ce{CO_2}$'', April 2024
 \bibitem{Bakan}
   S. Bakan \& E. Raschke, ``Der natürliche Treibhauseffekt'', Promet 28,
 	Deutscher Wetterdienst, 2002, Online verfügbar unter
@@ -403,6 +384,9 @@ Gesetz}\label{das-lambertbeersche-gesetz}}
 	W. Demtröder, ``Experimentalphysik 3: Atome, Moleküle und Festkörper'',
 	Springer--Spektrum--Verlag, 5. Auflage 2016, DOI:
 	\href{https://doi.org/10.1007/978-3-662-49094-5}{10.1007/978-3-662-49094-5}
+\bibitem{Gerthsen}
+	D. Meschede, ``Gerthsen Physik'', 21. Auflage, Springer Verlag,
+	DOI~\href{https://doi.org/10.1007/978-3-662-45977-5}{10.1007/978-3-662-45977-5}
 \bibitem{Strahldichte}
 	Wikipedia, ``Strahldichte'',
 	\url{https://de.wikipedia.org/wiki/Strahldichte}, Abruf am 02.05.2024
@@ -419,13 +403,20 @@ Gesetz}\label{das-lambertbeersche-gesetz}}
 \bibitem{Fließbach}
 	T. Fließbach, ``Statistische Physik'', 2018, DOI
 	\href{https://doi.org/10.1007/978-3-662-58033-2}{10.1007/978-3-662-58033-2}
+\bibitem{Freiheitsgrad}
+	Technische Falkutät Kiel, ``Freiheitsgrade der Rotation'',
+	\url{https://www.tf.uni-kiel.de/matwis/amat/mw1_ge/kap_5/advanced/t5_2_4.html},
+	Abruf am 03.05.2024
 \bibitem{abb:gaussians}
 	Wikimedia,
 	\url{https://commons.wikimedia.org/wiki/File:Normal_Distribution_PDF.svg},
 	2023-02-23
 \bibitem{Einsiedler}
-	M. Einsiedler, ``Analysis I: Kapitel \(1\)-\(9\)'', 2022,
+	M. Einsiedler, ``Analysis I: Kapitel $1$-$9$'', 2022,
 	\url{https://wp-prd.let.ethz.ch/analysis19/chapter/treppenfunktionen-und-deren-integral},
 	Abruf am 03.05.2024
+\bibitem{abb:Schwingungen CO2}
+	Wikimedia, ``File:Co2 vibrations.svg''
+	\url{https://commons.wikimedia.org/wiki/File:Co2_vibrations.svg}
 \end{thebibliography}
 \end{document}
