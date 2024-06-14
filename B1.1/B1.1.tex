@@ -87,6 +87,44 @@ Dieser Versuch dient als Einführung in die Infrarotspektroskopie. Mithilfe eine
 \hypertarget{theoretische-grundlagen}{%
 \section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
 
+\hypertarget{treibhauseffekt}{\subsection{Treibhauseffekt}\label{treibhauseffekt}}
+Die Temperatur auf der Photosphäre der Sonne beträgt ca. $6000\mathrm{\,K}$ \cite{BakanRaschke}. Von der Erde aus lässt sich diese Größe ungefähr über das Stefan--Boltzmann--Strahlungsgesetz \eqref{eq:SBS} berechnen, wozu die Stefan-Boltzmann Konstante $\sigma$ und die Oberfläche $A$ der Sonne benötigt werden. \cite{Gerthsen}
+
+\begin{eqnarray}
+	P &=& \sigma \cdot A \cdot T_\mathrm{eff}^{\,4} \label{eq:SBS} \\
+	\sigma &=& 5.67 \cdot 10^{-8} \mathrm{\,\frac{W}{m^2K^4}}
+\end{eqnarray}
+
+\noindent
+Eine andere Möglichkeit der Temperaturbestimmung nutzt das Wien'sche Verschiebungsgesetz \eqref{eq:Wien Verschiebungsgesetz}. Das Emissionsspektrum der Sonne hat ein Maximum bei $\hat \nu=3.4 \cdot 10^{14} \mathrm{\,Hz}$, woraus sich die Temperatur $T$ ermitteln lässt. \cite{Gerthsen}
+
+\begin{eqnarray}
+	\hat \nu &=& 5.88 \cdot10^{10} \cdot T \label{eq:Wien Verschiebungsgesetz}
+\end{eqnarray}
+
+\noindent
+Das solare Maximum des Spektrums liegt bei einer Wellenlänge von $0.6\mathrm{\,\mu m}$ und ist in Abbildung \ref{abb:Spektrum Sonne & Erde} oben dargestellt. Das Sonnenlicht wird von Stoffen in der Atmosphäre und Erdoberfläche stark absorbiert. Bei irdischen Temperaturen emittieren unserer Erdboden und Atmosphäre wieder Strahlungen im Infrarotbereich ab, dadurch wird die Erde aufgewärmt und das Leben ermöglicht. \cite{BakanRaschke}
+
+Die Erdatmosphäre besteht aus $78.1\,\%$ Stickstoff $\ce{N_2}$, $20.9\,\%$ Sauerstoff $\ce{O_2}$, $0.93\,\%$ Argon $\ce{Ar}$, $1.45\,\%$ Wasserdampf $\ce{H_2O}$ und $1\,\%$ aus sogenannen Treibhausgasen. Zu den Treibhausgasen zählen Kohlenstoffdioxid $\ce{CO_2}$, Methan $\ce{CH_4}$, Distickstoffmonoxid $\ce{N_2O}$ und Ozon $\ce{O_3}$.
+
+Dabei tragen Wasserdampf und die Treibhausgase am meisten zu dem atmosphärischen Treibhauseffekt bei. Ohne sie wäre unsere Erdoberfläche im Durchschnitt um $33\mathrm{\,^\circ C}$ kälter. \cite{BakanRaschke}
+
+Kohlenstoffdioxid und Wasserdampf prägen das Absorptionspektrum stark, was in Abbildung \ref{abb:Spektrum Sonne & Erde} ebenfalls dargestellt ist. Was absorbiert wurde, wird nach dem kirchhoff'schen Strahlungsgesetz auch wieder emittiert.
+
+Bei einer Wellenlänge unter $0.5\mathrm{\,\mu m}$ erfolgt die Energieabsorption durch atomare Übergänge, liegen die Wellenlänge allerdings höher dann passiert es durch Übergänge zwischen Rotations- und Schwingungszuständen. Dies ist auch der Grund, warum Stoffe wie Sauerstoff und Stickstoff im Infrarotbereich nicht absorbieren, sie besitzen kein Dipolmoment und können auch keines durch Rotation oder Schwingungen bekommen. \cite{BakanRaschke}
+
+Neben dem natürlichen Treibhauseffekt gibt es noch einen anthropogenen Treibhauseffekt, der sich negativ auf das Klimasystem auswirkt. In den letzten $150$ Jahren hat sich der Anteil der Treibhausgase durch wirtschaftliche, landschaftliche und soziale Entwicklungen erheblich erhöht, sodass mehr Sonnenstrahlungen absorbiert und somit auch mehr Wärmestrahlungen abgegeben werden. In Erdbodennähe steigt die Temperatur, während in der Strato- und Mesosphäre eine Abkühlung stattfindet. Dies führt schließlich zu einer Destabilisierung der gesamten Atmosphäre. \cite{BakanRaschke}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/Spektrum_Sonne_Erde.png}
+	\caption{Spektrum der als Schwarzkörper idealisierten Sonne\\
+		sowie der Erde mit logarithmischer Wellenlängenskala $\mathrm a)$,\\
+		und das Absorbtionsvermögen auf der Erdoberfläche $\mathrm b)$\\
+		sowie $11\mathrm{\,km}$ oberhalb der Erdoberfläche $\mathrm c)$ \cite{GoodyYung}}
+	\label{abb:Spektrum Sonne & Erde}
+\end{figure}
+
 \subsection{Spektroskopie}
 \label{Spektroskopie}
 
@@ -354,9 +392,6 @@ Deswegen wird bei der MQR nicht durch die Stichprobenmenge $n$ geteilt, sondern 
 \subsection{Das Lambert--Beer'sche
 Gesetz}\label{das-lambertbeersche-gesetz}}
 
-\hypertarget{treibhauseffekt}{%
-\subsection{Treibhauseffekt}\label{treibhauseffekt}}
-
 \clearpage
 \hypertarget{durchfuxfchrung}{%
 \section{Durchführung}\label{durchfuxfchrung}}
@@ -376,8 +411,8 @@ Gesetz}\label{das-lambertbeersche-gesetz}}
 \begin{thebibliography}{9}
 \bibitem{UzK}
 	Universität zu Köln, ``B1.1: Infrarotabsorption in $\ce{CO_2}$'', April 2024
-\bibitem{Bakan}
-  S. Bakan \& E. Raschke, ``Der natürliche Treibhauseffekt'', Promet 28,
+\bibitem{BakanRaschke}
+	S. Bakan \& E. Raschke, ``Der natürliche Treibhauseffekt'', Promet 28,
 	Deutscher Wetterdienst, 2002, Online verfügbar unter
 	\url{https://www.dwd.de/DE/leistungen/pbfb_verlag_promet/pdf_promethefte/28_3_4_pdf.pdf}
 \bibitem{Demtröder}
@@ -411,6 +446,9 @@ Gesetz}\label{das-lambertbeersche-gesetz}}
 	Wikimedia,
 	\url{https://commons.wikimedia.org/wiki/File:Normal_Distribution_PDF.svg},
 	2023-02-23
+\bibitem{GoodyYung}
+	R. M. Goody \& Y. L. Yung, ``Atmospheric Radiation: Theoretical Basis'', 1995,
+	DOI  (der 2. Auflage) \href{https://doi.org/10.1093/oso/9780195051346.001.0001}{10.1093/oso/9780195051346.001.0001}
 \bibitem{Einsiedler}
 	M. Einsiedler, ``Analysis I: Kapitel $1$-$9$'', 2022,
 	\url{https://wp-prd.let.ethz.ch/analysis19/chapter/treppenfunktionen-und-deren-integral},
