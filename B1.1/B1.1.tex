@@ -287,8 +287,76 @@ Beispielsweise hat Kohlenstoffdioxid $\ce{CO_2}$ drei Normalschwingungen, die in
 	\label{abb:Normalschwingungen CO2}
 \end{figure}
 
-\hypertarget{infrarotaktivituxe4t}{%
-\subsection{Infrarotaktivität}\label{infrarotaktivituxe4t}}
+\subsubsection{Rotationsniveaus}
+Ein rotierendes zweiatomiges Molekül lässt sich als linearer starrer Rotor betrachten.
+
+Seine quantenmechanischen Energieniveaus $E_J$ sind durch den Eigenwert des Drehimpulsoperators $\hat J$ und die Rotationskonstante $\tilde{B}$ bestimmt. $\tilde{B}$  wiederum wird durch das Trägheitsmoment $I$ und das reduzierte Plank'sche Wirkungsquantum $\hbar$ dargestellt.
+
+\begin{eqnarray}
+	E_J &=& \tilde{B} J (J + 1) \\
+	\tilde{B} &=& \frac{\hbar^2}{2 I}
+\end{eqnarray}
+
+\noindent
+Typische Frequenzen für die Rotationsanregung bei Molekülen befinden sich im sub--millimeter--Bereich, wobei sie sich für die Vibrationsanregung durch Infrarotanregung. % \cite[S. 4]{UzK}
+
+\hypertarget{infrarotaktivituxe4t}{\subsubsection{Infrarotaktivität}\label{infrarotaktivituxe4t}}
+Wird das elektrische Dipolmoment eines Moleküls bei einer Schwingung periodisch verändert, so wird von einer infrarot--aktiven (IR-aktiven) Schwingung gesprochen.
+
+Das $\ce{CO_2}$--Molekül besitzt zwei  IR--aktive Normalschwingungen, die Biegeschwingung und die asymmetrische Streckschwingung.\footnote{Vergleiche Abschnitt \ref{Normalschwingungen}} Bei beiden Schwingungen wird die Symmetrie gebrochen und es ergibt sich ein periodisch veränderndes Dipolmoment.
+
+Durch diese Schwingungen ist es möglich, $\ce{CO_2}$--Dipolübergänge im Infrarotbereich anzuregen, obwohl das $\ce{CO_2}$--Molekül  in Ruhe kein elektrisches Dipolmoment besitzt. \cite{HakenWolf} % \cite[S. 197]{HakenWolf}
+
+\hypertarget{Rotationsbande}{\subsubsection{Rotationsbande}\label{Rotationsbande}}
+In Abbildung \ref{fig:rotationsspektrumCO2} ist das Rotationsspektrum von CO$_2$ dargestellt, das bei einem Probendruck von einigen $\mathrm{\mu bar}$ aufgenommen wurde. Ein solches Spektrum wird auch \emph{Rotationsbande} genannt.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/Rotationssprektrum_CO2.png}
+	\caption{Rotationsspektrum von $\ce{CO_2}$ bei einem Probendruck von einigen $\mathrm{\mu bar}$,\\
+		gemessen mit einem FTIR--Spektrometer \cite{UzK}}
+	\label{fig:rotationsspektrumCO2}
+\end{figure}
+
+Dieses lässt sich in einen P--Zweig (links) und in einen R--Zweig (rechts) aufteilen. Der P--Zweig beschreibt dabei die Auswahlregel $\Delta J = -1$ und der R--Zweig $\Delta J = +1$. Jede einzelne Linie im Spektrum stellt dann die Werte für $J$ dar, angefangen bei $0$ vom Bandenursprung nach außen hin zunehmend.
+
+Die Intensität jeder Linie hängt stark von $J$ ab und folgt der Boltzmann--Statistik. Das erklärt die unterschiedlichen Höhen der einzelnen Linien.
+
+Wird der Probendruck erhöht, erfolgt eine starke Linienverbreitung. Die einzelnen Linien folgen dann der Gestalt einer Lorentz--Kurve, die in Abbildung \ref{abb:Druckverbreiterung & Sättigungsverbreiterung} links dargestellt ist. Bei Zimmertemperatur beträgt der Druckverbreiterungskoeffizient ca. $0.3 \mathrm{\, cm^{-1}\cdot bar^{-1}}$. \cite{UzK}
+
+Außerdem erfolgt eine Sättigungsverbreiterung bei höheren Konzentrationen von $\ce{CO_2}$. So erscheinen die Linien bei hohen Konzentrationen in Form einer Gauß--Glocke, wie es in Abbildung \ref{abb:Druckverbreiterung & Sättigungsverbreiterung} rechts zu sehen ist. Dieses Verhalten entsteht durch den Einfluss des im Folgenden besprochenen Lambert--Beer'schen Gesetzes für zunehmende Konzentration.
+
+\begin{figure}[h]
+	\centering
+	\begin{minipage}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../media/B1.1/Druckverbreiterung.jpg}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+		\includegraphics[width=\linewidth]{../media/B1.1/Sättigungsverbreiterung.jpg}
+	\end{minipage}
+	\caption{Druckverbreiterung (links) und Sättigungsverbreiterung (rechts) \cite{UzK}}
+	\label{abb:Druckverbreiterung & Sättigungsverbreiterung}
+\end{figure}
+
+\hypertarget{das-lambertbeersche-gesetz}{\subsubsection{Das Lambert--Beer'sche Gesetz}\label{das-lambertbeersche-gesetz}}
+Das Lambert--Beer'sche Gesetz beschreibt die transmittierte Intensität $I$ in Abhängigkeit der eintreffenden Intensität $I_0$. \cite{HakenWolf} % \cite[S. 299f]{HakenWolf}
+
+\begin{eqnarray}
+	I &=& I_0 e^{- \alpha C x} \label{eq:Lambert-Beer}
+\end{eqnarray}
+
+\noindent
+Dabei sind der für jedes Molekül charakteristische Absorptionskoeffizient $\alpha$ , die Konzentration $C$ der absorbierenden Moleküle in einer homogenen Probe und die Dicke $x$ dieser Probe relevant.
+
+Mithilfe dieses Gesetzes lässt sich die Lambert--Beer--Gauß--Formel \eqref{eq:Lambert-Beer-Gauß} herleiten. Sie entsteht, wenn die gesamte transmittierte Intensität $I(C)$ von eintreffenden elektromagnetischen Wellen aller Frequenzen im Intervall $[\nu_1, \nu_2]$ gesucht wird.
+
+Diese Formel ergibt sich aus dem Integral über das Lambert--Beer'sche Gesetz, wobei die Frequenzabhängigkeit des Absorptionskoeffizienten $\alpha(\nu)$ relevant ist. Dafür wird hier eine Gauß--Verteilung angenommen,
+
+\begin{eqnarray}
+	%I(C) &=& I_0 \int_{\nu_1}^{\nu_2} \exp[-\alpha(\nu^\prime) C x] \,\mathrm d\nu^\prime \\
+	\alpha(\nu) &=& \alpha_0 \exp[- \left(\frac{\nu - \nu_0}{\Delta \nu}\right)^2] \\
+	I(C) &=& I_0 \int_{\nu_1}^{\nu_2} \exp[-\alpha_0 \exp \left[- \left(\frac{\nu' - \nu_0}{\Delta \nu}\right)^2\right] C x] d\nu' \label{eq:Lambert-Beer-Gauß}
+\end{eqnarray}
 
 \hypertarget{mathematische-grundlagen}{%
 \subsection{Mathematische Grundlagen}\label{mathematische-grundlagen}}
@@ -307,17 +375,17 @@ Die Gaußverteilung entspricht der Wahrscheinlichkeitsdichtefunktion $\phi_{\mu,
         \right]
 \end{eqnarray}
 
+\noindent
+Werden Zufallsvariablen gemessen, so haben sie immer eine gewisse Streuung. Nach dem Grenzwertsatz ist diese Streuung gaußverteilt. Bei genügend Messungen kann man annehmen, dass $68.3\%$ der Zufallsvariablen im Intervall $\mu\pm\sigma$ liegen.
+
+Im $2\sigma$--Intervall werden $95.4\%$ der Zufallsvariablen erwartet, im $3\sigma$--Intervall sogar $99.7\%$.
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B1.1/Gaussverteilungen.pdf}
 	\caption{Gaußverteilungen mit verschiedenen Parametern \cite{abb:gaussians}}
 	\label{abb:gaussians}
 \end{figure}
-
-\noindent
-Werden Zufallsvariablen gemessen, so haben sie immer eine gewisse Streuung. Nach dem Grenzwertsatz ist diese Streuung gaußverteilt. Bei genügend Messungen kann man annehmen, dass $68.3\%$ der Zufallsvariablen im Intervall $\mu\pm\sigma$ liegen.
-
-Im $2\sigma$--Intervall werden $95.4\%$ der Zufallsvariablen erwartet, im $3\sigma$--Intervall sogar $99.7\%$.
 
 \hypertarget{treppenfunktion}{%
 \subsubsection{Treppenfunktion}\label{treppenfunktion}}
@@ -388,10 +456,6 @@ Deswegen wird bei der MQR nicht durch die Stichprobenmenge $n$ geteilt, sondern 
     \Delta x &=& \pm\sqrt{\frac{1}{n(n - y)}\sum_{i=1}^n(\bar{x}-x_i)^2}
 \end{eqnarray}
 
-\hypertarget{das-lambertbeersche-gesetz}{%
-\subsection{Das Lambert--Beer'sche
-Gesetz}\label{das-lambertbeersche-gesetz}}
-
 \clearpage
 \hypertarget{durchfuxfchrung}{%
 \section{Durchführung}\label{durchfuxfchrung}}
@@ -422,6 +486,8 @@ Gesetz}\label{das-lambertbeersche-gesetz}}
 \bibitem{Gerthsen}
 	D. Meschede, ``Gerthsen Physik'', 21. Auflage, Springer Verlag,
 	DOI~\href{https://doi.org/10.1007/978-3-662-45977-5}{10.1007/978-3-662-45977-5}
+\bibitem{HakenWolf}
+	H. Haken \& H. Wolf, ``Molekülphysik und Quantenchemie'', Springer-Verlag, 2006, DOI \href{https://doi.org/10.1007/3-540-30315-4}{10.1007/3-540-30315-4}
 \bibitem{Strahldichte}
 	Wikipedia, ``Strahldichte'',
 	\url{https://de.wikipedia.org/wiki/Strahldichte}, Abruf am 02.05.2024
