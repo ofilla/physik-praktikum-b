@@ -127,57 +127,54 @@ Neben dem natürlichen Treibhauseffekt gibt es noch einen anthropogenen Treibhau
 
 \subsection{Spektroskopie}
 \label{Spektroskopie}
+Spektroskopie beschreibt die Wechselwirkung von Stoffen mit elektromagnetischen Wellen. Misst man solche Wechselwirkungen im Abhängigkeit von der Wellenlänge $\lambda$ bzw. Frequenz $\nu$, so erhält man ein Spektrum, was zu der Namensgebung Spektroskopie führt.
 
-\hypertarget{elektromagnetisches-spektrum}{%
-\subsection{elektromagnetisches Spektrum}\label{elektromagnetisches-spektrum}}
+% Historisches
+Isaac Newton entdeckte bereits im $17.$ Jahrhundert die Spektralfarben des Lichtes mithilfe eines Prismas. Etwa $200$ Jahre später entdeckte Joseph von Fraunhofer die Absorptionslinie im Sonnenspektrum und erkannte damit, dass Stoffe in der Atmosphäre Teile des Spektrums ``schlucken''. Diese und viele weitere Experimente führten zu einem weiten Verständnis von diesem Bereich der Atomphysik.
 
-Es gibt verschiedene Frequenzbereiche elektromagnetischer Strahlung. Diese werden unter verschiedenen Namen zusammengefasst.
+\subsubsection{Licht}
+\label{Licht}
+Ein wichtiges Konzept der Spektroskopie ist das Licht. Es kann auf zwei Arten beschrieben werden, als Welle mit einer Wellenlänge $\lambda$ bzw. Frequenz $\nu$ und als Teilchen. Dieses Lichtteilchen nennt man Photonen. Aufgrund dessen werden beide Betrachtungsweisen gemeinsam als ``Welle--Teilchen--Dualismus'' bezeichnet. Die Energie $E$ einer elektromagnetischen Welle kann durch die Frequenz $\nu$ und das Planck'sche Wirkungsquantum $h$ beschrieben werden, das Verhältnis zwischen Frequenz und Wellenlänge durch die Lichtgeschwindigkeit $c$
 
-\begin{table}[h]
+\begin{eqnarray}
+	E &=& h \cdot \nu \\
+	c &=& \nu\lambda \\
+	h &\approx& 6.63 \cdot 10^{-34} \mathrm{\,Js}
+\end{eqnarray}
+
+\hypertarget{elektromagnetisches-spektrum}{\subsection{elektromagnetisches Spektrum}\label{elektromagnetisches-spektrum}}
+Das elektromagnetische Spektrum umfasst alle elektromagnetischen Wellen, die aus zueinander senkrecht stehenden elektrischen und magnetischen Wellen bestehen. Jede Wellenart besitzt eine charakteristische Wellenlänge und Frequenz bzw. Energie.
+
+Zu dem Spektrum gehören unter anderem Radiowellen, Infrarotstrahlung, sichtbares Licht, UV--Strahlung und Gamma--Strahlung. Abbildung \ref{abb:EM Spektrum} zeigt das gesamte elektromagnetische Spektrum und die dazugehörige Wellenlängen und Frequenzen.
+
+Dieser Versuch beschäftigt sich mit der Infrarot-- bzw. Wärmestrahlung. Ihr Bereich umfasst die Wellenlängen von $780\mathrm{\,nm}$ bis $1\mathrm{\,nm}$.
+
+\begin{figure}[h!]
 	\centering
-	\begin{tabular}{l|c}
-		Frequenzbereich & Wellenlänge in $\mathrm m$ \\
-		\hline
-		Niederfrequenz & $10^4$ bis $10^8$ \\
-		Radiowellen & $10^1$ bis $10^3$ \\
-		Mikrowellen & $10^{-3}$ bis $10^{0}$ \\
-		Infrarotstrahlung & $10^{-6}$ bis $10^{-3}$ \\
-		sichtbares Licht & $10^{-7}$ \\
-		Ultraviolette Strahlung & $10^{-9}$ bis $10^{-7}$ \\
-		Röntgenstrahlung & $10^{-11}$ bis $10^{-9}$ \\
-		Gammastrahlung & $<10^{-11}$
-	\end{tabular}
-	\caption{Elektromagnetisches Spektrum}
-	\label{tab:emSpektrum}
-\end{table}
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/EM_Spektrum.png}
+	\caption{Elektromagnetisches Spektrum \cite{Wikipedia: Elektromagnetisches Spektrum}}
+	\label{abb:EM Spektrum}
+\end{figure}
 
-\hypertarget{photonen}{%
-\subsubsection{Photonen}\label{photonen}}
+\subsubsection{Übergänge}
+\label{Übergänge}
+Es gibt zwei Prozesse der Wechselwirkung mit elektromagnetischer Strahlung. Bei der \emph{Absorption} wird Energie aufgenommen, bei der \emph{Emission} wird sie abgegeben. Hierbei treten Übergänge zwischen verschiedenen Energiezuständen auf. Energiedifferenzen zwischen diesen Energieniveaus variieren. Nur wenn die Energie des Photon exakt der Energiedifferenz entspricht, kann ein Übergang stattfinden.
 
-Photonen sind die Austauschteilchen von elektromagnetischer Wechselwirkung. Sie haben keine Ruheenergie, ihre Energie $E$ ist über die Frequenz $\nu$ bzw. die Kreisfrequenz $\omega$ beschrieben. \cite{Fließbach}
+In der Atomschale hat man unter anderem Elektronenzustände, Schwingungszustände und Rotationszustände mit $\Delta E_{e} > \Delta E_{s} > \Delta E_{r}$ \cite{Agilent Technologies}. Die Schwingungs-- und Rotationsenergien liegen im Bereich der Infrarotstrahlung, daher sind sie für diesen Versuch relevant. Abbildung \ref{abb:Übergänge} zeigt die verschiedene Energiezustände sowie Elektronenübergänge, die mittels UV--Strahlungs--Absorption stattfinden.
 
-\begin{eqnarray}
-    E &=& h\cdot \nu \\
-        &=& \hbar \cdot \omega \\
-    h &\approx& 6.62\cdot 10^{-34} \mathrm{\,Js}
-\end{eqnarray}
+Wie ein System aus Atomen das Licht absorbiert, hängt von quantenmechanischen Eigenschaften ab, die von sogenannten \emph{Auswahlregeln} beschrieben. Daraus kann man dann Rückschlüsse über das System ziehen.
 
-\noindent
-Dabei findet die Planck--Konstante $h$ bzw. ihre reduzierte Form $\hbar$ Verwendung. Die Wellenlänge $\lambda$ bzw. die Wellenzahl $k$ können über die Lichtgeschwindigkeit $c$ aus der (Kreis-)Frequenz bestimmt werden.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/Uebergaenge.jpg}
+	\caption{Energiezustände und Elektronenübergang \cite{Agilent Technologies}}
+	\label{abb:Übergänge}
+\end{figure}
 
-\begin{eqnarray}
-    c &=& \lambda\nu \\
-    c &=& k\omega
-\end{eqnarray}
+\subsubsection{Auswahlregeln}
+Die Auswahlregeln beschreiben, welche Übergänge erlaubt oder verboten sind. Sie basieren auf den Erhaltungssätzen und quantenmechanischen Eigenschaften.
 
-\noindent
-Die Kreisfrequenz $\omega$ und die Wellenzahl $k$ sind proportional zu der Frequenz $\nu$ respektive der Wellenlänge $\lambda$.
-
-\begin{eqnarray}
-    \omega &=& 2\pi \nu \\
-    k &=& \frac{2\pi}{\lambda} \\
-    \hbar &=& \frac{h}{2\pi}
-\end{eqnarray}
+Beispielsweise besitzen Elektronen einen Spin von $\pm\frac{1}{2}$ und Photonen einen Spin von $1$. Daher kann ein Elektron nur dann zwischen zwei Energieniveaus wechseln, wenn sein Spin um $1$ verändert wird. Da das Photon beim Übergang entweder erzeugt oder vernichtet wird, ist der Gesamtspin auf diese Weise erhalten.
 
 \hypertarget{planckstrahlung}{%
 \subsection{Planck--Strahlung}\label{planckstrahlung}}
@@ -239,6 +236,8 @@ Atome im Grundzustand haben kein permanentes Dipolmoment, Moleküle können dage
 \subsubsection{Dipolübergang}\label{dipoluxfcbergang}}
 
 Um ein Molekül durch die Absorption eines Photons anzuregen, muss ein Dipolübergang stattfinden. Dabei wird der quantenmechanische Zustand des Moleküls gestört, was durch zeitabhängige Störungstheorie beschrieben wird. \cite{Hinderer}
+
+Dipolübergänge sind \emph{erlaubte Übergänge}. Im Unterschied dazu gibt es auch \emph{verbotene Übergänge}. Diese sind Multipolübergänge höherer Ordung und treten daher sehr viel weniger wahrscheinlich auf.
 
 \hypertarget{uxfcbergangsdipolmoment}{%
 \subsubsection{Übergangsdipolmoment}\label{uxfcbergangsdipolmoment}}
@@ -358,6 +357,20 @@ Diese Formel ergibt sich aus dem Integral über das Lambert--Beer'sche Gesetz, w
 	I(C) &=& I_0 \int_{\nu_1}^{\nu_2} \exp[-\alpha_0 \exp \left[- \left(\frac{\nu' - \nu_0}{\Delta \nu}\right)^2\right] C x] d\nu' \label{eq:Lambert-Beer-Gauß}
 \end{eqnarray}
 
+\subsection{pyroelektrischer Sensor}
+Ein pyroelektrischer Sensor wandelt Temperaturunterschiede durch den \emph{pyroelektrischen Effekt}\footnote{verwandt mit dem piezoelektrischen Effekt} in Spannungen um.
+
+Ein solcher Sensor besteht aus zwei Elektroden und einer Schicht aus pyroelektrischem Material. Das Kristallgitter eines pyroelektrischen Materials besitzt zwei Arten von Gitterschichten, jeweils eine ist mit positiven und eine mit negativen Ionen besetzt. \cite{pyroelektrischer Sensor}
+
+Wenn Infrarotstrahlung absorbiert wird, führt dies zu einer lokalen Verformung des Gitters, wodurch sich die Abstände zwischen positiven und negativen Ionen verändern. Dann fällt eine messbare Spannung über die Elektroden ab.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../media/B1.1/IR_Sensor.jpg}
+	\caption{Schematisches Prinzip eines IR--Detektors \cite{pyroelektrischer Sensor}}
+	\label{abb:pyroelektrischer Sensor}
+\end{figure}
+
 \hypertarget{mathematische-grundlagen}{%
 \subsection{Mathematische Grundlagen}\label{mathematische-grundlagen}}
 
@@ -459,6 +472,62 @@ Deswegen wird bei der MQR nicht durch die Stichprobenmenge $n$ geteilt, sondern 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
 \section{Durchführung}\label{durchfuxfchrung}}
+\subsection{Versuchsaufbau}
+\label{Versuchsaufbau}
+
+Der Versuchsaufbau besteht im Wesentlichen aus einer Infrarot--Quelle, einer Absorptionszelle mit Thermometer und einem Infrarot--Detektor. Dies ist in Abbildung \ref{abb:Aufbau} schematisch dargestellt.
+
+Die Infrarot--Quelle ist eine metallische Drahtwendel, die näherungsweise als Schwarzer Körper anngenommen werden kann. Sie ist umgeben von einem Reflektor, sodass das Licht gebündelt in die Aparatur geleitet wird.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/IR_Aufbau.png}
+	\caption{Schematische Darstellung des Aufbaus \cite{UzK}}
+	\label{abb:Aufbau}
+\end{figure}
+
+Bei der Absorptionszelle handelt es sich um ein verspiegeltes Glasrohr mit zwei infrarotdurchlässigen Fenstern an jedem Ende und zwei kleinen Öffnungen für die Gaszufuhr und Entlüftung. Ein Thermometer ist mit dem Computer verbunden, um das Phänomen des Treibhauseffekts zu messen. Als Infrarot--Detektor wird ein pyroelektrischer Sensor verwendet. Die beiden Fenster bestehen aus PE--Folie.
+
+Alle Bauteile können auf einer optischen Bank gegeneinander verschoben werden. Das Besondere an diesem Versuchsaufbau ist, dass sowohl IR--Quelle als auch IR--Detektor breitbandig sind und man spricht von Integral--Absorptionsspektrometer.
+
+\subsection{Durchführung}
+\label{durchfuehrung}
+Bei dem gesamten Versuch werden die Beleuchungsstärke und die Temperatur digital gemessen. Diese Werte werden mit dem Computer aufgezeichnet und in Echtzeit als Graph dargestellt.
+
+Zunächst schaltet man den Strom der IR--Quelle auf die maximale Stromstärke $I_\mathrm{max}\approx 8.3\mathrm{\,A}$. Dann wird die Beleuchtungsstärke so lange gemessen, bis ein nahezu konstanter, aber verrauschter Wert gemessen wird. Dies dauert in etwa $8-10\mathrm{\,min}$. Zu diesem Zeitpunkt ist ein thermisches Gleichgewicht in der Messzelle entstanden, sodass die weiteren Messungen durchgeführt werden können.
+
+Dies entspricht dem Vorgehen im restlichen Versuch. Zunächst wird gemessen, dass ein Gleichgewichtszustand vorherrscht; daraufhin wird etwas verändert und wiederum gemessen, bis die Messwerte bis auf Rauschen konstant sind.
+
+Daraufhin wird die IR--Transmission von verschiedenen Stoffen untersucht. Danach wird der Einfluss der Konzentration von $\ce{CO_2}$ in $\ce{N_2}$ auf den Temperaturverlauf gemessen.
+
+\subsubsection{IR--Transmission}
+\label{IR--Transmission}
+
+Daraufin wird die IR--Transmission von verschiedenen Materialien untersucht. Dazu sollen verschiedene Materialien direkt vor dem IR--Detektor plaziert werden. Die Proben sind eine PE--Folie, je eine orangene und eine violette Hochtemperatur--Filterfolie, eine Schicht eines Papiertaschentuchs und ein Stück Schreibpapier.
+
+Dazu wird der Abstand zwischen Quelle und Detektor so eingestellt, dass die Beleuchtungsstärke ungefähr $0.9-1.0\mathrm{\,\frac{W}{m^2}}$ beträgt.
+
+Als Erstes wird immer die Beleuchtungsstärke ohne Probe gemessen, bis diese für ca. $30\mathrm{\,s}$ bis auf Rauschen konstant bleibt. Daraufhin wird das Material in möglichst steilem Anstellwinkel an den Detektor gelehnt. Danach wird so lange gemessen, bis die Beleuchtungsstärke wieder bis auf Rauschen konstant ist.
+
+\subsubsection{Konzentrationskalibrierung}
+\label{Konzentrationskalibrierung}
+Nun wird der Abstand zwischen IR--Quelle und Absorptionszelle auf $1\mathrm{\,cm}$ eingestellt. Dann wird die Zelle gespült, indem sie für ca. eine halbe Minute mit Stickstoff $\ce{N_2}$ geflutet wird. Auf diese Weise wird zu Beginn jeder Messung der selbe Ausgangszustand hergestellt.
+
+Die jeweiligen Messungen werden gestartet, während die Messzelle mit $\ce{N_2}$ geflutet ist. Es wird wieder auf einen Gleichgewichtszustand gewartet. Dann entnimmt man vorsichtig eine genaue Menge $\ce{CO_2}$ mit einer Spritze aus einer Gasflasche. Dieses Gas wird sofort in die Messzelle eingefüllt. Wenn die Messwerte wieder für $30\mathrm{\,s}$ näherungsweise konstant bleiben, wird die Messung gestoppt.
+
+Mit dem Messprogramm werden die Mittelwerte der konstanten Beleuchtungsstärke jeweils vor und nach dem Befüllen mit $\ce{CO_2}$ bestimmt. Dann wird die Spritze wird danach abgenommen die Zelle wird wieder mit Stickstoff gespült.
+
+Dieses Vorgehen wird mit in $1\mathrm{\,ml}$--Schritten mit $\ce{CO_2}$--Mengen von $1\mathrm{\,ml}$ bis $5\mathrm{\,ml}$ durchgeführt, ebenso mit $10\mathrm{\,ml}$, $15\mathrm{\,ml}$, $20\mathrm{\,ml}$, $30\mathrm{\,ml}$, $45\mathrm{\,ml}$ und $60\mathrm{\,ml}$ $\ce{CO_2}$. Bis zu einem Volumen von $10\mathrm{\,ml}$ kann eine feinere Spritze verwendet werden als für die restlichen Messungen.
+
+Zuletzt wird eine weitere Messung von Beleuchtungsstärke und Temperatur durchgeführt, bei der die $\ce{CO_2}$--Konzentration $100\%$ beträgt. Dazu wird die  Gasflasche direkt an die Zelle angeschlossen ist und die Zelle langsam bis zur Sättigung mit $\ce{CO_2}$ befüllt. Danach danach wird die Flasche entfernt und die Zelle so lange gespült, bis die vorherige Beleuchtungsstärke wiederhergestellt ist.
+
+\subsubsection{Spektrometrische Konzentrationsbestimmung}
+\label{Spektrometrische Konzentrationsbestimmung}
+Der Raum wird etwa $1\mathrm{\,min}$ lang gelüftet. Danach werden die Fenster geschlossen und eine neue Messung wird gestartet, bis die Messwerte nahezu konstant sind. Dann wird der Auslassschlauch aus der Blubberflasche genommen und die Zelle wird durch einen Gummibalg mit Luft gefüllt, bis sich die Beleuchtungsstärke nicht mehr ändert. Die Mittelwerte für vor und nach dem Befüllen werden bestimmt. Abschließend wird die Zelle wieder gründlich mit Stickstoff geflutet.
+
+\subsubsection{Optische Emission}
+\label{Optische Emission}
+Zuletzt wird die optische Emission der IR--Quelle ermittelt. Hierfür wird der Raum komplett abgedunkelt und alle Geräte bis auf die IR--Quelle werden ausgeschaltet. Nun wird der Heizstrom langsam aufgedreht bis das Leuchten der Wendel gerade sichtbar wird. Diese Stromstärke wird für jeden Gruppenteilnehmer individuell bestimmt. Zusätzlich wird die maximale Stromstärke der Wendel festgehalten.
 
 \clearpage
 \hypertarget{auswertung}{%
@@ -522,5 +591,15 @@ Deswegen wird bei der MQR nicht durch die Stichprobenmenge $n$ geteilt, sondern 
 \bibitem{abb:Schwingungen CO2}
 	Wikimedia, ``File:Co2 vibrations.svg''
 	\url{https://commons.wikimedia.org/wiki/File:Co2_vibrations.svg}
+\bibitem{pyroelektrischer Sensor}
+	Michael Muth, ``Pyrosensoren'', 1998,
+	\url{https://www.michael-muth.de/lectures/TempSens/chap06.html}, Abruf am 12.06.2024
+\bibitem{Wikipedia: Elektromagnetisches Spektrum}
+	Wikimedia, ``File:Electromagnetic spectrum -de c.svg'',
+	\url{https://commons.wikimedia.org/wiki/File:Electromagnetic_spectrum_-de_c.svg}, Abruf am 12.06.2024
+\bibitem{Agilent Technologies}
+	Agilent Technologies, ``Die Grundlagen der Spektroskopie'', 2016
+	\url{https://www.agilent.com/Library/eseminars/Public/5991-6594_Agilent_Spectroscopy_Theory_DEE.pdf},
+	Abruf am 10.06.2024
 \end{thebibliography}
 \end{document}
