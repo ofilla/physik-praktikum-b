@@ -27,7 +27,7 @@
 \usepackage{color} % Farbpaket wird geladen
 %\usepackage{stmaryrd} % St Mary Road Symbole werden geladen
 \usepackage{physics}
-\usepackage{mhchem} % Chemie: \ce & \pu
+\usepackage[version=4]{mhchem} % Chemie: \ce & \pu
 
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
@@ -179,7 +179,7 @@ Beispielsweise besitzen Elektronen einen Spin von $\pm\frac{1}{2}$ und Photonen 
 \hypertarget{planckstrahlung}{%
 \subsection{Planck--Strahlung}\label{planckstrahlung}}
 
-Das Planck'sche Strahlungsgesetz beschreibt die Energiedichte $\omega_\mathrm{P}$, die ein schwarzer Körper mit einer Frequenz $\nu$ bei einer Temperatur $T$ als Wärmestrahlung aussendet. Dabei finden das Planck'sche Wirkungsquantum $h$, die Lichtgeschwindigkeit $c$ und die Boltzmann--Konstante $k_B$ Verwendung. \cite{Demtröder}
+Das Planck'sche Strahlungsgesetz beschreibt die Energiedichte $\omega_\mathrm{P}$, die ein schwarzer Körper mit einer Frequenz $\nu$ bei einer Temperatur $T$ als Wärmestrahlung aussendet. Dabei finden das Planck'sche Wirkungsquantum $h$, die Lichtgeschwindigkeit $c$ und die Boltzmann--Konstante $k_B$ Verwendung. \cite{Demtröder Atom}
 
 \begin{eqnarray}
     \omega_\mathrm{P}(\nu,T) &=&
@@ -202,7 +202,7 @@ Der Faktor $\frac{8\pi\nu^2}{c^3}$ ist dabei die Dichte der Schwingungsmoden in 
 \hypertarget{strahlungsdichte}{%
 \subsubsection{Strahlungsdichte}\label{strahlungsdichte}}
 
-Die Strahldichte oder Strahlungsdichte $S$ beschreibt die Strahlung, die ein Flächenelement $\mathrm dA$ eines Strahlers in einen Raumwinkel $\mathrm d\Omega$ abstrahlt. Sie ist allgemein das Differential der Strahlungsleistung $\Phi$. \cite{Demtröder,Strahldichte}
+Die Strahldichte oder Strahlungsdichte $S$ beschreibt die Strahlung, die ein Flächenelement $\mathrm dA$ eines Strahlers in einen Raumwinkel $\mathrm d\Omega$ abstrahlt. Sie ist allgemein das Differential der Strahlungsleistung $\Phi$. \cite{Demtröder Atom,Strahldichte}
 
 \begin{eqnarray}
     S &=& \frac{\mathrm d^2\Phi}{\mathrm dA \cdot \mathrm d\Omega}
@@ -535,13 +535,13 @@ Zuletzt wird die optische Emission der IR--Quelle ermittelt. Hierfür wird der R
 \subsection{IR--Transmission}
 \label{IR--Transmission}
 
-Zunächst werden die IR--Absorption und --Emission verschiedener Proben anhand ihrer Beleuchtungsstärke--Kurven untersucht. Dafür werden diese zunächst gegeneinander aufgetragen, siehe Abbildung \ref{fig:materialien}.
+Zunächst werden die IR--Absorption und --Emission verschiedener Proben anhand ihrer Beleuchtungsstärke--Kurven untersucht. Dafür werden diese zunächst gegeneinander aufgetragen, siehe Abbildung \ref{abb:materialien}.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B1.1/materialien.pdf}
 	\caption{Beleuchtungsstärke-Kurven verschiedener Proben}
-	\label{fig:materialien}
+	\label{abb:materialien}
 \end{figure}
 
 Der Kurvenverlauf ist allgemein für alle Proben sehr ähnlich. Solange keine Probe vor den Detektor gebracht wurde, ist die Kurve konstant. Sie fällt abrupt auf einen Minimalwert ab, wenn eine Folie vor den Detektor gestellt wird, und steigt dann langsam auf einen stationären Wert an.
@@ -635,8 +635,240 @@ Dazu wird der Mittelwert $m$ gebildet. Der Fehler $\Delta m$ wird durch die mitt
 \subsection{Konzentrationskalibrierung}
 \label{Konzentrationskalibrierung}
 
+In diesem Teil wird die relative Transmission von $\ce{CO_2}$ bestimmt. Dazu werden zunächst die unterschiedlichen $\ce{CO_2}$--Volumina $V_{\ce{CO_2}}$ in der Messzelle in Konzentrationen $K_{\ce{CO_2}}$ umgerechnet. Dazu muss das wird das Gesamtvolumen der Zelle $V_\mathrm{Zelle}$ aus den Abmessungen der Zelle bestimmt werden. Den Fehler erhält man aus der Gaußschen Fehlerfortpflanzung.
+
+\begin{eqnarray}
+	h_\mathrm{Zelle} &=& (15.0 \pm 0.5) \mathrm{\, cm} \\
+	d_\mathrm{Zelle} &=& (3.930 \pm 0.005) \mathrm{\, cm} \\
+	V_\mathrm{Zelle} &=& \frac{\pi}{4} \cdot h_\mathrm{Zelle} \cdot d_\mathrm{Zelle}^{\,2} \\
+	\Delta V_\mathrm{Zelle}
+		&=& \sqrt{
+				\left(
+					\frac{\pi}{4} \cdot \Delta h_\mathrm{Zelle}  \cdot d_\mathrm{Zelle}^{\,2}
+				\right)^2
+				+ \left(
+					\frac{\pi}{2} \cdot h_\mathrm{Zelle} \cdot d_\mathrm{Zelle}\cdot \Delta d_\mathrm{Zelle}
+				\right)^2
+			} \\
+	V_\mathrm{Zelle} &=& (181.96 \pm 6.08) \mathrm{\, ml}
+\end{eqnarray}
+
+\noindent
+Daraus ergeben sich die Konzentrationen $K_{\ce{CO_2}}$ sowie ihre Fehler aus Gauß'scher Fehlerfortpflanzung.
+Hierbei wird der Fehler des eingefüllten $\ce{CO_2}$--Volumens $\Delta V_{\ce{CO_2}}$ aufgrund der gegebenen Genauigkeit der Einfüllspritze auf $0.1 \mathrm{\, ml}$ geschätzt.
+
+\begin{eqnarray}
+	K_{\ce{CO_2}} &=& \frac{V_{\ce{CO_2}}}{V_\mathrm{Zelle}} \\
+	\Delta K_{\ce{CO_2}}
+		&=& \sqrt{
+				\left(
+					\frac{\Delta V_{\ce{CO_2}}}{V_\mathrm{Zelle}}
+				\right)^2
+				+ \left(
+					\frac{V_{\ce{CO_2}} \cdot \Delta V_\mathrm{Zelle}}{V_\mathrm{Zelle}^2
+				}\right)^2
+			}
+\end{eqnarray}
+
+\noindent
+Die Transmissionswerte $T_\mathrm{mess}$ für die jeweiligen Konzentrationen ergeben sich dann aus den gemessenen Beleuchtungsstärken $I_{\ce{CO_2}}$ und der Beleuchtungsstärke ohne $\ce{CO_2}$ $I_0$ unmittelbar vor der jeweiligen Messung. Auch hier folgt der Fehler wieder aus Gauß'scher Fehlerfortpflanzung. Die Ergebnisse sind in Tabelle \ref{table:konzentrationen} dargestellt.
+
+\begin{eqnarray}
+	T_\mathrm{mess} &=& \frac{I_{\ce{CO_2}}}{I_0} \\
+	\Delta T_\mathrm{mess}
+		&=&
+			\sqrt{
+				\left(
+					\frac{\Delta I_{\ce{CO_2}}}{I_0}
+				\right)^2
+				+ \left(
+					\frac{I_{\ce{CO_2}} \cdot \Delta I_0}{I_0^2}
+				\right)^2
+			}
+\end{eqnarray}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l|c|c|c|c}
+		$V$ $[\mathrm{ml}]$
+			& $K$ $[\%]$
+			& $I_{\ce{CO_2}}$ $[10^{-2} \mathrm{\, W/m^2}]$
+			& $I_0$ $[10^{-2} \mathrm{\, W/m^2}]$
+			& $T_\mathrm{mess}$ $[\%]$ \\
+		\hline
+		$0$ & $0$ 							 & $91.470 \pm 0.011$ & $91.470 \pm 0.011$ & $1$ \\
+		$1$ & $0.55 \pm 0.06$	  & $61.891 \pm 0.009$ & $91.470 \pm 0.011$ & $67.663 \pm 0.013$ \\
+		$2$ & $1.10 \pm 0.07$ 	  & $54.653 \pm 0.012$ & $90.009 \pm 0.019$ & $60.719 \pm 0.018$ \\
+		$3$ & $1.65 \pm 0.08$     & $51.851 \pm 0.016$ & $88.955 \pm 0.013$ & $58.289 \pm 0.020$ \\
+		$4$ & $2.20 \pm 0.09$     & $49.127 \pm 0.011$ & $88.510 \pm 0.030$ & $55.504 \pm 0.023$ \\
+		$5$ & $2.75 \pm 0.11$     & $47.169 \pm 0.013$ & $88.250 \pm 0.040$ & $53.449 \pm 0.029$ \\
+		$10$ & $5.50 \pm 0.19$   & $42.554 \pm 0.007$ & $87.689 \pm 0.012$ & $48.528 \pm 0.010$ \\
+		$15$ & $8.24 \pm 0.28$   & $40.244 \pm 0.012$ & $86.985 \pm 0.013$ & $46.265 \pm 0.015$ \\
+		$20$ & $10.99 \pm 0.37$ & $38.815 \pm 0.008$ & $86.675 \pm 0.017$ & $44.782 \pm 0.013$ \\
+		$30$ & $16.49 \pm 0.55$ & $36.510 \pm 0.011$ & $86.045 \pm 0.012$ & $42.431 \pm 0.014$ \\
+		$45$ & $24.73 \pm 0.83$ & $34.723 \pm 0.010$ & $85.468 \pm 0.016$ & $40.627 \pm 0.014$ \\
+		$60$ & $32.98 \pm 1.10$ & $33.312 \pm 0.008$ & $84.604 \pm 0.014$ & $39.374 \pm 0.011$ \\
+		Sättigung & $100$ 			   & $28.149 \pm 0.014$ & $80.104 \pm 0.012$ & $35.141 \pm 0.018$ \\
+		\hline
+	\end{tabular}
+	\caption{$\ce{CO_2}$--Volumen $V$ mit $\Delta V = 0.1 \mathrm{\, ml}$ mit relativen Konzentrationen $K$
+		Beleuchtungsstärken $I$ sowie Transmissionswerten $T$}
+	\label{table:konzentrationen}
+\end{table}
+
+\noindent
+Die zu den Konzentrationen passenden Transmissionswerte sind inklusive eines Fits zusätzlich in Abbildung \ref{abb:tkFit} dargestellt. Der Fit für diese Transmissionswerte $T_\mathrm{fit}(C)$ ergibt sich aus der Lambert--Beer--Gauß--Funktion \eqref{eq:Lambert-Beer-Gauß}.
+
+Das Integral in dieser Funktion wurde für Werte von $\nu_1 = -10$ und $\nu_2 = 10$ als Summe über Schrittweite multipliziert mit Funktionswert angenähert, wobei die Schrittweite konstant ist mit $s_\nu = 0.01$. Hierfür wurden $\nu_0 = 0$ und $\Delta \nu = 1$ gesetzt, sowie ein zusätzlicher Fit--Parameter $px$ eingebaut. Daraus lassen sich die relativen Transmissionen $T_\mathrm{rel}(C)$ bestimmen.
+
+\begin{eqnarray}
+	T_\mathrm{fit}(C) &=& \frac{I(C)}{I_0} \\
+		&=& s_\nu \sum_{\nu = -10}^{10} \exp[- px \cdot C \cdot \mathrm e^{-\nu^2}] \\
+	T_\mathrm{rel}(C)
+		&=& \frac{
+				T_\mathrm{fit}(C) - T_\mathrm{fit}(100\%)
+			}{
+				T_\mathrm{fit}(0\%) - T_\mathrm{fit}(100\%)
+			}
+\end{eqnarray}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/tkFit.pdf}
+	\caption{Gemessene Transmissionswerte verschiedener $\ce{CO_2}$--Konzentrationen (blau) und zugehöriger Fit (orange)}
+	\label{abb:tkFit}
+\end{figure}
+
+
+\noindent
+Für einen passenden Fit müssen die $T_\mathrm{rel}(C)$ um einen Faktor $F$ gestaucht und um einen Offset $O$ verschoben werden. Der Offset $O$ entspricht dem gemessenen Transmissionswert bei $100\%$ $\ce{CO_2}$, der Faktor $F$ entspricht dem Absorptionswert im selben Zustand.
+
+\begin{eqnarray}
+	\tilde{T}_\mathrm{rel}(C) &=& F \cdot T_{rel}(C) + O \\
+	O &=& T_{mess}(100\%) \\
+	F &=& 1 - O
+\end{eqnarray}
+
+\noindent
+Zuletzt wurde der Fit--Parameter $px$ so angepasst, dass die Kurve möglichst gut mit Messwerten übereinstimmt. Dies ist für $px = 10^3$ der Fall.
+
+Aufgrund der Form der Fit--Kurve ist die Empfindlichkeit des Spektrometers für kleine Konzentrationen größer, da dort bereits minimale Konzentrationsänderungen zu sichtbaren Änderungen des Transmissionswertes führen.
+
+\subsubsection{minimale Konzentration}
+\label{minimale Konzentration}
+Nun soll die minimale Konzentration $K_\mathrm{min}$ ermittelt werden, die sich mit einer Unsicherheit von maximal $10 \mathrm{\,\%}$ bestimmen lässt. Dazu wird zunächst die Genauigkeit $\Delta I_\mathrm{therm}$ abgeschätzt, mit der ein Mittelwert von $I_0$ nach einer typischen Messung trotz thermischen Rauschens noch ermittelbar ist.
+
+Dazu wird die Ungenauigkeit für jede einzelne Messung aller $\ce{CO_2}$--Konzentrationen $\Delta I_{\mathrm{therm}, i}$ abgeschätzt und anschließend gemittelt. Die Ungenauigkeit jeder einzelnen Messung ist durch den Fehler der Mittelwerte von $I_0$ darstellbar, der vor und nach jeder Messung bestimmt wird. Alle Fehler werden gemittelt um die Ungenauigkeit $\Delta I_\mathrm{therm}$ zu erhalten.
+
+\begin{eqnarray}
+	\Delta I_{\mathrm{therm}, i} &=& \frac{I_{0, i, \mathrm{vorher}} - I_{0, i, \mathrm{nachher}}}{2} \\
+	\Delta I_\mathrm{therm} &=& \frac{1}{n} \sum_{i = 1}^{n} \Delta I_{\mathrm{therm}, i}
+\end{eqnarray}
+
+\noindent
+Damit die minimale Transmission $T_\mathrm{min}$ erreicht ist, muss die Unsicherheit einer Transmissionsmessung genau $10 \mathrm{\, \%}$ betragen. Dazu muss die Differenz des Mittelwerts der Messwerte ohne $\ce{CO_2}$ $\bar{I}_{0}$ und des minimalen Messwerts mit $\ce{CO_2}$ $I_\mathrm{min}$ kleiner als das zehnfache der oben abgeschätzten Genauigkeit betragen.
+
+\begin{eqnarray}
+	\bar{I}_0 &=& \sum_{i=1}^{n} I_{0, i} \\
+	\bar{I}_0 - I_\mathrm{min} &=& 10 \cdot \Delta I_\mathrm{therm} \\
+	\Leftrightarrow \qquad I_\mathrm{min} &=& \bar{I}_0 - 10 \cdot \Delta I_\mathrm{therm}
+\end{eqnarray}
+
+\noindent
+Der minimale Transmissionswert $T_\mathrm{min}$, der einer Ungenauigkeit von $10 \mathrm{\, \%}$ genügt, ergibt sich also folgenermaßen.
+
+\begin{eqnarray}
+	T_\mathrm{min} &=& \frac{I_\mathrm{min}}{\bar{I}_0} \\
+	T_\mathrm{min} &\approx& 0.94
+\end{eqnarray}
+
+\noindent
+Die minimale Konzentration $K_{min}$ wird anschließend mittels der Fit--Geraden $\tilde{T}_\mathrm{rel}(C)$ aus dem minimalen Transmissionswert ermittelt. Hierfür wird der obere Berecih des Fits vergrößert in Abbildung \ref{abb:fitZoom} dargestellt. Es wird deutlich, dass die minimale Konzentration $K_\mathrm{min}$ zwischen $300 \mathrm{\, ppm}$ und $400 \mathrm{\, ppm}$ liegen muss. Dementsprechend wird der Mittelwert inklusive der Fehler gebildet.
+
+\begin{eqnarray}
+	K_\mathrm{min} &=&  \frac{300 \mathrm{\, ppm} + 400 \mathrm{\, ppm}}{2} \\
+	\Delta K_\mathrm{min} &=& \left|\frac{300 \mathrm{\, ppm} - 400 \mathrm{\, ppm}}{2}\right| \\
+	K_\mathrm{min} &=& (350 \pm 50) \mathrm{\, ppm}
+\end{eqnarray}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/fitZoomPpm.pdf}
+	\caption{Darstellung der minimalen Konzentration $K_\mathrm{min}$,
+		die noch mit einer Unsicherheit von $10 \mathrm{\, \%}$ bestimmt werden kann}
+	\label{abb:fitZoom}
+\end{figure}
+
+\noindent
+Der $\ce{CO_2}$--Gehalt in Luft beträgt laut Demtröder ca. $340 \mathrm{\, ppm}$ \cite{Demtröder Kern/Atom}.
+Dies ist im Rahmen des Fehlers im Bereich der minimalen Konzentration $K_\mathrm{min}$. Daraus lässt sich folgern, dass der $\ce{CO_2}$--Gehalt der Luft sich mit diesem Spektrometer gut bestimmbar ist.
+
+Das für diesen Versuchsteil verwendete Modell weist einige Annahmen auf, die vom realen Versuchsaufbau nicht bereitgestellt werden können. So wird beispielsweise die Glühwendel näherungsweise als schwarzer Körper betrachtet, was streng genommen nicht der Fall ist. Zudem sind beide zellabdeckenden Fenster nicht vollständig durchlässig für Infrarotstrahlung. Zuletzt befindet sich der Detektor außerhalb der Zelle, was zu einer zusätzlichen Abschwächung der Infrarotstrahlung durch Raumluft führt.
+
+All diese Abweichungen führen dazu, dass das Lambert--Beer--Gesetz, aus dem sich die Lambert--Beer--Gauß--Funktion, und damit dieses Modell, ergibt, keine perfekte Beschreibung der Realität ermöglicht. Dennoch ist die Modellkurve sehr nah an den Messwerten. Dies zeigt, dass diese Abweichungen zwar einen bemerkbaren, aber keinen großen Einfluss auf das Ergebnis dieses Versuchsteils haben.
+
+Der Temperaturabfall innerhalb der Zelle nach vollständigem Befüllen mit $\ce{CO_2}$ ist aller Wahrscheinlichkeit nach mit einer geringeren Temperatur innerhalb der Gasflasche als der des Stickstoffs zu erklären.
+
+Nach vollständiger Befüllung der Zelle mit $\ce{CO_2}$ steigt die Temperatur in der Zelle langsam an und nähert sich dann einem konstanten Wert oberhalb der Starttemperatur. Bei erneuter Spülung mit Stickstoff nach der Messung sinkt die Temperatur zunächst wieder und steigt dann langsam auf den Wert vor der Messung.
+
+Die erhöhte Temperatur während der Befüllung mit $\ce{CO_2}$ geht auf die infrarotaktiven Schwingungen der Gasmoleküle zurück, die eine Erhöhung der Temperatur hervorrufen.
+
 \subsection{Spektrometrische Konzentrationsbestimmung}
 \label{Spektrometrische Konzentrationsbestimmung}
+
+Um die $\ce{CO_2}$--Konzentration der Raumluft zu bestimmen, wird zunächst die relative Transmission $T_\mathrm{rel, Luft}$ derselben berechnet.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/luft.pdf}
+	\caption{Gemessene Beleuchtungsstärke der Zelle gesättigt mit Raumluft (blau)\\
+		und Bereiche für die Mittelwerte der Beleuchtungsstärken vor und nach einfüllen der Raumluft (gestrichelt)}
+	\label{fig:luft}
+\end{figure}
+
+Dazu wir der Mittelwert der Beleuchtungsstärke vor und nach dem Befüllen mit Luft $\bar{I}_{0, \mathrm{Luft}}$ inklusive des jeweiligen Fehlers ermittelt. Die gemessene Beleuchtungsstärke der mit Raumluft gesättigten Zelle  sowie die für die jeweiligen Mittelwerte ausgesuchten Bereiche sind in Abbildung \ref{fig:luft} dargestellt.
+
+Die relative Transmission der Luft $T_\mathrm{rel, Luft}$ berechnet sich aus dem Quotient beider Mittelwerte, der Fehler $\Delta T_\mathrm{rel, Luft}$ nach Gauß'scher Fehlerfortpflanzung.
+
+\begin{eqnarray}
+	\bar{I}_{0, \mathrm{Luft}} &=& (90.522\pm 0.017) \cdot 10^{-2} \mathrm{\,\frac{W}{m^2}}\\
+	\bar{I}_\mathrm{Luft} &=& (79.949 \pm 0.015) \cdot 10^{-2} \mathrm{\, \frac{W}{m^2}} \\
+	T_\mathrm{rel, Luft} &=& \frac{\bar{I}_\mathrm{Luft}}{\bar{I}_{0, \mathrm{Luft}}} \\
+		&\approx& 88.320 \mathrm{\, \%} \\
+	\Delta T_\mathrm{rel, Luft} &=&
+		\sqrt{
+			\left(
+				\frac{\Delta \bar{I}_\mathrm{Luft}}{\bar{I}_{0, \mathrm{Luft}}}
+			\right)^2
+			+ \left(
+				\frac{\bar{I}_\mathrm{Luft} \cdot \Delta \bar{I}_{0, \mathrm{Luft}}}{\bar{I}_{0, \mathrm{Luft}}^2}
+			\right)^2
+		} \\
+	&\approx& 0.023 \mathrm{\, \%}
+\end{eqnarray}
+
+\noindent
+Um nun die $\ce{CO_2}$--Konzentration der Raumluft zu bestimmen, wird erneut eine Fit--Gerade $\tilde{T}_\mathrm{rel}(C)$ verwendet. Hierfür wird wieder der obere Bereich vergrößert, was in Abbildung \ref{fig:luftZoom} zu sehen ist.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/luftZoomPpm.pdf}
+	\caption{Darstellung der gemessenen $\ce{CO_2}$--Konzentration der Raumluft $K_\mathrm{Luft}$ anhand des oberen Endes des Fits der gemessenen Transmissionswerte verschiedener $\ce{CO_2}$--Konzentrationen}
+	\label{fig:luftZoom}
+\end{figure}
+
+Es zeigt sich, dass  die zur oben bestimmten relativen Transmission gehörige $\ce{CO_2}$--Konzentration der Raumluft zwischen $600 \mathrm{\, ppm}$ und $700 \mathrm{\, ppm}$ liegen muss. Es wird also der Mittelwert inklusive Fehler gebildet und so die gemessene $\ce{CO_2}$--Konzentration der Raumluft $K_\mathrm{Luft}$ ermittelt.
+
+\begin{eqnarray}
+	K_\mathrm{Luft} &=& \frac{700 \mathrm{\, ppm} + 600 \mathrm{\, ppm}}{2} \\
+	\Delta K_\mathrm{Luft} &=& \left|\frac{700 \mathrm{\, ppm} - 600 \mathrm{\, ppm}}{2}\right| \\
+	K_\mathrm{Luft} = (650 \pm 50) \mathrm{\, ppm}
+\end{eqnarray}
+
+Dieser Wert entspricht auch innerhalb der Fehler nicht dem Literaturwert von $340 \mathrm{\, ppm}$ \cite{Demtröder Kern/Atom}. Dennoch ist er zumindest größenordnungsmäßig nah dran.
+
+Die Abweichung lässt sich unter anderem damit erklären, dass sich während des gesamten Versuches mehrere Leute im Raum aufgehalten haben, was die $\ce{CO_2}$--Konzentration erhöht haben dürfte. Das Lüften des Raumes könnte nicht ausgereicht haben, um die $\ce{CO_2}$--Konzentration auf die Konzentration an der frischen Luft zu reduzieren.
+
 \subsection{Optische Emission}
 \label{Optische Emission}
 
@@ -655,15 +887,19 @@ Dazu wird der Mittelwert $m$ gebildet. Der Fehler $\Delta m$ wird durch die mitt
 	S. Bakan \& E. Raschke, ``Der natürliche Treibhauseffekt'', Promet 28,
 	Deutscher Wetterdienst, 2002, Online verfügbar unter
 	\url{https://www.dwd.de/DE/leistungen/pbfb_verlag_promet/pdf_promethefte/28_3_4_pdf.pdf}
-\bibitem{Demtröder}
+\bibitem{Demtröder Atom}
 	W. Demtröder, ``Experimentalphysik 3: Atome, Moleküle und Festkörper'',
-	Springer--Spektrum--Verlag, 5. Auflage 2016, DOI:
-	\href{https://doi.org/10.1007/978-3-662-49094-5}{10.1007/978-3-662-49094-5}
+	Springer--Spektrum--Verlag, 5. Auflage 2016,
+	DOI~\href{https://doi.org/10.1007/978-3-662-49094-5}{10.1007/978-3-662-49094-5}
+\bibitem{Demtröder Kern/Atom}
+	W. Demtröder, ``Experimentalphysik 4: Kern-, Teilchen- und Astrophysik'',
+	Springer--Spektrum--Verlag, 5. Auflage 2017, DOI~\href{https://doi.org/10.1007/978-3-662-52884-6}{10.1007/978-3-662-52884-6}
 \bibitem{Gerthsen}
 	D. Meschede, ``Gerthsen Physik'', 21. Auflage, Springer Verlag,
 	DOI~\href{https://doi.org/10.1007/978-3-662-45977-5}{10.1007/978-3-662-45977-5}
 \bibitem{HakenWolf}
-	H. Haken \& H. Wolf, ``Molekülphysik und Quantenchemie'', Springer-Verlag, 2006, DOI \href{https://doi.org/10.1007/3-540-30315-4}{10.1007/3-540-30315-4}
+	H. Haken \& H. Wolf, ``Molekülphysik und Quantenchemie'', Springer-Verlag, 2006,
+	DOI~\href{https://doi.org/10.1007/3-540-30315-4}{10.1007/3-540-30315-4}
 \bibitem{Strahldichte}
 	Wikipedia, ``Strahldichte'',
 	\url{https://de.wikipedia.org/wiki/Strahldichte}, Abruf am 02.05.2024
@@ -676,10 +912,11 @@ Dazu wird der Mittelwert $m$ gebildet. Der Fehler $\Delta m$ wird durch die mitt
 	Abruf am 02.05.2024
 \bibitem{Hinderer}
 	F. Hinderer, ``UV/Vis--Absorptions- und Fluoreszenz--Spektroskopie'',
-	2020, DOI \href{https://doi.org/10.1007/978-3-658-25441-4}{10.1007/978-3-658-25441-4}
+	2020,
+	DOI~\href{https://doi.org/10.1007/978-3-658-25441-4}{10.1007/978-3-658-25441-4}
 \bibitem{Fließbach}
-	T. Fließbach, ``Statistische Physik'', 2018, DOI
-	\href{https://doi.org/10.1007/978-3-662-58033-2}{10.1007/978-3-662-58033-2}
+	T. Fließbach, ``Statistische Physik'', 2018,
+	DOI~\href{https://doi.org/10.1007/978-3-662-58033-2}{10.1007/978-3-662-58033-2}
 \bibitem{Freiheitsgrad}
 	Technische Falkutät Kiel, ``Freiheitsgrade der Rotation'',
 	\url{https://www.tf.uni-kiel.de/matwis/amat/mw1_ge/kap_5/advanced/t5_2_4.html},
