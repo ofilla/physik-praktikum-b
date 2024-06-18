@@ -501,7 +501,7 @@ Dies entspricht dem Vorgehen im restlichen Versuch. Zunächst wird gemessen, das
 Daraufhin wird die IR--Transmission von verschiedenen Stoffen untersucht. Danach wird der Einfluss der Konzentration von $\ce{CO_2}$ in $\ce{N_2}$ auf den Temperaturverlauf gemessen.
 
 \subsubsection{IR--Transmission}
-\label{IR--Transmission}
+\label{howto:IR--Transmission}
 
 Daraufin wird die IR--Transmission von verschiedenen Materialien untersucht. Dazu sollen verschiedene Materialien direkt vor dem IR--Detektor plaziert werden. Die Proben sind eine PE--Folie, je eine orangene und eine violette Hochtemperatur--Filterfolie, eine Schicht eines Papiertaschentuchs und ein Stück Schreibpapier.
 
@@ -510,7 +510,7 @@ Dazu wird der Abstand zwischen Quelle und Detektor so eingestellt, dass die Bele
 Als Erstes wird immer die Beleuchtungsstärke ohne Probe gemessen, bis diese für ca. $30\mathrm{\,s}$ bis auf Rauschen konstant bleibt. Daraufhin wird das Material in möglichst steilem Anstellwinkel an den Detektor gelehnt. Danach wird so lange gemessen, bis die Beleuchtungsstärke wieder bis auf Rauschen konstant ist.
 
 \subsubsection{Konzentrationskalibrierung}
-\label{Konzentrationskalibrierung}
+\label{howto:Konzentrationskalibrierung}
 Nun wird der Abstand zwischen IR--Quelle und Absorptionszelle auf $1\mathrm{\,cm}$ eingestellt. Dann wird die Zelle gespült, indem sie für ca. eine halbe Minute mit Stickstoff $\ce{N_2}$ geflutet wird. Auf diese Weise wird zu Beginn jeder Messung der selbe Ausgangszustand hergestellt.
 
 Die jeweiligen Messungen werden gestartet, während die Messzelle mit $\ce{N_2}$ geflutet ist. Es wird wieder auf einen Gleichgewichtszustand gewartet. Dann entnimmt man vorsichtig eine genaue Menge $\ce{CO_2}$ mit einer Spritze aus einer Gasflasche. Dieses Gas wird sofort in die Messzelle eingefüllt. Wenn die Messwerte wieder für $30\mathrm{\,s}$ näherungsweise konstant bleiben, wird die Messung gestoppt.
@@ -522,16 +522,123 @@ Dieses Vorgehen wird mit in $1\mathrm{\,ml}$--Schritten mit $\ce{CO_2}$--Mengen 
 Zuletzt wird eine weitere Messung von Beleuchtungsstärke und Temperatur durchgeführt, bei der die $\ce{CO_2}$--Konzentration $100\%$ beträgt. Dazu wird die  Gasflasche direkt an die Zelle angeschlossen ist und die Zelle langsam bis zur Sättigung mit $\ce{CO_2}$ befüllt. Danach danach wird die Flasche entfernt und die Zelle so lange gespült, bis die vorherige Beleuchtungsstärke wiederhergestellt ist.
 
 \subsubsection{Spektrometrische Konzentrationsbestimmung}
-\label{Spektrometrische Konzentrationsbestimmung}
+\label{howto:Spektrometrische Konzentrationsbestimmung}
 Der Raum wird etwa $1\mathrm{\,min}$ lang gelüftet. Danach werden die Fenster geschlossen und eine neue Messung wird gestartet, bis die Messwerte nahezu konstant sind. Dann wird der Auslassschlauch aus der Blubberflasche genommen und die Zelle wird durch einen Gummibalg mit Luft gefüllt, bis sich die Beleuchtungsstärke nicht mehr ändert. Die Mittelwerte für vor und nach dem Befüllen werden bestimmt. Abschließend wird die Zelle wieder gründlich mit Stickstoff geflutet.
 
 \subsubsection{Optische Emission}
-\label{Optische Emission}
+\label{howto:Optische Emission}
 Zuletzt wird die optische Emission der IR--Quelle ermittelt. Hierfür wird der Raum komplett abgedunkelt und alle Geräte bis auf die IR--Quelle werden ausgeschaltet. Nun wird der Heizstrom langsam aufgedreht bis das Leuchten der Wendel gerade sichtbar wird. Diese Stromstärke wird für jeden Gruppenteilnehmer individuell bestimmt. Zusätzlich wird die maximale Stromstärke der Wendel festgehalten.
 
 \clearpage
 \hypertarget{auswertung}{%
 \section{Auswertung}\label{auswertung}}
+\subsection{IR--Transmission}
+\label{IR--Transmission}
+
+Zunächst werden die IR--Absorption und --Emission verschiedener Proben anhand ihrer Beleuchtungsstärke--Kurven untersucht. Dafür werden diese zunächst gegeneinander aufgetragen, siehe Abbildung \ref{fig:materialien}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/materialien.pdf}
+	\caption{Beleuchtungsstärke-Kurven verschiedener Proben}
+	\label{fig:materialien}
+\end{figure}
+
+Der Kurvenverlauf ist allgemein für alle Proben sehr ähnlich. Solange keine Probe vor den Detektor gebracht wurde, ist die Kurve konstant. Sie fällt abrupt auf einen Minimalwert ab, wenn eine Folie vor den Detektor gestellt wird, und steigt dann langsam auf einen stationären Wert an.
+
+Durch das Anbringen der verschiedenen Materialien zu unterschiedlichen Zeitpunkten kommt es zu einer Verschiebung der Messkurven in $x$--Richtung.
+
+Die nicht klar definierten Minima bei der PE--Folie und dem Taschentuch lassen sich durch die Schwierigkeit beim Anbringen dieser vor dem Detektor erklären. Bei diesen dünnen Proben dauerte die Anbringung und Positionierung länger, weswegen die Messwerte schwanken. Beim Schreibpapier war kein Minimum zu sehen, da die IR--Strahlung vollkommen von diesem absorbiert wurde, dennnoch ist die Form der Kurve ähnlich zu den anderen.
+
+Der graviserenste Unterschied zwischen den jeweiligen Messkurven sind die Höhenunterschiede zu einander. Hieraus sind klare Unterschiede im Transmissionsgrad der verschiedenen Proben su sehen. Die PE--Folie beispielsweise lässt deutlich mehr IR--Strahlung durch als das Schreibpapier.
+
+Diese Beobachtung soll nun quantitativ untersucht werden. Dazu werden die minimalen Beleuchtungsstärken $I_\mathrm{min}$ sowie die durchschnittlichen Beleuchtungsstärken $I_\mathrm{stat}$ im stationären Bereich aus den Kurven bestimmt und jeweils die Transmissionswerte $T$ des Materials mittels der durchschnittlichen Beleuchtungsstärke ohne Material $I_0$ berechnet.
+
+Dazu wird der Mittelwert $m$ gebildet. Der Fehler $\Delta m$ wird durch die mittlere Quadratsumme der Residuen (MQR) bestimmt. Die Ergebnisse sind in Tabelle \ref{table:materialien} dargestellt.
+
+\begin{eqnarray}
+	T &=& \frac{I}{I_0} \\
+	m &=& \frac{1}{n} \sum_{i=1}^{n} x_i \\
+	\Delta m &=& \sqrt{\frac{1}{n (n-1)} \sum_{i=1}^{n} (x_i - m)^2}
+\end{eqnarray}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l|p{2.1cm}|p{2.1cm}|p{2.1cm}|p{1.8cm}|p{1.8cm}}
+		Probe
+			& $I_\mathrm{min}$ $[10^{-2} \mathrm{\, W/m^2}]$
+			& $I_\mathrm{stat}$ $[10^{-2} \mathrm{\, W/m^2}]$
+			& $I_0$ $[10^{-2} \mathrm{\, W/m^2}]$
+			& $T_\mathrm{min}$ $[\%]$
+			& $T_\mathrm{stat}$ $[\%]$ \\
+		\hline
+		PE--Folie
+			& $80.8350$
+			& $83.213$
+			& $95.797$
+			& $84.382$
+			& $86.864$ \\
+			& $\quad\pm 0.0005$
+			& $\quad\pm 0.009$
+			& $\quad\pm 0.014$
+			& $\quad\pm 0.012$
+			& $\quad\pm 0.015$ \\
+		Violette Folie
+			& $42.0750$
+			& $53.625$
+			& $98.338$
+			& $42.786$
+			& $54.532$ \\
+			& $\quad\pm 0.0005$
+			& $\quad\pm 0.012$
+			& $\quad\pm 0.014$
+			& $\quad\pm 0.006$
+			& $\quad\pm 0.014$ \\
+		Orangene Folie
+			 & $40.2900$
+			 & $50.839$
+			 & $95.819$
+			 & $42.048$
+			 & $53.058$ \\
+			 & $\quad\pm 0.0005$
+             & $\quad\pm 0.017$
+			 & $\quad\pm 0.023$
+			 & $\quad\pm 0.010$
+			 & $\quad\pm 0.022$ \\
+		Taschentuch
+			 & $6.2220$
+			 & $16.771$
+			 & $96.734$
+			 & $6.432$
+			 & $17.337$ \\
+			 & $\quad\pm 0.0005$
+			 & $\quad\pm 0.009$
+			 & $\quad\pm 0.013$
+			 & $\quad\pm 0.001$
+			 & $\quad\pm 0.010$ \\
+		Schreibpapier
+			 & $0$
+			 & $11.864$
+			 & $96.027$
+			 & $0$
+			 & $12.355$ \\
+			 &&$\quad\pm 0.012$
+			 & $\quad\pm 0.020$
+			 && $\quad\pm 0.013$ \\
+	\end{tabular}
+	\caption{Minimale Beleuchtungsstärken ($I_\mathrm{min}$),\\
+		durchschnittliche Beleuchtungsstärken im stationären Bereich $I_\mathrm{stat}$\\
+		und dazugehörige relative Transmissionswerte $T$}
+	\label{table:materialien}
+\end{table}
+
+\subsection{Konzentrationskalibrierung}
+\label{Konzentrationskalibrierung}
+
+\subsection{Spektrometrische Konzentrationsbestimmung}
+\label{Spektrometrische Konzentrationsbestimmung}
+\subsection{Optische Emission}
+\label{Optische Emission}
 
 \clearpage
 \hypertarget{fazit}{%
