@@ -22,5 +22,5 @@ out_file="${file%lab}csv"
 touch "$out_file"
 
 echo -e "index\tseconds\ttemperature\ttemperature_2\tbeleuchtungsstaerke" > "$out_file"
-tail -n+$DELETE_FIRST "$file" | head -n-$((DELETE_LAST-1)) >> "$out_file"
+tail -n+$DELETE_FIRST "$file" | head -n-$((DELETE_LAST-1)) | sed -i 's/\t\r$//g' >> "$out_file"
 echo "done"
