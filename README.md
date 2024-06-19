@@ -32,6 +32,6 @@ jupyter notebook
 
 ## Julia
 ```shell
-julia -e 'import Pkg; Pkg.add(["CSV", "DataFrames", "IJulia", "Plots", "LaTeXStrings"])'
+julia -e 'import Pkg; Pkg.add(["CSV", "DataFrames", "IJulia", "Plots", "LaTeXStrings", "LsqFit"])'
 julia -e 'using IJulia; notebook(dir=".", detached=true)'
 ```
