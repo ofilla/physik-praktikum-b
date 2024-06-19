@@ -30,6 +30,7 @@
 \usepackage[version=4]{mhchem} % Chemie: \ce & \pu
 
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
+\newcommand{\code}[1]{\textsf{#1}}
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
 \newcommand{\pu}[1]{\ensuremath{\mathrm{#1}}}
 
@@ -214,7 +215,7 @@ Die Strahldichte oder Strahlungsdichte $S$ beschreibt die Strahlung, die ein Fl�
 Das Wien'sche Verschiebungsgesetz beschreibt abhängig von der Temperatur $T$, bei welcher Wellenlänge $\hat{\lambda}$ bzw. Frequenz $\hat{\nu}$ die größte Wärmeleistung abgestrahlt wird. Dadurch beschreibt es die Temperaturabhängigkeit des Maximums des Planck'schen Strahlungsgesetzes $\eqref{eq:PlackStrahlung}$.
 
 \begin{eqnarray}
-    \hat{\lambda}\cdot T &=& 2.898\cdot10^{-3}\mathrm{\,m\cdot K}
+    \hat{\lambda}\cdot T &=& 2.898 \cdot \mathrm{\,mm\cdot K}
         \label{eq:WienLambda}\\
     \hat{\nu}\cdot T &=& 5.879\cdot10^{10} \mathrm{\,m\cdot Hz}
         \label{eq:WienNu}
@@ -869,8 +870,159 @@ Dieser Wert entspricht auch innerhalb der Fehler nicht dem Literaturwert von $34
 
 Die Abweichung lässt sich unter anderem damit erklären, dass sich während des gesamten Versuches mehrere Leute im Raum aufgehalten haben, was die $\ce{CO_2}$--Konzentration erhöht haben dürfte. Das Lüften des Raumes könnte nicht ausgereicht haben, um die $\ce{CO_2}$--Konzentration auf die Konzentration an der frischen Luft zu reduzieren.
 
+\subsection{Drifteffekte}
+\label{Drifteffekte}
+
+Die Messkurve zeigt zu Beginn einen exponentiell abklingenden Anstieg, danach steigt die Kurve abschnittweise linear an. Hierfür sind die Drifteffekte verantwortlich, die eliminiert werden müssen. Das Rauschen, besonders der Peak am Anfang, entsteht wahrscheinlich durch einen Luftzug und durch Bewegungen im Raum.
+
+Die Ursache für den Drift sind thermische Instabilitäten. Die IR--Quelle braucht eine gewisse Zeit, um ins Gleichgewicht zu kommen, in der Zwischenzeit können verschiedene Temperatureffekte auftreten. Zum einen erwärmt sich nicht nur die Glühwendel, sondern auch die umgebenden Materialien, sodass die Temperatur leicht ansteigt. Wenn die Temperatur der IR--Quelle sich ändert, gibt der IR--Detektor veränderte Signale aus. Temperaturempfindliche Bauteile wie z.B. der Verstärker oder elektrische Widerstände können ebenfalls einen Teil zum Intensitätsdrift beitragen.
+
+Um die Driftanteile zu eliminieren, wird der Zeitpunkt $t_0\approx310\mathrm{\,s}$ benötigt, ab dem die Kurve konstant bleibt. Im Zeitintervall $[95\mathrm{\,s}, 310\mathrm{\,s}]$ kann man drei lineare Anstiege erkennen. Daher wird dieses Intervall in drei Teilintervalle $I_i$ aufgeteilt.
+
+\begin{eqnarray}
+	\begin{split}
+		I_3 &=& [96,110] \\
+		I_2 &=& [110,200] \\
+		I_1 &=& [200,310]
+	\end{split}
+\end{eqnarray}
+
+\noindent
+Für jedes der Teilintervalle $I_i$ wird eine Geradengleichung $g_i(t)$ bestimmt.
+
+\begin{eqnarray}
+	g_1(t) &=&
+	\begin{cases}
+		1.179 \cdot 10^{-4} \mathrm{\,\frac{W}{s\cdot m^2}\,} \cdot t &: 0\mathrm{\,s\,}\leq t \leq 310 \mathrm{\,s\,} \\
+		0.0365 \mathrm{\,\frac{W}{m^2}} &: t > 310
+	\end{cases} \\
+	g_2(t) &=&
+	\begin{cases}
+		1.883 \cdot 10^{-4} \mathrm{\,\frac{W}{s\cdot m^2}\,} \cdot t &: 0\mathrm{\,s\,}\leq t \leq 200 \mathrm{\,s\,} \\
+		0.0377 \mathrm{\,\frac{W}{m^2}} &: t > 200
+	\end{cases} \\
+	g_3(t) &=&
+	\begin{cases}
+		7.058\cdot 10^{-4} \mathrm{\,\frac{W}{s\cdot m^2}\,} \cdot t &: 0\mathrm{\,s\,}\leq t \leq 110 \mathrm{\,s\,} \\
+		0.0776 \mathrm{\,\frac{W}{m^2}} &: t > 110
+	\end{cases}
+\end{eqnarray}
+
+\noindent
+Zunächst wird die Gerade $g_1$ von der ursprünglichen Messkurve abgezogen. Dann wird die Steigung dieses Zwischenergebnisses ermittelt, woraufhin die Gerade $g_2$ bestimmt wird. Damit wird der Prozess wiederholt, ebenso für das letzte Intervall.
+
+Zusätzlich wird von jedem Wert der dritten Kurve der Ordinatenwert $b=-0.014875224 \mathrm{\,\frac{W}{m^2}}$ subtrahiert, damit der Anstieg der Kurve bei $0\mathrm{\,\frac{W}{s\cdot m^2}}$ beginnt. Damit erhält man eine Messkurve ohne Driftanteile, die in Abbildung \ref{abb:Driftkorrektur der Messwerte} dargestellt ist.
+
+Die Ergebnisse sind in Tabelle \ref{tab:rel Abweichung} dargestellt. Man sieht quantitativ, wie die ursprüngliche Kurve mit steigender Zeit immer mehr von der korrigierten Kurve abweicht.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/Drift.pdf}
+	\caption{Driftkorrektur der Messwerte}
+	\label{abb:Driftkorrektur der Messwerte}
+\end{figure}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		Zeit $[\mathrm{s}]$
+		& $I_\mathrm{D}$ $[\mathrm{\frac{W}{m^2}}]$
+		& $I_\mathrm{oD}$ $[\mathrm{\frac{W}{m^2}}]$
+		& Abweichung $[\mathrm{\frac{W}{m^2}}]$
+		& relative Abweichung $[\%]$ \\
+		\hline
+		$100$ & $0.9696$ & $0.8838$ & $0.0858$ & $9.7\%$\\
+		$200$ & $1.0039$ & $0.8801$ & $0.1201$ & $13.6\%$\\
+		$300$ & $1.0125$ & $0.8768$ & $0.1287$ & $14.7\%$\\
+	\end{tabular}
+	\caption{Zunahme der relativen Abweichung zwischen der Beleuchtungsstärke ohne Drift $I_\mathrm{oD}$ und der mit Drift $I_\mathrm{D}$}
+	\label{tab:rel Abweichung}
+\end{table}
+
+Nun soll noch ermittelt werden, ab welchem Zeitpunkt Messgenauigkeit mindestens $97\,\%$ beträgt. Dazu wird der Mittelwert von jeweils $100$ Messwerten zu verschiedenen Zeitpunkten gebildet und durch den Mittelwert von Messungen nach $310\mathrm{\,s}$ geteilt. Es stellt sich heraus, dass die relative Abweichung ab $t \approx 155.5\mathrm{\,s}$ kleiner als $3\%$ ist. Ohne Driftkorrektur ist eine Genauigkeit von $\geq 97\%$ schon nach ca. $53\mathrm{\,s}$ erreicht.
+
+\subsection{Zeitkonstante}
+\label{Zeitkonstante}
+Nun soll die Zeitkonstante des Anschaltvorgangs $\tau$ durch einen Fit ermittelt werden.
+
+Die driftkorrigierte Kurve wird mit $f(t)$ gefittet. $c$ ist der Wert, den die Funktion asymptotisch für $t \rightarrow \infty$ annähert, und wird durch den Mittelwert des stationären Bereiches dargestellt. $\tau $ ist die Zeitkonstante, die die Geschwindigkeit der Annäherung bestimmt. Da die Funktion bei $t=0\mathrm{\,s}$ beginnt, muss die Kurve auf der Zeitachse um $14.8\mathrm{\,s}$ verschoben werden.
+
+\begin{eqnarray}
+	f(t) &=& c \cdot \left(
+	1 - \exp[-\frac{t}{\tau}]
+	\right)
+	\label{eq:Drift Fit} \\
+	c &=& 0.8797 \mathrm{\,\frac{W}{m^2}}
+\end{eqnarray}
+
+\noindent
+Zum Fitten wird das \code{Julia}--Paket \code{LsqFit} \cite{Julia:LsqFit} verwendet. Damit ergibt sich eine Zeitkonstante von ca. $23.7\mathrm{\,s}$. Der Fit ist in Abbildung \ref{abb:Fit für verschiedene tau} dargestellt.
+
+\begin{eqnarray}
+	\tau &=& (23.71 \pm 0.24)\mathrm{\,s}
+\end{eqnarray}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/ZeitkonstJulia.pdf}
+	\caption{Gefittete Messkurve}
+	\label{abb:Gefittete Messkurve}
+\end{figure}
+
+\noindent
+Die gefittete Kurve steigt im Vergleich zu den Messdaten zu langsam an, auch wenn der stationäre Zustand sich bereits nach ca. $120\mathrm{\,s}$ eingestellt hat. Erst im stationären Zustand ist eine Beschreibung durch den Fit sinnvoll.
+
+Zudem wurde manuell verschiedene Werte für $\tau$ ausprobiert. Hier fällt auf, dass der Anstieg nie richtig übereinstimmt. Entweder ist er zu langsam wie in Abbildung \ref{abb:Gefittete Messkurve} oder ist zu Beginn zu schnell und dann wieder zu langsam. Dieses Verhalten ist in Abbildung \ref{abb:Fit für verschiedene tau} zu sehen.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.1/versZeitkonst.pdf}
+	\caption{Fit--Kurve für verschiedene $\tau$}
+	\label{abb:Fit für verschiedene tau}
+\end{figure}
+
 \subsection{Optische Emission}
 \label{Optische Emission}
+Für alle Beteiligten war das Licht der Glühwendel bei einem Strom von $I\ge I_0=(7.1 \pm 0.1)\mathrm{\,A}$ zu sehen und bei $I\le (7.0 \pm 0.1)\mathrm{\,A}$ nicht mehr sichtbar. Daraus kann die Temperatur der Wendel ermittelt werden.
+
+Für die Höchsttemperatur $T$ der Wendel gilt die folgende Näherung.
+
+\begin{eqnarray}
+	T &=& 79 \mathrm{\,\frac{K}{A}\,} \cdot I + 202\mathrm{\,K} \\
+	\Delta T &=& 79 \frac{K}{A} \cdot \Delta I
+\end{eqnarray}
+
+\noindent
+Daraus kann die Temperatur der Wendel $T(I_0)$ ermittelt werden. Weiterhin kann die Temperatur der Wendel bei maximalen Stromstärke $I_\mathrm{max} = (8.3 \pm 0.1)\mathrm{\,A}$ bestimmt werden.
+
+%\begin{eqnarray}
+%	T(I_0) &=& 762.9\mathrm{\,K} \pm 7.9\mathrm{\,K} \\
+%	T(I_\mathrm{max}) &=& 857.71\mathrm{\,K} \pm 7.91\mathrm{\,K}
+%\end{eqnarray}
+
+%\noindent
+Aus der Höchsttemperatur $T(I_\mathrm{max})$ kann die Wellenlänge $\hat \lambda$ mit der maximalen Strahlungsintensität über das Wien'sche Verschiebungsgesetz \eqref{eq:WienLambda} ermittelt werden. Der Fehler wird durch Gauß'sche Fehlerfortpflanzung bestimmt.
+
+\begin{eqnarray}
+	% \lambda(762.9\mathrm{\,K}) &\approx & 3.799 \cdot 10^{-6}\mathrm{\,m} \pm 3.934 \cdot 10^{-8}\mathrm{\,m} \\
+	% \lambda(857.7\mathrm{\,K}) &\approx & 3.379 \cdot 10^{-6}\mathrm{\,m} \pm 3.934 \cdot 10^{-8}\mathrm{\,m} \\
+	\Delta \hat  \lambda &= & 2.898 \cdot \mathrm{\,mm\,K\,}\cdot \frac{\Delta T}{{T}}
+\end{eqnarray}
+
+\noindent
+Die Ergebnisse werden in Tabelle \ref{tab:Höchsttemperatur} zusammengefasst. Man sieht, dass die abgestrahlte Wellenlänge bei beiden Stromstärken im mittleren Infrarot--Bereich liegt.\footnote{Vergleiche Abschnitt \ref{elektromagnetisches-spektrum}}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c}
+		Stromstärke $[\mathrm{A}]$ & $T(I)$ $[\mathrm{K}]$ & $\hat \lambda(T)$ $[\mathrm{\mu m}]$ \\
+		\hline
+		$7.1 \pm 0.1$ & $763 \pm 8$ & $ 3.80 \pm 0.04$  \\
+		$8.3 \pm 0.1$ & $858 \pm 8$ & $ 3.38 \pm 0.04$  \\
+	\end{tabular}
+	\caption{Temperatur der Glühwendel $T(I)$ die mit höchster Intensität abgestrahlte Wellenlänge $\hat\lambda(T)$ bei verschiedenen Stromstärken}
+	\label{tab:Höchsttemperatur}
+\end{table}
 
 \clearpage
 \hypertarget{fazit}{%
@@ -945,5 +1097,8 @@ Die Abweichung lässt sich unter anderem damit erklären, dass sich während des
 	Agilent Technologies, ``Die Grundlagen der Spektroskopie'', 2016
 	\url{https://www.agilent.com/Library/eseminars/Public/5991-6594_Agilent_Spectroscopy_Theory_DEE.pdf},
 	Abruf am 10.06.2024
+\bibitem{Julia:LsqFit}
+	\code{\href{https://julialang.org}{Julia}}--Paket \code{LsqFit},
+	Dokumentation unter \url{https://docs.juliahub.com/General/LsqFit/stable}
 \end{thebibliography}
 \end{document}
