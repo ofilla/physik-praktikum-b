@@ -448,7 +448,7 @@ Hierbei wurden die Verhältnisse $\frac{\sigma}{m}$ und $\frac{a^\prime}{a}$ dur
 \hypertarget{einfluss-der-totzeit}{%
 \subsubsection{Totzeit im $\chi^2$--Test}\label{einfluss-der-totzeit}}
 
-Die Totzeit der Länge $\tau$ hat einen Einfluss auf die gemessenen Zählraten. Anstatt einer Zählrate von $\frac{n_i}{\Delta t}$ wird eine totzeitkorrigierte Anzahl $k_i$ gemessen. Dadurch kann ein korrigierter Mittelwert $M$ nach $\eqref{mittlereRate}$ bestimmt werden und man erhält eine korrigierte Abweichung $\chi^2_\mathrm{korr}$. Die korrigierte Rate wird nach Gleichung \eqref{eq:Totzeitkorrigiert Rate} bestimmt.
+Die Totzeit der Länge $\tau$ hat einen Einfluss auf die gemessenen Zählraten. Anstatt einer Zählrate von $\frac{n_i}{\Delta t}$ wird eine totzeitkorrigierte Anzahl $k_i$ gemessen. Dadurch kann ein korrigierter Mittelwert $M$ nach $\eqref{mittlereRate}$ bestimmt werden und man erhält eine korrigierte Abweichung $\chi^2_\mathrm{korr}$. Die korrigierte Rate wird nach Gleichung \eqref{eq:Totzeitkorrigiert Rate} bestimmt. Hierbei ist $\Delta t$ das Zeitintervall, innerhalb dessen $n_i$ Ereignisse gemessen wurden.
 
 \begin{eqnarray}
     k_i &=&
@@ -463,11 +463,11 @@ Die Totzeit der Länge $\tau$ hat einen Einfluss auf die gemessenen Zählraten. 
 \end{eqnarray}
 
 \noindent
-Durch Einsetzen der Gleichungen $\eqref{korrRate}$-$\eqref{korrAVG}$ sowie $\eqref{ChiSquared}$ kann man $\eqref{ChiKorrDef}$ vereinfachen und man erhält die folgende vereinfachte Relation. Hier sieht man, dass die korrigierte Abweichung $\chi^2_\mathrm{korr}$ kleiner als die nicht--korrigierte Abweichung $\chi^2$ ist, was kontraintuitiv wahrgenommen werden kann.
+Falls der Erwartungswert $m$ konstant ist, kann man weitere Schlussfolgerungen ziehen. Durch Einsetzen der Gleichungen $\eqref{korrRate}$-$\eqref{korrAVG}$ sowie $\eqref{ChiSquared}$ kann man $\eqref{ChiKorrDef}$ vereinfachen und man erhält die folgende vereinfachte Relation. Hier sieht man, dass die korrigierte Abweichung $\chi^2_\mathrm{korr}$ kleiner als die nicht--korrigierte Abweichung $\chi^2$ ist, was kontraintuitiv wahrgenommen werden kann.
 
 \begin{eqnarray}
     \chi^2_\mathrm{korr} &=&
-        \frac{1}{1 - \frac{m}{\Delta t}\tau} \cdot \chi^2
+        \frac{1}{1 - \frac{m}{\Delta t}\tau} \cdot \chi^2 \label{eq:Chi^2 korr}
 \end{eqnarray}
 
 \subsubsection{Zwei--Präparate--Methode}
@@ -477,16 +477,6 @@ Somit erhält man gemessene Werte $z^\prime_i$ und sowie wahre Werte $z_i$. Die 
 
 Nun seien $p_{1,\,2,\,12}$ die Zählraten, die sich durch die Verwendung von Präparaten ergeben. Daraus erhält man ein lösbares Gleichungssystem mit von je acht Gleichungen und Unbekannten.  Die letzten Gleichungen ergeben sich durch die Totzeitkorrektur \eqref{eq:Totzeitkorrigiert Rate} der Zählraten.
 
-%\begin{eqnarray}
-%	z_1 &=& p_1+u \\
-%	z_2 &=& p_2+u \\
-%	z_{12} &=& p_{12}+u \\
-%	z_1 &=& \frac{z^\prime_1}{1-z^\prime_1 \tau} \\
-%	z_2 &=& \frac{z^\prime_2}{1-z^\prime_2 \tau} \\
-%	z_{12} &=& \frac{z^\prime_{12}}{1-z^\prime_{12} \tau} \\
-%	u &=&\frac{u^\prime}{1-u^\prime\tau} \\
-%	p_{12} &=& p_1+p_2
-%\end{eqnarray}
 \begin{eqnarray}
 	p_{12} &=& p_1 + p_2 \\
 	\forall i\in\{1,\,2,\,12\}:\qquad
@@ -843,7 +833,7 @@ Es wurden die ersten $51$ Zeitintervalle gewählt, weil die $\chi^2$--Grenzen f�
 
 \subsubsection{Hypothesen}
 \label{Hypothesen}
-Es sollen drei verschiedene Hypothesen $H_i$. In allen Hypothesen wird ein ``Mittelwert'' verwendet. Dieser gemessene Mittelwert $m^\prime$ wird aus den $51$ Messwerten gebildet. Zudem kann dieser totzeitkorrigierte Mittelwert $m$ nach Gleichung \ref{eq:Totzeitkorrigiert EW} berechnet werden. Dieser ist ca. $9\,\%$ größer als $m^\prime$. Als Totzeit wurde der Mittelwert der in Abschnitt \ref{Totzeit bestimmen} bestimmten $\tau_1$ verwendet.
+Es sollen drei verschiedene Hypothesen $H_i$ bewertet werden. In allen Hypothesen wird ein ``Mittelwert'' verwendet. Dieser gemessene Mittelwert $m^\prime$ wird aus den $51$ Messwerten gebildet. Zudem kann dieser totzeitkorrigierte Mittelwert $m$ nach Gleichung \ref{eq:Totzeitkorrigiert EW} berechnet werden. Dieser ist ca. $9\,\%$ größer als $m^\prime$. Als Totzeit wurde der Mittelwert der in Abschnitt \ref{Totzeit bestimmen} bestimmten $\tau_1$ verwendet.
 
 \begin{eqnarray}
 	m^\prime &\approx& 654 \\
@@ -854,21 +844,27 @@ Hypothese $H_1$ besagt, die Präparatstärke sei im betrachteten Zeitraum konsta
 
 Hypothese $H_2$ dagegen behauptet, die Präparatstärke sei im betrachteten Zeitraum konstant und um $10\,\%$ kleiner als der Mittelwert der Messwerte. Diese Hypothese könnte zutreffen, wenn der totzeitkorrigierte Mittelwert verwendet wird.
 
-Hypothese $H_3$ dagegen nimmt an, dass die Präparatstärke im betrachteten Zeitraum linear mit der Zeit abnimmt. Dies soll eine erste Näherung eines exponentiellen Abfalls darstellen. Die Anfangszählrate ist der Mittelwert der Messwerte und der Abfall von einer Messung zur anderen sei $1$. Diese Hypothese würde eher bei Proben mit deutlich kürzerer Halbwertszeit oder bei deutlich längeren Messungen erwartet werden.
+Hypothese $H_3$ dagegen nimmt an, dass die Präparatstärke im betrachteten Zeitraum linear mit der Zeit abnimmt. Dies soll eine erste Näherung eines exponentiellen Abfalls darstellen. Die Anfangszählrate ist der Mittelwert der Messwerte und der Abfall von einer Messung zur anderen sei $1$. Diese Hypothese würde eher bei Proben mit deutlich kürzerer Halbwertszeit oder bei deutlich längeren Messungen erwartet werden. Im vorliegenden Fall wurde ein Zeitraum von $500\mathrm{\,s}$ betrachtet, würde ein Zeitraum von $45\mathrm{\,min}$ ausgewertet werden, könnte das Ergebnis schon anders aussehen.
 
-Diese Hypothesen werden zusammen mit den gewählten Messwerten in Abbildung \ref{abb:Hypothesen} dargestellt. Die Hypothese $H_1(m^\prime)$ scheint die Daten am besten zu beschreiben, gefolgt von der totzeitkorrigierten Hypothese $H_2(m)$.
+Diese Hypothesen werden zusammen mit den gewählten Messwerten in Abbildung \ref{abb:Hypothesen} dargestellt, jeweils einmal mit und ohne Totzeitkorrektur nach Gleichung \eqref{korrAVG}.
 
-\begin{figure}[h]
+Es ist nicht überraschend, dass die Ergebnisse praktisch gleich aussehen. Die Hypothese $H_1$ scheint die Werte am besten zu beschreiben.
+
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{../media/B3.1/Hypothesen_plot.pdf}
+	\begin{minipage}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../media/B3.1/Hypothesen_plot.pdf}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../media/B3.1/Hypothesen_plot_corr.pdf}
+	\end{minipage}
 	\caption{Visualisierung der Hypothesen sowie der gewählten Messwerte,\\
-		jeweils für gemessene Mittelwerte $m$ und totzeitkorrigierte Mittelwerte $m^\prime$}
+		mit gemessenen (links) und totzeitkorrigierten Werten (rechts)}
 	\label{abb:Hypothesen}
 \end{figure}
 
-\newpage
 \subsubsection{$\chi^2$--Werte}
-Nun müssen die einzelnen $\chi^2_i$--Werte für die Hypothesen $H_i$ ermittelt werden. Dazu werden die Summen nach Gleichung \eqref{ChiSquared} gebildet. Für die Hypothesen $H_2$ und $H_3$ muss der Mittelwert entsprechend angepasst werden, wodurch folgende Relationen entstehen.
+Nun müssen die einzelnen $\chi^2_i$--Werte für die Hypothesen $H_i$ ermittelt werden. Dazu werden die Summen nach Gleichung \eqref{ChiSquared} gebildet. Für die Hypothesen $H_2$ und $H_3$ muss der Mittelwert entsprechend angepasst werden, wodurch folgende Relationen entstehen. Zudem werden die totzeitkorrigierten $\chi^2_\mathrm{korr}$ nach Gleichung \eqref{eq:Chi^2 korr} ermittelt.
 
 \begin{eqnarray}
 	\bar x &\in& \{m, m^\prime\} \\
@@ -878,50 +874,33 @@ Nun müssen die einzelnen $\chi^2_i$--Werte für die Hypothesen $H_i$ ermittelt 
 \end{eqnarray}
 
 \noindent
-Die daraus folgenden Ergebnisse werden in Tabelle \ref{tab:ChiSquared} dargestellt. Alle Hypothesen müssen abgelehnt werden. Allerdings gibt es zwei Hypothesen, namentlich $H_1(m^\prime)$ und $H_2(m)$, bei denen der Minimalwert $\chi^2_\mathrm{min}$ unterschritten wurde. Im Falle von $H_1(m^\prime)$ ist das $\chi^2$ um ca. $36\,\%$ kleiner. Im Fall von $H_2(m)$ ist das $\chi^2$ dagegen nur um ca. $4.36\,\%$ kleiner.
-
-Damit lässt sich schließen, dass $H_2$ für einen totzeitkorrigierten Mittelwert am ehesten bekräftigen lässt.
+Die daraus folgenden Ergebnisse werden in Tabelle \ref{tab:ChiSquared} dargestellt. Alle Hypothesen müssen abgelehnt werden. Allerdings unterschreitet Hypothese $H_1$ den Minimalwert $\chi^2_\mathrm{min}$ in beiden Fällen. Bei den gemessenen Werten ist $\chi^2$ und $\chi^2_\mathrm{korr}$ um ca. $35.6\,\%$ bzw. $24.8\,\%$ zu klein. Diese Abweichungen sind deutlich geringer als bei den anderen Hypothesen. Damit ist $H_1$ am wahrscheinlichsten, auch wenn die Hypothese verworfen werden muss.
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{c|c|c|c|c|c}
-		$H_1(m^\prime)$
-			& $H_1(m)$
-			& $H_2(m^\prime)$
-			& $H_2(m)$
-			& $H_3(m^\prime)$
-			& $H_3(m)$
-			\\
+	\begin{tabular}{l|c|c|c}
+			& $H_1$
+			& $H_2$
+			& $H_3$ \\
 		\hline
-		$20.84$
-			& $475.73$
-			& $393.64$
-			& $25.14$
-			& $106.02$
-			& $270.52$
-			\\
-		$\chi^2 < \chi^2_\mathrm{min}$
-			& $\chi^2 \gg \chi^2_\mathrm{max}$
-			& $\chi^2 \gg \chi^2_\mathrm{max}$
-			& $\chi^2 < \chi^2_\mathrm{min}$
-			& $\chi^2 > \chi^2_\mathrm{min}$
-			& $\chi^2 \gg \chi^2_\mathrm{min}$
-			\\
-		$\chi^2 < \chi_\mathrm{P, max}^2$
-			& $\chi^2 \gg \chi_\mathrm{P, max}^2$
-			& $\chi^2 \gg \chi_\mathrm{P, max}^2$
-			& $\chi^2 < \chi_\mathrm{P, max}^2$
-			& $\chi^2 > \chi_\mathrm{P, max}^2$
-			& $\chi^2 \gg \chi_\mathrm{P, max}^2$
+		$\chi^2$
+			& $20.84 < \chi^2_\mathrm{min}$
+			& $393.65 \gg \chi^2_\mathrm{max}$
+			& $106.02 > \chi^2_\mathrm{min}$
+		\\
+		$\chi^2_\mathrm{korr}$
+			& $24.35 < \chi^2_\mathrm{min}$
+			& $459.80 \gg \chi^2_\mathrm{max}$
+			& $123.83 > \chi^2_\mathrm{min}$
 	\end{tabular}
 	\caption{Ergebnisse des $\chi^2$--Tests mit $\chi^2_\mathrm{min} = 32.357$ und $\chi^2_\mathrm{max} = 71.420$ \cite{Kapur}}
 	\label{tab:ChiSquared}
 \end{table}
 
 \noindent
-Würde man stattdessen Pearsons $\chi^2$--Test\footnote{Siehe Abschnitt \ref{pearsons-chi2test}} durchführen, so würde man nur einen einzelnen Wert $\chi_\mathrm{P, max}^2 = 67.505$ zum Vergleich verwenden. \cite{Kapur} In diesem Falle würden die Hypothesen $H_1(m^\prime)$ und $H_2(m)$ bekräftigt werden, während die anderen Hypothesen verworfen werden.
+Würde man stattdessen Pearsons $\chi^2$--Test\footnote{Siehe Abschnitt \ref{pearsons-chi2test}} durchführen, so würde man nur einen einzelnen Wert $\chi_\mathrm{P, max}^2 = 67.505$ zum Vergleich verwenden. \cite{Kapur} In diesem Falle würde die Hypothese $H_1$ bekräftigt werden, während die anderen Hypothesen verworfen werden müssen.
 
-Damit könnte man aus den Ergebnissen schließen, dass die Präparatstärke im gemessenen Zeitrahmen konstant ist. Diese Konstante entspricht dem gemessenen Mittelwert $m^\prime$, der etwa $10\,\%$ kleiner als der totzeitkorrigierte Mittelwert $m$ ist.
+Damit könnte man aus den Ergebnissen schließen, dass die Präparatstärke im gemessenen Zeitrahmen konstant ist.
 
 \hypertarget{totzeit}{\subsubsection{Halbwertszeit}\label{totzeit}}
 Die Hypothese $H_3$ nähert den exponentiellen Abfall der Präparatstärke linear an. Wie schon in Abschnitt \ref{Hypothesen} erläutert wurde, ist dies für den beobachteten Messzeitraum nicht beobachtbar, was auch der $\chi^2$--Test bekräftigt.
@@ -963,8 +942,6 @@ Die Totzeit mithilfe der Zwei--Präperate--Methode zu bestimmen ist rechnerisch 
 Ein weiteres Problem liefert der Umstand, dass es zwei rechnerisch mögliche Totzeiten gibt. Allerdings kann es physikalisch nur eine Totzeit geben, da diese eine Eigenschaft des Detektors beschreibt. Daher sollte die Totzeit auch auf eine andere Methode bestimmt werden, um die richtige Totzeit finden. Dafür bietet sich die Analyse einer Invervallverteilung der Messwerte an.
 
 Die $\chi^2$--Tests begründen eine Ablehnung aller drei getätigten Hypothesen. Allerdings sind sie dennoch aussagekräftig: Nur die Möglichkeit, dass Präperatsstärke von $\ce{^{137}Cs}$ im Zeitraum von Minuten konstant bleibt, kann durch die Tests unterstützt werden. Bei dem $\chi^2$--Test nach Pearson wird diese These eindeutig bekräftigt.
-
-Hierbei kann der gemessene Mittelwert der Messwerte als konstanter Wert angenommen werden. Dieser ist allerdings durch die Totzeit um ca. $10\,\%$ kleiner als der tatsächliche Mittelwert.
 
 Zuletzt wurde die Halbwertszeit einer Probe ermittelt, die zu Beginn die selbe Präperatsstärke wie unsere Probe hat, bei der dagegen ein linearer Abfall zu beobachten wäre. Um den in der dritten Hypothese beschriebene Steigung zu erhalten, ist eine Halbwertszeit von ca. $1.5\mathrm{\,h}-2\mathrm{\,h}$ benötigt.
 
