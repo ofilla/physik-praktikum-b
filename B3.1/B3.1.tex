@@ -156,7 +156,8 @@ Eine \emph{Zufallsvariable} ist eine Funktion $X$, die jedem Ereignis $\omega$ e
 \end{eqnarray}
 
 \noindent
-Das Ereignis $\omega$ des Zufallsexperiments kann direkt eine Zahl sein, wie beispielsweise die Augenzahl eines Würfelswurfs. Alternativ kann Jedem Ereignis des Zufallsexperiments wird eine Zahl zugeordnet werden, beispielsweise können bei einem Münzwurf dem Ereignis $\mathrm{Kopf}$ der Wert $0$ und dem Ereignis $\mathrm{Zahl}$ eine $1$ zugeordnet werden.
+Das Ereignis $\omega$ des Zufallsexperiments kann direkt eine Zahl sein, wie beispielsweise die Augenzahl eines Würfelwurfs. Alternativ kann jedem Ereignis des Zufallsexperiments eine Zahl zugeordnet werden, beispielsweise können bei einem Münzwurf dem Ereignis $\mathrm{Kopf}$ der Wert $0$ und dem Ereignis $\mathrm{Zahl}$ eine $1$ zugeordnet werden. Bei einem Zufallsexperiment, welches mehrfach wiederholt wird hingegen, liefert die Anzahl mit der ein bestimmtes Ereignis eintritt eine reelle Zahl.
+
 
 \subsubsection{Wahrscheinlichkeitsdichte}
 \label{Wahrscheinlichkeitsdichte}
@@ -207,11 +208,10 @@ Der Binomialkoeffizient $\binom{N}{n}$ dient dabei dazu, alle möglichen Reihenf
 
 \subsubsection{Poissonverteilung}
 \label{Poissonverteilung}
-Die \emph{Poissonverteilung} beschreibt Reihen von Zufallsvariablen, die unabhängig voneinander eintreten. Sie ist eine weitere diskrete Verteilung mit der Wahrscheinlichkeitsdichte $P(n,\lambda)$, Erwartungswert $m$ und Varianz $\sigma^2$.
+Die \emph{Poissonverteilung} beschreibt Reihen von Zufallsvariablen, die unabhängig voneinander eintreten. Sie ist eine weitere diskrete Verteilung mit der Wahrscheinlichkeitsdichte $P(n,\lambda)$. Ihr Erwartungswert $\lambda$ und ihre Varianz $\lambda$ sind identisch.
 
 \begin{eqnarray}
-	P_\lambda(n) &=& \frac{\lambda^n}{n!} e^{-\lambda}
-	\label{eq:poisson} \\
+	P_\lambda(n) &=& \frac{\lambda^n}{n!} e^{-\lambda} \label{eq:poisson} \\
 	m &=& \lambda\\
 	\sigma^2 &=& \lambda \\
 	\Rightarrow\quad \frac{\sigma}{m} &=&\frac{1}{\sqrt{m}} \label{eq:Poisson STD/EW}
@@ -227,7 +227,7 @@ Die Poissonverteilung $P_\lambda(n)$ folgt als Grenzfall aus der Binomialverteil
 
 \subsubsection{Gaußverteilung}
 \label{Gaußverteilung}
-Die \emph{Gaußverteilung} ist eine kontinuierliche Verteilung. Ihre Wahrscheinlichkeitsdichte $P(x,\mu,\sigma)$ wird folgendermaßen mithilfe des Erwartungswerts $\mu$ und der Varianz $\sigma^2$ beschrieben. Die \emph{Normalverteilung}  ist eine Gaußverteilung mit $\mu=\sigma^2=1$.
+Die \emph{Gaußverteilung} ist eine kontinuierliche Verteilung. Ihre Wahrscheinlichkeitsdichte $P(x,\mu,\sigma)$ wird folgendermaßen mithilfe des Erwartungswerts $\mu$ und der Varianz $\sigma^2$ beschrieben. Die \emph{Standardnormalverteilung}  ist eine Gaußverteilung mit $\mu=\sigma^2=1$.
 
 \begin{eqnarray}
 	P(x,\mu,\sigma) &=& \frac{1}{\sqrt{2 \pi\sigma^2}} \exp\left[- \frac{1}{2} \left(\frac{x - \mu}{\sigma}\right)^2\right]
@@ -250,6 +250,14 @@ Weiterhin konvergiert die Binomialverteilung nach dem \emph{Satz von Moivre--Lap
 \end{eqnarray}
 
 \hypertarget{Intervallverteilung}{\subsection{Intervallverteilung}\label{Intervallverteilung}}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B3.1/Intervallverteilungen.pdf}
+	\caption{Intervallverteilung für $a = 1$ und verschiedene $n$ \cite{uni}}
+	\label{fig:Intervallverteilung}
+\end{figure}
+
+\noindent
 Die \emph{Intervallverteilung} ist dann gefragt, wenn nicht die Anzahl an eingetroffenen Ereignissen $A$, sondern stattdessen die Zeit zwischen zwei oder mehr Ereignissen $A$ interessant ist.
 
 Für Kernzerfälle ist ihre Wahrscheinlichkeitsdichte $P_n$ wie folgt gegeben. Sie ähnelt der Poissonverteilung, hat aber einen zusätzlichen Faktor $a$.
@@ -264,27 +272,38 @@ Damit gibt die kumulative Verteilungsfunktion $\int_{t_0}^{t_1} P_n \,\mathrm dt
 Somit gibt die Verteilungsfunktion für $n=0$ die Wahrscheinlichkeit an, dass die Zeit $t$ zwischen zwei aufeinanderfolgenden Zerfällen innerhalb des Intervalls $[t_0, t_1]$ liegt.
 
 \hypertarget{Herleitung Intervallverteilung}{\subsection{Herleitung}\label{Herleitung Intervallverteilung}}
-Nun soll die Wahrscheinlichkeitsdichte $P_n$ der Intervallverteilung hergeleitet werden.
-
-Hierzu wird die Wahrscheinlichkeit $W$ bestimmt, dass die Zeit zwischen zwei Zerfällen, zwischen denen genau $n$ andere Zerfälle stattfinden, den Wert $\Delta t$ annimmt. $W$ setzt sich aus dem Produkt zweier Einzelwahrscheinlichkeiten $W_1$ und $W_2$ zusammen.
-
-$W_1$ gibt die Wahrscheinlichkeit an, dass im Zeitintervall $\Delta t$ genau $n$ weitere Zerfälle stattfinden. Dies wird durch eine Poissonverteilung \eqref{eq:poisson} beschrieben, deren Erwartungswert $\lambda = a\Delta t$ beträgt und durch die Zerfallswahrscheinlichkeit $a$ beschrieben wird.
-
-$W_2$ hingegen gibt die Wahrscheinlichkeit an, dass nach der Zeit $\Delta t$ in einer sehr kurzen Zeit $\mathrm dt$ ein Zerfall stattfindet. Aufgrund der kurzen Zeitspanne kann dies linear genähert werden, wie es bei der Herleitung der Zerfallswahrscheinlichkeit in Abschnitt \ref{Herleitung Zerfallswahrscheinlichkeit}  in Gleichung \eqref{eq:Zerfallswkt linear} gemacht wurde.
+Ein instabiler Kern mit einer Halbwertszeit $T_{1/2}$ zerfällt mit einer Wahrscheinlichkeit $\omega$ innerhalb einer Zeitspanne $\Delta t$. Falls diese Zeitspanne $\Delta t$ klein gegen die Halbwertszeit $T_{1/2}$ ist, lässt sich $\omega$ linear annähern. Die Gegenwahrscheinlichkeit $(1-\omega)$ beschreibt demnach den Fall, dass der Kern nicht zerfällt.
 
 \begin{eqnarray}
-	W_1 &=& \frac{(a\Delta t)^n}{n!} \mathrm{e}^{-a\Delta t} \\
-	W_2 &=& a \,\mathrm dt \\
-	W &=& W_1 \cdot W_2 \\
-		&=& \frac{\left(a\Delta t\right)^n}{n!}  \mathrm{e}^{-a\Delta t} \cdot a \,\mathrm dt
+	\omega &=& \alpha \Delta t \label{eq:Zerfallswkt linear} \\
+	1 - \omega &=& 1 - \alpha \Delta t
 \end{eqnarray}
 
 \noindent
-Da die Wahrscheinlichkeit $W$ das Integral der Wahrscheinlichkeitsdichte $P_n$ darstellt, wird $P_n$ durch differenzieren ermittelt.
+Nun sollen größere Zeitspannen $t$ betrachtet werden. Dazu wird $t$ in $k$ gleich große Teilzeitspannen unterteilt, sodass jede Teilzeitspanne $t_i$ klein genug ist, um linear angenähert zu werden. Dann kann die Wahrscheinlichkeit $(1 - \omega_i)$ dafür ermittelt werden, dass in der Teilzeitspanne $t_i$ kein Zerfall stattfindet.
+
+Daraus kann die Wahrscheinlichkeit $(1 - \omega)$ für den Erhalt des Kerns nach der Zeit $t$ ermittelt werden.
 
 \begin{eqnarray}
-	P_n &=& \frac{\mathrm dW}{\mathrm dt} \\
-		&=& a \frac{\left(at\right)^n}{n!} e^{-at}
+	1 - \omega_i &=& \left(1 - \alpha \frac{t}{k}\right) \\
+	1 - \omega &=& \left(1 - \alpha \frac{t}{k} \right)^k
+\end{eqnarray}
+
+\noindent
+Die Teilzeitabschnitte infinitesimal klein sein, um ein exaktes Ergebnis zu liefern. Damit wird $k$ unendlich groß. Dadurch kann die Wahrscheinlichkeit $(1-\omega)$ für den Erhalt des Kerns durch eine Exponentialfunktion beschrieben werden. Entsprechend kann die Wahrscheinlichkeit $\omega$ für einen Zerfall innerhalb der Zeitspanne $t$ beschrieben werden.
+
+\begin{eqnarray}
+	1 - \omega &=& \lim_{k \rightarrow \infty} \left(1 - \alpha \frac{t}{k} \right)^k \\
+		&=& e^{- \alpha t} \\
+	\omega &=& 1 - e^{-\alpha t}
+\end{eqnarray}
+
+\noindent
+Die Zerfallswahrscheinlichkeit $\alpha$ lässt sich damit aus der Halbwertszeit ermitteln.
+
+\begin{eqnarray}
+	\omega(T_{1/2}) &=& \frac{1}{2} \\
+	\Rightarrow\alpha &=& \frac{\ln{(2)}}{T_{1/2}}
 \end{eqnarray}
 
 \hypertarget{statistische-tests}{%
@@ -523,28 +542,22 @@ Die $12$ kurzen Messung dienten der Bestimmung der Totzeit mit der Zwei--Präpar
 
 \hypertarget{poissonverteilung}{%
 \subsection{Poissonverteilung}\label{poissonverteilung}}
-Als erstes wird der Zerfall der Proben mit der Poisson--Verteilung verglichen. Dazu werden die Messergebnisse jeweils mit einer dazu passenden Poisson--Verteilung aufgetragen, was in Abbildung \ref{fig:poisson single} dargestellt ist.
-
-Der Mittelwert und die Varianz der jeweiligen Poisson--Verteilungen sind als $\lambda$ gegeben und in Tabelle \ref{table:poisson} dargestellt.
-
-\begin{eqnarray}
-	P(n,\lambda) = N \cdot \frac{\lambda^n e^{-\lambda}}{n!}
-\end{eqnarray}
+Als erstes wird der Zerfall der Proben mit der Poisson--Verteilung verglichen. Dazu werden die Messergebnisse jeweils mit einer dazu passenden Poisson--Verteilung aufgetragen, was in Abbildung \ref{fig:poisson single} dargestellt ist. Für alle drei Messungen werden Mittelwerte $\lambda$ und Varianzen $\sigma^2$ ermittelt, die in Tabelle \ref{table:poisson} dargestellt sind.
 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{c|c|c}
-		Probe & Spannung $[\mathrm{V}]$ & $\lambda$ \\
+	\begin{tabular}{c|c|c|c|c}
+		Probe & Spannung $[\mathrm{V}]$ & $m$ & $\sigma^2$ & $\delta$ [\%]\\
 		\hline
-		$A$ & $500$ & $7.1$ \\
-		$A$ & $600$ & $8.5$ \\
-		$A+B$ & $500$ & $13.5$ \\
+		$A$ & $500$ & $6.929 \pm 0.019$ & $4.69 \pm 0.06$ & $32.3 \pm 0.9$ \\
+		$A$ & $600$ & $8.447 \pm 0.024$ & $7.79 \pm 0.11$ & \ \ $7.8 \pm 1.3 $ \\
+		$A+B$ & $500$ & $13.327 \pm 0.021\ $ & $5.95 \pm 0.08$ & \,$55.4 \pm 0.6 $ \\
 	\end{tabular}
-	\caption{Mittelwerte bzw. Varianzen $\lambda$  der drei Poisson--Verteilungen}
+	\caption{Mittelwerte $m$, Varianzen $\sigma^2$ und Abweichung $\delta$ dieser Werte voneinander der drei gemessenen Poisson--Verteilungen}
 	\label{table:poisson}
 \end{table}
 
-\begin{figure}
+\begin{figure}[ht]
 	\centering
 	\begin{minipage}{0.49\textwidth}
 		\centering
@@ -557,31 +570,55 @@ Der Mittelwert und die Varianz der jeweiligen Poisson--Verteilungen sind als $\l
 		\caption*{Probe $A$, $600 \mathrm{\, V}$}
 	\end{minipage}
 	\vspace{3pt}
-
+	
 	\includegraphics[width=0.49\textwidth]{../media/B3.1/poisson3.pdf}
 	\caption*{Proben $A$ und $B$ gemeinsam, $500 \mathrm{\, V}$}
 	\vspace{3pt}
 	
 	\caption{Messwerte und Poisson--Verteilungen}
 	\label{fig:poisson single}
-	\vspace{12pt}
-	
+\end{figure}
+
+Dabei findet der für alle Messungen gleiche Normierungsfaktor $N = 13499$ Verwendung, der die Gesamtzahl der Ereignisse darstellt. Weiterhin beschreiben $i$ die Anzahl an Zerfällen in $0.2 \mathrm{\, s}$ und $n_i$ die zugehörige Anzahl an Detektionen. Der Fehler des Mittelwerts $\Delta m$ ist durch die Mittlere Quadratsumme der Residuen beschrieben, der Fehler der Varianz $\Delta \sigma^2$ durch Gauß'sche Fehlerfortpflanzung.
+
+\begin{eqnarray}
+	\lambda &=& \frac{1}{N} \sum_{i=0}^{i_\mathrm{max}} i \cdot n_i \\
+	\sigma^2 &=& \frac{1}{N} \sum_{i=0}^{i_\mathrm{max}} (m - i)^2 \cdot n_i \\
+	\Delta \lambda &=& \sqrt{\frac{1}{N (N-1)} \sum_{i=0}^{i_\mathrm{max}} (m - i)^2 \cdot n_i} \\
+	\Delta \sigma^2 &=& \frac{2}{N} \sum_{i=0}^{i_\mathrm{max}} (m - i) \cdot n_i \cdot \Delta m
+\end{eqnarray}
+
+\noindent
+Die theoretischen Poisson--Verteilungen $P(n, \lambda)$ werden durch Gleichung \eqref{eq:poisson} beschrieben. Damit sollen die Abweichungen der Messungen von den theoretischen Poisson--Verteilungen bestimmt werden. Diese wird durch die Abweichung $\delta$ der gemessenen Varianz $\sigma^2$ vom gemessenen Mittelwert $\lambda$ beschrieben. Der Fehler $\Delta \delta$ ergibt sich wieder aus der Gauß'schen Fehlerfortpflanzung.
+
+\begin{eqnarray}
+	\delta &=& \frac{\lambda - \sigma^2}{\lambda} \\
+	\Delta \delta &=& \sqrt{\left(\frac{\Delta \sigma^2}{\lambda}\right)^2 + \left(\frac{\sigma^2 \cdot \Delta \lambda}{\lambda^2}\right)^2}
+\end{eqnarray}
+
+\noindent
+Die Anzahl an Zerfällen innerhalb von relativ kurzen Zeitintervallen von $0.2 \mathrm{\,s}$ wird jeweils in einem Balken dargestellt. Die kurzen Zeitintervalle sorgen dafür, dass der Mittelwert der Messdaten klein bleibt und so eine Poisson--Verteilung nach der in Abschnitt \ref{Poissonverteilung} erwähnten Faustregel eine sinnvolle Näherung ergibt, solange der Mittelwert $10$ nicht überschreitet.
+
+Für die Messung der Probe $A$ bei $600 \mathrm{\, V}$ folgen die Messwerte am besten der theoretischen Poisson--Verteilung. Die gemessene Varianz $\sigma^2$ hat nur eine Abweichung von unter $10 \mathrm{\, \%}$ vom Mittelwert $\lambda$. Die anderen beiden Messungen weisen deutlichere Unterschiede auf.
+
+Bei der Messung von Probe $A$ bei $500\mathrm{\,V}$ ist eine Abweichung von ca. $33 \mathrm{\, \%}$ bemerkenswert. Damit liegt sie näher an der theoretischen Verteilung als die gemeinsame Messung von $A$ und $B$, welche eine Abweichung von ca. $55 \mathrm{\, \%}$ besitzt. In beiden Fällen ist die Poisson--Verteilung deutlich breiter als die Messwerte und um den Mittelwert herum niedriger.
+
+In Abbildung \ref{fig:allePoisson} sind alle drei Poisson--Verteilungen gemeinsam dargestellt. Ersichtlich ist der Anstieg des Mittelwerts sowohl bei höheren Spannungen, als auch bei mehr Probenmaterial. Außerdem werden die Verteilungen breiter und flacher, je größer der Mittelwert ist.
+
+Die Totzeit erklärt die Abweichungen aller drei Messungen von den jeweiligen theoretischen Poisson--Verteilungen, da sie die Mittelwert und Standardabweichung der Messungen verringert. Dies wurde bereits in Abschnitt \ref{Totzeit} erklärt.
+
+\begin{figure}
+	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B3.1/allePoisson.pdf}
 	\caption{Alle drei Poisson--Verteilungen zusammen\\
 		Die Grenze der Faustregel für den Mittelwert einer sinnvolle Poisson--Annäherung ist in rot markiert}
 	\label{fig:allePoisson}	
 \end{figure}
 
-\noindent
-Dabei wurde die Anzahl an Zerfällen innerhalb von relativ kurzen Zeitintervallen von $0.2 \mathrm{\,s}$ jeweils in einem Balken dargestellt. Die kurzen Zeitintervalle sorgen dafür, dass der Mittelwert der Messdaten klein bleibt und so eine Poisson--Verteilung nach der in Abschnitt \ref{Poissonverteilung} erwähnten Faustregel eine sinnvolle Näherung ergibt, solange für den Mittelwert gilt $\lambda \leq 10$.
+Die erwartete Totzeit wird bei höheren Spannungen geringer.  Dies erklärt die geringen Abweichungen bei der $600 \mathrm{\, V}$--Messung, die deutlich kleiner als bei den anderen Messungen ist.
 
-Für die Messungen  Probe $A$ folgen die Messwerte recht genau der Poisson--Verteilung, die gemeinsame Messung der Proben $A$ und $B$ zeigt allerdings deutlichere Unterschiede auf. Die Poisson--Verteilung ist dort deutlich breiter als die Messwerte und um den Mittelwert herum nicht so hoch. Hier bestätigt sich die besprochene Faustregel, dass die Poisson--Verteilung für $\lambda > 10$ keine gute Näherung mehr darstellt und stattdessen eher die Gaußverteilung verwendet werden sollte.
+Bei der gemeinsamen Messung der Proben $A$ und $B$ bestätigt sich außerdem die in Abschnitt \ref{Poissonverteilung} besprochene Faustregel, die Poisson--Verteilung sei für $\lambda > 10$ keine gute Näherung mehr. Hierfür solle besser die Gaußverteilung verwendet werden. Zudem zeigt sich der Fehler der Totzeit hier stärker als bei den anderen Messungen, da hier deutlich mehr Zerfälle pro Sekunde stattfinden. Daher werden auch mehr Zerfälle nicht detektiert.
 
-Alle drei Poisson--Verteilungen sind nochmal gemeinsam in Abbildung \ref{fig:allePoisson} dargestellt. Es ist ersichtlich, dass der Mittelwert der Verteilung sowohl bei höheren Spannungen, als auch bei mehr Probenmaterial steigen. Außerdem werden die Verteilungen breiter und flacher, je größer der Mittelwert ist.
-
-Allerdings sind alle drei theoretischen Verteilungen etwa breiter als die Messdaten. Dies ist besonders gut bei der ersten und dritten Messung zu sehen. Dies ist durch die Totzeit erklärt, die Mittelwert und Standardabweichung der Messung verringert.\footnote{Vergleiche Abschnitt \ref{Totzeit}}
-
-\newpage
 \hypertarget{gauuxdfverteilung}{%
 \subsection{Gaußverteilung}\label{gauuxdfverteilung}}
 Für größere Mittelwerte ist der Vergleich mit der Gaußverteilung sinnvoll. Dazu werden die Messewerte für Zeitintervalle von $5 \mathrm{\,s}$ zusammengefasst.
@@ -657,15 +694,18 @@ In Abbildung \ref{fig:interval} sind die gemessenen Intervall--Verteilungen für
 	\label{fig:interval}
 \end{figure}
 
-Die gemessene Intervall--Verteilung mit $n = 0$ wird nun mit der theoretischen Verteilung verglichen. Dafür wird die theoretische Intervall--Verteilung $P_0$ an die Messwerte gefittet, die durch Gleichung \eqref{eq:Intervallverteilung} beschrieben ist. Daber wurde der Fitting--Parameter $a = 4.3 \cdot 10^{-2} \mathrm{\,ms^{-1}}$ ermittelt. Zudem wurde die Normierungskonstante $N(a)=T\cdot a$ verwendet, die von $a$ und der Messdauer $T=45\mathrm{\,min}$ in Sekunden.
+\noindent
+Die gemessene Intervall--Verteilung mit $n = 0$ wird mit der theoretischen Verteilung verglichen. Dafür wird die theoretische Intervall--Verteilung $P_0$ an die Messwerte gefittet. $P_0$ wird dazu um einen Faktor $N=aT$ gestreckt, um die korrekte Anzahl an Ereignissen abzubilden. Diese hängt von $a$ und der Messdauer $T=45\mathrm{\,min}$ in Sekunden ab.
+
+Aus dem Fit mittels des \code{Julia}--Pakets \code{LsqFit} \cite{Julia:LsqFit} wird der Parameter $a$ gewonnen.
 
 \begin{eqnarray}
-	P(t) &=& N(a) \cdot a \cdot e^{-at} \\
-	N &=& T \cdot a
+	P(t) &=& T \cdot a^2 \cdot e^{-at} \\
+	a &=& (4.321 \pm 0.013) \cdot 10^{-2} \mathrm{\,ms^{-1}}
 \end{eqnarray}
 
 \noindent
-Das Ergebnis ist in Abbildung \ref{fig:intervalFit} zu sehen. Dabei ist zu beachten, dass die ersten acht Messwerte der gemessenen Intervall--Verteilung für den Fit ausgeschlossen wurden, da sie in einem Zeitabschnitt liegen, der kleiner als die erwartete Totzeit ist, wodurch ihre Ergebnisse stark von den erwarteten abweichen dürften.
+Das Ergebnis ist in Abbildung \ref{fig:intervalFit} zu sehen. Dabei ist zu beachten, dass die ersten elf Messwerte der gemessenen Intervall--Verteilung für den Fit ausgeschlossen wurden, da sie in einem Zeitabschnitt liegen, der kleiner als die erwartete Totzeit ist, wodurch ihre Ergebnisse stark von den erwarteten abweichen dürften.
 
 \begin{figure}
 	\centering
@@ -674,16 +714,17 @@ Das Ergebnis ist in Abbildung \ref{fig:intervalFit} zu sehen. Dabei ist zu beach
 	\label{fig:intervalFit}
 \end{figure}
 
-Aus dem so bestimmten Fit-Parameter $a$ lässt sich nun mittels Gleichung \eqref{eq:Totzeitkorrigiert Rate} die Totzeit $\tau$ ermitteln.
+Aus dem so bestimmten Fit--Parameter $a$ lässt sich nun mittels Gleichung \eqref{eq:Totzeitkorrigiert Rate} die Totzeit $\tau$ ermitteln. Der Fehler $\Delta \tau$ folgt durch Gauß'sche Fehlerfortpflanzung.
 
 \begin{eqnarray}
-	\tau &=& \frac{1}{a'} - \frac{1}{a}
+	\tau &=& \frac{1}{a'} - \frac{1}{a} \\
+	\Delta \tau &=& \frac{\Delta a}{a^2}
 \end{eqnarray}
 
 \noindent
-Dabei ist $a' \approx 36.80 \cdot 10^{-2} \mathrm{\,ms^{-1}}$ die für diese Quelle gemessene Zählrate aus Tabelle \ref{table:zählraten gauss}. Dadurch ergibt sich für die Totzeit $\tau \approx 3.9 \mathrm{\, ms}$.
+Dabei ist $a' = 36.80 \cdot 10^{-2} \mathrm{\,ms^{-1}}$ die für diese Quelle gemessene Zählrate aus Tabelle \ref{table:zählraten gauss}. Dadurch ergibt sich für die Totzeit $\tau = (4.02 \pm 0.07) \mathrm{\, ms}$.
 
-Für die anderen beiden gemessenen Intervall--Verteilungen für $n = 1,2$ ist ein Fit--Versuch mit der theoretischen Kurve nicht sinnvoll. Dies liegt daran, dass die Totzeit bei $n = 1,2$ nicht nur im vordersten Teil der Verteilung sichtbar ist, wie bei $n = 0$. Bei ihnen verändert die Totzeit hingegen die ganze Verteilung, wodurch kein sinnvoll zu fittender Bereich mehr übrig bleibt. Dem ist so, weil die Messung des dritten Zerfalls ebenfalls einer Totzeit unterliegt. Wann der zweite Zerfall allerdings gemessen wurde, ist aus den Daten nicht ersichtlich und vor allem immer unterschiedlich, wodurch an immer anderen Stellen eine Veränderung durch die Totzeit hinzukommt.
+Für die anderen beiden gemessenen Intervall--Verteilungen für $n = 1,2$ ist ein Fit--Versuch mit der theoretischen Kurve nicht sinnvoll. Dies liegt daran, dass die Totzeit bei $n = 1,2$ nicht nur im vordersten Teil der Verteilung sichtbar ist, wie bei $n = 0$. Bei ihnen verändert die Totzeit hingegen die ganze Verteilung, wodurch kein sinnvoll zu fittender Bereich mehr übrig bleibt. Ursächlich ist der Einfluss der Totzeit auf alle Detektionen, der für einzelne Messungen nicht bestimmt werden kann. Dadurch verändert die Totzeit die Intervallverteilung der Messwerte variabel.
 
 \hypertarget{Totzeit bestimmen}{\subsection{Totzeit}\label{Totzeit bestimmen}}
 Die Totzeit $\tau$ wird hier mit der Zwei--Präparate--Methode bestimmt. Es wurden für die Proben $A$ und $B$ jeweils $N_A$ bzw. $N_B$ Ereignisse gemessen. Weiterhin wurden $N_{AB}$ Ereignisse bei Verwendung beider Proben $A$ und $B$ sowie $N_0$ Ereignisse ohne Proben gemessen. Letztere wurden durch die Untergrundstrahlung verursacht.
@@ -897,5 +938,8 @@ Zuletzt wurde die Halbwertszeit einer Probe ermittelt, die zu Beginn die selbe P
 	Wikimedia, ``File:Geiger Mueller Counter with Circuit-de.svg'', \url{https://commons.wikimedia.org/wiki/File:Geiger_Mueller_Counter_with_Circuit-de.svg}, Abruf am 22.04.2024
 \bibitem{Julia:Measurements}
 	\code{\href{https://julialang.org}{Julia}}--Paket \code{Measurements}, Dokumentation unter \url{https://juliaphysics.github.io/Measurements.jl/stable}
+\bibitem{Julia:LsqFit}
+	\code{\href{https://julialang.org}{Julia}}--Paket \code{LsqFit},
+	Dokumentation unter \url{https://docs.juliahub.com/General/LsqFit/stable}
 \end{thebibliography}
 \end{document}
