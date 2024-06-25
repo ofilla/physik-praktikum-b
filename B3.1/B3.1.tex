@@ -688,11 +688,9 @@ Für die anderen beiden gemessenen Intervall--Verteilungen für $n = 1,2$ ist ei
 \hypertarget{Totzeit bestimmen}{\subsection{Totzeit}\label{Totzeit bestimmen}}
 Die Totzeit $\tau$ wird hier mit der Zwei--Präparate--Methode bestimmt. Es wurden für die Proben $A$ und $B$ jeweils $N_A$ bzw. $N_B$ Ereignisse gemessen. Weiterhin wurden $N_{AB}$ Ereignisse bei Verwendung beider Proben $A$ und $B$ sowie $N_0$ Ereignisse ohne Proben gemessen. Letztere wurden durch die Untergrundstrahlung verursacht.
 
-Aus den Zählungen $N_i$ und der Dauer der Messungen $T=5\mathrm{\,min}$ lassen sich Zählraten $n_i$ ermitteln. Die Ergebnisse sind in den Tabellen \ref{tab:Totzeit Ereignisse} dargestellt. Der Fehler der Zählungen $\Delta N_i$ wird durch die statistische Ungenauigkeit gegeben. Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ nach Gleichung \eqref{eq:Totzeit} ermittelt werden.
+Aus den Zählungen $N_i$ und der Dauer der Messungen $T=5\mathrm{\,min}$ lassen sich Zählraten $n_i$ ermitteln. Die Ergebnisse sind in den Tabellen \ref{tab:Totzeit Ereignisse} dargestellt. Der Fehler der Zählungen $\Delta N_i$ wird durch die statistische Ungenauigkeit gegeben.
 
-Die Ungenauigkeiten $\Delta \tau_{1/2}$ werden durch das \code{Julia}--Paket \code{Measurements} ermittelt, das die lineare Fehlerfortpflanzungstheorie verwendet. \cite{Julia:Measurements}
-
-Diese Ergebnisse sind in Tabelle \ref{tab:Totzeiten} dargestellt. Hierbei fällt der sehr hohe relative Fehler für die $\tau_1$ auf.
+Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ nach Gleichung \eqref{eq:Totzeit} ermittelt werden. Die Ungenauigkeiten $\Delta \tau_{1/2}$ werden durch das \code{Julia}--Paket \code{Measurements} ermittelt, das die lineare Fehlerfortpflanzungstheorie verwendet. \cite{Julia:Measurements} Diese Ergebnisse sind in Tabelle \ref{tab:Totzeiten} dargestellt.
 
 \begin{eqnarray}
 	\Delta N &=& \sqrt{N} \\
@@ -722,11 +720,11 @@ Diese Ergebnisse sind in Tabelle \ref{tab:Totzeiten} dargestellt. Hierbei fällt
 		& $\tau_1$ $[\mathrm{ms}]$
 		& $\tau_2$ $[\mathrm{ms}]$ \\
 		\hline
-		$500$ & $6.41 \pm 5.72$ $(\pm 89 \,\%)$\ \  & $22.04 \pm 2.62$ $(\pm 12 \,\%)$ \\
-		$550$ & $2.32 \pm 4.40$ $(\pm 190 \,\%)$ & $19.79 \pm 2.12$ $(\pm 11 \,\%)$ \\
-		$600$ & $1.13 \pm 3.85$ $(\pm 341 \,\%)$ & $18.51 \pm 1.91$ $(\pm 10 \,\%)$ \\
+		$500$ & $6.41 \pm 0.33$ $(\pm 5 \,\%)$\ \ \  & $22.04 \pm 0.15$ $(\pm 1 \,\%)$ \\
+		$550$ & $2.32 \pm 0.25$ $(\pm 11 \,\%)$ & $19.79 \pm 0.12$ $(\pm 1 \,\%)$ \\
+		$600$ & $1.13 \pm 0.22$ $(\pm 19 \,\%)$ & $18.51 \pm 0.11$ $(\pm 1 \,\%)$ \\
 	\end{tabular}
-	\caption{Mit \code{Measurements} \cite{Julia:Measurements} ermittelte Totzeiten}
+	\caption{ermittelte Totzeiten}
 	\label{tab:Totzeiten}
 \end{table}
 
