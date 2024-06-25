@@ -398,26 +398,29 @@ Damit können die Differenzen zum Mittelwert $(n_i-\bar n)$ ermittelt werden. Na
 
 \subsubsection{Das Geiger--Müller--Zählrohr}
 \label{Geiger--Müller--Zählrohr}
-Ein Geiger--Müller--Zählrohr besteht aus einem edelgasgefüllten Zylinderkondensator mit einem dünnem Anodendraht in der Mitte. Das elektrische Potential ist somit zylindersymmetrisch, um die Anode herum ist es am stärksten. Dies ist in Abbildung \ref{fig:Geiger--Müller--Zählrohr} schematisch dargestellt.
-
-Wenn ein Photon in den Zylinder eintritt und auf ein Gasteilchen trifft, wird die Energie des Photons übertragen und ein Elektron aus dem Atom gelöst. Durch das elektrische Potential wird das freie Elektron zur Anode hin beschleunigt und stößt auf dem Weg mit weiteren Gasteilchen. Dadurch sammeln sich immer mehr Elektronen um den Anodendraht.
-
-Währenddessen regen sich die Gasteilchen durch Photonenemission ab und erzeugen die sogenannte Geiger--Entladung. Hierbei ionisieren die entstandene Photonen weitere Gasteilchen, somit entstehen weitere Elektronen. Da die Photonen überall innerhalb des Zählrohr sein können, findet die Entladung in dem gesamten Zählrohr statt.
-
-Die Zeit, während der die relativ langsame Wolke aus ionisierten Gasteilchen nach außen zur Zylinderwand wandert, wird \emph{Totzeit} genannt. In diesem Zeitraum existiert um den Anodendraht kein Potential. Daher es können dann keine Elektronen beschleunigt werden, obwohl weitere Strahlungsquanten ins Zählrohr hinein dringen können. In dieser Zeit kann keine Strahlungen gemessen werden.
-
-Um eine Mehrfachentladung von Gasteilchen während der Totzeit an der Zylinderwand zu vermeiden wird ein starker Widerstand mit ca. $10^8\,\Omega$ zwischen Hochspannungsversorgung und Anode geschaltet. Dadurch ist die Hochspannung nach einer Entladung nicht ausreichend für eine weitere Entladung.
+Ein Geiger--Müller--Zählrohr besteht aus einem gasgefüllten Zylinderkondensator mit einem dünnem Anodendraht in der Mitte. Das elektrische Potential ist somit zylindersymmetrisch, um die Anode herum ist es am stärksten. Dies ist in Abbildung \ref{fig:Geiger--Müller--Zählrohr} schematisch dargestellt. Das Zählrohr in diesem Versuchsaufbau besitzt allerdings kein Fenster.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{../media/B3.1/640px-Geiger_Mueller_Counter_with_Circuit-de.svg.png}
+	\includegraphics[width=0.5\textwidth]{../media/B3.1/640px-Geiger_Mueller_Counter_with_Circuit-de.svg.png}
 	\caption{Aufbau eines typischen Geiger--Müller--Zählrohrs \cite{File:Geigerzählrohr}}
 	\label{fig:Geiger--Müller--Zählrohr}
 \end{figure}
 
+\noindent
+Wenn ein Photon in den Zylinder eintritt und auf ein Gasteilchen trifft, wird dieses ionisiert. Dabei löst sich ein Elektron aus dem Atom. Die Gammastrahlung verliert bei dem Ionisationsprozess nur einen Bruchteil der Energie, da ihre Energie mindestens im $\mathrm{keV}$--Bereich sehr viel größer als die Ionisationsenergie von Atomen in der Größenordnung von $10\mathrm{\,eV}$ ist. Daher ionisiert ein Gammaquant viele Gasteilchen. \cite{Demtröder Kern/Atom} Durch das elektrische Potential wird das freie Elektron zur Anode hin beschleunigt und stößt auf dem Weg mit weiteren Gasteilchen. Dadurch sammeln sich immer mehr Elektronen um den Anodendraht.
+
+Währenddessen regen sich die Gasteilchen durch Photonenemission ab und erzeugen die sogenannte \emph{Geiger--Entladung}. Hierbei ionisieren die entstandene Photonen weitere Gasteilchen, somit entstehen wiederum neue freie Elektronen. Da die Photonen eine größere Reichweite als die Elektronen haben und überall innerhalb des Zählrohres sein können, findet die Entladung großräumig in dem gesamten Zählrohr statt.
+
+Die Zeit, während der die relativ langsame Wolke aus ionisierten Gasteilchen nach außen zur Zylinderwand wandert, wird \emph{Totzeit} genannt. In diesem Zeitraum existiert um den Anodendraht kein Potential. Daher können dann keine Elektronen beschleunigt werden, obwohl weitere Strahlungsquanten ins Zählrohr hinein dringen können. In dieser Zeit kann keine Strahlungen gemessen werden.
+
+Um eine Mehrfachentladung von Gasteilchen während der Totzeit an der Zylinderwand zu vermeiden wird ein starker Widerstand mit ca. $10^8\,\Omega$ zwischen Hochspannungsversorgung und Anode geschaltet. Dadurch ist die Hochspannung nach einer Entladung nicht ausreichend für eine weitere Entladung.
+
+Alle Elektronen, die an der Anode ankommen, erzeugen alle einen Stromimpuls mit derselben Amplitude, aus diesem Grund ist eine Energiemessung nicht möglich. Andererseits ist die Empfindlichkeit des Detektors relativ hoch, denn schon ein einzelnes Elektron kann eine Gasentladung hervorrufen und gemessen werden. Die Höhe der Stromimpulse lässt sich auch ohne komplizierte Verstärker messen.
+
 \subsubsection{Totzeit}
 \label{Totzeit}
-Ganz allgemein beschreibt Totzeit $\tau$ die Zeit, die nach der Registrierung eines Ereignisses durch einen Detektor verstreicht, bis der Detektor wieder messbereit ist. \cite{Totzeit}
+Ganz allgemein beschreibt Totzeit $\tau$ die Zeit, die nach der Registrierung eines Ereignisses durch einen Detektor verstreicht, bis er wieder messbereit ist. \cite{Totzeit}
 
 Wie schon beschrieben ist während der Totzeit $\tau$ keine Strahlungsmessung möglich. Dadurch weicht die gemessene Zählrate $a^\prime$ von der tatsächlichen Rate $a$ ab. Um die tatsächliche Rate zu bestimmen, muss für jedes gemessene Teilchen die Anzahl der Detektionen in der Totzeit $a\tau$ addiert werden. Dies beschreibt die tatsächlich geschehenen Ereignisse, die während der Totzeit nicht gemessen werden können.
 
@@ -444,6 +447,8 @@ Das Verhältnis von Varianz $\sigma^2$ und Mittelwert $m$ der gemessenen Verteil
 
 \noindent
 Hierbei wurden die Verhältnisse $\frac{\sigma}{m}$ und $\frac{a^\prime}{a}$ durch die Gleichungen \eqref{eq:Poisson STD/EW} und \eqref{eq:Totzeitkorrigiert EW} beschrieben.
+
+Durch die Totzeit ist somit die gemessene Verteilung schmaler als die tatsächliche. Außerdem wird die Totzeit mit höherer Spannung geringer, da unter anderem das Gas sich schneller erholen kann.
 
 \hypertarget{einfluss-der-totzeit}{%
 \subsubsection{Totzeit im $\chi^2$--Test}\label{einfluss-der-totzeit}}
@@ -486,10 +491,10 @@ Nun seien $p_{1,\,2,\,12}$ die Zählraten, die sich durch die Verwendung von Pr�
 \end{eqnarray}
 
 \noindent
-Die Lösung dieses Gleichungssystems ergibt die Totzeit. Diese Formel wird auch als \emph{Mitternachtsformel} bezeichnet
+Die Lösung dieses Gleichungssystems ergibt die Totzeit. Mathematisch erhählt man zwei Lösungen, allerdings ist nur eine davon physikalisch relevant.
 
 \begin{align}
-	\tau _{1,\,2} \eqspaced& \frac{-B \pm \sqrt{B^2 - 4AC}}{2A} \label{eq:Totzeit Mitternachtsformel} \\
+	\tau _{1,\,2} \eqspaced& \frac{-B \pm \sqrt{B^2 - 4AC}}{2A} \label{eq:Totzeit} \\
 	\begin{split}
 		A \eqspaced& u'z'_{12}z'_2 - z'_1z'_12z'_2 + u'z'_{12}z'_1 - u'z'_1z'_2 \\
 		B \eqspaced& -2z'_{12}u' + 2z'_1z'_2 \\
@@ -683,9 +688,11 @@ Für die anderen beiden gemessenen Intervall--Verteilungen für $n = 1,2$ ist ei
 \hypertarget{Totzeit bestimmen}{\subsection{Totzeit}\label{Totzeit bestimmen}}
 Die Totzeit $\tau$ wird hier mit der Zwei--Präparate--Methode bestimmt. Es wurden für die Proben $A$ und $B$ jeweils $N_A$ bzw. $N_B$ Ereignisse gemessen. Weiterhin wurden $N_{AB}$ Ereignisse bei Verwendung beider Proben $A$ und $B$ sowie $N_0$ Ereignisse ohne Proben gemessen. Letztere wurden durch die Untergrundstrahlung verursacht.
 
-Aus den Zählungen $N_i$ und der Dauer der Messungen $T=5\mathrm{\,min}$ lassen sich Zählraten $n_i$ ermitteln. Die Ergebnisse sind in den Tabellen \ref{tab:Totzeit Ereignisse} dargestellt. Der Fehler der Zählungen $\Delta N_i$ wird durch die statistische Ungenauigkeit gegeben.
+Aus den Zählungen $N_i$ und der Dauer der Messungen $T=5\mathrm{\,min}$ lassen sich Zählraten $n_i$ ermitteln. Die Ergebnisse sind in den Tabellen \ref{tab:Totzeit Ereignisse} dargestellt. Der Fehler der Zählungen $\Delta N_i$ wird durch die statistische Ungenauigkeit gegeben. Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ nach Gleichung \eqref{eq:Totzeit} ermittelt werden.
 
-Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ mit der Mitternachtsformel \eqref{eq:Totzeit Mitternachtsformel} ermittelt werden. Die Ungenauigkeiten  $\Delta \tau_{1/2}$ sowie $\Delta A$, $\Delta B$, $\Delta C$ werden durch Gauß'sche Fehlerfortpflanzung ermittelt. Diese Ergebnisse sind in Tabelle \ref{tab:Totzeiten} dargestellt. Hierbei fällt der sehr hohe relative Fehler für die Totzeiten auf.
+Die Ungenauigkeiten $\Delta \tau_{1/2}$ werden durch das \code{Julia}--Paket \code{Measurements} ermittelt, das die lineare Fehlerfortpflanzungstheorie verwendet. \cite{Julia:Measurements}
+
+Diese Ergebnisse sind in Tabelle \ref{tab:Totzeiten} dargestellt. Hierbei fällt der sehr hohe relative Fehler für die $\tau_1$ auf.
 
 \begin{eqnarray}
 	\Delta N &=& \sqrt{N} \\
@@ -710,120 +717,23 @@ Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ mit der Mitternachtsfo
 	\label{tab:Totzeit Ereignisse}
 	\vspace{12pt}
 
-	\begin{tabular}[h]{c|c|c|c|c|c}
-		Spannung $[\mathrm V]$
-			& $z_1$ $[\mathrm s^{-1}]$
-			& $z_2$ $[\mathrm s^{-1}]$
-			& $z_{12}$ $[\mathrm s^{-1}]$
-			%& $z_0$ $[\mathrm s^{-1}]$
-			& $\tau_1$ $[\mathrm{ms}]$
-			& $\tau_2$ $[\mathrm{ms}]$ \\
-		\hline
-		$500$
-			& $37 \pm 6$
-			& $53 \pm 7$
-			& $68 \pm \ 8$
-			%& $7.9 \pm 2.8$
-			& $6 \pm 9$ $(\pm\, 147\,\%)$
-			& $22 \pm 18$ $(\pm\, 84\,\%)$ \\
-		$550$
-			& $41 \pm 6$
-			& $60 \pm 8$
-			& $85 \pm \ 9$
-			%& $8.0 \pm 3.0$
-			 & $2 \pm 5$ $(\pm\, 223\,\%)$
-			 & $20 \pm 12$ $(\pm\, 59\,\%)$ \\
-		$600$
-			& $43 \pm 7$
-			& $65 \pm 8$
-			& $95 \pm 10$
-			%& $8.5 \pm 3.0$
-			& $1 \pm 4$ $(\pm\, 368\,\%)$
-			& $19 \pm 10$ $(\pm\, 51\,\%)$ \\
-	\end{tabular}
-	\caption{Ermittelte Zählraten $z_i$ und Totzeiten $\tau_i$}
-	\label{tab:Totzeiten}
-\end{table}
-
-\noindent
-Die Werte von $\tau_1$ stimmen eher als die von $\tau_2$ mit den Totzeiten aus der Intervallverteilung überein. $\tau_2(500\mathrm{\,V})$ trifft innerhalb der Fehlergrenzen ebenfalls diesen Wert, die zwei anderen allerdings nicht mehr.
-
-\begin{align}
-	\begin{split}
-		(\Delta \tau _1)^2\eqspaced
-		&
-			\left(
-				\left(
-					\frac{-B-\sqrt{B^2 - 4AC}}{2A^2}
-					- \frac{C}{A\sqrt{B^2 - 4AC}}
-				\right) \Delta A
-			\right) ^2 \\
-		&
-				+\left(
-					\frac{1}{2A}\left(
-						\frac{B}{\sqrt{B^2 - 4AC}} - 1
-					\right) \Delta B
-				\right)^2
-				+ \left(
-					-\frac{\Delta C}{\sqrt{B^2 - 4AC}}
-				\right)^2
-	\end{split}\\
-	\begin{split}
-		(\Delta \tau _1)^2\eqspaced
-			&
-				\left(
-					\left(
-						\frac{\sqrt{B^2 - 4AC}+B}{2A^2}
-						+ \frac{C}{A\sqrt{B^2 - 4AC}}
-					\right) \Delta A
-				\right)^2\\
-			&
-				+ \left(
-					\frac{1}{2A}\left(
-						\frac{-B}{\sqrt{B^2 - 4AC}} - 1
-					\right) \Delta B
-				\right)^2
-				+ \left(
-					\frac{\Delta C}{\sqrt{B^2 - 4AC}}
-				\right) ^2
-	\end{split}
-\end{align}
-
-\begin{align}
-	\begin{split}
-		(\Delta A)^2 \eqspaced
-		& \big((-z^\prime _{12}z^\prime _2 + u^\prime z^\prime _{12} - u^\prime z^\prime _2)\Delta z^\prime _1\big)^2
-			+\big((u^\prime z^\prime _{12}-z^\prime _1z^\prime _{12}-u^\prime z^\prime _1)\Delta z_2\big)^2 \\
-		&+\big((u^\prime z^\prime _2-z^\prime _1z^\prime _2+u^\prime z^\prime _1)\Delta z^\prime _{12}\big)^2
-			+ \big((z^\prime _{12}z^\prime _2 + z^\prime _{12}z^\prime _1 -z^\prime _1z^\prime _2)\Delta u^\prime \big)^2
-	\end{split} \\
-	(\Delta B)^2 \eqspaced&  (2z^\prime _2 \Delta z^\prime _1)^2 + (2z^\prime _1 \Delta z^\prime _2)^2 + (-2u^\prime  \Delta z^\prime _{12})^2 + (-2z^\prime _{12} \Delta u^\prime )^2 \\
-	(\Delta C)^2 \eqspaced& (\Delta z^\prime _1)^2 + (\Delta z^\prime _2)^2 + (\Delta z^\prime _{12})^2 + (\Delta u^\prime )^2
-\end{align}
-
-\noindent
-Zusätzlich wurde die Totzeit digital ermittelt, dazu wurde das Paket \code{Measurements} in der Programmiersprache \code{Julia} verwendet. \cite{Julia:Measurements} Die Ergebnisse für $\tau _{1,2}$ sind gleich geblieben, allerdings unterscheiden sich die ermittelten Fehler, zum Teil erheblich. Die Ergebnisse sind in Tabelle \ref{tab:Totzeit m. Julia} dargestellt.
-
-\begin{table}[h!]
-	\centering
 	\begin{tabular}[h]{c|c|c}
 		Spannung $[\mathrm V]$
-			& $\tau_1$ $[\mathrm{ms}]$
-			& $\tau_2$ $[\mathrm{ms}]$ \\
+		& $\tau_1$ $[\mathrm{ms}]$
+		& $\tau_2$ $[\mathrm{ms}]$ \\
 		\hline
 		$500$ & $6.41 \pm 5.72$ $(\pm 89 \,\%)$\ \  & $22.04 \pm 2.62$ $(\pm 12 \,\%)$ \\
 		$550$ & $2.32 \pm 4.40$ $(\pm 190 \,\%)$ & $19.79 \pm 2.12$ $(\pm 11 \,\%)$ \\
 		$600$ & $1.13 \pm 3.85$ $(\pm 341 \,\%)$ & $18.51 \pm 1.91$ $(\pm 10 \,\%)$ \\
 	\end{tabular}
 	\caption{Mit \code{Measurements} \cite{Julia:Measurements} ermittelte Totzeiten}
-	\label{tab:Totzeit m. Julia}
+	\label{tab:Totzeiten}
 \end{table}
 
 \noindent
-%Die erste Berechnung wurde mit Excel durchgeführt. Es ist denkbar, dass sich Fehler in der langen Formel eingeschlichen haben. $\Delta A, \Delta B$ und $\Delta C$ sind in beiden Methoden identisch, also liegt es wahrscheinlich an der Fehlerrechnung von $\tau$ selbst.
-Da $\tau _2$ im Vergleich zu $\tau _1$ und dem Wert aus Intervallversteilung aus Abschnit \ref{Intervallverteilung} sehr groß ist, kann dieser verworfen werden.
+Durch die quadratische Gleichung erhält man für die Totzeit zwei verschiedenen Lösungen. Allerdings ist eine Lösung rein mathematisch bedingt und hat keine physikalische Aussage. Durch die Totzeit $\tau\approx 3.9$ aus Abschnitt \ref{intervallverteilung} ist kann man bestimmen, welche der mathematischen Lösungen physikalisch korrekt ist. $\tau _1$ stimmt innerhalb der Unsicherheiten mit $\tau$ überein und kann daher als korrekt betrachtet werden. Dagegen muss $\tau _2$ verworfen werden. Zur Bestimmung der Totzeit ist diese Methode genauer, da sie unabhängig von einem Fitting--Parameter ist. Zudem lässt sich der Fehler ziemlich genau ermitteln.
 
-Die Totzeit scheint i.A. mit steigender Spannung kleiner zu werden. Vermutlich werden die Elektronen dann schneller beschleunigt und das elektrische Feld um die Anode wird stärker. Daher bewegt sich die Wolke aus ionisierten Gasteilchen schneller und die Zeitspanne zwischen zwei registrierten Signale wird verringert.
+Die Totzeit scheint mit steigender Spannung kleiner zu werden. Dabei beschleunigt das elektrische Feld um die Anode die freien Elektronen stärker. Daher bewegt sich die Wolke aus ionisierten Gasteilchen schneller und die Zeitspanne zwischen zwei registrierten Signalen wird verringert. Somit kann sich das Füllgas auch schneller erholen und das Zählrohr ist somit früher messbereit.
 
 \hypertarget{chi2test}{\subsection{$\chi^2$--Test}\label{chi2test}}
 
@@ -968,6 +878,9 @@ Zuletzt wurde die Halbwertszeit einer Probe ermittelt, die zu Beginn die selbe P
 	K. C. Kapur \& M. Pecht, ``Reliability Engineering'': Appendix E,
 	Wiley 2014,
 	DOI~\href{https://doi.org/10.1002/9781118841716}{10.1002/9781118841716}
+\bibitem{Demtröder Kern/Atom}
+	W. Demtröder, ``Experimentalphysik 4: Kern-, Teilchen- und Astrophysik'',
+	Springer--Spektrum--Verlag, 5. Auflage 2017, DOI~\href{https://doi.org/10.1007/978-3-662-52884-6}{10.1007/978-3-662-52884-6}
 \bibitem{uni}
 	Universität zu Köln, ``B3.1: Statistik der Kernzerfälle'', Januar
 	2021, Online verfügbar unter
