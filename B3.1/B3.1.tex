@@ -79,9 +79,11 @@
 \hypertarget{einleitung}{%
 \section{Einleitung}\label{einleitung}}
 
-In diesem Versuch wird die statistische Methode des $\chi^2$--Anpassungstests mithilfe von radioaktiver Strahlung untersucht. Dazu wird $\ce{^{137}Cs}$ verwendet, dessen Stahlung mit einem Geiger--Müller--Zählrohr detektiert wird.
+In diesem Versuch wird die statistische Methode des \(\chi^2\)--Anpassungstests mithilfe von radioaktiver Strahlung untersucht. Dazu wird \(\ce{^{137}Cs}\) verwendet, dessen Strahlung mit einem Geiger--Müller--Zählrohr detektiert wird.
 
-Basierend auf den Messergebnissen werden drei Hypothesen über die Präperatsstärke bewertet. Zudem soll die Totzeit des Detektores milhilfe der Zwei--Präperate--Methode bestimmt werden.
+Basierend auf den Messergebnissen werden drei Hypothesen über die Präparatsstärke bewertet. Zudem soll die Totzeit des Detektors mithilfe der Zwei--Präparate--Methode bestimmt werden.
+
+Außerdem sollen aus den Messergebnissen Poisson--, Gauß-- und Intervall--Verteilungen extrahiert werden. Diese sollen mit den theoretischen Verteilungen verglichen werden, um ein Gefühl für diese zentralen Verteilungen der Statistik zu erwerben.
 
 \clearpage
 \hypertarget{theoretische-grundlagen}{%
@@ -858,7 +860,7 @@ Dennoch ist die Näherung im Allgemeinen sinnvoll. Die Halbwertszeit der $\ce{^{
 
 Im Folgenden soll angenommen werden, Hypothese $H_3$ treffe zu. Dann kann die Halbwertszeit der Probe $T_{1/2}$ aus der Steigung des beobachteten Abfalls ermittelt werden.
 
-Hierzu wird die Präperatsstärke durch die Anzahl der nicht--zerfallenen Atome $N(t)$ beschrieben. Nach Hypothese $H_3$ sei die Präperatsstärke zum Zeitpunkt $t=0$ identisch mit dem gemessenen Mittelwert. Daraus folgt Gleichung \eqref{eq:HWZ 1}.
+Hierzu wird die Präparatsstärke durch die Anzahl der nicht--zerfallenen Atome $N(t)$ beschrieben. Nach Hypothese $H_3$ sei die Präparatsstärke zum Zeitpunkt $t=0$ identisch mit dem gemessenen Mittelwert. Daraus folgt Gleichung \eqref{eq:HWZ 1}.
 
 Weiterhin soll $N(\Delta t)$ nach $\Delta t=10\mathrm{\,s}$ um $1$ geringer als $N(0)$ sein, was durch Gleichung \eqref{eq:HWZ 2} beschrieben wird. Damit kann die Zerfallswahrscheinlichkeit $\lambda$ bestimmt werden. Folglich erhält man die Halbwertszeit nach Gleichung \eqref{eq:Zerfallswahrscheinlichkeit}.
 
@@ -880,19 +882,17 @@ Daher könnte man die Halbwertszeit auf diese Weise messen, allerdings nur bei P
 \clearpage
 \hypertarget{fazit}{%
 \section{Fazit}\label{fazit}}
-Zusammenfassend scheint das Experiment erfolgreich gewesen zu sein. Die Darstellungen der Messwerte durch die Verteilungen ist gut gelungen, die $\chi^2$--Tests haben akzeptable Ergebnisse geliefert. Nur die Bestimmung der Totzeit scheint teilweise recht ungenau zu sein.
+Zusammenfassend scheint das Experiment erfolgreich gewesen zu sein. Die Darstellungen der Messwerte durch die Verteilungen ist gut gelungen, die Bestimmung der Totzeit verlief wie erwartet, und auch die $\chi^2$--Tests haben akzeptable Ergebnisse geliefert.
 
-So lange man nicht zu viele Ereignisse misst, kann man die Verteilung sowohl mit einer Poisson--Verteilung als auch einer Gauß--Verteilung darstellen. Bis zu einer gewissen Menge von Ereignissen ist die Poisson--Verteilung sinnvoller zu verwenden, danach die Gauß--Verteilung.
+Für alle drei Verteilungsarten konnten die Messwerte Ergebnisse liefern, die mit jeweiligen theoretischen Verteilungen recht gut übereinstimmen. Unterschiede konnten erfasst und erklärt werden. Speziell der Einfluss der Totzeit wurde gut sichtbar.
 
-Dies bestätigt den Satz von Moivre--Laplace, nach dem eine Binomialverteilung ab einer Standardabweichung von $9$ durch eine Gauß--Verteilung beschrieben werden kann. Auch dass die Poisson--Verteilung als Grenzfall der Binomialverteilung folgen kann, wurde auf diese Weise bestätigt.
+Die Totzeit mithilfe der Zwei--Präparate--Methode zu bestimmen lieferte zwei Ergebnisse, aus denen der physikalisch sinnvolle mittels der bestimmten Totzeit aus der Intervallverteilung gewählt werden konnte. Die Methode scheint ziemlich genau zu sein.
 
-Die Totzeit mithilfe der Zwei--Präperate--Methode zu bestimmen ist rechnerisch aufwendig, allerdings gut machbar. Allerdings sind die manuell errechneten Fehler sehr hoch, bei mindestens $50\,\%$ und bis zu ca. $370\,\%$. Auch wenn man die Fehler direkt von einer Software berechnen kann, sind die relativen Fehler $\tau_1=1\mathrm{\,ms}-6\mathrm{\,ms}$ sehr hoch. Bei $\tau_2>18\mathrm{\,ms}$ dagegen sind die Ungenauigkeiten deutlich geringer.
+Die $\chi^2$--Tests begründen eine Ablehnung aller drei getätigten Hypothesen. Allerdings sind sie dennoch aussagekräftig. Nur die Hypothese, die Präparatsstärke von $\ce{^{137}Cs}$ bleibe im Zeitraum von Minuten konstant, kann durch die Tests unterstützt werden. Bei dem $\chi^2$--Test nach Pearson wird diese These eindeutig bekräftigt.
 
-Ein weiteres Problem liefert der Umstand, dass es zwei rechnerisch mögliche Totzeiten gibt. Allerdings kann es physikalisch nur eine Totzeit geben, da diese eine Eigenschaft des Detektors beschreibt. Daher sollte die Totzeit auch auf eine andere Methode bestimmt werden, um die richtige Totzeit finden. Dafür bietet sich die Analyse einer Invervallverteilung der Messwerte an.
+Hierbei kann der gemessene Mittelwert der Messwerte als konstanter Wert angenommen werden. Dieser ist allerdings durch die Totzeit um ca. $10\,\%$ kleiner als der tatsächliche Mittelwert.
 
-Die $\chi^2$--Tests begründen eine Ablehnung aller drei getätigten Hypothesen. Allerdings sind sie dennoch aussagekräftig: Nur die Möglichkeit, dass Präperatsstärke von $\ce{^{137}Cs}$ im Zeitraum von Minuten konstant bleibt, kann durch die Tests unterstützt werden. Bei dem $\chi^2$--Test nach Pearson wird diese These eindeutig bekräftigt.
-
-Zuletzt wurde die Halbwertszeit einer Probe ermittelt, die zu Beginn die selbe Präperatsstärke wie unsere Probe hat, bei der dagegen ein linearer Abfall zu beobachten wäre. Um den in der dritten Hypothese beschriebene Steigung zu erhalten, ist eine Halbwertszeit von ca. $1.5\mathrm{\,h}-2\mathrm{\,h}$ benötigt.
+Zuletzt wurde die Halbwertszeit einer fiktiven Probe ermittelt. Diese Probe soll zu Beginn dieselbe Präparatsstärke wie unsere Probe haben, allerdings soll ein linearer Abfall zu beobachten sein. Eine Halbwertszeit von ca. $1.5\mathrm{\,h}-2\mathrm{\,h}$ notwendig, den in der dritten Hypothese beschriebene Steigung zu erhalten.
 
 \clearpage
 \hypertarget{literatur}{\section{Literaturverzeichnis}\label{literatur}}
