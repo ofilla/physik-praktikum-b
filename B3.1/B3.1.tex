@@ -624,11 +624,15 @@ Bei der gemeinsamen Messung der Proben $A$ und $B$ bestätigt sich außerdem die
 
 \hypertarget{gauuxdfverteilung}{%
 \subsection{Gaußverteilung}\label{gauuxdfverteilung}}
-Für größere Mittelwerte ist der Vergleich mit der Gaußverteilung sinnvoll. Dazu werden die Messewerte für Zeitintervalle von $5 \mathrm{\,s}$ zusammengefasst.
+Für größere Mittelwerte ist der Vergleich mit der Gaußverteilung sinnvoll. Dazu werden die Messewerte für Zeitintervalle von $\Delta t = 5 \mathrm{\,s}$ zusammengefasst.
 
-Weiterhin wird ein sogenanntes \textit{Binning} von $8$ verwendet. Dies bedeutet, es werden $8$ benachbarte Balken zu einem zusammengefasst. Der erste Balken gibt also demnach an, wie oft innerhalb von $5 \mathrm{\, s}$ zwischen $0$ und $7$ Zerfälle detektiert wurden. Dies ist in Abbildung \ref{fig:gauss single} dargestellt.
+Weiterhin wird ein sogenanntes \textit{Binning} von $n = 8$ verwendet. Dies bedeutet, es werden $n$ benachbarte Balken zu einem zusammengefasst. Der erste Balken gibt also demnach an, wie oft innerhalb von $5 \mathrm{\, s}$ zwischen $0$ und $7$ Zerfällen detektiert wurden.
 
-Dazu ist jeweils die theoretische Gaußkurve eingezeichnet, die sich völlig aus den gemessenen Werten ergibt. Der Mittelwert $m$ der $n$ Messungen wird aus der gemessenen Zählrate $z^\prime$ gebildet, die in Tabelle \ref{table:zählraten gauss} dargestellt sind. $F$ ist ein Normierungsfaktor, der sich aus der Summe der Höhen aller Balken ergibt.
+Dies ist in Abbildung \ref{fig:gauss single} dargestellt. Zudem ist jeweils die theoretische Gaußkurve eingezeichnet, die sich aus den gemessenen Werten ergibt.
+
+Die Mittelwerte $m$ der Messungen werden aus den Zählraten $z^\prime$ gebildet, die in Tabelle \ref{table:zählraten gauss} dargestellt sind. Diese wiederum lassen sich relativ einfach aus der Darstellung der Messwerte aus Abschnitt \ref{poissonverteilung} bestimmen.
+
+Die Summe aller Balken bildet die gesamte Anzahl der gemessenen Zerfälle. Durch die Dauer der Messung $T=45 \mathrm{\, min}$ geteilt entspricht dies der gemessenen Zählrate $z^\prime$. $F$ ist ein Normierungsfaktor, der die beschriebene Anzahl an Ereignissen beschreibt.
 
 Die Messwerte sowie die Mittelwerte der Gaußkurven sind in Tabelle \ref{table:zählraten gauss} angegeben.
 
@@ -639,16 +643,15 @@ Die Messwerte sowie die Mittelwerte der Gaußkurven sind in Tabelle \ref{table:z
 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{c|c|c|c|c}
+	\begin{tabular}{c|c|c|c}
 		Probe
 			& Spannung $[\mathrm V]$
-			& Zerfälle $[(300 \mathrm{\, s})^{-1}]$
-			& Zählrate $z^\prime$ $[\mathrm{ms^{-1}}]$ &
-			Mittelwert $m$ $[\mathrm{ms^{-1}}]$\\
+			& Zählrate $z^\prime$ $[\mathrm{s^{-1}}]$ &
+			Mittelwert $m$ \\
 		\hline
-		$A$ & $500$ & $11044$ & $36.80$ & $23.01$ \\
-		$A$ & $600$ & $12917$ & $43.06$ & $26.90$ \\
-		$A+B$ & $500$ & $20300$ & $67.70$ & $42.29$ \\
+		$A$ & $500$ & $34.64$ & $21.65$ \\
+		$A$ & $600$ & $42.23$ & $26.39$ \\
+		$A+B$ & $500$ & $66.63$ & $41.64$ \\
 	\end{tabular}
 	\caption{Zählraten der Quellen bei unterschiedlichen Spannungen}
 	\label{table:zählraten gauss}
@@ -680,11 +683,9 @@ Die Messwerte sowie die Mittelwerte der Gaußkurven sind in Tabelle \ref{table:z
 \end{figure}
 
 \noindent
-Alle Gauß--Verteilungen passen gut zu den Messungen. Bei der $500\mathrm{\,V}$--Messung von Probe $A$ ist die Gauß--Kurve etwas weiter rechts als die Messwerte. Dies ist durch die Verschiebung des Mittelwerts durch die Totzeit begründet.
+Alle Gauß--Verteilungen passen gut zu den Messungen. Es gibt allerdings leichte Abweichungen.
 
-Bei der anderen Messung von Probe $A$ ist der Peak der Kurve ein wenig zu höher, bei der gemeinsamen Messung der Proben $A$ und $B$ ist dies noch stärker der Fall. Zudem kann man bei letzterem Vergleich sehen, dass die gemessene Verteilung schmaler ist als die Gauß--Verteilung. Beides kann wiederum durch die Totzeit erklärt werden. Diese verringert anscheinend nicht nur die Position des Mittelwerts, sondern auch die Standardabweichung der Messung.
-
-Bei der Poisson--Verteilung ist dies einfach zu begründen.\footnote{Vergleiche Abschnitt \ref{Totzeit}} Es lässt sich vermuten, dass die Totzeit bei der Gauß--Verteilung ähnlich wie bei der Poisson--Verteilung zutrifft.
+Bei der $600 \mathrm{\, V}$ Messung von Probe $A$ ist der Peak der Messkurve ein wenig höher als die theoretische Kurve. Bei der gemeinsamen Messung der Proben $A$ und $B$ ist dies noch stärker sichtbar. Weiterhin ist die gemessene Verteilung schmaler als die Gauß--Verteilung. Beides kann durch die Totzeit erklärt werden. Diese verringert die Standardabweichung der Messung, so wie es auch bei der Poisson--Verteilung geschieht.
 
 \hypertarget{intervallverteilung}{%
 \subsection{Intervallverteilung}\label{intervallverteilung}}
