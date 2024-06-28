@@ -92,7 +92,7 @@ Außerdem sollen aus den Messergebnissen Poisson--, Gauß-- und Intervall--Verte
 \hypertarget{Radioaktiver Zerfall}{\subsection{Radioaktiver Zerfall}\label{Radioaktiver Zerfall}}
 Bei radioaktivem Zerfall wandelt sich ein Atomkern in einen anderen Atomkern um, indem Teilchen ausgestoßen werden.
 
-Es wird zwischen $(\alpha)$--, $\beta$--und $\gamma$--Zerfall unterschieden. Der Energiegewinn durch den Zerfall wird durch den $Q$--Wert beschrieben und kann durch die Weizsäcker Massenformel ermittelt werden.
+Es wird zwischen $\alpha$--, $\beta$--und $\gamma$--Zerfall unterschieden. Der Energiegewinn durch den Zerfall wird durch den $Q$--Wert beschrieben und kann durch die Weizsäcker Massenformel ermittelt werden.
 
 \hypertarget{Halbwertszeit}{\subsubsection{Halbwertszeit}\label{Halbwertszeit}}
 Die Halbwertszeit $T_{1/2}$ ist die Zeit, in der die Hälfte einer Anzahl von Kernen oder Elementarteilchen eines Stoffes zerfällt. Sie ist eine charakteristische Größe für radioaktive Zerfälle, die unabhängig von der aktuell vorhandenen Substanzmenge ist. \cite{Halbwertszeit}
@@ -112,7 +112,7 @@ Das in diesem Versuch verwendete $\ce{^{137}Cs}$ hat eine Halbwertszeit von $T_{
 \end{eqnarray}
 
 \hypertarget{Herleitung Zerfallswahrscheinlichkeit}{\subsubsection{Herleitung der Zerfallswahrscheinlichkeit}\label{Herleitung Zerfallswahrscheinlichkeit}}
-Ein instabiler Kern mit einer Halbwertszeit $T_{1/2}$ zerfällt mit einer Wahrscheinlichkeit $\omega$ innerhalb einer Zeitspanne $\Delta t$. Falls diese Zeitspanne $\Delta t$ klein gegen $T_{1/2}$ ist, lässt $\omega$ linear annähern. Die Gegenwahrscheinlichkeit $(1-\omega)$ beschreibt demnach den Fall, dass der Kern nicht zerfällt.
+Ein instabiler Kern mit einer Halbwertszeit $T_{1/2}$ zerfällt mit einer Wahrscheinlichkeit $\omega$ innerhalb einer Zeitspanne $\Delta t$. Falls diese Zeitspanne $\Delta t$ klein gegen die Halbwertszeit $T_{1/2}$ ist, lässt sich $\omega$ linear annähern. Die Gegenwahrscheinlichkeit $(1-\omega)$ beschreibt demnach den Fall, dass der Kern nicht zerfällt.
 
 \begin{eqnarray}
 	\omega &=& \alpha \Delta t \label{eq:Zerfallswkt linear} \\
@@ -120,28 +120,26 @@ Ein instabiler Kern mit einer Halbwertszeit $T_{1/2}$ zerfällt mit einer Wahrsc
 \end{eqnarray}
 
 \noindent
-Nun sollen größere Zeitspannen $t$ betrachtet werden. Dazu wird $t$ so in $k$ gleich große Teilzeitspannen unterteilt, dass jede Teilzeitspanne $t_i$ klein genug ist, um linear angenähert zu werden. Dann kann die Wahrscheinlichkeit $(1 - \omega_i)$ dafür ermittelt werden, dass in der Teilzeitspanne $t_i$ kein Zerfall stattfindet \eqref{eq:t_i kein zerfall}.
+Nun sollen größere Zeitspannen $t$ betrachtet werden. Dazu wird $t$ in $k$ gleich große Teilzeitspannen unterteilt, sodass jede Teilzeitspanne $t_i$ klein genug ist, um linear angenähert zu werden. Dann kann die Wahrscheinlichkeit $(1 - \omega_i)$ dafür ermittelt werden, dass in der Teilzeitspanne $t_i$ kein Zerfall stattfindet.
 
-Daraus kann die Wahrscheinlichkeit $(1 - \omega)$ für den Erhalt des Kerns nach der Zeit $t$ ermittelt werden \eqref{eq:t kein zerfall}.
+Daraus kann die Wahrscheinlichkeit $(1 - \omega)$ für den Erhalt des Kerns nach der Zeit $t$ ermittelt werden.
 
 \begin{eqnarray}
-	1 - \omega_i &=& \left(1 - \alpha \frac{t}{k}\right) \label{eq:t_i kein zerfall} \\
-	1 - \omega &=& \left(1 - \alpha \frac{t}{k} \right)^k \label{eq:t kein zerfall}
+	1 - \omega_i &=& \left(1 - \alpha \frac{t}{k}\right) \\
+	1 - \omega &=& \left(1 - \alpha \frac{t}{k} \right)^k
 \end{eqnarray}
 
 \noindent
-Um ein exaktes Ergebnis zu erzielen, müssen die Teilzeitabschnitte infinitesimal klein sein. Damit wird $k$ unendlich groß. Dadurch kann die Wahrscheinlichkeit $(1-\omega)$ für den Erhalt des Kerns durch eine Exponentialfunktion beschrieben werden.
-
-Ensprechend kann die Wahrscheinlichkeit $\omega$ für einen Zerfall innerhalb der Zeitspanne $t$ beschrieben werden.
+Die Teilzeitabschnitte infinitesimal klein sein, um ein exaktes Ergebnis zu liefern. Damit wird $k$ unendlich groß. Dadurch kann die Wahrscheinlichkeit $(1-\omega)$ für den Erhalt des Kerns durch eine Exponentialfunktion beschrieben werden. Entsprechend kann die Wahrscheinlichkeit $\omega$ für einen Zerfall innerhalb der Zeitspanne $t$ beschrieben werden.
 
 \begin{eqnarray}
 	1 - \omega &=& \lim_{k \rightarrow \infty} \left(1 - \alpha \frac{t}{k} \right)^k \\
-		&=& e^{- \alpha t} \\
+	&=& e^{- \alpha t} \\
 	\omega &=& 1 - e^{-\alpha t}
 \end{eqnarray}
 
 \noindent
-Die Zerfallswahrscheinlichkeit $\alpha$ lässt sich nun aus der Halbwertszeit ermitteln.
+Die Zerfallswahrscheinlichkeit $\alpha$ lässt sich damit aus der Halbwertszeit ermitteln.
 
 \begin{eqnarray}
 	\omega(T_{1/2}) &=& \frac{1}{2} \\
@@ -221,7 +219,7 @@ Die \emph{Poissonverteilung} beschreibt Reihen von Zufallsvariablen, die unabhä
 \end{eqnarray}
 
 \noindent
-Die Poissonverteilung $P_\lambda(n)$ folgt als Grenzfall aus der Binomialverteilung $P(N, n, p)$ mit infinitesimal kleinen Schrittgrößen $(p\rightarrow 0)$ und unendlich vielen Schritten $(N\rightarrow 0)$. Dabei bildet $\lambda\equiv Np$ eine Konstante. Die Poissonverteilung ist als Näherung für die Binomialverteilung zu verwenden, falls folgende Bedingung erfüllt ist.
+Die Poissonverteilung $P_\lambda(n)$ folgt als Grenzfall aus der Binomialverteilung $P(N, n, p)$ mit infinitesimal kleinen Schrittgrößen $(p\rightarrow 0)$ und unendlich vielen Schritten $(N\rightarrow \infty)$. Dabei bildet $\lambda\equiv Np$ eine Konstante. Die Poissonverteilung ist als Näherung für die Binomialverteilung zu verwenden, falls folgende Bedingung erfüllt ist.
 
 \begin{eqnarray}
 	P(n, \lambda)  &=& \lim_{N \rightarrow \infty \atop p\rightarrow 0} P(N, n, p) \\
@@ -274,39 +272,28 @@ Damit gibt die kumulative Verteilungsfunktion $\int_{t_0}^{t_1} P_n \,\mathrm dt
 
 Somit gibt die Verteilungsfunktion für $n=0$ die Wahrscheinlichkeit an, dass die Zeit $t$ zwischen zwei aufeinanderfolgenden Zerfällen innerhalb des Intervalls $[t_0, t_1]$ liegt.
 
-\hypertarget{Herleitung Intervallverteilung}{\subsection{Herleitung}\label{Herleitung Intervallverteilung}}
-Ein instabiler Kern mit einer Halbwertszeit $T_{1/2}$ zerfällt mit einer Wahrscheinlichkeit $\omega$ innerhalb einer Zeitspanne $\Delta t$. Falls diese Zeitspanne $\Delta t$ klein gegen die Halbwertszeit $T_{1/2}$ ist, lässt sich $\omega$ linear annähern. Die Gegenwahrscheinlichkeit $(1-\omega)$ beschreibt demnach den Fall, dass der Kern nicht zerfällt.
+\hypertarget{Herleitung Intervallverteilung}{\subsubsection{Herleitung der Wahrscheinlichkeitsdichte}\label{Herleitung Intervallverteilung}}
+Nun soll die Wahrscheinlichkeitsdichte $P_n$ der Intervallverteilung hergeleitet werden.
+
+Hierzu wird die Wahrscheinlichkeit $W$ bestimmt, dass die Zeit zwischen zwei Zerfällen, zwischen denen genau $n$ andere Zerfälle stattfinden, den Wert $\Delta t$ annimmt. $W$ setzt sich aus dem Produkt zweier Einzelwahrscheinlichkeiten $W_1$ und $W_2$ zusammen.
+
+$W_1$ gibt die Wahrscheinlichkeit an, dass im Zeitintervall $\Delta t$ genau $n$ weitere Zerfälle stattfinden. Dies wird durch eine Poissonverteilung \eqref{eq:poisson} beschrieben, deren Erwartungswert $\lambda = a\Delta t$ beträgt und durch die Zerfallswahrscheinlichkeit $a$ beschrieben wird.
+
+$W_2$ hingegen gibt die Wahrscheinlichkeit an, dass nach der Zeit $\Delta t$ in einer sehr kurzen Zeit $\mathrm dt$ ein Zerfall stattfindet. Aufgrund der kurzen Zeitspanne kann dies linear genähert werden, wie es bei der Herleitung der Zerfallswahrscheinlichkeit in Abschnitt \ref{Herleitung Zerfallswahrscheinlichkeit}  in Gleichung \eqref{eq:Zerfallswkt linear} gemacht wurde.
 
 \begin{eqnarray}
-	\omega &=& \alpha \Delta t \label{eq:Zerfallswkt linear} \\
-	1 - \omega &=& 1 - \alpha \Delta t
+	W_1 &=& \frac{(a\Delta t)^n}{n!} \mathrm{e}^{-a\Delta t} \\
+	W_2 &=& a \,\mathrm dt \\
+	W &=& W_1 \cdot W_2 \\
+	&=& \frac{\left(a\Delta t\right)^n}{n!}  \mathrm{e}^{-a\Delta t} \cdot a \,\mathrm dt
 \end{eqnarray}
 
 \noindent
-Nun sollen größere Zeitspannen $t$ betrachtet werden. Dazu wird $t$ in $k$ gleich große Teilzeitspannen unterteilt, sodass jede Teilzeitspanne $t_i$ klein genug ist, um linear angenähert zu werden. Dann kann die Wahrscheinlichkeit $(1 - \omega_i)$ dafür ermittelt werden, dass in der Teilzeitspanne $t_i$ kein Zerfall stattfindet.
-
-Daraus kann die Wahrscheinlichkeit $(1 - \omega)$ für den Erhalt des Kerns nach der Zeit $t$ ermittelt werden.
+Da die Wahrscheinlichkeit $W$ das Integral der Wahrscheinlichkeitsdichte $P_n$ darstellt, wird $P_n$ durch differenzieren ermittelt.
 
 \begin{eqnarray}
-	1 - \omega_i &=& \left(1 - \alpha \frac{t}{k}\right) \\
-	1 - \omega &=& \left(1 - \alpha \frac{t}{k} \right)^k
-\end{eqnarray}
-
-\noindent
-Die Teilzeitabschnitte infinitesimal klein sein, um ein exaktes Ergebnis zu liefern. Damit wird $k$ unendlich groß. Dadurch kann die Wahrscheinlichkeit $(1-\omega)$ für den Erhalt des Kerns durch eine Exponentialfunktion beschrieben werden. Entsprechend kann die Wahrscheinlichkeit $\omega$ für einen Zerfall innerhalb der Zeitspanne $t$ beschrieben werden.
-
-\begin{eqnarray}
-	1 - \omega &=& \lim_{k \rightarrow \infty} \left(1 - \alpha \frac{t}{k} \right)^k \\
-		&=& e^{- \alpha t} \\
-	\omega &=& 1 - e^{-\alpha t}
-\end{eqnarray}
-
-\noindent
-Die Zerfallswahrscheinlichkeit $\alpha$ lässt sich damit aus der Halbwertszeit ermitteln.
-
-\begin{eqnarray}
-	\omega(T_{1/2}) &=& \frac{1}{2} \\
-	\Rightarrow\alpha &=& \frac{\ln{(2)}}{T_{1/2}}
+	P_n &=& \frac{\mathrm dW}{\mathrm dt} \\
+	&=& a \frac{\left(at\right)^n}{n!} e^{-at}
 \end{eqnarray}
 
 \hypertarget{statistische-tests}{%
@@ -341,6 +328,7 @@ Die Grundidee dahinter ist, einen Erwartungswert $\expval{A}$ und seine Varianz 
     \chi^2 &=& \sum_i x_i^2
 \end{eqnarray}
 
+\noindent
 Mithilfe der $\chi^2$--Verteilung kann eine Signifikanz $Y$ festgelegt werden. Damit kann ein Intervall $[\chi^2_\mathrm{min}, \chi^2_\mathrm{max}]$ durch die Verteilungsfunktion $F(x, f)$ ermittelt werden. Liegt das ermittelte $\chi^2$ in diesem Interval, so kann $H_1$ als signifikant gültig angenommen werden.
 
 \begin{eqnarray}
@@ -348,6 +336,7 @@ Mithilfe der $\chi^2$--Verteilung kann eine Signifikanz $Y$ festgelegt werden. D
     F(\chi^2_\mathrm{max}, f) &=& \frac{Y}{2}
 \end{eqnarray}
 
+\noindent
 Oft wird die Signifikanz von $Y=5\,\%$ gefordert, wodurch das Gültigkeitsintervall durch folgende Gleichungen bestimmt wird.
 
 \begin{eqnarray}
@@ -355,17 +344,16 @@ Oft wird die Signifikanz von $Y=5\,\%$ gefordert, wodurch das Gültigkeitsinterv
     F(\chi^2_\mathrm{max}, f) &=& 0.025 \label{eq:ChiMaxFormula}
 \end{eqnarray}
 
+\noindent
 Falls $\chi^2<\chi^2_\mathrm{min}$ das Ergebnis des Tests ist, sind die Daten zu gut an die These angepasst. Dies kann beispielsweise durch Overfitting entstehen.
 
-\hypertarget{pearsons-chi2test}{%
-\paragraph{\texorpdfstring{Pearsons
-$\chi^2$--Test}{Pearsons \textbackslash chi\^{}2--Test}}\label{pearsons-chi2test}}
+\hypertarget{pearsons-chi2test}{\subsubsection{Pearsons $\chi^2$--Test}\label{pearsons-chi2test}}
 
 Eine Variante des $\chi^2$--Tests betrachtet nur ein Ende der Gauß--Verteilung. Hierbei wird die Signifikanz $Y$ verwendet, um ein maximal gültiges $\chi_\mathrm{max}^2$ zu bestimmen, dabei wird auf einen minimalen Wert verzichtet. \cite{McHugh} Damit kann eine Hypothese nur dann abgelehnt werden, wenn $\chi^2$ zu groß ist, ein zu kleines $\chi^2$ ist dabei nicht betrachtet. Auch hier wird oft eine Signifikanz von $5\,\%$ verwendet.
 
 \begin{eqnarray}
     F(\chi^2_\mathrm{max}, f) &=& Y \\
-    F(\chi^2_\mathrm{max}, f) &=& 0.05 \label{eq:ChiMaxPearson} \\
+    F(\chi^2_\mathrm{max}, f) &=& 0.05 \label{eq:ChiMaxPearson}
 \end{eqnarray}
 
 \hypertarget{die-chi2verteilung}{%
@@ -384,6 +372,7 @@ Sei $A$ standardnormalverteilt\footnote{Diese Annahme ist bei ausreichend vielen
     \Gamma(x) &=& \int_0^\infty t^{x-1}\cdot \mathrm e^t \,\mathrm dt
 \end{eqnarray}
 
+\noindent
 Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution function}}) $F(x, f)$ ist dabei komplex und hat den Erwartungswert $\expval{\chi_f^2}=f$ und die Varianz $\sigma_{\chi^2}=2f$.
 
 \begin{align}
@@ -405,7 +394,7 @@ Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution function}}) 
 \hypertarget{versuchsidee}{%
 \subsection{Versuchsidee}\label{versuchsidee}}
 
-In diesem Versuch wird $\ce{^{137}Cs}$ als radioaktive Probe verwendet, das eine Halbwertszeit $t_\frac{1}{2}\approx 30\,\mathrm a$ hat.
+In diesem Versuch wird $\ce{^{137}Cs}$ als radioaktive Probe verwendet, das eine Halbwertszeit $T_{1/2}\approx 30\,\mathrm a$ hat.
 
 Damit soll die folgende Hypothese getestet, die Präparatstärke sei konstant und habe den Wert $\bar n$. Hierbei ist $\bar n$ der Mittelwert von vielen Einzelmessungen $n_i$ über eine kurze Zeit von $\Delta t=20\,\mathrm s$, der durch Gleichung $\eqref{mittlereRate}$ bestimmt wird. All diese $N$ Messungen werden in einem Zeitraum von wenigen Stunden absolviert.
 
@@ -438,7 +427,7 @@ Die Zeit, während der die relativ langsame Wolke aus ionisierten Gasteilchen na
 
 Um eine Mehrfachentladung von Gasteilchen während der Totzeit an der Zylinderwand zu vermeiden wird ein starker Widerstand mit ca. $10^8\,\Omega$ zwischen Hochspannungsversorgung und Anode geschaltet. Dadurch ist die Hochspannung nach einer Entladung nicht ausreichend für eine weitere Entladung.
 
-Alle Elektronen, die an der Anode ankommen, erzeugen alle einen Stromimpuls mit derselben Amplitude, aus diesem Grund ist eine Energiemessung nicht möglich. Andererseits ist die Empfindlichkeit des Detektors relativ hoch, denn schon ein einzelnes Elektron kann eine Gasentladung hervorrufen und gemessen werden. Die Höhe der Stromimpulse lässt sich auch ohne komplizierte Verstärker messen.
+Alle Elektronen, die an der Anode ankommen, erzeugen einen Stromimpuls mit derselben Amplitude, aus diesem Grund ist eine Energiemessung nicht möglich. Andererseits ist die Empfindlichkeit des Detektors relativ hoch, denn schon ein einzelnes Elektron kann eine Gasentladung hervorrufen und gemessen werden. Die Höhe der Stromimpulse lässt sich auch ohne komplizierte Verstärker messen.
 
 \subsubsection{Totzeit}
 \label{Totzeit}
@@ -496,6 +485,9 @@ Falls der Erwartungswert $m$ konstant ist, kann man weitere Schlussfolgerungen z
     \chi^2_\mathrm{korr} &=&
         \frac{1}{1 - \frac{m}{\Delta t}\tau} \cdot \chi^2 \label{eq:Chi^2 korr}
 \end{eqnarray}
+
+\noindent
+In diesem Experiment wird die gemessene Zählrate daher immer kleiner als die tatsächliche Rate der Ereignisse sein. Für die Hypothesen wir auch der unkorrigierte $\chi^2$--Wert zu klein sein, was zu einer fälschlichen Ablehnung einer Hypothese führen kann. Daher sind Totzeitkorrekturen notwendig.
 
 \subsubsection{Zwei--Präparate--Methode}
 Die Zwei--Präparate--Methode wird verwendet, um die Totzeit zu messen. Man misst die Zählrate von zwei verschiedenen Präparaten $z^\prime_{1/2}$ jeweils einzeln und dann von beiden zusammen $z^\prime_{12}$. Zusätzlich wird die Untergrundzählrate $z^\prime_0$ ohne Präparate gemessen.
@@ -705,7 +697,7 @@ Aus dem Fit mittels des \code{Julia}--Pakets \code{LsqFit} \cite{Julia:LsqFit} w
 
 \begin{eqnarray}
 	P(t) &=& T \cdot a^2 \cdot e^{-at} \\
-	a &=& (4.321 \pm 0.013) \cdot 10^{-2} \mathrm{\,ms^{-1}}
+	a &=& (43.21 \pm 0.13) \mathrm{\,s^{-1}}
 \end{eqnarray}
 
 \noindent
@@ -722,11 +714,12 @@ Aus dem so bestimmten Fit--Parameter $a$ lässt sich nun mittels Gleichung \eqre
 
 \begin{eqnarray}
 	\tau &=& \frac{1}{a'} - \frac{1}{a} \\
-	\Delta \tau &=& \frac{\Delta a}{a^2}
+	\Delta \tau &=& \frac{\Delta a}{a^2} \\
+	\tau &=& (5.72 \pm 0.07) \mathrm{\, ms} \label{eq:Totzeit Ergebnis}
 \end{eqnarray}
 
 \noindent
-Dabei ist $a' = 36.80 \cdot 10^{-2} \mathrm{\,ms^{-1}}$ die für diese Quelle gemessene Zählrate aus Tabelle \ref{table:zählraten gauss}. Dadurch ergibt sich für die Totzeit $\tau = (4.02 \pm 0.07) \mathrm{\, ms}$.
+Dabei ist $a^\prime = 34.64 \mathrm{\,s^{-1}}$ die für diese Quelle gemessene Zählrate aus Tabelle \ref{table:zählraten gauss}. Dadurch ergibt sich für die Totzeit $\tau \approx 5.7 \mathrm{\, ms}$ \eqref{eq:Totzeit Ergebnis}.
 
 Für die anderen beiden gemessenen Intervall--Verteilungen für $n = 1,2$ ist ein Fit--Versuch mit der theoretischen Kurve nicht sinnvoll. Dies liegt daran, dass die Totzeit bei $n = 1,2$ nicht nur im vordersten Teil der Verteilung sichtbar ist, wie bei $n = 0$. Bei ihnen verändert die Totzeit hingegen die ganze Verteilung, wodurch kein sinnvoll zu fittender Bereich mehr übrig bleibt. Ursächlich ist der Einfluss der Totzeit auf alle Detektionen, der für einzelne Messungen nicht bestimmt werden kann. Dadurch verändert die Totzeit die Intervallverteilung der Messwerte variabel.
 
@@ -774,7 +767,9 @@ Aus diesen Zählraten $z_i$ kann die Totzeit $\tau_{1,2}$ nach Gleichung \eqref{
 \end{table}
 
 \noindent
-Durch die quadratische Gleichung erhält man für die Totzeit zwei verschiedenen Lösungen. Allerdings ist eine Lösung rein mathematisch bedingt und hat keine physikalische Aussage. Durch die Totzeit $\tau\approx 3.9$ aus Abschnitt \ref{intervallverteilung} ist kann man bestimmen, welche der mathematischen Lösungen physikalisch korrekt ist. $\tau _1$ stimmt innerhalb der Unsicherheiten mit $\tau$ überein und kann daher als korrekt betrachtet werden. Dagegen muss $\tau _2$ verworfen werden. Zur Bestimmung der Totzeit ist diese Methode genauer, da sie unabhängig von einem Fitting--Parameter ist. Zudem lässt sich der Fehler ziemlich genau ermitteln.
+Durch die quadratische Gleichung erhält man für die Totzeit zwei verschiedenen Lösungen. Allerdings ist eine Lösung rein mathematisch bedingt und hat keine physikalische Aussage. Durch die Totzeit $\tau\approx 5.7 \mathrm{\,ms}$ \eqref{eq:Totzeit Ergebnis} kann man bestimmen, welche der mathematischen Lösungen physikalisch korrekt ist.
+
+Nur $\tau_1$ liegt in der Größenordnung von $\tau$ und kann daher als korrekt betrachtet werden. Dagegen wird $\tau _2$ verworfen. Zur Bestimmung der Totzeit ist diese Methode genauer, da sie unabhängig von einem Fitting--Parameter ist. Zudem lässt sich der Fehler ziemlich genau ermitteln.
 
 Die Totzeit scheint mit steigender Spannung kleiner zu werden. Dabei beschleunigt das elektrische Feld um die Anode die freien Elektronen stärker. Daher bewegt sich die Wolke aus ionisierten Gasteilchen schneller und die Zeitspanne zwischen zwei registrierten Signalen wird verringert. Somit kann sich das Füllgas auch schneller erholen und das Zählrohr ist somit früher messbereit.
 
@@ -786,7 +781,7 @@ Es wurden die ersten $51$ Zeitintervalle gewählt, weil die $\chi^2$--Grenzen f�
 
 \subsubsection{Hypothesen}
 \label{Hypothesen}
-Es sollen drei verschiedene Hypothesen $H_i$ bewertet werden. In allen Hypothesen wird ein ``Mittelwert'' verwendet. Dieser gemessene Mittelwert $m^\prime$ wird aus den $51$ Messwerten gebildet. Zudem kann dieser totzeitkorrigierte Mittelwert $m$ nach Gleichung \ref{eq:Totzeitkorrigiert EW} berechnet werden. Dieser ist ca. $9\,\%$ größer als $m^\prime$. Als Totzeit wurde der Mittelwert der in Abschnitt \ref{Totzeit bestimmen} bestimmten $\tau_1$ verwendet.
+Es sollen drei verschiedene Hypothesen $H_i$ bewertet werden. In allen Hypothesen wird ein ``Mittelwert'' verwendet. Dieser gemessene Mittelwert $m^\prime$ wird aus den $51$ Messwerten gebildet. Zudem kann dieser totzeitkorrigierte Mittelwert $m$ nach Gleichung \eqref{eq:Totzeitkorrigiert EW} berechnet werden. Dieser ist ca. $9\,\%$ größer als $m^\prime$. Als Totzeit wurde der Mittelwert der in Abschnitt \ref{Totzeit bestimmen} bestimmten $\tau_1$ verwendet.
 
 \begin{eqnarray}
 	m^\prime &\approx& 654 \\
