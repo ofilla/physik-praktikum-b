@@ -214,18 +214,18 @@ Die Auswahlregeln für Energieübergänge bestimmen, ob ein Übergang von einem 
 Für diesen Versuch spielen magnetische Dipolübergänge die zentrale Rolle. Die Auswahlregel lautet hierbei $\Delta m_j = \pm 1$.
 
 \subsubsection{Besetzungszahlen und Boltzmannfaktor}
-Die Besetzungszahl gibt die Anzahl $N_i$ der Teilchen in einem Energiezustand $E_i$ im thermischen Gleichgewicht an. Sie wird mithilfe des Boltzmann--Faktors beschrieben, der $E_i$ in Relation zur thermischen Energie $k_bT$ setzt.
+Die Besetzungszahl gibt die Anzahl $N_i$ der Teilchen in einem Energiezustand $E_i$ im thermischen Gleichgewicht an. Sie wird mithilfe des Boltzmann--Faktors beschrieben, der $E_i$ in Relation zur thermischen Energie $k_BT$ setzt.
 
 \begin{eqnarray}
 	N_i &=& \exp(-\frac{E_i}{k_BT})
 \end{eqnarray}
 
 \noindent
-Das Besetzungsverhältnis zweier Zustände durch ihre Energiedifferenz $\Delta E$ bestimmt. % was ist g_j?
+Das Besetzungsverhältnis zweier Zustände ist durch seine Energiedifferenz $\Delta E$ bestimmt.
 
 \begin{eqnarray}
 	\frac{N_2}{N_1} &=& \exp(-\frac{\Delta E}{k_BT}) \\
-		&=& \exp(-\frac{g_j\mu _B B}{k_BT})
+		&=& \exp(-\frac{g\mu _B B}{k_BT})
 \end{eqnarray}
 
 \hypertarget{resonanz}{\subsubsection{Resonanz}\label{resonanz}}
@@ -315,7 +315,7 @@ Mithilfe der \emph{Wheatstoneformel} kann ein unbekannter Widerstand $R_x$ aus d
 \hypertarget{Versuchsaufbau}{\subsection{Versuchsaufbau}\label{Versuchsaufbau}}
 Der in Abbildung \ref{fig:aufbau} dargestellte Versuchsaufbau besteht aus einem Resonator mit einer Brückenschaltung, welche mit hochfrequenter Wechselspannung von $146 \mathrm{\, MHz}$ betrieben wird.
 
-Der eine Zweig dieser Brückenschaltung enthält einen variablen Widerstand, der andere einen abstimmbaren Schwingkreis. Der wiederum besteht aus einer Spule, in welcher sich die Probensubstanz befindet. Die Spule ist von zwei Helmholtzspulen umgeben umgeben.
+Der eine Zweig dieser Brückenschaltung enthält einen variablen Widerstand, der andere einen abstimmbaren Schwingkreis. Der wiederum besteht aus einer Spule, in welcher sich die Probensubstanz befindet. Die Spule ist von zwei Helmholtzspulen umgeben.
 
 Bei richtiger Einstellung ist die Impedanz beider Zweige gleich und es liegt keine Spannung am Diagonalzweig der Wheatstonebrücke an.
 
@@ -337,6 +337,8 @@ Falls die Gleichspannung an den Helmholtzspulen mit einer kleinen Wechselspannun
 Der Versuch besteht aus drei Teilen.
 
 Im ersten Teil soll die Resonanzstromstärke $I_r$ ermittelt werden, um den Landé--Faktor eines Elektrons zu bestimmen, im zweiten die Halbwertsbreite des Signals. Diese beiden Versuchsteile werden gemeinsam ausgeführt, da sie die selbe Methodik verwenden. Weiterhin werden die Messungen jeweils fünf mal ausgeführt.
+
+Im dritten Teil sollen die Stärke und Richtung des Erdmagnetfeldes bestimmt werden.
 
 \subsection{Landé--Faktor}
 \label{durchfuxfchrung:Lande-Faktor}
@@ -408,7 +410,7 @@ Dabei wird das entsprechende Resonanzmagnetfeld $B_r$ gemessen. Der Landé--Fakt
 \end{eqnarray}
 
 \noindent
-Da das Magnetfeld der Helmholtzspulen ideal ist, wird ein Korrekturfaktor $\zeta$ verwendet. Dabei werden die Anzahl der Windungen $n_W$, der Spulenradius $r$, die magnetische Feldkonstante $\mu_0$ und die gemessene Resonanzstromstärke $I_r$ verwendet. Alle Konstanten sind in Tabelle \ref{table:konstanten} angegeben.
+Da das Magnetfeld der Helmholtzspulen nicht ideal ist, wird ein Korrekturfaktor $\zeta$ verwendet. Dabei werden die Anzahl der Windungen $n_W$, der Spulenradius $r$, die magnetische Feldkonstante $\mu_0$ und die gemessene Resonanzstromstärke $I_r$ verwendet. Alle Konstanten sind in Tabelle \ref{table:konstanten} angegeben.
 
 \begin{eqnarray}
 	B_r &=& \zeta \cdot
@@ -487,7 +489,7 @@ Insgesamt lässt sich sagen, dass das Messergebnis zumindest größenordnungsmä
 \subsection{Halbwertsbreite}
 \label{auswertung:Halbwertsbreite}
 
-Nun wird die Halbwertsbreite der Flussdichte $B_\mathrm{FWHM}$ aus der des Resonanzstroms $I_{r,\mathrm{FWHM}}$ ermittelt. Dafür wurden der Resonanzstrom $I_R$ und die Position der halben Halbwertsbreite $I_{r,\mathrm{FWHM}/2}$ gemessen, wie in Abschnitt \ref{durchfuxfchrung:Halbwertsbreite} beschrieben.
+Nun wird die Halbwertsbreite der Flussdichte $B_\mathrm{FWHM}$ aus der des Resonanzstroms $I_{r,\mathrm{FWHM}}$ ermittelt. Dafür wurden der Resonanzstrom $I_r$ und die Position der halben Halbwertsbreite $I_{r,\mathrm{FWHM}/2}$ gemessen, wie in Abschnitt \ref{durchfuxfchrung:Halbwertsbreite} beschrieben.
 
 Der Fehler folgt aus Gauß'scher Fehlerfortpflanzung. Er kann vereinfacht werden, da der Fehler für alle Stromablesungen gleich ist. Die Messwerte sowie berechneten Halbwertsbreiten sind in Tabelle \ref{table:halbwertsbreiten} angegeben.
 
@@ -569,7 +571,7 @@ Die für alle vier Richtungen gemessenen Resonanzstromstärken $I_r$ sind in Tab
 	\label{table:erdmagnetfeldMessdaten}
 \end{table}
 
-Analog zu Abschnitt \ref{durchfuxfchrung:Halbwertsbreite} können die Resonanzstromstärken $\bar{I}_r$ und die entsprechenden magnetischen Flussdichten $B$ mittels der Gleichungen \eqref{eq:fwhmMittel}, \eqref{eq:fwhmMittelErr} und \eqref{eq:b_fwhm} ermittelt werden. Die Ergebnisse sind der Tabelle \ref{table:resonanzstromstärkeMittel} zu entnehmen.
+Analog zu Abschnitt \ref{durchfuxfchrung:Halbwertsbreite} können die Resonanzstromstärken $\bar{I}_r$ und die entsprechenden magnetischen Flussdichten $B$ mittels der Gleichungen \eqref{eq:fwhmMittel}, \eqref{eq:fwhmMittelErr} und \eqref{eq:b_fwhm} ermittelt werden. Die Ergebnisse sind der Tabelle \ref{table:Erdmagnetfeld Ergebnisse} zu entnehmen.
 
 \begin{table}[h!]
 	\centering
@@ -583,15 +585,15 @@ Analog zu Abschnitt \ref{durchfuxfchrung:Halbwertsbreite} können die Resonanzst
 	\end{tabular}
 	\caption{mittlere Resonanzfrequenzen $\bar I_r$ und zugehörige Flussdichten $B$ bei verschiedenen Orientierungen;
 		``Knöpfe~vorne"' entspricht $0\,^\circ$, alle Rotationen erfolgten um $90\,^\circ$}
-	\label{tab:Erdmagnetfeld Ergebnisse}
+	\label{table:Erdmagnetfeld Ergebnisse}
 \end{table}
 
 
-Beim Betrachten der Werte fällt auf, dass $B_{vorne}$ und $B_{rechts}$ jeweils größer als $B_{hinten}$ und $B_{links}$ sind. Man kann sich die Felder wie in Abbildung \ref{fig:orientierungen} vorstellen, wobei die Länge der Pfeile hier nicht unbedingt mit dem Betrag der Vektoren übereinstimmt.
+Beim Betrachten der Werte fällt auf, dass $B_\mathrm{vorne}$ und $B_\mathrm{rechts}$ jeweils größer als $B_\mathrm{hinten}$ und $B_\mathrm{links}$ sind. Man kann sich die Felder wie in Abbildung \ref{fig:orientierungen} vorstellen, wobei die Länge der Pfeile hier nicht unbedingt mit dem Betrag der Vektoren übereinstimmt.
 
-\begin{figure}[h!]
+\begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.25]{../media/B1.5/Erdmagnetfeld.jpg}
+	\includegraphics[width=0.4\textwidth]{../media/B1.5/Erdmagnetfeld.pdf}
 	\caption{Visualisierung der verschiedenen Orientierungen}
 	\label{fig:orientierungen}
 \end{figure}
@@ -627,7 +629,7 @@ Die Hauptfehlerquelle hier bleibt bei dem schwankenden Signal. Hinzu kommt, dass
 \hypertarget{fazit}{\section{Fazit}\label{fazit}}
 Insgesamt sind die Ergebnisse dieses Versuchs nur bedingt zufriedenstellend, da sie alle deutlich von den erwarteten Werten abweichen. Dafür stimmen sie zumindest größenordnungsmäßig mit den Theoriewerten überein. Somit ist der Versuch kein kompletter Fehlschlag.
 
-Die zu identifizierende Abweichung des gemessenen Landé--Faktors vom Landé--Faktor vom theoretischen Wert ließ sich daher nicht nachweisen. Die Abweichung des gemessenen Landé--Faktors vom Literaturwert ist dafür zu groß. Dennoch stimmt der gemessene Landé--Faktor zumindest grob mit dem Literaturwert überein, wodurch dieser immerhin ungefähr nachgewiesen werden konnte.
+Die zu identifizierende Abweichung des gemessenen Landé--Faktors vom theoretischen Wert ließ sich daher nicht nachweisen, dafür ist die Abweichung zu groß. Dennoch stimmt der gemessene Landé--Faktor zumindest grob mit dem Literaturwert überein, wodurch dieser immerhin ungefähr nachgewiesen werden konnte.
 
 Auch die Bestimmung der Halbwertsbreite lieferte eine recht große Abweichung vom erwarteten Wert, doch auch hier ließ sich der Wert wenigstens ungefähr nachweisen.
 
