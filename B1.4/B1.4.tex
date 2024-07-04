@@ -124,8 +124,70 @@ Ein \emph{Farbfilter} lässt nur Licht einer bestimmten Wellenlänge hindurch. F
 
 Im Unterschied dazu lässt ein \emph{Graufilter} oder Neutraldichtefilter alle Wellenlängen in gleicher Stärke hindurch. Der Transmissionsgrad ist damit idealerweise unabhängig von der Wellenlänge. % Quelle: https://de.wikipedia.org/wiki/Neutraldichtefilter
 
-\subsubsection{Photoelektrischer Effekt}
 \subsubsection{Austrittsarbeit}
+Die Austrittsarbeit $W_A$ ist die Energiedifferenz zwischen Fermi--Niveau $E_F$ in einem Material und dem Vakuumniveau mit $E_\mathrm{pot}(\infty)=0$, das dem elektrischen Potential in unendlicher Entfernung entspricht. Da die Fermi--Niveaus materialabhängig sind, trifft dies auch auf die Austrittsarbeit zu. \cite{Demtröder}
+
+\begin{eqnarray}
+	W_A &=& E_\mathrm{pot}(\infty) - E_F \\
+	W_A &=& -E_F
+\end{eqnarray}
+
+\noindent
+Das einfachste quantenmechanische Erklärungsmodell ist der Potentialkasten, der in Abbildung \ref{fig:Austrittsarbeit} dargestellt ist.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{../media/B1.4/Austrittsarbeit_Potentialkasten.jpg}
+	\caption{Austrittsarbeit $W_a$ aus einem Potentialkasten \cite{Demtröder}}
+	\label{fig:Austrittsarbeit}
+\end{figure}
+
+\subsubsection{Kontaktspannung}
+Berühren sich zwei unterschiedliche Metalle mit verschiedenen Austrittsarbeiten, so entsteht eine Spannung an der Kontaktstelle.
+
+Diese \emph{Kontaktspannung} $U_K$ wird durch Elektronen verursacht, die von dem Metall mit der geringeren Austrittsarbeit $W_1$ in das mit der höheren Austrittsarbeit $W_2$ übergehen. Dadurch kommt es zu einem Ladungsungleichgewicht. Dieser Prozess endet in einem Gleichgewichtszustand, wenn $U_K$ der Differenz der Fermi--Niveaus $\Delta E_F$ entspricht.
+
+\begin{eqnarray}
+	\Delta E_F &=& e \cdot (\Phi _2 - \Phi _1) \\
+		&=& e \cdot U_K \\
+	\Delta E_F &=& W_2 - W_1 \\
+	\Rightarrow U_K &=& \frac{W_2 -W_1}{e}
+\end{eqnarray}
+
+\noindent
+Betrachtet man die Elektronen im Metall als Elektronengas, dann gilt die Boltzmann--Verteilung. Die Kontaktspannung lässt sich aus dem Verhältnis der Elektronenzahldichten $n_1$ und $n_2$ bestimmen. Dabei finden die Boltzmann-Konstante $k_B$, die Temperatur $T$ in Kelvin und die Elementarladung $e$ Verwendung.
+
+\begin{eqnarray}
+	U_K &=& \frac{k_B T}{e} \ln \left( \frac{n_2}{n_1} \right) \label{eq:Kontaktspannung}
+\end{eqnarray}
+
+\noindent
+Aufgrund der dichten Gase muss korrekterweise die Fermi--Verteilung verwendet werden. \cite{Gerthsen} Dies wird jedoch in diesem Versuch vernachlässigt.
+
+\subsubsection{Photoeffekt}
+Der \emph{äußere photoelektrische Effekt} beschreibt das Auslösen von Elektronen aus einer Materialoberfläche unter Bestrahlung mit elektromagnetischen Wellen. Dazu muss die Strahlung eine Grenzfrequenz $\nu_g$ aufweisen, deren Energie der Austrittsarbeit entspricht.
+
+Ein Lichtquant mit einer Frequenz $\nu$ besitzt eine Energie $h\nu$, die durch das Planck'sche Wirkungsquantum $h$ beschrieben wird. Aufgrund der Energieerhaltung erhält jedes herausgelöste Elektron eine maximale kinetische Energie $E_\mathrm{max}$.
+
+\begin{eqnarray}
+	E_\mathrm{max} &=& h\nu - W_A \\
+		&=& \frac{1}{2} m_e v^2 \\
+	h &=& 4.135 \cdot 10^{-15} \mathrm{\,eV \cdot s}
+\end{eqnarray}
+
+\noindent
+Die Grenzfrequenz $\nu_g$ kann durch die Austrittsarbeit $W_A$ bestimmt werden.
+
+\begin{eqnarray}
+	\nu_g &=& \frac{W_A}{h}
+\end{eqnarray}
+
+\noindent
+Der Photoeffekt hängt vollständig von der Frequenz ab, nicht von der Intensität der Strahlung. Bei hoher Intensität werden in einem Zeitrahmen mehr Elektronen herausgelöst. Beträgt die Frequenz weniger als die Grenzfrequenz, findet unabhängig von der Intensität kein äußerer Photoeffekt statt.
+
+Die Austrittsarbeit liegt in der Größenordnung Elektronenvolt, beispielsweise $2.1\mathrm{\,eV}$ (Barium) oder $4.91\mathrm{\,eV}$ (Nickel). \cite{Demtröder} Daher kann Licht im sichtbaren und ultravioletten Spektrum den äußeren Photoeffekt auslösen.
+
+Im \emph{inneren Photoeffekt} werden Elektronen nicht aus dem Material gelöst, sondern aus dem Valenzband in das Leitungsband angeregt. Dieser Prozess kann in Halbleitermaterialien stattfinden.
 
 \subsection{Elektrotechnik}
 \subsubsection{Funktionsweise einer Photozelle}
