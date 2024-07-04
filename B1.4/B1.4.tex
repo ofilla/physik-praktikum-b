@@ -76,16 +76,86 @@
 \hypertarget{einleitung}{%
 \section{Einleitung}\label{einleitung}}
 
+Der photoelektrische Effekt beschreibt die Auslösung von Elektronen aus einem Material, das mit Licht einer bestimmten Frequenz bestrahlt wird. Diese Elektronen haben nach dem Austritt eine kinetische Energie, die von der Frequenz des Lichts abhängt.
+
+Die Energie der Elektronen hängt jedoch nicht von der Intensität des Lichtes ab. Dadurch kann nicht jede elektromagnetische Strahlung für den Photoeffekt verwendet werden. Die Intensität bestimmt stattdessen die Anzahl der Elektronen, die in einer bestimmten Zeit ausgelöst werden und einen Photostrom bilden.
+
+Dieses Phänomen war bereits im 19. Jahrhundert beobachtet worden, konnte jedoch nicht erklärt werden. Ohne die Quantenphysik nahm man an, dass die Energie des Lichts von seiner Amplitude und Intensität abhänge, ähnlich wie bei makroskopischen Wellen. Dies stand jedoch im Widerspruch zum beobachteten Photoeffekt.
+
+\textsc{Albert Einstein} erklärte diesen Effekt im Jahr 1905 durch seine Lichtquantenhypothese. Nach dieser besteht das Licht einer Frequenz $\nu$ aus Quanten mit der Energie $h\nu$. Damit ist der fehlende Zusammenhang von Lichtintensität und kinetischer Energie der Elektronen erklärbar.
+
 \clearpage
-\hypertarget{theoretische-grundlagen}{%
-\section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
-\subsection{Elektrisches Feld und Spannung}
-\subsection{Funktionsweise einer Photozelle}
-\subsection{Stromfreie Spannungsmessung}
-\subsection{Transmissionsgrad, Farbfilter, Graufilter}
-\subsection{Austrittsarbeit}
-\subsection{Kontaktspannung}
-\subsection{Äußerer Photoeffekt, kinetische Energie}
+\hypertarget{theoretische-grundlagen}{\section{Theoretische Grundlagen}\label{theoretische-grundlagen}}
+
+\subsection{Physikalische Grundlagen}
+\subsubsection{Elektrische Felder}
+\label{Elektrische Felder}
+
+Das elektrische Feld ist ein Vektorfeld, welches jedem Punkt im Raum den Vektor der elektrischen Feldstärke $\vec{E}$ zuordnet. Diese beschreibt die Coulomb-Kraft $\vec{F}_C$, die auf eine Ladung $Q$ an diesem Ort wirkt.
+
+\begin{eqnarray}
+	\vec{E} &=& \frac{\vec{F}_C}{Q}
+\end{eqnarray}
+
+\noindent
+Feldlinien werden als Darstellungsmittel verwendet und liegen tangential an der Feldstärke $\vec{E}$. Feldlinien beginnen in positiven und enden in negativen Ladungen.
+
+\subsubsection{Spannung}
+\label{Spannung}
+Um eine elektrische Ladung von einem Ort $A$ zu einem Ort $B$ zu bewegen, muss elektrische Arbeit $W_{AB}$ aufgebracht werden. Sie hängt von der Feldstärke ab.
+
+Die \emph{elektrische Spannung} beschreibt diese Arbeit unabhängig von der zu verschiebenden Ladung $Q$. \cite{Gerthsen}
+
+\begin{eqnarray}
+	U_{AB} &=& \frac{W_{AB}}{Q}
+\end{eqnarray}
+
+\subsubsection{Transmission von Licht}
+Wie jede Welle kann auch Licht ein Medium durchdringen. Der \emph{Transmissionsgrad} $T$ eines Mediums beschreibt, welcher Anteil von einfallender Strahlung transmittiert wird. Er ist der Quotient aus der Beleuchtungsstärke vor dem Medium $I_0$ sowie hinter demselben $I$. \cite{Gerthsen}
+
+\begin{eqnarray}
+	T &=& \frac{I}{I_0}
+\end{eqnarray}
+
+\noindent
+Der Transmissionsgrad eines Mediums hängt im Allgemeinen von der betrachteten Wellenlänge ab. Es gibt verschiedene Filter, um die Strahlungsintensität zu reduzieren.
+
+Ein \emph{Farbfilter} lässt nur Licht einer bestimmten Wellenlänge hindurch. Für diese Wellenlänge beträgt der Transmissionsgrad näherungsweise $1$, für alle anderen Wellenlängen $0$. % Quelle: https://de.wikipedia.org/wiki/Farbfilter
+
+Im Unterschied dazu lässt ein \emph{Graufilter} oder Neutraldichtefilter alle Wellenlängen in gleicher Stärke hindurch. Der Transmissionsgrad ist damit idealerweise unabhängig von der Wellenlänge. % Quelle: https://de.wikipedia.org/wiki/Neutraldichtefilter
+
+\subsubsection{Photoelektrischer Effekt}
+\subsubsection{Austrittsarbeit}
+
+\subsection{Elektrotechnik}
+\subsubsection{Funktionsweise einer Photozelle}
+Eine Photozelle besteht aus einer Photokathode und einer Anode in einem Glaskolben, siehe Abbildung \ref{fig:photozelle}.
+
+Fällt Licht auf die Photokathode, so werden durch den Photoeffekt Elektronen aus der Kathode gelöst. Einige dieser sogenannten \textit{Photoelektronen} treffen auf die Anode. Dadurch entsteht ein elektrisches Feld zwischen den Elektroden.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4\textwidth]{../media/B1.4/Photozelle.jpg}
+	\caption{Darstellung einer Photozelle mit Kathode $K$ und Anode $A$ \cite{uni}}
+	\label{fig:photozelle}
+\end{figure}
+
+Die Photoelektronen können auf ihrem Weg zur Anode abgebremst werden, indem eine externe Spannung an den Elektroden angelegt wird. Hierbei muss an der Anode eine negative Spannung angelegt werden.
+
+Die \textit{Stoppspannung} $U_{\mathrm{Ph}, 0}$ ist die minimale Spannung, die alle Photoelektronen abbremst. Sie hängt von der Energie des Lichts $h\nu$ mit Frequenz $\nu$ und der Austrittsarbeit $W_A(K)$ der Kathode ab. \cite{Gerthsen}
+
+\begin{eqnarray}
+	e \cdot U_{\mathrm{Ph}, 0} &=& h \cdot \nu - W_A (K)
+\end{eqnarray}
+
+\subsubsection{stromfreie Spannungsmessung}
+Bei stromfreier Spannungsmessung wird die Spannung gemessen, ohne dass Strom durch das Messgerät fließt. Sie wird mittels eines Elektrometers durchgeführt.
+
+Es gibt verschiedene Arten von Elektrometern, die alle nach dem gleichen Prinzip funktionieren. Eine elektrische Ladung ist an einer Art Zeiger angebracht, der sich in einem Kondensator befindet. Wird eine Spannung an den Kondensator angelegt, wird der Zeiger aufgrund des entstehenden elektrischen Feldes ausgelenkt. Eine passend angebrachte Skala ermöglicht die Bestimmung der Spannung anhand der Auslenkung des Zeigers \cite{Gerthsen}.
+
+Eine solche stromfreie Spannungsmessung wird in diesem Versuch verwendet.
+
+\subsubsection{Kontaktspannung}
 
 \clearpage
 \hypertarget{durchfuxfchrung}{%
@@ -210,10 +280,10 @@ Ohne den Graufilter wurde eine Photospannung von $U_0=0.688\pm0.001\mathrm{\,V}$
 \begin{thebibliography}{99}
 \bibitem{Demtröder}
 	W. Demtröder, ``Experimentalphysik 3'', $5.$ Auflage, Springer Verlag,
-	ISBN 000000000
+	DOI~\href{https://doi.org/10.1007/978-3-662-49094-5}{10.1007/978-3-662-49094-5}
 \bibitem{Gerthsen}
-	D. Meschede, ``Gerthsen Physik'', $21.$ Auflage, Springer Verlag,
-	ISBN 000000000
+	D. Meschede, ``Gerthsen Physik'', $25.$ Auflage, Springer Verlag,
+	DOI~\href{https://doi.org/10.1007/978-3-662-45977-5}{10.1007/978-3-662-45977-5}
 \bibitem{uni}
 		Universität zu Köln, ``B1.4: Photoeffekt: Bestimmung von $h/e$'', Juli 2008,
 		Online verfügbar unter \url{https://teaching.astro.uni-koeln.de/sites/default/files/praktikum_b/Anleitung_1.4.pdf},
