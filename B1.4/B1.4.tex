@@ -220,12 +220,20 @@ Eine solche stromfreie Spannungsmessung wird in diesem Versuch verwendet.
 \subsubsection{Kontaktspannung}
 
 \clearpage
-\hypertarget{durchfuxfchrung}{%
-\section{Durchführung}\label{durchfuxfchrung}}
-Zunächst wird das System genullt, d.h. es wird so eingestellt, dass die Gegenspannung $U$ bei Kurzschluss der Photozelle $0\mathrm{\,V}$ ist.
+\hypertarget{durchfuxfchrung}{\section{Durchführung}\label{durchfuxfchrung}}
+Eine Photozelle bildet das zentrale Element des Versuchs. Sie wird an einem Messverstärker angeschlossen, der das Signal verstärkt und zum Voltmeter leitet. Als Strahlungsquelle dient eine Quecksilberdampflampe, die nach $10\mathrm{\,min}$ ihre Betriebstemperatur erreicht hat.
 
-\subsection{Bestimmung von $h/e$}
-Der Widerstand des Elektrometers wurde auf $10^{13}\,\Omega$ eingestellt.
+Zunächst wird die Energie der Elektronen mit zwei verschiedenen Methoden gemessen, um $\frac{h}{e}$ zu bestimmen. Daraufhin wird die Abhängigkeit des Photostroms von der einfallenden Intensität untersucht. Schließlich werden Leuchtdioden als Strahlungsquellen verwendet, um deren Wellenlängen zu bestimmen.
+
+Am Messverstärker können die Verstärkung und eine Zeitkonstante eingestellt werden. Letztere glättet die Messwerte, indem die Werte über die eingestellte Zeit gemittelt werden. Nach jeder Änderung des Versuchsaufbaus muss der Nullpunkt des Messverstärkers korrekt justiert werden.
+
+\subsection{Energiemessung}
+\label{durchführung:Energiemessung}
+Es gibt zwei verschiedene Methoden, die Energie der herausgelösten Elektronen zu messen. Entweder wird die Stoppspannung oder die Spannung an der Photozelle gemessen. Ersteres bezeichnet man als Gegenspannungsmethode, letzteres als direkte Methode. Beide Methoden werden in den folgenden Abschnitten \ref{durchführung:Gegenspannung} bzw. \ref{durchführung:direkt} beschrieben.
+
+Zur Bestimmung von $\frac{h}{e}$ und zur Vermessung der LEDs gibt $5$ verschiedene Interferenzfilter, die jeweils auf eine andere Wellenlänge aus dem ultravioletten und sichtbaren Spektrum filtern. Da die Wellenlänge proportional zu der Energie des Lichts ist, wird ein linearer Zusammenhang mit der Steigung $\frac{h}{e}$ zwischen Wellenlänge und Spannung gemessen. Die Eigenschaften der Filter sind in Tabelle \ref{tab:Interferenzfilter} dargestellt.
+
+Dabei ist der Messverstärker auf den Modus ``Elektrometer'' eingestellt. Weiterhin wird der Innenwiderstand $10^{13}\,\Omega$ verwendet, um den Photostrom möglichst zu stoppen. Der Messverstärker wird mit $10$--facher Verstärkung und der Zeitkonstante $0.3\mathrm{\,s}$  verwendet.
 
 \begin{table}[h!]
 	\centering
@@ -243,7 +251,88 @@ Der Widerstand des Elektrometers wurde auf $10^{13}\,\Omega$ eingestellt.
 \end{table}
 
 \subsubsection{Gegenspannungsmethode}
-Die Zeitkonstante wurde auf $0.3\mathrm{\,s}$ und der Messverstärker auf $10$ eingestellt.
+\label{durchführung:Gegenspannung}
+
+Bei der Gegenspannungsmethode wird die Stoppspannung gemessen, bei der der Photostrom verschwindet.  Der Schaltplan ist in Abbildung \ref{fig:Schaltplan Gegenspannungsmethode} zu sehen. Anschließend wird das Gegenspannungsmodul an die Photozelle angeschlossen.
+
+Vor jeder Messung muss der Nullpunkt korrekt justiert werden. Dann wird Gegenspannung langsam von $0\mathrm{\,V}$ erhöht, bis der Spannungsabfall am Elektrometer verschwindet. Die angezeigte Gegenspannung ist die Stoppspannung $U_0$.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.4/Schaltplan_Gegenspannungsmethode.jpg}
+	\caption{Schaltplan der Gegenspannungsmethode}
+	\label{fig:Schaltplan Gegenspannungsmethode}
+\end{figure}
+
+\subsubsection{direkte Methode}
+\label{durchführung:direkt}
+
+Anstatt der Gegenspannung kann auch die Spannung an der Photozelle direkt gemessen werden. Dazu wird die Zelle mit dem Elektrometer verbunden. Wie bei der Gegenspannungsmethode ist der Messverstärker als ``Elektrometer'' eingestellt, der Innenwiederstand beträgt auch hier $10^{13}\,\Omega$.
+
+Anders als bei der Gegenspannungsmethode muss die Photozelle bei der direkten Methode vor jeder Messung entladen werden, um die Spannung zurückzusetzen. Zu diesem Zweck besitzt sie einen Kurzschlussschalter.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.4/Schaltplan_direkte_Methode.jpg}
+	\caption{Schaltplan der direkten Methode}
+	\label{fig:Schaltplan direkt}
+\end{figure}
+
+\subsection{Photostrom}
+
+Zur Messung des Photostroms wird der Messverstärker auf ``Low Drift''. Der Innenwiderstand wird auf $10\mathrm{\,k\Omega}$ heruntergeregelt, um einen Photostrom zu ermöglichen. Die Messung des Stroms erfolgt indirekt über eine Spannung, dazu wird ein Widerstand $R=10\mathrm{\,k\Omega}$ benutzt.
+
+Die Zeitkonstante wird wie bei den vorherigen Messungen in Abschnitt \ref{durchführung:Energiemessung} als $0.3\mathrm{\,s}$ eingestellt, der Messverstärker dagegen auf $10^4$--fache Verstärkung erhöht. Da der Photostrom schwach ist, muss das Signal deutlich mehr verstärkt werden.
+
+Für diesen Versuchsteil wird die \nameref{durchführung:direkt} verwendet, der Schaltplan ist in Abbildung \ref{fig:Schaltplan Photostrom} zu sehen. Die gemessene Spannung $U_e$ ist durch Ohm'sche Gesetz proportional zu dem Photostrom $I_\mathrm{Ph}$.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.4/Schaltplan_Photostrom.jpg}
+	\caption{Schaltplan der Photostrommessung}
+	\label{fig:Schaltplan Photostrom}
+\end{figure}
+
+\subsubsection{Photostrom}
+Zur Messung des Photostroms werden abwechselnd der blaue und der grüne Interferenzfilter verwendet, zusammen mit einem von $6$ Graufiltern. Die Eigenschaften der Graufilter sind in Tabelle \ref{tab:Graufilter} dargestellt, die der Interferenzfilter in Tabelle \ref{tab:Interferenzfilter} in Abschnitt \ref{durchführung:Energiemessung}. Die Graufilter sind zwischen Interferenzfilter und Photozellengehäuse positioniert.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c}
+		$\lambda$ $[\mathrm{nm}]$ & \multicolumn{6}{c}{Transmissionsgrad $T$ $[\%]$} \\
+		& $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+		\hline
+		$436$ & $68$ & $48$ & $33$ & $28$ & $20$ & $14$ \\
+		$546$ & $67$ & $46$ & $31$ & $23$ & $16$ & $11$
+	\end{tabular}
+	\caption{Eigenschaften der Graufilter mit $\Delta T=1\,\%$}
+	\label{tab:Graufilter}
+\end{table}
+
+\subsubsection{Intensität}
+Die direkte Messmethode aus Abschnitt \ref{durchführung:direkt} wird zudem dazu verwendet, die Abhängigkeit des Photostroms von der Intensität zu messen. Dabei wird die Stoppspannung mit dem grünen Interferenzfilter je einmal mit und ohne Graufilter $1$ gemessen. Dieser wird vor den Interferenzfilter gehalten, ohne befestigt zu werden.
+
+\subsection{Leuchtdioden}
+
+Zuletzt sollen die Wellenlängen von drei verschiedenen Leuchtdioden bestimmt werden.
+
+Die jeweilige Leuchtdiode wird auf das Photozellengehäuse gesteckt und mit $I=100\mathrm{\,mA}$ betrieben. Dann wurde die Spannung mit der direkten Methode bestimmt, die in Abschnitt \ref{durchführung:direkt} beschrieben ist.
+
+Für die Messungen werden Leuchtdioden mit den Farbbezeichnungen ``blue'', ``verde'' und ``true green'' verwendet. Der Schaltplan ist in Abbildung \ref{fig:Schaltplan LEDs} ersichtlich.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../media/B1.4/Schaltplan_LED.jpg}
+	\caption{Schaltplan der Messungen mit LEDs}
+	\label{fig:Schaltplan LEDs}
+\end{figure}
+
+
+\clearpage
+\hypertarget{auswertung}{\section{Auswertung}\label{auswertung}}
+\subsection{Bestimmung von $h/e$}
+
+\subsubsection{Gegenspannungsmethode}
 
 \begin{table}[h!]
 	\centering
@@ -279,19 +368,6 @@ Schon während der Messung fiel die große Ähnlichkeit der Messwerte mit denen 
 \end{table}
 
 \subsection{Photostrom}
-\begin{table}[h!]
-	\centering
-	\begin{tabular}{c|c|c|c|c|c|c}
-		$\lambda$ $[\mathrm{nm}]$ & \multicolumn{6}{c}{Transmissionsgrad $T$ $[\%]$} \\
-		& $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
-		\hline
-		$436$ & $68$ & $48$ & $33$ & $28$ & $20$ & $14$ \\
-		$546$ & $67$ & $46$ & $31$ & $23$ & $16$ & $11$
-	\end{tabular}
-	\caption{Eigenschaften der Graufilter mit $\Delta T=1\,\%$}
-	\label{tab:Graufilter}
-\end{table}
-
 \subsubsection{Photoströme}
 Bei der Messung der Photoströme trat ein Nullpunktsfehler von $1\mathrm{\,mV}$ auf. Der Messverstärker wurde auf $10^4$ gestellt, die Zeitkonstante auf $0.3\mathrm{\,s}$. Der Photostrom wurde indirekt über einen Widerstand $R=10\mathrm{\,k\Omega}$ gemessen.
 
@@ -311,7 +387,7 @@ Bei der Messung der Photoströme trat ein Nullpunktsfehler von $1\mathrm{\,mV}$ 
 \subsubsection{Intensität}
 Ohne den Graufilter wurde eine Photospannung von $U_0=0.688\pm0.001\mathrm{\,V}$ gemessen, mit Graufilter $6$ eine von $U_0^\prime=0.693\pm0.001\mathrm{\,V}$. Aufgrund dieser Abweichungen sollte der Fehler auf zumindest $\pm 3\mathrm{\,mV}$ erhöht werden.
 
-\subsection{Untersuchung von LEDs mit der Photozelle}
+\subsection{Untersuchung von Leuchtdioden mit der Photozelle}
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{l|c}
@@ -325,10 +401,6 @@ Ohne den Graufilter wurde eine Photospannung von $U_0=0.688\pm0.001\mathrm{\,V}$
 	\label{tab:LEDs}
 \end{table}
 
-
-\clearpage
-\hypertarget{auswertung}{%
-\section{Auswertung}\label{auswertung}}
 
 \clearpage
 \hypertarget{fazit}{%
