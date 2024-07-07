@@ -31,6 +31,7 @@
 
 \numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
 \newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
+\newcommand{\code}[1]{\textsf{#1}}
 
 \hypersetup{
   pdftitle={B1.4: Photoelektrischer Effekt},
@@ -176,7 +177,7 @@ Ein Lichtquant mit einer Frequenz $\nu$ besitzt eine Energie $h\nu$, die durch d
 \end{eqnarray}
 
 \noindent
-Die Grenzfrequenz $\nu_g$ kann durch die Austrittsarbeit $W_A$ bestimmt werden.
+Die Grenzfrequenz $\nu_g$ kann durch die Austrittsarbeit $W_A$ der Photokathode bestimmt werden.
 
 \begin{eqnarray}
 	\nu_g &=& \frac{W_A}{h}
@@ -207,7 +208,7 @@ Die Photoelektronen können auf ihrem Weg zur Anode abgebremst werden, indem ein
 Die \textit{Stoppspannung} $U_{\mathrm{Ph}, 0}$ ist die minimale Spannung, die alle Photoelektronen abbremst. Sie hängt von der Energie des Lichts $h\nu$ mit Frequenz $\nu$ und der Austrittsarbeit $W_A(K)$ der Kathode ab. \cite{Gerthsen}
 
 \begin{eqnarray}
-	e \cdot U_{\mathrm{Ph}, 0} &=& h \cdot \nu - W_A (K)
+	e \cdot U_{\mathrm{Ph}, 0} &=& h \cdot \nu - W_A (K) \label{eq:Stoppspannung Geradengleichung}
 \end{eqnarray}
 
 \subsubsection{stromfreie Spannungsmessung}
@@ -216,8 +217,6 @@ Bei stromfreier Spannungsmessung wird die Spannung gemessen, ohne dass Strom dur
 Es gibt verschiedene Arten von Elektrometern, die alle nach dem gleichen Prinzip funktionieren. Eine elektrische Ladung ist an einer Art Zeiger angebracht, der sich in einem Kondensator befindet. Wird eine Spannung an den Kondensator angelegt, wird der Zeiger aufgrund des entstehenden elektrischen Feldes ausgelenkt. Eine passend angebrachte Skala ermöglicht die Bestimmung der Spannung anhand der Auslenkung des Zeigers \cite{Gerthsen}.
 
 Eine solche stromfreie Spannungsmessung wird in diesem Versuch verwendet.
-
-\subsubsection{Kontaktspannung}
 
 \clearpage
 \hypertarget{durchfuxfchrung}{\section{Durchführung}\label{durchfuxfchrung}}
@@ -330,77 +329,215 @@ Für die Messungen werden Leuchtdioden mit den Farbbezeichnungen ``blue'', ``ver
 
 \clearpage
 \hypertarget{auswertung}{\section{Auswertung}\label{auswertung}}
-\subsection{Bestimmung von $h/e$}
+\subsection{Energie der Elektronen}
+\label{auswertung:h/e}
+%Schon während der Messung fiel die große Ähnlichkeit der Messwerte der direkten Messung mit denen aus der Gegenspannungsmethode auf. Dass die Werte eher minimal kleiner sind liegt vermutlich an einem reduzierten Rauschen aus der Umgebung, da die nicht--abgeschirmten Kabel des Aufbaus noch weiter von der Photozelle entfernt waren.
 
-\subsubsection{Gegenspannungsmethode}
+Zunächst wird die Energie der Elektronen untersucht, woraus $\frac{h}{e}$ und die Austrittsarbeit der Anode $W_A$ bestimmt werden. Dies erfolgt für beide angewandte Messmethoden getrennt, womit die Ergebnisse verglichen werden können.
 
-\begin{table}[h!]
-	\centering
-	\begin{tabular}{c|c|c}
-		Filter & Farbe & $U_0$ $[V]$ \\
-		\hline
-		$1$ & UV & $1.769$ \\
-		$2$ & Violett & $1.434$ \\
-		$3$ & Blau & $1.232$ \\
-		$4$ & Grün & $0.705$ \\
-		$5$ & Gelb & $0.645$ \\
-	\end{tabular}
-	\caption{Messergebnisse nach der Gegenspannungsmethode mit $\Delta U_0=\pm 1\mathrm{\,mV}$}
-	\label{tab:Gegenspannungsmethode}
-\end{table}
+Dazu werden die Frequenzen $\nu$ zu den angegebenen Wellenlängen $\lambda$ bestimmt, wozu die Lichtgeschwindigkeit Lichtgeschwindigkeit $c$ benötigt wird. Der Fehler $\Delta \nu$ folgt aus der Gauß'schen Fehlerfortpflanzung. Sie werden zusammen mit den Messergebnissen in Tabelle \ref{table:Messwerte Energie} dargestellt.
 
-\subsubsection{direkte Messmethode}
-Schon während der Messung fiel die große Ähnlichkeit der Messwerte mit denen aus der vorherigen Messung auf. Dass die Werte eher minimal kleiner sind liegt vermutlich an einem reduzierten Rauschen aus der Umgebung, da die nicht--abgeschirmten Kabel des Aufbaus noch weiter von der Photozelle entfernt waren.
+\begin{eqnarray}
+	\nu &=& \frac{c}{\lambda} \label{eq:frequenzWellenlänge} \\
+	\Delta \nu &=& \frac{c \cdot \Delta \lambda}{\lambda^2}
+\end{eqnarray}
 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{c|c|c}
-		Filter & Farbe & $U$ $[V]$ \\
+	\begin{tabular}{c|c|c|c|c}
+		Messung & $\lambda$ [nm] & $\nu$ [$10^{14} \mathrm{\, Hz}$] & $U_{0,G}$ [V] & $U_{0,D}$ [V] \\
 		\hline
-		$1$ & UV & $1.770$ \\
-		$2$ & Violett & $1.434$ \\
-		$3$ & Blau & $1.232$ \\
-		$4$ & Grün & $0.696$ \\
-		$5$ & Gelb & $0.635$ \\
+		1 & $366 \pm 7$ & $8.19 \pm 0.16$ & $1.769 \pm 0.003$ & $1.770 \pm 0.003$ \\
+		2 & $405 \pm 7$ & $7.40 \pm 0.13$ & $1.434 \pm 0.003$ & $1.434 \pm 0.003$ \\
+		3 & $436 \pm 7$ & $6.88 \pm 0.11$ & $1.232 \pm 0.003$ & $1.232 \pm 0.003$ \\
+		4 & $546 \pm 7$ & $5.49 \pm 0.07$ & $0.705 \pm 0.003$ & $0.696 \pm 0.003$ \\
+		5 & $578 \pm 7$ & $5.19 \pm 0.06$ & $0.645 \pm 0.003$ & $0.635 \pm 0.003$
 	\end{tabular}
-	\caption{Messergebnisse nach der direkten Methode mit $\Delta U_0=\pm 1\mathrm{\,mV}$}
-	\label{tab:direkten Methode}
+	\caption{Gemessene Stoppspannungen nach Gegenspannungsmethode $U_{0,G}$ und direkter Methode $U_{0,D}$ zu Wellenlängen $\lambda$ bzw. Frequenzen $\nu$}
+	\label{table:Messwerte Energie}
 \end{table}
+
+\begin{figure}[h!]
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=\linewidth]{../media/B1.4/gegenPlot.pdf}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=\linewidth]{../media/B1.4/direktPlot.pdf}
+	\end{minipage}
+	\caption{Messwerte und Geradenanpassung aus der Gegenspannungsmethode (links) und der direkten Methode (rechts)}
+	\label{fig:fitGeraden}
+\end{figure}
+
+\noindent
+An diesen Ergebnissen wird mittels des \code{Julia}--Pakets \code{LsqFit} \cite{Julia:LsqFit} eine Geradenanpassung durchgeführt, die in Abbildung \ref{fig:fitGeraden} dargestellt ist.
+
+!!! FEHLER: In der Vorbereitung ist nur $W_A(K)$ erklärt, nicht $W_A(A)$ !!!
+
+Mithilfe von Gleichung \eqref{eq:Stoppspannung Geradengleichung} wird $\frac{h}{e}$ als Steigung $a$ identifiziert. Die Austrittsarbeit $W_A$ der Anode ergibt sich aus dem $y$--Achsenabschnitt $b$, wobei die Einheit Elektronenvolt vorausgesetzt ist. Die Ergebnisse sind in Tabelle \ref{table:Ergebnisse Energie} dargelegt.
+
+\begin{eqnarray}
+	\frac{h}{e} &=& a \label{eq:h/e Steigung} \\
+	b &=& - \frac{W_A}{e} \label{eq:h/e Achsenabschnitt} \\
+	\Leftrightarrow \quad W_A &=& - b \cdot e
+\end{eqnarray}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l|c|c}
+		& $\frac{h}{e}$ [$10^{-15} \mathrm{\, Vs}$] & $W_A$ $[\mathrm{eV}]$ \\
+		\hline
+		Gegenspannungsmethode & $3.77 \pm 0.11$ & $1.34 \pm 0.08$ \\
+		direkte Methode & $3.81 \pm 0.11$ & $1.37 \pm 0.08$
+	\end{tabular}
+	\caption{Steigung $\frac{h}{e}$ und Austrittsarbeit $W_A$ der Anode}
+	\label{table:Ergebnisse Energie}
+\end{table}
+
+\noindent
+Die Austrittsarbeit $W_A$ kann alternativ aus der Nullstelle der gefitteten Geraden bestimmt werden kann. Dies wäre theoretisch eine genauere Methode der Bestimmung, da die Nullstelle näher als der $y$--Achsenabschnitt an den Messwerten liegt, damit wäre der Fehler geringer.
+
+Allerdings ist die Nullstelle der Geraden nicht so genau bestimmbar wie der $y$--Achsenabschnitt, da letzterer direkt aus dem Fitprozess folgt. Die Nullstelle müsste dagegen extra ermittelt werden. Da sowohl Steigung als auch $y$--Achsenabschnitt fehlerbehaftet sind, würde der Fehler der Nullstelle durch die Fehlerfortpflanzung bestimmt werden müssen.
+
+Die Bestimmung der Austrittsarbeit $W_A$ erfolgt durch den Achsenabschnitt, weil der Fehler der Nullstelle nur größer als der des Achsenabschnitts sein kann.
+
+\subsubsection{Diskussion der Ergebnisse}
+In der Literatur beträgt $\frac{h}{e}\approx4.14 \cdot 10^{-15} \mathrm{\, Vs}$. \cite{Gerthsen} Die Messergebnisse weichen auch innerhalb ihrer Fehler leicht von diesem Wert ab.
+
+Dies könnte unter anderem auf den Lichteinfall durch ein kleines Fenster und die Deckenlampen im Versuchsraum zurückzuführen sein, der die Messergebnisse möglicherweise verändert hat. Zudem könnten die Stromkabel eine andere Austrittsarbeit als die Anode haben. Dies würde zu einer weiteren Kontaktspannung führen, die die Ergebnisse verzerrt.
+
+Die Größenordnung der ermittelten Austrittsarbeiten entsprechen den Erwartungen. Beispielsweise könnte die Kathode aus einer Wolfram--Cäsium--Legierung bestehen, deren Austrittsarbeit in der Größenordnung von $1.4\mathrm{\,eV}$ \cite{Demtröder} angegeben ist. Dieser Wert wird bei beiden Messmethoden innerhalb der Fehler getroffen.
+
+Damit wird dieser Versuchsteil als Erfolg gewertet.
+
+\subsubsection{Vergleich der Methoden}
+Beide Messmethoden liefern die gleichen Ergebnisse innerhalb der Fehlergrenzen. Selbst die Ungenauigkeiten sind in den ersten Stellen gleich groß. Daher scheinen beide Methoden vergleichbar genau zu sein.
+
+Vorteilhaft bei der Gegenspannungsmethode ist das Stoppen des Stromflusses durch den hohen Widerstand. Fließt bei einer Spannungsmessung Strom, so wird diese beeinträchtigt. Somit liefert diese Methode eine ideale Spannungsmessung. Nachteilig ist die manuelle Einstellung der Gegenspannung, die aufgrund von starken Schwankungen ungenau ist.
+
+Bei der direkten Messmethode muss dagegen keine ungenaue Gegenspannung eingestellt werden. Dies vereinfacht die Durchführung der Methode und reduziert eine Fehlerquelle. Dafür wird die Stoppspannung bei fließendem Strom gemessen, was systematisch ungenauer ist.
+
+Obwohl die Gegenspannungsmethode theoretisch von Vorteil ist, sind beide Messmethoden in der Praxis vergleichbar genau. Falls die Gegenspannung digital ermittelt wird, könnte dies anders sein.
 
 \subsection{Photostrom}
-\subsubsection{Photoströme}
-Bei der Messung der Photoströme trat ein Nullpunktsfehler von $1\mathrm{\,mV}$ auf. Der Messverstärker wurde auf $10^4$ gestellt, die Zeitkonstante auf $0.3\mathrm{\,s}$. Der Photostrom wurde indirekt über einen Widerstand $R=10\mathrm{\,k\Omega}$ gemessen.
+\subsubsection{Photostrom}
+
+Der Photostrom $I_\mathrm{Ph}$ wird durch das Ohm'sche Gesetz aus der Photospannung $U_\mathrm{Ph}$ bestimmt. Der Widerstand in der Messung beträgt $10 \,k\Omega$. Die Ergebnisse sind in Tabelle \ref{tab:Photostrom Ergebnisse} dargestellt.
+
+\begin{eqnarray}
+	I_\mathrm{Ph} &=& \frac{U_\mathrm{Ph}}{R} \\
+	\Delta I_\mathrm{Ph} &=& \frac{\Delta U_\mathrm{Ph}}{R}\\
+\end{eqnarray}
 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{c|c|c|c|c|c|c|c|c}
-		 	&& \multicolumn{7}{c}{Photostrom $U_\mathrm{Ph}$ $[\mathrm{V}]$} \\
-		Filter & Farbe & ohne & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\
+		&& \multicolumn{7}{c}{Photostrom $I_\mathrm{Ph}$ $[10^{-4}\mathrm{\,A}]$} \\
+		Filter & Farbe & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & ohne Filter\\
 		\hline
-		$3$ & Blau & $1.777$ & $1.486$ & $1.067$ & $0.807$ & $0.655$ & $0.440$ & $0.338$ \\
-		$4$ & Grün & $0.608$ & $0.536$ & $0.357$ & $0.265$ & $0.190$ & $0.126$ & $0.090$
+		$3$ & Blau & $1.486$ & $1.067$ & $0.807$ & $0.655$ & $0.440$ & $0.338$ & $1.777$ \\
+		$4$ & Grün & $0.536$ & $0.357$ & $0.265$ & $0.190$ & $0.126$ & $0.090$ & $0.608$
 	\end{tabular}
-	\caption{Messungen der Photoströme über mit $\Delta U_\mathrm{Ph}=1\mathrm{\,mV}$}
-	\label{tab:Photostrom}
+	\caption{Photoströme für verschiedenen Graufilter mit $\Delta I_\mathrm{Ph} = \pm 5 \cdot 10^{-7} \mathrm{\,A}$}
+	\label{tab:Photostrom Ergebnisse}
 \end{table}
 
-\subsubsection{Intensität}
-Ohne den Graufilter wurde eine Photospannung von $U_0=0.688\pm0.001\mathrm{\,V}$ gemessen, mit Graufilter $6$ eine von $U_0^\prime=0.693\pm0.001\mathrm{\,V}$. Aufgrund dieser Abweichungen sollte der Fehler auf zumindest $\pm 3\mathrm{\,mV}$ erhöht werden.
+\noindent
+Trägt man den Photostrom gegen die jeweiligen relativen Transmissionsgrade auf, erkennt man einen lineare Zusammenhänge, sichtbar in Abbildung \ref{abb:Photostrom fit}. Der Photostrom ist daher proportional zur Intensität der einfallenden Strahlung.
 
-\subsection{Untersuchung von Leuchtdioden mit der Photozelle}
+Auffällig sind die Unterschiede in der Stärke des Photostroms bei verschiedenen Farben. Der Photostrom ist bei Verwendung des blauen Interferenzfilters deutlich höher als bei der des grünen.
+
+Das Phänomen kann durch die Energie der Strahlungen erklärt werden. Blaues Licht hat eine kürzere Wellenlänge als grünes, daher hat es eine höhere Energie.
+
+Weiterhin könnte die Quecksilberdampflampe blaues Licht in höherer Intensität als grünes produzieren. Dadurch käme auch weniger Strahlung an der Photokathode an, da die transmittierte Intensität proportional zu der auf den Graufilter treffenden Intensität ist.
+
+\begin{figure}[h!]
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../media/B1.4/Photostrom_blau.pdf}
+		\caption*{blauer Interferenzfilter}
+		\label{abb:Photostrom blau}
+	\end{minipage}
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../media/B1.4/Photostrom_gruen.pdf}
+		\caption*{grüner Interferenzfilter}
+		\label{abb:Photostrom grün}
+	\end{minipage}
+	\caption{Photoströme bei verschiedenen Graufiltern}
+	\label{abb:Photostrom fit}
+\end{figure}
+
+\subsubsection{Intensität}
+Zusätzlich wurde die Abhängigkeit Energie der Elektronen von der Intensität des Lichtes untersucht. Dazu wurde der stärkste Graufilter (Nummer $6$) vor die Lampe gehalten und die Veränderung der Spannung beobachtet.
+
+Die Ergebnisse zeigen deutlich die Unabhängigkeit dieser Größen und sind in Tabelle \ref{tab:Spannung Intensität} dargestellt. Innerhalb der Fehler sind die Spannungen identisch, obwohl der Intensitätsunterschied ziemlich groß ist.
+
+Eine höhere Intensität entspricht einer größere Photonendichte. Die Anzahl der Photonen ist jedoch irrelvant für die Energie der ausgelösten Elektronen. Nach der klassischen Wellentheorie bekämen die Elektronen durch höhere Intensität mehr Energie, was hier eindeutig nicht zu beobachten ist. Daher belegen die Messungen die Quantenhypothese für Licht.
+
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{l|c}
-		Bezeichnung & $U_0$ $[\mathrm{V}]$ \\
+		& Stoppspannung $[\mathrm{V}]$ \\
 		\hline
-		blue & $1.047$ \\
-		verde & $0.891$ \\
-		true green & $0.807$ \\
+		ohne Graufilter & $0.688 \pm 0.005$ \\
+		Graufilter $6$ & $0.693 \pm 0.005$
 	\end{tabular}
-	\caption{Messungen der LEDs mit $\Delta U_0=1\mathrm{\,mV}$}
-	\label{tab:LEDs}
+	\caption{Spannung bei verschiedenen Intensitäten}
+	\label{tab:Spannung Intensität}
 \end{table}
 
+\subsection{Untersuchung von Leuchtdioden mit der Photozelle}
+
+Zuletzt werden die Wellenlängen von drei Leuchtdioden aus gemessenen Stoppspannungen bestimmt. Zur Messung wurde die direkte Methode verwendet, weshalb im Folgenden die Messergebnisse ebendieser Methodik gewählt werden..
+
+In Abschnitt \ref{auswertung:h/e} wurde anhand der Messergebnisse eine Geradengleichung ermittelt, die im Folgenden verwendet wird. Sie ergibt sich aus den Gleichungen \eqref{eq:h/e Steigung} und \eqref{eq:h/e Achsenabschnitt} sowie den Werten aus Tabelle \ref{table:Ergebnisse Energie}. Hierbei wird die Austrittsarbeit durch die Elementarladung $\mathrm{e}$ dividiert.
+
+\begin{eqnarray}
+	U_0 &=& a \cdot \nu + b \\
+	a &=& (3.81\pm 0.11)\cdot10^{-15}\mathrm{\,Vs} \\
+	b &=& (1.27 \pm 0.08) \,\frac{\mathrm{eV}}{\mathrm{e}}
+\end{eqnarray}
+
+\noindent
+Die Umformung dieser Gleichung ermöglicht die Bestimmung der Wellenlängen $\lambda$ aus den gemessenen Stoppspannungen $U_0$, wobei Gleichung \eqref{eq:frequenzWellenlänge} mit der Lichtgeschwindigkeit $c$ Anwendung findet. Der Fehler $\Delta \lambda$ folgt nach Gauß'scher Fehlerfortpflanzung.
+
+\begin{eqnarray}
+	\lambda &=& \frac{a \cdot c}{U_0 - b} \\
+	\Delta \lambda &=&
+		\sqrt{
+				\left(
+					\frac{c \cdot \Delta a}{U_0 - b}
+				\right)^2
+				+ \left(
+					\frac{a \cdot c \cdot \Delta U_0}{(U_0 - b)^2}
+				\right)^2
+				+ \left(
+					\frac{a \cdot c \cdot \Delta b}{(U_0 - b)^2}
+				\right)^2
+		}
+\end{eqnarray}
+
+\noindent
+Die gemessenen Stoppspannungen sind samt ermittelter Wellenlängen und Literaturwerten in Tabelle \ref{table:leds} dargestellt.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{l|c|c|c}
+		Bezeichnung & $U_0$ $[\mathrm{V}]$ & $\lambda$ $[\mathrm{nm}]$ & Literaturwert $[\mathrm{nm}]$ \\
+		\hline
+		blue & $1.047 \pm 0.003$ & $472 \pm 20$ & $400 - 480$ \\
+		verde & $0.891 \pm 0.003$ & $504 \pm 22$ & $480 - 560$ \\
+		true green & $0.807 \pm 0.003$ & $524 \pm 24$ & $480 - 560$
+	\end{tabular}
+	\caption{Gemessene Stoppspannungen $U_0$, berechnete Wellenlängen $\lambda$ und~Literaturwerte~\cite{Gerthsen}}
+	\label{table:leds}
+\end{table}
+
+Üblicherweise senden Leuchtdioden ein Spektrum von Licht aus, anstelle von monochromatischem Licht. In diesem Versuch wurde allerdings nur eine Wellenlänge pro Leuchtdiode bestimmt.
+
+Bei der Messung der Stoppspannung wird die maximale Energie gemessen, die ein ausgelöstes Elektron erhalten kann. Die schnellsten Elektronen werden durch die Photonen mit maximaler Energie erzeugt, also durch die mit der niedrigsten verfügbaren Wellenlänge.
+
+Die hier bestimmte Wellenlänge ist daher die niedrigste Wellenlänge des jeweiligen LED--Spektrums. Üblicherweise ist ein solches Spektrum näherungsweise gaußverteilt. Damit liegen die Wellenlängen mit maximaler Amplitude bei einer größeren Wellenlänge als der hier bestimmten. Für eine genaue Bestimmung der Maxima der Spektren ist die Breite derselben notwendig.
+
+Alle gemessenen minimalen Wellenlängen liegen in den jeweiligen Bereichen der Literaturwerte, deshalb kann dieser Versuchsteil als erfolgreich betrachtet werden.
 
 \clearpage
 \hypertarget{fazit}{%
@@ -419,8 +556,11 @@ Ohne den Graufilter wurde eine Photospannung von $U_0=0.688\pm0.001\mathrm{\,V}$
 	D. Meschede, ``Gerthsen Physik'', $25.$ Auflage, Springer Verlag,
 	DOI~\href{https://doi.org/10.1007/978-3-662-45977-5}{10.1007/978-3-662-45977-5}
 \bibitem{uni}
-		Universität zu Köln, ``B1.4: Photoeffekt: Bestimmung von $h/e$'', Juli 2008,
-		Online verfügbar unter \url{https://teaching.astro.uni-koeln.de/sites/default/files/praktikum_b/Anleitung_1.4.pdf},
-		Abruf am 10.04.2024
+	Universität zu Köln, ``B1.4: Photoeffekt: Bestimmung von $h/e$'', Juli 2008,
+	Online verfügbar unter \url{https://teaching.astro.uni-koeln.de/sites/default/files/praktikum_b/Anleitung_1.4.pdf},
+	Abruf am 10.04.2024
+\bibitem{Julia:LsqFit}
+	\code{\href{https://julialang.org}{Julia}}--Paket \code{LsqFit},
+	Dokumentation unter \url{https://docs.juliahub.com/General/LsqFit/stable}
 \end{thebibliography}
 \end{document}
