@@ -156,6 +156,8 @@ Diese \emph{Kontaktspannung} $U_K$ wird durch Elektronen verursacht, die von dem
 \end{eqnarray}
 
 \noindent
+In diesem Versuch entspricht $W_2=W_A(A)$ der Austrittsarbeit der Anode, während $W_1=W_A(K)$ die der Kathode beschreibt.
+
 Betrachtet man die Elektronen im Metall als Elektronengas, dann gilt die Boltzmann--Verteilung. Die Kontaktspannung lässt sich aus dem Verhältnis der Elektronenzahldichten $n_1$ und $n_2$ bestimmen. Dabei finden die Boltzmann-Konstante $k_B$, die Temperatur $T$ in Kelvin und die Elementarladung $e$ Verwendung.
 
 \begin{eqnarray}
@@ -199,7 +201,8 @@ Fällt Licht auf die Photokathode, so werden durch den Photoeffekt Elektronen au
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.4\textwidth]{../media/B1.4/Photozelle.jpg}
-	\caption{Darstellung einer Photozelle mit Kathode $K$ und Anode $A$ \cite{uni}}
+	\caption{Darstellung einer Photozelle mit Kathode $K$ und Anode $A$, \\
+		mit Stoppspannung $U_\mathrm{Ph}$, Kontaktspannung $U_K$ und messbarer Spannung $U$ \cite{uni}}
 	\label{fig:photozelle}
 \end{figure}
 
@@ -208,7 +211,19 @@ Die Photoelektronen können auf ihrem Weg zur Anode abgebremst werden, indem ein
 Die \textit{Stoppspannung} $U_{\mathrm{Ph}, 0}$ ist die minimale Spannung, die alle Photoelektronen abbremst. Sie hängt von der Energie des Lichts $h\nu$ mit Frequenz $\nu$ und der Austrittsarbeit $W_A(K)$ der Kathode ab. \cite{Gerthsen}
 
 \begin{eqnarray}
-	e \cdot U_{\mathrm{Ph}, 0} &=& h \cdot \nu - W_A (K) \label{eq:Stoppspannung Geradengleichung}
+	e \cdot U_{\mathrm{Ph}, 0} &=& h \cdot \nu - W_A (K) \label{eq:Stoppspannung}
+\end{eqnarray}
+
+\noindent
+Die Photokathode besteht aus einem Material mit geringer Austrittsarbeit $W_A(K)$, was sie von der restlichen Schaltung unterscheidet. Im Folgenden wird angenommen, die Anode habe die selbe Austrittsarbeit $W_A(A)$ wie die restliche Schaltung. Dann besitzt der Versuchsaufbau eine Stelle mit einer Kontaktspannung $U_K$, ersichtlich in Abbildung \ref{fig:photozelle}.
+
+Nach der Kirchhoff'schen Maschenregel muss die Summe der Spannungen $0$ sein. Die Kontaktspannung ist durch \eqref{eq:Kontaktspannung} beschrieben.
+
+\begin{eqnarray}
+	U &=& \frac{U_{\mathrm{Ph},0}}{e} - U_K \\
+%		&=& \left(\frac{h}{e}\cdot \nu - \frac{W_A(K)}{e}\right) -
+%					 \left(\frac{W_A(A)-W_A(K)}{e}\right) \\
+	U &=& \frac{h}{e}\cdot \nu - \frac{W_A(A)}{e}  \label{eq:Stoppspannung Geradengleichung}
 \end{eqnarray}
 
 \subsubsection{stromfreie Spannungsmessung}
@@ -370,8 +385,6 @@ Dazu werden die Frequenzen $\nu$ zu den angegebenen Wellenlängen $\lambda$ best
 
 \noindent
 An diesen Ergebnissen wird mittels des \code{Julia}--Pakets \code{LsqFit} \cite{Julia:LsqFit} eine Geradenanpassung durchgeführt, die in Abbildung \ref{fig:fitGeraden} dargestellt ist.
-
-!!! FEHLER: In der Vorbereitung ist nur $W_A(K)$ erklärt, nicht $W_A(A)$ !!!
 
 Mithilfe von Gleichung \eqref{eq:Stoppspannung Geradengleichung} wird $\frac{h}{e}$ als Steigung $a$ identifiziert. Die Austrittsarbeit $W_A$ der Anode ergibt sich aus dem $y$--Achsenabschnitt $b$, wobei die Einheit Elektronenvolt vorausgesetzt ist. Die Ergebnisse sind in Tabelle \ref{table:Ergebnisse Energie} dargelegt.
 
