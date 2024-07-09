@@ -159,26 +159,30 @@ Eine \emph{Zufallsvariable} ist eine Funktion $X$, die jedem Ereignis $\omega$ e
 \noindent
 Das Ereignis $\omega$ des Zufallsexperiments kann direkt eine Zahl sein, wie beispielsweise die Augenzahl eines Würfelwurfs. Alternativ kann jedem Ereignis des Zufallsexperiments eine Zahl zugeordnet werden, beispielsweise können bei einem Münzwurf dem Ereignis $\mathrm{Kopf}$ der Wert $0$ und dem Ereignis $\mathrm{Zahl}$ eine $1$ zugeordnet werden. Bei einem Zufallsexperiment, welches mehrfach wiederholt wird hingegen, liefert die Anzahl mit der ein bestimmtes Ereignis eintritt eine reelle Zahl.
 
-
 \subsubsection{Wahrscheinlichkeitsdichte}
 \label{Wahrscheinlichkeitsdichte}
 Eine \textit{Wahrscheinlichkeitsdichte} (PDF\footnote{\emph{Probability Density Function}}) ist eine Funktion $f(y)$, welche die Wahrscheinlichkeit $\mathbb P$ angibt, dass eine Zufallsvariable $X$ einen Wert innerhalb eines Intervalls $[a,b]$ annimmt.
 
 \begin{eqnarray}
 	\int_{a}^{b} f(y) dy &=& \mathbb P(X(\omega) \in [a,b])
-	\label{eq:wahrscheinlichkeitsdichte}
+		\label{eq:wahrscheinlichkeitsdichte}
 \end{eqnarray}
 
 \noindent
-Die Wahrscheinlichkeitsdichte kann auch Werte über $1$ annehmen. Beispielsweise kann der Ort eines Punktteilchens durch eine $\delta$-Funktion beschrieben werden. Im Fall von diskreten Zufallsvariablen kann auch die Wahrscheinlichkeitsdichte diskret sein.
+Die Wahrscheinlichkeitsdichte kann auch Werte über $1$ annehmen. Beispielsweise kann der Ort eines Punktteilchens durch eine $\delta$--Funktion beschrieben werden. Im Fall von diskreten Zufallsvariablen kann auch die Wahrscheinlichkeitsdichte diskret sein.
+
+\begin{eqnarray}
+	f(y) &=& \mathbb P\left(x(\omega) = y\right)
+\end{eqnarray}
 
 \subsubsection{Wahrscheinlichkeitsverteilung}
 \label{Wahrscheinlichkeitsverteilung}
-Eine \emph{Wahrscheinlichkeitsverteilungsfunktion} (CDF\footnote{\emph{Cumulative Distribution Function}, kumulative Verteilungsfunktion}) einer Zufallsvariable $X$ ist dagegen eine Funktion $F(y)$, die angibt mit welcher Wahrscheinlichkeit $\mathbb P$ die Zufallsvariable $X$ einen Wert kleiner gleich $y$ annimmt. Sie ist die integrierte Wahrscheinlichkeitsdichte $f(\omega)$.
+Eine \emph{Wahrscheinlichkeitsverteilungsfunktion} (CDF\footnote{\emph{Cumulative Distribution Function}, kumulative Verteilungsfunktion}) einer Zufallsvariable $X$ ist dagegen eine Funktion $F(y)$, die angibt mit welcher Wahrscheinlichkeit $\mathbb P$ die Zufallsvariable $X$ einen Wert kleiner gleich $y$ annimmt. Sie ist die integrierte Wahrscheinlichkeitsdichte $f(\omega)$, im diskreten Fall die Summe.
 
 \begin{eqnarray}
 	F(y) &=& \mathbb P(X(\omega) \leq y) \\
-	F(y) &=& \int_{- \infty}^{y} f(\tilde{y}) d\tilde{y}
+	F(y) &=& \int_{- \infty}^{y} f(\tilde{y}) d\tilde{y} \\
+	F(y) &=& \sum_{y_i \leq y}^{} f(y_i)
 \end{eqnarray}
 
 \subsection{Wahrscheinlichkeitsverteilungen}
@@ -409,17 +413,17 @@ Damit können die Differenzen zum Mittelwert $(n_i-\bar n)$ ermittelt werden. Na
 
 \subsubsection{Das Geiger--Müller--Zählrohr}
 \label{Geiger--Müller--Zählrohr}
-Ein Geiger--Müller--Zählrohr besteht aus einem gasgefüllten Zylinderkondensator mit einem dünnem Anodendraht in der Mitte. Das elektrische Potential ist somit zylindersymmetrisch, um die Anode herum ist es am stärksten. Dies ist in Abbildung \ref{fig:Geiger--Müller--Zählrohr} schematisch dargestellt. Das Zählrohr in diesem Versuchsaufbau besitzt allerdings kein Fenster.
+Ein Geiger--Müller--Zählrohr besteht aus einem Zylinderkondensator mit einem dünnem Anodendraht in der Mitte. Das elektrische Potential ist somit zylindersymmetrisch, um die Anode herum ist es am stärksten. Dies ist in Abbildung \ref{fig:Geiger--Müller--Zählrohr} schematisch dargestellt. Der Zylinder ist mit einem Edelgas gefüllt, weil Edelgase im Grundzustand keine freien Elektronen aufnehmen.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\textwidth]{../media/B3.1/640px-Geiger_Mueller_Counter_with_Circuit-de.svg.png}
-	\caption{Aufbau eines typischen Geiger--Müller--Zählrohrs \cite{File:Geigerzählrohr}}
+	\includegraphics[width=0.5\textwidth]{../media/B3.1/Geiger_Mueller_Counter_with_Circuit-de.pdf}
+	\caption{Aufbau eines typischen Geiger--Müller--Zählrohrs, \\
+		originale Grafik von \cite{File:Geigerzählrohr}}
 	\label{fig:Geiger--Müller--Zählrohr}
 \end{figure}
 
-\noindent
-Wenn ein Photon in den Zylinder eintritt und auf ein Gasteilchen trifft, wird dieses ionisiert. Dabei löst sich ein Elektron aus dem Atom. Die Gammastrahlung verliert bei dem Ionisationsprozess nur einen Bruchteil der Energie, da ihre Energie mindestens im $\mathrm{keV}$--Bereich sehr viel größer als die Ionisationsenergie von Atomen in der Größenordnung von $10\mathrm{\,eV}$ ist. Daher ionisiert ein Gammaquant viele Gasteilchen. \cite{Demtröder Kern/Atom} Durch das elektrische Potential wird das freie Elektron zur Anode hin beschleunigt und stößt auf dem Weg mit weiteren Gasteilchen. Dadurch sammeln sich immer mehr Elektronen um den Anodendraht.
+Wenn ein Photon in den Zylinder eintritt und auf ein Gasteilchen trifft, wird dieses ionisiert. Dabei löst sich ein Elektron aus dem Atom. Die Gammastrahlung verliert bei dem Ionisationsprozess nur einen Bruchteil der Energie, da ihre Energie im Bereich von mindestens $100\mathrm{\,eV}$ sehr viel größer als die Ionisationsenergie von Atomen in der Größenordnung von $10\mathrm{\,eV}$ ist. Daher ionisiert ein Gammaquant viele Gasteilchen. \cite{Demtröder Kern/Atom} Durch das elektrische Potential wird das freie Elektron zur Anode hin beschleunigt und stößt auf dem Weg mit weiteren Gasteilchen. Dadurch sammeln sich immer mehr Elektronen um den Anodendraht.
 
 Währenddessen regen sich die Gasteilchen durch Photonenemission ab und erzeugen die sogenannte \emph{Geiger--Entladung}. Hierbei ionisieren die entstandene Photonen weitere Gasteilchen, somit entstehen wiederum neue freie Elektronen. Da die Photonen eine größere Reichweite als die Elektronen haben und überall innerhalb des Zählrohres sein können, findet die Entladung großräumig in dem gesamten Zählrohr statt.
 
@@ -479,7 +483,7 @@ Die Totzeit der Länge $\tau$ hat einen Einfluss auf die gemessenen Zählraten. 
 \end{eqnarray}
 
 \noindent
-Falls der Erwartungswert $m$ konstant ist, kann man weitere Schlussfolgerungen ziehen. Durch Einsetzen der Gleichungen $\eqref{korrRate}$-$\eqref{korrAVG}$ sowie $\eqref{ChiSquared}$ kann man $\eqref{ChiKorrDef}$ vereinfachen und man erhält die folgende vereinfachte Relation. Hier sieht man, dass die korrigierte Abweichung $\chi^2_\mathrm{korr}$ kleiner als die nicht--korrigierte Abweichung $\chi^2$ ist, was kontraintuitiv wahrgenommen werden kann.
+Falls der Erwartungswert $m$ konstant ist, kann man weitere Schlussfolgerungen ziehen. Durch Einsetzen der Gleichungen $\eqref{korrRate}$-$\eqref{korrAVG}$ sowie $\eqref{ChiSquared}$ kann man $\eqref{ChiKorrDef}$ vereinfachen und man erhält die folgende vereinfachte Relation. Hier sieht man, dass die korrigierte Abweichung $\chi^2_\mathrm{korr}$ größer als die nicht--korrigierte Abweichung $\chi^2$ ist, was kontraintuitiv wahrgenommen werden kann.
 
 \begin{eqnarray}
     \chi^2_\mathrm{korr} &=&
@@ -846,9 +850,7 @@ Die daraus folgenden Ergebnisse werden in Tabelle \ref{tab:ChiSquared} dargestel
 \end{table}
 
 \noindent
-Würde man stattdessen Pearsons $\chi^2$--Test\footnote{Siehe Abschnitt \ref{pearsons-chi2test}} durchführen, so würde man nur einen einzelnen Wert $\chi_\mathrm{P, max}^2 = 67.505$ zum Vergleich verwenden. \cite{Kapur} In diesem Falle würde die Hypothese $H_1$ bekräftigt werden, während die anderen Hypothesen verworfen werden müssen.
-
-Damit könnte man aus den Ergebnissen schließen, dass die Präparatstärke im gemessenen Zeitrahmen konstant ist.
+Würde man stattdessen Pearsons $\chi^2$--Test\footnote{Siehe Abschnitt \ref{pearsons-chi2test}} durchführen, so würde man nur einen einzelnen Wert $\chi_\mathrm{P, max}^2 = 67.505$ zum Vergleich verwenden. \cite{Kapur} In diesem Falle würde die Hypothese $H_1$ bekräftigt werden, während die anderen Hypothesen verworfen werden müssen. Man kann die Vermutung aufstellen, dass die Präparatstärke im gemessenen Zeitrahmen näherungsweise konstant ist.
 
 \hypertarget{totzeit}{\subsubsection{Halbwertszeit}\label{totzeit}}
 Die Hypothese $H_3$ nähert den exponentiellen Abfall der Präparatstärke linear an. Wie schon in Abschnitt \ref{Hypothesen} erläutert wurde, ist dies für den beobachteten Messzeitraum nicht beobachtbar, was auch der $\chi^2$--Test bekräftigt.
