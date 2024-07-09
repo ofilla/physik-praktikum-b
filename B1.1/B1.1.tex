@@ -673,7 +673,7 @@ Hierbei wird der Fehler des eingefüllten $\ce{CO_2}$--Volumens $\Delta V_{\ce{C
 \end{eqnarray}
 
 \noindent
-Die Transmissionswerte $T_\mathrm{mess}$ für die jeweiligen Konzentrationen ergeben sich dann aus den gemessenen Beleuchtungsstärken $I_{\ce{CO_2}}$ und der Beleuchtungsstärke ohne $\ce{CO_2}$ $I_0$ unmittelbar vor der jeweiligen Messung. Auch hier folgt der Fehler wieder aus Gauß'scher Fehlerfortpflanzung. Die Ergebnisse sind in Tabelle \ref{table:konzentrationen} dargestellt.
+Die Transmissionswerte $T_\mathrm{mess}$ für die jeweiligen Konzentrationen ergeben sich dann aus den gemessenen Beleuchtungsstärken $I_{\ce{CO_2}}$ und der Beleuchtungsstärke ohne $\ce{CO_2}$ $I_0$ unmittelbar vor der jeweiligen Messung. Auch hier folgt der Fehler wieder aus Gauß'scher Fehlerfortpflanzung. %Die Ergebnisse sind in Tabelle \ref{table:konzentrationen} dargestellt, die gemessenen Werte in Abbildung \ref{fig:Konzentrationskalibrierung Daten}.
 
 \begin{eqnarray}
 	T_\mathrm{mess} &=& \frac{I_{\ce{CO_2}}}{I_0} \\
@@ -688,6 +688,18 @@ Die Transmissionswerte $T_\mathrm{mess}$ für die jeweiligen Konzentrationen erg
 				\right)^2
 			}
 \end{eqnarray}
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../media/B1.1/Konzentrationskalibrierung_data_1.pdf}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../media/B1.1/Konzentrationskalibrierung_data_2.pdf}
+	\end{minipage}
+	\caption{Messwerte der Konzentrationskalibrierung}
+	\label{fig:Konzentrationskalibrierung Daten}
+\end{figure}
 
 \begin{table}[h!]
 	\centering
@@ -721,7 +733,7 @@ Die Transmissionswerte $T_\mathrm{mess}$ für die jeweiligen Konzentrationen erg
 \noindent
 Die zu den Konzentrationen passenden Transmissionswerte sind inklusive eines Fits zusätzlich in Abbildung \ref{abb:tkFit} dargestellt. Der Fit für diese Transmissionswerte $T_\mathrm{fit}(C)$ ergibt sich aus der Lambert--Beer--Gauß--Funktion \eqref{eq:Lambert-Beer-Gauß}.
 
-Das Integral in dieser Funktion wurde für Werte von $\nu_1 = -10$ und $\nu_2 = 10$ als Summe über Schrittweite multipliziert mit Funktionswert angenähert, wobei die Schrittweite konstant ist mit $s_\nu = 0.01$. Hierfür wurden $\nu_0 = 0$ und $\Delta \nu = 1$ gesetzt, sowie ein zusätzlicher Fit--Parameter $px$ eingebaut. Daraus lassen sich die relativen Transmissionen $T_\mathrm{rel}(C)$ bestimmen.
+Das Integral in dieser Funktion wurde für Werte von $\nu_1 = -10$ und $\nu_2 = 10$ als Summe über die Schrittweite multipliziert mit dem Funktionswert angenähert, wobei die Schrittweite konstant $s_\nu = 0.01$ ist. Hierfür wurden $\nu_0 = 0$ und $\Delta \nu = 1$ gesetzt, sowie ein zusätzlicher Fit--Parameter $px$ eingebaut. Daraus lassen sich die relativen Transmissionen $T_\mathrm{rel}(C)$ bestimmen.
 
 \begin{eqnarray}
 	T_\mathrm{fit}(C) &=& \frac{I(C)}{I_0} \\
@@ -746,8 +758,8 @@ Das Integral in dieser Funktion wurde für Werte von $\nu_1 = -10$ und $\nu_2 = 
 Für einen passenden Fit müssen die $T_\mathrm{rel}(C)$ um einen Faktor $F$ gestaucht und um einen Offset $O$ verschoben werden. Der Offset $O$ entspricht dem gemessenen Transmissionswert bei $100\%$ $\ce{CO_2}$, der Faktor $F$ entspricht dem Absorptionswert im selben Zustand.
 
 \begin{eqnarray}
-	\tilde{T}_\mathrm{rel}(C) &=& F \cdot T_{rel}(C) + O \\
-	O &=& T_{mess}(100\%) \\
+	\tilde{T}_\mathrm{rel}(C) &=& F \cdot T_\mathrm{rel}(C) + O \\
+	O &=& T_\mathrm{mess}(100\%) \\
 	F &=& 1 - O
 \end{eqnarray}
 
@@ -957,29 +969,23 @@ Die driftkorrigierte Kurve wird mit $f(t)$ gefittet. $c$ ist der Wert, den die F
 \end{eqnarray}
 
 \noindent
-Zum Fitten wird das \code{Julia}--Paket \code{LsqFit} \cite{Julia:LsqFit} verwendet. Damit ergibt sich eine Zeitkonstante von ca. $23.7\mathrm{\,s}$. Der Fit ist in Abbildung \ref{abb:Fit für verschiedene tau} dargestellt.
+Zum Fitten wird das \code{Julia}--Paket \code{LsqFit} \cite{Julia:LsqFit} verwendet. Damit ergibt sich eine Zeitkonstante von ca. $9.901 \mathrm{\,s}$. Der Fit ist in Abbildung \ref{abb:Gefittete Messkurve} dargestellt.
 
 \begin{eqnarray}
-	\tau &=& (23.71 \pm 0.24)\mathrm{\,s}
+	\tau &=& 9.901 \mathrm{\,s}
 \end{eqnarray}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{../media/B1.1/ZeitkonstJulia.pdf}
-	\caption{Gefittete Messkurve}
+	\begin{minipage}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{../media/B1.1/Zeitkonstante-zoomed.pdf}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+	\includegraphics[width=\textwidth]{../media/B1.1/Zeitkonstante.pdf}
+\end{minipage}
+	\caption{Gefittete Messkurve, links auf die ersten $50\mathrm{\,s}$ beschränkt,\\
+		rechts für alle Messwerte}
 	\label{abb:Gefittete Messkurve}
-\end{figure}
-
-\noindent
-Die gefittete Kurve steigt im Vergleich zu den Messdaten zu langsam an, auch wenn der stationäre Zustand sich bereits nach ca. $120\mathrm{\,s}$ eingestellt hat. Erst im stationären Zustand ist eine Beschreibung durch den Fit sinnvoll.
-
-Zudem wurde manuell verschiedene Werte für $\tau$ ausprobiert. Hier fällt auf, dass der Anstieg nie richtig übereinstimmt. Entweder ist er zu langsam wie in Abbildung \ref{abb:Gefittete Messkurve} oder ist zu Beginn zu schnell und dann wieder zu langsam. Dieses Verhalten ist in Abbildung \ref{abb:Fit für verschiedene tau} zu sehen.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\textwidth]{../media/B1.1/versZeitkonst.pdf}
-	\caption{Fit--Kurve für verschiedene $\tau$}
-	\label{abb:Fit für verschiedene tau}
 \end{figure}
 
 \subsection{Optische Emission}
