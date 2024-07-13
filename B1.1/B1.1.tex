@@ -139,7 +139,7 @@ Isaac Newton entdeckte bereits im $17.$ Jahrhundert die Spektralfarben des Licht
 Ein wichtiges Konzept der Spektroskopie ist das Licht. Es kann auf zwei Arten beschrieben werden, als Welle mit einer Wellenlänge $\lambda$ bzw. Frequenz $\nu$ und als Teilchen. Dieses Lichtteilchen nennt man Photonen. Aufgrund dessen werden beide Betrachtungsweisen gemeinsam als ``Welle--Teilchen--Dualismus'' bezeichnet. Die Energie $E$ einer elektromagnetischen Welle kann durch die Frequenz $\nu$ und das Planck'sche Wirkungsquantum $h$ beschrieben werden, das Verhältnis zwischen Frequenz und Wellenlänge durch die Lichtgeschwindigkeit $c$
 
 \begin{eqnarray}
-	E &=& h \cdot \nu \\
+	E &=& h \cdot \nu \label{eq:Energie Photon} \\
 	c &=& \nu\lambda \\
 	h &\approx& 6.63 \cdot 10^{-34} \mathrm{\,Js}
 \end{eqnarray}
@@ -294,7 +294,7 @@ Ein rotierendes zweiatomiges Molekül lässt sich als linearer starrer Rotor bet
 Seine quantenmechanischen Energieniveaus $E_J$ sind durch den Eigenwert des Drehimpulsoperators $\hat J$ und die Rotationskonstante $\tilde{B}$ bestimmt. $\tilde{B}$  wiederum wird durch das Trägheitsmoment $I$ und das reduzierte Planck'sche Wirkungsquantum $\hbar$ dargestellt.
 
 \begin{eqnarray}
-	E_J &=& \tilde{B} J (J + 1) \\
+	E_J &=& \tilde{B} J (J + 1) \label{eq:Energie rotiertes Dipolmoment} \\
 	\tilde{B} &=& \frac{\hbar^2}{2 I}
 \end{eqnarray}
 
@@ -311,7 +311,7 @@ Durch diese Schwingungen ist es möglich, $\ce{CO_2}$--Dipolübergänge im Infra
 \hypertarget{Rotationsbande}{\subsubsection{Rotationsbande}\label{Rotationsbande}}
 In Abbildung \ref{fig:rotationsspektrumCO2} ist das Rotationsspektrum von CO$_2$ dargestellt, das bei einem Probendruck von einigen $\mathrm{\mu bar}$ aufgenommen wurde. Ein solches Spektrum wird auch \emph{Rotationsbande} genannt.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\textwidth]{../media/B1.1/Rotationssprektrum_CO2.png}
 	\caption{Rotationsspektrum von $\ce{CO_2}$ bei einem Probendruck von einigen $\mathrm{\mu bar}$,\\
@@ -319,11 +319,30 @@ In Abbildung \ref{fig:rotationsspektrumCO2} ist das Rotationsspektrum von CO$_2$
 	\label{fig:rotationsspektrumCO2}
 \end{figure}
 
-Dieses lässt sich in einen P--Zweig (links) und in einen R--Zweig (rechts) aufteilen. Der P--Zweig beschreibt dabei die Auswahlregel $\Delta J = -1$ und der R--Zweig $\Delta J = +1$. Jede einzelne Linie im Spektrum stellt dann die Werte für $J$ dar, angefangen bei $0$ vom Bandenursprung nach außen hin zunehmend.
+Dieses lässt sich in einen P--Zweig (links) und in einen R--Zweig (rechts) aufteilen. Der P--Zweig beschreibt dabei die Auswahlregel $\Delta J = -1$ und der R--Zweig $\Delta J = +1$. Jede einzelne Linie im Spektrum stellt dann die Werte für $J$ dar, angefangen bei $0$ vom Bandenursprung nach außen hin zunehmend. Die Auswahlregel für $v$ ist dabei für beide Zweige $\Delta v = +1$, wie in Abschnitt \ref{uxfcbergangsdipolmoment} beschrieben wurde. Der Bandenursprung beschreibt dabei den Grundzustand mit Grundzustandsfrequenz $\nu_0$.
+
+Die Übergangsfrequenzen $\nu_{J, J+1}$ und $\nu_{J, J-1}$ und die Richtung des R-- bzw. P--Zweigs lassen sich der Energie. Die die Gesamtenergie eines  quantenmechanischen harmonischen Oszillators ist die Summe der Energie aus der Oszillation $E_\mathrm{osz}$ und der des Dipolmomentes im Magnetfeld $E_\mathrm{mag}$ \eqref{eq:Energie rotiertes Dipolmoment}. Die Energie des Photons $E_J$ \eqref{eq:Energie Photon} muss dieser entsprechen.
+
+\begin{eqnarray}
+	E_J &=& E_\mathrm{osz} + E_\mathrm{mag} \\
+	\Leftrightarrow\qquad h \nu_j &=& h \nu_0 \left(v + \frac{1}{2}\right) + \tilde{B} J (J + 1)
+\end{eqnarray}
+
+\noindent
+Die Übergangsfrequenzen ergeben sich dann aus der Differenz der Frequenz $\nu_J$ und $\nu_{J+1}$ bzw. $\nu_{J-1}$.
+
+\begin{eqnarray}
+	\nu_{J, J\pm1} &=& \nu_{J\pm1} - \nu_J \\
+	\nu_{J, J+1} &=& \nu_0 + 2 \frac{\tilde{B}}{h} (J+1) \\
+	\nu_{J, J-1} &=& \nu_0 - 2 \frac{\tilde{B}}{h} J
+\end{eqnarray}
+
+\noindent
+Für den R--Zweig entspricht die Abweichung $\Delta J = +1$ von der Grundzustandsfrequenz der reinen Vibration mit $\nu_0$, was den Bandenursprung beschreibt. Für den P--Zweig ist die Abweichung mit $\Delta J = -1$. Weiterhin ersichtlich ist die Äquidistanz aller Linien.
 
 Die Intensität jeder Linie hängt stark von $J$ ab und folgt der Boltzmann--Statistik. Das erklärt die unterschiedlichen Höhen der einzelnen Linien.
 
-Wird der Probendruck erhöht, erfolgt eine starke Linienverbreitung. Die einzelnen Linien folgen dann der Gestalt einer Lorentz--Kurve, die in Abbildung \ref{abb:Druckverbreiterung & Sättigungsverbreiterung} links dargestellt ist. Bei Zimmertemperatur beträgt der Druckverbreiterungskoeffizient ca. $0.3 \mathrm{\, cm^{-1}\cdot bar^{-1}}$. \cite{UzK}
+Wird der Probendruck erhöht, erfolgt zudem eine starke Linienverbreitung. Die einzelnen Linien folgen dann der Gestalt einer Lorentz--Kurve, die in Abbildung \ref{abb:Druckverbreiterung & Sättigungsverbreiterung} links dargestellt ist. Bei Zimmertemperatur beträgt der Druckverbreiterungskoeffizient ca. $0.3 \mathrm{\, cm^{-1}\cdot bar^{-1}}$ \cite{UzK}.
 
 Außerdem erfolgt eine Sättigungsverbreiterung bei höheren Konzentrationen von $\ce{CO_2}$. So erscheinen die Linien bei hohen Konzentrationen in Form einer Gauß--Glocke, wie es in Abbildung \ref{abb:Druckverbreiterung & Sättigungsverbreiterung} rechts zu sehen ist. Dieses Verhalten entsteht durch den Einfluss des im Folgenden besprochenen Lambert--Beer'schen Gesetzes für zunehmende Konzentration.
 
