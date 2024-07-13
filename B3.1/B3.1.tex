@@ -157,32 +157,46 @@ Eine \emph{Zufallsvariable} ist eine Funktion $X$, die jedem Ereignis $\omega$ e
 \end{eqnarray}
 
 \noindent
-Das Ereignis $\omega$ des Zufallsexperiments kann direkt eine Zahl sein, wie beispielsweise die Augenzahl eines Würfelwurfs. Alternativ kann jedem Ereignis des Zufallsexperiments eine Zahl zugeordnet werden, beispielsweise können bei einem Münzwurf dem Ereignis $\mathrm{Kopf}$ der Wert $0$ und dem Ereignis $\mathrm{Zahl}$ eine $1$ zugeordnet werden. Bei einem Zufallsexperiment, welches mehrfach wiederholt wird hingegen, liefert die Anzahl mit der ein bestimmtes Ereignis eintritt eine reelle Zahl.
+Das Ereignis $\omega$ des Zufallsexperiments kann direkt eine Zahl sein, wie beispielsweise die Augenzahl eines Würfelwurfs. Alternativ kann jedem Ereignis des Zufallsexperiments eine Zahl zugeordnet werden, beispielsweise können bei einem Münzwurf dem Ereignis $\mathrm{Kopf}$ der Wert $0$ und dem Ereignis $\mathrm{Zahl}$ eine $1$ zugeordnet werden.
+
+Bei einem Zufallsexperiment, welches mehrfach wiederholt wird hingegen, liefert die Anzahl mit der ein bestimmtes Ereignis eintritt eine reelle Zahl.
 
 \subsubsection{Wahrscheinlichkeitsdichte}
 \label{Wahrscheinlichkeitsdichte}
-Eine \textit{Wahrscheinlichkeitsdichte} (PDF\footnote{\emph{Probability Density Function}}) ist eine Funktion $f(y)$, welche die Wahrscheinlichkeit $\mathbb P$ angibt, dass eine Zufallsvariable $X$ einen Wert innerhalb eines Intervalls $[a,b]$ annimmt.
+Eine \textit{Wahrscheinlichkeitsdichte} (PDF\footnote{\emph{Probability Density Function}}) ist eine Funktion $f(x)$, welche die Wahrscheinlichkeit $\mathbb{P}$ angibt, dass eine Zufallsvariable $X$ einen Wert innerhalb eines Intervalls $[a,b]$ annimmt.
 
 \begin{eqnarray}
-	\int_{a}^{b} f(y) dy &=& \mathbb P(X(\omega) \in [a,b])
+	\int_{a}^{b} f(x) \dd{x} &=& \mathbb{P}(a \leq X \leq b)
 		\label{eq:wahrscheinlichkeitsdichte}
 \end{eqnarray}
 
 \noindent
-Die Wahrscheinlichkeitsdichte kann auch Werte über $1$ annehmen. Beispielsweise kann der Ort eines Punktteilchens durch eine $\delta$--Funktion beschrieben werden. Im Fall von diskreten Zufallsvariablen kann auch die Wahrscheinlichkeitsdichte diskret sein.
+Die Wahrscheinlichkeitsdichte kann auch Werte über $1$ annehmen. Beispielsweise kann der Ort eines Punktteilchens durch eine $\delta$--Funktion beschrieben werden.
+
+\subsubsection{Wahrscheinlichkeitsmassenfunktion}
+\label{Wahrscheinlichkeitsmassenfunktion}
+Im Fall von diskreten Zufallsvariablen wird die Wahrscheinlichkeitsdichte auch als Wahrscheinlichkeitsmassenfunktion (PMF\footnote{\emph{Probability Mass Function}}) bezeichnet. Diese Funktion $f(x)$ gibt die Wahrscheinlichkeit an, dass die Zufallsvariable $X$ genau den Wert $x$ annimmt.
 
 \begin{eqnarray}
-	f(y) &=& \mathbb P\left(x(\omega) = y\right)
+	f(x) &=& \mathbb{P}(X = x)
 \end{eqnarray}
 
-\subsubsection{Wahrscheinlichkeitsverteilung}
-\label{Wahrscheinlichkeitsverteilung}
-Eine \emph{Wahrscheinlichkeitsverteilungsfunktion} (CDF\footnote{\emph{Cumulative Distribution Function}, kumulative Verteilungsfunktion}) einer Zufallsvariable $X$ ist dagegen eine Funktion $F(y)$, die angibt mit welcher Wahrscheinlichkeit $\mathbb P$ die Zufallsvariable $X$ einen Wert kleiner gleich $y$ annimmt. Sie ist die integrierte Wahrscheinlichkeitsdichte $f(\omega)$, im diskreten Fall die Summe.
+\subsubsection{Wahrscheinlichkeitsverteilungsfunktion}
+\label{Wahrscheinlichkeitsverteilungsfunktion}
+Eine \emph{Wahrscheinlichkeitsverteilungsfunktion} (CDF\footnote{\emph{Cumulative Distribution Function}, kumulative Verteilungsfunktion}) einer Zufallsvariable $X$ ist dagegen eine Funktion $F(x)$, die angibt, mit welcher Wahrscheinlichkeit $\mathbb{P}$ die Zufallsvariable $X$ einen Wert kleiner oder gleich $x$ annimmt.
 
 \begin{eqnarray}
-	F(y) &=& \mathbb P(X(\omega) \leq y) \\
-	F(y) &=& \int_{- \infty}^{y} f(\tilde{y}) d\tilde{y} \\
-	F(y) &=& \sum_{y_i \leq y}^{} f(y_i)
+	F(x) &=& \mathbb{P}(X \leq x)
+\end{eqnarray}
+
+\noindent
+Sie ist die integrierte Wahrscheinlichkeitsdichte $f(x)$. Für kontinuierliche Zufallsvariablen ist dies durch das Integral gegeben.
+Für diskrete Zufallsvariablen wird die kumulative Verteilungsfunktion als Summe der Wahrscheinlichkeitsmassenfunktion dargestellt.
+
+\begin{eqnarray}
+	F(x) &=& \int_{- \infty}^{x} f(t) \dd{t} \\
+	F(x) &=& \sum_{x_i \leq x} f(x_i)
+		\label{eq:diskreteCDF}
 \end{eqnarray}
 
 \subsection{Wahrscheinlichkeitsverteilungen}
