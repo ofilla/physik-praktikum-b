@@ -288,14 +288,30 @@ Beispielsweise hat Kohlenstoffdioxid $\ce{CO_2}$ drei Normalschwingungen, die in
 	\label{abb:Normalschwingungen CO2}
 \end{figure}
 
-\subsubsection{Rotationsniveaus}
+\subsubsection{Rotations- und Vibrationsniveaus}
 Ein rotierendes zweiatomiges Molekül lässt sich als linearer starrer Rotor betrachten.
 
-Seine quantenmechanischen Energieniveaus $E_J$ sind durch den Eigenwert des Drehimpulsoperators $\hat J$ und die Rotationskonstante $\tilde{B}$ bestimmt. $\tilde{B}$  wiederum wird durch das Trägheitsmoment $I$ und das reduzierte Planck'sche Wirkungsquantum $\hbar$ dargestellt.
+Seine quantenmechanischen Energieniveaus $E_{J, \mathrm{rot}}$ sind durch den Eigenwert des Drehimpulsoperators $\hat J$ und die Rotationskonstante $\tilde{B}$ bestimmt. $\tilde{B}$  wiederum wird durch das Trägheitsmoment $I$ und das reduzierte Planck'sche Wirkungsquantum $\hbar$ dargestellt.
 
 \begin{eqnarray}
-	E_J &=& \tilde{B} J (J + 1) \label{eq:Energie rotiertes Dipolmoment} \\
+	E_{J, \mathrm{rot}} &=& \tilde{B} J (J + 1) \\
 	\tilde{B} &=& \frac{\hbar^2}{2 I}
+\end{eqnarray}
+
+\noindent
+Die Energieniveaus der Vibration eines zweiatomigen Moleküls folgen aus der Betrachtung des Harmonischen Oszillators mit der Frequenz des Grundzustandes der Vibration $\nu_0$ und der Vibrationsquantenzahl $v$.
+
+\begin{eqnarray}
+	E_{J, \mathrm{vib}} = h \nu_0\left(v + \frac{1}{2}\right)
+\end{eqnarray}
+
+\noindent
+Der Vibrationsgrundzustand hat im Gegensatz zum Rotationsgrundzustand eine von null verschiedene Energie.
+
+Die Energieniveaus des Gesamtzustandes ergeben sich dementsprechend aus der Summe von Rotations- und Vibrationszuständen.
+
+\begin{eqnarray}
+	E_\mathrm{rot,vib}(J,v) = h \nu_0 \left(v + \frac{1}{2}\right) + \tilde{B} J (J + 1) \label{eq:E rot,vib}
 \end{eqnarray}
 
 \noindent
@@ -321,11 +337,11 @@ In Abbildung \ref{fig:rotationsspektrumCO2} ist das Rotationsspektrum von CO$_2$
 
 Dieses lässt sich in einen P--Zweig (links) und in einen R--Zweig (rechts) aufteilen. Der P--Zweig beschreibt dabei die Auswahlregel $\Delta J = -1$ und der R--Zweig $\Delta J = +1$. Jede einzelne Linie im Spektrum stellt dann die Werte für $J$ dar, angefangen bei $0$ vom Bandenursprung nach außen hin zunehmend. Die Auswahlregel für $v$ ist dabei für beide Zweige $\Delta v = +1$, wie in Abschnitt \ref{uxfcbergangsdipolmoment} beschrieben wurde. Der Bandenursprung beschreibt dabei den Grundzustand mit Grundzustandsfrequenz $\nu_0$.
 
-Die Übergangsfrequenzen $\nu_{J, J+1}$ und $\nu_{J, J-1}$ und die Richtung des R-- bzw. P--Zweigs lassen sich der Energie. Die die Gesamtenergie eines  quantenmechanischen harmonischen Oszillators ist die Summe der Energie aus der Oszillation $E_\mathrm{osz}$ und der des Dipolmomentes im Magnetfeld $E_\mathrm{mag}$ \eqref{eq:Energie rotiertes Dipolmoment}. Die Energie des Photons $E_J$ \eqref{eq:Energie Photon} muss dieser entsprechen.
+Die Übergangsfrequenzen $\nu_{J, J+1}$ und $\nu_{J, J-1}$ und die Richtung des R-- bzw. P--Zweigs lassen sich der Gesamtenergie $E_\mathrm{rot,vib}$ \eqref{eq:E rot,vib} herleiten, der dieEnergie des Photons $E_J$ \eqref{eq:Energie Photon} dieser entsprechen muss.
 
 \begin{eqnarray}
-	E_J &=& E_\mathrm{osz} + E_\mathrm{mag} \\
-	\Leftrightarrow\qquad h \nu_j &=& h \nu_0 \left(v + \frac{1}{2}\right) + \tilde{B} J (J + 1)
+	E_J &=& E_\mathrm{rot,vib} \\
+	h \nu_j &=& h \nu_0 \left(v + \frac{1}{2}\right) + \tilde{B} J (J + 1)
 \end{eqnarray}
 
 \noindent
@@ -366,17 +382,37 @@ Das Lambert--Beer'sche Gesetz beschreibt die transmittierte Intensität $I$ in A
 \end{eqnarray}
 
 \noindent
-Dabei sind der für jedes Molekül charakteristische Absorptionskoeffizient $\alpha$ , die Konzentration $C$ der absorbierenden Moleküle in einer homogenen Probe und die Dicke $x$ dieser Probe relevant.
+Dabei sind der charakteristische Absorptionskoeffizient $\alpha$, die Konzentration $C$ der absorbierenden Moleküle in einer homogenen Probe und die Dicke $x$ dieser Probe relevant.
 
-Mithilfe dieses Gesetzes lässt sich die Lambert--Beer--Gauß--Formel \eqref{eq:Lambert-Beer-Gauß} herleiten. Sie entsteht, wenn die gesamte transmittierte Intensität $I(C)$ von eintreffenden elektromagnetischen Wellen aller Frequenzen im Intervall $[\nu_1, \nu_2]$ gesucht wird.
+Mithilfe dieses Gesetzes lässt sich die Lambert--Beer--Gauß--Formel \eqref{eq:Lambert-Beer-Gauß} herleiten. Diese Formel beschreibt die gesamte transmittierte Intensität $I(C)$ von elektromagnetischen Wellen aller Frequenzen im Intervall $[\nu_1, \nu_2]$.
 
-Diese Formel ergibt sich aus dem Integral über das Lambert--Beer'sche Gesetz, wobei die Frequenzabhängigkeit des Absorptionskoeffizienten $\alpha(\nu)$ relevant ist. Dafür wird hier eine Gaußverteilung angenommen,
+Sie bildet das Integral des Lambert--Beer'schen Gesetzes. Dabei wird die Frequenzabhängigkeit des Absorptionskoeffizienten $\alpha(\nu)$ als gaußverteilt angenommen.
 
 \begin{eqnarray}
-	%I(C) &=& I_0 \int_{\nu_1}^{\nu_2} \exp[-\alpha(\nu^\prime) C x] \,\mathrm d\nu^\prime \\
 	\alpha(\nu) &=& \alpha_0 \exp[- \left(\frac{\nu - \nu_0}{\Delta \nu}\right)^2] \\
 	I(C) &=& I_0 \int_{\nu_1}^{\nu_2} \exp[-\alpha_0 \exp \left[- \left(\frac{\nu' - \nu_0}{\Delta \nu}\right)^2\right] C x] d\nu' \label{eq:Lambert-Beer-Gauß}
 \end{eqnarray}
+
+\noindent
+In der Auswertung dieses Versuches werden in Abschnitt \ref{Konzentrationskalibrierung} gemessene Transmissionswerte $T$ verschiedener $\ce{CO_2}$--Konzentrationen $C$ an diese Formel gefittet, wozu sie vereinfacht werden kann.
+
+Dazu werden eine Gaußverteilung der Breite $\Delta \nu=1\mathrm{\,Hz}$ angenommen. Der Grundabsorptionskoeffizient $\alpha_0$ wird als Fitparameter $px$ dargestellt, weiterhin wird der Bandenursprung auf die Frequenz $\nu_0=0\mathrm{\,Hz}$ gesetzt.
+
+\begin{eqnarray}
+	T(C) &=& \frac{I(C)}{I_0} \\
+		&=& \int_{\nu_1}^{\nu_2} \exp[- px \cdot C \cdot e^{- \nu^{\prime\,2}}] d\nu^\prime
+\end{eqnarray}
+
+\noindent
+Daraufhin wird das Integral durch eine Summe angenähert. Dazu wird eine konstante Schrittweite $s_\nu$ genutzt, die vor die Summe gezogen wird.
+
+\begin{eqnarray}
+	T(C) &\approx& s_\nu \sum_{\nu = \nu_1}^{\nu_2} \exp[- px \cdot C \cdot e^{-\nu^2}]
+		\label{eq:Lambert-Beer-Gauß_vereinfacht}
+\end{eqnarray}
+
+\noindent
+Durch die Wahl des Bandenursprungs $\nu_0=0\mathrm{\,Hz}$ ist das zu betrachtende Intervall beliebig, so lange es symmetrisch um $0\mathrm{\,Hz}$ liegt und fast die ganze Fläche der in der Summe auftauchenden Exponentialfunktion betrachtet. Um die Näherung zu rechtfertigen, muss die Schrittweite $s_\nu$ klein sein.
 
 \subsection{pyroelektrischer Sensor}
 Ein pyroelektrischer Sensor wandelt Temperaturunterschiede durch den \emph{pyroelektrischen Effekt}\footnote{verwandt mit dem piezoelektrischen Effekt} in Spannungen um.
@@ -655,22 +691,21 @@ Dazu wird der Mittelwert $m$ gebildet. Der Fehler $\Delta m$ wird durch die mitt
 
 \subsection{Konzentrationskalibrierung}
 \label{Konzentrationskalibrierung}
-
-In diesem Teil wird die relative Transmission von $\ce{CO_2}$ bestimmt. Dazu werden zunächst die unterschiedlichen $\ce{CO_2}$--Volumina $V_{\ce{CO_2}}$ in der Messzelle in Konzentrationen $K_{\ce{CO_2}}$ umgerechnet. Dazu muss das wird das Gesamtvolumen der Zelle $V_\mathrm{Zelle}$ aus den Abmessungen der Zelle bestimmt werden. Den Fehler erhält man aus der Gauß'schen Fehlerfortpflanzung.
+In Abschnitt wird die relative Transmission von $\ce{CO_2}$ bestimmt. Dazu werden zunächst die unterschiedlichen $\ce{CO_2}$--Volumina $V_{\ce{CO_2}}$ in der Messzelle in Konzentrationen $K_{\ce{CO_2}}$ umgerechnet. Dazu muss das wird das Gesamtvolumen der Zelle $V_\mathrm{Zelle}$ aus den Abmessungen der Zelle bestimmt werden. Den Fehler erhält man aus der Gauß'schen Fehlerfortpflanzung.
 
 \begin{eqnarray}
 	h_\mathrm{Zelle} &=& (15.0 \pm 0.5) \mathrm{\, cm} \\
 	d_\mathrm{Zelle} &=& (3.930 \pm 0.005) \mathrm{\, cm} \\
 	V_\mathrm{Zelle} &=& \frac{\pi}{4} \cdot h_\mathrm{Zelle} \cdot d_\mathrm{Zelle}^{\,2} \\
 	\Delta V_\mathrm{Zelle}
-		&=& \sqrt{
-				\left(
-					\frac{\pi}{4} \cdot \Delta h_\mathrm{Zelle}  \cdot d_\mathrm{Zelle}^{\,2}
-				\right)^2
-				+ \left(
-					\frac{\pi}{2} \cdot h_\mathrm{Zelle} \cdot d_\mathrm{Zelle}\cdot \Delta d_\mathrm{Zelle}
-				\right)^2
-			} \\
+	&=& \sqrt{
+		\left(
+			\frac{\pi}{4} \cdot \Delta h_\mathrm{Zelle}  \cdot d_\mathrm{Zelle}^{\,2}
+		\right)^2
+		+ \left(
+			\frac{\pi}{2} \cdot h_\mathrm{Zelle} \cdot d_\mathrm{Zelle}\cdot \Delta d_\mathrm{Zelle}
+		\right)^2
+	} \\
 	V_\mathrm{Zelle} &=& (181.96 \pm 6.08) \mathrm{\, ml}
 \end{eqnarray}
 
@@ -681,14 +716,14 @@ Hierbei wird der Fehler des eingefüllten $\ce{CO_2}$--Volumens $\Delta V_{\ce{C
 \begin{eqnarray}
 	K_{\ce{CO_2}} &=& \frac{V_{\ce{CO_2}}}{V_\mathrm{Zelle}} \\
 	\Delta K_{\ce{CO_2}}
-		&=& \sqrt{
-				\left(
-					\frac{\Delta V_{\ce{CO_2}}}{V_\mathrm{Zelle}}
-				\right)^2
-				+ \left(
-					\frac{V_{\ce{CO_2}} \cdot \Delta V_\mathrm{Zelle}}{V_\mathrm{Zelle}^2
-				}\right)^2
-			}
+	&=& \sqrt{
+		\left(
+		\frac{\Delta V_{\ce{CO_2}}}{V_\mathrm{Zelle}}
+		\right)^2
+		+ \left(
+		\frac{V_{\ce{CO_2}} \cdot \Delta V_\mathrm{Zelle}}{V_\mathrm{Zelle}^2
+		}\right)^2
+	}
 \end{eqnarray}
 
 \noindent
@@ -697,15 +732,15 @@ Die Transmissionswerte $T_\mathrm{mess}$ für die jeweiligen Konzentrationen erg
 \begin{eqnarray}
 	T_\mathrm{mess} &=& \frac{I_{\ce{CO_2}}}{I_0} \\
 	\Delta T_\mathrm{mess}
-		&=&
-			\sqrt{
-				\left(
-					\frac{\Delta I_{\ce{CO_2}}}{I_0}
-				\right)^2
-				+ \left(
-					\frac{I_{\ce{CO_2}} \cdot \Delta I_0}{I_0^2}
-				\right)^2
-			}
+	&=&
+	\sqrt{
+		\left(
+		\frac{\Delta I_{\ce{CO_2}}}{I_0}
+		\right)^2
+		+ \left(
+		\frac{I_{\ce{CO_2}} \cdot \Delta I_0}{I_0^2}
+		\right)^2
+	}
 \end{eqnarray}
 
 \begin{figure}[h!]
@@ -724,10 +759,10 @@ Die Transmissionswerte $T_\mathrm{mess}$ für die jeweiligen Konzentrationen erg
 	\centering
 	\begin{tabular}{l|c|c|c|c}
 		$V$ $[\mathrm{ml}]$
-			& $K$ $[\%]$
-			& $I_{\ce{CO_2}}$ $[10^{-2} \mathrm{\, W/m^2}]$
-			& $I_0$ $[10^{-2} \mathrm{\, W/m^2}]$
-			& $T_\mathrm{mess}$ $[\%]$ \\
+		& $K$ $[\%]$
+		& $I_{\ce{CO_2}}$ $[10^{-2} \mathrm{\, W/m^2}]$
+		& $I_0$ $[10^{-2} \mathrm{\, W/m^2}]$
+		& $T_\mathrm{mess}$ $[\%]$ \\
 		\hline
 		$0$ & $0$ 							 & $91.470 \pm 0.011$ & $91.470 \pm 0.011$ & $1$ \\
 		$1$ & $0.55 \pm 0.06$	  & $61.891 \pm 0.009$ & $91.470 \pm 0.011$ & $67.663 \pm 0.013$ \\
@@ -750,19 +785,15 @@ Die Transmissionswerte $T_\mathrm{mess}$ für die jeweiligen Konzentrationen erg
 \end{table}
 
 \noindent
-Die zu den Konzentrationen passenden Transmissionswerte sind inklusive eines Fits zusätzlich in Abbildung \ref{abb:tkFit} dargestellt. Der Fit für diese Transmissionswerte $T_\mathrm{fit}(C)$ ergibt sich aus der Lambert--Beer--Gauß--Funktion \eqref{eq:Lambert-Beer-Gauß}.
-
-Das Integral in dieser Funktion wurde für Werte von $\nu_1 = -10$ und $\nu_2 = 10$ als Summe über die Schrittweite multipliziert mit dem Funktionswert angenähert, wobei die Schrittweite konstant $s_\nu = 0.01$ ist. Hierfür wurden $\nu_0 = 0$ und $\Delta \nu = 1$ gesetzt, sowie ein zusätzlicher Fit--Parameter $px$ eingebaut. Daraus lassen sich die relativen Transmissionen $T_\mathrm{rel}(C)$ bestimmen.
+Die zu den Konzentrationen passenden Transmissionswerte sind inklusive eines Fits in Abbildung \ref{abb:tkFit} dargestellt. Der Fit für diese Transmissionswerte $T_\mathrm{fit}(C)$ ergibt sich aus der vereinfachten Lambert--Beer--Gauß--Funktion \eqref{eq:Lambert-Beer-Gauß_vereinfacht}. Dafür wurden Werte von $\nu_1 = -10\mathrm{\,Hz}$ und $\nu_2 = 10\mathrm{\,Hz}$ sowie eine Schrittweite $s_\nu = 0.01\mathrm{\,Hz}$ verwendet. Die relativen Transmissionen $T_\mathrm{rel}(C)$ lassen sich dann direkt aus der Fitfunktion bestimmen.
 
 \begin{eqnarray}
-	T_\mathrm{fit}(C) &=& \frac{I(C)}{I_0} \\
-		&=& s_\nu \sum_{\nu = -10}^{10} \exp[- px \cdot C \cdot \mathrm e^{-\nu^2}] \\
 	T_\mathrm{rel}(C)
-		&=& \frac{
-				T_\mathrm{fit}(C) - T_\mathrm{fit}(100\%)
-			}{
-				T_\mathrm{fit}(0\%) - T_\mathrm{fit}(100\%)
-			}
+	&=& \frac{
+		T_\mathrm{fit}(C) - T_\mathrm{fit}(100\%)
+	}{
+		T_\mathrm{fit}(0\%) - T_\mathrm{fit}(100\%)
+	}
 \end{eqnarray}
 
 \begin{figure}[h]
@@ -783,7 +814,7 @@ Für einen passenden Fit müssen die $T_\mathrm{rel}(C)$ um einen Faktor $F$ ges
 \end{eqnarray}
 
 \noindent
-Zuletzt wurde der Fit--Parameter $px$ so angepasst, dass die Kurve möglichst gut mit Messwerten übereinstimmt. Dies ist für $px = 10^3$ der Fall.
+Zuletzt wurde der Fit--Parameter $px$ auf die Messwerte angepasst, was zu $px = 10^3$ führt.
 
 Aufgrund der Form der Fit--Kurve ist die Empfindlichkeit des Spektrometers für kleine Konzentrationen größer, da dort bereits minimale Konzentrationsänderungen zu sichtbaren Änderungen des Transmissionswertes führen.
 
