@@ -399,23 +399,23 @@ Sie bildet das Integral des Lambert--Beer'schen Gesetzes. Dabei wird die Frequen
 \noindent
 In der Auswertung dieses Versuches werden in Abschnitt \ref{Konzentrationskalibrierung} gemessene Transmissionswerte $T$ verschiedener $\ce{CO_2}$--Konzentrationen $C$ an diese Formel gefittet, wozu sie vereinfacht werden kann.
 
-Dazu werden eine Gaußverteilung der Breite $\Delta \nu=1\mathrm{\,Hz}$ angenommen. Der Grundabsorptionskoeffizient $\alpha_0$ wird als Fitparameter $px$ dargestellt, weiterhin wird der Bandenursprung auf die Frequenz $\nu_0=0\mathrm{\,Hz}$ gesetzt.
+Dazu werden eine Gaußverteilung der Breite $\Delta \nu=1\mathrm{\,THz}$ angenommen. Der Grundabsorptionskoeffizient $\alpha_0$ mal die Dicke der Probe $x$ wird als dimensionsloser Fitparameter $px$ dargestellt, weiterhin wird der Bandenursprung auf die Frequenz $\nu_0=0\mathrm{\,THz}$ gesetzt.
 
 \begin{eqnarray}
 	T(C) &=& \frac{I(C)}{I_0} \\
-		&=& \int_{\nu_1}^{\nu_2} \exp[- px \cdot C \cdot e^{- \nu^{\prime\,2}}] d\nu^\prime
+		&=& \int_{\nu_1}^{\nu_2} \exp[- px \cdot C \cdot \exp(- \left(\frac{\nu^{\prime}}{\Delta \nu}\right)^2)] d\nu^\prime
 \end{eqnarray}
 
 \noindent
 Daraufhin wird das Integral durch eine Summe angenähert. Dazu wird eine konstante Schrittweite $s_\nu$ genutzt, die vor die Summe gezogen wird.
 
 \begin{eqnarray}
-	T(C) &\approx& s_\nu \sum_{\nu = \nu_1}^{\nu_2} \exp[- px \cdot C \cdot e^{-\nu^2}]
+	T(C) &\approx& s_\nu \sum_{\nu = \nu_1}^{\nu_2} \exp[- px \cdot C \cdot \exp(-\left(\frac{\nu}{\Delta \nu}\right)^2)]
 		\label{eq:Lambert-Beer-Gauß_vereinfacht}
 \end{eqnarray}
 
 \noindent
-Durch die Wahl des Bandenursprungs $\nu_0=0\mathrm{\,Hz}$ ist das zu betrachtende Intervall beliebig, so lange es symmetrisch um $0\mathrm{\,Hz}$ liegt und fast die ganze Fläche der in der Summe auftauchenden Exponentialfunktion betrachtet. Um die Näherung zu rechtfertigen, muss die Schrittweite $s_\nu$ klein sein.
+Durch die Wahl des Bandenursprungs $\nu_0=0\mathrm{\,THz}$ ist das zu betrachtende Intervall beliebig, so lange es symmetrisch um $0\mathrm{\,THz}$ liegt und fast die ganze Fläche der in der Summe auftauchenden Exponentialfunktion betrachtet. Um die Näherung zu rechtfertigen, muss die Schrittweite $s_\nu$ klein sein.
 
 \subsection{pyroelektrischer Sensor}
 Ein pyroelektrischer Sensor wandelt Temperaturunterschiede durch den \emph{pyroelektrischen Effekt}\footnote{verwandt mit dem piezoelektrischen Effekt} in Spannungen um.
@@ -694,7 +694,7 @@ Dazu wird der Mittelwert $m$ gebildet. Der Fehler $\Delta m$ wird durch die mitt
 
 \subsection{Konzentrationskalibrierung}
 \label{Konzentrationskalibrierung}
-In Abschnitt wird die relative Transmission von $\ce{CO_2}$ bestimmt. Dazu werden zunächst die unterschiedlichen $\ce{CO_2}$--Volumina $V_{\ce{CO_2}}$ in der Messzelle in Konzentrationen $K_{\ce{CO_2}}$ umgerechnet. Dazu muss das wird das Gesamtvolumen der Zelle $V_\mathrm{Zelle}$ aus den Abmessungen der Zelle bestimmt werden. Den Fehler erhält man aus der Gauß'schen Fehlerfortpflanzung.
+In diesem Abschnitt wird die relative Transmission von $\ce{CO_2}$ bestimmt. Dazu werden zunächst die unterschiedlichen $\ce{CO_2}$--Volumina $V_{\ce{CO_2}}$ in der Messzelle in Konzentrationen $K_{\ce{CO_2}}$ umgerechnet. Dazu muss das wird das Gesamtvolumen der Zelle $V_\mathrm{Zelle}$ aus den Abmessungen der Zelle bestimmt werden. Den Fehler erhält man aus der Gauß'schen Fehlerfortpflanzung.
 
 \begin{eqnarray}
 	h_\mathrm{Zelle} &=& (15.0 \pm 0.5) \mathrm{\, cm} \\
@@ -788,7 +788,7 @@ Die Transmissionswerte $T_\mathrm{mess}$ für die jeweiligen Konzentrationen erg
 \end{table}
 
 \noindent
-Die zu den Konzentrationen passenden Transmissionswerte sind inklusive eines Fits in Abbildung \ref{abb:tkFit} dargestellt. Der Fit für diese Transmissionswerte $T_\mathrm{fit}(C)$ ergibt sich aus der vereinfachten Lambert--Beer--Gauß--Funktion \eqref{eq:Lambert-Beer-Gauß_vereinfacht}. Dafür wurden Werte von $\nu_1 = -10\mathrm{\,Hz}$ und $\nu_2 = 10\mathrm{\,Hz}$ sowie eine Schrittweite $s_\nu = 0.01\mathrm{\,Hz}$ verwendet. Die relativen Transmissionen $T_\mathrm{rel}(C)$ lassen sich dann direkt aus der Fitfunktion bestimmen.
+Die zu den Konzentrationen passenden Transmissionswerte sind inklusive eines Fits in Abbildung \ref{abb:tkFit} dargestellt. Der Fit für diese Transmissionswerte $T_\mathrm{fit}(C)$ ergibt sich aus der vereinfachten Lambert--Beer--Gauß--Funktion \eqref{eq:Lambert-Beer-Gauß_vereinfacht}. Dafür wurden Werte von $\nu_1 = -10\mathrm{\,THz}$ und $\nu_2 = 10\mathrm{\,THz}$ sowie eine Schrittweite $s_\nu = 0.01$ verwendet. Die relativen Transmissionen $T_\mathrm{rel}(C)$ lassen sich dann direkt aus der Fitfunktion bestimmen.
 
 \begin{eqnarray}
 	T_\mathrm{rel}(C)
