@@ -161,9 +161,9 @@ Das Ereignis $\omega$ des Zufallsexperiments kann direkt eine Zahl sein, wie bei
 
 Bei einem Zufallsexperiment, welches mehrfach wiederholt wird hingegen, liefert die Anzahl mit der ein bestimmtes Ereignis eintritt eine reelle Zahl.
 
-\subsubsection{Wahrscheinlichkeitsfunktion}
+\subsubsection{Wahrscheinlichkeitsdichte}
 \label{Wahrscheinlichkeitsdichte}
-Eine \textit{Wahrscheinlichkeitsdichte} (PDF\footnote{\emph{Probability Density Function}}) oder Wahrscheinlichkeitsfunktion ist eine Funktion $f(x)$, welche die Wahrscheinlichkeit $\mathbb{P}$ angibt, dass eine Zufallsvariable $X$ einen Wert innerhalb eines Intervalls $[a,b]$ annimmt.
+Eine \textit{Wahrscheinlichkeitsdichte} (PDF\footnote{\emph{Probability Density Function}}) $f(x)$ bestimmt die Wahrscheinlichkeit $\mathbb{P}$, dass eine kontinuierliche Zufallsvariable $X$ einen Wert innerhalb eines Intervalls $[a,b]$ annimmt.
 
 \begin{eqnarray}
 	\int_{a}^{b} f(x) \dd{x} &=& \mathbb{P}(a \leq X \leq b)
@@ -173,9 +173,9 @@ Eine \textit{Wahrscheinlichkeitsdichte} (PDF\footnote{\emph{Probability Density 
 \noindent
 Die Wahrscheinlichkeitsdichte kann auch Werte über $1$ annehmen. Beispielsweise kann der Ort eines Punktteilchens durch eine $\delta$--Funktion beschrieben werden.
 
-\subsubsection{Wahrscheinlichkeitsmassenfunktion}
+\subsubsection{Wahrscheinlichkeitsfunktion}
 \label{Wahrscheinlichkeitsmassenfunktion}
-Im Fall von diskreten Zufallsvariablen wird die Wahrscheinlichkeitsfunktion als Wahrscheinlichkeitsmassenfunktion (PMF\footnote{\emph{Probability Mass Function}}) bezeichnet. Diese Funktion $f(x)$ gibt die Wahrscheinlichkeit an, dass die Zufallsvariable $X$ genau den Wert $x$ annimmt.
+Die Wahrscheinlichkeitsfunktion (PMF\footnote{\emph{Probability Mass Function}}) $f(x)$ gibt die Wahrscheinlichkeit an, dass eine diskrete Zufallsvariable $X$ genau den Wert $x$ annimmt.
 
 \begin{eqnarray}
 	f(x) &=& \mathbb{P}(X = x)
@@ -183,15 +183,14 @@ Im Fall von diskreten Zufallsvariablen wird die Wahrscheinlichkeitsfunktion als 
 
 \subsubsection{Wahrscheinlichkeitsverteilung}
 \label{Wahrscheinlichkeitsverteilungsfunktion}
-Eine \emph{kumulative Wahrscheinlichkeitsverteilungsfunktion} (CDF\footnote{\emph{Cumulative Distribution Function}, kumulative Verteilungsfunktion}) oder Wahrscheinlichkeitsverteilung einer Zufallsvariable $X$ ist dagegen eine Funktion $F(x)$, die angibt, mit welcher Wahrscheinlichkeit $\mathbb{P}$ die Zufallsvariable $X$ einen Wert kleiner oder gleich $x$ annimmt.
+Eine \emph{kumulative Wahrscheinlichkeitsverteilungsfunktion} (CDF\footnote{\emph{Cumulative Distribution Function}}) oder Wahrscheinlichkeitsverteilung einer Zufallsvariable $X$ ist dagegen eine Funktion $F(x)$, die angibt, mit welcher Wahrscheinlichkeit $\mathbb{P}$ die Zufallsvariable $X$ einen Wert kleiner oder gleich $x$ annimmt.
 
 \begin{eqnarray}
 	F(x) &=& \mathbb{P}(X \leq x)
 \end{eqnarray}
 
 \noindent
-Sie ist die integrierte Wahrscheinlichkeitsdichte $f(x)$. Für kontinuierliche Zufallsvariablen ist dies durch das Integral von $f(x)$ gegeben.
-Für diskrete Zufallsvariablen wird die kumulative Verteilungsfunktion als Summe der Wahrscheinlichkeitsmassenfunktion $f(x_i)$ dargestellt.
+Für kontinuierliche Zufallsvariablen die CDF $F(x)$ die integrierte PDF $f(x)$, für diskrete Zufallsvariablen die Summe der PMF $f(x_i)$.
 
 \begin{eqnarray}
 	F(x) &=& \int_{- \infty}^{x} f(t) \dd{t} \\
