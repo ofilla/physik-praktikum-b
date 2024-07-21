@@ -531,7 +531,29 @@ Die Umformung dieser Gleichung ermöglicht die Bestimmung der Wellenlängen $\la
 \end{eqnarray}
 
 \noindent
-Die gemessenen Stoppspannungen sind samt ermittelter Wellenlängen und Literaturwerten in Tabelle \ref{table:leds} dargestellt.
+Üblicherweise senden Leuchtdioden ein Spektrum von Licht aus, anstelle von monochromatischem Licht. In diesem Versuch wurde allerdings nur eine Wellenlänge pro Leuchtdiode bestimmt.
+
+Bei der Messung der Stoppspannung wird die maximale Energie gemessen, die ein ausgelöstes Elektron erhalten kann. Die schnellsten Elektronen werden durch die Photonen mit maximaler Energie erzeugt, also durch die mit der niedrigsten verfügbaren Wellenlänge.
+
+Die hier bestimmte Wellenlänge $\lambda$ ist daher die niedrigste Wellenlänge des jeweiligen LED--Spektrums. Üblicherweise ist ein solches Spektrum näherungsweise gaußverteilt. Damit liegen die Mittelwerte der Verteilungen bei einer größeren Wellenlänge als der hier bestimmten.
+
+Das Intervall $[\mu - 3 \sigma, \mu + 3 \sigma]$ umfasst ca. $99.7 \mathrm{\, \%}$ der enthaltenen Werte einer Gaußverteilung, wobei $\mu$ der Mittelwert und $\sigma$ die Standardabweichung der Verteilung sind. \cite{LambacherSchweizerGauß} Daher liegen die gemessenen minimalen Wellenlängen ca. $3 \sigma$ vom Mittelwert $\mu$ entfernt. Die Halbwertsbreite $\sigma_\mathrm{FWHM}$ der Verteilungen der Leuchtdioden beträgt etwa $30 \mathrm{\, nm}$ \cite{uni}. Daher wird hier der Wert $\sigma_\mathrm{FWHM}=(30\pm0.5)\mathrm{\,nm}$ angenommen.
+
+Die Standardabweichung $\sigma$ lässt daher mittels der Gleichungen \eqref{eq:halbwertsbreite} \cite{Halbwertsbreite} und \eqref{eq:halbwertsbreiteFehler} bestimmen, der Mittelwert $\mu$ durch \eqref{eq:mittelwertLEDs} und \eqref{eq:mittelwertLEDsFehler}. Die Fehler folgen aus der Gauß'schen Fehlerfortpflanzung.
+
+Die Ergebnisse sind in Tabelle \ref{table:leds} dargestellt.
+
+
+\begin{eqnarray}
+	\sigma_\mathrm{FWHM} &=& 2 \sqrt{2 \ln{2}} \cdot \sigma
+		\label{eq:halbwertsbreite} \\
+	\Delta \sigma &=& \frac{\Delta \sigma_\mathrm{FWHM}}{2 \sqrt{2 \ln{2}}}
+		\label{eq:halbwertsbreiteFehler} \\
+	\mu &=& \lambda + 3 \sigma
+		\label{eq:mittelwertLEDs} \\
+	\Delta \mu &=& \sqrt{\left(\Delta \lambda\right)^2 + \left(3 \cdot \Delta \sigma \right)^2}
+		\label{eq:mittelwertLEDsFehler}
+\end{eqnarray}
 
 \begin{table}[h!]
 	\centering
@@ -545,27 +567,6 @@ Die gemessenen Stoppspannungen sind samt ermittelter Wellenlängen und Literatur
 	\caption{Gemessene Stoppspannungen $U_0$, berechnete Wellenlängen $\lambda$, Standardabweichungen $\sigma$, Mittelwerte $\mu$ und~Literaturwerte~\cite{Gerthsen}}
 	\label{table:leds}
 \end{table}
-
-Üblicherweise senden Leuchtdioden ein Spektrum von Licht aus, anstelle von monochromatischem Licht. In diesem Versuch wurde allerdings nur eine Wellenlänge pro Leuchtdiode bestimmt.
-
-Bei der Messung der Stoppspannung wird die maximale Energie gemessen, die ein ausgelöstes Elektron erhalten kann. Die schnellsten Elektronen werden durch die Photonen mit maximaler Energie erzeugt, also durch die mit der niedrigsten verfügbaren Wellenlänge.
-
-Die hier bestimmte Wellenlänge $\lambda$ ist daher die niedrigste Wellenlänge des jeweiligen LED--Spektrums. Üblicherweise ist ein solches Spektrum näherungsweise gaußverteilt. Damit liegen die Mittelwerte der Verteilungen bei einer größeren Wellenlänge als der hier bestimmten.
-
-Das Intervall $[\mu - 3 \sigma, \mu + 3 \sigma]$ umfasst ca. $99.7 \mathrm{\, \%}$ der enthaltenen Werte einer Gaußverteilung, wobei $\mu$ der Mittelwert und $\sigma$ die Standardabweichung der Verteilung sind. \cite{LambacherSchweizerGauß} Daher liegen die gemessenen minimalen Wellenlängen ca. $3 \sigma$ vom Mittelwert $\mu$ entfernt. Die Halbwertsbreite $\sigma_\mathrm{FWHM}$ der Verteilungen der Leuchtdioden beträgt etwa $30 \mathrm{\, nm}$ \cite{uni}. Daher wird hier der Wert $\sigma_\mathrm{FWHM}=(30\pm0.5)\mathrm{\,nm}$ angenommen.
-
-Die Standardabweichung $\sigma$ lässt daher mittels der Gleichungen \eqref{eq:halbwertsbreite} und \eqref{eq:halbwertsbreiteFehler} bestimmen \cite{Halbwertsbreite}, der Mittelwert $\mu$ durch \eqref{eq:mittelwertLEDs} und \eqref{eq:mittelwertLEDsFehler}. Die Fehler folgen aus der Gauß'schen Fehlerfortpflanzung. Die Standardabweichung $\sigma$ und Mittelwerte $\mu$ sind inklusive Fehler ebenfalls in Tabelle \ref{table:leds} dargestellt.
-
-\begin{eqnarray}
-	\sigma &=& \frac{FWHM}{2 \sqrt{2 \ln{2}}}
-	\label{eq:halbwertsbreite} \\
-	\Delta \sigma &=& \frac{\Delta FWHM}{2 \sqrt{2 \log{2}}}
-	\label{eq:halbwertsbreiteFehler} \\
-	\mu &=& \lambda + 3 \sigma
-	\label{eq:mittelwertLEDs} \\
-	\Delta \mu &=& \sqrt{\left(\Delta \lambda\right)^2 + \left(3 \cdot \Delta \sigma \right)^2}
-	\label{eq:mittelwertLEDsFehler}
-\end{eqnarray}
 
 \noindent
 Alle gemessenen minimalen Wellenlängen, sowie die daraus bestimmten Mittelwerte der Verteilungen liegen innerhalb ihrer Fehlergrenzen in den jeweiligen Bereichen der Literaturwerte, deshalb kann dieser Versuchsteil als erfolgreich betrachtet werden.
