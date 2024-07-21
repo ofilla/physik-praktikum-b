@@ -225,9 +225,9 @@ Nach der Kirchhoff'schen Maschenregel muss die Summe der Spannungen $0$ sein. Di
 \end{eqnarray}
 
 \subsubsection{stromfreie Spannungsmessung}
-Bei stromfreier Spannungsmessung wird die Spannung gemessen, ohne dass Strom durch das Messgerät fließt. Sie wird mittels eines Elektrometers durchgeführt.
+Bei stromfreier Spannungsmessung wird eine Spannung gemessen, ohne dass ein Strom fließt. Dies ist von Vorteil, da dadurch systematische Fehler in der Messung vermieden werden können.
 
-Es gibt verschiedene Arten von Elektrometern, die alle nach dem gleichen Prinzip funktionieren. Eine elektrische Ladung ist an einer Art Zeiger angebracht, der sich in einem Kondensator befindet. Wird eine Spannung an den Kondensator angelegt, wird der Zeiger aufgrund des entstehenden elektrischen Feldes ausgelenkt. Eine passend angebrachte Skala ermöglicht die Bestimmung der Spannung anhand der Auslenkung des Zeigers \cite{Gerthsen}.
+Eine solche Messung lässt sich z.B. mittels einer Gegenspannung erreichen. Dabei wird zusätzlich zur zu messenden Spannung eine Gegenspannung angelegt und der fließende Strom gemessen. Nun wird die Gegenspannung langsam erhöht. Sobald gerade kein Strom mehr fließt, sind die zu messende Spannung und die Gegenspannung gleich groß und die zu messende Spannung wurde bestimmt.
 
 Eine solche stromfreie Spannungsmessung wird in diesem Versuch verwendet.
 
@@ -377,7 +377,8 @@ Dazu werden die Frequenzen $\nu$ zu den angegebenen Wellenlängen $\lambda$ best
 	\begin{minipage}{0.5\textwidth}
 		\includegraphics[width=\linewidth]{../media/B1.4/direktPlot.pdf}
 	\end{minipage}
-	\caption{Messwerte und Geradenanpassung aus der Gegenspannungsmethode (links) und der direkten Methode (rechts)}
+	\caption{Messwerte und Geradenanpassung aus der Gegenspannungsmethode (links) und der direkten Methode (rechts) \\
+		Messfehler sind im Fit berücksichtigt, in der Darstellung aber nicht sichtbar}
 	\label{fig:fitGeraden}
 \end{figure}
 
@@ -414,7 +415,7 @@ Die Bestimmung der Austrittsarbeit $W_A$ erfolgt durch den Achsenabschnitt, weil
 \subsubsection{Diskussion der Ergebnisse}
 In der Literatur beträgt $\frac{h}{e}\approx4.14 \cdot 10^{-15} \mathrm{\, Vs}$. \cite{Gerthsen} Die Messergebnisse weichen auch innerhalb ihrer Fehler leicht von diesem Wert ab.
 
-Dies könnte unter anderem auf den Lichteinfall durch ein kleines Fenster und die Deckenlampen im Versuchsraum zurückzuführen sein, der die Messergebnisse möglicherweise verändert hat. Zudem könnten die Stromkabel eine andere Austrittsarbeit als die Anode haben. Dies würde zu einer weiteren Kontaktspannung führen, die die Ergebnisse verzerrt.
+Dies könnte z.B. auf den Lichteinfall durch ein kleines Fenster und die Deckenlampen im Versuchsraum zurückzuführen sein, der die Messergebnisse möglicherweise verändert hat.
 
 Die Größenordnung der ermittelten Austrittsarbeiten entsprechen den Erwartungen. Beispielsweise könnte die Kathode aus einer Wolfram--Cäsium--Legierung bestehen, deren Austrittsarbeit in der Größenordnung von $1.4\mathrm{\,eV}$ \cite{Demtröder} angegeben ist. Dieser Wert wird bei beiden Messmethoden innerhalb der Fehler getroffen.
 
@@ -423,32 +424,32 @@ Damit wird dieser Versuchsteil als Erfolg gewertet.
 \subsubsection{Vergleich der Methoden}
 Beide Messmethoden liefern die gleichen Ergebnisse innerhalb der Fehlergrenzen. Selbst die Ungenauigkeiten sind in den ersten Stellen gleich groß. Daher scheinen beide Methoden vergleichbar genau zu sein.
 
-Vorteilhaft bei der Gegenspannungsmethode ist das Stoppen des Stromflusses durch den hohen Widerstand. Fließt bei einer Spannungsmessung Strom, so wird diese beeinträchtigt. Somit liefert diese Methode eine ideale Spannungsmessung. Nachteilig ist die manuelle Einstellung der Gegenspannung, die aufgrund von starken Schwankungen ungenau ist.
+Vorteilhaft bei der Gegenspannungsmethode ist das Stoppen des Stromflusses durch die Gegenspannung. Fließt bei einer Spannungsmessung Strom, so wird diese beeinträchtigt. Somit liefert diese Methode eine ideale Spannungsmessung. Nachteilig ist die manuelle Einstellung der Gegenspannung, die aufgrund von starken Schwankungen ungenau ist.
 
-Bei der direkten Messmethode muss dagegen keine ungenaue Gegenspannung eingestellt werden. Dies vereinfacht die Durchführung der Methode und reduziert eine Fehlerquelle. Dafür wird die Stoppspannung bei fließendem Strom gemessen, was systematisch ungenauer ist.
+Bei der direkten Messmethode muss dagegen keine ungenaue Gegenspannung eingestellt werden. Dies vereinfacht die Durchführung der Methode und reduziert eine Fehlerquelle. Dafür wird die Stoppspannung bei fließendem Strom gemessen. Auch wenn dieser eher klein ist, führt er dennoch zu einer systematischen Ungenauigkeit.
 
 Obwohl die Gegenspannungsmethode theoretisch von Vorteil ist, sind beide Messmethoden in der Praxis vergleichbar genau. Falls die Gegenspannung digital ermittelt wird, könnte dies anders sein.
 
 \subsection{Photostrom}
 \subsubsection{Photostrom}
 
-Der Photostrom $I_\mathrm{Ph}$ wird durch das Ohm'sche Gesetz aus der Photospannung $U_\mathrm{Ph}$ bestimmt. Der Widerstand in der Messung beträgt $10 \,k\Omega$. Die Ergebnisse sind in Tabelle \ref{tab:Photostrom Ergebnisse} dargestellt. Die Messung ohne Graufilter erfolgte, um ein Gefühl für den Strom bei $100\%$ Intensität zu erlangen. Sie wird allerdings nicht in der restlichen Auswertung verwendet.
+Der Photostrom $I_\mathrm{Ph}$ wird durch das Ohm'sche Gesetz aus der Photospannung $U_\mathrm{Ph}$ bestimmt. Der Widerstand in der Messung beträgt $10 \mathrm{\,k\Omega}$, die gemessene Spannung wurde um den Faktor $\alpha=10^4$ verstärkt. Die Ergebnisse sind in Tabelle \ref{tab:Photostrom Ergebnisse} dargestellt. Die Messung ohne Graufilter erfolgte, um ein Gefühl für den Strom bei $100\%$ Intensität zu erlangen.
 
 \begin{eqnarray}
-	I_\mathrm{Ph} &=& \frac{U_\mathrm{Ph}}{R} \\
-	\Delta I_\mathrm{Ph} &=& \frac{\Delta U_\mathrm{Ph}}{R}\\
+	I_\mathrm{Ph} &=& \frac{U_\mathrm{Ph}}{R \cdot \alpha} \\
+	\Delta I_\mathrm{Ph} &=& \frac{\Delta U_\mathrm{Ph}}{R \cdot \alpha}
 \end{eqnarray}
 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{c|c|c|c|c|c|c|c|c}
-		&& \multicolumn{7}{c}{Photostrom $I_\mathrm{Ph}$ $[10^{-4}\mathrm{\,A}]$} \\
+		&& \multicolumn{7}{c}{Photostrom $I_\mathrm{Ph}$ $[10^{-8}\mathrm{\,A}]$} \\
 		Filter & Farbe & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & ohne Filter\\
 		\hline
 		$3$ & Blau & $1.486$ & $1.067$ & $0.807$ & $0.655$ & $0.440$ & $0.338$ & $1.777$ \\
 		$4$ & Grün & $0.536$ & $0.357$ & $0.265$ & $0.190$ & $0.126$ & $0.090$ & $0.608$
 	\end{tabular}
-	\caption{Photoströme für verschiedenen Graufilter mit $\Delta I_\mathrm{Ph} = \pm 5 \cdot 10^{-7} \mathrm{\,A}$}
+	\caption{Photoströme für verschiedenen Graufilter mit $\Delta I_\mathrm{Ph} = \pm 5 \cdot 10^{-11} \mathrm{\,A}$}
 	\label{tab:Photostrom Ergebnisse}
 \end{table}
 
@@ -457,9 +458,11 @@ Trägt man den Photostrom gegen die jeweiligen relativen Transmissionsgrade auf,
 
 Auffällig sind die Unterschiede in der Stärke des Photostroms bei verschiedenen Farben. Der Photostrom ist bei Verwendung des blauen Interferenzfilters deutlich höher als bei der des grünen.
 
-Das Phänomen kann durch die Energie der Strahlungen erklärt werden. Blaues Licht hat eine kürzere Wellenlänge als grünes, daher hat es eine höhere Energie.
+Das Phänomen kann durch die unterschiedliche Intensität im Linienspektrum von Quecksilber erklärt werden. Die Quecksilberdampflampe emittiert blaues Licht in höherer Intensität als grünes. Dadurch erreicht mehr Strahlung die Photokathode, da die transmittierte Intensität proportional zu der am Graufilter eintreffenden Intensität ist.
 
-Weiterhin könnte die Quecksilberdampflampe blaues Licht in höherer Intensität als grünes produzieren. Dadurch käme auch weniger Strahlung an der Photokathode an, da die transmittierte Intensität proportional zu der auf den Graufilter treffenden Intensität ist.
+Die Fitfunktion bei beiden Filter besitzt einen endlichen Ordinatenabschnitt, der im Rahmen der Messungenauigkeit fast vollständig verschwindet. Bei einer Lichtintensität von $0$ gibt es keine Photonen, die Elektronen an der Kathode herauslösen können. Dadurch fließt kein Photostrom.
+
+Ersichtlich ist eine starke Abweichung beider Photoströme für $100 \%$ Intensität, daher wurden diese Werte im Fit vernachlässigt. Zudem sollte dieser Wert ursprünglich nicht gemessen werden, sondern wurde nur aus Interesse ebenfalls aufgenommen.
 
 \begin{figure}[h!]
 	\begin{minipage}{0.5\textwidth}
@@ -476,8 +479,9 @@ Weiterhin könnte die Quecksilberdampflampe blaues Licht in höherer Intensität
 	\label{abb:Photostrom fit}
 \end{figure}
 
+
 \subsubsection{Intensität}
-Zusätzlich wurde die Abhängigkeit der Energie der Elektronen von der Intensität des Lichtes untersucht. Dazu wurde der stärkste Graufilter (Nummer $6$) vor die Lampe gehalten und die Veränderung der Spannung beobachtet.
+Zusätzlich wird die Abhängigkeit der kinetischen Energie der Elektronen von der Lichtintensität untersucht. Dazu wird der stärkste Graufilter (Nummer $6$) vor die Lampe gehalten und die Veränderung der Stoppspannung beobachtet, die wie in Abschnitt \ref{auswertung:h/e} gemessen wird.
 
 Die Ergebnisse zeigen deutlich die Unabhängigkeit dieser Größen und sind in Tabelle \ref{tab:Spannung Intensität} dargestellt. Innerhalb der Fehler sind die Spannungen identisch, obwohl der Intensitätsunterschied ziemlich groß ist.
 
@@ -514,15 +518,15 @@ Die Umformung dieser Gleichung ermöglicht die Bestimmung der Wellenlängen $\la
 	\lambda &=& \frac{a \cdot c}{U_0 - b} \\
 	\Delta \lambda &=&
 		\sqrt{
-				\left(
-					\frac{c \cdot \Delta a}{U_0 - b}
-				\right)^2
-				+ \left(
-					\frac{a \cdot c \cdot \Delta U_0}{(U_0 - b)^2}
-				\right)^2
-				+ \left(
-					\frac{a \cdot c \cdot \Delta b}{(U_0 - b)^2}
-				\right)^2
+			\left(
+				\frac{c \cdot \Delta a}{U_0 - b}
+			\right)^2
+			+ \left(
+				\frac{a \cdot c \cdot \Delta U_0}{(U_0 - b)^2}
+			\right)^2
+			+ \left(
+				\frac{a \cdot c \cdot \Delta b}{(U_0 - b)^2}
+			\right)^2
 		}
 \end{eqnarray}
 
@@ -531,14 +535,14 @@ Die gemessenen Stoppspannungen sind samt ermittelter Wellenlängen und Literatur
 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{l|c|c|c}
-		Bezeichnung & $U_0$ $[\mathrm{V}]$ & $\lambda$ $[\mathrm{nm}]$ & Literaturwert $[\mathrm{nm}]$ \\
+	\begin{tabular}{l|c|c|c|c|c}
+		Bezeichnung & $U_0$ $[\mathrm{V}]$ & $\lambda$ $[\mathrm{nm}]$ & $\sigma$ $[\mathrm{nm}]$ & $\mu$ $[\mathrm{nm}]$ & Literaturwert $[\mathrm{nm}]$ \\
 		\hline
-		blue & $1.047 \pm 0.003$ & $472 \pm 20$ & $400 - 480$ \\
-		verde & $0.891 \pm 0.003$ & $504 \pm 22$ & $480 - 560$ \\
-		true green & $0.807 \pm 0.003$ & $524 \pm 24$ & $480 - 560$
+		blue & $1.047 \pm 0.003$ & $472 \pm 20$ & $12.74 \pm 0.21$ & $510 \pm 20$ & $400 - 490$ \\
+		verde & $0.891 \pm 0.003$ & $504 \pm 22$ & $12.74 \pm 0.21$ & $542 \pm 22$ & $490 - 570$ \\
+		true green & $0.807 \pm 0.003$ & $524 \pm 24$ & $12.74 \pm 0.21$ & $562 \pm 24$ & $490 - 570$
 	\end{tabular}
-	\caption{Gemessene Stoppspannungen $U_0$, berechnete Wellenlängen $\lambda$ und~Literaturwerte~\cite{Gerthsen}}
+	\caption{Gemessene Stoppspannungen $U_0$, berechnete Wellenlängen $\lambda$, Standardabweichungen $\sigma$, Mittelwerte $\mu$ und~Literaturwerte~\cite{Gerthsen}}
 	\label{table:leds}
 \end{table}
 
@@ -546,9 +550,25 @@ Die gemessenen Stoppspannungen sind samt ermittelter Wellenlängen und Literatur
 
 Bei der Messung der Stoppspannung wird die maximale Energie gemessen, die ein ausgelöstes Elektron erhalten kann. Die schnellsten Elektronen werden durch die Photonen mit maximaler Energie erzeugt, also durch die mit der niedrigsten verfügbaren Wellenlänge.
 
-Die hier bestimmte Wellenlänge ist daher die niedrigste Wellenlänge des jeweiligen LED--Spektrums. Üblicherweise ist ein solches Spektrum näherungsweise gaußverteilt. Damit liegen die Wellenlängen mit maximaler Amplitude bei einer größeren Wellenlänge als der hier bestimmten. Für eine genaue Bestimmung der Maxima der Spektren ist die Breite derselben notwendig.
+Die hier bestimmte Wellenlänge $\lambda$ ist daher die niedrigste Wellenlänge des jeweiligen LED--Spektrums. Üblicherweise ist ein solches Spektrum näherungsweise gaußverteilt. Damit liegen die Mittelwerte der Verteilungen bei einer größeren Wellenlänge als der hier bestimmten.
 
-Alle gemessenen minimalen Wellenlängen liegen in den jeweiligen Bereichen der Literaturwerte, deshalb kann dieser Versuchsteil als erfolgreich betrachtet werden.
+Das Intervall $[\mu - 3 \sigma, \mu + 3 \sigma]$ umfasst ca. $99.7 \mathrm{\, \%}$ der enthaltenen Werte einer Gaußverteilung, wobei $\mu$ der Mittelwert und $\sigma$ die Standardabweichung der Verteilung sind. \cite{LambacherSchweizerGauß} Daher liegen die gemessenen minimalen Wellenlängen ca. $3 \sigma$ vom Mittelwert $\mu$ entfernt. Die Halbwertsbreite $\sigma_\mathrm{FWHM}$ der Verteilungen der Leuchtdioden beträgt etwa $30 \mathrm{\, nm}$ \cite{uni}. Daher wird hier der Wert $\sigma_\mathrm{FWHM}=(30\pm0.5)\mathrm{\,nm}$ angenommen.
+
+Die Standardabweichung $\sigma$ lässt daher mittels der Gleichungen \eqref{eq:halbwertsbreite} und \eqref{eq:halbwertsbreiteFehler} bestimmen \cite{Halbwertsbreite}, der Mittelwert $\mu$ durch \eqref{eq:mittelwertLEDs} und \eqref{eq:mittelwertLEDsFehler}. Die Fehler folgen aus der Gauß'schen Fehlerfortpflanzung. Die Standardabweichung $\sigma$ und Mittelwerte $\mu$ sind inklusive Fehler ebenfalls in Tabelle \ref{table:leds} dargestellt.
+
+\begin{eqnarray}
+	\sigma &=& \frac{FWHM}{2 \sqrt{2 \ln{2}}}
+	\label{eq:halbwertsbreite} \\
+	\Delta \sigma &=& \frac{\Delta FWHM}{2 \sqrt{2 \log{2}}}
+	\label{eq:halbwertsbreiteFehler} \\
+	\mu &=& \lambda + 3 \sigma
+	\label{eq:mittelwertLEDs} \\
+	\Delta \mu &=& \sqrt{\left(\Delta \lambda\right)^2 + \left(3 \cdot \Delta \sigma \right)^2}
+	\label{eq:mittelwertLEDsFehler}
+\end{eqnarray}
+
+\noindent
+Alle gemessenen minimalen Wellenlängen, sowie die daraus bestimmten Mittelwerte der Verteilungen liegen innerhalb ihrer Fehlergrenzen in den jeweiligen Bereichen der Literaturwerte, deshalb kann dieser Versuchsteil als erfolgreich betrachtet werden.
 
 \clearpage
 \hypertarget{fazit}{%
@@ -557,7 +577,7 @@ Die in diesem Versuch gewonnenen Ergebnisse bestätigen die theoretischen Grundl
 
 Die Messung von $\frac{h}{e}$ liefert ein grob vergleichbares, aber von der Literatur abweichendes Ergebnis. Die Messungen der Austrittsarbeit zeigen eine gute Übereinstimmung mit den theoretischen Werten, obwohl kleinere Abweichungen aufgrund externer Faktoren wie Umgebungslicht und den Materialeigenschaften der Elektroden auftreten. Beide verwendeten Messmethoden liefern innerhalb der Fehlergrenzen vergleichbare Ergebnisse. Jede Methode hat spezifische Vor- und Nachteile: Während die direkte Messmethode einfacher und präziser durchzuführen ist, könnte die Gegenspannungsmethode theoretisch präzisere Ergebnisse ermöglichen.
 
-Die Experimente zur Untersuchung des Zusammenhangs zwischen Photostrom und Lichtintensität bestätigten die Proportionalität dieser Größen. Unterschiede im Photostrom bei verschiedenen Lichtfarben können durch die unterschiedliche Energie der Photonen und die Eigenschaften der verwendeten Lichtquelle erklärt werden.
+Die Experimente zur Untersuchung des Zusammenhangs zwischen Photostrom und Lichtintensität bestätigten die Proportionalität dieser Größen. Unterschiede im Photostrom bei verschiedenen Lichtfarben gehen auf die Intensität der jeweiligen Farblinien im Emissionsspektrum der Lichtquelle zurück.
 
 Die Messung der minimalen Wellenlängen des Lichts, das von Leuchtdioden emittiert wurde, entspricht den Literaturwerten und bestätigt die korrekte Durchführung der Versuche.
 
@@ -582,5 +602,10 @@ Zusammenfassend bestätigen die Ergebnisse die Quantenhypothese für Licht und d
 \bibitem{Julia:LsqFit}
 	\code{\href{https://julialang.org}{Julia}}--Paket \code{LsqFit},
 	Dokumentation unter \url{https://docs.juliahub.com/General/LsqFit/stable}
+\bibitem{LambacherSchweizerGauß}
+	Rebecca Roy, ``Lambacher Schweizer Kursstufe'', Klett Verlag, 2020, ISBN 978-3-12-735310-5, Ausschnittsweise online verfügbar unter \url{https://www.klett.de/inhalt/media_fast_path/32/735310_Stochastik_Normalverteilung_und_Sigma_Regeln.pdf},
+	Abruf 18.07.2024
+\bibitem{Halbwertsbreite}
+	Wikipedia, ``Halbwertsbreite'', \url{https://de.wikipedia.org/wiki/Halbwertsbreite}, Abruf am 18.07.2024
 \end{thebibliography}
 \end{document}
