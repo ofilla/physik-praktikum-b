@@ -5,6 +5,9 @@ Bei einigen Versuchen ist Code in Form von [Jupyter](https://jupyter.org)-Notebo
 
 ## 1. Atom- & Molekülphysik
 * B1.1: Infrarotabsorption in $\ce{CO_2}$ ([PDF](./B1.1/B1.1.pdf), [LaTeX](./B1.1/B1.1.tex))
+	* Auswertung (Julia) ([Jupyter](./B1.1/data/Auswertung.ipynb), [PDF](./B1.1/data/Auswertung.pdf))
+* B1.4: Photoelektrischer Effekt ([PDF](./B1.4/B1.4.pdf), [LaTeX](./B1.4/B1.4.tex))
+	* Auswertung (Julia) ([Jupyter](./B1.4/data/Auswertung.ipynb), [PDF](./B1.4/data/Auswertung.pdf))
 * B1.5: Elektronenspinresonanz ([PDF](./B1.5/B1.5.pdf), [LaTeX](./B1.5/B1.5.tex))
 
 ## 2. Festkörperphysik
@@ -17,6 +20,7 @@ Bei einigen Versuchen ist Code in Form von [Jupyter](https://jupyter.org)-Notebo
 
 ## 3. Kernphysik
 * B3.1: Statistik der Kernzerfälle ([PDF](./B3.1/B3.1.pdf), [LaTeX](./B3.1/B3.1.tex))
+	* Auswertung (Julia) ([Jupyter](./B3.1/data/Auswertung.ipynb), [PDF](./B3.1/data/Auswertung.pdf))
 * B3.3: Reichweite von Alphastrahlung ([PDF](./B3.3/B3.3.pdf), [LaTeX](./B3.3/B3.3.tex))
 	* Lernkarten ([PDF](./B3.3/B3.3_Lernkarten.pdf), [LaTeX](./B3.3/B3.3_Lernkarten.tex))
 	* Auswertung (Julia) ([Jupyter](./B3.3/data/Auswertung.ipynb), [PDF](./B3.3/data/Auswertung.pdf))
