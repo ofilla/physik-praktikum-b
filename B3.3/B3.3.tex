@@ -88,7 +88,7 @@ In diesem Versuch wird die Wechselwirkung von $\alpha$--Teilchen mit den Elektro
 \hypertarget{alpha-zerfall}{%
 \subsection{$\alpha$--Zerfall}\label{alpha-zerfall}}
 
-Der $\alpha$--Zerfall ist eine Form des radioaktiven Zerfalls, bei dem ein Heliumkern $\ce{^4_2He}$ emittiert wird. Nach der Nuklidkarte findet der Zerfall hauptsächlich bei massereichen Kernen. \cite{Chart of Nuclides}
+Der $\alpha$--Zerfall ist eine Form des radioaktiven Zerfalls, bei dem ein Heliumkern $\ce{^4_2He}$ emittiert wird. Nach der Nuklidkarte findet dieser Zerfall hauptsächlich bei massereichen Kernen statt. \cite{Chart of Nuclides}
 
 \begin{eqnarray}
     \ce{^A_ZX -> ^{A-4}_{Z-2}Y + ^4_2He}
@@ -126,7 +126,7 @@ Das Kernpotential beschreibt die potentielle Energie innerhalb eines Atomkerns, 
 
 Um den Kern herum bewirkt die elektromagnetische Wechselwirkung eine Abstoßung zwischen einem positiv geladenen Teilchen und dem ebenso geladenen Kern. Beide Potentiale wirken zusammen und bilden ein quasibindenes Potenzial mit einer endlichen Coulombbarriere.
 
-Positronen und Neutronen sind in schweren Kerne mit einer Energie bis zu $7\mathrm{\,MeV}$ gebunden und können daher nicht einzeln den Kern verlassen. Deshalb ist eine Emission eines gebundene System wahrscheinlicher, da zusätzliche Bindungsenergie zur Verfügung steht. Die Bildung eines $\alpha$--Teilchens mit einer Bindungsenergie von etwa $7.1\mathrm{\,MeV}$ ermöglicht das Verlassen des Kerns durch die Coulombbarriere $V_C$.
+Positronen und Neutronen sind in schweren Kernen mit einer Energie bis zu $7\mathrm{\,MeV}$ gebunden und können diese daher nicht einzeln verlassen. Deshalb ist eine Emission eines gebundene System wahrscheinlicher, da zusätzliche Bindungsenergie zur Verfügung steht. Die Bildung eines $\alpha$--Teilchens mit einer Bindungsenergie von etwa $7.1\mathrm{\,MeV}$ ermöglicht das Verlassen des Kerns durch die Coulombbarriere $V_C$.
 
 Dennoch ist die Energie des $\alpha$--Teilchens nicht groß genug, um die Potentialbarriere zu überwinden. Deswegen muss es hindurch \emph{tunneln}. Dieser Prozess wird im Folgenden beschrieben.
 
@@ -148,7 +148,7 @@ Wie schon erwähnt muss das Teilchen die energetisch höhere Coulomb--Barriere �
 
 Damit ein Zerfall stattfindet, müssen drei Ereignisse in Folge stattfinden, die jeweils mit unterschiedlichen Wahrscheinlichkeiten geschehen.
 
-Zuerst muss sich ein $\alpha$--Teilchen im Kern bilden. Dann muss dieses Teilchen am Rand des Kerns gegen die Coulomb--Barriere stoßen, die den Kern zusammenhält. Dann muss das $\alpha$--Teilchen durch die Barriere tunneln. Die Wahrscheinlichkeiten für diese drei Prozesse multiplizieren sich zu der gesamten Zerfallswahrscheinlichkeit für den Kern.
+Zuerst muss sich ein $\alpha$--Teilchen im Kern bilden. Dann muss dieses Teilchen am Rand des Kerns gegen die Coulomb--Barriere stoßen, die den Kern zusammenhält. Zuletzt muss das $\alpha$--Teilchen durch die Barriere tunneln. Die Wahrscheinlichkeiten für diese drei Prozesse multiplizieren sich zu der gesamten Zerfallswahrscheinlichkeit für den Kern.
 
 \hypertarget{energiespektrum}{%
 \subsubsection{Energiespektrum}\label{energiespektrum}}
@@ -156,7 +156,7 @@ Zuerst muss sich ein $\alpha$--Teilchen im Kern bilden. Dann muss dieses Teilche
 Zerfällt ein Mutterkern, so können außer dem Grundzustand noch andere angeregte Zustände des Tochterkerns besetzt werden. Man erhält ein diskretes Linienspektrum. Bei einer Messung wird jede Linie mit einer gewissen Wahrscheinlichkeit gemessen, dabei wird jede Linie durch eine
 Gaußkurve angenähert.
 
-Das Spektrum des Isotops $\ce{^241Am}$ hat vier Linien bei Energien von $5388\mathrm{\,keV}$ bis $5545\mathrm{\,keV}$. \cite{Bethge} Es ist in Abbildung \ref{abb:Spektrum 241Am} dargestellt.
+Das Spektrum des Isotops $\ce{^241Am}$ hat vier Linien bei Energien von $5388\mathrm{\,keV}$ bis $5545\mathrm{\,keV}$ \cite{Bethge} und ist in Abbildung \ref{abb:Spektrum 241Am} dargestellt.
 
 \begin{figure}[h!]
 	\centering
@@ -256,12 +256,12 @@ Bei einer geraden Anzahl derselben Nukleonensorte heben sich die Spins auf, bei 
 Der Paarungsterm wird betragsmäßig kleiner, je größer die Nukleonenzahl $A$ ist. Dies wird durch die folgende Gleichung beschrieben.
 
 \begin{eqnarray}
-    E_P &=&
+    E_P &=& a_P\cdot \frac{1}{\sqrt{A}} \cdot
         \begin{cases}
-            + a_P\cdot \frac{1}{\sqrt{A}} & \text{gg} \\
-            0 & \text{gu} \\
-            0 & \text{ug} \\
-            - a_P\cdot \frac{1}{\sqrt{A}} & \text{uu} \\
+            +1 & \text{gg} \\
+            \;\;\;0 & \text{gu} \\
+            \;\;\;0 & \text{ug} \\
+            -1 & \text{uu} \\
         \end{cases}
         \label{Paarungsterm} \\
     a_P &=& 11.46\mathrm{\,MeV}
@@ -299,14 +299,18 @@ Ebenso werden die Ladungzahl $z$ und Geschwindigkeit $v$ des Projektils sowie di
         \label{BetheBloch} \\
     -\frac{\mathrm dE}{\mathrm dx} &\approx&
         \frac{4\pi z^2 e^4}{m_e v^2} NZ
-        \ln\left(\frac{2mv^2}{\bar I}\right)
-        \label{BetheBloch2}
+        \ln\left(\frac{2mv^2}{\bar I}\right) \\
+    &=&
+		\frac{4\pi z^2 e^4}{m_e v^2}
+		\cdot\rho N_A\frac{Z}{A} \cdot
+		\ln\left(\frac{2m_ev^2}{\bar I}\right)
+		\label{BetheBloch2}
 \end{eqnarray}
 
 \hypertarget{herleitung}{%
 \subsubsection{Herleitung}\label{herleitung}}
 
-Im Folgenden werde die Bethe--Bloch--Gleichung für schwere, schnelle und geladene Projektile wie $\alpha$--Teilchen hergeleitet.
+Im Folgenden wird die Bethe--Bloch--Gleichung für schwere, schnelle und geladene Projektile wie $\alpha$--Teilchen hergeleitet.
 
 Hierbei wird eine quasi--klassische Betrachtung des Stoßvorganges angenommen. Da das Projektil sehr schwer im Vergleich zu Elektronen ist, kann seine Bewegung als näherungsweise linear angenommen werden. Weiterhin wird das Elektron als schwach gebunden und ruhend angenommen. Diese Annahmen können durch die hohe Geschwindigkeit und Masse des Projektils getätigt werden.
 
@@ -364,8 +368,6 @@ Bei sehr großen Energien kann z.B. die Wechselwirkung des Projektils mit dem At
 
 Weiterhin muss das Projektil sehr schwer im Vergleich zu Elektronen sein, da ansonsten die Näherung einer geraden Flugbahn des Projektils nicht mehr angenommen werden kann.
 
-% Kommentar: Hier seid ihr ein bisschen inkonsistent. Ihr diskutiert den experimentellen Verlauf der Bethe Bloch Gleichung, aber beim Geltungsbereicht bezieht ihr euch auf den Geltungsbereicht der Formel.  Eine Abbildung hilft außerdem zu verstehen, wovon ihr redet.
-
 \hypertarget{bragg-kurve}{%
 \subsubsection{Bragg--Kurve}\label{bragg-kurve}}
 
@@ -405,7 +407,7 @@ Die Reichweite oder Eindringtiefe von Alphastrahlung hängt von der Energie des 
 \noindent
 Die mittlere Reichweite $\bar R$ ist der Erwartungswert der Reichweite von $\alpha$-Teilchen einer bestimmten Energie. Die extrapolierte Reichweite $R_\mathrm{ex}>\bar R$ ist die maximale Reichweite unter der Annahme, dass es kein Straggling gibt, welches eine Abflachung der Intensitätskurve verursacht.
 
-Ist die mittlere Reichweite $\bar R_A$ in einem Medium bekannt, so kann die mittlere Reichweite $\bar R_B$ in einem anderen Medium mittels der Bragg-Kleemann-Formel ermittelt werden.
+Ist die mittlere Reichweite $\bar R_A$ in einem Medium bekannt, so kann die mittlere Reichweite $\bar R_B$ in einem anderen Medium mittels der Bragg--Kleemann--Formel \eqref{eq:bragg-kleemann-allg} ermittelt werden.
 
 \hypertarget{abhuxe4ngigkeit-vom-druck}{%
 \subsubsection{Abhängigkeit vom Druck}\label{abhuxe4ngigkeit-vom-druck}}
@@ -416,7 +418,7 @@ Die thermische Zustandsgleichung idealer Gase $\eqref{iGG}$ bringt die Teilchenz
 
 \begin{eqnarray}
     k_B N T &=& pV \label{iGG} \\
-    N(p) &=& \frac{V}{k_B T}
+    N(p) &=& \frac{V}{k_B T} \cdot p
 \end{eqnarray}
 
 \noindent
@@ -507,13 +509,13 @@ Aufgrund der inversen Proportionalität des Energieverlustes mit dem Quadrat der
 \subsubsection{Abschätzung der Anzahl von
 Stößen}\label{abschuxe4tzung-der-anzahl-von-stuxf6uxdfen}}
 
-Teilchen mit deutlich größeren Massen als die Elektronenmasse verlieren ihre Energie vor allem durch inelastische Stöße mit den Elektronen der Atome im Bremsmedium, wie es im Abschnitt $\ref{bremsvermuxf6gen}$ Bremsvermögen erläutert wurde.
+Teilchen mit deutlich größeren Massen als die Elektronenmasse verlieren ihre Energie vor allem durch inelastische Stöße mit den Elektronen der Atome im Bremsmedium, wie es in Abschnitt $\ref{bremsvermuxf6gen}$ erläutert wurde.
 
 Dadurch werden die Elektronen entweder aus ihrer Bindung herausgestoßen und das Atom bleibt ionisiert zurück, oder die Elektronen werden angeregt und das Atom erreicht einen höheren energetischen Zustand.
 
 Um nun die Anzahl an Stößen abzuschätzen, nach denen ein $\alpha$--Teilchen zur Ruhe kommt, werden ein paar Annahmen getroffen. Da der Großteil unserer Luft aus molekularem Stickstoff besteht, sei das Bremsmedium ein Gas aus $\ce{^{14}N}$--Isotopen. und zweitens soll das $\alpha$--Teilchen seine Energie nur abgeben, indem es den Stickstoff genau einfach ionisiert. Dazu ist eine Ionisationsenergie $E_I\approx 14.534 \mathrm{\,eV}$ nötig. \cite{Ionization Energy}
 
-Unsere $\alpha$--Quelle $\ce{^{241}Am}$ erzeugt primär $\alpha$--Teilchen mit einer Anfangsenergie von $E_\alpha\approx 5.486 \mathrm{\,MeV}$. Daraus kann die erwartete Anzahl an Stößen $\expval{N}$ ermittelt werden.
+$\ce{^{241}Am}$ erzeugt primär $\alpha$--Teilchen mit einer Anfangsenergie von $E_\alpha\approx 5.486 \mathrm{\,MeV}$. Daraus kann die erwartete Anzahl an Stößen $\expval{N}$ ermittelt werden.
 
 \begin{eqnarray}
     \expval{N} &=& \frac{E_\alpha}{E_I} \\
@@ -532,7 +534,7 @@ Oft wird die mittlere Reichweite $\bar R_\mathrm{Luft}$ in Luft unter Normalbedi
 
 \begin{eqnarray}
     \bar R_A &=& \frac{\rho_S}{\rho_A}
-        \sqrt{\frac{A_A}{A_S}} \bar R_S \\
+        \sqrt{\frac{A_A}{A_S}} \bar R_S \label{eq:bragg-kleemann-allg} \\
     \bar R_A &=& 3.2\cdot 10^{-4} \mathrm{\frac{g}{cm^3}}
         \cdot\frac{\sqrt{A_A}}{\rho_A}\cdot \bar R_\mathrm{Luft}
 \end{eqnarray}
@@ -555,17 +557,16 @@ Das relative Massenbremsvermögen $Q_A$ eines Absorbers $A$ kann durch das Masse
 \end{eqnarray}
 
 \noindent
-Dieses Verhältnis wird näherungsweise aus dem Verhältnis der Massenbelegungen bzw. Flächendichten $\rho_i$ der Materialien ermittelt werden, was durch die Nukleonenzahlen $A_i$ und die Protonenzahlen $Z_i$ dargestellt werden kann. Aus der Bethe--Bloch--Gleichung ohne Korrekturterme $\eqref{BetheBloch2}$ kann dann folgender Zusammenhang ermittelt werden.
+Dieses Verhältnis wird näherungsweise aus dem Verhältnis der Massenbelegungen bzw. Flächendichten $\rho_i$ der Materialien ermittelt werden, was durch die Nukleonenzahlen $A_i$ und die Protonenzahlen $Z_i$ dargestellt werden kann. Aus der Bethe--Bloch--Gleichung ohne Korrekturterme $\eqref{BetheBloch2}$ kann dann folgender Zusammenhang ermittelt werden, indem sie nach $\rho\,\mathrm dx$ aufgelöst wird.
 
 \begin{eqnarray}
-	Q_A \cdot \rho_A \cdot \mathrm dx_A
-	&=& \rho_S \cdot \mathrm dx_S \\
-	Q_A &=& \frac{\rho_S}{\rho_A} \cdot \frac{\mathrm dx_S}{\mathrm dx_A} \\
 	Q_A &=& \frac{A_S\cdot Z_A}{A_A\cdot Z_S}
 	\frac{\ln\left(\frac{2m_ev^2}{\bar I_A}\right)}{\ln\left(\frac{2m_ev^2}{\bar I_S}\right)}
 \end{eqnarray}
 
-\hypertarget{messmethode}{\subsubsection{Messmethode}\label{messmethode}}
+\hypertarget{Luftäquivalent}{\subsubsection{Luftäquivalent}\label{Luftäquivalent}}
+Das Luftäquivalent ist die Dicke einer Luftschicht bei Normalbedingungen, die $\alpha$--Strahlung ebenso stark abbremst wie eine gegebene Dicke eines anderen Materials. \cite{Luftäquivalent}
+
 Um das relative Bremsvermögen zu messen, kann die Strahlungsintensität je einmal mit und ohne Folie gemessen werden. Die mittlere Reichweite $\bar R_1$ bei der Messung ohne Folie ist dann größer als $\bar R_2$ bei der Messung mit Luft und Folie.
 
 Diese Reichweitendifferenz kann durch eine äquivalente Dicke $d_L$ einer wirkenden Luftschicht dargestellt werden. Durch die Abhängigkeit der Reichweite vom inversen Druck \eqref{R(p)} kann dann das Bremsvermögen der Folie $Q_F$ ermittelt werden.
@@ -619,7 +620,8 @@ Im Grenzbereich zwischen diesen Schichten rekombinieren sich Elektronen und Löc
 \begin{figure}[h!]
 	\centering
 	\includegraphics{../media/B3.3/Oberflaechensperrschichtzaehler.pdf}
-	\caption{Oberflächensperrschichtzähler Quelle: \cite{SpektrumOberfl.Zähler}}
+	\caption{Oberflächensperrschichtzähler \cite{SpektrumOberfl.Zähler}}
+	\label{fig:Oberflächensperrschichtzähler}
 \end{figure}
 
 \noindent
@@ -627,7 +629,7 @@ Wird eine äußere Spannung angelegt, wächst oder schrumpft die Verarmungszone,
 
 Dringt ein $\alpha$--Teilchen in die Verarmungszone ein, entstehen Elektronen--Loch--Paare, während das $\alpha$--Teilchen gebremst wird. Die Elektronen und Löcher werden durch eine anliegende Spannung getrennt und sammeln sich an den Enden des jeweiligen Halbleiters. Durch einen empfindlichen Vorverstärker wird ein Spannungsimpuls erzeugt, der von der Energie des Teilchen abhängt. Um die Verarmungszone und damit das Detektionsvolumen zu maximieren, wird eine Spannung in Sperrrichtung angelegt.
 
-Der $\mathrm{Si}$--Oberflächen--Sperrschichtzähler besteht aus einen relativ dicken $n$--dotierten Schicht und einer dünnen $p$--dotierten Schicht. Eine sehr dünne Goldschicht sorgt für ein schnelles und verlustarmes Eindringen der $\alpha$--Teilchen. Der schematische Aufbau eines Oberflächensperrschichtzählers ist in Abbildung $1$ dargestellt.
+Der $\mathrm{Si}$--Oberflächen--Sperrschichtzähler besteht aus einen relativ dicken $n$--dotierten Schicht und einer dünnen $p$--dotierten Schicht. Eine sehr dünne Goldschicht sorgt für ein schnelles und verlustarmes Eindringen der $\alpha$--Teilchen. Der schematische Aufbau eines Oberflächensperrschichtzählers ist in Abbildung \ref{fig:Oberflächensperrschichtzähler} dargestellt.
 
 Silizium--Halbleiterdetektoren eignet sich aufgrund ihrer Bandlücke von $1.11\mathrm{\,eV}$ sehr gut für $\alpha$--Strahlung. Germanium--Halbleiterdetektoren sind prinzipiell ebenfalls geeignet, müssen allerdings auf ca. $70\,\mathrm K$ abgekühlt werden. Bei Raumtemperatur reicht die thermische Energie aus, um die Bandlücke von $0.7\mathrm{\,eV}$ zu überwinden. \cite{Knoll}
 
@@ -657,7 +659,7 @@ Das Signal des Detektors wird elektronisch verstärkt. Das verstärkte Zeitsigna
 
 Zunächst wurde das Signal des VKA geeicht. Dazu wurde die Luft aus der Kammer abgepumpt, bis ein minimaler Druck von ca. $1.2\cdot10^{-2}\mathrm{\,mbar}$ erreicht wurde. Dann wurde eine Messung bei $R=(0\pm0.5)\mathrm{\,mm}$ mit dem VKA aufgenommen und mit \texttt{hdtv} \cite{hdtv} ausgewertet.
 
-Hierbei wurde davon ausgegangen, dass der Kanal $0$ dem Energienullpunkt entspricht. Weiter wurde angenommen, dass der so gemessene Peak bei der Energie der $\alpha$--Strahlung von $E_\alpha = 5486\mathrm{\,keV}$ liegt, dies war bei Kanal $10450.4$ der Fall. Damit wurde \texttt{hdtv} kalibriert.
+Hierbei wurde davon ausgegangen, dass der Kanal $0$ dem Energienullpunkt entspricht. Weiter wurde angenommen, dass der so gemessene Peak bei der Energie der $\alpha$--Strahlung von $E_\alpha = 5.486\mathrm{\,MeV}$ liegt, dies war bei Kanal $10450.4$ der Fall. Damit wurde \texttt{hdtv} kalibriert.
 
 \hypertarget{energiestraggling}{%
 \subsection{Energiestraggling}\label{energiestraggling}}
@@ -935,6 +937,7 @@ Da der Unterschied zwischen den beiden Reichweitenmessungen klein ist, sind beid
 	\subsubsection{Reichweite in Aluminium}\label{Reichweite-Aluminium}}
 
 Mit der nun bekannten Reichweite der $\alpha$--Teilchen in Luft lässt sich die Reichweite in Aluminium $R_\mathrm{Al}$ mit der empirischen Bragg--Kleemann--Gleichung für Luft bei $15\mathrm{\,^\circ C}$ und $1013.25 \mathrm{\, mbar}$ mit einem Fehler $\Delta \bar{R}_\mathrm{Al}$ mittels Gauß'scher Fehlerfortpflanzung bestimmen.
+
 \begin{eqnarray}
 	\bar{R}_\mathrm{Al} &=& 3.2 \cdot 10^{-4} \mathrm{\frac{g}{cm^3}}
 		\cdot \frac{A_\mathrm{Al}^{1/2}}{\rho_\mathrm{Al}} \bar{R}_\mathrm{Luft} \\
@@ -982,7 +985,7 @@ Die Energie $E$ in $\mathrm{keV}$ kann durch eine lineare Relation aus der Kanal
 
 \hypertarget{energiestraggling-straggling}{%
 	\subsubsection{Straggling}\label{energiestraggling-straggling}}
-Die Energiepeaks $\hat E$ und Halbwertbreiten $\Delta E$ des gemessenen $\alpha$--Spektrums sind in Tabelle \ref{tabelle: Straggling} aufgelistet.
+Die Energiepeaks $\hat E$ und Halbwertsbreiten $\Delta E$ des gemessenen $\alpha$--Spektrums sind in Tabelle \ref{tabelle: Straggling} aufgelistet.
 \begin{table}
 	\centering
 	\begin{tabular}[h]{||c|c|c||}
@@ -1016,7 +1019,7 @@ Die Energiepeaks $\hat E$ und Halbwertbreiten $\Delta E$ des gemessenen $\alpha$
 
 Um die Veränderung des Stragglings zu bewerten, muss zunächst die Dichte $\rho$ ermittelt werden. Diese ist über eine Referenzdichte $\rho_0$ und einen Referenzdruck $p_0$ linear vom Druck $p$ abhängig.  Dies folgt aus dem idealen Gasgesetz \eqref{iGG}.
 
-Als Referenzgröße werden Werte der Standardatmosphäre verwendet, also eine Dichte $\rho_0$ bei Normaldruck $p_0$.P
+Als Referenzgröße werden Werte der Standardatmosphäre verwendet, also eine Dichte $\rho_0$ bei Normaldruck $p_0$.
 
 \begin{eqnarray}
 	\rho &=& \frac{\rho_0}{p_0} \cdot p \\
@@ -1037,7 +1040,7 @@ Für den Abstand $x$ zwischen Detektor und Quelle muss der Offset $R_\mathrm{off
 \end{eqnarray}
 
 \noindent
-Aus dem Straggling $\alpha$ können wir den Energiestraggling--Parameter oder auch das korrigierte Straggling $\alpha_E$ nach Gleichung \eqref{eq:straggling parameter} bestimmen. Hierbei ist Energieauflösung $\alpha _\mathrm{res}$ mit der Halbwertbreite \eqref{eq:Halbwertsbreite} identisch, die bei der Eichung gemessen wurde. Die so erhaltenen Ergebnisse sind in Tabelle \ref{tabelle:korr. Straggling} dargestellt.
+Aus dem Straggling $\alpha$ kann der Energiestraggling--Parameter oder auch das korrigierte Straggling $\alpha_E$ nach Gleichung \eqref{eq:straggling parameter} bestimmt werden. Hierbei ist Energieauflösung $\alpha _\mathrm{res}$ mit der Halbwertsbreite \eqref{eq:Halbwertsbreite} identisch, die bei der Eichung gemessen wurde. Die so erhaltenen Ergebnisse sind in Tabelle \ref{tabelle:korr. Straggling} dargestellt.
 
 \begin{eqnarray}
 	\alpha _E&=& \sqrt{\alpha ^2 - \alpha_\mathrm{res}^2} \\
@@ -1097,17 +1100,17 @@ Wie man anhand der Abbildungen \ref{abb:Straggling} und \ref{abb:korr. Stragglin
 	\label{abb:korr. Straggling}
 \end{figure}
 
-Für eine Energieverteilung mit der Halbwertbreite von ab $10\%$ der mittleren Energie dominieren die nicht--statistischen Effekte über die statistische und das Straggling nimmt ab, d.h. das $\alpha$--Spektrum sollte ab einem bestimmen Energiewert mit abnehmender Energie bzw. zunehmendem Druck schmaler werden.
+Für eine Energieverteilung mit der Halbwertsbreite von ab $10\%$ der mittleren Energie dominieren die nicht--statistischen Effekte über die statistische und das Straggling nimmt ab, d.h. das $\alpha$--Spektrum sollte ab einem bestimmen Energiewert mit abnehmender Energie bzw. zunehmendem Druck schmaler werden.
 
 Dies lässt sich jedoch in der Auswertung nicht beobachten, weil wir zu geringen Energien haben. Um diesen Effekt beobachten zu können ist es notwendig die $10\%$ zu erreichen, dann erhält man den beschriebenen Verlauf.
 
-Der Abstand zwischen Quelle und Detektor beträgt bei Prior und Rollefson bei $5\mathrm{\,cm}$  \cite{Prior}, bei uns dagegen ca. $4\mathrm{\,cm}$, möglicherweise kann unsere Abweichung damit begründet werden. Dies sei bei Laborberichten von Studenten sehr häufig der Fall. \cite{Prior} In unserem Versuchsaufbau war der Offset nicht im Voraus bekannt. Dadurch war es uns nicht möglich, einen mit Prior und Rollefson gut vergleichbaren Abstand einzustellen.
+Der Abstand zwischen Quelle und Detektor beträgt bei Prior und Rollefson bei $5\mathrm{\,cm}$  \cite{Prior}, bei uns dagegen ca. $4\mathrm{\,cm}$, möglicherweise kann unsere Abweichung damit begründet werden. Dies sei bei Laborberichten von Studenten sehr häufig der Fall. \cite{Prior} Im verwendeten Versuchsaufbau war der Offset nicht im Voraus bekannt. Dadurch war es uns nicht möglich, einen mit Prior und Rollefson gut vergleichbaren Abstand einzustellen.
 
 \clearpage
 \hypertarget{massenbremsvermuxf6gen}{%
 \subsection{Massenbremsvermögen}\label{massenbremsvermuxf6gen}}
 
-Zuletzt soll das Massenbremsvermögen von Gold relativ zu Luft bzw. Aluminium sowie die Dicke der Aluminiumfolie bestimmen. Das relative Massenbremsvermögen $Q_F$ einer Folie im Vergleich zu Luft wird durch Gleichung \eqref{eq:Q_F} bestimmt, der Fehler wird mittels Gauß'scher Fehlerfortpflanzung.
+Zuletzt soll das Massenbremsvermögen von Gold relativ zu Luft bzw. Aluminium sowie die Dicke der Aluminiumfolie bestimmen. Das relative Massenbremsvermögen $Q_F$ einer Folie im Vergleich zu Luft wird durch Gleichung \eqref{eq:Q_F} bestimmt, der Fehler mittels Gauß'scher Fehlerfortpflanzung.
 
 \begin{eqnarray}
 	\Delta Q_F &=& Q \cdot \sqrt{\frac{{\Delta \rho_L(\bar{p}_1)}^2 + {\Delta \rho_L(\bar{p}_2)}^2}{\left(\rho_L(\bar{p}_1) - \rho_L(\bar{p}_2)\right)^2} + \left(\frac{\Delta \bar{R}_1}{\bar{R}_1}\right)^2 + \left(\frac{\Delta \rho_F}{\rho_F}\right)^2 + \left(\frac{\Delta d_F}{d_F}\right)^2}
@@ -1255,7 +1258,7 @@ An $Q_\mathrm{Au, Al}$ sieht man, dass Gold $\alpha$--Strahlung nur halb so gut 
 \hypertarget{fazit}{\section{Fazit}\label{fazit}}
 Die Reichweite von $\alpha$--Strahlung mit einer Energie von ca. $5.5\mathrm{MeV}$ wurde in Luft als $\bar R_\mathrm{Luft} = (38.04 \pm 0.88) \mathrm{\, \mu m}$, die mit einer Aluminiumfolie als $\bar R_\mathrm{Al} = (23.43 \pm 0.54) \mathrm{\, \mu m}$ gemessen. Zwar ist es schwierig, für $\bar R_\mathrm{Luft}$ gute Vergleichswerte zu finden, dafür stimmt $\bar R_\mathrm{Al}$ innerhalb der Ungenauigkeit mit dem Literaturwert überein.
 
-Bei der Messung des Energiestragglings ist dagegen die Beobachtung des Stragglings abweichend vom erwarteten Verhalten. Die vermutliche Ursache dafür ist der bei uns um ca. $20\%$ geringere Abstand im Vergleich. Dies stellt wiederum keine Abweichung zu den Beobachtungen Prior und Rollefson dar, nach denen dies bei Studentenversuchen wie dem unseren häufig vorkomme.
+Bei der Messung des Energiestragglings ist dagegen die Beobachtung des Stragglings abweichend vom erwarteten Verhalten. Die vermutliche Ursache dafür ist der bei uns um ca. $20\%$ geringere Abstand im Vergleich. Dies stellt wiederum keine Abweichung zu den Beobachtungen Prior und Rollefson \cite{Prior} dar, nach denen dies bei Studentenversuchen wie dem unseren häufig vorkomme.
 
 Weiterhin wurde festgestellt, dass Aluminium $\alpha$--Strahlung etwa doppelt so gut abschirmt wie Gold, wobei in unserem Versuch die Aluminiumfolie um ein vielfaches dicker war als die Goldfolie.
 
@@ -1318,6 +1321,10 @@ Weiterhin wurde festgestellt, dass Aluminium $\alpha$--Strahlung etwa doppelt so
 \bibitem{DWD}
 	DWD, ``Standardatmosphäre'',
 	\url{https://www.dwd.de/DE/service/lexikon/begriffe/S/Standardatmosphaere_pdf.pdf?__blob=publicationFile}, Abruf am 10.03.2024
+
+\bibitem{Luftäquivalent}
+	Lexikon der Physik, ``Luftäquivalent'',
+	\url{https://www.spektrum.de/lexikon/physik/luftaequivalent/9211}, Abruf am 03.08.2024
 
 \bibitem{DichteGold}
 	N. N. Greenwood, A. Earnshaw, ``Chemie der Elemente'', 1. Auflage, Verlag Chemie,
