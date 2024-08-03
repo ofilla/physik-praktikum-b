@@ -190,7 +190,7 @@ Eine \emph{kumulative Wahrscheinlichkeitsverteilungsfunktion} (CDF\footnote{\emp
 \end{eqnarray}
 
 \noindent
-Für kontinuierliche Zufallsvariablen die CDF $F(x)$ die integrierte PDF $f(x)$, für diskrete Zufallsvariablen die Summe der PMF $f(x_i)$.
+Für kontinuierliche Zufallsvariablen ist die CDF $F(x)$ die integrierte PDF $f(x)$, für diskrete Zufallsvariablen die Summe der PMF $f(x_i)$.
 
 \begin{eqnarray}
 	F(x) &=& \int_{- \infty}^{x} f(t) \dd{t} \\
@@ -211,9 +211,9 @@ Die \emph{Binomialverteilung} ist eine wichtige diskrete Wahrscheinlichkeitsvert
 \end{eqnarray}
 
 \noindent
-Dieses Experiment wird $N$-mal durchgeführt, wobei die einzelnen Ergebnisse jeder Wiederholung unabhängig von den Ergebnissen der vorherigen Wiederholungen sind. Die Zufallsvariable $X$ gibt dann die Anzahl $n$ an eingetretenen Ereignissen $A$ an. Dabei spielt die Reihenfolge, in der die Ereignisse $A$ eintreten, keine Rolle.
+Dieses Experiment wird $N$--mal durchgeführt, wobei die einzelnen Ergebnisse jeder Wiederholung unabhängig von den Ergebnissen der vorherigen Wiederholungen sind. Die Zufallsvariable $X$ gibt dann die Anzahl $n$ an eingetretenen Ereignissen $A$ an. Dabei spielt die Reihenfolge, in der die Ereignisse $A$ eintreten, keine Rolle.
 
-Die entsprechende  Wahrscheinlichkeit $P(N,n,p)$ gibt demnach die Wahrscheinlichkeit an, dass das Ereignis $A$ genau $n$-mal eintritt. Weiterhin können der Erwartungswert $\mu$ und die Varianz $\sigma^2$ bestimmt werden.
+Die entsprechende  Wahrscheinlichkeit $P(N,n,p)$ gibt demnach die Wahrscheinlichkeit an, dass das Ereignis $A$ genau $n$--mal eintritt. Weiterhin können der Erwartungswert $\mu$ und die Varianz $\sigma^2$ bestimmt werden.
 
 \begin{eqnarray}
 	P(N,n,p) &=& \binom{N}{n} p^n (1-p)^{N-n} \\
@@ -222,7 +222,7 @@ Die entsprechende  Wahrscheinlichkeit $P(N,n,p)$ gibt demnach die Wahrscheinlich
 \end{eqnarray}
 
 \noindent
-Der Binomialkoeffizient $\binom{N}{n}$ dient dabei dazu, alle möglichen Reihenfolgen zu berücksichtigen, in der das Ereignis $A$ eintreten kann, wobei der restliche Term die Wahrscheinlichkeit angibt, dass das Ereignis $A$ in einer bestimmten Reihenfolge $n$-mal eintritt.
+Der Binomialkoeffizient $\binom{N}{n}$ dient dabei dazu, alle möglichen Reihenfolgen zu berücksichtigen, in der das Ereignis $A$ eintreten kann, wobei der restliche Term die Wahrscheinlichkeit angibt, dass das Ereignis $A$ in einer bestimmten Reihenfolge $n$--mal eintritt.
 
 \subsubsection{Poissonverteilung}
 \label{Poissonverteilung}
@@ -236,10 +236,10 @@ Die \emph{Poissonverteilung} beschreibt Reihen von Zufallsvariablen, die unabhä
 \end{eqnarray}
 
 \noindent
-Die Poissonverteilung $P_\lambda(n)$ folgt als Grenzfall aus der Binomialverteilung $P(N, n, p)$ mit infinitesimal kleinen Schrittgrößen $(p\rightarrow 0)$ und unendlich vielen Schritten $(N\rightarrow \infty)$. Dabei bildet $\lambda\equiv Np$ eine Konstante. Die Poissonverteilung ist als Näherung für die Binomialverteilung zu verwenden, falls folgende Bedingung erfüllt ist.
+Die Poissonverteilung $P_\lambda(n)$ folgt als Grenzfall aus der Binomialverteilung $P(N, n, p)$ mit infinitesimal kleinen Schrittgrößen $(p\rightarrow 0)$ und unendlich vielen Schritten $(N\rightarrow \infty)$. Dabei bildet $\lambda\equiv Np$ eine Konstante. Die Poissonverteilung ist als Näherung für eine Binomialverteilung mit dem Mittelwert $m_B$ zu verwenden, falls folgende Bedingung erfüllt ist.
 
 \begin{eqnarray}
-	P(n, \lambda)  &=& \lim_{N \rightarrow \infty \atop p\rightarrow 0} P(N, n, p) \\
+	P_\lambda(n)  &=& \lim_{N \rightarrow \infty \atop p\rightarrow 0} P(N, n, p) \\
 	m_B &\leq& 10
 \end{eqnarray}
 
@@ -252,18 +252,18 @@ Die \emph{Gaußverteilung} ist eine kontinuierliche Verteilung. Ihre Wahrscheinl
 \end{eqnarray}
 
 \noindent
-Der Grenzwert der Poissonverteilung für $\lambda \rightarrow \infty$ liefert die Gaußverteilung.
+Der Grenzwert der Poissonverteilung $P_\lambda(n)$ liefert für $\lambda \rightarrow \infty$ eine Gaußverteilung.
 
 \begin{eqnarray}
-	\lim_{\lambda \rightarrow \infty} \frac{\lambda^n e^{-\lambda}}{n!} = \frac{1}{\sqrt{2 \pi \lambda}} e^{- \frac{(x-\lambda)^2}{2\lambda}}
+	\lim_{\lambda \rightarrow \infty} P_\lambda(n) &=& \frac{1}{\sqrt{2 \pi \lambda}} e^{- \frac{(x-\lambda)^2}{2\lambda}}
 \end{eqnarray}
 
 \noindent
-Weiterhin konvergiert die Binomialverteilung nach dem \emph{Satz von Moivre--Laplace} für $N \rightarrow \infty$ mit der Bedingung $0 < p < 1$ gegen die Normalverteilung. Eine Faustregel besagt, dass die Normalverteilung schon eine gute Näherung für die Binomialverteilung liefert, sobald ihre Varianz $\sigma^2_B$ mindestens $9$ beträgt.
+Weiterhin konvergiert die Binomialverteilung $P(N,n,p)$ nach dem \emph{Satz von Moivre--Laplace} für $N \rightarrow \infty$ mit der Bedingung $0 < p < 1$ gegen die Normalverteilung. Eine Faustregel besagt, dass die Normalverteilung schon eine gute Näherung für die Binomialverteilung liefert, sobald ihre Varianz $\sigma^2_B$ mindestens $9$ beträgt.
 
 \begin{eqnarray}
-	\lim_{N \rightarrow \infty} \binom{N}{n} p^n (1-p)^{N-n}
-		&=& \frac{1}{\sqrt{2 \pi N p (1-p)}} e^{- \frac{(x - Np)^2}{2 N p (1-p)}} \\
+	\lim_{N \rightarrow \infty} P(N,n,p)
+		&=& \frac{1}{\sqrt{2 \pi \sigma_B^2}} e^{- \frac{(x - m_B)^2}{2\sigma_B^2}} \\
 	\sigma^2_B &\geq& 9
 \end{eqnarray}
 
@@ -393,16 +393,16 @@ Sei $A$ standardnormalverteilt\footnote{Diese Annahme ist bei ausreichend vielen
 Die Verteilungsfunktion (CDF\footnote{\emph{cumulative distribution function}}) $F(x, f)$ ist dabei komplex und hat den Erwartungswert $\expval{\chi_f^2}=f$ und die Varianz $\sigma_{\chi^2}=2f$.
 
 \begin{align}
-    F(x, 2f) &=
+    F(x, 2f) &\eqspaced
         \int_0^x
             \frac{y^{f-1}}{2^f}
                 \frac{\exp[-\frac{y}{2}]}{\Gamma(f)}
             \,\mathrm dy \\
-    \expval{\chi_f^2} &=
+    \expval{\chi_f^2} &\eqspaced
         \int_0^\infty x\cdot f(x, f)
             \,\mathrm dx
         &&= f \\
-    \sigma_{\chi^2} &=
+    \sigma_{\chi^2} &\eqspaced
         \int_0^\infty \left(x - \expval{\chi_f^2}\right)^2 \cdot f(x, f)
             \,\mathrm dx
          &&=2f
@@ -496,7 +496,7 @@ Die Totzeit der Länge $\tau$ hat einen Einfluss auf die gemessenen Zählraten. 
 \end{eqnarray}
 
 \noindent
-Falls der Erwartungswert $m$ konstant ist, kann man weitere Schlussfolgerungen ziehen. Durch Einsetzen der Gleichungen $\eqref{korrRate}$-$\eqref{korrAVG}$ sowie $\eqref{ChiSquared}$ kann man $\eqref{ChiKorrDef}$ vereinfachen und man erhält die folgende vereinfachte Relation. Hier sieht man, dass die korrigierte Abweichung $\chi^2_\mathrm{korr}$ größer als die nicht--korrigierte Abweichung $\chi^2$ ist, was kontraintuitiv wahrgenommen werden kann.
+Falls der Erwartungswert $m$ konstant ist, kann man weitere Schlussfolgerungen ziehen. Durch Einsetzen von $k_i$, $M$ sowie Gleichung $\eqref{ChiSquared}$ kann man $\chi_\mathrm{korr}^2$ \eqref{ChiKorrDef} vereinfachen und man erhält die folgende vereinfachte Relation. Hier sieht man, dass die korrigierte Abweichung $\chi^2_\mathrm{korr}$ größer als die nicht--korrigierte Abweichung $\chi^2$ ist, was kontraintuitiv wahrgenommen werden kann.
 
 \begin{eqnarray}
     \chi^2_\mathrm{korr} &=&
@@ -522,7 +522,7 @@ Nun seien $p_{1,\,2,\,12}$ die Zählraten, die sich durch die Verwendung von Pr�
 \end{eqnarray}
 
 \noindent
-Die Lösung dieses Gleichungssystems ergibt die Totzeit. Mathematisch erhählt man zwei Lösungen, allerdings ist nur eine davon physikalisch relevant.
+Die Lösung dieses Gleichungssystems ergibt die Totzeit. Mathematisch erhält man immer zwei Lösungen, allerdings ist nur eine davon physikalisch relevant.
 
 \begin{align}
 	\tau _{1,\,2} \eqspaced& \frac{-B \pm \sqrt{B^2 - 4AC}}{2A} \label{eq:Totzeit} \\
@@ -539,7 +539,7 @@ Die Lösung dieses Gleichungssystems ergibt die Totzeit. Mathematisch erhählt m
 \subsection{Versuchsaufbau}
 Der Aufbau beinhaltet zwei $\ce{^{137}Cs}$--Quellen und Zählrohr mit angeschlossener Elektronik. Die am Zählrohr angeschlossene Spannung lässt sich variieren, die Zählrohrelektronik erzeugt ein Rechtecksignal je detektiertem Ereignis. Dieses Signal wird an einen Zähler und an einen Computer übertragen. Auf dem Computer können die Ereignisse zeitaufgelöst gemessen werden.
 
-Zur Bearbeitung der Daten sind am Computer drei Python-Programme vorinstalliert, mit denen die Messdaten verarbeitet werden können. Mit \code{divide.py} Ereignisse in Zeitintervallen fester Größe, z.B.  jeweils $10\mathrm{\,s}$, gezählt. Mittels \code{binomial.py} kann eine Binomialverteilung aus den Daten extrahiert werden, mit \code{interval.py} eine Intervallverteilung.
+Zur Bearbeitung der Daten sind am Computer drei Python--Programme vorinstalliert, mit denen die Messdaten verarbeitet werden können. Mit \code{divide.py} Ereignisse in Zeitintervallen fester Größe, z.B.  jeweils $10\mathrm{\,s}$, gezählt. Mittels \code{binomial.py} kann eine Binomialverteilung aus den Daten extrahiert werden, mit \code{interval.py} eine Intervallverteilung.
 
 \subsection{Messungen}
 Es wurden $3$ lange und $12$ kurze Messungen durchgeführt.
@@ -717,7 +717,8 @@ Die gemessene Intervall--Verteilung mit $n = 0$ wird mit der theoretischen Verte
 Aus dem Fit mittels des \code{Julia}--Pakets \code{LsqFit} \cite{Julia:LsqFit} wird der Parameter $a$ gewonnen.
 
 \begin{eqnarray}
-	P(t) &=& T \cdot a^2 \cdot e^{-at} \\
+	P(t) &=& N \cdot a e^{-at} \\
+		&=& aT \cdot a e^{-at} \\
 	a &=& (43.21 \pm 0.13) \mathrm{\,s^{-1}}
 \end{eqnarray}
 
@@ -880,16 +881,16 @@ Hierzu wird die Präparatsstärke durch die Anzahl der nicht--zerfallenen Atome 
 
 Weiterhin soll $N(\Delta t)$ nach $\Delta t=10\mathrm{\,s}$ um $1$ geringer als $N(0)$ sein, was durch Gleichung \eqref{eq:HWZ 2} beschrieben wird. Damit kann die Zerfallswahrscheinlichkeit $\lambda$ bestimmt werden. Folglich erhält man die Halbwertszeit nach Gleichung \eqref{eq:Zerfallswahrscheinlichkeit}.
 
-\begin{align}
-	N(t) =& m \cdot \exp[-\lambda t] \label{eq:HWZ 1}\\
-	N(\Delta t) =& m-1 \\
-	m-1 =& m \cdot \exp[-\lambda \Delta t] \label{eq:HWZ 2}\\
-	\lambda =& \frac{1}{\Delta t} \ln(\frac{m}{m-1}) \\
-	T_{1/2}(m) =& \frac{\Delta t \ln(2)}{\ln(\frac{m}{m-1})}
-\end{align}
+\begin{eqnarray}
+	N(t) &=& m \cdot \exp[-\lambda t] \label{eq:HWZ 1}\\
+	N(\Delta t) &=& m-1 \\
+	m-1 &=& m \cdot \exp[-\lambda \Delta t] \label{eq:HWZ 2}\\
+	\lambda &=& \frac{1}{\Delta t} \ln(\frac{m}{m-1}) \\
+	T_{1/2}(m) &=& \frac{\Delta t \ln(2)}{\ln(\frac{m}{m-1})}
+\end{eqnarray}
 
 \noindent
-Auf diese Weise erhält man eine Halbwertszeit von $T_{1/2}(m^\prime)=1\,\mathrm{h}\,28\,\mathrm{min}\lll T_\mathrm{Cs}$ und eine totzeitkorrigierte Halbwertszeit von $T_{1/2}(m)=1\,\mathrm{h}\,51\,\mathrm{min}\lll T_\mathrm{Cs}$. Beide Halbwertszeiten verschwinden im Vergleich zu der Halbwertszeit von $\ce{^{137}Cs}$.
+Auf diese Weise erhält man eine Halbwertszeit von $T_{1/2}(m^\prime)=1\,\mathrm{h}\;\,28\,\mathrm{min}\lll T_\mathrm{Cs}$ und eine totzeitkorrigierte Halbwertszeit von $T_{1/2}(m)=1\,\mathrm{h}\;\,51\,\mathrm{min}\lll T_\mathrm{Cs}$. Beide Halbwertszeiten verschwinden im Vergleich zu der Halbwertszeit von $\ce{^{137}Cs}$.
 
 Zudem gibt es ein weiteres systematisches Problem. Nach $H_3$ soll $N(0)$ dem Mittelwert aller Messwerte entsprechen. Bei linear abfallenden Werten dürfte dieser Mittelwert in etwa dem Wert nach der halben Messdauer entsprechen. Stattdessen müsste man den Mittelwert der ersten Werte verwenden.
 
