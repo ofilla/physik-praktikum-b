@@ -1,0 +1,84 @@
+% based on a template made by the university of cologne
+% http://www.mi.uni-koeln.de/wp-MIEDV/wp-content/uploads/2016/07/LaTeX-Vorlage.zip - 2023-11-02
+\documentclass[12pt,a4paper]{scrartcl}
+
+\addtokomafont{sectioning}{\rmfamily}
+\usepackage[ngerman]{babel}% deutsches Sprachpaket wird geladen
+\usepackage[T1]{fontenc} % westeuropäische Codierung wird verlangt
+\usepackage[utf8]{inputenc}% Umlaute werden erlaubt
+\usepackage[usenames]{color} % Erlaubt die Benutzung der namen im Farbpaket und deren Änderung
+\usepackage{amsmath} % Erweiterung für den Mathe-Satz
+\usepackage{amssymb} % alle Zeichen aus msam und msmb werden dargestellt
+\usepackage{graphicx} % Graphiken und Bilder können eingebunden werden
+%\usepackage{multirow} % erlaubt in einer Spalte einer Tabelle die Felder in mehreren Zeilen zusammenzufassen
+\usepackage{enumerate} % erlaubt Nummerierungen
+\usepackage{xurl} % Dient zur Auszeichnung von URLs; setzt die Adresse in Schreibmaschinenschrift.
+\usepackage[center]{caption}  % Bildunterschrift wird zentriert
+%\usepackage{subfigure} % mehrere Bilder können in einer fugure-Umgebung verwendet werden
+%\usepackage{longtable} % Diese Umgebung ist ähnlich definiert wie die tabular-Umgebung, erlaubt jedoch mehrseitige Tabellen.
+%\usepackage{paralist} % Modifikation der bereits bestehenden Listenumgebungen
+\usepackage{lmodern}% Für die Schrift
+\usepackage[hidelinks]{hyperref} % Links und Verweise werden innerhalb von PDF Dokumenten erzeugt
+%\usepackage{wrapfig} % Das Paket ermöglicht es von Schrift umflossene Bilder und Tabellen einzufügen.
+\usepackage{latexsym} % LaTeX-Symbole werden geladen
+\usepackage{tikz} % Erlaubt es mit tikz zu zeichnen
+\usepackage{tabularx} % Erlaubt Tabellen
+\usepackage{algorithm} % Erlaubt Pseudocode
+\usepackage{color} % Farbpaket wird geladen
+%\usepackage{stmaryrd} % St Mary Road Symbole werden geladen
+\usepackage{physics}
+\usepackage[version=4]{mhchem} % Chemie: \ce & \pu
+
+\numberwithin{equation}{section} % Nummerierungen der Gleichungen, die durch equation erstellt werden, sind gebunden an die section
+\newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
+
+\newcommand{\eqspaced}{\ensuremath{\;\;=\;\;}} % equal sign surrounded by spaces, used in align env to match eqnarray behaviour
+
+\hypersetup{
+	pdftitle={B1.5: Elektronenspinresonanz},
+	pdfcreator={\LaTeX}
+}
+
+\setcounter{secnumdepth}{6}
+\setcounter{tocdepth}{6}
+
+\begin{document}
+	
+	\hypertarget{spin}{ \subsubsection{Spin}\label{spin}}
+	
+	Der Spin $\vec s$ ist der Drehimpuls, der durch die Rotation eines Körpers um sich selbst entsteht. Er kann nur einen von zwei Werten abnehmen.
+	
+	Beispielsweise beträgt der Eigenwert des Elektronenspins immer $\pm\frac{\hbar}{2}$, insbesondere gilt für die $z$--Komponente des Spins $\hat s_3\ket{z\pm}=\pm\frac{\hbar}{2}\ket{z\pm}$. Dadurch ist die magnetische Quantenzahl $m=\pm\frac{1}{2}$. Da $j$ die Grenzen der gültigen $m$ definiert, muss die Drehimpulsquantenzahl $j=s=\frac{1}{2}$ sein. Dies wird als Spin bezeichnet.
+	
+	Elektronen nennt man \emph{Spin-$\frac{1}{2}$--Teilchen} oder Fermionen, da der Spin $s=\pm\frac{1}{2}$ halbzahlig ist.
+	
+	Das Dipolmoment $\vec \mu$ und der Spin $\vec s$ sind über das \emph{gyromagnetische Verhältnis} $\gamma$ miteinander verknüpft. Dazu wird der \emph{Landé--Faktor} $g$ benötigt.
+	
+	\begin{eqnarray}
+		\vec \mu &=& \gamma \vec{s} \label{eq:dipolmomentSpin} \\
+		\gamma &=& \frac{g\mu_B}{\hbar} \label{eq:gyromag} \\
+		g &=& 1 + \frac{j(j+1) + s(s+1) + l(l+1)}{2j(l+1)}
+	\end{eqnarray}
+	
+	\noindent
+	Hierbei werden die Eigenwerte der Drehimpulsoperatoren $\hat{\vec j}$, $\hat{\vec s}$ und $\hat{\vec l}$ benötigt, die den Spin $\vec s$, den Bahndrehimpuls $\vec l$ und den Gesamtdrehimpuls $\vec j = \vec l + \vec s$ beschreiben. Falls es keinen Bahndrehimpuls $l=0$ gibt, so folgt in erster Ordnung $g=2$.
+	
+	Der Landé--Faktor eines freien Elektrons wird zu $g \approx 2.00232$, wenn Korrekturen durch quantenelektrodynamische Effekte wie dem Austausch virtueller Photonen berücksichtigt werden. Der theoretische Wert stimmt mit dem experimentellen bis auf die elfte Nachkommastelle überein und ist damit sehr gut bekannt.
+	
+	Der Bahnanteil der magnetischen Momente der Elektronen des in diesem Versuch untersuchten Radikals $\mathrm{DPPH}$ sind aufgrund der Kristallfelder gleich null. Da die Elektronen zwar ungepaart aber gebunden sind, weist ihr Land\'e--Faktor aber dennoch eine weitere Abweichung auf, die umso größer wird, je schwerere Atome im Molekül vorkommen. Dadurch beträgt der tatsächlich erwartete Wert des Land\'e--Faktors der Elektronen in $\mathrm{DPPH}$ $g = 2.0037$.
+	
+	\hypertarget{zeemanneffekt}{\subsubsection{Zeemann--Effekt}\label{zeemanneffekt}}
+	
+	Der Zeemann--Effekt beschreibt eine Aufspaltung der Spektrallinien durch ein äußeres Magnetfeld. Diese entsteht durch eine Wechselwirkung des Magnetfeldes mit dem magnetischen Moment der Hüllenelektronen.
+	
+	Das Magnetfeld kann auch mit dem magnetischen Moment des Kerns wechselwirken. Diese Aufspaltung ist jedoch deutlich kleiner, da das magnetische Moment des Kerns deutlich kleiner als das der Hüllenelektronen ist.
+	
+	Der \emph{normale Zeemann--Effekt} tritt auf, wenn der Spin der betrachteten Teilchen gleich $0$ ist. Beim \emph{anormalen Zeemann--Effekt} hingegen ist der Spin der betrachteten Teilchen ungleich $0$. Aufgrund des nicht verschwindenden Spins der Elektronen, ist in diesem Versuch der anormale Zeemann-Effekt relevant.
+	
+	Nach dem Bohr--Sommerfeldschen Atommodell haben Elektronen durch die Rotation um den Atomkern einen gequantelten Drehimpuls $\vec{L}$. Er ist durch die Quantenzahl $l=1,2,3,\dots$ quantisiert, es gilt $|\vec{L}| = l\hbar$. Die Drehimpulskomponente in Richtung der $z$--Achse $L_z=m\hbar$ ist nun durch eine magnetische Quantenzahl $m=-l,-l+1,\dots,l$ zu beschreiben.
+	
+	Durch $L_z$ werden die Energieniveaus der Elektronen verschoben. Die Energieverschiebung $\Delta E$ entspricht der Energie, ein Dipolmoment $\vec \mu$ in einem Magnetfeld $\vec B$ auszurichten $\eqref{eq:EDipol}$. Diese Verschiebung führt zu einer Verschiebung der Spektrallinien. Außerdem ist dadurch auch das magnetische Moment gequantelt.
+	
+	Aufgrund des Zeemann--Effekts kommt es zur Lamorpräzession der Elektronen.
+	
+\end{document}
