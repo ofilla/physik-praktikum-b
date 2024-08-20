@@ -9,6 +9,7 @@ Bei einigen Versuchen ist Code in Form von [Jupyter](https://jupyter.org)-Notebo
 * B1.4: Photoelektrischer Effekt ([PDF](./B1.4/B1.4.pdf), [LaTeX](./B1.4/B1.4.tex))
 	* Auswertung (Julia) ([Jupyter](./B1.4/data/Auswertung.ipynb), [PDF](./B1.4/data/Auswertung.pdf))
 * B1.5: Elektronenspinresonanz ([PDF](./B1.5/B1.5.pdf), [LaTeX](./B1.5/B1.5.tex))
+    * Auswertung (Julia) ([Jupyter](./B1.5/Auswertung.ipynb))
 
 ## 2. Festkörperphysik
 * B2.4: Magnetisierung eines Ferrits ([PDF](./B2.4/B2.4.pdf), [LaTeX](./B2.4/B2.4.tex))
@@ -25,6 +26,9 @@ Bei einigen Versuchen ist Code in Form von [Jupyter](https://jupyter.org)-Notebo
 	* Lernkarten ([PDF](./B3.3/B3.3_Lernkarten.pdf), [LaTeX](./B3.3/B3.3_Lernkarten.tex))
 	* Auswertung (Julia) ([Jupyter](./B3.3/data/Auswertung.ipynb), [PDF](./B3.3/data/Auswertung.pdf))
 * B3.4: Positronen-Emissions-Tomographie (PET) ([PDF](./B3.4/B3.4.pdf), [LaTeX](./B3.4/B3.4.tex))
+    * Auswertung Ortsauflösung (Python) ([Jupyter](./B3.4/data/Ortsaufloesung.ipynb), [PDF](./B3.4/data/Ortsaufloesung.pdf))
+    * Auswertung PET-Scan (Julia) ([Jupyter](./B3.4/data/Schatztruhe.ipynb), [PDF](./B3.4/data/Schatztruhe.pdf))
+    * Auswertung Winkelabhängigkeit ([Jupyter](./B3.4/data/Winkelabhängigkeit.ipynb), [PDF](./B3.4/data/Winkelabhängigkeit.pdf))
 
 # Jupyter
 ## Python
