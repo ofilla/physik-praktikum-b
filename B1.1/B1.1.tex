@@ -98,13 +98,8 @@ Die Temperatur auf der Photosphäre der Sonne beträgt ca. $6000\mathrm{\,K}$ \c
 \end{eqnarray}
 
 \noindent
-Eine andere Möglichkeit der Temperaturbestimmung nutzt das Wien'sche Verschiebungsgesetz \eqref{eq:Wien Verschiebungsgesetz}. Das Emissionsspektrum der Sonne hat ein Maximum bei $\hat \nu=3.4 \cdot 10^{14} \mathrm{\,Hz}$, woraus sich die Temperatur $T$ ermitteln lässt. \cite{Gerthsen}
+Eine andere Möglichkeit der Temperaturbestimmung nutzt das Wien'sche Verschiebungsgesetz, das im Folgenden in Abschnitt \ref{wiensches-verschiebungsgesetz} betrachtet wird. Das Emissionsspektrum der Sonne hat ein Maximum bei $\hat \nu=3.4 \cdot 10^{14} \mathrm{\,Hz}$, woraus sich die Temperatur $T$ ermitteln lässt. \cite{Gerthsen}
 
-\begin{eqnarray}
-  \hat \nu &=& 5.88 \cdot10^{10} \cdot T \label{eq:Wien Verschiebungsgesetz}
-\end{eqnarray}
-
-\noindent
 Das solare Maximum des Spektrums liegt bei einer Wellenlänge von $0.6\mathrm{\,\mu m}$ und ist in Abbildung \ref{abb:Spektrum Sonne & Erde} oben dargestellt. Das Sonnenlicht wird von Stoffen in der Atmosphäre und Erdoberfläche stark absorbiert. Bei irdischen Temperaturen emittieren unserer Erdboden und Atmosphäre wieder Strahlungen im Infrarotbereich ab, dadurch wird die Erde aufgewärmt und das Leben ermöglicht. \cite{BakanRaschke}
 
 Die Erdatmosphäre besteht aus $78.1\,\%$ Stickstoff $\ce{N_2}$, $20.9\,\%$ Sauerstoff $\ce{O_2}$, $0.93\,\%$ Argon $\ce{Ar}$, $1.45\,\%$ Wasserdampf $\ce{H_2O}$ und $1\,\%$ aus sogenannen Treibhausgasen. Zu den Treibhausgasen zählen Kohlenstoffdioxid $\ce{CO_2}$, Methan $\ce{CH_4}$, Distickstoffmonoxid $\ce{N_2O}$ und Ozon $\ce{O_3}$.
@@ -136,7 +131,7 @@ Isaac Newton entdeckte bereits im $17.$ Jahrhundert die Spektralfarben des Licht
 
 \subsubsection{Licht}
 \label{Licht}
-Ein wichtiges Konzept der Spektroskopie ist das Licht. Es kann auf zwei Arten beschrieben werden, als Welle mit einer Wellenlänge $\lambda$ bzw. Frequenz $\nu$ und als Teilchen. Dieses Lichtteilchen nennt man Photonen. Aufgrund dessen werden beide Betrachtungsweisen gemeinsam als ``Welle--Teilchen--Dualismus'' bezeichnet. Die Energie $E$ einer elektromagnetischen Welle kann durch die Frequenz $\nu$ und das Planck'sche Wirkungsquantum $h$ beschrieben werden, das Verhältnis zwischen Frequenz und Wellenlänge durch die Lichtgeschwindigkeit $c$
+Ein wichtiges Konzept der Spektroskopie ist das Licht. Es kann auf zwei Arten beschrieben werden, als Welle mit einer Wellenlänge $\lambda$ bzw. Frequenz $\nu$ und als Teilchen. Dieses Lichtteilchen nennt man Photonen. Aufgrund dessen werden beide Betrachtungsweisen gemeinsam als ``Welle--Teilchen--Dualismus'' bezeichnet. Die Energie $E$ einer elektromagnetischen Welle kann durch die Frequenz $\nu$ und das Planck'sche Wirkungsquantum $h$ beschrieben werden, das Produkt aus Frequenz und Wellenlänge durch die Lichtgeschwindigkeit $c$.
 
 \begin{eqnarray}
   E &=& h \cdot \nu \label{eq:Energie Photon} \\
@@ -164,12 +159,15 @@ Es gibt zwei Prozesse der Wechselwirkung mit elektromagnetischer Strahlung. Bei 
 
 In der Atomschale hat man unter anderem Elektronenzustände, Schwingungszustände und Rotationszustände mit $\Delta E_{e} > \Delta E_{s} > \Delta E_{r}$ \cite{Agilent Technologies}. Die Schwingungs-- und Rotationsenergien liegen im Bereich der Infrarotstrahlung, daher sind sie für diesen Versuch relevant. Abbildung \ref{abb:Übergänge} zeigt die verschiedene Energiezustände sowie Elektronenübergänge, die mittels UV--Strahlungs--Absorption stattfinden.
 
+Relevant sind die Hauptquantenzahl $n$, die Drehimpulsquantenzahl $J$ und die Technologies $\nu$, die in Abschnitt \ref{Rotations- und Vibrationsniveaus} besprochen werden.
+
 Wie ein System aus Atomen das Licht absorbiert, hängt von quantenmechanischen Eigenschaften ab, die von sogenannten \emph{Auswahlregeln} beschrieben. Daraus kann man dann Rückschlüsse über das System ziehen.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.7\textwidth]{../media/B1.1/Uebergaenge.jpg}
-  \caption{Energiezustände und Elektronenübergang \cite{Agilent Technologies}}
+  \caption{Energiezustände und Elektronenübergang \cite{Agilent Technologies},
+    mit Hauptquantenzahl $n$, Gesamtdrehimpuls $J$ und Vibrationsquantenzahl $\nu$}
   \label{abb:Übergänge}
 \end{figure}
 
@@ -213,7 +211,7 @@ Die Strahldichte oder Strahlungsdichte $S$ beschreibt die Strahlung, die ein Fl�
 \hypertarget{wiensches-verschiebungsgesetz}{%
 \subsubsection{Wien'sches Verschiebungsgesetz}\label{wiensches-verschiebungsgesetz}}
 
-Das Wien'sche Verschiebungsgesetz beschreibt abhängig von der Temperatur $T$, bei welcher Wellenlänge $\hat{\lambda}$ bzw. Frequenz $\hat{\nu}$ die größte Wärmeleistung abgestrahlt wird. Dadurch beschreibt es die Temperaturabhängigkeit des Maximums des Planck'schen Strahlungsgesetzes $\eqref{eq:PlackStrahlung}$.
+Das Wien'sche Verschiebungsgesetz beschreibt abhängig von der Temperatur $T$, bei welcher Wellenlänge $\hat{\lambda}$ bzw. Frequenz $\hat{\nu}$ die größte Wärmeleistung abgestrahlt wird. Dadurch beschreibt es die Temperaturabhängigkeit des Maximums des Planck'schen Strahlungsgesetzes \eqref{eq:PlackStrahlung}.
 
 \begin{eqnarray}
   \hat{\lambda}\cdot T &=& 2.898 \cdot \mathrm{\,mm\cdot K}
@@ -292,6 +290,7 @@ Beispielsweise hat Kohlenstoffdioxid $\ce{CO_2}$ drei Normalschwingungen, die in
 \end{figure}
 
 \subsubsection{Rotations- und Vibrationsniveaus}
+\label{Rotations- und Vibrationsniveaus}
 Ein rotierendes zweiatomiges Molekül lässt sich als linearer starrer Rotor betrachten.
 
 Seine quantenmechanischen Energieniveaus $E_{J, \mathrm{rot}}$ sind durch den Eigenwert des Drehimpulsoperators $\hat J$ und die Rotationskonstante $\tilde{B}$ bestimmt. $\tilde{B}$  wiederum wird durch das Trägheitsmoment $I$ und das reduzierte Planck'sche Wirkungsquantum $\hbar$ dargestellt.
@@ -309,7 +308,7 @@ Die Energieniveaus der Vibration eines zweiatomigen Moleküls folgen aus der Bet
 \end{eqnarray}
 
 \noindent
-Der Vibrationsgrundzustand hat im Gegensatz zum Rotationsgrundzustand eine von null verschiedene Energie.
+Der Vibrationsgrundzustand hat im Gegensatz zum Rotationsgrundzustand eine von $0$ verschiedene Energie.
 
 Die Energieniveaus des Gesamtzustandes ergeben sich dementsprechend aus der Summe von Rotations- und Vibrationszuständen.
 
@@ -340,7 +339,7 @@ In Abbildung \ref{fig:rotationsspektrumCO2} ist das Rotationsspektrum von CO$_2$
 
 Dieses lässt sich in einen P--Zweig (links) und in einen R--Zweig (rechts) aufteilen. Der P--Zweig beschreibt dabei die Auswahlregel $\Delta J = -1$ und der R--Zweig $\Delta J = +1$. Jede einzelne Linie im Spektrum stellt dann die Werte für $J$ dar, angefangen bei $0$ vom Bandenursprung nach außen hin zunehmend. Die Auswahlregel für $v$ ist dabei für beide Zweige $\Delta v = +1$, wie in Abschnitt \ref{uxfcbergangsdipolmoment} beschrieben wurde. Der Bandenursprung beschreibt dabei den Grundzustand mit Grundzustandsfrequenz $\nu_0$.
 
-Die Übergangsfrequenzen $\nu_{J, J+1}$ und $\nu_{J, J-1}$ und die Richtung des R-- bzw. P--Zweigs lassen sich der Gesamtenergie $E_\mathrm{rot,vib}$ \eqref{eq:E rot,vib} herleiten, der dieEnergie des Photons $E_J$ \eqref{eq:Energie Photon} dieser entsprechen muss.
+Die Übergangsfrequenzen $\nu_{J, J+1}$ und $\nu_{J, J-1}$ und die Richtung des R-- bzw. P--Zweigs lassen sich der Gesamtenergie $E_\mathrm{rot,vib}$ \eqref{eq:E rot,vib} herleiten, der die Energie des Photons $E_J$ \eqref{eq:Energie Photon} dieser entsprechen muss.
 
 \begin{eqnarray}
   E_J &=& E_\mathrm{rot,vib} \\
@@ -548,7 +547,7 @@ Die Infrarot--Quelle ist eine metallische Drahtwendel, die näherungsweise als S
 
 Bei der Absorptionszelle handelt es sich um ein verspiegeltes Glasrohr mit zwei infrarotdurchlässigen Fenstern an jedem Ende und zwei kleinen Öffnungen für die Gaszufuhr und Entlüftung. Ein Thermometer ist mit dem Computer verbunden, um das Phänomen des Treibhauseffekts zu messen. Als Infrarot--Detektor wird ein pyroelektrischer Sensor verwendet. Die beiden Fenster bestehen aus PE--Folie.
 
-Alle Bauteile können auf einer optischen Bank gegeneinander verschoben werden. Das Besondere an diesem Versuchsaufbau ist, dass sowohl IR--Quelle als auch IR--Detektor breitbandig sind und man spricht von Integral--Absorptionsspektrometer.
+Alle Bauteile können auf einer optischen Bank gegeneinander verschoben werden. Das Besondere an diesem Versuchsaufbau ist, dass sowohl IR--Quelle als auch IR--Detektor breitbandig sind und man spricht von einem Integral--Absorptionsspektrometer.
 
 \subsection{Durchführung}
 \label{durchfuehrung}
@@ -893,7 +892,7 @@ Um die $\ce{CO_2}$--Konzentration der Raumluft zu bestimmen, wird zunächst die 
   \label{fig:luft}
 \end{figure}
 
-Dazu wir der Mittelwert der Beleuchtungsstärke vor und nach dem Befüllen mit Luft $\bar{I}_{0, \mathrm{Luft}}$ inklusive des jeweiligen Fehlers ermittelt. Die gemessene Beleuchtungsstärke der mit Raumluft gesättigten Zelle  sowie die für die jeweiligen Mittelwerte ausgesuchten Bereiche sind in Abbildung \ref{fig:luft} dargestellt.
+Dazu wird der Mittelwert der Beleuchtungsstärke vor und nach dem Befüllen mit Luft $\bar{I}_{0, \mathrm{Luft}}$ inklusive des jeweiligen Fehlers ermittelt. Die gemessene Beleuchtungsstärke der mit Raumluft gesättigten Zelle  sowie die für die jeweiligen Mittelwerte ausgesuchten Bereiche sind in Abbildung \ref{fig:luft} dargestellt.
 
 Die relative Transmission der Luft $T_\mathrm{rel, Luft}$ berechnet sich aus dem Quotient beider Mittelwerte, der Fehler $\Delta T_\mathrm{rel, Luft}$ nach Gauß'scher Fehlerfortpflanzung.
 
