@@ -95,12 +95,12 @@ Durch das aufgezeichnete Absorptionsspektrum lässt sich weiterhin der Landé--F
 
 \hypertarget{dipolmoment}{\subsubsection{Dipolmoment}\label{dipolmoment}}
 
-Das magnetische \emph{Dipolmoment} $\vec \mu$ tritt auf, wenn sich elektrische Ladungen bewegen. Es lässt sich über das auf einen magnetischen Dipol wirkende Drehmoment $\vec \tau$ in einem Magnetfeld $\vec B$ definieren.
+Das magnetische \emph{Dipolmoment} $\vec \mu$ tritt auf, wenn sich elektrische Ladungen bewegen. Es lässt sich über das auf einen magnetischen Dipol wirkende Drehmoment $\vec \tau$ in einem Magnetfeld $\vec B$ definieren. Für eine ebene Leiterschleife ist es durch Gleichung \eqref{eq:Dipolmoment} beschrieben. \cite{Jackson}
 
-Für eine ebene Leiterschleife ist es folgendermaßen beschrieben. \cite{Jackson} Damit ist das Dipolmoment $\vec \mu$ parallel zum Drehimpuls $\vec{L}$. Die Energie $E$ zur Ausrichtung eines Dipolmomentes wird durch das Skalarprodukt $\vec \mu \cdot \vec B$ beschrieben.
+Damit ist das Dipolmoment $\vec \mu$ parallel zum Drehimpuls $\vec{L}$. Die Energie $E$ zur Ausrichtung eines Dipolmomentes wird durch das Skalarprodukt $\vec \mu \cdot \vec B$ beschrieben.
 
 \begin{eqnarray}
-	\vec \tau &=& \vec \mu \times \vec B \\
+	\vec \tau &=& \vec \mu \times \vec B \label{eq:Dipolmoment}\\
 	E &=& \vec \mu \cdot \vec B \label{eq:EDipol}
 \end{eqnarray}
 
@@ -115,7 +115,7 @@ Das magnetische Moment eines Atoms wird durch Rotation einer elektrischen Ladung
 
 Der Spin $\vec s$ ist der Drehimpuls, der durch die Rotation eines Körpers um sich selbst entsteht. Er kann nur einen von zwei Werten abnehmen.
 
-Beispielsweise beträgt der Eigenwert des Elektronenspins immer $\pm\frac{\hbar}{2}$, insbesondere gilt für die $z$--Komponente des Spins $\hat s_3\ket{z\pm}=\pm\frac{\hbar}{2}\ket{z\pm}$. Dadurch ist die magnetische Quantenzahl $m=\pm\frac{1}{2}$. Da $j$ die Grenzen der gültigen $m$ definiert, muss die Drehimpulsquantenzahl $j=s=\frac{1}{2}$ sein. Dies wird als Spin bezeichnet.
+Beispielsweise beträgt der Eigenwert des Elektronenspins immer $\pm\frac{\hbar}{2}$, insbesondere gilt für die $z$--Komponente des Spins $\hat s_3\ket{z\pm}=\pm\frac{\hbar}{2}\ket{z\pm}$. Dadurch ist die magnetische Quantenzahl $m=\pm\frac{1}{2}$. Die Drehimpulsquantenzahl $j=s$ muss $\frac{1}{2}$ sein, da $j$ die Grenzen der gültigen $m$ definiert. Dies wird als Spin bezeichnet.
 
 Elektronen nennt man \emph{Spin-$\frac{1}{2}$--Teilchen} oder Fermionen, da der Spin $s=\pm\frac{1}{2}$ halbzahlig ist.
 
@@ -140,18 +140,16 @@ Der Zeemann--Effekt beschreibt eine Aufspaltung der Spektrallinien durch ein äu
 
 Das Magnetfeld kann auch mit dem magnetischen Moment des Kerns wechselwirken. Diese Aufspaltung ist jedoch deutlich kleiner, da das magnetische Moment des Kerns deutlich kleiner als das der Hüllenelektronen ist.
 
-Der \emph{normale Zeemann--Effekt} tritt auf, wenn der Spin der betrachteten Teilchen gleich $0$ ist. Beim \emph{anormalen Zeemann--Effekt} hingegen ist der Spin der betrachteten Teilchen ungleich $0$. In diesem Versuch der anormale Zeemann--Effekt relevant, da der Spin der Elektronen nicht verschwindet.
+Der \emph{normale Zeemann--Effekt} tritt auf, wenn der Spin der betrachteten Teilchen gleich $0$ ist. Beim \emph{anormalen Zeemann--Effekt} hingegen ist der Spin der betrachteten Teilchen ungleich $0$. In diesem Versuch ist der anormale Zeemann--Effekt relevant, da der Spin der Elektronen nicht verschwindet.
 
 Nach dem Bohr--Sommerfeldschen Atommodell haben Elektronen durch die Rotation um den Atomkern einen gequantelten Drehimpuls $\vec{L}$. Er ist durch die Quantenzahl $l=1,2,3,\dots$ quantisiert, es gilt $|\vec{L}| = l\hbar$. Die Drehimpulskomponente in Richtung der $z$--Achse $L_z=m\hbar$ ist nun durch eine magnetische Quantenzahl $m=-l,-l+1,\dots,l$ zu beschreiben.
 
 Durch $L_z$ werden die Energieniveaus der Elektronen verschoben. Die Energieverschiebung $\Delta E$ entspricht der Energie, ein Dipolmoment $\vec \mu$ in einem Magnetfeld $\vec B$ auszurichten $\eqref{eq:EDipol}$. Diese Verschiebung führt zu einer Verschiebung der Spektrallinien. Außerdem ist dadurch auch das magnetische Moment gequantelt.
 
-Aufgrund des Zeemann--Effekts kommt es zur Lamorpräzession der Elektronen.
-
 \hypertarget{lamorpruxe4zession}{%
 	\subsubsection{Lamorpräzession}\label{lamorpruxe4zession}}
 
-Das magnetische Moment $\mu$ eines Spins im Magnetfeld $\vec{B}$ weist durch Quantenschwebung eine Präzession mit einer \emph{Lamorfrequenz} $\omega_L$ auf. Dies bedeutet, dass der Spin rotiert.
+Aufgrund des Zeemann--Effekts kommt es zur Lamorpräzession der Elektronen, bei der der Spin rotiert. Das magnetische Moment $\mu$ eines Spins weist im Magnetfeld $\vec{B}$ durch Quantenschwebung eine Präzession mit einer \emph{Lamorfrequenz} $\omega_L$ auf.
 
 \begin{eqnarray}
 	\omega_L &=& \gamma\cdot B
@@ -162,11 +160,12 @@ Das magnetische Moment $\mu$ eines Spins im Magnetfeld $\vec{B}$ weist durch Qua
 
 In einem paramagnetischen Material existieren innere magnetische Dipolmomente, die beispielsweise durch den Spin und den Bahndrehimpuls der Elektronen hervorgerufen werden. Im Gegensatz zum Ferromagnetismus bilden diese jedoch keine kohärenten Domänen, sondern sind zufällig angeordnet, da sie nicht miteinander wechselwirken. Diese magnetischen Dipolmomente rühren von ungepaarten Elektronen im Material her.
 
-Erst in Anwesenheit eines äußeren Magnetfeldes richten sich die Dipolmomente entlang des Feldes aus. Daher ist die magnetische Suszeptibilität $\chi$ eines Paramagneten positiv. Die Magnetisierung $M$ ergibt sich aus dem Produkt der Suszeptibilität $\chi$ und der magnetischen Feldstärke $H$.
+Erst in Anwesenheit eines äußeren Magnetfeldes richten sich die Dipolmomente entlang des Feldes aus. Daher ist die magnetische Suszeptibilität $\chi$ eines Paramagneten positiv. Diese beschreibt die Änderung der Magnetisierung $M$ durch die Änderung der magnetischen Feldstärke $H$ \eqref{eq:suszeptibilität}.
 
 Die Suszeptibilität ist sowohl material- als auch temperaturabhängig. Mit steigender Temperatur erhöht sich die Wahrscheinlichkeit einer antiparallelen Ausrichtung der magnetischen Dipolmomente zum Magnetfeld. Zudem führt die erhöhte thermische Energie zu einer Zunahme der Eigenbewegung der Teilchen, was der Ausrichtung entgegenwirkt. Dadurch nimmt die Magnetisierung ab. Dieses Verhalten wird durch das Curie--Gesetz beschrieben, welches die Curie--Konstante $C$ einführt.
 
 \begin{eqnarray}
+	\chi &=& \frac{\mathrm dM}{\mathrm dH} \label{eq:suszeptibilität} \\
 	\chi &=& \frac{C}{T}
 \end{eqnarray}
 
@@ -177,7 +176,7 @@ Neben dem Paramagnetismus und dem bereits erwähnten Ferromagnetismus gibt es no
 \label{Erdmagnetfeld}
 Unsere Erde verhält sich wie ein großer Stabmagnet mit einem starken Magnetfeld.
 
-$95\,\%$ des Feldes entsteht aus Induktionsvorgänge im flüssigen, elektrisch leitfähigen Erdkern. Dieser Prozess wird Geodynamo-Prozess genannt. Magnetisierte Gesteine sowie Felder von Stromsystemen in der Ionosphäre und Magnetosphäre tragen die restlichen $5\,\%$ zum Magnetfeld bei.
+$95\,\%$ des Feldes entsteht aus Induktionsvorgänge im flüssigen, elektrisch leitfähigen Erdkern. Dieser Prozess wird Geodynamo--Prozess genannt. Magnetisierte Gesteine sowie Felder von Stromsystemen in der Ionosphäre und Magnetosphäre tragen die restlichen $5\,\%$ zum Magnetfeld bei.
 
 Die Stärke des Feldes ist abhängig vom Ort und schwankt stark. Geodynamo--Prozesse polen das Erdmagnetfeld um, was tausende Jahre dauert. Momentan befindet sich der magnetische Nordpol in der Nähe des geografischen Südpols und umgekehrt. Die magnetische Flussdichte beträgt am Äquator etwa $25\,\mu T$ und an den Polen etwa $70\,\mu T$. \cite{Geomagnetismus}
 
@@ -307,7 +306,7 @@ Die elektrische \emph{Impedanz} ist ein elektrischer Widerstand in der Wechselst
 
 Der Begriff wird insbesondere dann verwendet, wenn zwischen den beiden Größen eine Phasenverschiebung besteht, wodurch sich das Verhältnis vom Widerstand in Gleichstromanwendungen unterscheidet.
 
-Die Impedanz einer Spule $S_L$ wird durch die Induktivität $L$ bestimmt, die Impedanz eines Kondensators $S_C$ durch die Kapazität $C$.
+Die Impedanz einer Spule $Z_L$ wird durch die Induktivität $L$ bestimmt, die Impedanz eines Kondensators $Z_C$ durch die Kapazität $C$.
 
 \begin{eqnarray}
     Z_L &=& i\omega L \\
@@ -327,7 +326,7 @@ Ein \emph{Ohm'scher Widerstand} ist dagegen ein elektrischer Widerstand, der una
 
 Eine \emph{Wheatstonebrücke} wird verwendet, um die ohm'schen und kapazitiven Anteile von Wechselstromwiderständen zu bestimmen.
 
-Dabei werden zwei Wechselstromwiderstände, bestehend aus einem Ohm'schen Widerstand $R$ und einem Kondensator $C$, in Reihe geschaltet. Parallel dazu wird ein Widerstand geschaltet, der mit einem Schleifdraht geregelt werden kann. Dabei ist $R_1$ der Widerstand in der Masche mit den zu bestimmenden Widerständen $R_x$ und $C_x$, $R_2$ ist der Widerstand in der Masche mit bekannten Widerständen $R_0$ und $C_0$.
+Dabei werden zwei Wechselstromwiderstände, bestehend aus einem Ohm'schen Widerstand $R$ und einem Kondensator $C$, in Reihe geschaltet. Parallel dazu wird ein Widerstand geschaltet, der mit einem Schleifdraht geregelt werden kann. Dabei sind $R_1$ der zu bestimmende Widerstand in der Masche.
 
 \begin{figure}[h!]
 	\centering
@@ -335,7 +334,7 @@ Dabei werden zwei Wechselstromwiderstände, bestehend aus einem Ohm'schen Widers
 	\caption{Schaltplan einer Wheatstonebrücke \cite{File:WhBr_Diagonalbild}}
 \end{figure}
 
-Durch das Oszilloskopsignal wird der Abgriff des Schleifdrahtes in die Mitte gebracht. Der Nullabgleich erfolgt dadurch, dass durch eine geeignete Wahl des Widerstandes $R_0$ und der Kapazität $C_0$ eines Kondensators das Signal am Oszilloskop auf ein Minimum gebracht wird. Der Feinabgleich erfolgt mit dem Schleifdraht.
+Durch das Oszilloskopsignal wird der Abgriff des Schleifdrahtes in die Mitte gebracht. Der Nullabgleich erfolgt dadurch, dass das Signal am Oszilloskop durch eine geeignete Wahl  von $R_2$ auf ein Minimum gebracht wird. Der Feinabgleich erfolgt mit dem Schleifdraht; alternativ kann $R_3$ ein regelbarer Widerstand sein.
 
 Mithilfe der \emph{Wheatstoneformel} kann ein unbekannter Widerstand $R_x$ aus drei bekannten Widerständen $R_i$ bestimmt werden.
 
@@ -359,7 +358,7 @@ Bei richtiger Einstellung ist die Impedanz beider Zweige gleich und es liegt kei
 	\label{fig:aufbau}
 \end{figure}
 
-Absorption von Strahlungsquanten beginnt dann in der Probe, wenn das Magnetfeld der Helmholtzspulen die Resonanzflussdichte $B_r$ erreicht. Damit ändert sich die Impedanz des Schwingkreises.
+Die Absorption von Strahlungsquanten beginnt dann in der Probe, wenn das Magnetfeld der Helmholtzspulen die Resonanzflussdichte $B_r$ erreicht. Damit ändert sich die Impedanz des Schwingkreises.
 
 Am Diagonalzweig tritt eine Spannung auf, da beide Zweige der Brückenschaltung unterschiedliche Impedanzen haben. Diese Spannung wird mittels einer Halbleiterdiode gleichgerichtet und mit einem Kondensator verstärkt.
 
@@ -377,11 +376,11 @@ Im dritten Teil sollen die Stärke und Richtung des Erdmagnetfeldes bestimmt wer
 \label{durchfuxfchrung:Lande-Faktor}
 Ziel dieses Teils ist die Bestimmung des Landé--Faktor eines Elektrons in einer $\ce{DPPH}$--Probe.
 
-Es wird ein Strom zwischen $1.0\mathrm{\, A}$ und $1.5 \mathrm{\, A}$ eingestellt. Die Kapazität des Resonators wird so konfiguriert, dass zwei möglichst symmetrische Glockenkurven auf dem Oszilloskop sichtbar sind. Dann wird die Phase so eingestellt, dass beide Kurven sich möglichst gut überlagern.
+Es wird ein Strom zwischen $1.0\mathrm{\, A}$ und $1.5 \mathrm{\, A}$ eingestellt. Die Kapazität des Resonators wird so konfiguriert, dass zwei möglichst symmetrische Glockenkurven auf dem Oszilloskop sichtbar sind. Dann wird die Phase so eingestellt, dass sich beide Kurven möglichst gut überlagern.
 
 Mittels des Widerstandsreglers lässt sich die Amplitude der nun übereinander liegenden Glockenkurven maximieren. Daraufhin wird die Stromstärke so eingestellt, dass die Glockenkurven um die $y$--Achse zentriert sind. Diese eingestellte Stromstärke ist dann genau die gesuchte Resonanzstromstärke $I_r$. Daraufhin wird die Halbwertsbreite bestimmt, erst danach wird ein neuer Strom eingestellt.
 
-\subsubsection{Halbwertsbreite}
+\subsection{Halbwertsbreite}
 \label{durchfuxfchrung:Halbwertsbreite}
 Zur Bestimmung der Halbwertsbreite wird zunächst die halbe Höhe des Signals ermittelt, danach wird die dazugehörige Position bestimmt.
 
@@ -399,7 +398,7 @@ Zur Messung des Erdmagnetfelds wird die Resonanzstromstärke $I_r$ für vier Aus
 \subsection{Landé--Faktor}
 \label{auswertung:Landé--Faktor}
 
-Nun zur Bestimmung des g-Faktors von DPPH aus der gemessenen Resonanzstromstärke $I_r$. Dazu jedoch erst einige Überlegungen.
+Zur Bestimmung des g-Faktors von DPPH aus der gemessenen Resonanzstromstärke $I_r$ werden zunächst einige Überlegungen angestellt.
 
 Durch die Kristallfelder in $\ce{DPPH}$ wird der Bahndrehimpuls des Elektrons fast völlig ausgelöscht, sodass ein reines Spinmoment $\vec{\mu}_s$ des Elektrons vorliegt. Dadurch kann die Energie $E$ des Elektrons im Magnetfeld bestimmt werden.
 
@@ -436,7 +435,7 @@ Für die Anregung der Elektronen muss $\Delta E$ durch die Energie elektromagnet
 	\Delta E &=& g \cdot \mu_B \cdot B \label{eq:deltaE}
 \end{eqnarray}
 
-Dabei wird das entsprechende Resonanzmagnetfeld $B_r$ gemessen. Der Landé--Faktor $g$ folgt durch Gleichsetzen der Gleichungen \eqref{eq:deltaE} und \eqref{eq:Energie Strahlung}.
+Dabei wird das entsprechende Resonanzmagnetfeld $B_r$ gemessen. Der Landé--Faktor $g$ folgt durch Gleichsetzen der Gleichung \eqref{eq:deltaE} mit der Energie der Mikrowellenstrahlung \eqref{eq:Energie Strahlung}.
 
 \begin{eqnarray}
 	g &=& \frac{h \cdot \nu}{\mu_B \cdot B_r}
@@ -569,7 +568,7 @@ Die Halbwertsbreite der Flussdichte $B_\mathrm{FWHM}$ lässt sich somit inklusiv
 \end{eqnarray}
 
 \noindent
-Der theoretische Wert beträgt $2.7 \cdot 10^{-4} \mathrm{\, T}$. \cite{Uni} Unser Ergebnis hat somit die selbe Größenordnung, stimmt mit dem theoretischen Wert aber auch innerhalb der Fehlergrenzen nicht überein.
+Der theoretische Wert beträgt $2.7 \cdot 10^{-4} \mathrm{\, T}$. \cite{Uni} Das vorliegende Ergebnis hat somit die selbe Größenordnung, stimmt mit dem theoretischen Wert aber auch innerhalb der Fehlergrenzen nicht überein.
 
 Dies könnte ebenfalls am Schwanken des Resonanzsignals liegen. Es war aufgrund dieser Schwankung schwierig, die Stromstärke per Augenmaß genau einzustellen und zu justieren.
 
@@ -605,7 +604,7 @@ Die für alle vier Richtungen gemessenen Resonanzstromstärken $I_r$ sind in Tab
 	\label{table:erdmagnetfeldMessdaten}
 \end{table}
 
-Analog zu Abschnitt \ref{durchfuxfchrung:Halbwertsbreite} können die Resonanzstromstärken $\bar{I}_r$ und die entsprechenden magnetischen Flussdichten $B$ mittels der Gleichungen \eqref{eq:fwhmMittel}, \eqref{eq:fwhmMittelErr} und \eqref{eq:b_fwhm} ermittelt werden. Die Ergebnisse sind der Tabelle \ref{table:Erdmagnetfeld Ergebnisse} zu entnehmen.
+Analog zu Abschnitt \ref{durchfuxfchrung:Halbwertsbreite} können die Resonanzstromstärken $\bar{I}_r$ und die entsprechenden magnetischen Flussdichten $B$ mittels der Gleichungen \eqref{eq:fwhmMittel}, \eqref{eq:fwhmMittelErr} und \eqref{eq:b_fwhm} ermittelt werden. Die Ergebnisse sind Tabelle \ref{table:Erdmagnetfeld Ergebnisse} zu entnehmen.
 
 \begin{table}[h!]
 	\centering
