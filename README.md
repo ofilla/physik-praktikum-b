@@ -3,6 +3,8 @@ Hier werden die Messdaten sowie Protokolle von unseren Laborversuchen im [Prakti
 
 Bei einigen Versuchen ist Code in Form von [Jupyter](https://jupyter.org)-Notebooks zur Verfügung gestellt. Einige davon nutzen [Python 3](https://www.python.org), andere [Julia](https://julialang.org).
 
+Dieses Repository ist abgeschlossen und ab sofort archiviert.
+
 ## 1. Atom- & Molekülphysik
 * B1.1: Infrarotabsorption in $\ce{CO_2}$ ([PDF](./B1.1/B1.1.pdf), [LaTeX](./B1.1/B1.1.tex))
 	* Auswertung (Julia) ([Jupyter](./B1.1/data/Auswertung.ipynb), [PDF](./B1.1/data/Auswertung.pdf))
